@@ -1,62 +1,75 @@
 # Living Tales
 
-Living Tales is a symbolic mystery game where a tiny overfitted transformer co-narrates with the player through token dialogue. The Hopfield network is the story compiler (training + proof); the transformer is the story runtime (shipped to device).
+Living Tales is a symbolic mystery game where a per-case overfitted transformer co-narrates with the player through token dialogue. The current production engine is **v2** — a 5.3M-param multidimensional structured-scene transformer with a shared base + per-case LoRA adapters. The legacy Hopfield/KD/REINFORCE path is preserved on disk but is no longer the runtime.
 
-There is no LLM. The engine operates only on token IDs and float weights. Surface expressions are UI-only labels and must never influence inference. Tokens are symbolic: suspects, events, locations, objects, motives — not natural language.
+There is **no LLM at runtime.** The engine emits token IDs over a per-dim vocabulary; the composer slot-fills hand-authored phrases (`phrases.json`) into Obra-Dinn third-person past prose. Tokens are symbolic; the model never sees or emits natural language.
 
 ## Game Loop
 
-Player plays a symbolic token → model responds with a symbolic token (a clue) → repeat. This is a token-level dialogue, not text generation. The model is intentionally overfitted to one case — it knows one mystery perfectly across multiple narrative paths. Replayability comes from structural diversity: same solution, different journeys.
+Player plays a symbolic card → model emits a complete 11-13-dim scene tuple (LOCATION, TRANSITION, CAUSE, PRESENCE, STANCE, ACTION, OBJECT_FOCUS, TELL, ATMOSPHERE, REVELATION, BEAT, plus case-specific MEDICAL_TELL / ART_TELL) → composer renders prose → repeat. Convergence accumulates from token attractor weights; discovery beats fire at authored thresholds; player accuses to solve.
 
-Every game starts from the story's origin. Tokens unfold in strict chronological order: EARLY → MID → LATE. Phase gating is a hard constraint at every level (sampling, training, inference, TUI).
+## V2 Architecture
 
-## Training Pipeline
+- **`StructuredSceneTransformerV2`** (`trainer/structured_scene_model_v2.py`): 4 layers, hidden_dim=256, 8 heads, RoPE, max_history=160. Cross-head decoder over dim queries; played-card dedicated KV slot; latent scene-type z (8 modes); LoRA hooks on every linear.
+- **Two-stage training** (`tools/train_structured_v2.py`):
+  - Stage 1 (`base`): pretrain on union universal-core corpus across all cases. Only universal dims get supervision (case-specific dims masked via `active_mask`). Saves `outputs/_base/base_universal.pt`.
+  - Stage 2 (`adapter`): freeze base, train LoRA branches + case-specific heads. Saves `outputs/<case>/v2_full.pt`.
+- **TrajectoryDatasetV2** (`trainer/trajectory_dataset_v2.py`): supports universal-only mode, history-truncation augmentation, counterfactual-branch sampling, scene_type / forbidden_dims / active_mask.
+- **Discovery beats** (`generator/discovery_beats.py` + `cases/<case>/beats.json`): convergence-threshold scaffolding fires REVELATION/BEAT injections (closing-arc rescue while training data is thin).
+- **Composer** (`generator/structured_scene_composer.py`): variant picker (hash-stable on `(turn_idx, token_id)`); voice-arc stages (cold/warming/breaking/broken) for top-3 NPCs per case.
 
-```
-1. Validate case JSON           living_tales_case_validator.py
-2. Pack case                    tools/pack_case.py
-3. Train Hopfield (existing)    tools/train_single_case.py --model-type triad
-4. Sample dialogue trajectories generator/dialogue_sampler.py
-5. Supervised KD (Hopfield →    trainer/train_dialogue.py
-   transformer on dialogues)
-6. REINFORCE fine-tuning        trainer/train_dialogue.py
-7. Convergence proof            validator/convergence_proof.py
-8. Export cartridge              packager/export_mystery.py
-```
+## Cases
+
+| Case | Trajectories | Case-specific dims |
+|---|---|---|
+| amber_cipher | 39 | none |
+| attended_hour | 40 | MEDICAL_TELL |
+| venetian_mirror | 39 | ART_TELL |
+
+Total: 118 trajectories (target was 50/case = 150). New outcome classes added: partial_correct, accomplice_found, framed_suspect, motive_only_confession, late_revelation, near_miss.
 
 ## Key Commands
 
-- Validate case: `python3 living_tales_case_validator.py cases/amber_cipher.json`
-- Pack case: `python3 living_tales/trainer/tools/pack_case.py cases/amber_cipher.json`
-- Train Hopfield: `make ac-s03-train-hopfield`
-- Train dialogue transformer: `make ac-s04-train-dialogue`
-- Train dialogue (fast): `make ac-s04-train-dialogue-fast`
-- Play interactively: `cd living_tales/trainer && python3 tools/play_dialogue.py amber_cipher`
-- Run evals: `cd evals && make eval-all`
-- Load trained model: `python3 living_tales/trainer/tools/load_trained_model.py living_tales/trainer/outputs/amber_cipher/dialogue_model.pt`
+```bash
+# Author + validate
+python3 living_tales/trainer/tools/validate_trajectories.py <case> --all
+python3 living_tales/trainer/tools/author_live.py <case> <traj_id>      # live composer preview
+
+# Train (Colab only — never local)
+make train-v2-base   OUTPUT_DIR=/content/drive/MyDrive/living_tales_outputs
+make train-v2-all    OUTPUT_DIR=/content/drive/MyDrive/living_tales_outputs
+make eval-gate       # probe + 5-seed × 3-case judge sweep
+
+# Play
+cd living_tales/trainer && python3 tools/pygame_play.py <case> --lang en
+
+# Simulate (with claude_subagent / openai / gemini judge)
+python3 tools/playtest_simulate.py <case> --n 3 --max-turns 25 --seed 1
+```
 
 ## Invariants (Non-Negotiable)
 
-- The engine never reads surface expressions.
-- Convergence score is the minimum across dimensions.
-- Cartridges cannot export without a passed proof.
-- Phase order (EARLY → MID → LATE) is inviolable.
-- KD anchor prevents RL drift from proven Hopfield structure.
-- Tokens are always symbolic — this is not a language model.
+- Engine never reads surface expressions; tokens are symbolic.
+- All trajectories are hand-authored (or hand-reviewed); no programmatic generation from attractor walks.
+- Cross-case bleed is forbidden: per-case vocab restriction at inference (will move to per-case checkpoint baking).
+- Convergence is player-guided (driven by token attractor weights), not automatic time-based — runtime placeholders are scaffolding to remove.
+- Hard-mask constraints apply at inference; soft penalty at training is on the roadmap.
+- Spanish parity: every phrases.json entry has en + es.
+- Train on Colab, never local.
 
-## What to Validate
+## Known Issues / Roadmap
 
-- Structure rules: token counts, class distribution, invariant purity, phase counts.
-- Attractor gradients: early/mid/late weight bands, red herring cap, balanced convergence.
-- Graph correctness: symmetric edges, no self-loops, invariant isolation, enabler bridge.
-- Training viability: dialogue sampling succeeds, KD loss decreases, RL reward increases.
-- Convergence proof: Lyapunov monotonicity, basin coverage, no spurious attractors.
-- Chronology: phase compliance >= 90% across all eval games.
+- **Modal-token collapse** on REVELATION (`confirmation`) and TRANSITION (`stayed`) — `lambda_div=0.05` was too weak; bump to 0.20 next retrain.
+- **NPC interview-stage tracking** absent in runtime — voice-arcs stay at "cold" stage forever. Easy fix.
+- **Convergence accumulator placeholder** (+0.04/turn) bypasses real attractor-weight signal — restore proper accumulator.
+- **Per-case vocab restriction** is a runtime wrapper; should be baked into adapter checkpoints.
+- **Hard-mask only at inference** — train-time soft penalty would harden constraint coverage.
+- **Phrase pool thin per token** — many top-NPC phrases have 1 cold-stage variant; need 4-6 variants × 4 stages.
 
 ## What to Optimize
 
-- Dialogue trajectory quality (diverse, convergent paths).
-- KD temperature tuning (start T=2.0, adjust per eval perplexity).
-- RL reward shaping (energy + chronology + diversity).
-- Overfitting depth (perplexity < 10, accuracy > 50% on held-out dialogues).
-- Progress visibility (clear training/eval output).
+- Diversity-loss weight + counterfactual-branch density (cures head collapse).
+- More trajectories per case (50 → 65 → 90 in three thresholds).
+- Phrase variant richness, especially top-NPC voice-arc stages.
+- Train-time hard-mask penalty (kills inference-time slips).
+- Convergence purity — drive only from attractor weights, no constant boosts.
