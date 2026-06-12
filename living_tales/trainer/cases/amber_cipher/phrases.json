@@ -57,40 +57,40 @@
 
   "CAUSE": {
     "cause:following_witness_lead": {
-      "en": ["On the witness's word,", "Acting on what the witness had said,", "Following the witness's account,", "Taking the witness at his word,"],
-      "es": ["Por la palabra del testigo,", "Atendiendo lo dicho por el testigo,", "Siguiendo el relato del testigo,", "Conforme al testimonio,"]
+      "en": ["On the witness's word,", "Acting on what the witness had said,", "The testimony pointed there;", "Taking the account as given,", "What the witness had let slip warranted a look;", "Led by the witness's account,"],
+      "es": ["Por la palabra del testigo,", "Atendiendo lo dicho por el testigo,", "El testimonio apuntaba allí;", "Tomando el relato tal como fue dado,", "Lo que el testigo dejó escapar merecía atención;", "Guiada por el relato del testigo,"]
     },
     "cause:examining_evidence": {
-      "en": ["Tracing the evidence,", "Following the evidence,", "Working from the evidence,", "Carrying the evidence forward,"],
-      "es": ["Siguiendo la evidencia,", "Trazando la evidencia,", "Partiendo de las pruebas,", "Llevando la prueba adelante,"]
+      "en": ["Tracing the evidence,", "Working from what was in hand,", "The facts ran in one direction;", "With the proofs laid out in order,", "What had been gathered pointed onward;", "Weighing the matter piece by piece,"],
+      "es": ["Siguiendo la evidencia,", "Trabajando con lo que tenía en mano,", "Los hechos corrían en una dirección;", "Con las pruebas dispuestas en orden,", "Lo reunido señalaba más adelante;", "Sopesando el asunto pieza a pieza,"]
     },
     "cause:recognized_object": {
-      "en": ["Something about the object struck her;", "The object held her attention;", "A look at the object stopped her;", "The thing in question caught her eye;"],
-      "es": ["Algo del objeto la detuvo;", "El objeto retuvo su atención;", "Algo en el objeto la hizo pararse;", "La cosa en cuestión le llamó la mirada;"]
+      "en": ["Something about the object struck her;", "The object held her attention;", "She had seen its like before;", "The thing in question would not be dismissed;", "A familiarity in the object stopped her;"],
+      "es": ["Algo del objeto la detuvo;", "El objeto retuvo su atención;", "Había visto algo semejante antes;", "La cosa en cuestión no se dejaba descartar;", "Una familiaridad en el objeto la frenó;"]
     },
     "cause:noticed_inconsistency": {
-      "en": ["A detail did not match;", "Something did not add up;", "One detail refused to fit;", "An inconsistency stood out;"],
-      "es": ["Un detalle no encajaba;", "Algo no cuadraba;", "Un detalle se resistía;", "Una inconsistencia saltaba a la vista;"]
+      "en": ["A detail did not match;", "Something did not add up;", "One detail refused to fit;", "The times did not agree;", "A small thing sat wrong in the account;"],
+      "es": ["Un detalle no encajaba;", "Algo no cuadraba;", "Un detalle se resistía;", "Las horas no concordaban;", "Una pequeñez desentonaba en el relato;"]
     },
     "cause:pursued_suspicion": {
-      "en": ["On a hunch,", "Following a suspicion,", "Acting on a doubt,", "On the strength of a suspicion,"],
-      "es": ["Por una corazonada,", "Siguiendo una sospecha,", "Movida por una duda,", "Llevada por la sospecha,"]
+      "en": ["On a hunch,", "A suspicion had taken hold;", "Doubt would not let the matter rest;", "Something unproven pulled at her;", "The suspicion was worth the walk;", "Unwilling to let it lie,"],
+      "es": ["Por una corazonada,", "Una sospecha había echado raíz;", "La duda no dejaba descansar el asunto;", "Algo sin probar tiraba de ella;", "La sospecha valía la caminata;", "Sin querer dejarlo estar,"]
     },
     "cause:revisiting_scene": {
-      "en": ["Returning to confirm,", "Going back to check,", "To check the matter again,", "Coming back to verify,"],
-      "es": ["Volviendo para confirmar,", "Regresando a comprobar,", "Para verificar de nuevo,", "Para corroborarlo,"]
+      "en": ["Returning to confirm,", "Going back to check,", "The ground deserved a second look;", "To see the place again with fresher eyes,", "Something there had been left unexamined;"],
+      "es": ["Volviendo para confirmar,", "Regresando a comprobar,", "El terreno merecía una segunda mirada;", "Para ver el lugar con ojos más frescos,", "Algo quedaba allí sin examinar;"]
     },
     "cause:summoned": {
-      "en": ["Called by name,", "Summoned by name,", "On being called,", "Hailed by name,"],
-      "es": ["Llamada por su nombre,", "Convocada por su nombre,", "Al ser llamada,", "Reclamada por su nombre,"]
+      "en": ["Called by name,", "Summoned by name,", "Word had been sent for her;", "On being called,", "A message required her presence;"],
+      "es": ["Llamada por su nombre,", "Convocada por su nombre,", "Habían mandado por ella;", "Al ser llamada,", "Un recado requería su presencia;"]
     },
     "cause:chronological_drift": {
-      "en": ["As the hour wore on,", "As the night drew on,", "As time pressed on,", "With the hour advancing,"],
-      "es": ["Mientras la hora se alargaba,", "A medida que avanzaba la noche,", "Conforme corría el tiempo,", "Con la hora ya avanzada,"]
+      "en": ["As the hour wore on,", "As the night drew on,", "The timetable pressed;", "With the next train due,", "The hour left little room;"],
+      "es": ["Mientras la hora se alargaba,", "A medida que avanzaba la noche,", "El horario apremiaba;", "Con el próximo tren al caer,", "La hora dejaba poco margen;"]
     },
     "cause:reading_telegram_signal": {
-      "en": ["Reading the wire's signal,", "On the strength of the wire,", "Working from the telegram,", "Following what the wire said,"],
-      "es": ["Leyendo la señal del telégrafo,", "Por lo dicho en el cable,", "A partir del telegrama,", "Siguiendo el aviso del telégrafo,"]
+      "en": ["Reading the wire's signal,", "On the strength of the wire,", "The telegram said enough;", "Two words on the form decided it;", "Following what the wire said,"],
+      "es": ["Leyendo la señal del telégrafo,", "Por lo dicho en el cable,", "El telegrama decía bastante;", "Dos palabras en el formulario lo decidieron;", "Siguiendo el aviso del telégrafo,"]
     },
     "cause:none": {"en": "", "es": ""}
   },
@@ -348,10 +348,10 @@
         "the carriage cleaner passed between the seats"
       ],
       "es": [
-        "el limpiador de coches se movía entre filas",
-        "el limpiador de coches trabajaba a lo largo de las filas",
-        "el limpiador de coches recorría el pasillo con su trapo",
-        "el limpiador de coches pasaba entre los asientos"
+        "la limpiadora de coches se movía entre filas",
+        "la limpiadora de coches trabajaba a lo largo de las filas",
+        "la limpiadora de coches recorría el pasillo con su trapo",
+        "la limpiadora de coches pasaba entre los asientos"
       ]
     },
     "presence:with_telegraph_operator": {
@@ -387,7 +387,7 @@
   "STANCE": {
     "stance:cooperative": {
       "en": ["open, willing to speak", "willing to answer", "ready enough to speak", "open to the questions"],
-      "es": ["abierto, dispuesto a hablar", "dispuesto a responder", "lo bastante dispuesto a hablar", "abierto a las preguntas"]
+      "es": ["con disposición a hablar", "sin reparo en responder", "con ánimo de responder", "sin resistencia a las preguntas"]
     },
     "stance:defensive": {
       "en": ["the hands flat against the desk", "the hands held in view", "the shoulders squared at the question", "the back straightening at the question"],
@@ -414,24 +414,24 @@
       "es": ["examinó", "revisó", "estudió", "observó"]
     },
     "action:questions": {
-      "en": ["questioned", "put questions to", "asked after", "pressed for an answer from"],
-      "es": ["interrogó", "preguntó a", "indagó a", "presionó para sacar respuesta a"]
+      "en": ["questioned", "pressed", "asked", "interrogated"],
+      "es": ["interrogó", "presionó", "preguntó", "indagó"]
     },
     "action:notices": {
-      "en": ["noticed", "marked", "took note of", "caught sight of"],
-      "es": ["advirtió", "reparó en", "tomó nota de", "se fijó en"]
+      "en": ["noticed", "noted", "marked", "observed"],
+      "es": ["advirtió", "notó", "registró", "observó"]
     },
     "action:discovers": {
-      "en": ["found", "came upon", "uncovered", "turned up"],
-      "es": ["halló", "encontró", "descubrió", "dio con"]
+      "en": ["found", "uncovered", "unearthed", "discovered"],
+      "es": ["halló", "encontró", "descubrió", "destapó"]
     },
     "action:confronts": {
-      "en": ["confronted", "put the matter to", "set the matter before", "named the matter to"],
-      "es": ["confrontó", "puso el asunto ante", "expuso el asunto a", "le planteó el asunto a"]
+      "en": ["confronted", "challenged", "cornered", "accosted"],
+      "es": ["confrontó", "encaró", "acorraló", "abordó"]
     },
     "action:follows": {
-      "en": ["followed", "kept after", "tracked", "stayed with"],
-      "es": ["siguió", "fue tras", "rastreó", "se mantuvo tras"]
+      "en": ["followed", "tracked", "shadowed", "trailed"],
+      "es": ["siguió", "rastreó", "persiguió", "vigiló"]
     },
     "action:waits": {
       "en": ["waited", "held her place", "stayed where she was", "kept still"],
@@ -446,8 +446,8 @@
       "es": ["entró en", "llegó a", "puso pie en", "pasó a"]
     },
     "action:recalls": {
-      "en": ["recalled", "remembered", "called to mind", "brought back to mind"],
-      "es": ["recordó", "rememoró", "trajo a la memoria", "volvió a tener presente"]
+      "en": ["recalled", "remembered", "recollected", "reconsidered"],
+      "es": ["recordó", "rememoró", "reconsideró", "repasó"]
     },
     "action:none": {
       "en": ["stood", "kept still", "stayed where she was", "held her place"],
@@ -474,36 +474,36 @@
 
   "TELL": {
     "emotion:steady_hands": {
-      "en": ["the hands stayed steady", "the hands did not shake", "no tremor came to the hands", "the hands kept still on the desk"],
-      "es": ["las manos no temblaron", "las manos se mantuvieron firmes", "no asomó temblor en las manos", "las manos siguieron quietas sobre la mesa"]
+      "en": ["the hands stayed steady", "the hands did not shake", "no tremor came to the hands", "the hands kept still on the desk", "the hands gave nothing away"],
+      "es": ["las manos no temblaron", "las manos se mantuvieron firmes", "no asomó temblor en las manos", "las manos siguieron quietas sobre la mesa", "las manos no delataron nada"]
     },
     "emotion:fixed_stare": {
-      "en": ["the stare did not waver", "the eyes held their line", "the gaze did not move", "the eyes stayed where they had been"],
-      "es": ["la mirada no se desvió", "los ojos sostuvieron su línea", "la mirada no se movió", "los ojos se mantuvieron donde estaban"]
+      "en": ["the stare did not waver", "the eyes held their line", "the gaze did not move", "the eyes stayed where they had been", "the look held without blinking"],
+      "es": ["la mirada no se desvió", "los ojos sostuvieron su línea", "la mirada no se movió", "los ojos se mantuvieron donde estaban", "la mirada se sostuvo sin parpadear"]
     },
     "emotion:avoided_contact": {
-      "en": ["the eyes did not lift to meet hers", "the gaze did not come up to her", "the eyes stayed on the floor", "the gaze did not cross hers"],
-      "es": ["los ojos no se alzaron a cruzar la mirada", "la mirada no llegó a la suya", "los ojos siguieron en el suelo", "la mirada no se cruzó con la suya"]
+      "en": ["the eyes did not lift to meet hers", "the gaze did not come up to her", "the eyes stayed on the floor", "the gaze did not cross hers", "the eyes went anywhere but to her"],
+      "es": ["los ojos no se alzaron a cruzar la mirada", "la mirada no llegó a la suya", "los ojos siguieron en el suelo", "la mirada no se cruzó con la suya", "los ojos iban a cualquier parte menos a ella"]
     },
     "emotion:measured_breath": {
-      "en": ["the breathing stayed measured", "the breath kept its pace", "the breathing did not quicken", "the breath stayed even"],
-      "es": ["la respiración se mantuvo medida", "el aliento conservó su ritmo", "la respiración no se aceleró", "el aliento se mantuvo parejo"]
+      "en": ["the breathing stayed measured", "the breath kept its pace", "the breathing did not quicken", "the breath stayed even", "each breath came at its appointed time"],
+      "es": ["la respiración se mantuvo medida", "el aliento conservó su ritmo", "la respiración no se aceleró", "el aliento se mantuvo parejo", "cada respiración llegaba a su hora"]
     },
     "emotion:paused_reply": {
-      "en": ["the answer paused before coming", "the reply was slow in coming", "a pause came before the answer", "the answer waited a moment"],
-      "es": ["la respuesta tardó en llegar", "la contestación llegó despacio", "hubo una pausa antes de responder", "la respuesta esperó un instante"]
+      "en": ["the answer paused before coming", "the reply was slow in coming", "a pause came before the answer", "the answer waited a moment", "the words were weighed before they came"],
+      "es": ["la respuesta tardó en llegar", "la contestación llegó despacio", "hubo una pausa antes de responder", "la respuesta esperó un instante", "las palabras fueron sopesadas antes de llegar"]
     },
     "emotion:closed_posture": {
-      "en": ["the coat stayed buttoned", "the coat was not opened", "the buttons of the coat stayed done", "the coat remained closed at the throat"],
-      "es": ["el abrigo siguió abrochado", "el abrigo no se abrió", "los botones del abrigo siguieron cerrados", "el abrigo permaneció cerrado al cuello"]
+      "en": ["the coat stayed buttoned", "the coat was not opened", "the buttons of the coat stayed done", "the coat remained closed at the throat", "the arms stayed crossed against the cold or the question"],
+      "es": ["el abrigo siguió abrochado", "el abrigo no se abrió", "los botones del abrigo siguieron cerrados", "el abrigo permaneció cerrado al cuello", "los brazos siguieron cruzados, contra el frío o contra la pregunta"]
     },
     "tell:paled": {
-      "en": ["all colour drained at the question", "the colour went out of the face at the question", "the face lost its colour at the question", "the colour fled at the question"],
-      "es": ["todo el color se retiró ante la pregunta", "el color huyó del rostro ante la pregunta", "la cara perdió el color ante la pregunta", "el color desapareció ante la pregunta"]
+      "en": ["all colour drained at the question", "the colour went out of the face at the question", "the face lost its colour at the question", "the colour fled at the question", "the face went the colour of the fog"],
+      "es": ["todo el color se retiró ante la pregunta", "el color huyó del rostro ante la pregunta", "la cara perdió el color ante la pregunta", "el color desapareció ante la pregunta", "el rostro tomó el color de la niebla"]
     },
     "tell:tightened": {
-      "en": ["the shoulders tightened", "the shoulders drew up", "the shoulders set", "a tightness came into the shoulders"],
-      "es": ["los hombros se tensaron", "los hombros se elevaron", "los hombros se afirmaron", "una tensión asomó en los hombros"]
+      "en": ["the shoulders tightened", "the shoulders drew up", "the shoulders set", "a tightness came into the shoulders", "a stiffness rose above the coat collar"],
+      "es": ["los hombros se tensaron", "los hombros se elevaron", "los hombros se afirmaron", "una tensión asomó en los hombros", "una rigidez asomó sobre el cuello del abrigo"]
     },
     "tell:none": {"en": "", "es": ""}
   },
@@ -514,13 +514,17 @@
         "Outside, the fog thickened around the lamps.",
         "The fog grew heavier around the lamps outside.",
         "Beyond the windows, the fog closed in on the lamps.",
-        "Outside, the fog drew tighter around the lamps."
+        "Outside, the fog drew tighter around the lamps.",
+        "The fog stood at the glass like wet wool.",
+        "Under the lamps the fog had the colour of old tea."
       ],
       "es": [
         "Fuera, la niebla se espesaba en torno a las lámparas.",
         "La niebla se hacía más densa en torno a las lámparas, afuera.",
         "Más allá de las ventanas, la niebla se cerraba sobre las lámparas.",
-        "Fuera, la niebla se apretaba alrededor de las lámparas."
+        "Fuera, la niebla se apretaba alrededor de las lámparas.",
+        "La niebla se pegaba al cristal como lana mojada.",
+        "Bajo las lámparas, la niebla tenía el color del té viejo."
       ]
     },
     "atmosphere:fog_lifts": {
@@ -556,27 +560,37 @@
         "The lamps held steady.",
         "The lamps burned steady.",
         "The lamps did not waver.",
-        "The lamps kept their light."
+        "The lamps kept their light.",
+        "The gas burned without complaint."
       ],
       "es": [
         "Las lámparas ardían firmes.",
         "Las lámparas se mantenían firmes.",
         "Las lámparas no vacilaban.",
-        "Las lámparas conservaban su luz."
+        "Las lámparas conservaban su luz.",
+        "El gas ardía sin queja."
       ]
     },
     "atmosphere:silence_holds": {
       "en": [
         "Silence held between them.",
         "The silence stayed.",
-        "Quiet held between them.",
-        "No word came after."
+        "No word came after.",
+        "The quiet ran on unbroken.",
+        "Nothing more was said for a time.",
+        "Only the clock in the office carried on.",
+        "The room kept its stillness.",
+        "Neither of them filled the pause."
       ],
       "es": [
         "El silencio se mantuvo entre ellos.",
         "El silencio se sostuvo.",
-        "La quietud se quedó entre ellos.",
-        "No vino palabra después."
+        "No vino palabra después.",
+        "La quietud siguió sin romperse.",
+        "Nada más se dijo por un rato.",
+        "Sólo el reloj de la oficina continuó.",
+        "La sala conservó su quietud.",
+        "Ninguno de los dos llenó la pausa."
       ]
     },
     "atmosphere:train_passes": {

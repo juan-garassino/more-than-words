@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_accomplice_via_signalman_cold",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of accomplice_via_signalman. At turn 19 the signalman is cooperative rather than hostile — the STANCE divergence defuses the chain, the detective never gets a confession, and the case stalls in a circular loop through the signal box until the trail goes cold.",
+  "outcome": "cold_trail",
+  "branch_of": "accomplice_via_signalman",
+  "branch_turn": 19,
+  "divergence_token": "STANCE=stance:cooperative",
+  "starting_hypothesis": "witness_first_signalman",
+  "tags": [
+    "counterfactual_branch",
+    "signalman_diffused",
+    "stance_divergence",
+    "cold_trail"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:carriage_siding",
+      "location:signal_box",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.44, 0.48, 0.44]
+  },
+  "turns": [
+    {"turn": 19, "_note": "DIVERGENCE: signalman cooperative, gives the lever-log entries plainly without admitting the fee.", "player_card": "travel:to_signal_box", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:returned", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_signalman", "STANCE": "stance:cooperative", "ACTION": "action:arrives", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_flickers", "REVELATION": "revelation:none", "BEAT": "beat:investigation"}, "convergence_after": [0.44, 0.48, 0.44]},
+    {"turn": 20, "_note": "Question signalman — he gives lever numbers and nothing else.", "player_card": "witness:signalman", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_signalman", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:dead_end", "BEAT": "beat:investigation"}, "convergence_after": [0.44, 0.48, 0.44]},
+    {"turn": 21, "_note": "Examine cipher with him. He reads but does not interpret.", "player_card": "object:cipher_sheet", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_signalman", "STANCE": "stance:cooperative", "ACTION": "action:examines", "OBJECT_FOCUS": "object:cipher_sheet", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_flickers", "REVELATION": "revelation:partial_match", "BEAT": "beat:investigation"}, "convergence_after": [0.45, 0.48, 0.45]},
+    {"turn": 22, "_note": "Return to carriage siding. Empty.", "player_card": "travel:to_carriage_siding", "scene": {"LOCATION": "location:carriage_siding", "TRANSITION": "transition:returned", "CAUSE": "cause:revisiting_scene", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:waits", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:fog_thickens", "REVELATION": "revelation:none", "BEAT": "beat:investigation"}, "convergence_after": [0.45, 0.48, 0.45]},
+    {"turn": 23, "_note": "Return to signal box. Same answers.", "player_card": "travel:to_signal_box", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:returned", "CAUSE": "cause:revisiting_scene", "PRESENCE": "presence:with_signalman", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:dead_end", "BEAT": "beat:investigation"}, "convergence_after": [0.46, 0.48, 0.46]},
+    {"turn": 24, "_note": "Trail goes cold. Detective leaves the station without an accusation.", "player_card": "modifier:lamps_dimmed", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:chronological_drift", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:waits", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:dead_end", "BEAT": "beat:investigation"}, "convergence_after": [0.46, 0.48, 0.46]}
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "accused": null,
+    "true_culprit": "suspect:renard_voss",
+    "final_convergence": [0.46, 0.48, 0.46],
+    "_note": "Signalman cooperative; chain never matures. Trail goes cold."
+  }
+}

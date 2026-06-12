@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_cold_trail_circular_to_late",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of cold_trail_circular. At turn 30 the fog lifts as the detective enters the waiting room — an ATMOSPHERE divergence paired with a BEAT shift unlocks a cascade. The ink blotter's reverse imprint matches a cipher she had set aside, the cipher decodes to RV, and the cold trail breaks open into a late revelation. She accuses Voss correctly at turn 37.",
+  "outcome": "late_revelation",
+  "branch_of": "cold_trail_circular",
+  "branch_turn": 30,
+  "divergence_token": "ATMOSPHERE=atmosphere:fog_lifts",
+  "starting_hypothesis": "circular_loop",
+  "tags": [
+    "counterfactual_branch",
+    "atmosphere_break",
+    "beat_divergence",
+    "late_revelation_recovery",
+    "voss_correct"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:station_office",
+      "location:waiting_room",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.32, 0.30, 0.33]
+  },
+  "turns": [
+    {"turn": 30, "_note": "DIVERGENCE: fog lifts at the waiting-room window. Daughter has gone but the air is clear.", "player_card": "travel:to_waiting_room", "scene": {"LOCATION": "location:waiting_room", "TRANSITION": "transition:returned", "CAUSE": "cause:revisiting_scene", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:notices", "OBJECT_FOCUS": "object:ink_blotter", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:fog_lifts", "REVELATION": "revelation:partial_match", "BEAT": "beat:investigation"}, "convergence_after": [0.40, 0.40, 0.40]},
+    {"turn": 31, "_note": "Examine the ink blotter — reverse imprint surfaces in new light.", "player_card": "object:ink_blotter", "scene": {"LOCATION": "location:waiting_room", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:ink_blotter", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "BEAT": "beat:investigation"}, "convergence_after": [0.52, 0.52, 0.52]},
+    {"turn": 32, "_note": "Cross to signal box — set the imprint against the cipher.", "player_card": "travel:to_signal_box", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:arrives", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_steady", "REVELATION": "revelation:none", "BEAT": "beat:closing_in"}, "convergence_after": [0.58, 0.58, 0.58]},
+    {"turn": 33, "_note": "Cipher sheet decrypts — same hand as the blotter.", "player_card": "object:cipher_sheet", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:examines", "OBJECT_FOCUS": "object:cipher_sheet", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_steady", "REVELATION": "revelation:name_uncovered", "BEAT": "beat:closing_in"}, "convergence_after": [0.66, 0.66, 0.66]},
+    {"turn": 34, "_note": "Recall initialed_RV.", "player_card": "modifier:initialed_RV", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:cipher_sheet", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_steady", "REVELATION": "revelation:confirmation", "BEAT": "beat:closing_in"}, "convergence_after": [0.72, 0.72, 0.72]},
+    {"turn": 35, "_note": "Cross to goods shed.", "player_card": "travel:to_goods_shed", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:arrives", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:closing_in"}, "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 36, "_note": "Lay cipher and confront.", "player_card": "object:cipher_sheet", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object:cipher_sheet", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.78, 0.78, 0.78]},
+    {"turn": 37, "_note": "Accusation. Voss. Late but correct.", "player_card": "ACCUSE:suspect:renard_voss", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.78, 0.78, 0.78]}
+  ],
+  "ending": {
+    "type": "late_revelation",
+    "accused": "suspect:renard_voss",
+    "premature_accusation": null,
+    "true_culprit": "suspect:renard_voss",
+    "final_convergence": [0.78, 0.78, 0.78],
+    "_note": "Fog lifted at the waiting-room window; ink blotter reading broke the loop. Late but correct."
+  }
+}

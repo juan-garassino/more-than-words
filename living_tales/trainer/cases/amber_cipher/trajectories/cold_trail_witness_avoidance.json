@@ -254,7 +254,7 @@
         "CAUSE": "cause:recognized_object",
         "PRESENCE": "presence:with_telegraph_operator",
         "STANCE": "stance:unaware",
-        "ACTION": "action:examines",
+        "ACTION": "action:recalls",
         "OBJECT_FOCUS": "object:telegram",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lamp_flickers",

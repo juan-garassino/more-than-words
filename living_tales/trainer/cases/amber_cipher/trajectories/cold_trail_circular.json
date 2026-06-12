@@ -208,8 +208,8 @@
     },
     {
       "turn": 11,
-      "_note": "Question clerk. Polite, shrugs.",
-      "player_card": "witness:ticket_clerk",
+      "_note": "Question the railway clerk. Polite, shrugs.",
+      "player_card": "witness:railway_clerk",
       "scene": {
         "LOCATION": "location:station_office",
         "TRANSITION": "transition:stayed",

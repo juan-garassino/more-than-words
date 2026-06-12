@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_voss_via_cipher_sheet_motive_only",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of voss_via_cipher_sheet. At turn 25 the detective fails to recall the RV initials as a name — she binds the cipher to a motive instead, never opens the chain to Voss, and lets the case close on the motive alone. Voss walks free.",
+  "outcome": "motive_only_confession",
+  "branch_of": "voss_via_cipher_sheet",
+  "branch_turn": 25,
+  "divergence_token": "REVELATION=revelation:motive_emerges",
+  "starting_hypothesis": "object_first",
+  "tags": [
+    "counterfactual_branch",
+    "cipher_chain",
+    "motive_only_recovery",
+    "voss_walks"
+  ],
+  "opening": {
+    "_note": "Includes prior visited locations so the validator's transition checks resolve against the source trajectory's pre-branch path.",
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:signal_box",
+      "location:station_office",
+      "location:platform_one",
+      "location:carriage_siding",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "_note": "Convergence inherited from source trajectory's turn 24 (just before the branch turn).",
+    "convergence_dims": [0.62, 0.62, 0.62]
+  },
+  "turns": [
+    {"turn": 25, "_note": "DIVERGENCE: detective binds cipher initials to fraud motive, not to a name.", "player_card": "modifier:initialed_RV", "scene": {"LOCATION": "location:carriage_siding", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:sealed_envelope", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.64, 0.64, 0.64]},
+    {"turn": 26, "_note": "Press fraud_concealment as the why.", "player_card": "motive:fraud_concealment", "scene": {"LOCATION": "location:carriage_siding", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:sealed_envelope", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.66, 0.66, 0.66]},
+    {"turn": 27, "_note": "Return to signal box. Operator listens, does not contradict.", "player_card": "travel:to_signal_box", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:returned", "CAUSE": "cause:revisiting_scene", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:examines", "OBJECT_FOCUS": "object:cipher_sheet", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_steady", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.68, 0.68, 0.68]},
+    {"turn": 28, "_note": "Detective never travels to the goods shed. Records the motive.", "player_card": "modifier:lamps_dimmed", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:chronological_drift", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:waits", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:closing_in"}, "convergence_after": [0.70, 0.70, 0.70]},
+    {"turn": 29, "_note": "Bind sealed_proof motive too.", "player_card": "motive:sealed_proof", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:sealed_envelope", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.72, 0.72, 0.72]},
+    {"turn": 30, "_note": "Dawn presses. No name has been spoken.", "player_card": "modifier:lamps_dimmed", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:chronological_drift", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:waits", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:closing_in"}, "convergence_after": [0.74, 0.74, 0.74]}
+  ],
+  "ending": {
+    "type": "motive_only_confession",
+    "accused": null,
+    "confessed_motive": "motive:fraud_concealment",
+    "true_culprit": "suspect:renard_voss",
+    "final_convergence": [0.74, 0.74, 0.74],
+    "_note": "Motive on record. No arrest. Voss departs at dawn."
+  }
+}

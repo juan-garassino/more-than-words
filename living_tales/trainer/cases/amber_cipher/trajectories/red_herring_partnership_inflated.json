@@ -27,7 +27,7 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object:torn_ticket",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fog_thickens",
         "REVELATION": "revelation:partial_match",
@@ -171,7 +171,7 @@
     {
       "turn": 9,
       "_note": "Question the railway_clerk on the firm's old name.",
-      "player_card": "witness:ticket_clerk",
+      "player_card": "witness:railway_clerk",
       "scene": {
         "LOCATION": "location:station_office",
         "TRANSITION": "transition:stayed",
@@ -627,7 +627,7 @@
     {
       "turn": 33,
       "_note": "Question railway_clerk one last time on the firm's wind-up entries.",
-      "player_card": "witness:ticket_clerk",
+      "player_card": "witness:railway_clerk",
       "scene": {
         "LOCATION": "location:station_office",
         "TRANSITION": "transition:stayed",

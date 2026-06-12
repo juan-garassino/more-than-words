@@ -78,7 +78,7 @@
         "OBJECT_FOCUS": "object:ledger_book",
         "TELL": "emotion:measured_breath",
         "ATMOSPHERE": "atmosphere:lamp_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation"
       },
       "convergence_after": [
@@ -147,7 +147,7 @@
         "OBJECT_FOCUS": "object:ledger_book",
         "TELL": "emotion:paused_reply",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation"
       },
       "convergence_after": [
@@ -308,7 +308,7 @@
         "OBJECT_FOCUS": "object:ink_blotter",
         "TELL": "emotion:closed_posture",
         "ATMOSPHERE": "atmosphere:lamp_flickers",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation"
       },
       "convergence_after": [
@@ -377,7 +377,7 @@
         "OBJECT_FOCUS": "object:initialed_cufflink",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fog_thickens",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation"
       },
       "convergence_after": [
@@ -419,7 +419,7 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_estranged_daughter",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:none",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:measured_breath",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -787,7 +787,7 @@
         "CAUSE": "cause:revisiting_scene",
         "PRESENCE": "presence:with_estranged_daughter",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:none",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:steady_hands",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -810,11 +810,11 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_estranged_daughter",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:recalls",
+        "ACTION": "action:none",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:measured_breath",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:confirmation",
+        "REVELATION": "revelation:motive_emerges",
         "BEAT": "beat:closing_in"
       },
       "convergence_after": [
@@ -1017,7 +1017,7 @@
         "CAUSE": "cause:none",
         "PRESENCE": "presence:with_renard_voss",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:none",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:fixed_stare",
         "ATMOSPHERE": "atmosphere:dawn_approaches",

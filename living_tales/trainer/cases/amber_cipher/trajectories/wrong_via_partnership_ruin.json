@@ -238,7 +238,7 @@
         "PRESENCE": "presence:with_stationmaster",
         "STANCE": "stance:evasive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:ledger_book",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:paused_reply",
         "ATMOSPHERE": "atmosphere:lamp_steady",
         "REVELATION": "revelation:partial_match",
@@ -500,7 +500,7 @@
       "convergence_after": [
         0.58,
         0.62,
-        0.54
+        0.56
       ]
     },
     {
@@ -514,7 +514,7 @@
         "PRESENCE": "presence:with_renard_voss",
         "STANCE": "stance:evasive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:initialed_cufflink",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:paused_reply",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
@@ -766,7 +766,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:with_renard_voss",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:initialed_cufflink",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -789,7 +789,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:with_renard_voss",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:cipher_sheet",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -927,7 +927,7 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:with_renard_voss",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:questions",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
@@ -973,7 +973,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:with_renard_voss",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:initialed_cufflink",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:dawn_approaches",

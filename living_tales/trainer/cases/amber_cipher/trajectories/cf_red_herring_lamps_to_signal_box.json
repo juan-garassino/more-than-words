@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_red_herring_lamps_to_signal_box",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of red_herring_lamps_dimmed. At turn 17 the detective follows the platform_guard's empty lantern hook instead of questioning him in place — the ACTION divergence leads her into the signal box where she finds a planted lever entry tied back to the guard. She frames the platform_guard and Voss walks.",
+  "outcome": "framed_suspect",
+  "branch_of": "red_herring_lamps_dimmed",
+  "branch_turn": 17,
+  "divergence_token": "ACTION=action:follows",
+  "starting_hypothesis": "atmospheric_first_lamps",
+  "tags": [
+    "counterfactual_branch",
+    "frame_platform_guard",
+    "action_divergence",
+    "voss_walks"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:station_office",
+      "location:waiting_room",
+      "location:signal_box",
+      "location:platform_one",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.56, 0.56, 0.56]
+  },
+  "turns": [
+    {"turn": 17, "_note": "DIVERGENCE: detective follows the platform_guard rather than question him in place.", "player_card": "suspect:platform_guard", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:defensive", "ACTION": "action:follows", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:closed_posture", "ATMOSPHERE": "atmosphere:lamp_flickers", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.58, 0.58, 0.58]},
+    {"turn": 18, "_note": "Cross to signal box. Planted entry in the lever log ties the guard to the eleven-oh-six.", "player_card": "travel:to_signal_box", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "BEAT": "beat:closing_in"}, "convergence_after": [0.62, 0.62, 0.62]},
+    {"turn": 19, "_note": "Examine the planted entry.", "player_card": "action:signal_paused", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object:platform_lantern", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:name_uncovered", "BEAT": "beat:closing_in"}, "convergence_after": [0.66, 0.66, 0.66]},
+    {"turn": 20, "_note": "Press paid_off motive.", "player_card": "modifier:paid_off", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.72, 0.72, 0.72]},
+    {"turn": 21, "_note": "Lay the lantern.", "player_card": "object:platform_lantern", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object:platform_lantern", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:closing_in"}, "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 22, "_note": "Accusation. Platform guard. Voss walks.", "player_card": "ACCUSE:suspect:platform_guard", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.78, 0.78, 0.78]}
+  ],
+  "ending": {
+    "type": "framed_suspect",
+    "accused": "suspect:platform_guard",
+    "true_culprit": "suspect:renard_voss",
+    "frame_method": "planted_lever_entry",
+    "final_convergence": [0.78, 0.78, 0.78],
+    "_note": "Guard followed into signal box. Planted lever entry held the frame."
+  }
+}

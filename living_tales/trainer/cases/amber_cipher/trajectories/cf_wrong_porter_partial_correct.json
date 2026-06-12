@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_porter_partial_correct",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of wrong_night_porter_via_evasion. At turn 18 the detective stays at the goods shed rather than returning to the platform — the TRANSITION divergence keeps her on Voss. She accuses correctly, but binds the wrong motive (debt_pressure rather than fraud_concealment). Right man, wrong why.",
+  "outcome": "partial_correct",
+  "branch_of": "wrong_night_porter_via_evasion",
+  "branch_turn": 18,
+  "divergence_token": "TRANSITION=transition:stayed",
+  "starting_hypothesis": "tells_first",
+  "tags": [
+    "counterfactual_branch",
+    "transition_divergence",
+    "partial_correct",
+    "voss_correct",
+    "debt_misread"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:goods_shed",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.44, 0.44, 0.44]
+  },
+  "turns": [
+    {"turn": 18, "_note": "DIVERGENCE: stay at the goods shed instead of returning to the platform.", "player_card": "object:initialed_cufflink", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:defensive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:initialed_cufflink", "TELL": "emotion:closed_posture", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "BEAT": "beat:investigation"}, "convergence_after": [0.52, 0.52, 0.52]},
+    {"turn": 19, "_note": "Recall RV.", "player_card": "modifier:initialed_RV", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:evasive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:initialed_cufflink", "TELL": "emotion:avoided_contact", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:name_uncovered", "BEAT": "beat:closing_in"}, "convergence_after": [0.56, 0.56, 0.56]},
+    {"turn": 20, "_note": "Press debt_pressure — wrong motive.", "player_card": "motive:debt_pressure", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.66, 0.66, 0.66], "scene_type": "dead_end"},
+    {"turn": 21, "_note": "Lay cufflink.", "player_card": "object:initialed_cufflink", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object:initialed_cufflink", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:closing_in"}, "convergence_after": [0.72, 0.72, 0.72]},
+    {"turn": 22, "_note": "Press debt_pressure again.", "player_card": "motive:debt_pressure", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 23, "_note": "Accusation. Voss, wrong motive.", "player_card": "ACCUSE:suspect:renard_voss", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.76, 0.76, 0.76]}
+  ],
+  "ending": {
+    "type": "partial_correct",
+    "accused": "suspect:renard_voss",
+    "claimed_motive": "motive:debt_pressure",
+    "true_motive": "motive:fraud_concealment",
+    "final_convergence": [0.76, 0.76, 0.76],
+    "_note": "Right suspect, wrong motive — detective never crossed to the office to find the fraud column."
+  }
+}

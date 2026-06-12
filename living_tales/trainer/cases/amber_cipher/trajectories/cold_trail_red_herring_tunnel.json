@@ -379,8 +379,8 @@
     },
     {
       "turn": 20,
-      "_note": "Question clerk about partnership names in the ledger.",
-      "player_card": "witness:ticket_clerk",
+      "_note": "Question the railway clerk about partnership names in the ledger.",
+      "player_card": "witness:railway_clerk",
       "scene": {
         "LOCATION": "location:station_office",
         "TRANSITION": "transition:stayed",

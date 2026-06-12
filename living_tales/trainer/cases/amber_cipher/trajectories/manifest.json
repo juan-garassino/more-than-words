@@ -390,6 +390,196 @@
       "file": "near_miss_recovers_from_broker.json",
       "outcome": "correct_voss_after_near_miss",
       "turns": 47
+    },
+    {
+      "id": "voss_via_handwriting_match",
+      "outcome": "correct_voss",
+      "length": 42,
+      "starting_hypothesis": "object_first_ink_blotter",
+      "tags": ["handwriting_chain", "ink_blotter_first", "station_office_heavy", "fraud_concealment_landing", "rare_path"],
+      "_status": "complete"
+    },
+    {
+      "id": "partial_correct_via_misread_motive_d",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first_satchel_misread_motive",
+      "tags": ["partial_correct", "misread_motive", "partnership_ruin_wrong", "fraud_missed", "satchel_chain"],
+      "_status": "complete"
+    },
+    {
+      "id": "partial_correct_wrong_night",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first_torn_ticket_misread_date",
+      "tags": ["partial_correct", "wrong_night", "date_misread", "torn_ticket_chain", "voss_correct"],
+      "_status": "complete"
+    },
+    {
+      "id": "framed_signalman",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "signal_first_frame",
+      "tags": ["framed_suspect", "signalman", "planted_cipher_sheet", "voss_walks", "frame_third_target"],
+      "_status": "complete"
+    },
+    {
+      "id": "framed_travelling_broker",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "lounge_first_frame",
+      "tags": ["framed_suspect", "travelling_broker", "planted_satchel", "voss_walks", "waiting_room_heavy"],
+      "_status": "complete"
+    },
+    {
+      "id": "accomplice_via_railway_clerk",
+      "outcome": "accomplice_found",
+      "length": 43,
+      "starting_hypothesis": "ledger_first_clerk",
+      "tags": ["accomplice_found", "railway_clerk", "ledger_alteration", "voss_walks", "third_accomplice"],
+      "_status": "complete"
+    },
+    {
+      "id": "motive_only_via_pension_debt",
+      "outcome": "motive_only_confession",
+      "length": 42,
+      "starting_hypothesis": "motive_first_debt",
+      "tags": ["motive_only_confession", "debt_pressure", "pension_chain", "voss_walks", "no_arrest"],
+      "_status": "complete"
+    },
+    {
+      "id": "late_revelation_after_cipher_sheet",
+      "outcome": "late_revelation",
+      "length": 44,
+      "starting_hypothesis": "object_first_ledger_then_cipher",
+      "tags": ["late_revelation", "premature_accusation_stationmaster", "cipher_sheet_recovery", "fraud_concealment_landing"],
+      "_status": "complete"
+    },
+    {
+      "id": "near_miss_recovers_from_daughter",
+      "outcome": "correct_voss",
+      "length": 43,
+      "starting_hypothesis": "tells_first_daughter",
+      "tags": ["near_miss", "high_convergence_red_herring", "estranged_daughter", "recovered_to_voss", "fraud_concealment_landing"],
+      "_status": "complete"
+    },
+    {
+      "id": "near_miss_recovers_from_stationmaster",
+      "outcome": "correct_voss",
+      "length": 43,
+      "starting_hypothesis": "object_first_ledger_then_smudge",
+      "tags": ["near_miss", "high_convergence_red_herring", "stationmaster", "recovered_to_voss", "fraud_concealment_landing"],
+      "_status": "complete"
+    },
+    {
+      "id": "cf_voss_via_cipher_sheet_motive_only",
+      "outcome": "motive_only_confession",
+      "length": 6,
+      "starting_hypothesis": "object_first",
+      "tags": ["counterfactual_branch", "cipher_chain", "motive_only_recovery", "voss_walks"],
+      "branch_of": "voss_via_cipher_sheet",
+      "branch_turn": 25,
+      "divergence_token": "REVELATION=revelation:motive_emerges",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_voss_via_cufflink_to_broker",
+      "outcome": "wrong_travelling_broker",
+      "length": 6,
+      "starting_hypothesis": "object_first",
+      "tags": ["counterfactual_branch", "cufflink_misread", "wrong_broker", "object_focus_divergence"],
+      "branch_of": "voss_via_cufflink",
+      "branch_turn": 17,
+      "divergence_token": "OBJECT_FOCUS=object:initialed_cufflink",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_voss_via_satchel_accomplice",
+      "outcome": "accomplice_found",
+      "length": 6,
+      "starting_hypothesis": "object_first_satchel",
+      "tags": ["counterfactual_branch", "satchel_chain", "porter_accomplice", "presence_divergence", "voss_walks"],
+      "branch_of": "voss_via_satchel",
+      "branch_turn": 20,
+      "divergence_token": "PRESENCE=presence:with_night_porter",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_accomplice_via_signalman_cold",
+      "outcome": "cold_trail",
+      "length": 6,
+      "starting_hypothesis": "witness_first_signalman",
+      "tags": ["counterfactual_branch", "signalman_diffused", "stance_divergence", "cold_trail"],
+      "branch_of": "accomplice_via_signalman",
+      "branch_turn": 19,
+      "divergence_token": "STANCE=stance:cooperative",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_framed_night_porter_recovers",
+      "outcome": "correct_voss",
+      "length": 6,
+      "starting_hypothesis": "frame_first_porter",
+      "tags": ["counterfactual_branch", "frame_broken", "cause_divergence", "voss_correct"],
+      "branch_of": "framed_night_porter",
+      "branch_turn": 26,
+      "divergence_token": "CAUSE=cause:noticed_inconsistency",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_late_revelation_after_porter_near",
+      "outcome": "correct_voss_after_near_miss",
+      "length": 6,
+      "starting_hypothesis": "tells_first_porter",
+      "tags": ["counterfactual_branch", "beat_divergence", "near_miss", "voss_correct", "thin_evidence"],
+      "branch_of": "late_revelation_after_porter",
+      "branch_turn": 33,
+      "divergence_token": "BEAT=beat:investigation",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_red_herring_lamps_to_signal_box",
+      "outcome": "framed_suspect",
+      "length": 6,
+      "starting_hypothesis": "atmospheric_first_lamps",
+      "tags": ["counterfactual_branch", "frame_platform_guard", "action_divergence", "voss_walks"],
+      "branch_of": "red_herring_lamps_dimmed",
+      "branch_turn": 17,
+      "divergence_token": "ACTION=action:follows",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_wrong_porter_partial_correct",
+      "outcome": "partial_correct",
+      "length": 6,
+      "starting_hypothesis": "tells_first",
+      "tags": ["counterfactual_branch", "transition_divergence", "partial_correct", "voss_correct", "debt_misread"],
+      "branch_of": "wrong_night_porter_via_evasion",
+      "branch_turn": 18,
+      "divergence_token": "TRANSITION=transition:stayed",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_partial_correct_a_to_correct",
+      "outcome": "correct_voss",
+      "length": 6,
+      "starting_hypothesis": "object_first_misread_motive",
+      "tags": ["counterfactual_branch", "tell_divergence", "motive_recovered", "fraud_concealment_landing"],
+      "branch_of": "partial_correct_via_misread_motive_a",
+      "branch_turn": 23,
+      "divergence_token": "TELL=emotion:measured_breath",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_cold_trail_circular_to_late",
+      "outcome": "late_revelation",
+      "length": 8,
+      "starting_hypothesis": "circular_loop",
+      "tags": ["counterfactual_branch", "atmosphere_break", "beat_divergence", "late_revelation_recovery", "voss_correct"],
+      "branch_of": "cold_trail_circular",
+      "branch_turn": 30,
+      "divergence_token": "ATMOSPHERE=atmosphere:fog_lifts",
+      "_status": "counterfactual_branch"
     }
   ]
 }

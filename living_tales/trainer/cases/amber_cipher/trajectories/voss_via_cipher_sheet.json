@@ -56,7 +56,7 @@
         "OBJECT_FOCUS": "object:torn_ticket",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation"
       },
       "convergence_after": [
@@ -168,10 +168,10 @@
         "PRESENCE": "presence:with_signalman",
         "STANCE": "stance:evasive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object_focus:none",
+        "OBJECT_FOCUS": "object:cipher_sheet",
         "TELL": "emotion:avoided_contact",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation"
       },
       "convergence_after": [
@@ -240,7 +240,7 @@
         "OBJECT_FOCUS": "object:ledger_book",
         "TELL": "emotion:paused_reply",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation"
       },
       "convergence_after": [
@@ -332,7 +332,7 @@
         "OBJECT_FOCUS": "object:cipher_sheet",
         "TELL": "emotion:steady_hands",
         "ATMOSPHERE": "atmosphere:lamp_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:confirmation",
         "BEAT": "beat:investigation"
       },
       "convergence_after": [
@@ -420,7 +420,7 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:with_platform_guard",
         "STANCE": "stance:defensive",
-        "ACTION": "action:questions",
+        "ACTION": "action:none",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:steady_hands",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -972,7 +972,7 @@
         "CAUSE": "cause:none",
         "PRESENCE": "presence:with_renard_voss",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:none",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:fixed_stare",
         "ATMOSPHERE": "atmosphere:dawn_approaches",

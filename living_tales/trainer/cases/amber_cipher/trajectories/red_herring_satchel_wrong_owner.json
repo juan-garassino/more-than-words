@@ -380,7 +380,7 @@
     {
       "turn": 20,
       "_note": "Question railway_clerk on the broker's tickets.",
-      "player_card": "witness:ticket_clerk",
+      "player_card": "witness:railway_clerk",
       "scene": {
         "LOCATION": "location:station_office",
         "TRANSITION": "transition:stayed",

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_voss_via_satchel_accomplice",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of voss_via_satchel. At turn 20 the night porter is at the carriage siding rather than the detective being alone — the PRESENCE divergence opens the chain to the porter as Voss's accomplice. The detective convicts the porter as principal. Voss escapes.",
+  "outcome": "accomplice_found",
+  "branch_of": "voss_via_satchel",
+  "branch_turn": 20,
+  "divergence_token": "PRESENCE=presence:with_night_porter",
+  "starting_hypothesis": "object_first_satchel",
+  "tags": [
+    "counterfactual_branch",
+    "satchel_chain",
+    "porter_accomplice",
+    "presence_divergence",
+    "voss_walks"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:signal_box",
+      "location:carriage_siding",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.50, 0.52, 0.52]
+  },
+  "turns": [
+    {"turn": 20, "_note": "DIVERGENCE: night porter has come up beside the carriage. Coal dust between them.", "player_card": "object:coal_dust", "scene": {"LOCATION": "location:carriage_siding", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_night_porter", "STANCE": "stance:evasive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:coal_dust", "TELL": "emotion:avoided_contact", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.54, 0.56, 0.54]},
+    {"turn": 21, "_note": "Question the porter on the satchel.", "player_card": "suspect:night_porter", "scene": {"LOCATION": "location:carriage_siding", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_night_porter", "STANCE": "stance:evasive", "ACTION": "action:questions", "OBJECT_FOCUS": "object:satchel", "TELL": "emotion:paused_reply", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.58, 0.58, 0.58]},
+    {"turn": 22, "_note": "Modifier paid_off — porter admits the fee.", "player_card": "modifier:paid_off", "scene": {"LOCATION": "location:carriage_siding", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_night_porter", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.64, 0.64, 0.62]},
+    {"turn": 23, "_note": "Press debt motive.", "player_card": "motive:debt_pressure", "scene": {"LOCATION": "location:carriage_siding", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_night_porter", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 24, "_note": "Lay station key found in the porter's possession.", "player_card": "object:station_key", "scene": {"LOCATION": "location:carriage_siding", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_night_porter", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object:station_key", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:name_uncovered", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.78, 0.78, 0.78]},
+    {"turn": 25, "_note": "Accusation. Porter accused. Voss walks free.", "player_card": "ACCUSE:suspect:night_porter", "scene": {"LOCATION": "location:carriage_siding", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_night_porter", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.78, 0.78, 0.78]}
+  ],
+  "ending": {
+    "type": "accomplice_found",
+    "accused": "suspect:night_porter",
+    "true_culprit": "suspect:renard_voss",
+    "accomplice_role": "satchel_transit",
+    "final_convergence": [0.78, 0.78, 0.78],
+    "_note": "Porter arrested for moving the satchel. Voss walks."
+  }
+}

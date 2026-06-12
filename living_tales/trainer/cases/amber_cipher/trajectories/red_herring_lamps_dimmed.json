@@ -768,7 +768,7 @@
         "PRESENCE": "presence:with_night_porter",
         "STANCE": "stance:hostile",
         "ACTION": "action:waits",
-        "OBJECT_FOCUS": "object:platform_lantern",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:none",
