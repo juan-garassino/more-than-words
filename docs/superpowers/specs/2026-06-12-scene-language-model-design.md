@@ -55,7 +55,7 @@ One vocabulary per case (~200 tokens), three families:
 
 - One turn = `<card>` + card token + `<scene>` + exactly N scene tokens (N = 11 universal, 12 for cases with a case-specific dim).
 - Budget: 120 turns × 14 tokens ≈ 1,700 → **max context 2,048** (RoPE; no architectural issue).
-- The accusation segment is **suspect-only**: `<accuse>` + the accused suspect token (supervised directly from each trajectory's `ending.accused` field). The outcome class is a function of *(investigation history, accused suspect)* — the model judges the quality of the investigation, not a form answer. `partial_correct` vs `correct_voss` vs `motive_only_confession` are distinguished by what the history shows, which is exactly how the 59 trajectories encode them. Motive/evidence picks in the verdict UI are deferred (YAGNI); the WHO pick plus history carries all 16 outcome classes.
+- The accusation segment is **suspect-only**: `<accuse>` + the accused token. **Implementation amendment (2026-06-12, data-driven):** trajectories author accusations as *in-stream turns* (`ACCUSE:*` player cards with full confrontation scenes, including mid-game wrong accusations in near_miss/late_revelation arcs and `ACCUSE:none`). The shipped format therefore makes an accuse turn `<accuse> {token} <scene> {dims}`, every trajectory terminates with its `<outcome:*>` token, and at runtime the model's boundary choice (continue vs outcome) after a confrontation decides whether the accusation ends the story. The outcome class remains f(history, accused); motive/evidence picks in the verdict UI stay deferred (YAGNI).
 
 ## 5. Within-turn grammar — where coherence comes from
 
