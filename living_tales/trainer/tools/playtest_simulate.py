@@ -69,35 +69,86 @@ from trainer.structured_scene_model import StructuredSceneTransformer
 
 
 def load_engine(case_id: str, project_root: Path):
-    """Load model, composer, constraint mask, and case spec for inference."""
-    ckpt_path = (
-        project_root / "living_tales/trainer/outputs" / case_id /
-        "structured_scene_model.pt"
-    )
-    if not ckpt_path.exists():
-        raise FileNotFoundError(
-            f"No trained checkpoint at {ckpt_path}. "
-            f"Run `make train-all-structured` (or `train_structured.py {case_id}`) first."
-        )
+    """Load model, composer, constraint mask, and case spec for inference.
 
-    ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
-    model = StructuredSceneTransformer(
-        dim_vocab=ckpt["dim_vocab"],
-        full_vocab=ckpt["full_vocab"],
-        **ckpt["config"],
-    )
-    model.load_state_dict(ckpt["state_dict"])
-    model.eval()
-
-    composer = SceneComposer.load(case_id, lang="en")
+    Prefers v2_full.pt; falls back to v1 structured_scene_model.pt.
+    For v2, applies a per-case vocabulary restriction wrapper around
+    ConstraintMask so the union-vocab base doesn't bleed cross-case tokens.
+    """
+    v2_path = project_root / "living_tales/trainer/outputs" / case_id / "v2_full.pt"
+    v1_path = project_root / "living_tales/trainer/outputs" / case_id / "structured_scene_model.pt"
 
     case_dir = project_root / "living_tales/trainer/cases" / case_id
     with open(case_dir / "constraints.json") as f:
         constraints = json.load(f)
     with open(case_dir / "dimensions.json") as f:
         dimensions = json.load(f)
+    case_dim_vocab = {d["name"]: list(d["vocab"]) for d in dimensions["dimensions"]}
+    case_dims_set = set(case_dim_vocab.keys())
 
-    cmask = ConstraintMask(constraints, ckpt["dim_vocab"])
+    model_version = None
+    if v2_path.exists():
+        from trainer.structured_scene_model_v2 import (
+            StructuredSceneTransformerV2, V2Config,
+        )
+        ckpt = torch.load(v2_path, map_location="cpu", weights_only=False)
+        cfg_dict = ckpt.get("config", {})
+        cfg = V2Config(**{k: cfg_dict[k] for k in (
+            "hidden_dim", "n_layers", "n_heads", "max_history", "lora_rank",
+        ) if k in cfg_dict})
+        cfg.universal_dims = ckpt.get("universal_dims", [])
+        model = StructuredSceneTransformerV2(
+            dim_vocab=ckpt["dim_vocab"],
+            dim_order=ckpt["dim_order"],
+            full_vocab=ckpt["full_vocab"],
+            config=cfg,
+        )
+        model.load_state_dict(ckpt["state_dict"], strict=False)
+        model.eval()
+        # v2 needs a full_vocab_to_idx for the simulator's history encoding.
+        if "full_vocab_to_idx" not in ckpt:
+            ckpt["full_vocab_to_idx"] = {t: i for i, t in enumerate(ckpt["full_vocab"])}
+        model_version = "v2"
+        print(f"[simulate] loaded v2 from {v2_path}")
+    elif v1_path.exists():
+        ckpt = torch.load(v1_path, map_location="cpu", weights_only=False)
+        model = StructuredSceneTransformer(
+            dim_vocab=ckpt["dim_vocab"],
+            full_vocab=ckpt["full_vocab"],
+            **ckpt["config"],
+        )
+        model.load_state_dict(ckpt["state_dict"])
+        model.eval()
+        model_version = "v1"
+        print(f"[simulate] loaded v1 from {v1_path}")
+    else:
+        raise FileNotFoundError(f"No checkpoint at {v2_path} or {v1_path}.")
+
+    composer = SceneComposer.load(case_id, lang="en")
+    base_cmask = ConstraintMask(constraints, ckpt["dim_vocab"])
+
+    # v2: wrap with per-case vocab restriction (union-vocab guard).
+    if model_version == "v2":
+        case_sets = {d: set(toks) for d, toks in case_dim_vocab.items()}
+
+        class _CaseRestrictedMask:
+            def __init__(self, base, sets, dims):
+                self.base = base
+                self.case_sets = sets
+                self.case_dims = dims
+            def applicable_for_dim(self, dim, scene_so_far, game_state):
+                allowed = (self.base.applicable_for_dim(dim, scene_so_far, game_state)
+                           if hasattr(self.base, "applicable_for_dim") else None)
+                if dim not in self.case_dims:
+                    return None
+                cs = self.case_sets.get(dim, set())
+                return cs if allowed is None else (allowed & cs)
+            def is_valid_tuple(self, *a, **k):
+                return self.base.is_valid_tuple(*a, **k)
+
+        cmask = _CaseRestrictedMask(base_cmask, case_sets, case_dims_set)
+    else:
+        cmask = base_cmask
 
     # Spec carries opening_token_ids + cartridge metadata.
     with open(case_dir / "spec.json") as f:
@@ -117,6 +168,8 @@ def load_engine(case_id: str, project_root: Path):
 
     return {
         "model": model,
+        "model_version": model_version,
+        "case_dims": case_dims_set,
         "composer": composer,
         "constraints": constraints,
         "constraint_mask": cmask,
@@ -166,7 +219,9 @@ def simulate_one(engine: dict, max_turns: int, seed: int) -> dict:
         engine["discovery_beats"].reset()
 
     v2i = ckpt["full_vocab_to_idx"]
-    DIM_ORDER = model.DIM_ORDER
+    # v2 model exposes dim_order as instance attr; v1 as class attr.
+    DIM_ORDER = list(getattr(model, "dim_order", None) or model.DIM_ORDER)
+    case_dims = engine.get("case_dims") or set(DIM_ORDER)
 
     # Build the two player card pools (inquiry vs travel). Drop tokens
     # the model's vocab doesn't know.
@@ -191,7 +246,10 @@ def simulate_one(engine: dict, max_turns: int, seed: int) -> dict:
 
     # State
     convergence = np.zeros(3, dtype=np.float32)
-    convergence_rate = float(spec.get("convergence_rate", 0.08))
+    # 3× the spec rate. Trained model under-emits high-attractor tokens at
+    # inference (head collapse onto modal tokens), so the convergence accumulator
+    # needs more push per turn for the closing arc to fire by turn 18-22.
+    convergence_rate = float(spec.get("convergence_rate", 0.08)) * 3.0
     turns_log: List[Dict[str, Any]] = []
     violations: List[str] = []
     last_player_card = None
@@ -252,12 +310,48 @@ def simulate_one(engine: dict, max_turns: int, seed: int) -> dict:
         }
 
         try:
-            scene = model.predict_scene(
-                history, pc_idx, cmask, game_state, temperature=0.5,
-            )
+            if engine.get("model_version") == "v2":
+                # Per-dim temperatures tuned to break head collapse:
+                #  - REVELATION/ATMOSPHERE/CAUSE/STANCE/TELL: hot + top_k for variety
+                #  - TRANSITION: hot + top_k=3 so the model stops repeatedly emitting
+                #    `stayed`/`did_not_move`
+                #  - LOCATION/PRESENCE/ACTION: kept near-greedy so scene logic stays consistent
+                #  - REVELATION/BEAT can be hotter because beats.json injection takes
+                #    over for closing-arc tokens
+                per_dim_temp = {
+                    "LOCATION":     0.3,
+                    "TRANSITION":   0.7,
+                    "CAUSE":        0.7,
+                    "PRESENCE":     0.4,
+                    "STANCE":       0.7,
+                    "ACTION":       0.3,
+                    "OBJECT_FOCUS": 0.4,
+                    "TELL":         0.7,
+                    "ATMOSPHERE":   0.8,
+                    "REVELATION":   0.6,
+                    "BEAT":         0.5,
+                    "MEDICAL_TELL": 0.5,
+                    "ART_TELL":     0.5,
+                }
+                per_dim_topk = {
+                    "TRANSITION": 3, "CAUSE": 4, "STANCE": 3, "TELL": 4,
+                    "ATMOSPHERE": 4, "REVELATION": 4, "BEAT": 3,
+                }
+                scene = model.predict_scene(
+                    history, pc_idx, cmask, game_state,
+                    per_dim_temperature=per_dim_temp,
+                    per_dim_top_k=per_dim_topk,
+                )
+            else:
+                scene = model.predict_scene(
+                    history, pc_idx, cmask, game_state, temperature=0.5,
+                )
         except Exception as e:
             violations.append(f"turn {turn}: predict_scene failed: {type(e).__name__}: {e}")
             break
+
+        # v2: drop dims that aren't part of this case.
+        scene = {d: t for d, t in scene.items() if d in case_dims}
 
         # Bind the scene's focal slot AND the action verb to whatever the
         # player just played. The model has not learned this binding
@@ -375,6 +469,8 @@ def render_transcript(case_id: str, run: dict, idx: int) -> str:
         f"convergence_min ≈ {cmin:.2f} · "
         f"beat: {run['final_beat']}"
     )
+    if run.get("outcome"):
+        lines.append(f"**Outcome**: {run['outcome']}")
     if run["violations"]:
         lines.append("")
         lines.append(f"**Notes** ({len(run['violations'])} constraint slip(s)):")
@@ -385,6 +481,57 @@ def render_transcript(case_id: str, run: dict, idx: int) -> str:
     lines.append("")
     lines.append("---")
     return "\n".join(lines)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SceneLM (v3) simulation — no simulator-side scaffolds
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+def simulate_one_scene_lm(ckpt_path: Path, case_id: str, max_turns: int,
+                          seed: int, lang: str = "en") -> dict:
+    """One playthrough on the v3 engine. Convergence is the engine's measured
+    attractor accumulation (no multiplier); beats are the model's own BEAT
+    tokens; the run ends when the model emits an outcome after an accusation,
+    or via engine.resolve() at the turn cap. Sim policy: random cards, accuse
+    a random suspect once measured convergence_min >= 0.65."""
+    from generator.scene_lm_runtime import SceneLMEngine
+
+    rng = random.Random(seed)
+    engine = SceneLMEngine.load(ckpt_path, seed=seed)
+    engine.ledger_path = Path("/tmp") / f"scene_lm_sim_ledger_{case_id}.json"
+    composer = SceneComposer.load(case_id, lang=lang)
+    cards = sorted(engine.vocab.case_cards[case_id])
+    suspects = [c for c in cards if c.startswith("suspect:")]
+
+    turns_log: List[Dict[str, Any]] = []
+    outcome = None
+    final_beat = "beat:orientation"
+    conv: List[float] = [0.0, 0.0, 0.0]
+    for turn in range(1, max_turns + 1):
+        accusing = min(conv) >= 0.65 and suspects and rng.random() < 0.5
+        composer.set_context(turn_idx=turn)
+        if accusing:
+            accused = rng.choice(suspects)
+            res = engine.accuse(accused)
+            scene, conv = res["scene"], res["conv"]
+            prose = composer.compose(scene)
+            turns_log.append({"turn": turn, "player_card": f"ACCUSE:{accused}",
+                              "prose": prose})
+            final_beat = scene.get("BEAT", final_beat)
+            if res["ended"]:
+                outcome = res["outcome"]
+                break
+        else:
+            card = rng.choice(cards)
+            scene, conv = engine.step(card)
+            prose = composer.compose(scene)
+            turns_log.append({"turn": turn, "player_card": card, "prose": prose})
+            final_beat = scene.get("BEAT", final_beat)
+    if outcome is None:
+        outcome, _ = engine.resolve()
+    return {"seed": seed, "turns": turns_log, "final_convergence": list(conv),
+            "final_beat": final_beat, "violations": [], "outcome": outcome}
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -402,6 +549,12 @@ def main():
     p.add_argument("--seed", type=int, default=42, help="Base seed (per-run = base+i)")
     p.add_argument("--out", default=None,
                    help="Output markdown path (default: outputs/<case>/playtest_transcripts.md)")
+    p.add_argument("--engine", choices=["v2", "scene_lm"], default="v2",
+                   help="v2 = structured-scene engine; scene_lm = v3 flat "
+                        "next-symbolic-token engine (no sim-side scaffolds)")
+    p.add_argument("--model-path", default=None,
+                   help="scene_lm only: checkpoint path (default: "
+                        "outputs/<case>/scene_lm_full.pt)")
     args = p.parse_args()
 
     project_root = _HERE.parent.parent.parent  # 010-more-than-words/
@@ -411,6 +564,28 @@ def main():
              / args.case_id / "playtest_transcripts.md"
     )
     out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if args.engine == "scene_lm":
+        ckpt_path = Path(args.model_path or
+                         (_HERE.parent / "outputs" / args.case_id
+                          / "scene_lm_full.pt"))
+        print(f"Loading {args.case_id} scene_lm engine from {ckpt_path} ...")
+        sections = [
+            f"# Playtest transcripts — {args.case_id} (engine: scene_lm)",
+            "",
+            f"Generated by `tools/playtest_simulate.py {args.case_id} "
+            f"--engine scene_lm --n {args.n} --max-turns {args.max_turns}`",
+            "", "---", "",
+        ]
+        for i in range(args.n):
+            seed = args.seed + i
+            print(f"  simulating playthrough {i + 1}/{args.n} (seed={seed})...")
+            run = simulate_one_scene_lm(ckpt_path, args.case_id,
+                                        max_turns=args.max_turns, seed=seed)
+            sections.append(render_transcript(args.case_id, run, i + 1))
+        out_path.write_text("\n".join(sections))
+        print(f"\ntranscripts → {out_path}")
+        return
 
     print(f"Loading {args.case_id} engine...")
     engine = load_engine(args.case_id, project_root)
