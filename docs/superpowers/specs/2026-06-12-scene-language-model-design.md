@@ -48,23 +48,27 @@ One vocabulary per case (~200 tokens), three families:
 <card> witness:porter
 <scene> …
 …
-<accuse> suspect:renard_voss motive:fraud_concealment object:initialed_cufflink
+<accuse> suspect:renard_voss
 <outcome:correct_voss>
 <eos>
 ```
 
 - One turn = `<card>` + card token + `<scene>` + exactly N scene tokens (N = 11 universal, 12 for cases with a case-specific dim).
 - Budget: 120 turns × 14 tokens ≈ 1,700 → **max context 2,048** (RoPE; no architectural issue).
-- The accusation segment is the player "speaking the language back": who / why / with-what-evidence, three tokens. The model then emits the outcome token.
+- The accusation segment is **suspect-only**: `<accuse>` + the accused suspect token (supervised directly from each trajectory's `ending.accused` field). The outcome class is a function of *(investigation history, accused suspect)* — the model judges the quality of the investigation, not a form answer. `partial_correct` vs `correct_voss` vs `motive_only_confession` are distinguished by what the history shows, which is exactly how the 59 trajectories encode them. Motive/evidence picks in the verdict UI are deferred (YAGNI); the WHO pick plus history carries all 16 outcome classes.
 
 ## 5. Within-turn grammar — where coherence comes from
 
 Scene tokens are generated in a **fixed causal dim order**:
 
 ```
-LOCATION → TRANSITION → PRESENCE → STANCE → CAUSE → ACTION → OBJECT_FOCUS
+TRANSITION → LOCATION → PRESENCE → STANCE → CAUSE → ACTION → OBJECT_FOCUS
 → TELL → [MEDICAL_TELL | ART_TELL] → ATMOSPHERE → REVELATION → BEAT
 ```
+
+(TRANSITION precedes LOCATION because `constraints.json` rules condition LOCATION on the
+already-emitted TRANSITION — e.g. `transition:stayed ⇒ LOCATION = previous location` —
+matching the existing rule-evaluation direction in `generator/constraints_compiler.py`.)
 
 Rationale (each dim conditions on everything before it):
 
@@ -127,7 +131,7 @@ Turn loop in `scene_lm_runtime.py`:
 3. Composer renders the scene (unchanged, except a per-run salt mixed into the hash-stable variant picker so replays read fresh — one line).
 4. **Convergence is measured, never boosted**: the engine sums the attractor weights (`attractor.json`) of the emitted scene tokens per convergence dim, normalized. The authored `convergence_after` vectors in trajectories become *eval references* (measured-vs-authored correlation), not runtime inputs.
 5. **Beats come from the model**: phase progression and discovery beats key off the emitted BEAT/REVELATION tokens. `beats.json` is demoted from injector to eval assertion ("a healthy seeded run reaches `beat:verdict_ready` territory by turn ~24").
-6. **Accusation**: the verdict-sheet UI (who / why / evidence — three picks) composes the `<accuse>` segment; the model emits the outcome token; the engine renders the authored ending for that class. The engine grades nothing — it reads the outcome the model narrated. All 16 authored outcome classes become reachable, named endings.
+6. **Accusation**: the verdict-sheet UI (WHO pick; motive/evidence picks deferred per §4) composes the `<accuse>` segment; the model emits the outcome token; the engine renders the authored ending for that class. The engine grades nothing — it reads the outcome the model narrated. All 16 authored outcome classes become reachable, named endings.
 7. **Outcome ledger**: a per-case "endings found: k/16" screen across runs (local JSON). Pure UI over model output; the replay hook.
 
 **Scaffolds removed from `pygame_play.py`'s structured path**: +0.06/turn convergence boost, fix-#4 card forcing, per-dim temperatures/top-k, beat injection, runtime vocab restriction, dead `fake_dialogue`/ending-fragments path.
