@@ -73,12 +73,28 @@ class SceneVocab:
                     add(t)
                 if name not in GRAMMAR_ORDER:  # case-specific dim
                     slots.insert(slots.index(CASE_DIM_SLOT_AFTER) + 1, name)
-            cards = [t["id"] for t in json.loads((cdir / "tokens.json").read_text())]
+            # cards = tokens.json union cards actually played in trajectories
+            # (hand-authored data plays a handful of ids beyond tokens.json,
+            # e.g. modifier:debt_pressure; ACCUSE:* turns map to <accuse> + the
+            # stripped accused token, with ACCUSE:none -> accuse:none).
+            cards = {t["id"] for t in json.loads((cdir / "tokens.json").read_text())}
+            outcomes = set()
+            for f in sorted((cdir / "trajectories").glob("*.json")):
+                if f.name == "manifest.json":
+                    continue
+                traj = json.loads(f.read_text())
+                outcomes.add(traj["outcome"])
+                for turn in traj.get("turns", []):
+                    pc = turn["player_card"]
+                    if pc.startswith("ACCUSE:"):
+                        stripped = pc.removeprefix("ACCUSE:")
+                        add("accuse:none" if stripped == "none" else stripped)
+                    else:
+                        cards.add(pc)
+            cards = sorted(cards)
             for c in cards:
                 add(c)
-            manifest = json.loads((cdir / "trajectories" / "manifest.json").read_text())
-            trajs = manifest.get("trajectories", manifest)
-            outcomes = sorted({t["outcome"] for t in trajs})
+            outcomes = sorted(outcomes)
             for o in outcomes:
                 add(f"<outcome:{o}>")
             case_dims[cid] = slots
