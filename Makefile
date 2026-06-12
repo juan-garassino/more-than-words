@@ -24,6 +24,7 @@
 
 .PHONY: \
   colab-install \
+  train-scene-lm-base train-scene-lm-adapters train-scene-lm-all eval-gate-scene-lm \
   creature-m-report creature-m-baseline \
   ac-s01-validate ac-s02-pack \
   ac-s03-train-hopfield ac-s03-train-hopfield-gpu ac-s03-train-hopfield-fastproof \
@@ -640,6 +641,54 @@ train-v2-all: train-v2-base train-v2-adapters
 	@echo "################################################################"
 	@echo "  V2 — BASE + ALL ADAPTERS COMPLETE"
 	@echo "################################################################"
+
+# ── SceneLM v3 (flat symbolic next-token engine; Colab only — never local) ──
+#   make train-scene-lm-all OUTPUT_DIR=/content/drive/MyDrive/living_tales_outputs
+train-scene-lm-base: colab-install
+	@echo ""
+	@echo "################################################################"
+	@echo "  SCENE-LM V3 — STAGE 1: BASE PRETRAIN (universal dims)"
+	@echo "################################################################"
+	cd living_tales/trainer && $(ENV) PYTHONPATH=. \
+	  python3 tools/train_scene_lm.py base --output-dir outputs
+	@if [ -n "$(OUTPUT_DIR)" ]; then \
+	  mkdir -p $(OUTPUT_DIR)/_base; \
+	  cp living_tales/trainer/outputs/_base/scene_lm_base.pt $(OUTPUT_DIR)/_base/; \
+	  echo "saved → $(OUTPUT_DIR)/_base/scene_lm_base.pt"; \
+	fi
+
+train-scene-lm-adapters: colab-install
+	@echo ""
+	@echo "################################################################"
+	@echo "  SCENE-LM V3 — STAGE 2: PER-CASE ADAPTERS"
+	@echo "################################################################"
+	@for case in $(V2_CASES); do \
+	  echo ""; echo "── adapter: $$case ──"; \
+	  cd living_tales/trainer && $(ENV) PYTHONPATH=. \
+	    python3 tools/train_scene_lm.py adapter --case $$case --output-dir outputs && cd ../..; \
+	  if [ -n "$(OUTPUT_DIR)" ]; then \
+	    mkdir -p $(OUTPUT_DIR)/$$case; \
+	    cp living_tales/trainer/outputs/$$case/scene_lm_full.pt $(OUTPUT_DIR)/$$case/; \
+	    echo "saved → $(OUTPUT_DIR)/$$case/scene_lm_full.pt"; \
+	  fi; \
+	done
+
+train-scene-lm-all: train-scene-lm-base train-scene-lm-adapters
+	@echo ""
+	@echo "################################################################"
+	@echo "  SCENE-LM V3 — BASE + ALL ADAPTERS COMPLETE"
+	@echo "################################################################"
+
+eval-gate-scene-lm:
+	@echo ""
+	@echo "================================================================"
+	@echo "  EVAL GATE — SceneLM v3 probes (binding/coherence/arc/diversity/outcome/convergence)"
+	@echo "================================================================"
+	@for case in $(V2_CASES); do \
+	  echo "── $$case ──"; \
+	  cd living_tales/trainer && $(ENV) PYTHONPATH=. \
+	    python3 tools/eval_scene_lm.py $$case --model-path outputs/$$case/scene_lm_full.pt && cd ../.. || exit 1; \
+	done
 
 # ── Eval gate ─────────────────────────────────────────────────────────────
 # Runs after a training run. Fails (nonzero exit) on regression so CI/Colab
