@@ -103,12 +103,44 @@ def _load_structured_engine(case_id: str, project_root: Path,
     except Exception as e:
         print(f"[pygame] trajectory loader failed: {e}", file=sys.stderr)
 
-    # Model checkpoint
-    ckpt_path = trainer_root / "outputs" / case_id / "structured_scene_model.pt"
-    if ckpt_path.exists():
+    # Model checkpoint — prefer v2 if available, fall back to v1.
+    v2_path = trainer_root / "outputs" / case_id / "v2_full.pt"
+    v1_path = trainer_root / "outputs" / case_id / "structured_scene_model.pt"
+    if v2_path.exists():
+        try:
+            from trainer.structured_scene_model_v2 import (
+                StructuredSceneTransformerV2, V2Config,
+            )
+            ckpt = torch.load(str(v2_path), map_location="cpu", weights_only=False)
+            cfg_dict = ckpt.get("config", {})
+            cfg = V2Config(**{k: cfg_dict[k] for k in (
+                "hidden_dim", "n_layers", "n_heads", "max_history", "lora_rank",
+            ) if k in cfg_dict})
+            cfg.universal_dims = ckpt.get("universal_dims", [])
+            model = StructuredSceneTransformerV2(
+                dim_vocab=ckpt["dim_vocab"],
+                dim_order=ckpt["dim_order"],
+                full_vocab=ckpt["full_vocab"],
+                config=cfg,
+            )
+            model.load_state_dict(ckpt["state_dict"], strict=False)
+            model.eval()
+            out["model"] = model
+            out["model_version"] = "v2"
+            out["full_vocab"] = ckpt["full_vocab"]
+            out["dim_vocab"] = ckpt["dim_vocab"]
+            out["full_vocab_to_idx"] = {t: i for i, t in enumerate(ckpt["full_vocab"])}
+            out["dim_vocab_to_idx"] = {
+                d: {t: i for i, t in enumerate(toks)}
+                for d, toks in ckpt["dim_vocab"].items()
+            }
+            print(f"[pygame] loaded StructuredSceneTransformerV2 from {v2_path}")
+        except Exception as e:
+            print(f"[pygame] v2 model load failed: {e}", file=sys.stderr)
+    elif v1_path.exists():
         try:
             from trainer.structured_scene_model import StructuredSceneTransformer
-            ckpt = torch.load(str(ckpt_path), map_location="cpu",
+            ckpt = torch.load(str(v1_path), map_location="cpu",
                               weights_only=False)
             cfg = ckpt.get("config", {})
             model = StructuredSceneTransformer(
@@ -122,6 +154,7 @@ def _load_structured_engine(case_id: str, project_root: Path,
             model.load_state_dict(ckpt["state_dict"])
             model.eval()
             out["model"] = model
+            out["model_version"] = "v1"
             out["full_vocab"] = ckpt["full_vocab"]
             out["dim_vocab"] = ckpt["dim_vocab"]
             out["full_vocab_to_idx"] = ckpt.get("full_vocab_to_idx") or {
@@ -131,13 +164,42 @@ def _load_structured_engine(case_id: str, project_root: Path,
                 d: {t: i for i, t in enumerate(toks)}
                 for d, toks in ckpt["dim_vocab"].items()
             }
-            print(f"[pygame] loaded StructuredSceneTransformer from {ckpt_path}")
+            print(f"[pygame] loaded StructuredSceneTransformer (v1) from {v1_path}")
         except Exception as e:
             print(f"[pygame] structured model load failed: {e}",
                   file=sys.stderr)
     else:
-        print(f"[pygame] no structured_scene_model.pt at {ckpt_path} — "
+        print(f"[pygame] no checkpoint at {v2_path} or {v1_path} — "
               "using fallback trajectory replay.", file=sys.stderr)
+
+    # For v2 models, the base checkpoint carries the UNION dim_vocab across
+    # all cases. Wrap the constraint mask so per-dim allowed sets restrict to
+    # this case's authored vocabulary — prevents cross-case token bleed
+    # (e.g. amber_cipher emitting art_tell tokens).
+    if out.get("model_version") == "v2" and out.get("constraint_mask") is not None:
+        case_dim_vocab = dim_vocab  # already loaded from cases/<case>/dimensions.json above
+        case_dims = set(case_dim_vocab.keys())
+        case_sets = {d: set(toks) for d, toks in case_dim_vocab.items()}
+        base_cmask = out["constraint_mask"]
+
+        class _CaseRestrictedMask:
+            def __init__(self, base, case_sets, case_dims):
+                self.base = base
+                self.case_sets = case_sets
+                self.case_dims = case_dims
+            def applicable_for_dim(self, dim, scene_so_far, game_state):
+                allowed = (self.base.applicable_for_dim(dim, scene_so_far, game_state)
+                           if hasattr(self.base, "applicable_for_dim") else None)
+                if dim not in self.case_dims:
+                    return None
+                case_set = self.case_sets.get(dim, set())
+                return case_set if allowed is None else (allowed & case_set)
+            def is_valid_tuple(self, *a, **k):
+                return self.base.is_valid_tuple(*a, **k)
+
+        out["constraint_mask"] = _CaseRestrictedMask(base_cmask, case_sets, case_dims)
+        out["case_dims"] = case_dims
+        print(f"[pygame] v2 constraint mask wrapped with case-vocab restriction")
 
     # Discovery beats — convergence-threshold scaffolding for closing arc.
     try:
@@ -1211,20 +1273,43 @@ def _structured_run_engine(engine: dict, state: StructuredGameState,
     }
 
     try:
-        scene = model.predict_scene(
-            history=history_tensors,
-            player_card=pcard_idx,
-            constraint_mask=constraint_mask,
-            game_state=state.build_game_state(),
-            temperature=0.1,
-        )
+        if engine.get("model_version") == "v2":
+            # Per-dim temperatures tuned to break head collapse (see simulator).
+            per_dim_temp = {
+                "LOCATION": 0.3, "TRANSITION": 0.7, "CAUSE": 0.7,
+                "PRESENCE": 0.4, "STANCE": 0.7, "ACTION": 0.3,
+                "OBJECT_FOCUS": 0.4, "TELL": 0.7, "ATMOSPHERE": 0.8,
+                "REVELATION": 0.6, "BEAT": 0.5,
+                "MEDICAL_TELL": 0.5, "ART_TELL": 0.5,
+            }
+            per_dim_topk = {
+                "TRANSITION": 3, "CAUSE": 4, "STANCE": 3, "TELL": 4,
+                "ATMOSPHERE": 4, "REVELATION": 4, "BEAT": 3,
+            }
+            scene = model.predict_scene(
+                history=history_tensors,
+                player_card=pcard_idx,
+                constraint_mask=constraint_mask,
+                game_state=state.build_game_state(),
+                per_dim_temperature=per_dim_temp,
+                per_dim_top_k=per_dim_topk,
+            )
+        else:
+            scene = model.predict_scene(
+                history=history_tensors,
+                player_card=pcard_idx,
+                constraint_mask=constraint_mask,
+                game_state=state.build_game_state(),
+                temperature=0.1,
+            )
         return scene
     except Exception as e:
         print(f"[pygame] predict_scene failed: {e}", file=sys.stderr)
         traj = engine.get("fallback_trajectory")
         if traj is not None and 0 <= state.scene_index < len(traj.turns):
             return dict(traj.turns[state.scene_index].scene)
-        return {d: dim_vocab.get(d, ["none"])[-1] for d in model.DIM_ORDER}
+        dim_order_used = list(getattr(model, "dim_order", None) or model.DIM_ORDER)
+        return {d: dim_vocab.get(d, ["none"])[-1] for d in dim_order_used}
 
 
 def _structured_compose(engine: dict, scene: Dict[str, str],
@@ -1335,6 +1420,11 @@ def _structured_run(case_id: str, lang: str, res: int,
         # Run engine
         scene = _structured_run_engine(engine, state,
                                         state.last_player_card_id or "")
+        # v2: drop dims that aren't part of this case (the v2 model's
+        # dim_order is the union across all cases).
+        case_dims = engine.get("case_dims")
+        if case_dims is not None:
+            scene = {d: t for d, t in scene.items() if d in case_dims}
         # Player-card → scene binding. The model has not learned this
         # binding strongly enough on its own (subagent judge flagged:
         # "player plays coal_dust, scene narrates the telegram"). Always
@@ -1414,9 +1504,11 @@ def _structured_run(case_id: str, lang: str, res: int,
         prose = _structured_compose(engine, scene, state.last_player_card_id)
         renderer.add_clue("CLUE", prose)
 
-        # Convergence tick — minimal placeholder so legacy ending math runs.
+        # Convergence tick — bumped from 0.04 to 0.06 so beats fire by turn ~18-20.
+        # The trained model's modal-token bias under-emits high-attractor tokens,
+        # so we accumulate a touch faster to engage the closing arc.
         state.convergence_dims = np.minimum(
-            1.0, state.convergence_dims + 0.04)
+            1.0, state.convergence_dims + 0.06)
         state.commit_scene(scene)
 
         # Update journal if available
@@ -1517,6 +1609,181 @@ def _open_journal_overlay(renderer: "Renderer", journal,
             except Exception:
                 pass
         renderer.clock.tick(FPS)
+
+
+# ─── SceneLM (v3) run loop — zero scaffolds ──────────────────────────────────
+def _scene_lm_run(case_id: str, ckpt_path: Path, lang: str, res: int,
+                  project_root: Path, trainer_root: Path,
+                  spec: CartridgeSpec, scene_map: dict, case_data: dict):
+    """Pygame loop for the v3 flat next-symbolic-token engine.
+
+    The engine renders, measures, and reads: convergence comes from authored
+    attractor weights of emitted tokens, beats from the model's own BEAT dim,
+    and the model's boundary choice decides whether an accusation ends the
+    story (wrong accusations can keep it going — near-miss arcs are real).
+    Deliberately absent vs the v2 loop: flat convergence ticks, card-forcing
+    tables, per-dim temperatures, beat injection, vocab wrappers.
+    """
+    from generator.scene_lm_runtime import SceneLMEngine
+    from generator.structured_scene_composer import SceneComposer
+
+    run_seed = int(np.random.randint(1_000_000))
+    engine = SceneLMEngine.load(ckpt_path, seed=run_seed)
+    composer = SceneComposer.load(case_id, lang=lang)
+    journal, journal_screen_cls = _try_load_journal(case_id, project_root, lang)
+
+    renderer = Renderer(case_id, scene_map, project_root, res=res)
+    with open(trainer_root / "cases" / case_id / "dimensions.json") as f:
+        dims_full = json.load(f)
+    state = StructuredGameState(spec, engine.vocab.case_dim_vocab[case_id],
+                                dims_full)
+
+    renderer.show_text_screen(spec.title, [
+        "A symbolic mystery." if lang == "en" else "Un misterio simbólico.",
+        "",
+        "Play tokens — the engine reconstructs the scene." if lang == "en"
+        else "Juega fichas — el motor reconstruye la escena.",
+    ])
+    renderer.show_text_screen("", _briefing_lines(case_data, lang))
+    renderer.case_title = spec.title
+
+    state.open(spec.opening_token_ids)
+    if state.previous_locations:
+        first_loc = state.previous_locations[0]
+        renderer.set_backdrop(first_loc, crossfade=True)
+        renderer.set_location(first_loc.split(":", 1)[-1]
+                              .replace("_", " ").title())
+
+    npc_interviews: Dict[str, int] = {}
+    outcome = None
+    ending = None
+
+    def _narrate(scene: Dict[str, str], conv: List[float]) -> None:
+        presence = scene.get("PRESENCE")
+        if presence and presence != "presence:alone":
+            npc_interviews[presence] = npc_interviews.get(presence, 0) + 1
+        composer.set_context(turn_idx=state.game_turn,
+                             npc_interview_counts=npc_interviews,
+                             run_salt=engine.run_salt)
+        new_loc = scene.get("LOCATION")
+        prev_loc = (state.previous_locations[-1]
+                    if state.previous_locations else None)
+        if new_loc and new_loc != "location:none" and new_loc != prev_loc:
+            renderer.set_backdrop(new_loc, crossfade=True)
+            renderer.set_location(new_loc.split(":", 1)[-1]
+                                  .replace("_", " ").title())
+        prose = composer.compose(scene)
+        renderer.add_clue("CLUE", prose)
+        state.convergence_dims = np.array(conv, dtype=np.float32)
+        state.commit_scene(scene)
+        if journal is not None:
+            try:
+                journal.update_from_scene(
+                    player_card=state.last_player_card_id, scene=scene,
+                    turn=state.game_turn, composed_prose=prose)
+            except Exception as e:
+                print(f"[pygame] journal update failed: {e}", file=sys.stderr)
+
+    while True:
+        valid = list(state.hand)
+        if not valid:
+            break
+        renderer.draw(valid, {}, lang, state)
+        choice = _structured_wait_for_choice(
+            renderer, len(valid), {}, state, journal, journal_screen_cls, lang)
+
+        if choice == "q":
+            break
+        if choice == "a":
+            picked = _accuse(renderer, spec)
+            if picked is None:
+                continue
+            state.last_player_card_id = f"ACCUSE:{picked.id}"
+            renderer.reset_narration()
+            renderer.add_clue("YOU", f"Accuse {_token_name(picked)}")
+            res_a = engine.accuse(picked.id)
+            _narrate(res_a["scene"], res_a["conv"])
+            renderer.draw(state.hand, {}, lang, state)
+            if res_a["ended"]:
+                outcome, ending = res_a["outcome"], res_a["ending"]
+                break
+            pygame.time.wait(300)
+            continue
+        if choice == "j":
+            continue
+
+        try:
+            idx = int(choice) - 1
+        except (TypeError, ValueError):
+            continue
+        if idx < 0 or idx >= len(valid):
+            continue
+        card = valid[idx]
+
+        renderer.reset_narration()
+        renderer.add_clue("YOU", _structured_render_hand_name(card))
+        if isinstance(card, _TravelCard):
+            state.play_travel(card)
+        else:
+            state.play_inquiry(card)
+        played = state.last_player_card_id or ""
+        if played not in engine.vocab.token_to_id:
+            renderer.add_transition("The thread leads nowhere.")
+            renderer.draw(state.hand, {}, lang, state)
+            continue
+        renderer.draw(state.hand, {}, lang, state)
+        pygame.time.wait(200)
+
+        scene, conv = engine.step(played)
+        _narrate(scene, conv)
+        renderer.draw(state.hand, {}, lang, state)
+        pygame.time.wait(300)
+
+        if state.game_turn >= spec.max_turns * 2:
+            break
+
+    if outcome is None:
+        outcome, ending = engine.resolve()
+
+    renderer.set_backdrop(scene_map.get("_ending", None), crossfade=True)
+    correct_family = outcome.startswith("correct")
+    title = ("CASE CLOSED" if correct_family else "THE TRAIL")
+    renderer.show_text_screen(title, _scene_lm_ending_lines(outcome, ending),
+                              prompt="Press SPACE to continue")
+    found, total = engine.ledger_progress()
+    renderer.show_text_screen("CASEBOOK",
+                              _scene_lm_ledger_lines(engine, found, total),
+                              prompt="Press SPACE to exit")
+    pygame.quit()
+
+
+def _scene_lm_ending_lines(outcome: str, ending: Optional[dict]) -> List[str]:
+    lines = [outcome.replace("_", " ").upper(), ""]
+    ending = ending or {}
+    if ending.get("_note"):
+        lines.append(ending["_note"])
+        lines.append("")
+    if outcome.startswith("correct") and ending.get("true_culprit"):
+        culprit = ending["true_culprit"].split(":", 1)[-1].replace("_", " ").title()
+        lines.append(f"The culprit: {culprit}.")
+    for key in ("frame_method", "accomplice", "confessed_motive"):
+        if ending.get(key):
+            v = str(ending[key]).split(":")[-1].replace("_", " ")
+            lines.append(f"{key.replace('_', ' ').title()}: {v}")
+    return lines
+
+
+def _scene_lm_ledger_lines(engine, found: int, total: int) -> List[str]:
+    lines = [f"ENDINGS DISCOVERED: {found}/{total}", ""]
+    data = {}
+    if engine.ledger_path.exists():
+        data = json.loads(engine.ledger_path.read_text())
+    for cls in engine.vocab.outcome_classes(engine.case_id):
+        if cls in data:
+            lines.append(f"  {cls.replace('_', ' ')}  ×{data[cls]}")
+        else:
+            lines.append("  ???")
+    return lines
 
 
 # ─── Briefing / Ending text composition ──────────────────────────────────────
@@ -1735,11 +2002,15 @@ def case_select_screen(renderer: Renderer, trainer_root: Path) -> Optional[str]:
 
 
 # ─── Main loop ───────────────────────────────────────────────────────────────
-def run(case_id: str, model_path: Optional[str], lang: str, res: int = 320):
+def run(case_id: str, model_path: Optional[str], lang: str, res: int = 320,
+        engine: str = "v2"):
     project_root = _HERE.parent.parent.parent  # 010-more-than-words/
     cases_dir = _HERE.parent / "cases"
 
-    spec, model, mappings = _load_model_and_spec(case_id, model_path)
+    # SceneLM (v3) keeps its own checkpoint format — never feed it to the
+    # legacy loader.
+    spec, model, mappings = _load_model_and_spec(
+        case_id, None if engine == "scene_lm" else model_path)
     if getattr(spec, 'mode', 'converging') == 'oscillating':
         print("[pygame] creature/oscillating mode not supported yet — use TUI.")
         return
@@ -1783,6 +2054,17 @@ def run(case_id: str, model_path: Optional[str], lang: str, res: int = 320):
             scene_map = json.load(f)
 
     correct_id = spec.invariant_token_ids[0] if spec.invariant_token_ids else None
+
+    if engine == "scene_lm":
+        ckpt_path = Path(model_path) if model_path else (
+            _HERE.parent / "outputs" / case_id / "scene_lm_full.pt")
+        if not ckpt_path.exists():
+            print(f"[pygame] scene_lm checkpoint not found: {ckpt_path}")
+            return
+        print(f"[pygame] scene_lm (v3) engine for {case_id}")
+        _scene_lm_run(case_id, ckpt_path, lang, res, project_root,
+                      _HERE.parent, spec, scene_map, case_data)
+        return
 
     # Engine version detection: cases shipping `dimensions.json` use the new
     # multidimensional structured engine. Legacy cases keep the old path.
@@ -1956,6 +2238,9 @@ def main():
     p.add_argument("--layout", choices=["auto", "full", "compact"], default="auto",
                    help="Window layout: full (H=800, big backdrop) or "
                         "compact (H=720, framed 320 backdrop, fits small laptops)")
+    p.add_argument("--engine", choices=["v2", "scene_lm"], default="v2",
+                   help="v2 = structured-scene engine; scene_lm = v3 flat "
+                        "next-symbolic-token engine (zero runtime scaffolds)")
     args = p.parse_args()
     if args.layout != "auto":
         os.environ["LIVING_TALES_LAYOUT"] = args.layout
@@ -1989,13 +2274,13 @@ def main():
             print("[pygame] no case selected.")
             return
 
-    if model_path is None:
+    if model_path is None and args.engine != "scene_lm":
         default = _HERE.parent / "outputs" / case_id / "dialogue_model.pt"
         if default.exists():
             model_path = str(default)
             print(f"[pygame] using model: {model_path}")
 
-    run(case_id, model_path, args.lang, res=args.res)
+    run(case_id, model_path, args.lang, res=args.res, engine=args.engine)
 
 
 if __name__ == "__main__":

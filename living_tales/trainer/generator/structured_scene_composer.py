@@ -58,13 +58,18 @@ class SceneComposer:
         self.lang = lang
         self._turn_idx: int = 0
         self._npc_interviews: Dict[str, int] = {}
+        self._run_salt: str = ""
 
-    def set_context(self, turn_idx: int = 0, npc_interview_counts: Optional[Dict[str, int]] = None) -> None:
+    def set_context(self, turn_idx: int = 0, npc_interview_counts: Optional[Dict[str, int]] = None,
+                    run_salt: str = "") -> None:
         """Optional per-call context for variant selection. Composer is a
         deterministic templated grammar — context only affects which *variant*
-        of an authored phrase is chosen, never the structure of the prose."""
+        of an authored phrase is chosen, never the structure of the prose.
+        `run_salt` mixes a per-session value into variant picks so replays
+        read fresh; default "" preserves the historical hash-stable picks."""
         self._turn_idx = int(turn_idx)
         self._npc_interviews = dict(npc_interview_counts or {})
+        self._run_salt = str(run_salt)
 
     @staticmethod
     def _stage_for_count(n: int) -> str:
@@ -82,6 +87,10 @@ class SceneComposer:
             return None
         h = int(hashlib.sha1(salt.encode("utf-8")).hexdigest(), 16)
         return seq[h % len(seq)]
+
+    def _salted(self, salt: str) -> str:
+        # Empty run_salt preserves the historical hash-stable variant picks.
+        return f"{self._run_salt}:{salt}" if self._run_salt else salt
 
     # ─── Loading ──────────────────────────────────────────────────────────────
     @classmethod
@@ -141,12 +150,14 @@ class SceneComposer:
             if isinstance(variants, str):
                 return variants
             if isinstance(variants, list):
-                return self._hash_pick(variants, salt=f"{self._turn_idx}:{token_id}:{stage}") or ""
+                return self._hash_pick(
+                    variants, salt=self._salted(f"{self._turn_idx}:{token_id}:{stage}")) or ""
             return ""
 
         # Shape 2: list of variants.
         if isinstance(lang_entry, list):
-            return self._hash_pick(lang_entry, salt=f"{self._turn_idx}:{token_id}") or ""
+            return self._hash_pick(
+                lang_entry, salt=self._salted(f"{self._turn_idx}:{token_id}")) or ""
 
         return ""
 
