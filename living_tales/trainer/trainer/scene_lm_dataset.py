@@ -117,6 +117,27 @@ COLLAPSED_DIMS = ["REVELATION", "TRANSITION", "BEAT"]
 CLASS_BALANCE_CAP = 5.0
 
 
+def _stratified_split(examples, split, holdout_frac):
+    """Deterministic train/holdout split stratified by (case, outcome class).
+    Classes with <3 sequences stay whole in train — the outcome head barely
+    sees them as it is; load order (sorted filenames) makes this stable."""
+    by_class: Dict[tuple, list] = {}
+    for ex in examples:
+        outcome = next((t for t in ex[1] if t.startswith("<outcome:")),
+                       "<outcome:none>")
+        by_class.setdefault((ex[0], outcome), []).append(ex)
+    train, hold = [], []
+    for key in sorted(by_class):
+        group = by_class[key]
+        if len(group) < 3:
+            train.extend(group)
+            continue
+        k = max(1, round(len(group) * holdout_frac))
+        hold.extend(group[:k])
+        train.extend(group[k:])
+    return hold if split == "holdout" else train
+
+
 class SceneLMDataset(Dataset):
     """Flat next-token examples with loss masks, binding weights, augmentation.
 
@@ -127,7 +148,8 @@ class SceneLMDataset(Dataset):
     """
 
     def __init__(self, case_ids, vocab, universal_only=False,
-                 augment_truncate=True, seed=0, cases_dir=None):
+                 augment_truncate=True, seed=0, cases_dir=None,
+                 split="all", holdout_frac=0.1):
         self.vocab = vocab
         self.universal_only = universal_only
         self.augment_truncate = augment_truncate
@@ -137,6 +159,8 @@ class SceneLMDataset(Dataset):
             for seq in load_case_token_sequences(cid, cases_dir or CASES_DIR,
                                                  vocab, universal_only=universal_only):
                 self.examples.append((cid, seq))
+        if split != "all":
+            self.examples = _stratified_split(self.examples, split, holdout_frac)
 
     def slot_index(self, case_id: str, dim: str) -> int:
         return self._slots(case_id).index(dim)

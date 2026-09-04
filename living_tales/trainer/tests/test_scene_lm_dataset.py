@@ -96,3 +96,30 @@ def test_universal_only_mode(production_cases):
     ids = ds[0]["ids"].tolist()
     med = [vocab.encode(t) for t in vocab.case_dim_vocab["attended_hour"]["MEDICAL_TELL"]]
     assert not any(t in set(med) for t in ids)
+
+
+def test_stratified_holdout_split(production_cases):
+    from collections import Counter
+    vocab = SceneVocab.build(production_cases)
+
+    def outcome_counts(ds):
+        return Counter(next(t for t in seq if t.startswith("<outcome:"))
+                       for _, seq in ds.examples)
+
+    ds_all = SceneLMDataset(["amber_cipher"], vocab, augment_truncate=False)
+    tr = SceneLMDataset(["amber_cipher"], vocab, augment_truncate=False,
+                        split="train")
+    ho = SceneLMDataset(["amber_cipher"], vocab, augment_truncate=False,
+                        split="holdout")
+    assert len(tr) + len(ho) == len(ds_all)
+    assert 0 < len(ho) < len(tr)
+    all_c, ho_c = outcome_counts(ds_all), outcome_counts(ho)
+    for cls, n in all_c.items():
+        if n < 3:
+            assert cls not in ho_c          # tiny classes never leave train
+        else:
+            assert 0 < ho_c.get(cls, 0) < n  # bigger classes represented in both
+    # deterministic across constructions
+    ho2 = SceneLMDataset(["amber_cipher"], vocab, augment_truncate=False,
+                         split="holdout")
+    assert [s[:20] for _, s in ho.examples] == [s[:20] for _, s in ho2.examples]
