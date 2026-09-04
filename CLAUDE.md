@@ -64,9 +64,14 @@ Total: 177 trajectories across ~16 outcome classes per case (correct_*, partial_
 python3 living_tales/trainer/tools/validate_trajectories.py <case> --all
 python3 living_tales/trainer/tools/author_live.py <case> <traj_id>      # live composer preview
 
-# Train v3 (Colab only — never local)
-make train-scene-lm-all  OUTPUT_DIR=/content/drive/MyDrive/living_tales_outputs
-make eval-gate-scene-lm  # 6-probe gate per case (binding/coherence/arc/diversity/outcome/convergence)
+# Train v3 (Colab only — never local). OUTPUT_DIR is used directly (checkpoints
+# land on Drive as written — no end-of-run copy). Every run: periodic checkpoints
+# (--checkpoint-every, default 250) + resumable train_state.pt + train.jsonl
+# (loss + val_loss on the stratified holdout); adapters also run the 6 probes
+# mid-training every --eval-every steps (default 500) → eval.jsonl trend.
+make train-scene-lm-all  OUTPUT_DIR=/content/drive/MyDrive/living_tales_outputs EVAL_EVERY=500 RESUME=1
+make eval-gate-scene-lm      OUTPUT_DIR=...  # 6-probe gate per case
+make error-analysis-scene-lm OUTPUT_DIR=...  # per-dim accuracy/confusions/outcome recall → error_analysis.{json,md}
 
 # Train v2 (legacy reference)
 make train-v2-all    OUTPUT_DIR=/content/drive/MyDrive/living_tales_outputs
