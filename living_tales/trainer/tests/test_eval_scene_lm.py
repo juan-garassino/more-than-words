@@ -53,6 +53,24 @@ def make_engine(production_cases, tmp_path_factory):
     return make
 
 
+def test_run_probes_returns_gate(production_cases, tmp_path):
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from tools.eval_scene_lm import run_probes
+    from trainer.scene_lm import SceneLM, SceneLMConfig
+    from trainer.scene_lm_vocab import SceneVocab
+    vocab = SceneVocab.build(production_cases)
+    model = SceneLM(SceneLMConfig(vocab_size=len(vocab), n_layers=1,
+                                  hidden_dim=32, n_heads=4, max_seq_len=2048))
+    p = tmp_path / "m.pt"
+    model.save(p, vocab, case_id=CASE)
+    results = run_probes(p, CASE, n_turns=3, n_seeds=1)
+    assert set(results) >= {"binding", "coherence", "closing_arc", "diversity",
+                            "outcome", "convergence", "gate"}
+    assert isinstance(results["gate"]["pass"], bool)
+
+
 def test_probes_run_on_tiny_engine(make_engine):
     eng0 = make_engine(0)
     vocab = eng0.vocab

@@ -179,40 +179,47 @@ def probe_convergence(case_id, cases_dir):
     return {"spearman": round(spearman(measured, authored), 3), "n": len(measured)}
 
 
-def main():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("case_id")
-    p.add_argument("--model-path", required=True)
-    p.add_argument("--report", default=None)
-    args = p.parse_args()
-    cases_dir = _HERE.parent / "cases"
-    ck = Path(args.model_path)
+def run_probes(ckpt_path, case_id, cases_dir=None, n_turns=25, n_seeds=3):
+    """All 6 probes + gate booleans on one checkpoint. Importable for
+    mid-training eval; n_turns/n_seeds shrink it for smoke contexts."""
+    cases_dir = Path(cases_dir) if cases_dir else _HERE.parent / "cases"
+    ck = Path(ckpt_path)
 
     def make(seed):
         return SceneLMEngine.load(ck, seed=seed)
 
-    eng0 = make(0)
-    vocab, case = eng0.vocab, args.case_id
+    vocab = make(0).vocab
     results = {
-        "binding": probe_binding(make, vocab, case),
-        "coherence": probe_coherence(make, case),
-        "closing_arc": probe_closing_arc(make, case),
-        "diversity": probe_diversity(make, vocab, case),
-        "outcome": probe_outcome_accuracy(ck, case, cases_dir),
-        "convergence": probe_convergence(case, cases_dir),
+        "binding": probe_binding(make, vocab, case_id, n_turns, n_seeds),
+        "coherence": probe_coherence(make, case_id, n_turns, n_seeds),
+        "closing_arc": probe_closing_arc(make, case_id, n_turns, n_seeds),
+        "diversity": probe_diversity(make, vocab, case_id, n_turns, n_seeds),
+        "outcome": probe_outcome_accuracy(ck, case_id, cases_dir),
+        "convergence": probe_convergence(case_id, cases_dir),
     }
     checks = {
         "binding": results["binding"]["score"] >= GATES["binding"],
         "coherence": len(results["coherence"]["violations"])
             <= GATES["coherence_violations"],
         "closing_arc": results["closing_arc"]["runs_reaching_late"]
-            >= GATES["closing_arc_runs"],
+            >= min(GATES["closing_arc_runs"], n_seeds),
         "diversity": max(results["diversity"].values())
             <= GATES["diversity_max_share"],
         "outcome": results["outcome"]["acc"] >= GATES["outcome_acc"],
         "convergence": results["convergence"]["spearman"] >= GATES["conv_spearman"],
     }
     results["gate"] = {**checks, "pass": all(checks.values())}
+    return results
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("case_id")
+    p.add_argument("--model-path", required=True)
+    p.add_argument("--report", default=None)
+    args = p.parse_args()
+    case = args.case_id
+    results = run_probes(args.model_path, case)
     report = json.dumps(results, indent=1, default=str)
     print(report)
     out = Path(args.report or (_HERE.parent / "outputs" / case / "scene_lm_eval.json"))
