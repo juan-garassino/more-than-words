@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "trajectory_id": "dray_via_car_log",
+  "trajectory_id": "dray_via_pharmacy_visitor_log",
   "case_id": "attended_hour",
-  "description": "Player examines the car park log first. Dray's car logged in at twenty-two-fourteen and never out — but Dray's stated alibi was that he had gone home. The false alibi exposes the dispensary visit at twenty-forty-eight, the chart amendment, and the complaint hearing. Hospital_exterior and reception_threshold anchored across the case.",
+  "description": "Player anchors on the visitor log at the service elevator dispensary entrance. Dray's late after-hours sign-in to pharmacy stores — twenty-two-oh-eight — is the spine: it appears in the dispensary log, the corridor badge swipe, the night porter's tally, and finally in the prescription carbon. Owen Stroud's insurance grief dead-ends; Aldworth's tremor partly seals it.",
   "outcome": "correct_callum_dray",
   "starting_hypothesis": "object_first",
   "tags": [
-    "car_log_chain",
-    "false_alibi",
-    "hospital_exterior_anchored",
-    "visitor_log_pattern"
+    "pharmacy_visitor_log_chain",
+    "after_hours_signin",
+    "service_elevator_anchored",
+    "back_and_forth"
   ],
-  "_authoring_note": "Turns 1-9 orientation around the hospital exterior, car park, reception threshold; turns 10-22 investigation through ward, dispensary, chart; turns 23-29 dead-end through Owen Stroud's alibi check; turns 30-37 returning to the car log with Dray's contradiction; turns 38-43 dawn confrontation in rear corridor.",
+  "_authoring_note": "Pharmacy-visitor-log chain is the spine. Turns 1-8 orientation; 9-21 investigation through dispensary, badge, porter; 22-28 Owen's insurance dead-end; 29-37 chain locked at pharmacy; 38-43 dawn verdict in rear corridor.",
   "opening": {
     "tokens": [
       "location:briar_clinic",
@@ -22,7 +22,7 @@
   "turns": [
     {
       "turn": 1,
-      "_note": "Cold open. Detective at hospital exterior. Car park visible.",
+      "_note": "Cold open. Hospital exterior. The pharmacy visitor log under arm.",
       "player_card": "object:visitor_log",
       "scene": {
         "LOCATION": "location:hospital_exterior",
@@ -39,46 +39,70 @@
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
+        0.04,
         0.05,
-        0.05,
-        0.08
+        0.07
       ]
     },
     {
       "turn": 2,
-      "_note": "Notice the car park entries. Dray's car at twenty-two-fourteen.",
-      "player_card": "object:visitor_log",
+      "_note": "Cross to cardiac ward. The bed where Stroud was found.",
+      "player_card": "event:harold_stroud_discovered",
       "scene": {
-        "LOCATION": "location:hospital_exterior",
-        "TRANSITION": "transition:stayed",
+        "LOCATION": "location:cardiac_ward_crime_space",
+        "TRANSITION": "transition:crossed_to",
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:notices",
-        "OBJECT_FOCUS": "object:visitor_log",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:syringe_tray",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.08,
-        0.08,
-        0.12
+        0.09,
+        0.11
       ]
     },
     {
       "turn": 3,
+      "_note": "Examine the syringe tray on the bedside cart. Two empties.",
+      "player_card": "object:syringe_tray",
+      "scene": {
+        "LOCATION": "location:cardiac_ward_crime_space",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:syringe_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fluorescent_flickers",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [
+        0.12,
+        0.13,
+        0.15
+      ]
+    },
+    {
+      "turn": 4,
       "_note": "Cross to reception threshold. Night porter at the desk.",
-      "player_card": "witness:night_porter",
+      "player_card": "travel:to_reception_threshold",
       "scene": {
         "LOCATION": "location:reception_threshold",
         "TRANSITION": "transition:crossed_to",
-        "CAUSE": "cause:following_witness_lead",
+        "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:with_night_porter",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:waits",
+        "ACTION": "action:arrives",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
@@ -87,14 +111,14 @@
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
-        0.12,
-        0.12,
-        0.14
+        0.15,
+        0.16,
+        0.17
       ]
     },
     {
-      "turn": 4,
-      "_note": "Question the porter. He confirms the doctor never went back out.",
+      "turn": 5,
+      "_note": "Question the porter about pharmacy after-hours access. He nods at the log.",
       "player_card": "witness:night_porter",
       "scene": {
         "LOCATION": "location:reception_threshold",
@@ -105,20 +129,20 @@
         "ACTION": "action:questions",
         "OBJECT_FOCUS": "object:visitor_log",
         "TELL": "tell:hesitated",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:alibi_holds",
+        "ATMOSPHERE": "atmosphere:fluorescent_steady",
+        "REVELATION": "revelation:partial_match",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
-        0.16,
-        0.14,
-        0.16
+        0.19,
+        0.2,
+        0.21
       ]
     },
     {
-      "turn": 5,
-      "_note": "Examine the visitor log entries. Owen Stroud's nineteen-oh-two visit. Dray's check-in.",
+      "turn": 6,
+      "_note": "Examine the visitor log. Dray signed in at twenty-two-oh-eight, pharmacy stores.",
       "player_card": "object:visitor_log",
       "scene": {
         "LOCATION": "location:reception_threshold",
@@ -135,76 +159,28 @@
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
-        0.18,
-        0.18,
-        0.18
+        0.22,
+        0.23,
+        0.23
       ]
     },
     {
-      "turn": 6,
-      "_note": "Cross to cardiac ward. Bed three. Quiet.",
-      "player_card": "travel:to_cardiac_ward_crime_space",
+      "turn": 7,
+      "_note": "Descend to service elevator zone. Pharmacy stores below.",
+      "player_card": "travel:to_service_elevator_zone",
       "scene": {
-        "LOCATION": "location:cardiac_ward_crime_space",
-        "TRANSITION": "transition:crossed_to",
-        "CAUSE": "cause:examining_evidence",
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:arrives",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:fluorescent_flickers",
+        "ATMOSPHERE": "atmosphere:elevator_arrives",
         "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.2,
-        0.2,
-        0.2
-      ]
-    },
-    {
-      "turn": 7,
-      "_note": "Examine the medication chart at the bedside. Late entry stands out.",
-      "player_card": "object:medication_chart",
-      "scene": {
-        "LOCATION": "location:cardiac_ward_crime_space",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:examining_evidence",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
-        "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:medication_chart",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
-        "BEAT": "beat:orientation",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.22,
-        0.22,
-        0.22
-      ]
-    },
-    {
-      "turn": 8,
-      "_note": "Cross to nurse station. Aldworth, hands trembling.",
-      "player_card": "suspect:nurse_aldworth",
-      "scene": {
-        "LOCATION": "location:nurse_station_vantage",
-        "TRANSITION": "transition:called_away_to",
-        "CAUSE": "cause:summoned",
-        "PRESENCE": "presence:with_nurse_aldworth",
-        "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "emotion:shaking_hands",
-        "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:none",
-        "BEAT": "beat:orientation",
-        "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
       "convergence_after": [
         0.24,
@@ -213,8 +189,200 @@
       ]
     },
     {
+      "turn": 8,
+      "_note": "Pharmacist Lin steps off the elevator with the drug ledger.",
+      "player_card": "witness:pharmacist_lin",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:elevator_arrives",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:steady_pulse"
+      },
+      "convergence_after": [
+        0.27,
+        0.27,
+        0.27
+      ]
+    },
+    {
       "turn": 9,
-      "_note": "Question Aldworth. She confirms Dray was on shift past midnight.",
+      "_note": "Question Lin about the after-hours signature. She confirms Dray was logged.",
+      "player_card": "suspect:pharmacist_lin",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:visitor_log",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:steady_pulse"
+      },
+      "convergence_after": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Examine the drug ledger entry — twenty-two-oh-eight, Dray withdrew two cardiac vials.",
+      "player_card": "object:drug_ledger",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:steady_pulse"
+      },
+      "convergence_after": [
+        0.32,
+        0.33,
+        0.32
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Examine the corridor badge swipe. Dray's badge swiped pharmacy door at twenty-two-oh-seven.",
+      "player_card": "object:corridor_badge",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:corridor_badge",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:steady_pulse"
+      },
+      "convergence_after": [
+        0.34,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Cross to medication charting area. Cross-check the dispensary timestamp.",
+      "player_card": "travel:to_medication_charting_area",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fluorescent_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [
+        0.36,
+        0.36,
+        0.36
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Examine the medication chart. Late entry at twenty-two-fifteen — minutes after sign-in.",
+      "player_card": "object:medication_chart",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.38
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Examine the prescription carbon. Dosage doubled, late entry initialed C.D.",
+      "player_card": "object:prescription_carbon",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:prescription_carbon",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.4
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Cross to nurse station. Aldworth with the round clipboard.",
+      "player_card": "suspect:nurse_aldworth",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:shaking_hands",
+        "ATMOSPHERE": "atmosphere:fluorescent_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [
+        0.44,
+        0.43,
+        0.42
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Question Aldworth. She remembers a late visit from Dray near twenty-two-fifteen.",
       "player_card": "suspect:nurse_aldworth",
       "scene": {
         "LOCATION": "location:nurse_station_vantage",
@@ -231,14 +399,38 @@
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
       "convergence_after": [
-        0.28,
-        0.26,
-        0.26
+        0.46,
+        0.45,
+        0.44
       ]
     },
     {
-      "turn": 10,
-      "_note": "Cross to doctor office. Dray at his desk, professional calm.",
+      "turn": 17,
+      "_note": "Recall the alarm delay. The cardiac monitor was silenced minutes after the late entry.",
+      "player_card": "action:alarm_delayed",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:shaking_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [
+        0.48,
+        0.47,
+        0.46
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Cross to doctor office. Dray at the desk, professional calm.",
       "player_card": "travel:to_doctor_office",
       "scene": {
         "LOCATION": "location:doctor_office",
@@ -255,267 +447,75 @@
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
       "convergence_after": [
-        0.3,
-        0.28,
-        0.28
+        0.49,
+        0.48,
+        0.47
       ]
     },
     {
-      "turn": 11,
-      "_note": "Question Dray. He says he left at quarter past eleven and went home.",
+      "turn": 19,
+      "_note": "Question Dray about the late round. He says he was in the office until midnight.",
       "player_card": "suspect:callum_dray",
       "scene": {
         "LOCATION": "location:doctor_office",
         "TRANSITION": "transition:stayed",
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_callum_dray",
-        "STANCE": "stance:cooperative",
+        "STANCE": "stance:defensive",
         "ACTION": "action:questions",
         "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "emotion:professional_calm",
-        "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:partial_match",
-        "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
-      },
-      "convergence_after": [
-        0.32,
-        0.3,
-        0.3
-      ]
-    },
-    {
-      "turn": 12,
-      "_note": "Recall the car log. He logged in at twenty-two-fourteen — already an hour after his stated leave.",
-      "player_card": "object:visitor_log",
-      "scene": {
-        "LOCATION": "location:doctor_office",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:noticed_inconsistency",
-        "PRESENCE": "presence:with_callum_dray",
-        "STANCE": "stance:defensive",
-        "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object:visitor_log",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:contradiction_surfaces",
-        "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
-      },
-      "convergence_after": [
-        0.36,
-        0.34,
-        0.32
-      ]
-    },
-    {
-      "turn": 13,
-      "_note": "Cross to medication charting area. The amendment ink, fresh.",
-      "player_card": "travel:to_medication_charting_area",
-      "scene": {
-        "LOCATION": "location:medication_charting_area",
-        "TRANSITION": "transition:crossed_to",
-        "CAUSE": "cause:pursued_suspicion",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
-        "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:medication_chart",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
-        "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.38,
-        0.36,
-        0.34
-      ]
-    },
-    {
-      "turn": 14,
-      "_note": "Examine the chart amendment. Dosage doubled. Different ink.",
-      "player_card": "modifier:chart_amended",
-      "scene": {
-        "LOCATION": "location:medication_charting_area",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:examining_evidence",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
-        "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:medication_chart",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
-        "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.4,
-        0.38,
-        0.36
-      ]
-    },
-    {
-      "turn": 15,
-      "_note": "Cross to service elevator zone. Lin steps off.",
-      "player_card": "witness:pharmacist_lin",
-      "scene": {
-        "LOCATION": "location:service_elevator_zone",
-        "TRANSITION": "transition:crossed_to",
-        "CAUSE": "cause:following_witness_lead",
-        "PRESENCE": "presence:with_pharmacist_lin",
-        "STANCE": "stance:cooperative",
-        "ACTION": "action:waits",
-        "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "emotion:professional_calm",
-        "ATMOSPHERE": "atmosphere:elevator_arrives",
-        "REVELATION": "revelation:none",
-        "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
-      },
-      "convergence_after": [
-        0.42,
-        0.4,
-        0.38
-      ]
-    },
-    {
-      "turn": 16,
-      "_note": "Question Lin. She logs Dray's dispensary visit at twenty-forty-eight. After his stated leave.",
-      "player_card": "suspect:pharmacist_lin",
-      "scene": {
-        "LOCATION": "location:service_elevator_zone",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:following_witness_lead",
-        "PRESENCE": "presence:with_pharmacist_lin",
-        "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:drug_ledger",
-        "TELL": "emotion:professional_calm",
-        "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
-      },
-      "convergence_after": [
-        0.44,
-        0.42,
-        0.4
-      ]
-    },
-    {
-      "turn": 17,
-      "_note": "Examine the drug ledger. Dispensary timestamp matches the chart amendment.",
-      "player_card": "modifier:fresh_notation",
-      "scene": {
-        "LOCATION": "location:service_elevator_zone",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:examining_evidence",
-        "PRESENCE": "presence:with_pharmacist_lin",
-        "STANCE": "stance:cooperative",
-        "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:drug_ledger",
-        "TELL": "emotion:professional_calm",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
-        "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
-      },
-      "convergence_after": [
-        0.46,
-        0.44,
-        0.42
-      ]
-    },
-    {
-      "turn": 18,
-      "_note": "Return to reception threshold. Cross-check the porter's log against Dray's stated time.",
-      "player_card": "travel:to_reception_threshold",
-      "scene": {
-        "LOCATION": "location:reception_threshold",
-        "TRANSITION": "transition:returned",
-        "CAUSE": "cause:noticed_inconsistency",
-        "PRESENCE": "presence:with_night_porter",
-        "STANCE": "stance:cooperative",
-        "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:contradiction_surfaces",
-        "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.48,
-        0.46,
-        0.44
-      ]
-    },
-    {
-      "turn": 19,
-      "_note": "Question the porter again about Dray's car. Never moved.",
-      "player_card": "witness:night_porter",
-      "scene": {
-        "LOCATION": "location:reception_threshold",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:following_witness_lead",
-        "PRESENCE": "presence:with_night_porter",
-        "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "tell:hesitated",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:confirmation",
-        "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.5,
-        0.48,
-        0.46
+        0.49,
+        0.48
       ]
     },
     {
       "turn": 20,
-      "_note": "Cross to family waiting room. Owen Stroud and Pike.",
+      "_note": "Examine the clinical notes on the desk. Underline tic on the cardiac suppressant.",
+      "player_card": "object:clinical_notes",
+      "scene": {
+        "LOCATION": "location:doctor_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:clinical_notes",
+        "TELL": "emotion:clipped_answers",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:steady_pulse"
+      },
+      "convergence_after": [
+        0.51,
+        0.5,
+        0.49
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Cross to family waiting room. Owen Stroud, insurance form in hand.",
       "player_card": "travel:to_family_waiting_room",
       "scene": {
         "LOCATION": "location:family_waiting_room",
         "TRANSITION": "transition:crossed_to",
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:with_owen_stroud",
-        "STANCE": "stance:defensive",
+        "STANCE": "stance:evasive",
         "ACTION": "action:arrives",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:rehearsed_grief",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
-      },
-      "convergence_after": [
-        0.52,
-        0.51,
-        0.5
-      ]
-    },
-    {
-      "turn": 21,
-      "_note": "Question Owen. He produces the insurance form, alibi at home that night.",
-      "player_card": "suspect:owen_stroud",
-      "scene": {
-        "LOCATION": "location:family_waiting_room",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:following_witness_lead",
-        "PRESENCE": "presence:with_owen_stroud",
-        "STANCE": "stance:defensive",
-        "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:insurance_form",
-        "TELL": "emotion:rehearsed_grief",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:alibi_holds",
-        "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
@@ -526,65 +526,89 @@
     },
     {
       "turn": 22,
-      "_note": "Pursue the insurance angle. The policy is months old. Dead end.",
-      "player_card": "motive:insurance_claim",
+      "_note": "Question Owen. He volunteers the policy number unprompted.",
+      "player_card": "suspect:owen_stroud",
       "scene": {
         "LOCATION": "location:family_waiting_room",
         "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:pursued_suspicion",
+        "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_owen_stroud",
-        "STANCE": "stance:defensive",
+        "STANCE": "stance:evasive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object_focus:none",
+        "OBJECT_FOCUS": "object:insurance_form",
         "TELL": "emotion:rehearsed_grief",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:dead_end",
-        "BEAT": "beat:closing_in",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
-        0.52,
+        0.53,
         0.52,
         0.51
       ]
     },
     {
       "turn": 23,
-      "_note": "Return to hospital exterior. Walk to the car park. Dray's car still there.",
-      "player_card": "travel:to_hospital_exterior",
+      "_note": "Pursue the insurance motive. Policy months old. Dead end.",
+      "player_card": "motive:insurance_claim",
       "scene": {
-        "LOCATION": "location:hospital_exterior",
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rehearsed_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [
+        0.53,
+        0.52,
+        0.51
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Return to service elevator zone. Lin still at the dispensary.",
+      "player_card": "travel:to_service_elevator_zone",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:returned",
         "CAUSE": "cause:revisiting_scene",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
-        "ACTION": "action:notices",
-        "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:elevator_arrives",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.54,
-        0.54,
+        0.53,
         0.52
       ]
     },
     {
-      "turn": 24,
-      "_note": "Examine the car log timestamps. In at twenty-two-fourteen. Out at dawn. Hours unaccounted.",
-      "player_card": "object:visitor_log",
+      "turn": 25,
+      "_note": "Examine the drug ledger again. The signature is Dray's, not a forgery.",
+      "player_card": "modifier:handwriting_match",
       "scene": {
-        "LOCATION": "location:hospital_exterior",
+        "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:examining_evidence",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:cooperative",
         "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "tell:none",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "emotion:professional_calm",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:name_uncovered",
         "BEAT": "beat:closing_in",
@@ -592,23 +616,23 @@
       },
       "convergence_after": [
         0.58,
-        0.58,
-        0.56
+        0.57,
+        0.55
       ]
     },
     {
-      "turn": 25,
-      "_note": "Recall the chart amendment. The hours match the dispensary visit.",
-      "player_card": "modifier:chart_amended",
+      "turn": 26,
+      "_note": "Examine the vial count. Two short, matches the two empties on the bedside tray.",
+      "player_card": "modifier:vial_count_short",
       "scene": {
-        "LOCATION": "location:hospital_exterior",
+        "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:recognized_object",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
-        "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object:medication_chart",
-        "TELL": "tell:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "emotion:professional_calm",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:closing_in",
@@ -621,40 +645,16 @@
       ]
     },
     {
-      "turn": 26,
-      "_note": "Cross to staff break / overnight desk area. Ward orderly with the body discovery time.",
-      "player_card": "witness:ward_orderly",
-      "scene": {
-        "LOCATION": "location:staff_break_or_overnight_desk_area",
-        "TRANSITION": "transition:crossed_to",
-        "CAUSE": "cause:following_witness_lead",
-        "PRESENCE": "presence:with_ward_orderly",
-        "STANCE": "stance:cooperative",
-        "ACTION": "action:waits",
-        "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:partial_match",
-        "BEAT": "beat:closing_in",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.64,
-        0.62,
-        0.6
-      ]
-    },
-    {
       "turn": 27,
-      "_note": "Question the orderly about Dray. He saw Dray pass the staff break at midnight.",
-      "player_card": "witness:ward_orderly",
+      "_note": "Cross to reception threshold. Confront the porter's tally with the carbon copy.",
+      "player_card": "travel:to_reception_threshold",
       "scene": {
-        "LOCATION": "location:staff_break_or_overnight_desk_area",
-        "TRANSITION": "transition:stayed",
+        "LOCATION": "location:reception_threshold",
+        "TRANSITION": "transition:crossed_to",
         "CAUSE": "cause:noticed_inconsistency",
-        "PRESENCE": "presence:with_ward_orderly",
+        "PRESENCE": "presence:with_night_porter",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -670,7 +670,103 @@
     },
     {
       "turn": 28,
-      "_note": "Cross to cardiac ward, second visit. Re-examine the syringe tray.",
+      "_note": "Question the porter about the sign-out. He confirms Dray never signed out.",
+      "player_card": "witness:night_porter",
+      "scene": {
+        "LOCATION": "location:reception_threshold",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:visitor_log",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [
+        0.7,
+        0.67,
+        0.65
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Return to medication charting area. Re-read the chart with the pharmacy timeline.",
+      "player_card": "travel:to_medication_charting_area",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [
+        0.72,
+        0.7,
+        0.68
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Examine the interaction manual on the chart cart. Cardiac combination dog-eared.",
+      "player_card": "object:interaction_manual",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:interaction_manual",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [
+        0.74,
+        0.71,
+        0.7
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Recall the dosage interaction. Two safe drugs lethal at doubled dose.",
+      "player_card": "event:dosage_interaction",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:interaction_manual",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.73,
+        0.71
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Return to the cardiac ward. Re-read the bedside chart against the pharmacy log.",
       "player_card": "travel:to_cardiac_ward_crime_space",
       "scene": {
         "LOCATION": "location:cardiac_ward_crime_space",
@@ -679,7 +775,7 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:syringe_tray",
+        "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
@@ -687,14 +783,14 @@
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
-        0.68,
-        0.66,
-        0.64
+        0.78,
+        0.75,
+        0.73
       ]
     },
     {
-      "turn": 29,
-      "_note": "Examine the autopsy report. Cardiac suppression doubled at one in the morning.",
+      "turn": 33,
+      "_note": "Examine the autopsy report at the bedside. Cardiac suppression doubled.",
       "player_card": "object:autopsy_report",
       "scene": {
         "LOCATION": "location:cardiac_ward_crime_space",
@@ -711,113 +807,17 @@
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
-        0.72,
-        0.7,
-        0.68
-      ]
-    },
-    {
-      "turn": 30,
-      "_note": "Recall the dosage interaction. The hours and the dose lock.",
-      "player_card": "event:dosage_interaction",
-      "scene": {
-        "LOCATION": "location:cardiac_ward_crime_space",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:examining_evidence",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
-        "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object:interaction_manual",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:confirmation",
-        "BEAT": "beat:closing_in",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.74,
-        0.72,
-        0.7
-      ]
-    },
-    {
-      "turn": 31,
-      "_note": "Cross to doctor office. Dray is gone. Coat over the chair.",
-      "player_card": "travel:to_doctor_office",
-      "scene": {
-        "LOCATION": "location:doctor_office",
-        "TRANSITION": "transition:crossed_to",
-        "CAUSE": "cause:pursued_suspicion",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
-        "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:complaint_filing",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
-        "BEAT": "beat:closing_in",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.76,
-        0.74,
-        0.72
-      ]
-    },
-    {
-      "turn": 32,
-      "_note": "Examine the complaint filing in the bottom drawer. Hearing date Monday.",
-      "player_card": "object:complaint_filing",
-      "scene": {
-        "LOCATION": "location:doctor_office",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:examining_evidence",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
-        "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:complaint_filing",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:motive_emerges",
-        "BEAT": "beat:closing_in",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.78,
-        0.76,
-        0.74
-      ]
-    },
-    {
-      "turn": 33,
-      "_note": "Recall the malpractice cover. Stroud's Monday hearing testimony would have ended Dray.",
-      "player_card": "motive:malpractice_cover",
-      "scene": {
-        "LOCATION": "location:doctor_office",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:pursued_suspicion",
-        "PRESENCE": "presence:alone",
-        "STANCE": "stance:none",
-        "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object:complaint_filing",
-        "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:confirmation",
-        "BEAT": "beat:closing_in",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
         0.8,
-        0.78,
-        0.76
+        0.77,
+        0.75
       ]
     },
     {
       "turn": 34,
-      "_note": "Recall the negligence testimony chain. The car log seals it.",
-      "player_card": "motive:negligence_testimony",
+      "_note": "Recall the malpractice cover. The pharmacy log is the silent thread.",
+      "player_card": "motive:malpractice_cover",
       "scene": {
-        "LOCATION": "location:doctor_office",
+        "LOCATION": "location:cardiac_ward_crime_space",
         "TRANSITION": "transition:stayed",
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:alone",
@@ -831,65 +831,65 @@
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
-        0.81,
-        0.8,
-        0.78
+        0.82,
+        0.78,
+        0.77
       ]
     },
     {
       "turn": 35,
-      "_note": "Return to reception threshold. The porter still at the desk.",
-      "player_card": "travel:to_reception_threshold",
+      "_note": "Examine the complaint filing carried in the pocket — hearing three days off.",
+      "player_card": "object:complaint_filing",
       "scene": {
-        "LOCATION": "location:reception_threshold",
-        "TRANSITION": "transition:returned",
-        "CAUSE": "cause:revisiting_scene",
-        "PRESENCE": "presence:with_night_porter",
-        "STANCE": "stance:cooperative",
+        "LOCATION": "location:cardiac_ward_crime_space",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
         "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:visitor_log",
+        "OBJECT_FOCUS": "object:complaint_filing",
         "TELL": "tell:none",
-        "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:confirmation",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.83,
-        0.81,
-        0.8
+        0.8,
+        0.79
       ]
     },
     {
       "turn": 36,
-      "_note": "Question the porter about who keys the rear corridor at night. Dray's master card.",
-      "player_card": "object:ward_keycard",
+      "_note": "Recall the negligence testimony. Stroud was due to testify Monday.",
+      "player_card": "motive:negligence_testimony",
       "scene": {
-        "LOCATION": "location:reception_threshold",
+        "LOCATION": "location:cardiac_ward_crime_space",
         "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:examining_evidence",
-        "PRESENCE": "presence:with_night_porter",
-        "STANCE": "stance:cooperative",
-        "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:ward_keycard",
-        "TELL": "tell:hesitated",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:confirmation",
+        "REVELATION": "revelation:motive_emerges",
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.84,
-        0.82,
+        0.81,
         0.81
       ]
     },
     {
       "turn": 37,
-      "_note": "Cross to cardiac ward, third visit. Dray standing at bed three.",
-      "player_card": "travel:to_cardiac_ward_crime_space",
+      "_note": "Return to doctor office. Dray at the desk, pen uncapped, jaw tight.",
+      "player_card": "travel:to_doctor_office",
       "scene": {
-        "LOCATION": "location:cardiac_ward_crime_space",
+        "LOCATION": "location:doctor_office",
         "TRANSITION": "transition:returned",
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:with_callum_dray",
@@ -904,13 +904,13 @@
       },
       "convergence_after": [
         0.85,
-        0.83,
+        0.82,
         0.82
       ]
     },
     {
       "turn": 38,
-      "_note": "Cross with Dray to the rear clinical corridor. Dawn light through the window.",
+      "_note": "Cross with Dray to the rear clinical corridor. Pre-dawn quiet.",
       "player_card": "travel:to_rear_clinical_corridor",
       "scene": {
         "LOCATION": "location:rear_clinical_corridor",
@@ -927,62 +927,62 @@
         "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
-        0.85,
-        0.84,
+        0.86,
+        0.83,
         0.83
       ]
     },
     {
       "turn": 39,
-      "_note": "Lay out the visitor log. The car never moved. Silence in the corridor.",
+      "_note": "Lay out the visitor log, the ledger, the badge, the carbon. One chain.",
       "player_card": "object:visitor_log",
       "scene": {
         "LOCATION": "location:rear_clinical_corridor",
         "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:noticed_inconsistency",
+        "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
         "OBJECT_FOCUS": "object:visitor_log",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:contradiction_surfaces",
-        "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pulse_irregular"
-      },
-      "convergence_after": [
-        0.86,
-        0.85,
-        0.84
-      ]
-    },
-    {
-      "turn": 40,
-      "_note": "Lay out the medication chart. Same hour as the dispensary visit.",
-      "player_card": "object:medication_chart",
-      "scene": {
-        "LOCATION": "location:rear_clinical_corridor",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:noticed_inconsistency",
-        "PRESENCE": "presence:with_callum_dray",
-        "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:medication_chart",
-        "TELL": "tell:tightened",
-        "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:name_uncovered",
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.87,
-        0.86,
+        0.85,
         0.85
       ]
     },
     {
+      "turn": 40,
+      "_note": "Confront with the carbon — the doubled dose signed C.D.",
+      "player_card": "object:prescription_carbon",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:prescription_carbon",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [
+        0.88,
+        0.86,
+        0.86
+      ]
+    },
+    {
       "turn": 41,
-      "_note": "Lay out the complaint filing. The hearing was Monday.",
+      "_note": "Confront with the complaint filing. The Monday hearing.",
       "player_card": "object:complaint_filing",
       "scene": {
         "LOCATION": "location:rear_clinical_corridor",
@@ -999,37 +999,13 @@
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
-        0.88,
-        0.87,
-        0.86
-      ]
-    },
-    {
-      "turn": 42,
-      "_note": "Recall the hour the body was discovered. Dray's car still parked.",
-      "player_card": "time:dawn_alarm",
-      "scene": {
-        "LOCATION": "location:rear_clinical_corridor",
-        "TRANSITION": "transition:stayed",
-        "CAUSE": "cause:noticed_inconsistency",
-        "PRESENCE": "presence:with_callum_dray",
-        "STANCE": "stance:hostile",
-        "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "tell:tightened",
-        "ATMOSPHERE": "atmosphere:dawn_approaches",
-        "REVELATION": "revelation:confirmation",
-        "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:none"
-      },
-      "convergence_after": [
-        0.88,
+        0.89,
         0.87,
         0.87
       ]
     },
     {
-      "turn": 43,
+      "turn": 42,
       "_note": "Accusation. End of trajectory.",
       "player_card": "ACCUSE:suspect:callum_dray",
       "scene": {
@@ -1039,7 +1015,7 @@
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object_focus:none",
+        "OBJECT_FOCUS": "object:visitor_log",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
@@ -1047,8 +1023,8 @@
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
-        0.88,
-        0.88,
+        0.89,
+        0.87,
         0.87
       ]
     }
@@ -1057,10 +1033,10 @@
     "type": "all_strong",
     "accused": "suspect:callum_dray",
     "final_convergence": [
-      0.88,
-      0.88,
+      0.89,
+      0.87,
       0.87
     ],
-    "_note": "Car park log false alibi as the spine. Reception threshold and hospital exterior visited multiple times. Final convergence above 0.75 on all dims."
+    "_note": "Pharmacy visitor log + ledger withdrawal + badge swipe + carbon initials = one chain. Dawn confrontation."
   }
 }

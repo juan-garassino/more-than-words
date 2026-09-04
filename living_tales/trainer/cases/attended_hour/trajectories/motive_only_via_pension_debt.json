@@ -2,7 +2,7 @@
   "schema_version": 1,
   "trajectory_id": "motive_only_via_pension_debt",
   "case_id": "attended_hour",
-  "description": "Player uncovers the malpractice/pension chain \u2014 Dray's career on the line \u2014 but never closes on the suspect. ~41-turn arc.",
+  "description": "Player uncovers the malpractice/pension chain — Dray's career on the line — but never closes on the suspect. ~41-turn arc.",
   "outcome": "motive_only_confession",
   "starting_hypothesis": "motive_first",
   "tags": [
@@ -94,7 +94,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:notices",
+        "ACTION": "action:recalls",
         "OBJECT_FOCUS": "object:syringe_tray",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -135,7 +135,7 @@
     {
       "turn": 4,
       "_note": "Aldworth at her clipboard.",
-      "player_card": "witness:duty_nurse",
+      "player_card": "suspect:nurse_aldworth",
       "scene": {
         "LOCATION": "location:nurse_station_vantage",
         "TRANSITION": "transition:crossed_to",
@@ -255,7 +255,7 @@
     {
       "turn": 9,
       "_note": "Lin off the elevator.",
-      "player_card": "witness:lab_assistant",
+      "player_card": "witness:pharmacist_lin",
       "scene": {
         "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:crossed_to",
@@ -554,7 +554,7 @@
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:evasive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:insurance_form",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:rehearsed_grief",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:dead_end",

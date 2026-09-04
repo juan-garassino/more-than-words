@@ -38,7 +38,11 @@
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.04, 0.06, 0.04]
+      "convergence_after": [
+        0.04,
+        0.06,
+        0.04
+      ]
     },
     {
       "turn": 2,
@@ -50,15 +54,19 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_night_porter",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.08, 0.10, 0.08]
+      "convergence_after": [
+        0.08,
+        0.1,
+        0.08
+      ]
     },
     {
       "turn": 3,
@@ -72,13 +80,17 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.12, 0.14, 0.12]
+      "convergence_after": [
+        0.12,
+        0.14,
+        0.12
+      ]
     },
     {
       "turn": 4,
@@ -90,7 +102,7 @@
         "CAUSE": "cause:summoned",
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:follows",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:rehearsed_grief",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -98,7 +110,11 @@
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.14, 0.16, 0.14]
+      "convergence_after": [
+        0.14,
+        0.16,
+        0.14
+      ]
     },
     {
       "turn": 5,
@@ -111,14 +127,18 @@
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:visitor_log",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:rehearsed_grief",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.18, 0.20, 0.18]
+      "convergence_after": [
+        0.18,
+        0.2,
+        0.18
+      ]
     },
     {
       "turn": 6,
@@ -138,7 +158,11 @@
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.22, 0.24, 0.20]
+      "convergence_after": [
+        0.22,
+        0.24,
+        0.2
+      ]
     },
     {
       "turn": 7,
@@ -150,15 +174,19 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:insurance_form",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.24, 0.24, 0.22]
+      "convergence_after": [
+        0.24,
+        0.24,
+        0.22
+      ]
     },
     {
       "turn": 8,
@@ -178,7 +206,11 @@
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.26, 0.26, 0.24]
+      "convergence_after": [
+        0.26,
+        0.26,
+        0.24
+      ]
     },
     {
       "turn": 9,
@@ -198,7 +230,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.30, 0.32, 0.28]
+      "convergence_after": [
+        0.3,
+        0.32,
+        0.28
+      ]
     },
     {
       "turn": 10,
@@ -218,7 +254,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.32, 0.34, 0.30]
+      "convergence_after": [
+        0.32,
+        0.34,
+        0.3
+      ]
     },
     {
       "turn": 11,
@@ -231,14 +271,18 @@
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:defensive",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:visitor_log",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:rehearsed_grief",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.34, 0.36, 0.32]
+      "convergence_after": [
+        0.34,
+        0.36,
+        0.32
+      ]
     },
     {
       "turn": 12,
@@ -250,7 +294,7 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:defensive",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
         "TELL": "tell:hesitated",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -258,7 +302,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.38, 0.38, 0.36]
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.36
+      ]
     },
     {
       "turn": 13,
@@ -278,7 +326,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.40, 0.42, 0.38]
+      "convergence_after": [
+        0.4,
+        0.42,
+        0.38
+      ]
     },
     {
       "turn": 14,
@@ -290,15 +342,19 @@
         "CAUSE": "cause:revisiting_scene",
         "PRESENCE": "presence:with_night_porter",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:pupil_response"
       },
-      "convergence_after": [0.42, 0.44, 0.40]
+      "convergence_after": [
+        0.42,
+        0.44,
+        0.4
+      ]
     },
     {
       "turn": 15,
@@ -310,15 +366,19 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_night_porter",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.44, 0.46, 0.42]
+      "convergence_after": [
+        0.44,
+        0.46,
+        0.42
+      ]
     },
     {
       "turn": 16,
@@ -338,7 +398,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.46, 0.48, 0.44]
+      "convergence_after": [
+        0.46,
+        0.48,
+        0.44
+      ]
     },
     {
       "turn": 17,
@@ -358,7 +422,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.48, 0.48, 0.46]
+      "convergence_after": [
+        0.48,
+        0.48,
+        0.46
+      ]
     },
     {
       "turn": 18,
@@ -378,7 +446,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.48, 0.48, 0.46]
+      "convergence_after": [
+        0.48,
+        0.48,
+        0.46
+      ]
     },
     {
       "turn": 19,
@@ -390,7 +462,7 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "emotion:professional_calm",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -398,7 +470,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.48, 0.48, 0.46]
+      "convergence_after": [
+        0.48,
+        0.48,
+        0.46
+      ]
     },
     {
       "turn": 20,
@@ -410,7 +486,7 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:leaves",
+        "ACTION": "action:arrives",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:corridor_dims",
@@ -418,7 +494,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.50, 0.50, 0.50]
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
     },
     {
       "turn": 21,
@@ -431,14 +511,18 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:prescription_carbon",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:none",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.52, 0.52, 0.50]
+      "convergence_after": [
+        0.52,
+        0.52,
+        0.5
+      ]
     },
     {
       "turn": 22,
@@ -458,7 +542,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.54, 0.54, 0.52]
+      "convergence_after": [
+        0.54,
+        0.54,
+        0.52
+      ]
     },
     {
       "turn": 23,
@@ -478,7 +566,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.58, 0.58, 0.56]
+      "convergence_after": [
+        0.58,
+        0.58,
+        0.56
+      ]
     },
     {
       "turn": 24,
@@ -498,19 +590,23 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.60, 0.60, 0.58]
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.58
+      ]
     },
     {
       "turn": 25,
       "_note": "Cross to the service elevator. Pharmacist Lin steps off, the dispensary tray in hand.",
-      "player_card": "witness:lab_assistant",
+      "player_card": "witness:pharmacist_lin",
       "scene": {
         "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:crossed_to",
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_pharmacist_lin",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:notices",
         "OBJECT_FOCUS": "object:drug_ledger",
         "TELL": "emotion:rigid_composure",
         "ATMOSPHERE": "atmosphere:elevator_arrives",
@@ -518,7 +614,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.62, 0.62, 0.60]
+      "convergence_after": [
+        0.62,
+        0.62,
+        0.6
+      ]
     },
     {
       "turn": 26,
@@ -531,14 +631,18 @@
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:defensive",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:insurance_form",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:rehearsed_grief",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.64, 0.64, 0.62]
+      "convergence_after": [
+        0.64,
+        0.64,
+        0.62
+      ]
     },
     {
       "turn": 27,
@@ -550,7 +654,7 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:defensive",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:insurance_form",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -558,7 +662,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.66, 0.66, 0.64]
+      "convergence_after": [
+        0.66,
+        0.66,
+        0.64
+      ]
     },
     {
       "turn": 28,
@@ -578,7 +686,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.68, 0.68, 0.66]
+      "convergence_after": [
+        0.68,
+        0.68,
+        0.66
+      ]
     },
     {
       "turn": 29,
@@ -598,7 +710,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.70, 0.70, 0.68]
+      "convergence_after": [
+        0.7,
+        0.7,
+        0.68
+      ]
     },
     {
       "turn": 30,
@@ -618,7 +734,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.72, 0.72, 0.70]
+      "convergence_after": [
+        0.72,
+        0.72,
+        0.7
+      ]
     },
     {
       "turn": 31,
@@ -638,7 +758,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.74, 0.74, 0.72]
+      "convergence_after": [
+        0.74,
+        0.74,
+        0.72
+      ]
     },
     {
       "turn": 32,
@@ -658,7 +782,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.76, 0.76, 0.74]
+      "convergence_after": [
+        0.76,
+        0.76,
+        0.74
+      ]
     },
     {
       "turn": 33,
@@ -678,7 +806,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.78, 0.78, 0.76]
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.76
+      ]
     },
     {
       "turn": 34,
@@ -698,7 +830,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.78, 0.78, 0.76]
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.76
+      ]
     },
     {
       "turn": 35,
@@ -718,7 +854,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.80, 0.80, 0.78]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.78
+      ]
     },
     {
       "turn": 36,
@@ -731,14 +871,18 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object:visitor_log",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.80, 0.80, 0.78]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.78
+      ]
     },
     {
       "turn": 37,
@@ -751,14 +895,18 @@
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:hostile",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:insurance_form",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.80, 0.80, 0.78]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.78
+      ]
     },
     {
       "turn": 38,
@@ -778,7 +926,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.80, 0.80, 0.78]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.78
+      ]
     },
     {
       "turn": 39,
@@ -790,7 +942,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -798,7 +950,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.80, 0.80, 0.78]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.78
+      ]
     },
     {
       "turn": 40,
@@ -811,14 +967,18 @@
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:insurance_form",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:motive_emerges",
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.80, 0.80, 0.78]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.78
+      ]
     },
     {
       "turn": 41,
@@ -838,7 +998,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.80, 0.80, 0.78]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.78
+      ]
     },
     {
       "turn": 42,
@@ -858,13 +1022,21 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.80, 0.80, 0.78]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.78
+      ]
     }
   ],
   "ending": {
     "type": "wrong_accusation",
     "accused": "suspect:owen_stroud",
-    "final_convergence": [0.80, 0.80, 0.78],
+    "final_convergence": [
+      0.8,
+      0.8,
+      0.78
+    ],
     "_note": "Player accuses Owen on the insurance form, the second-visit alibi gap, and the policy update date matching Tuesday. Missed: Owen had no clinical access, the chart amendment was Dray's hand, the rehearsed grief was just performative shame at being a beneficiary."
   }
 }

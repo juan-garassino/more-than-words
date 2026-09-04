@@ -143,7 +143,7 @@
     {
       "turn": 6,
       "_note": "Cross to staff break / overnight desk. The ward orderly finishing his report.",
-      "player_card": "travel:to_reception_threshold",
+      "player_card": "travel:to_staff_break_room",
       "scene": {
         "LOCATION": "location:staff_break_or_overnight_desk_area",
         "TRANSITION": "transition:crossed_to",
@@ -152,11 +152,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:arrives",
         "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.16,
@@ -174,13 +174,13 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_ward_orderly",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.2,
@@ -200,11 +200,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
         "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:orientation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.22,
@@ -226,7 +226,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
@@ -274,7 +274,7 @@
         "OBJECT_FOCUS": "object:clinical_notes",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
@@ -431,7 +431,7 @@
     {
       "turn": 18,
       "_note": "Cross to service elevator alcove. Pharmacist Lin steps off with a tray.",
-      "player_card": "witness:lab_assistant",
+      "player_card": "witness:pharmacist_lin",
       "scene": {
         "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:crossed_to",
@@ -466,7 +466,7 @@
         "OBJECT_FOCUS": "object:drug_ledger",
         "TELL": "emotion:professional_calm",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
@@ -728,11 +728,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:hesitated",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:confirmation",
+        "REVELATION": "revelation:alibi_holds",
         "BEAT": "beat:closing_in",
-        "MEDICAL_TELL": "medical_tell:pupil_response"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.74,
@@ -752,11 +752,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:closing_in",
-        "MEDICAL_TELL": "medical_tell:pupil_response"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.76,
@@ -823,7 +823,7 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object:complaint_filing",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:motive_emerges",
@@ -852,7 +852,7 @@
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.84,
@@ -870,13 +870,13 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:rigid_composure",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.85,
@@ -894,13 +894,13 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:recalls",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.86,
@@ -920,11 +920,11 @@
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
         "OBJECT_FOCUS": "object:corridor_badge",
-        "TELL": "tell:paled",
+        "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.87,
@@ -944,11 +944,11 @@
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
         "OBJECT_FOCUS": "object:medication_chart",
-        "TELL": "tell:paled",
+        "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.88,
@@ -972,7 +972,7 @@
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.89,
@@ -996,7 +996,7 @@
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:motive_emerges",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.9,
@@ -1015,12 +1015,12 @@
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object_focus:none",
+        "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.9,

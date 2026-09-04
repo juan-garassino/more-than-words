@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_dray_via_medication_chart_accomplice",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 22 of dray_via_medication_chart, instead of pressing Owen on the family grudge, the detective returns to the charting area — and Aldworth is there at the chart. Her shaking hands and the amendment's proximity become the spine; the detective accuses her. Dray walks.",
+  "outcome": "accomplice_found",
+  "branch_of": "dray_via_medication_chart",
+  "branch_turn": 22,
+  "divergence_token": "PRESENCE=presence:with_nurse_aldworth",
+  "tags": ["counterfactual", "presence_divergence", "accomplice_found"],
+  "_authoring_note": "6-turn CF: Aldworth present at chart amendment turn pulls accusation toward her.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:cardiac_ward_crime_space",
+      "location:nurse_station_vantage",
+      "location:staff_break_or_overnight_desk_area",
+      "location:service_elevator_zone",
+      "location:doctor_office",
+      "location:family_waiting_room",
+      "location:medication_charting_area",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {"convergence_dims": [0.52, 0.51, 0.5]},
+  "turns": [
+    {
+      "turn": 22,
+      "_note": "Divergence: returns to the charting area — Aldworth is at the chart.",
+      "player_card": "object:medication_chart",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:shaking_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [0.54, 0.53, 0.52]
+    },
+    {
+      "turn": 23,
+      "_note": "Confront Aldworth.",
+      "player_card": "suspect:nurse_aldworth",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [0.58, 0.57, 0.56]
+    },
+    {
+      "turn": 24,
+      "_note": "Chart amendment locked to her tremor.",
+      "player_card": "modifier:chart_amended",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [0.6, 0.6, 0.58]
+    },
+    {
+      "turn": 25,
+      "_note": "Cross to rear corridor with Aldworth.",
+      "player_card": "travel:to_rear_clinical_corridor",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.68, 0.68, 0.65]
+    },
+    {
+      "turn": 26,
+      "_note": "Carbon laid out.",
+      "player_card": "object:prescription_carbon",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:prescription_carbon",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.77, 0.77, 0.76]
+    },
+    {
+      "turn": 27,
+      "_note": "Accusation. Aldworth named.",
+      "player_card": "ACCUSE:suspect:nurse_aldworth",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.78, 0.78, 0.76]
+    }
+  ],
+  "ending": {
+    "type": "accomplice_found",
+    "accused": "suspect:nurse_aldworth",
+    "true_culprit": "suspect:callum_dray",
+    "final_convergence": [0.78, 0.78, 0.76],
+    "_note": "Aldworth at the amendment moment dragged the accusation away from Dray."
+  }
+}

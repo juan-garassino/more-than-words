@@ -89,40 +89,40 @@
 
   "CAUSE": {
     "cause:following_witness_lead": {
-      "en": ["On the witness's word,", "Acting on what the witness had said,", "Following the witness's account,", "Taking the witness at their word,"],
-      "es": ["Por la palabra del testigo,", "Actuando según el testigo,", "Siguiendo lo dicho por el testigo,", "Conforme al relato del testigo,"]
+      "en": ["On the witness's word,", "Acting on what the witness had said,", "Following the witness's account,", "Taking the witness at their word,", "The testimony pointed there;", "What the witness had let slip warranted a look;"],
+      "es": ["Por la palabra del testigo,", "Actuando según el testigo,", "Siguiendo lo dicho por el testigo,", "Conforme al relato del testigo,", "El testimonio apuntaba allí;", "Lo que el testigo dejó escapar merecía atención;"]
     },
     "cause:examining_evidence": {
-      "en": ["Tracing the evidence,", "Following the chart trail,", "Reading the paperwork forward,", "Working the evidence in order,"],
-      "es": ["Siguiendo la evidencia,", "Trazando la pista clínica,", "Leyendo la documentación,", "Recorriendo las pruebas en orden,"]
+      "en": ["Tracing the evidence,", "Following the chart trail,", "Reading the paperwork forward,", "Working the evidence in order,", "The records ran in one direction;", "With the proofs laid out in order,"],
+      "es": ["Siguiendo la evidencia,", "Trazando la pista clínica,", "Leyendo la documentación,", "Recorriendo las pruebas en orden,", "Los registros corrían en una dirección;", "Con las pruebas dispuestas en orden,"]
     },
     "cause:recognized_object": {
-      "en": ["Something about the object struck the detective;", "The object held the detective's attention;", "An item caught the eye;", "The object refused to be set down;"],
-      "es": ["Algo del objeto detuvo a la detective;", "El objeto retuvo su atención;", "Un detalle del objeto la sostuvo;", "Aquel objeto no quería soltarse;"]
+      "en": ["Something about the object struck the detective;", "The object held the detective's attention;", "An item caught the eye;", "The object refused to be set down;", "Its like had been seen before;"],
+      "es": ["Algo del objeto detuvo a la detective;", "El objeto retuvo su atención;", "Un detalle del objeto la sostuvo;", "Aquel objeto no quería soltarse;", "Algo semejante se había visto antes;"]
     },
     "cause:noticed_inconsistency": {
-      "en": ["A detail did not match;", "Something in the record did not align;", "The figures failed to reconcile;", "An entry refused to agree with the next;"],
-      "es": ["Un detalle no encajaba;", "Algo del registro no cuadraba;", "Las cifras no concordaban;", "Una anotación contradecía a la siguiente;"]
+      "en": ["A detail did not match;", "Something in the record did not align;", "The figures failed to reconcile;", "An entry refused to agree with the next;", "The times on the chart did not agree;"],
+      "es": ["Un detalle no encajaba;", "Algo del registro no cuadraba;", "Las cifras no concordaban;", "Una anotación contradecía a la siguiente;", "Las horas de la hoja no concordaban;"]
     },
     "cause:pursued_suspicion": {
-      "en": ["On a hunch,", "Following a suspicion,", "On the strength of a doubt,", "Acting on a quiet doubt,"],
-      "es": ["Por una corazonada,", "Siguiendo una sospecha,", "Apoyándose en una duda,", "Por una intuición callada,"]
+      "en": ["On a hunch,", "Following a suspicion,", "On the strength of a doubt,", "Acting on a quiet doubt,", "Doubt would not let the matter rest;", "Something unproven pulled at her;"],
+      "es": ["Por una corazonada,", "Siguiendo una sospecha,", "Apoyándose en una duda,", "Por una intuición callada,", "La duda no dejaba descansar el asunto;", "Algo sin probar tiraba de ella;"]
     },
     "cause:revisiting_scene": {
-      "en": ["Returning to confirm,", "Coming back to verify,", "To check the prior reading,", "To re-examine what had been left,"],
-      "es": ["Volviendo para confirmar,", "Regresando para verificar,", "Para cotejar la lectura previa,", "Para revisar lo dejado atrás,"]
+      "en": ["Returning to confirm,", "Coming back to verify,", "To check the prior reading,", "To re-examine what had been left,", "The ward deserved a second look;"],
+      "es": ["Volviendo para confirmar,", "Regresando para verificar,", "Para cotejar la lectura previa,", "Para revisar lo dejado atrás,", "La sala merecía una segunda mirada;"]
     },
     "cause:summoned": {
-      "en": ["Called by name,", "Summoned by the page,", "Called over by staff,", "Asked for by name,"],
-      "es": ["Llamada por su nombre,", "Convocada por aviso,", "Reclamada por el personal,", "Solicitada por su nombre,"]
+      "en": ["Called by name,", "Summoned by the page,", "Called over by staff,", "Asked for by name,", "Word had been sent for her;"],
+      "es": ["Llamada por su nombre,", "Convocada por aviso,", "Reclamada por el personal,", "Solicitada por su nombre,", "Habían mandado por ella;"]
     },
     "cause:chronological_drift": {
-      "en": ["As the hour wore on,", "As the night extended,", "As the shift drew on,", "Hours into the watch,"],
-      "es": ["Mientras la hora se alargaba,", "A medida que avanzaba la noche,", "Conforme se prolongaba el turno,", "Horas dentro de la guardia,"]
+      "en": ["As the hour wore on,", "As the night extended,", "As the shift drew on,", "Hours into the watch,", "With the next round due,"],
+      "es": ["Mientras la hora se alargaba,", "A medida que avanzaba la noche,", "Conforme se prolongaba el turno,", "Horas dentro de la guardia,", "Con la siguiente ronda al caer,"]
     },
     "cause:reading_chart_signal": {
-      "en": ["Reading the chart's signal,", "Following the figures on the chart,", "Tracing the entries on the medication chart,", "Working back through the chart,"],
-      "es": ["Leyendo la señal del registro,", "Siguiendo las cifras de la hoja,", "Rastreando las anotaciones de la hoja de medicación,", "Recorriendo la hoja hacia atrás,"]
+      "en": ["Reading the chart's signal,", "Following the figures on the chart,", "Tracing the entries on the medication chart,", "Working back through the chart,", "The figures on the chart decided it;"],
+      "es": ["Leyendo la señal del registro,", "Siguiendo las cifras de la hoja,", "Rastreando las anotaciones de la hoja de medicación,", "Recorriendo la hoja hacia atrás,", "Las cifras de la hoja lo decidieron;"]
     },
     "cause:none": {"en": "", "es": ""}
   },
@@ -238,28 +238,28 @@
 
   "ACTION": {
     "action:examines": {
-      "en": ["examined", "studied", "read across", "looked closely at"],
-      "es": ["examinó", "estudió", "recorrió", "observó de cerca"]
+      "en": ["examined", "studied", "inspected", "scrutinised"],
+      "es": ["examinó", "estudió", "inspeccionó", "escrutó"]
     },
     "action:questions": {
-      "en": ["questioned", "interviewed", "took the statement of", "put the question to"],
-      "es": ["interrogó", "entrevistó", "tomó declaración a", "planteó la pregunta a"]
+      "en": ["questioned", "asked after", "pressed", "queried"],
+      "es": ["interrogó", "preguntó por", "presionó", "indagó"]
     },
     "action:notices": {
-      "en": ["noticed", "marked", "took note of", "registered"],
-      "es": ["advirtió", "anotó", "tomó nota de", "registró"]
+      "en": ["noticed", "noted", "marked", "registered"],
+      "es": ["advirtió", "notó", "anotó", "registró"]
     },
     "action:discovers": {
-      "en": ["found", "uncovered", "located", "came upon"],
-      "es": ["halló", "descubrió", "localizó", "dio con"]
+      "en": ["found", "uncovered", "located", "unearthed"],
+      "es": ["halló", "descubrió", "localizó", "destapó"]
     },
     "action:confronts": {
-      "en": ["confronted", "named the matter to", "pressed the question with", "put the contradiction to"],
-      "es": ["confrontó", "puso el asunto frente a", "apretó la pregunta a", "planteó la contradicción a"]
+      "en": ["confronted", "challenged", "bore down on", "pressed at"],
+      "es": ["confrontó", "encaró", "cargó sobre", "insistió ante"]
     },
     "action:follows": {
-      "en": ["followed", "tracked", "kept pace with", "trailed"],
-      "es": ["siguió", "rastreó", "fue tras", "fue al paso de"]
+      "en": ["followed", "tracked", "shadowed", "trailed"],
+      "es": ["siguió", "rastreó", "persiguió", "vigiló"]
     },
     "action:waits": {
       "en": ["waited", "held the silence", "let the moment stand", "kept still"],
@@ -274,15 +274,15 @@
       "es": ["entró en", "pasó a", "se adentró en", "pisó"]
     },
     "action:recalls": {
-      "en": ["recalled", "remembered", "brought back to mind", "set the earlier note against this one"],
-      "es": ["recordó", "trajo a la memoria", "rescató del recuerdo", "cotejó con la nota previa"]
+      "en": ["recalled", "remembered", "recollected", "reconsidered"],
+      "es": ["recordó", "rememoró", "reconsideró", "repasó"]
     },
     "action:auscultates": {
-      "en": ["auscultated", "took the sound of", "placed the stethoscope to", "listened to the chest of"],
-      "es": ["auscultó", "tomó el sonido de", "apoyó el estetoscopio sobre", "escuchó el pecho de"]
+      "en": ["auscultated", "examined", "checked"],
+      "es": ["auscultó", "exploró", "revisó"]
     },
     "action:none": {
-      "en": ["stood", "held her place", "stayed still", "kept her stand"],
+      "en": ["stood", "held her place", "stayed still", "remained in place"],
       "es": ["se detuvo", "se mantuvo en su sitio", "permaneció quieta", "no se movió"]
     }
   },
@@ -534,15 +534,16 @@
 
   "TRAVEL_CARDS": {
     "_comment": "Player travel cards. The action label appears on the card; played effect forces LOCATION + a sensible TRANSITION.",
-    "travel:to_cardiac_ward":             {"en": "Go to the cardiac ward",        "es": "Ir a la sala cardíaca"},
+    "travel:to_cardiac_ward_crime_space": {"en": "Go to the cardiac ward",        "es": "Ir a la sala cardíaca"},
     "travel:to_doctor_office":            {"en": "Go to the doctor's office",     "es": "Ir a la consulta"},
     "travel:to_family_waiting_room":      {"en": "Go to the family waiting room", "es": "Ir a la sala de familias"},
     "travel:to_hospital_exterior":        {"en": "Go to the forecourt",           "es": "Ir a la entrada"},
     "travel:to_medication_charting_area": {"en": "Go to the charting area",       "es": "Ir a la zona de hojas"},
-    "travel:to_nurse_station":            {"en": "Go to the nurse station",       "es": "Ir al puesto de enfermería"},
+    "travel:to_nurse_station_vantage":    {"en": "Go to the nurse station",       "es": "Ir al puesto de enfermería"},
     "travel:to_rear_clinical_corridor":   {"en": "Go to the rear corridor",       "es": "Ir al pasillo posterior"},
     "travel:to_reception_threshold":      {"en": "Go to reception",               "es": "Ir a recepción"},
     "travel:to_service_elevator_zone":    {"en": "Go to the service elevator",    "es": "Ir al montacargas"},
-    "travel:to_staff_break_room":         {"en": "Go to the staff break room",    "es": "Ir a la sala de descanso"}
+    "travel:to_staff_break_room":         {"en": "Go to the staff break room",    "es": "Ir a la sala de descanso"},
+    "travel:to_staff_break_or_overnight_desk_area": {"en": "Go to the overnight desk", "es": "Ir al puesto de guardia"}
   }
 }

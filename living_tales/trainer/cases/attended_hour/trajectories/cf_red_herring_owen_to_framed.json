@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_red_herring_owen_to_framed",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 22 of red_herring_owen_insurance, the detective returns to the family waiting room and confronts Owen at once instead of watching him. The frame locks; Owen accused. Dray walks.",
+  "outcome": "framed_suspect",
+  "branch_of": "red_herring_owen_insurance",
+  "branch_turn": 22,
+  "divergence_token": "ACTION=action:confronts",
+  "tags": [
+    "counterfactual",
+    "action_divergence",
+    "framed_suspect",
+    "owen_framed"
+  ],
+  "_authoring_note": "5-turn CF — confronting Owen early locks the frame.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:reception_threshold",
+      "location:cardiac_ward_crime_space",
+      "location:medication_charting_area",
+      "location:nurse_station_vantage",
+      "location:family_waiting_room",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.66,
+      0.64,
+      0.66
+    ]
+  },
+  "turns": [
+    {
+      "turn": 22,
+      "_note": "Divergence: returns to Owen and confronts him at once.",
+      "player_card": "suspect:owen_stroud",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [
+        0.68,
+        0.66,
+        0.68
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Insurance form pressed.",
+      "player_card": "object:insurance_form",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:insurance_form",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [
+        0.7,
+        0.68,
+        0.7
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Insurance claim motive.",
+      "player_card": "motive:insurance_claim",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [
+        0.73,
+        0.71,
+        0.72
+      ],
+      "forbidden_dims": [
+        "suspect:callum_dray"
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Cross to rear corridor.",
+      "player_card": "travel:to_rear_clinical_corridor",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [
+        0.76,
+        0.75,
+        0.76
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Accusation. Owen framed.",
+      "player_card": "ACCUSE:suspect:owen_stroud",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:insurance_form",
+        "TELL": "emotion:clipped_answers",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [
+        0.78,
+        0.77,
+        0.77
+      ]
+    }
+  ],
+  "ending": {
+    "type": "framed_suspect",
+    "accused": "suspect:owen_stroud",
+    "true_culprit": "suspect:callum_dray",
+    "final_convergence": [
+      0.78,
+      0.77,
+      0.77
+    ],
+    "_note": "Early confrontation locked the frame at Owen."
+  }
+}

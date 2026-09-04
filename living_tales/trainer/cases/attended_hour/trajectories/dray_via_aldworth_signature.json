@@ -54,11 +54,11 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:notices",
+        "ACTION": "action:recalls",
         "OBJECT_FOCUS": "object:syringe_tray",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
@@ -95,7 +95,7 @@
     {
       "turn": 4,
       "_note": "Cross to the nurse station. Aldworth on duty, hands visibly trembling.",
-      "player_card": "witness:duty_nurse",
+      "player_card": "suspect:nurse_aldworth",
       "scene": {
         "LOCATION": "location:nurse_station_vantage",
         "TRANSITION": "transition:crossed_to",
@@ -106,7 +106,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:shaking_hands",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
@@ -175,7 +175,7 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:medication_chart",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:none",
@@ -250,7 +250,7 @@
         "OBJECT_FOCUS": "object:syringe_tray",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
@@ -318,7 +318,7 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:defensive",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -342,13 +342,13 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_ward_orderly",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:pupil_response"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.42,
@@ -366,13 +366,13 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_ward_orderly",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:none",
         "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:pupil_response"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.44,
@@ -392,11 +392,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:pupil_response"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.46,
@@ -420,7 +420,7 @@
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:dead_end",
         "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.46,
@@ -704,11 +704,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:contradiction_surfaces",
         "BEAT": "beat:closing_in",
-        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.72,
@@ -775,7 +775,7 @@
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:complaint_filing",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:shaking_hands",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:motive_emerges",
@@ -790,7 +790,7 @@
     },
     {
       "turn": 33,
-      "_note": "Cross back to the doctor office. The room empty. The coat still on the chair.",
+      "_note": "Cross back to the doctor office. The room empty. The coat on the chair, the case notes on the desk.",
       "player_card": "travel:to_doctor_office",
       "scene": {
         "LOCATION": "location:doctor_office",
@@ -799,7 +799,7 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:examines",
-        "OBJECT_FOCUS": "object:corridor_badge",
+        "OBJECT_FOCUS": "object:clinical_notes",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
@@ -894,7 +894,7 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:notices",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:corridor_dims",
@@ -924,7 +924,7 @@
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.85,
@@ -942,13 +942,13 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.86,
@@ -968,11 +968,11 @@
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
         "OBJECT_FOCUS": "object:prescription_carbon",
-        "TELL": "tell:paled",
+        "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:name_uncovered",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.87,
@@ -992,11 +992,11 @@
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
         "OBJECT_FOCUS": "object:drug_ledger",
-        "TELL": "tell:paled",
+        "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.88,
@@ -1014,13 +1014,13 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:none",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.88,
@@ -1040,11 +1040,11 @@
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
         "OBJECT_FOCUS": "object:complaint_filing",
-        "TELL": "tell:paled",
+        "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:motive_emerges",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.89,
@@ -1064,11 +1064,11 @@
         "STANCE": "stance:hostile",
         "ACTION": "action:recalls",
         "OBJECT_FOCUS": "object:interaction_manual",
-        "TELL": "tell:paled",
+        "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.89,
@@ -1078,7 +1078,7 @@
     },
     {
       "turn": 45,
-      "_note": "Recall the malpractice cover motive. The chain is complete.",
+      "_note": "Recall the malpractice motive against his account. The titration story no longer holds.",
       "player_card": "motive:malpractice_cover",
       "scene": {
         "LOCATION": "location:rear_clinical_corridor",
@@ -1090,9 +1090,9 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
-        "REVELATION": "revelation:confirmation",
+        "REVELATION": "revelation:contradiction_surfaces",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.89,
@@ -1111,12 +1111,12 @@
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object_focus:none",
+        "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.89,

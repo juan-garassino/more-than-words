@@ -2,7 +2,7 @@
   "schema_version": 1,
   "trajectory_id": "partial_correct_via_misread_motive_b",
   "case_id": "attended_hour",
-  "description": "Dray accused; player misreads it as family-grudge revenge \u2014 Dray and Stroud had history.",
+  "description": "Dray accused; player misreads it as family-grudge revenge — Dray and Stroud had history.",
   "outcome": "partial_correct",
   "starting_hypothesis": "object_first",
   "tags": [
@@ -96,7 +96,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:notices",
+        "ACTION": "action:recalls",
         "OBJECT_FOCUS": "object:syringe_tray",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -137,7 +137,7 @@
     {
       "turn": 4,
       "_note": "Aldworth at her clipboard.",
-      "player_card": "witness:duty_nurse",
+      "player_card": "suspect:nurse_aldworth",
       "scene": {
         "LOCATION": "location:nurse_station_vantage",
         "TRANSITION": "transition:crossed_to",
@@ -257,7 +257,7 @@
     {
       "turn": 9,
       "_note": "Lin off the elevator.",
-      "player_card": "witness:lab_assistant",
+      "player_card": "witness:pharmacist_lin",
       "scene": {
         "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:crossed_to",
@@ -557,7 +557,7 @@
         "PRESENCE": "presence:with_owen_stroud",
         "STANCE": "stance:evasive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:insurance_form",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:rehearsed_grief",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:dead_end",

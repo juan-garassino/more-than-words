@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_framed_aldworth_recovers",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 24 of framed_aldworth, the cause is `noticed_inconsistency` rather than `examining_evidence` — the detective spots that Dray's countersign is the real signal. The frame breaks; Dray correctly named.",
+  "outcome": "correct_callum_dray",
+  "branch_of": "framed_aldworth",
+  "branch_turn": 24,
+  "divergence_token": "CAUSE=cause:noticed_inconsistency",
+  "tags": ["counterfactual", "cause_divergence", "correct_callum_dray", "frame_broken"],
+  "_authoring_note": "7-turn CF: noticing the inconsistency at turn 24 breaks the frame.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:cardiac_ward_crime_space",
+      "location:medication_charting_area",
+      "location:service_elevator_zone",
+      "location:doctor_office",
+      "location:family_waiting_room",
+      "location:nurse_station_vantage",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {"convergence_dims": [0.55, 0.55, 0.555]},
+  "turns": [
+    {
+      "turn": 24,
+      "_note": "Divergence: cause is noticed_inconsistency — the countersign jumps.",
+      "player_card": "object:medication_chart",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:shaking_hands",
+        "ATMOSPHERE": "atmosphere:fluorescent_flickers",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [0.6, 0.6, 0.58]
+    },
+    {
+      "turn": 25,
+      "_note": "Hand match — Dray's countersign.",
+      "player_card": "modifier:handwriting_match",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:shaking_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [0.66, 0.66, 0.65]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to doctor office.",
+      "player_card": "travel:to_doctor_office",
+      "scene": {
+        "LOCATION": "location:doctor_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:fluorescent_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.7, 0.7, 0.68]
+    },
+    {
+      "turn": 27,
+      "_note": "Complaint filing in the drawer.",
+      "player_card": "object:complaint_filing",
+      "scene": {
+        "LOCATION": "location:doctor_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:complaint_filing",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.76, 0.76, 0.74]
+    },
+    {
+      "turn": 28,
+      "_note": "Cross to rear corridor with Dray.",
+      "player_card": "travel:to_rear_clinical_corridor",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pallor_visible"
+      },
+      "convergence_after": [0.78, 0.78, 0.76]
+    },
+    {
+      "turn": 29,
+      "_note": "Chart and carbon laid out.",
+      "player_card": "object:prescription_carbon",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:prescription_carbon",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pallor_visible"
+      },
+      "convergence_after": [0.82, 0.82, 0.8]
+    },
+    {
+      "turn": 30,
+      "_note": "Accusation. Dray named.",
+      "player_card": "ACCUSE:suspect:callum_dray",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:clipped_answers",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pallor_visible"
+      },
+      "convergence_after": [0.84, 0.84, 0.82]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:callum_dray",
+    "final_convergence": [0.84, 0.84, 0.82],
+    "_note": "Noticing the inconsistency in Aldworth's chart broke the frame and pulled the chain to Dray."
+  }
+}

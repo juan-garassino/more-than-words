@@ -47,18 +47,18 @@
     {
       "turn": 2,
       "_note": "Cross to service elevator zone. Lin already there with the inventory sheet.",
-      "player_card": "witness:lab_assistant",
+      "player_card": "witness:pharmacist_lin",
       "scene": {
         "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:crossed_to",
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_pharmacist_lin",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:professional_calm",
         "ATMOSPHERE": "atmosphere:elevator_arrives",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
@@ -127,7 +127,7 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:medication_chart",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:none",
@@ -199,10 +199,10 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:syringe_tray",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_flickers",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
@@ -239,18 +239,18 @@
     {
       "turn": 10,
       "_note": "Cross to nurse station. Aldworth on duty.",
-      "player_card": "witness:duty_nurse",
+      "player_card": "suspect:nurse_aldworth",
       "scene": {
         "LOCATION": "location:nurse_station_vantage",
         "TRANSITION": "transition:crossed_to",
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:shaking_hands",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
@@ -311,7 +311,7 @@
     {
       "turn": 13,
       "_note": "Question Lin again. The dispensary entry at twenty-forty-eight matches Dray's signature.",
-      "player_card": "witness:lab_assistant",
+      "player_card": "witness:pharmacist_lin",
       "scene": {
         "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:stayed",
@@ -359,18 +359,18 @@
     {
       "turn": 15,
       "_note": "Cross to staff break / overnight desk area. Dr Parris there, end of shift.",
-      "player_card": "witness:duty_nurse",
+      "player_card": "suspect:dr_parris",
       "scene": {
         "LOCATION": "location:staff_break_or_overnight_desk_area",
         "TRANSITION": "transition:crossed_to",
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_dr_parris",
         "STANCE": "stance:evasive",
-        "ACTION": "action:questions",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:glanced_aside",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
@@ -694,7 +694,7 @@
     },
     {
       "turn": 29,
-      "_note": "Cross to cardiac ward, second visit. Auscultate the bedside chart.",
+      "_note": "Cross to cardiac ward, second visit. Re-read the bedside chart.",
       "player_card": "travel:to_cardiac_ward_crime_space",
       "scene": {
         "LOCATION": "location:cardiac_ward_crime_space",
@@ -702,11 +702,11 @@
         "CAUSE": "cause:revisiting_scene",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:auscultates",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:confirmation",
+        "REVELATION": "revelation:partial_match",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
@@ -800,11 +800,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:hesitated",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pupil_response"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.83,
@@ -824,11 +824,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pupil_response"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.84,
@@ -852,7 +852,7 @@
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.85,
@@ -870,13 +870,13 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.85,
@@ -900,7 +900,7 @@
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.86,
@@ -920,11 +920,11 @@
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
         "OBJECT_FOCUS": "object:prescription_carbon",
-        "TELL": "tell:paled",
+        "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:name_uncovered",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.87,
@@ -944,11 +944,11 @@
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
         "OBJECT_FOCUS": "object:complaint_filing",
-        "TELL": "tell:paled",
+        "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:motive_emerges",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.88,
@@ -968,11 +968,11 @@
         "STANCE": "stance:hostile",
         "ACTION": "action:recalls",
         "OBJECT_FOCUS": "object:drug_ledger",
-        "TELL": "emotion:clipped_answers",
+        "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.88,
@@ -991,12 +991,12 @@
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object_focus:none",
+        "OBJECT_FOCUS": "object:drug_ledger",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
-        "MEDICAL_TELL": "medical_tell:pallor_visible"
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
       "convergence_after": [
         0.88,

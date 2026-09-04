@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_accomplice_via_lin_cold",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 18 of accomplice_via_lin, instead of dwelling on the prescription carbon, the detective takes the handwriting question straight down to Lin at the dispensary — and Lin reads cooperative, not defensive. The suspicion never sharpens; the pharmacy chain dissolves into administrative paperwork. Cold trail.",
+  "outcome": "cold_trail",
+  "branch_of": "accomplice_via_lin",
+  "branch_turn": 18,
+  "divergence_token": "STANCE=stance:cooperative",
+  "tags": ["counterfactual", "stance_divergence", "cold_trail"],
+  "_authoring_note": "5-turn CF: softer stance never escalates.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:cardiac_ward_crime_space",
+      "location:nurse_station_vantage",
+      "location:service_elevator_zone",
+      "location:doctor_office",
+      "location:medication_charting_area",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {"convergence_dims": [0.435, 0.435, 0.44]},
+  "turns": [
+    {
+      "turn": 18,
+      "_note": "Divergence: back down to Lin at the dispensary — who reads cooperative, not defensive.",
+      "player_card": "suspect:pharmacist_lin",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:steady_pulse"
+      },
+      "convergence_after": [0.44, 0.44, 0.45]
+    },
+    {
+      "turn": 19,
+      "_note": "Ledger reviewed.",
+      "player_card": "object:drug_ledger",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:steady_pulse"
+      },
+      "convergence_after": [0.45, 0.45, 0.46]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to medication charting area.",
+      "player_card": "travel:to_medication_charting_area",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fluorescent_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.46, 0.46, 0.465]
+    },
+    {
+      "turn": 21,
+      "_note": "Chart amendment — no follow-up suspicion.",
+      "player_card": "modifier:chart_amended",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_chart_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.465, 0.46, 0.465]
+    },
+    {
+      "turn": 22,
+      "_note": "Walks out to the forecourt. The trail thins to nothing.",
+      "player_card": "travel:to_hospital_exterior",
+      "scene": {
+        "LOCATION": "location:hospital_exterior",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.47, 0.46, 0.47]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "accused": null,
+    "true_culprit": "suspect:callum_dray",
+    "final_convergence": [0.47, 0.46, 0.47],
+    "_note": "Cooperative stance never escalated; trail goes cold at the dispensary."
+  }
+}

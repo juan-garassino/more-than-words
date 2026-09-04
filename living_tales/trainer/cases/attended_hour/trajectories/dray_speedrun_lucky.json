@@ -70,7 +70,7 @@
     },
     {
       "turn": 3,
-      "_note": "Examine the leaked pen on the desk. Blue-black ink. A smear on the blotter.",
+      "_note": "Examine the chart on the desk beside the leaked pen. Blue-black ink, a smear on the blotter.",
       "player_card": "object:medication_chart",
       "scene": {
         "LOCATION": "location:doctor_office",
@@ -130,7 +130,7 @@
         "OBJECT_FOCUS": "object:prescription_carbon",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
@@ -151,7 +151,7 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:medication_chart",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:none",
@@ -287,18 +287,18 @@
     {
       "turn": 12,
       "_note": "Cross to nurse station. Aldworth on duty, hands trembling.",
-      "player_card": "witness:duty_nurse",
+      "player_card": "suspect:nurse_aldworth",
       "scene": {
         "LOCATION": "location:nurse_station_vantage",
         "TRANSITION": "transition:crossed_to",
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:shaking_hands",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
@@ -318,7 +318,7 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "emotion:shaking_hands",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
@@ -343,7 +343,7 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:medication_chart",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:none",
@@ -416,11 +416,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.4,
@@ -440,11 +440,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:hesitated",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:alibi_holds",
         "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.4,
@@ -464,11 +464,11 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:recalls",
         "OBJECT_FOCUS": "object:medication_chart",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
-        "MEDICAL_TELL": "medical_tell:steady_pulse"
+        "MEDICAL_TELL": "medical_tell:none"
       },
       "convergence_after": [
         0.4,
@@ -490,7 +490,7 @@
         "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
@@ -558,7 +558,7 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:defensive",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:prescription_carbon",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -606,7 +606,7 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:notices",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:corridor_dims",
@@ -694,7 +694,7 @@
     },
     {
       "turn": 29,
-      "_note": "Press him on the carbon. He paled, only briefly.",
+      "_note": "Press him on the carbon. His jaw sets, only briefly.",
       "player_card": "object:prescription_carbon",
       "scene": {
         "LOCATION": "location:doctor_office",
@@ -730,7 +730,7 @@
         "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
@@ -750,7 +750,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:prescription_carbon",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",

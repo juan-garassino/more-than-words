@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_dray_via_drug_ledger_to_lin",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 20 of dray_via_drug_ledger, the detective fixates on the drug ledger (Lin's domain) instead of the interaction manual. The pharmacy chain becomes the spine; Lin is named. Wrong target.",
+  "outcome": "wrong_pharmacist_lin",
+  "branch_of": "dray_via_drug_ledger",
+  "branch_turn": 20,
+  "divergence_token": "OBJECT_FOCUS=object:drug_ledger",
+  "tags": [
+    "counterfactual",
+    "object_focus_divergence",
+    "wrong_pharmacist_lin"
+  ],
+  "_authoring_note": "7-turn counterfactual into wrong_pharmacist_lin.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:service_elevator_zone",
+      "location:cardiac_ward_crime_space",
+      "location:nurse_station_vantage",
+      "location:staff_break_or_overnight_desk_area",
+      "location:medication_charting_area",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {"convergence_dims": [0.48, 0.47, 0.46]},
+  "turns": [
+    {
+      "turn": 20,
+      "_note": "Divergence: drug ledger in focus, not the interaction manual.",
+      "player_card": "object:drug_ledger",
+      "scene": {
+        "LOCATION": "location:medication_charting_area",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.5, 0.49, 0.48]
+    },
+    {
+      "turn": 21,
+      "_note": "Descend to service elevator zone. Lin at the dispensary.",
+      "player_card": "travel:to_service_elevator_zone",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:elevator_arrives",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.52, 0.52, 0.5]
+    },
+    {
+      "turn": 22,
+      "_note": "Suspect Lin.",
+      "player_card": "suspect:pharmacist_lin",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.55, 0.55, 0.53]
+    },
+    {
+      "turn": 23,
+      "_note": "Vial count short.",
+      "player_card": "modifier:vial_count_short",
+      "scene": {
+        "LOCATION": "location:service_elevator_zone",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.6, 0.6, 0.58]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to rear corridor with Lin.",
+      "player_card": "travel:to_rear_clinical_corridor",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.7, 0.7, 0.68]
+    },
+    {
+      "turn": 25,
+      "_note": "Ledger laid out.",
+      "player_card": "object:drug_ledger",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.76, 0.76, 0.75]
+    },
+    {
+      "turn": 26,
+      "_note": "Accusation. Lin named — Dray's chain never tested.",
+      "player_card": "ACCUSE:suspect:pharmacist_lin",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_pharmacist_lin",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.78, 0.78, 0.77]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:pharmacist_lin",
+    "true_culprit": "suspect:callum_dray",
+    "final_convergence": [0.78, 0.78, 0.77],
+    "_note": "Ledger focus dragged the chain pharmacy-ward. Lin accused; Dray walks."
+  }
+}

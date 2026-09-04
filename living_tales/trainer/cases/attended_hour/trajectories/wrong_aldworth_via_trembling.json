@@ -38,7 +38,11 @@
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.04, 0.04, 0.06]
+      "convergence_after": [
+        0.04,
+        0.04,
+        0.06
+      ]
     },
     {
       "turn": 2,
@@ -50,7 +54,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:notices",
+        "ACTION": "action:recalls",
         "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -58,7 +62,11 @@
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.08, 0.08, 0.10]
+      "convergence_after": [
+        0.08,
+        0.08,
+        0.1
+      ]
     },
     {
       "turn": 3,
@@ -78,12 +86,16 @@
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.12, 0.10, 0.14]
+      "convergence_after": [
+        0.12,
+        0.1,
+        0.14
+      ]
     },
     {
       "turn": 4,
       "_note": "Cross to the nurse station. Aldworth at her clipboard. Her hands are visibly trembling.",
-      "player_card": "witness:duty_nurse",
+      "player_card": "suspect:nurse_aldworth",
       "scene": {
         "LOCATION": "location:nurse_station_vantage",
         "TRANSITION": "transition:crossed_to",
@@ -98,7 +110,11 @@
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.14, 0.14, 0.16]
+      "convergence_after": [
+        0.14,
+        0.14,
+        0.16
+      ]
     },
     {
       "turn": 5,
@@ -111,14 +127,18 @@
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:medication_chart",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:shaking_hands",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.18, 0.16, 0.20]
+      "convergence_after": [
+        0.18,
+        0.16,
+        0.2
+      ]
     },
     {
       "turn": 6,
@@ -131,14 +151,18 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:prescription_carbon",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.20, 0.18, 0.22]
+      "convergence_after": [
+        0.2,
+        0.18,
+        0.22
+      ]
     },
     {
       "turn": 7,
@@ -158,7 +182,11 @@
         "BEAT": "beat:orientation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.22, 0.22, 0.24]
+      "convergence_after": [
+        0.22,
+        0.22,
+        0.24
+      ]
     },
     {
       "turn": 8,
@@ -178,19 +206,23 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.26, 0.24, 0.26]
+      "convergence_after": [
+        0.26,
+        0.24,
+        0.26
+      ]
     },
     {
       "turn": 9,
       "_note": "Cross to the service elevator. Pharmacist Lin steps out with a tray.",
-      "player_card": "witness:lab_assistant",
+      "player_card": "witness:pharmacist_lin",
       "scene": {
         "LOCATION": "location:service_elevator_zone",
         "TRANSITION": "transition:crossed_to",
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_pharmacist_lin",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:notices",
         "OBJECT_FOCUS": "object:drug_ledger",
         "TELL": "emotion:rigid_composure",
         "ATMOSPHERE": "atmosphere:elevator_arrives",
@@ -198,7 +230,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.28, 0.28, 0.30]
+      "convergence_after": [
+        0.28,
+        0.28,
+        0.3
+      ]
     },
     {
       "turn": 10,
@@ -218,7 +254,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.32, 0.32, 0.34]
+      "convergence_after": [
+        0.32,
+        0.32,
+        0.34
+      ]
     },
     {
       "turn": 11,
@@ -231,14 +271,18 @@
         "PRESENCE": "presence:with_pharmacist_lin",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:drug_ledger",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:rigid_composure",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.36, 0.34, 0.36]
+      "convergence_after": [
+        0.36,
+        0.34,
+        0.36
+      ]
     },
     {
       "turn": 12,
@@ -251,14 +295,18 @@
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:defensive",
         "ACTION": "action:arrives",
-        "OBJECT_FOCUS": "object:drug_ledger",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:shaking_hands",
         "ATMOSPHERE": "atmosphere:fluorescent_flickers",
         "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.38, 0.36, 0.38]
+      "convergence_after": [
+        0.38,
+        0.36,
+        0.38
+      ]
     },
     {
       "turn": 13,
@@ -270,7 +318,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:defensive",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:drug_ledger",
         "TELL": "emotion:shaking_hands",
         "ATMOSPHERE": "atmosphere:fluorescent_flickers",
@@ -278,7 +326,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.42, 0.40, 0.42]
+      "convergence_after": [
+        0.42,
+        0.4,
+        0.42
+      ]
     },
     {
       "turn": 14,
@@ -298,7 +350,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.44, 0.42, 0.44]
+      "convergence_after": [
+        0.44,
+        0.42,
+        0.44
+      ]
     },
     {
       "turn": 15,
@@ -310,7 +366,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:defensive",
-        "ACTION": "action:auscultates",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:medication_chart",
         "TELL": "emotion:shaking_hands",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -318,7 +374,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.46, 0.44, 0.46]
+      "convergence_after": [
+        0.46,
+        0.44,
+        0.46
+      ]
     },
     {
       "turn": 16,
@@ -330,7 +390,7 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_ward_orderly",
         "STANCE": "stance:cooperative",
-        "ACTION": "action:questions",
+        "ACTION": "action:waits",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:professional_calm",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
@@ -338,7 +398,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:steady_pulse"
       },
-      "convergence_after": [0.46, 0.46, 0.46]
+      "convergence_after": [
+        0.46,
+        0.46,
+        0.46
+      ]
     },
     {
       "turn": 17,
@@ -358,7 +422,11 @@
         "BEAT": "beat:investigation",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.52, 0.50, 0.52]
+      "convergence_after": [
+        0.52,
+        0.5,
+        0.52
+      ]
     },
     {
       "turn": 18,
@@ -378,7 +446,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.52, 0.50, 0.52]
+      "convergence_after": [
+        0.52,
+        0.5,
+        0.52
+      ]
     },
     {
       "turn": 19,
@@ -398,7 +470,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.56, 0.54, 0.56]
+      "convergence_after": [
+        0.56,
+        0.54,
+        0.56
+      ]
     },
     {
       "turn": 20,
@@ -411,14 +487,18 @@
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
         "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object:medication_chart",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.58, 0.56, 0.58]
+      "convergence_after": [
+        0.58,
+        0.56,
+        0.58
+      ]
     },
     {
       "turn": 21,
@@ -438,7 +518,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.58, 0.56, 0.58]
+      "convergence_after": [
+        0.58,
+        0.56,
+        0.58
+      ]
     },
     {
       "turn": 22,
@@ -451,14 +535,18 @@
         "PRESENCE": "presence:with_callum_dray",
         "STANCE": "stance:defensive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:medication_chart",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:clipped_answers",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.58, 0.56, 0.58]
+      "convergence_after": [
+        0.58,
+        0.56,
+        0.58
+      ]
     },
     {
       "turn": 23,
@@ -478,7 +566,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.58, 0.56, 0.58]
+      "convergence_after": [
+        0.58,
+        0.56,
+        0.58
+      ]
     },
     {
       "turn": 24,
@@ -490,7 +582,7 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:alone",
         "STANCE": "stance:none",
-        "ACTION": "action:leaves",
+        "ACTION": "action:arrives",
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:corridor_dims",
@@ -498,7 +590,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.58, 0.56, 0.58]
+      "convergence_after": [
+        0.58,
+        0.56,
+        0.58
+      ]
     },
     {
       "turn": 25,
@@ -511,14 +607,18 @@
         "PRESENCE": "presence:with_night_porter",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:fluorescent_steady",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.60, 0.58, 0.60]
+      "convergence_after": [
+        0.6,
+        0.58,
+        0.6
+      ]
     },
     {
       "turn": 26,
@@ -532,13 +632,17 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:visitor_log",
-        "TELL": "emotion:professional_calm",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:pulse_irregular"
       },
-      "convergence_after": [0.62, 0.60, 0.62]
+      "convergence_after": [
+        0.62,
+        0.6,
+        0.62
+      ]
     },
     {
       "turn": 27,
@@ -558,7 +662,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:none"
       },
-      "convergence_after": [0.64, 0.62, 0.64]
+      "convergence_after": [
+        0.64,
+        0.62,
+        0.64
+      ]
     },
     {
       "turn": 28,
@@ -578,7 +686,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.66, 0.64, 0.66]
+      "convergence_after": [
+        0.66,
+        0.64,
+        0.66
+      ]
     },
     {
       "turn": 29,
@@ -591,14 +703,18 @@
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:evasive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:medication_chart",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:glanced_aside",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.70, 0.68, 0.70]
+      "convergence_after": [
+        0.7,
+        0.68,
+        0.7
+      ]
     },
     {
       "turn": 30,
@@ -618,7 +734,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.72, 0.70, 0.72]
+      "convergence_after": [
+        0.72,
+        0.7,
+        0.72
+      ]
     },
     {
       "turn": 31,
@@ -638,7 +758,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.74, 0.72, 0.74]
+      "convergence_after": [
+        0.74,
+        0.72,
+        0.74
+      ]
     },
     {
       "turn": 32,
@@ -658,7 +782,11 @@
         "BEAT": "beat:closing_in",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.78, 0.76, 0.78]
+      "convergence_after": [
+        0.78,
+        0.76,
+        0.78
+      ]
     },
     {
       "turn": 33,
@@ -678,7 +806,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.78, 0.76, 0.78]
+      "convergence_after": [
+        0.78,
+        0.76,
+        0.78
+      ]
     },
     {
       "turn": 34,
@@ -698,7 +830,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:hand_tremor"
       },
-      "convergence_after": [0.78, 0.76, 0.78]
+      "convergence_after": [
+        0.78,
+        0.76,
+        0.78
+      ]
     },
     {
       "turn": 35,
@@ -711,14 +847,18 @@
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:drug_ledger",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pallor_visible"
       },
-      "convergence_after": [0.78, 0.78, 0.78]
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.78
+      ]
     },
     {
       "turn": 36,
@@ -738,7 +878,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pallor_visible"
       },
-      "convergence_after": [0.80, 0.78, 0.80]
+      "convergence_after": [
+        0.8,
+        0.78,
+        0.8
+      ]
     },
     {
       "turn": 37,
@@ -758,7 +902,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pallor_visible"
       },
-      "convergence_after": [0.80, 0.78, 0.80]
+      "convergence_after": [
+        0.8,
+        0.78,
+        0.8
+      ]
     },
     {
       "turn": 38,
@@ -778,7 +926,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pallor_visible"
       },
-      "convergence_after": [0.80, 0.78, 0.80]
+      "convergence_after": [
+        0.8,
+        0.78,
+        0.8
+      ]
     },
     {
       "turn": 39,
@@ -791,14 +943,18 @@
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:hostile",
         "ACTION": "action:recalls",
-        "OBJECT_FOCUS": "object:syringe_tray",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pallor_visible"
       },
-      "convergence_after": [0.80, 0.78, 0.80]
+      "convergence_after": [
+        0.8,
+        0.78,
+        0.8
+      ]
     },
     {
       "turn": 40,
@@ -818,7 +974,11 @@
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pallor_visible"
       },
-      "convergence_after": [0.80, 0.78, 0.80]
+      "convergence_after": [
+        0.8,
+        0.78,
+        0.8
+      ]
     },
     {
       "turn": 41,
@@ -831,20 +991,28 @@
         "PRESENCE": "presence:with_nurse_aldworth",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:medication_chart",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
         "MEDICAL_TELL": "medical_tell:pallor_visible"
       },
-      "convergence_after": [0.80, 0.78, 0.80]
+      "convergence_after": [
+        0.8,
+        0.78,
+        0.8
+      ]
     }
   ],
   "ending": {
     "type": "wrong_accusation",
     "accused": "suspect:nurse_aldworth",
-    "final_convergence": [0.80, 0.78, 0.80],
+    "final_convergence": [
+      0.8,
+      0.78,
+      0.8
+    ],
     "_note": "Player accuses Aldworth on her trembling, the vial-count short under her round, and the loop of her countersignature. They missed the chart was amended in Dray's blue-black ink, dismissed his leaked pen as cosmetic, never connected the prior complaint hearing to him."
   }
 }

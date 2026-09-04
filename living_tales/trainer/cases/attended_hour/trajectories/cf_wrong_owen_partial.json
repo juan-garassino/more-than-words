@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_owen_partial",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 19 of wrong_owen_stroud_via_insurance, Dray reads defensive instead of cooperative — the dead end never registers. The detective stays in the office and presses; Dray's chain emerges, but the asserted motive remains insurance_claim — wrong on motive. Partial correct.",
+  "outcome": "partial_correct",
+  "branch_of": "wrong_owen_stroud_via_insurance",
+  "branch_turn": 19,
+  "divergence_token": "STANCE=stance:defensive",
+  "tags": ["counterfactual", "stance_divergence", "partial_correct"],
+  "_authoring_note": "6-turn CF — returning to Dray's office instead of family room pulls the chain to Dray; misread motive sticks.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:reception_threshold",
+      "location:family_waiting_room",
+      "location:cardiac_ward_crime_space",
+      "location:doctor_office",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {"convergence_dims": [0.48, 0.48, 0.46]},
+  "turns": [
+    {
+      "turn": 19,
+      "_note": "Divergence: Dray reads defensive — the detective stays and presses.",
+      "player_card": "suspect:callum_dray",
+      "scene": {
+        "LOCATION": "location:doctor_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:fluorescent_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.5, 0.5, 0.49]
+    },
+    {
+      "turn": 20,
+      "_note": "Clinical notes — twice-underlined pattern.",
+      "player_card": "object:clinical_notes",
+      "scene": {
+        "LOCATION": "location:doctor_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:clinical_notes",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.58, 0.58, 0.57]
+    },
+    {
+      "turn": 21,
+      "_note": "Chart amendment.",
+      "player_card": "modifier:chart_amended",
+      "scene": {
+        "LOCATION": "location:doctor_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.66, 0.66, 0.65]
+    },
+    {
+      "turn": 22,
+      "_note": "Insurance motive — misread sticks.",
+      "player_card": "motive:insurance_claim",
+      "scene": {
+        "LOCATION": "location:doctor_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:complaint_filing",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.72, 0.72, 0.7],
+      "forbidden_dims": ["motive:malpractice_cover"]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to rear corridor.",
+      "player_card": "travel:to_rear_clinical_corridor",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pallor_visible"
+      },
+      "convergence_after": [0.78, 0.78, 0.77]
+    },
+    {
+      "turn": 24,
+      "_note": "Accusation. Right person; wrong motive.",
+      "player_card": "ACCUSE:suspect:callum_dray",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_callum_dray",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:insurance_form",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pallor_visible"
+      },
+      "convergence_after": [0.82, 0.82, 0.81]
+    }
+  ],
+  "ending": {
+    "type": "partial_correct",
+    "accused": "suspect:callum_dray",
+    "asserted_motive": "motive:insurance_claim",
+    "actual_motive": "motive:malpractice_cover",
+    "final_convergence": [0.82, 0.82, 0.81],
+    "_note": "Right person, wrong motive (insurance_claim asserted; malpractice_cover was the real driver)."
+  }
+}

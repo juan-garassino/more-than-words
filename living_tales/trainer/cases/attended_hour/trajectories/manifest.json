@@ -490,6 +490,186 @@
         "institutional_first",
         "barely_correct"
       ]
+    },
+    {
+      "id": "dray_via_pharmacy_visitor_log",
+      "outcome": "correct_callum_dray",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "pharmacy_visitor_log_chain",
+        "after_hours_signin",
+        "service_elevator_anchored",
+        "back_and_forth"
+      ]
+    },
+    {
+      "id": "partial_correct_via_misread_motive_d",
+      "outcome": "partial_correct",
+      "length": 41,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "partial_correct",
+        "right_suspect_wrong_motive",
+        "negligence_testimony_misread"
+      ]
+    },
+    {
+      "id": "framed_owen_stroud",
+      "outcome": "framed_suspect",
+      "length": 41,
+      "starting_hypothesis": "motive_first",
+      "tags": [
+        "framed_suspect",
+        "owen_stroud_framed",
+        "insurance_motive_overweighted",
+        "dray_walks",
+        "wrong_accusation"
+      ]
+    },
+    {
+      "id": "accomplice_via_records_clerk",
+      "outcome": "accomplice_found",
+      "length": 41,
+      "starting_hypothesis": "records_first",
+      "tags": [
+        "accomplice_found",
+        "records_clerk_accused",
+        "filing_date_chain",
+        "dray_walks",
+        "wrong_accusation"
+      ]
+    },
+    {
+      "id": "motive_only_via_inheritance_threat",
+      "outcome": "motive_only_confession",
+      "length": 39,
+      "starting_hypothesis": "motive_first",
+      "tags": [
+        "motive_only_confession",
+        "no_accusation",
+        "inheritance_threat",
+        "family_grudge_misread_as_systemic"
+      ]
+    },
+    {
+      "id": "late_revelation_after_owen_stroud",
+      "outcome": "late_revelation",
+      "length": 43,
+      "starting_hypothesis": "motive_first",
+      "tags": [
+        "late_revelation",
+        "owen_stroud_near_accuse",
+        "correct_dray",
+        "flip"
+      ]
+    },
+    {
+      "id": "near_miss_recovers_from_owen",
+      "outcome": "near_miss",
+      "length": 42,
+      "starting_hypothesis": "motive_first",
+      "tags": [
+        "near_miss",
+        "owen_first",
+        "barely_correct"
+      ]
+    },
+    {
+      "id": "wrong_records_clerk_via_late_signin",
+      "outcome": "wrong_records_clerk",
+      "length": 41,
+      "starting_hypothesis": "records_first",
+      "tags": [
+        "late_signin_chain",
+        "records_clerk_misread",
+        "administrative_paper_misread",
+        "dray_dismissed",
+        "wrong_accusation"
+      ]
+    },
+    {
+      "id": "wrong_solicitor_pike_via_estate_motive",
+      "outcome": "wrong_solicitor_pike",
+      "length": 41,
+      "starting_hypothesis": "legal_angle_first",
+      "tags": [
+        "estate_motive_chain",
+        "pike_misread",
+        "two_visits_sunday",
+        "dray_dismissed",
+        "wrong_accusation"
+      ]
+    },
+    {
+      "id": "cf_dray_via_clinical_notes_motive_only",
+      "outcome": "motive_only_confession",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "medical_tell_divergence", "motive_only_confession"]
+    },
+    {
+      "id": "cf_dray_via_drug_ledger_to_lin",
+      "outcome": "wrong_pharmacist_lin",
+      "length": 7,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "object_focus_divergence", "wrong_pharmacist_lin"]
+    },
+    {
+      "id": "cf_dray_via_medication_chart_accomplice",
+      "outcome": "accomplice_found",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "presence_divergence", "accomplice_found"]
+    },
+    {
+      "id": "cf_accomplice_via_lin_cold",
+      "outcome": "cold_trail",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "stance_divergence", "cold_trail"]
+    },
+    {
+      "id": "cf_framed_aldworth_recovers",
+      "outcome": "correct_callum_dray",
+      "length": 7,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "cause_divergence", "correct_callum_dray", "frame_broken"]
+    },
+    {
+      "id": "cf_late_revelation_after_lin_near",
+      "outcome": "near_miss",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "beat_divergence", "near_miss"]
+    },
+    {
+      "id": "cf_near_miss_aldworth_to_correct",
+      "outcome": "correct_callum_dray",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "revelation_divergence", "correct_callum_dray"]
+    },
+    {
+      "id": "cf_partial_dray_to_misread",
+      "outcome": "partial_correct",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "medical_tell_divergence", "partial_correct"]
+    },
+    {
+      "id": "cf_red_herring_owen_to_framed",
+      "outcome": "framed_suspect",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "action_divergence", "framed_suspect", "owen_framed"]
+    },
+    {
+      "id": "cf_wrong_owen_partial",
+      "outcome": "partial_correct",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "transition_divergence", "partial_correct"]
     }
   ]
 }

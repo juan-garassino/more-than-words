@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_dray_via_clinical_notes_motive_only",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 20 of dray_via_clinical_notes, the detective reads Owen Stroud as steady (no pulse irregularity). Without that medical tell, the chain through the chart amendment never gets pushed. Motive surfaces; no accusation.",
+  "outcome": "motive_only_confession",
+  "branch_of": "dray_via_clinical_notes",
+  "branch_turn": 20,
+  "divergence_token": "MEDICAL_TELL=medical_tell:none",
+  "tags": [
+    "counterfactual",
+    "medical_tell_divergence",
+    "motive_only_confession"
+  ],
+  "_authoring_note": "5-turn counterfactual. Without the pulse-irregular tell on Owen, detective lets the chain go cold.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:cardiac_ward_crime_space",
+      "location:doctor_office",
+      "location:nurse_station_vantage",
+      "location:medication_charting_area",
+      "location:service_elevator_zone",
+      "location:family_waiting_room",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {"convergence_dims": [0.48, 0.48, 0.46]},
+  "turns": [
+    {
+      "turn": 20,
+      "_note": "Divergence: Owen's pulse reads steady at twenty, not irregular.",
+      "player_card": "suspect:owen_stroud",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:insurance_form",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.5, 0.5, 0.48]
+    },
+    {
+      "turn": 21,
+      "_note": "Insurance form. Detective drops the medical thread.",
+      "player_card": "object:insurance_form",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:insurance_form",
+        "TELL": "emotion:rehearsed_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.55, 0.55, 0.53]
+    },
+    {
+      "turn": 22,
+      "_note": "Cross to rear corridor. The chain feels thin without the medical seam.",
+      "player_card": "travel:to_rear_clinical_corridor",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.6, 0.6, 0.58]
+    },
+    {
+      "turn": 23,
+      "_note": "Recall malpractice cover. Motive surfaces — but no person to name.",
+      "player_card": "motive:malpractice_cover",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:complaint_filing",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.68, 0.68, 0.65]
+    },
+    {
+      "turn": 24,
+      "_note": "Chart in hand. Detective walks out without a name.",
+      "player_card": "object:medication_chart",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.7, 0.7, 0.68]
+    }
+  ],
+  "ending": {
+    "type": "motive_only_confession",
+    "accused": null,
+    "true_culprit": "suspect:callum_dray",
+    "asserted_motive": "motive:malpractice_cover",
+    "final_convergence": [0.7, 0.7, 0.68],
+    "_note": "Without the pulse-irregular reading at turn 20, the medical seam never closes; motive emerges but no name."
+  }
+}
