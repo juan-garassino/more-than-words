@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_stationmaster_to_clerk",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of wrong_stationmaster_via_defensive. At turn 22 it is the railway clerk, not the stationmaster, at the office desk — a PRESENCE divergence. The smudged corrections are in the clerk's hand, the cash tin runs short, and the ink blotter carries his reversed strokes. The theory drops a rank: the fixer, not the chief. She accuses the clerk — wrongly. The shortfall was petty skimming, corrected in a panic; not a killing.",
+  "outcome": "wrong_railway_clerk",
+  "branch_of": "wrong_stationmaster_via_defensive",
+  "branch_turn": 22,
+  "divergence_token": "PRESENCE=presence:with_railway_clerk",
+  "starting_hypothesis": "office_first",
+  "tags": [
+    "counterfactual_branch",
+    "presence_divergence",
+    "wrong_accusation",
+    "railway_clerk",
+    "cash_tin_shortfall",
+    "smudged_hand"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:signal_box",
+      "location:goods_shed",
+      "location:waiting_room",
+      "location:station_office",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.52, 0.52, 0.52]
+  },
+  "turns": [
+    {"turn": 22, "_note": "DIVERGENCE: the clerk is at the desk when she returns — the corrections in the ledger are in his hand, not the stationmaster's.", "player_card": "object:ledger_book", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_railway_clerk", "STANCE": "stance:defensive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:ledger_book", "TELL": "emotion:closed_posture", "ATMOSPHERE": "atmosphere:lamp_steady", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.55, 0.55, 0.55]},
+    {"turn": 23, "_note": "The smudged column — every correction is the clerk's stroke.", "player_card": "modifier:smudged", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_railway_clerk", "STANCE": "stance:defensive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:ledger_book", "TELL": "emotion:paused_reply", "ATMOSPHERE": "atmosphere:lamp_steady", "REVELATION": "revelation:name_uncovered", "BEAT": "beat:closing_in"}, "convergence_after": [0.59, 0.59, 0.59]},
+    {"turn": 24, "_note": "The cash tin comes up short against the corrected totals.", "player_card": "object:cash_tin", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_railway_clerk", "STANCE": "stance:evasive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:cash_tin", "TELL": "emotion:avoided_contact", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.63, 0.63, 0.63]},
+    {"turn": 25, "_note": "Ledger exposure as motive — Verne would have read the columns in the morning.", "player_card": "motive:ledger_exposure", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_railway_clerk", "STANCE": "stance:evasive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:ledger_book", "TELL": "emotion:paused_reply", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.67, 0.67, 0.67]},
+    {"turn": 26, "_note": "The blotter's reversed strokes match the corrections — his denial no longer holds.", "player_card": "object:ink_blotter", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_railway_clerk", "STANCE": "stance:hostile", "ACTION": "action:examines", "OBJECT_FOCUS": "object:ink_blotter", "TELL": "emotion:closed_posture", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "BEAT": "beat:closing_in"}, "convergence_after": [0.75, 0.75, 0.75]},
+    {"turn": 27, "_note": "The smudge pressed once more against the tin.", "player_card": "modifier:smudged", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_railway_clerk", "STANCE": "stance:hostile", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:cash_tin", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 28, "_note": "Accusation. The railway clerk — wrongly.", "player_card": "ACCUSE:suspect:railway_clerk", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_railway_clerk", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.76, 0.76, 0.76]}
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:railway_clerk",
+    "final_convergence": [0.76, 0.76, 0.76],
+    "_note": "The clerk had skimmed the tin and corrected the columns in a panic — petty theft, hidden badly. The hand that closed the ledger never left the office that night."
+  }
+}

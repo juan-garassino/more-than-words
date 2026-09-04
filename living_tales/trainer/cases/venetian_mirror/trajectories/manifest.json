@@ -297,175 +297,299 @@
       "outcome": "partial_correct",
       "length": 45,
       "starting_hypothesis": "object_first_railing",
-      "tags": ["partial_correct","morvaine","motive_misread","insurance_fraud_misread"]
+      "tags": [
+        "partial_correct",
+        "morvaine",
+        "motive_misread",
+        "insurance_fraud_misread"
+      ]
     },
     {
       "id": "partial_correct_via_misread_motive_b",
       "outcome": "partial_correct",
       "length": 44,
       "starting_hypothesis": "art_first_collection",
-      "tags": ["partial_correct","morvaine","motive_misread","collection_value_misread"]
+      "tags": [
+        "partial_correct",
+        "morvaine",
+        "motive_misread",
+        "collection_value_misread"
+      ]
     },
     {
       "id": "partial_correct_via_misread_motive_c",
       "outcome": "partial_correct",
       "length": 44,
       "starting_hypothesis": "witness_first_maid",
-      "tags": ["partial_correct","morvaine","motive_misread","rival_claim_misread"]
+      "tags": [
+        "partial_correct",
+        "morvaine",
+        "motive_misread",
+        "rival_claim_misread"
+      ]
     },
     {
       "id": "accomplice_via_pelosi",
       "outcome": "accomplice_found",
       "length": 45,
       "starting_hypothesis": "witness_first_keys",
-      "tags": ["accomplice_found","signora_pelosi","keys_chain","servants_stair_heavy"]
+      "tags": [
+        "accomplice_found",
+        "signora_pelosi",
+        "keys_chain",
+        "servants_stair_heavy"
+      ]
     },
     {
       "id": "accomplice_via_bassi",
       "outcome": "accomplice_found",
       "length": 43,
       "starting_hypothesis": "witness_first_gondolier",
-      "tags": ["accomplice_found","carlo_bassi","courier_chain","canal_entrance_heavy"]
+      "tags": [
+        "accomplice_found",
+        "carlo_bassi",
+        "courier_chain",
+        "canal_entrance_heavy"
+      ]
     },
     {
       "id": "framed_dr_klaus_winter",
       "outcome": "framed_suspect",
       "length": 43,
       "starting_hypothesis": "art_first_winter_frame",
-      "tags": ["framed_suspect","dr_klaus_winter","frame_dismantled","no_accusation"]
+      "tags": [
+        "framed_suspect",
+        "dr_klaus_winter",
+        "frame_dismantled",
+        "no_accusation"
+      ]
     },
     {
       "id": "framed_elena_rizzoli",
       "outcome": "framed_suspect",
       "length": 39,
       "starting_hypothesis": "object_first_catalogue_frame",
-      "tags": ["framed_suspect","elena_rizzoli","catalogue_amendments_planted","no_accusation"]
+      "tags": [
+        "framed_suspect",
+        "elena_rizzoli",
+        "catalogue_amendments_planted",
+        "no_accusation"
+      ]
     },
     {
       "id": "motive_only_via_provenance_gap",
       "outcome": "motive_only_confession",
       "length": 42,
       "starting_hypothesis": "object_first_provenance",
-      "tags": ["motive_only_confession","forgery_operation","provenance_chain","no_suspect"]
+      "tags": [
+        "motive_only_confession",
+        "forgery_operation",
+        "provenance_chain",
+        "no_suspect"
+      ]
     },
     {
       "id": "motive_only_via_zurich_dealer",
       "outcome": "motive_only_confession",
       "length": 41,
       "starting_hypothesis": "witness_first_dealer",
-      "tags": ["motive_only_confession","forgery_operation","zurich_chain","no_suspect"]
+      "tags": [
+        "motive_only_confession",
+        "forgery_operation",
+        "zurich_chain",
+        "no_suspect"
+      ]
     },
     {
       "id": "late_revelation_after_winter",
       "outcome": "late_revelation",
       "length": 46,
       "starting_hypothesis": "art_first_winter_then_pivot",
-      "tags": ["late_revelation","late_pivot","winter_exonerated","morvaine_late"]
+      "tags": [
+        "late_revelation",
+        "late_pivot",
+        "winter_exonerated",
+        "morvaine_late"
+      ]
     },
     {
       "id": "late_revelation_after_pelosi",
       "outcome": "late_revelation",
       "length": 45,
       "starting_hypothesis": "witness_first_pelosi_silence",
-      "tags": ["late_revelation","late_pivot","pelosi_breaks_silence","morvaine_late"]
+      "tags": [
+        "late_revelation",
+        "late_pivot",
+        "pelosi_breaks_silence",
+        "morvaine_late"
+      ]
     },
     {
       "id": "near_miss_recovers_from_winter",
       "outcome": "near_miss",
       "length": 42,
       "starting_hypothesis": "art_first_winter_then_recover",
-      "tags": ["near_miss","winter_near_miss","recovery","morvaine_correct"]
+      "tags": [
+        "near_miss",
+        "winter_near_miss",
+        "recovery",
+        "morvaine_correct"
+      ]
     },
     {
       "id": "near_miss_recovers_from_bassi",
       "outcome": "near_miss",
       "length": 40,
       "starting_hypothesis": "object_first_glove_then_recover",
-      "tags": ["near_miss","bassi_near_miss","recovery","morvaine_correct"]
+      "tags": [
+        "near_miss",
+        "bassi_near_miss",
+        "recovery",
+        "morvaine_correct"
+      ]
     },
     {
       "id": "near_miss_recovers_from_carnival_mask",
       "outcome": "near_miss",
       "length": 40,
       "starting_hypothesis": "modifier_first_mask_then_recover",
-      "tags": ["near_miss","carnival_mask_near_miss","red_herring_recovered","morvaine_correct"]
+      "tags": [
+        "near_miss",
+        "carnival_mask_near_miss",
+        "red_herring_recovered",
+        "morvaine_correct"
+      ]
     },
     {
       "id": "partial_correct_via_misread_motive_d",
       "outcome": "partial_correct",
       "length": 41,
       "starting_hypothesis": "witness_first_bruno_then_misread",
-      "tags": ["partial_correct","morvaine","motive_misread","reputation_ruin_misread"]
+      "tags": [
+        "partial_correct",
+        "morvaine",
+        "motive_misread",
+        "reputation_ruin_misread"
+      ]
     },
     {
       "id": "framed_inspector_bruno",
       "outcome": "framed_suspect",
       "length": 39,
       "starting_hypothesis": "witness_first_bruno_then_unmask_frame",
-      "tags": ["framed_suspect","inspector_bruno","frame_dismantled","no_accusation"]
+      "tags": [
+        "framed_suspect",
+        "inspector_bruno",
+        "frame_dismantled",
+        "no_accusation"
+      ]
     },
     {
       "id": "accomplice_via_dealer_zurich",
       "outcome": "accomplice_found",
       "length": 41,
       "starting_hypothesis": "witness_first_dealer_paper_trail",
-      "tags": ["accomplice_found","art_dealer","zurich_chain","auction_consignment"]
+      "tags": [
+        "accomplice_found",
+        "art_dealer",
+        "zurich_chain",
+        "auction_consignment"
+      ]
     },
     {
       "id": "motive_only_via_carnival_alibi",
       "outcome": "motive_only_confession",
       "length": 39,
       "starting_hypothesis": "witness_first_gondolier_alibi_mesh",
-      "tags": ["motive_only_confession","forgery_operation","carnival_alibi","no_suspect"]
+      "tags": [
+        "motive_only_confession",
+        "forgery_operation",
+        "carnival_alibi",
+        "no_suspect"
+      ]
     },
     {
       "id": "late_revelation_after_bassi",
       "outcome": "late_revelation",
       "length": 40,
       "starting_hypothesis": "object_first_mask_then_pivot",
-      "tags": ["late_revelation","late_pivot","bassi_exonerated","morvaine_late"]
+      "tags": [
+        "late_revelation",
+        "late_pivot",
+        "bassi_exonerated",
+        "morvaine_late"
+      ]
     },
     {
       "id": "near_miss_recovers_from_pelosi",
       "outcome": "near_miss",
       "length": 39,
       "starting_hypothesis": "witness_first_pelosi_then_recover",
-      "tags": ["near_miss","pelosi_near_miss","recovery","morvaine_correct"]
+      "tags": [
+        "near_miss",
+        "pelosi_near_miss",
+        "recovery",
+        "morvaine_correct"
+      ]
     },
     {
       "id": "red_herring_trap_provenance_forgery",
       "outcome": "red_herring_trap",
       "length": 40,
       "starting_hypothesis": "object_first_provenance_forgery_trap",
-      "tags": ["red_herring_trap","provenance_forgery_trap","winter_misdirection","theatrical_evidence"]
+      "tags": [
+        "red_herring_trap",
+        "provenance_forgery_trap",
+        "winter_misdirection",
+        "theatrical_evidence"
+      ]
     },
     {
       "id": "wrong_marco_dandolo_via_studio_visit",
       "outcome": "wrong_marco_dandolo",
       "length": 40,
       "starting_hypothesis": "witness_first_dandolo_studio_visit",
-      "tags": ["wrong_accusation","marco_dandolo","studio_visit_misread","courtyard_anchored"]
+      "tags": [
+        "wrong_accusation",
+        "marco_dandolo",
+        "studio_visit_misread",
+        "courtyard_anchored"
+      ]
     },
     {
       "id": "wrong_dr_klaus_winter_via_appraisal_pressure",
       "outcome": "wrong_dr_klaus_winter",
       "length": 40,
       "starting_hypothesis": "art_first_winter_appraisal_pressure",
-      "tags": ["wrong_accusation","dr_klaus_winter","appraisal_pressure_misread","conservator_misdirection"]
+      "tags": [
+        "wrong_accusation",
+        "dr_klaus_winter",
+        "appraisal_pressure_misread",
+        "conservator_misdirection"
+      ]
     },
     {
       "id": "wrong_carlo_bassi_via_balcony_alibi",
       "outcome": "wrong_carlo_bassi",
       "length": 40,
       "starting_hypothesis": "witness_first_bassi_balcony_alibi",
-      "tags": ["wrong_accusation","carlo_bassi","balcony_alibi_misread","courier_misread"]
+      "tags": [
+        "wrong_accusation",
+        "carlo_bassi",
+        "balcony_alibi_misread",
+        "courier_misread"
+      ]
     },
     {
       "id": "cf_morvaine_via_forged_canvas_motive_only",
       "outcome": "motive_only_confession",
       "length": 7,
       "starting_hypothesis": "branched_from_forged_canvas_clean_binder",
-      "tags": ["counterfactual_branch","motive_only_confession","morvaine_via_forged_canvas"],
+      "tags": [
+        "counterfactual_branch",
+        "motive_only_confession",
+        "morvaine_via_forged_canvas"
+      ],
       "branch_of": "morvaine_via_forged_canvas",
       "branch_turn": 17,
       "divergence_token": "ART_TELL=art_tell:none"
@@ -475,7 +599,11 @@
       "outcome": "wrong_signora_pelosi",
       "length": 7,
       "starting_hypothesis": "branched_from_pelosi_keys_object_focus",
-      "tags": ["counterfactual_branch","wrong_signora_pelosi","morvaine_via_pelosi_keys"],
+      "tags": [
+        "counterfactual_branch",
+        "wrong_signora_pelosi",
+        "morvaine_via_pelosi_keys"
+      ],
       "branch_of": "morvaine_via_pelosi_keys",
       "branch_turn": 19,
       "divergence_token": "OBJECT_FOCUS=object:canal_key"
@@ -485,7 +613,12 @@
       "outcome": "accomplice_found",
       "length": 7,
       "starting_hypothesis": "branched_from_torn_glove_presence",
-      "tags": ["counterfactual_branch","accomplice_found","morvaine_via_torn_glove","marco_dandolo_accomplice"],
+      "tags": [
+        "counterfactual_branch",
+        "accomplice_found",
+        "morvaine_via_torn_glove",
+        "marco_dandolo_accomplice"
+      ],
       "branch_of": "morvaine_via_torn_glove",
       "branch_turn": 23,
       "divergence_token": "PRESENCE=presence:with_marco_dandolo"
@@ -495,7 +628,12 @@
       "outcome": "cold_trail",
       "length": 7,
       "starting_hypothesis": "branched_from_accomplice_via_bassi_stance",
-      "tags": ["counterfactual_branch","cold_trail","accomplice_via_bassi","bassi_evasive"],
+      "tags": [
+        "counterfactual_branch",
+        "cold_trail",
+        "accomplice_via_bassi",
+        "bassi_evasive"
+      ],
       "branch_of": "accomplice_via_bassi",
       "branch_turn": 20,
       "divergence_token": "STANCE=stance:evasive"
@@ -505,7 +643,12 @@
       "outcome": "correct_countess_morvaine",
       "length": 7,
       "starting_hypothesis": "branched_from_framed_rizzoli_cause",
-      "tags": ["counterfactual_branch","correct_countess_morvaine","framed_elena_rizzoli","recovered"],
+      "tags": [
+        "counterfactual_branch",
+        "correct_countess_morvaine",
+        "framed_elena_rizzoli",
+        "recovered"
+      ],
       "branch_of": "framed_elena_rizzoli",
       "branch_turn": 22,
       "divergence_token": "CAUSE=cause:recognized_object"
@@ -515,7 +658,12 @@
       "outcome": "near_miss",
       "length": 7,
       "starting_hypothesis": "branched_from_late_winter_beat",
-      "tags": ["counterfactual_branch","near_miss","late_revelation_after_winter","early_pivot"],
+      "tags": [
+        "counterfactual_branch",
+        "near_miss",
+        "late_revelation_after_winter",
+        "early_pivot"
+      ],
       "branch_of": "late_revelation_after_winter",
       "branch_turn": 25,
       "divergence_token": "BEAT=beat:closing_in"
@@ -525,7 +673,12 @@
       "outcome": "correct_countess_morvaine",
       "length": 7,
       "starting_hypothesis": "branched_from_carnival_mask_revelation",
-      "tags": ["counterfactual_branch","correct_countess_morvaine","near_miss_recovers_from_carnival_mask","earlier_recovery"],
+      "tags": [
+        "counterfactual_branch",
+        "correct_countess_morvaine",
+        "near_miss_recovers_from_carnival_mask",
+        "earlier_recovery"
+      ],
       "branch_of": "near_miss_recovers_from_carnival_mask",
       "branch_turn": 14,
       "divergence_token": "REVELATION=revelation:name_uncovered"
@@ -535,7 +688,12 @@
       "outcome": "correct_countess_morvaine",
       "length": 7,
       "starting_hypothesis": "branched_from_partial_a_art_tell",
-      "tags": ["counterfactual_branch","correct_countess_morvaine","partial_correct_via_misread_motive_a","correct_motive"],
+      "tags": [
+        "counterfactual_branch",
+        "correct_countess_morvaine",
+        "partial_correct_via_misread_motive_a",
+        "correct_motive"
+      ],
       "branch_of": "partial_correct_via_misread_motive_a",
       "branch_turn": 20,
       "divergence_token": "ART_TELL=art_tell:provenance_gap"
@@ -545,7 +703,12 @@
       "outcome": "framed_suspect",
       "length": 7,
       "starting_hypothesis": "branched_from_carnival_mask_action",
-      "tags": ["counterfactual_branch","framed_suspect","red_herring_trap_carnival_mask","bassi_framed"],
+      "tags": [
+        "counterfactual_branch",
+        "framed_suspect",
+        "red_herring_trap_carnival_mask",
+        "bassi_framed"
+      ],
       "branch_of": "red_herring_trap_carnival_mask",
       "branch_turn": 14,
       "divergence_token": "ACTION=action:authenticates"
@@ -555,10 +718,45 @@
       "outcome": "partial_correct",
       "length": 7,
       "starting_hypothesis": "branched_from_wrong_pelosi_transition",
-      "tags": ["counterfactual_branch","partial_correct","wrong_signora_pelosi_via_keys","motive_misread"],
+      "tags": [
+        "counterfactual_branch",
+        "partial_correct",
+        "wrong_signora_pelosi_via_keys",
+        "motive_misread"
+      ],
       "branch_of": "wrong_signora_pelosi_via_keys",
       "branch_turn": 16,
       "divergence_token": "TRANSITION=transition:pursued_to"
+    },
+    {
+      "id": "cf_framed_rizzoli_believed",
+      "outcome": "wrong_elena_rizzoli",
+      "length": 7,
+      "starting_hypothesis": "branched_from_framed_rizzoli_revelation",
+      "tags": [
+        "counterfactual_branch",
+        "wrong_elena_rizzoli",
+        "framed_elena_rizzoli",
+        "planted_notes_believed"
+      ],
+      "branch_of": "framed_elena_rizzoli",
+      "branch_turn": 16,
+      "divergence_token": "REVELATION=revelation:contradiction_surfaces"
+    },
+    {
+      "id": "cf_framed_bruno_believed",
+      "outcome": "wrong_inspector_bruno",
+      "length": 7,
+      "starting_hypothesis": "branched_from_framed_bruno_revelation",
+      "tags": [
+        "counterfactual_branch",
+        "wrong_inspector_bruno",
+        "framed_inspector_bruno",
+        "planted_envelope_believed"
+      ],
+      "branch_of": "framed_inspector_bruno",
+      "branch_turn": 22,
+      "divergence_token": "REVELATION=revelation:name_uncovered"
     }
   ]
 }

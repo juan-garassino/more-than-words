@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_aldworth_via_countersign",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 25 of dray_via_medication_chart, the detective reads the chart amendment as Aldworth's own work — her countersignature sits beside the altered dose, so she must have altered it. The prior-complaint hearing becomes her motive. Aldworth accused. Different misread from the trembling chain: authorship of the amendment, not the tremor.",
+  "outcome": "wrong_aldworth",
+  "branch_of": "dray_via_medication_chart",
+  "branch_turn": 25,
+  "divergence_token": "REVELATION=revelation:partial_match",
+  "tags": [
+    "counterfactual",
+    "revelation_divergence",
+    "wrong_aldworth",
+    "countersignature_authorship_misread",
+    "dray_dismissed",
+    "wrong_accusation"
+  ],
+  "_authoring_note": "7-turn CF — the amendment is Dray's hand, but her countersignature beside it reads as ownership. Aldworth arc: defensive -> evasive -> hostile. Never touches the vial count or the tremor chain of the existing singleton.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:medication_charting_area",
+      "location:cardiac_ward_crime_space",
+      "location:staff_break_or_overnight_desk_area",
+      "location:service_elevator_zone",
+      "location:doctor_office",
+      "location:family_waiting_room",
+      "location:nurse_station_vantage",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.6, 0.6, 0.58]
+  },
+  "turns": [
+    {
+      "turn": 25,
+      "_note": "Divergence: the amendment reads as hers, not Dray's — her countersignature sits beside the altered dose.",
+      "player_card": "modifier:chart_amended",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:shaking_hands",
+        "ATMOSPHERE": "atmosphere:fluorescent_flickers",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [0.63, 0.62, 0.6]
+    },
+    {
+      "turn": 26,
+      "_note": "The ledger draws against her round — the detective reads the withdrawals as hers.",
+      "player_card": "object:drug_ledger",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:drug_ledger",
+        "TELL": "tell:glanced_aside",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.66, 0.64, 0.62]
+    },
+    {
+      "turn": 27,
+      "_note": "Pressed on the countersignature, Aldworth goes evasive.",
+      "player_card": "suspect:nurse_aldworth",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:fluorescent_flickers",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [0.68, 0.66, 0.65]
+    },
+    {
+      "turn": 28,
+      "_note": "The prior complaint hearing named her round. Motive misread: she feared the hearing.",
+      "player_card": "motive:prior_complaint",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:glanced_aside",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.72, 0.7, 0.68]
+    },
+    {
+      "turn": 29,
+      "_note": "Handwriting match misapplied: the detective matches the countersignature loop, not the amendment ink.",
+      "player_card": "modifier:handwriting_match",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "emotion:shaking_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:hand_tremor"
+      },
+      "convergence_after": [0.75, 0.73, 0.72]
+    },
+    {
+      "turn": 30,
+      "_note": "Back to bed three. Aldworth summoned to walk the round. She hardens.",
+      "player_card": "travel:to_cardiac_ward_crime_space",
+      "scene": {
+        "LOCATION": "location:cardiac_ward_crime_space",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.78, 0.77, 0.76]
+    },
+    {
+      "turn": 31,
+      "_note": "Accusation. Aldworth named on the countersignature she gave in good faith.",
+      "player_card": "ACCUSE:suspect:nurse_aldworth",
+      "scene": {
+        "LOCATION": "location:cardiac_ward_crime_space",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_nurse_aldworth",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:medication_chart",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pallor_visible"
+      },
+      "convergence_after": [0.8, 0.79, 0.78]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:nurse_aldworth",
+    "final_convergence": [0.8, 0.79, 0.78],
+    "_note": "Player accuses Aldworth on the countersignature beside the amended dose, the ledger draws under her round, and the prior-complaint hearing as motive. Missed: the amendment itself was in Dray's blue-black ink — she only countersigned what her consultant wrote."
+  }
+}

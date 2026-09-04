@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_framed_rizzoli_believed",
+  "case_id": "venetian_mirror",
+  "branch_of": "framed_elena_rizzoli",
+  "branch_turn": 16,
+  "divergence_token": "REVELATION=revelation:contradiction_surfaces",
+  "description": "Counterfactual branch from framed_elena_rizzoli at turn 16. Instead of reading the restoration notes as planted, the detective takes the marginal hand for Rizzoli's own — the studio paper trail is believed, her alibi never re-checked. Wrong accusation via the planted notes, not the auction commission.",
+  "outcome": "wrong_elena_rizzoli",
+  "starting_hypothesis": "branched_from_framed_rizzoli_revelation",
+  "tags": ["counterfactual_branch", "wrong_elena_rizzoli", "framed_elena_rizzoli", "planted_notes_believed"],
+  "pre_branch_state": {
+    "convergence_dims": [0.47, 0.47, 0.47]
+  },
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF anchor: the marginal hand in the restoration notes reads, to a hurried eye, as Rizzoli's own — contradiction, not confirmation of a plant.", "player_card": "object:restoration_notes",
+      "scene": {"LOCATION": "location:studio_room", "TRANSITION": "transition:none", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:restoration_notes", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:lantern_gutters", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.5, 0.5, 0.5]},
+    {"turn": 2, "_note": "The provenance binder gapped exactly where the notes point. The gap read as hers.", "player_card": "object:provenance_file",
+      "scene": {"LOCATION": "location:studio_room", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_provenance", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:authenticates", "OBJECT_FOCUS": "object:provenance_file", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:provenance_gap", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.55, 0.55, 0.55]},
+    {"turn": 3, "_note": "To the salon with the notes. Rizzoli gallery-bright, explaining too much.", "player_card": "suspect:elena_rizzoli",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_elena_rizzoli", "STANCE": "stance:defensive", "ACTION": "action:questions", "OBJECT_FOCUS": "object:restoration_notes", "TELL": "tell:over_explained", "ATMOSPHERE": "atmosphere:lantern_steady", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.6, 0.6, 0.6]},
+    {"turn": 4, "_note": "Her poise slipped at the margins — startlement read as recognition of her own hand.", "player_card": "emotion:startled_poise",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_elena_rizzoli", "STANCE": "stance:defensive", "ACTION": "action:notices", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:startled_poise", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.65, 0.65, 0.65]},
+    {"turn": 5, "_note": "Marini's report would have exposed her attributions. The why supplied.", "player_card": "motive:exposure_risk",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_elena_rizzoli", "STANCE": "stance:defensive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:hesitated", "ATMOSPHERE": "atmosphere:lantern_gutters", "REVELATION": "revelation:motive_emerges", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.72, 0.72, 0.72]},
+    {"turn": 6, "_note": "The notes laid before her. She paled — taken for guilt.", "player_card": "object:restoration_notes",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_elena_rizzoli", "STANCE": "stance:defensive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:restoration_notes", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 7, "_note": "Accused on planted paper. Wrong.", "player_card": "ACCUSE:suspect:elena_rizzoli",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_elena_rizzoli", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.76, 0.76, 0.76]}
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:elena_rizzoli",
+    "final_convergence": [0.76, 0.76, 0.76]
+  }
+}

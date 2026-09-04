@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_near_miss_porter_partnership_bind",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of near_miss_recovers_from_porter. At turn 44, standing over the ledger, the detective pursues the soured-venture reading instead of noticing the fraud column — a CAUSE divergence. The gaps become a broken partnership; the sealed envelope its final grievance. She accuses Voss with partnership_ruin bound as the why. Right man, wrong motive: the killing was fraud concealment, and the record reads thin.",
+  "outcome": "wrong_renard_voss",
+  "branch_of": "near_miss_recovers_from_porter",
+  "branch_turn": 44,
+  "divergence_token": "CAUSE=cause:pursued_suspicion",
+  "starting_hypothesis": "tells_first_porter",
+  "tags": [
+    "counterfactual_branch",
+    "cause_divergence",
+    "wrong_accusation_partial",
+    "renard_voss_correct",
+    "motive_misread",
+    "partnership_ruin_bound"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:waiting_room",
+      "location:signal_box",
+      "location:carriage_siding",
+      "location:goods_shed",
+      "location:station_office",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.90, 0.90, 0.90]
+  },
+  "turns": [
+    {"turn": 44, "_note": "DIVERGENCE: the ledger gaps read as a soured venture, not a fraud column. The why binds wrong.", "player_card": "motive:partnership_ruin", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_railway_clerk", "STANCE": "stance:cooperative", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:ledger_book", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_steady", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.90, 0.90, 0.90]},
+    {"turn": 45, "_note": "Back to the goods shed with the wrong why in hand.", "player_card": "travel:to_goods_shed", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:returned", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:arrives", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:dawn_approaches", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.90, 0.90, 0.90]},
+    {"turn": 46, "_note": "The envelope laid before him — read as the partnership's last grievance.", "player_card": "object:sealed_envelope", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object:sealed_envelope", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:dawn_approaches", "REVELATION": "revelation:confirmation", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.90, 0.90, 0.90]},
+    {"turn": 47, "_note": "Partnership ruin named aloud. Voss does not correct her.", "player_card": "motive:partnership_ruin", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:sealed_envelope", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:dawn_approaches", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.90, 0.90, 0.90]},
+    {"turn": 48, "_note": "Accusation. Voss — right man, wrong why.", "player_card": "ACCUSE:suspect:renard_voss", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:dawn_approaches", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.90, 0.90, 0.90]}
+  ],
+  "ending": {
+    "type": "wrong_accusation_partial",
+    "accused": "suspect:renard_voss",
+    "claimed_motive": "motive:partnership_ruin",
+    "true_motive": "motive:fraud_concealment",
+    "final_convergence": [0.90, 0.90, 0.90],
+    "_note": "The chain that broke the porter misread held to Voss — but at the last ledger reading the gaps were bound to a soured partnership, not the fraud Verne meant to expose at dawn. The arrest holds; the record reads thin."
+  }
+}

@@ -49,13 +49,15 @@ Player plays a symbolic card → model emits a complete 11-12-dim scene tuple (T
 
 | Case | Trajectories | Case-specific dims |
 |---|---|---|
-| amber_cipher | 59 (49 full + 10 cf branches) | none |
-| attended_hour | 59 | MEDICAL_TELL |
-| venetian_mirror | 59 | ART_TELL |
+| amber_cipher | 65 | none |
+| attended_hour | 64 | MEDICAL_TELL |
+| venetian_mirror | 61 | ART_TELL |
+
+Coverage gate (enforced 2026-09-04): every outcome class has ≥2 trajectories (no singletons — the outcome head needs the signal, and the stratified holdout needs the second example); data-side card-binding miss rate ≤3% per case (amber 2.6%, attended 0.2%, venetian 0.6% — deliberate witness-avoidance turns excepted).
 
 Per-case anatomy under `living_tales/trainer/cases/<case>/`: `dimensions.json` (dim list incl. case-specific), `constraints.json` (hard-mask rules), `tokens.json` (cards + attractor weights), `phrases.json` (en+es composer banks: plain string, variant list, or voice-arc dict cold/warming/breaking/broken), `beats.json` (v2 eval reference), `art_prompts.md` (diffusion prompt sheet, see lt-art skill), `trajectories/` with `manifest.json` + one JSON per trajectory.
 
-Total: 177 trajectories across ~16 outcome classes per case (correct_*, partial_correct, accomplice_found, framed_suspect, motive_only_confession, late_revelation, near_miss, red_herring_trap, cold_trail, per-suspect wrong_*). Accusations are authored as in-stream `ACCUSE:*` turns with confrontation scenes; `ending.accused` names the accused.
+Total: 190 trajectories across ~16 outcome classes per case (correct_*, partial_correct, accomplice_found, framed_suspect, motive_only_confession, late_revelation, near_miss, red_herring_trap, cold_trail, per-suspect wrong_*). Accusations are authored as in-stream `ACCUSE:*` turns with confrontation scenes; `ending.accused` names the accused.
 
 ## Key Commands
 

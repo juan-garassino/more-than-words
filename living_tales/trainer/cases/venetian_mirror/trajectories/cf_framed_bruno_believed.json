@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_framed_bruno_believed",
+  "case_id": "venetian_mirror",
+  "branch_of": "framed_inspector_bruno",
+  "branch_turn": 22,
+  "divergence_token": "REVELATION=revelation:name_uncovered",
+  "description": "Counterfactual branch from framed_inspector_bruno at turn 22. The catalogue omission and the Milan-file annotations are read as Bruno's own hand — the initialed envelope in the binder clinches it, and Pelosi is never summoned. Wrong accusation via the planted paper trail, not the grudge misread.",
+  "outcome": "wrong_inspector_bruno",
+  "starting_hypothesis": "branched_from_framed_bruno_revelation",
+  "tags": ["counterfactual_branch", "wrong_inspector_bruno", "framed_inspector_bruno", "planted_envelope_believed"],
+  "pre_branch_state": {
+    "convergence_dims": [0.56, 0.56, 0.56]
+  },
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF anchor: the omitted lot and the marginal annotations read as one hand — Bruno's. A name uncovered, wrongly.", "player_card": "object:auction_catalogue",
+      "scene": {"LOCATION": "location:mirror_gallery", "TRANSITION": "transition:none", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:authenticates", "OBJECT_FOCUS": "object:auction_catalogue", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:lantern_gutters", "REVELATION": "revelation:name_uncovered", "ART_TELL": "art_tell:catalog_omission", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.59, 0.59, 0.59]},
+    {"turn": 2, "_note": "The envelope with his initials, slipped into the binder. Taken at face value.", "player_card": "object:provenance_file",
+      "scene": {"LOCATION": "location:mirror_gallery", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_provenance", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:authenticates", "OBJECT_FOCUS": "object:provenance_file", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:provenance_gap", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.62, 0.62, 0.62]},
+    {"turn": 3, "_note": "To the courtyard. Bruno guarded now, the binder between them.", "player_card": "witness:inspector_bruno",
+      "scene": {"LOCATION": "location:courtyard", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_inspector_bruno", "STANCE": "stance:defensive", "ACTION": "action:questions", "OBJECT_FOCUS": "object:provenance_file", "TELL": "tell:hesitated", "ATMOSPHERE": "atmosphere:canal_mist_thickens", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.65, 0.65, 0.65]},
+    {"turn": 4, "_note": "His measured answers set against the marginal hand — the deflection itself read as proof.", "player_card": "emotion:measured_deflection",
+      "scene": {"LOCATION": "location:courtyard", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_inspector_bruno", "STANCE": "stance:defensive", "ACTION": "action:notices", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:measured_deflection", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.69, 0.69, 0.69]},
+    {"turn": 5, "_note": "Marini's dossier would have ruined the Milan record. The why supplied.", "player_card": "motive:reputation_ruin",
+      "scene": {"LOCATION": "location:courtyard", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_inspector_bruno", "STANCE": "stance:defensive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:bell_tolls", "REVELATION": "revelation:motive_emerges", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 6, "_note": "The destroyed notes laid at his door. The frame complete, and believed.", "player_card": "modifier:notes_destroyed",
+      "scene": {"LOCATION": "location:courtyard", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_inspector_bruno", "STANCE": "stance:defensive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:restoration_notes", "TELL": "tell:hesitated", "ATMOSPHERE": "atmosphere:lantern_gutters", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.78, 0.78, 0.78]},
+    {"turn": 7, "_note": "Accused on the planted envelope. Wrong.", "player_card": "ACCUSE:suspect:inspector_bruno",
+      "scene": {"LOCATION": "location:courtyard", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_inspector_bruno", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:stiff_formality", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.78, 0.78, 0.78]}
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:inspector_bruno",
+    "final_convergence": [0.78, 0.78, 0.78]
+  }
+}

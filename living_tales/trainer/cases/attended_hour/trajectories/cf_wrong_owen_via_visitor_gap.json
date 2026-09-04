@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_owen_via_visitor_gap",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 19 of near_miss_recovers_from_owen, the detective drops the insurance paper and chases the visitor-log gap instead — Owen's unrecorded second visit on the night of the attended hour, welded to the old family grudge. The recovery toward Dray never happens. Owen accused. Different misread from the insurance singleton: timeline gap plus grudge, not money.",
+  "outcome": "wrong_owen_stroud",
+  "branch_of": "near_miss_recovers_from_owen",
+  "branch_turn": 19,
+  "divergence_token": "OBJECT_FOCUS=object:visitor_log",
+  "tags": [
+    "counterfactual",
+    "object_focus_divergence",
+    "wrong_owen_stroud",
+    "visitor_gap_misread",
+    "family_grudge_misread",
+    "dray_dismissed",
+    "wrong_accusation"
+  ],
+  "_authoring_note": "7-turn CF — the porter's log shows Owen out at eleven with no re-entry line, yet the duty nurse saw him after midnight. The gap reads as stealth; it was grief pacing the car park. Owen arc: defensive -> evasive -> hostile.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:cardiac_ward_crime_space",
+      "location:reception_threshold",
+      "location:nurse_station_vantage",
+      "location:medication_charting_area",
+      "location:family_waiting_room",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.55, 0.55, 0.56]
+  },
+  "turns": [
+    {
+      "turn": 19,
+      "_note": "Divergence: instead of the insurance form, the detective opens the visitor log in front of Owen.",
+      "player_card": "object:visitor_log",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:visitor_log",
+        "TELL": "emotion:rehearsed_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.58, 0.58, 0.59]
+    },
+    {
+      "turn": 20,
+      "_note": "At reception the log's exit line does not square with the duty nurse's sighting.",
+      "player_card": "travel:to_reception_threshold",
+      "scene": {
+        "LOCATION": "location:reception_threshold",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_night_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:visitor_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.61, 0.61, 0.62]
+    },
+    {
+      "turn": 21,
+      "_note": "The porter remembers Owen leaving — and hesitates over whether he came back.",
+      "player_card": "witness:night_porter",
+      "scene": {
+        "LOCATION": "location:reception_threshold",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.64, 0.64, 0.65]
+    },
+    {
+      "turn": 22,
+      "_note": "Back to the waiting room. Owen dodges the question of the second visit.",
+      "player_card": "travel:to_family_waiting_room",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rehearsed_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.67, 0.67, 0.68]
+    },
+    {
+      "turn": 23,
+      "_note": "The old grudge over the father's second marriage. Motive misread locks.",
+      "player_card": "motive:family_grudge",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:glanced_aside",
+        "ATMOSPHERE": "atmosphere:fluorescent_flickers",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.71, 0.7, 0.71]
+    },
+    {
+      "turn": 24,
+      "_note": "Pressed on the unlogged hour, Owen turns hostile.",
+      "player_card": "suspect:owen_stroud",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.75, 0.75, 0.76]
+    },
+    {
+      "turn": 25,
+      "_note": "Accusation. Owen named on the gap in the log and the grudge.",
+      "player_card": "ACCUSE:suspect:owen_stroud",
+      "scene": {
+        "LOCATION": "location:family_waiting_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_owen_stroud",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:visitor_log",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.78, 0.77, 0.78]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:owen_stroud",
+    "final_convergence": [0.78, 0.77, 0.78],
+    "_note": "Player accuses Owen on the unlogged second visit and the family grudge. Missed: the gap was grief — he paced the car park past midnight and the porter never re-lined the book. The chart amendment in Dray's hand was never revisited after the branch."
+  }
+}

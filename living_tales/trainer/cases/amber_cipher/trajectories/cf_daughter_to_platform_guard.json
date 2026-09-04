@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_daughter_to_platform_guard",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of wrong_estranged_daughter_via_motive. At turn 18 the detective stays on Platform One with the guard instead of returning to the waiting room — a TRANSITION divergence. The guard_bribed thread, the dimmed lamps on his round, and the punched ticket found on his stretch of platform assemble into an ambush theory. She accuses the platform guard — wrongly. He pocketed a coin to look away and dimmed the lamps to hide his smoke, nothing more.",
+  "outcome": "wrong_platform_guard",
+  "branch_of": "wrong_estranged_daughter_via_motive",
+  "branch_turn": 18,
+  "divergence_token": "TRANSITION=transition:stayed",
+  "starting_hypothesis": "motive_first",
+  "tags": [
+    "counterfactual_branch",
+    "transition_divergence",
+    "wrong_accusation",
+    "platform_guard",
+    "bribe_chain",
+    "lamps_dimmed"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:waiting_room",
+      "location:station_office",
+      "location:platform_one",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.40, 0.40, 0.40]
+  },
+  "turns": [
+    {"turn": 18, "_note": "DIVERGENCE: stay on Platform One and press the bribe instead of returning to the daughter.", "player_card": "action:guard_bribed", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:defensive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:paused_reply", "ATMOSPHERE": "atmosphere:lamp_flickers", "REVELATION": "revelation:contradiction_surfaces", "BEAT": "beat:investigation"}, "convergence_after": [0.46, 0.46, 0.46]},
+    {"turn": 19, "_note": "The lamps on his round were dimmed at eleven — by whose hand?", "player_card": "modifier:lamps_dimmed", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:evasive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:platform_lantern", "TELL": "emotion:paused_reply", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "BEAT": "beat:investigation"}, "convergence_after": [0.50, 0.50, 0.50]},
+    {"turn": 20, "_note": "His lantern — the only one lit on the dark stretch.", "player_card": "object:platform_lantern", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:evasive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:platform_lantern", "TELL": "emotion:avoided_contact", "ATMOSPHERE": "atmosphere:lamp_flickers", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.55, 0.55, 0.55]},
+    {"turn": 21, "_note": "Paid_off — the coin in his pocket becomes the price of an ambush.", "player_card": "modifier:paid_off", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:hostile", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:platform_lantern", "TELL": "emotion:closed_posture", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.62, 0.62, 0.62]},
+    {"turn": 22, "_note": "The torn ticket was found on his stretch of platform.", "player_card": "object:torn_ticket", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:hostile", "ACTION": "action:examines", "OBJECT_FOCUS": "object:torn_ticket", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:closing_in"}, "convergence_after": [0.68, 0.68, 0.68]},
+    {"turn": 23, "_note": "The guard pressed directly. He stops answering.", "player_card": "suspect:platform_guard", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:closing_in"}, "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 24, "_note": "Accusation. The platform guard — wrongly.", "player_card": "ACCUSE:suspect:platform_guard", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.76, 0.76, 0.76]}
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:platform_guard",
+    "final_convergence": [0.76, 0.76, 0.76],
+    "_note": "The coin bought a blind eye, and the lamps went down so no one would see him smoke. The ticket blew the length of the platform on the night wind. The crossing the killer used was lit by nobody."
+  }
+}

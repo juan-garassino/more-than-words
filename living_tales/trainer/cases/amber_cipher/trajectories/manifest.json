@@ -580,6 +580,72 @@
       "branch_turn": 30,
       "divergence_token": "ATMOSPHERE=atmosphere:fog_lifts",
       "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_wrong_clerk_to_stationmaster",
+      "outcome": "wrong_stationmaster",
+      "length": 7,
+      "starting_hypothesis": "ledger_first",
+      "tags": ["counterfactual_branch", "presence_divergence", "wrong_accusation", "stationmaster", "bribe_chain"],
+      "branch_of": "wrong_railway_clerk_via_ledger",
+      "branch_turn": 26,
+      "divergence_token": "PRESENCE=presence:with_stationmaster",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_wrong_stationmaster_to_clerk",
+      "outcome": "wrong_railway_clerk",
+      "length": 7,
+      "starting_hypothesis": "office_first",
+      "tags": ["counterfactual_branch", "presence_divergence", "wrong_accusation", "railway_clerk", "cash_tin_shortfall"],
+      "branch_of": "wrong_stationmaster_via_defensive",
+      "branch_turn": 22,
+      "divergence_token": "PRESENCE=presence:with_railway_clerk",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_partnership_to_daughter",
+      "outcome": "wrong_estranged_daughter",
+      "length": 6,
+      "starting_hypothesis": "motive_first_partnership_ruin",
+      "tags": ["counterfactual_branch", "revelation_divergence", "wrong_accusation", "estranged_daughter", "sealed_envelope_chain"],
+      "branch_of": "wrong_via_partnership_ruin",
+      "branch_turn": 27,
+      "divergence_token": "REVELATION=revelation:contradiction_surfaces",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_daughter_to_platform_guard",
+      "outcome": "wrong_platform_guard",
+      "length": 7,
+      "starting_hypothesis": "motive_first",
+      "tags": ["counterfactual_branch", "transition_divergence", "wrong_accusation", "platform_guard", "lamps_dimmed"],
+      "branch_of": "wrong_estranged_daughter_via_motive",
+      "branch_turn": 18,
+      "divergence_token": "TRANSITION=transition:stayed",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_near_miss_porter_partnership_bind",
+      "outcome": "wrong_renard_voss",
+      "length": 5,
+      "starting_hypothesis": "tells_first_porter",
+      "tags": ["counterfactual_branch", "cause_divergence", "wrong_accusation_partial", "renard_voss_correct", "motive_misread"],
+      "branch_of": "near_miss_recovers_from_porter",
+      "branch_turn": 44,
+      "divergence_token": "CAUSE=cause:pursued_suspicion",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_wrong_guard_to_voss_near_miss",
+      "outcome": "correct_voss_after_near_miss",
+      "length": 8,
+      "starting_hypothesis": "object_first_lantern",
+      "tags": ["counterfactual_branch", "object_focus_divergence", "near_miss", "voss_correct", "cufflink_contradiction"],
+      "branch_of": "wrong_platform_guard_via_lantern",
+      "branch_turn": 30,
+      "divergence_token": "OBJECT_FOCUS=object:initialed_cufflink",
+      "_status": "counterfactual_branch"
     }
   ]
 }

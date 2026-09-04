@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_porter_via_lock_override",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 25 of dray_via_corridor_badge, the lock override on the rear corridor reads as the porter's own doing — only his master keycard could force that door, so he must have walked the ward himself. The detective builds an access case: override, master card, his own unsigned badge line. Porter accused. Different misread from the atmospheric singleton: hard access evidence, not mood.",
+  "outcome": "wrong_night_porter",
+  "branch_of": "dray_via_corridor_badge",
+  "branch_turn": 25,
+  "divergence_token": "PRESENCE=presence:with_night_porter",
+  "tags": [
+    "counterfactual",
+    "presence_divergence",
+    "wrong_night_porter",
+    "lock_override_misread",
+    "master_key_access_chain",
+    "dray_dismissed",
+    "wrong_accusation"
+  ],
+  "_authoring_note": "7-turn CF — the override was Dray borrowing the desk key while the porter did his exterior round; the detective never asks about the round. Porter arc: cooperative -> defensive -> evasive -> hostile, tells stay closed (tightened, clipped), never pales.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:rear_clinical_corridor",
+      "location:cardiac_ward_crime_space",
+      "location:medication_charting_area",
+      "location:nurse_station_vantage",
+      "location:doctor_office",
+      "location:reception_threshold",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.56, 0.56, 0.54]
+  },
+  "turns": [
+    {
+      "turn": 25,
+      "_note": "Divergence: the override traced to the desk master card — the detective stays on the porter instead of following the badge to Dray.",
+      "player_card": "modifier:lock_overridden",
+      "scene": {
+        "LOCATION": "location:reception_threshold",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_night_porter",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:corridor_badge",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.59, 0.59, 0.57]
+    },
+    {
+      "turn": 26,
+      "_note": "The rear corridor again. The service-door lock plate is scarred where it was forced open on override.",
+      "player_card": "travel:to_rear_clinical_corridor",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.62, 0.61, 0.6]
+    },
+    {
+      "turn": 27,
+      "_note": "The ward keycard: the desk master opens every corridor door in the wing.",
+      "player_card": "object:ward_keycard",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:ward_keycard",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fluorescent_flickers",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.65, 0.64, 0.63]
+    },
+    {
+      "turn": 28,
+      "_note": "Back to reception. The porter's answers shorten.",
+      "player_card": "travel:to_reception_threshold",
+      "scene": {
+        "LOCATION": "location:reception_threshold",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_night_porter",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:clipped_answers",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.68, 0.67, 0.66]
+    },
+    {
+      "turn": 29,
+      "_note": "Asked where he was during the attended hour, the porter looks at the door instead of answering.",
+      "player_card": "witness:night_porter",
+      "scene": {
+        "LOCATION": "location:reception_threshold",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_porter",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:glanced_aside",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.71, 0.7, 0.7]
+    },
+    {
+      "turn": 30,
+      "_note": "His own badge line for that night sits unsigned. The access case closes in the detective's head.",
+      "player_card": "modifier:badge_unsigned",
+      "scene": {
+        "LOCATION": "location:reception_threshold",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_night_porter",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.76, 0.75, 0.75]
+    },
+    {
+      "turn": 31,
+      "_note": "Accusation. The porter named on override, master card, unsigned line.",
+      "player_card": "ACCUSE:suspect:night_porter",
+      "scene": {
+        "LOCATION": "location:reception_threshold",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_night_porter",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:ward_keycard",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:pulse_irregular"
+      },
+      "convergence_after": [0.79, 0.78, 0.78]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:night_porter",
+    "final_convergence": [0.79, 0.78, 0.78],
+    "_note": "Player accuses the porter on the lock override, the desk master card, and his unsigned badge line. Missed: the override happened while the porter walked his exterior round — Dray borrowed the desk key and forced the rear door, and the unsigned line marks the round, not a lie. The badge trail to Dray was abandoned at the branch."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_partnership_to_daughter",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of wrong_via_partnership_ruin. At turn 27 the sealed envelope's broken wax reads as premeditation — a REVELATION divergence — and the partnership_ruin thread binds to the daughter instead of Voss: her father's soured venture ruined her, the letter was rehearsed grievance, the swapped satchel her cover. She never crosses to the carriage siding. She accuses the daughter — wrongly. The envelope was opened and resealed by a woman who could not decide whether to send it.",
+  "outcome": "wrong_estranged_daughter",
+  "branch_of": "wrong_via_partnership_ruin",
+  "branch_turn": 27,
+  "divergence_token": "REVELATION=revelation:contradiction_surfaces",
+  "starting_hypothesis": "motive_first_partnership_ruin",
+  "tags": [
+    "counterfactual_branch",
+    "revelation_divergence",
+    "wrong_accusation",
+    "estranged_daughter",
+    "partnership_ruin_misbound",
+    "sealed_envelope_chain"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:station_office",
+      "location:signal_box",
+      "location:goods_shed",
+      "location:waiting_room",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.70, 0.74, 0.66]
+  },
+  "turns": [
+    {"turn": 27, "_note": "DIVERGENCE: the envelope's wax has been broken and pressed back. Read as rehearsal, not hesitation.", "player_card": "object:sealed_envelope", "scene": {"LOCATION": "location:waiting_room", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_estranged_daughter", "STANCE": "stance:defensive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:sealed_envelope", "TELL": "emotion:closed_posture", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "BEAT": "beat:closing_in"}, "convergence_after": [0.72, 0.76, 0.68]},
+    {"turn": 28, "_note": "Partnership ruin re-bound: the venture that broke her father broke her first.", "player_card": "motive:partnership_ruin", "scene": {"LOCATION": "location:waiting_room", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_estranged_daughter", "STANCE": "stance:defensive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:sealed_envelope", "TELL": "emotion:paused_reply", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.74, 0.78, 0.71]},
+    {"turn": 29, "_note": "The swapped satchel recalled — read as her arrangement of the platform.", "player_card": "action:satchel_swapped", "scene": {"LOCATION": "location:waiting_room", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_estranged_daughter", "STANCE": "stance:evasive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:satchel", "TELL": "emotion:avoided_contact", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "BEAT": "beat:closing_in"}, "convergence_after": [0.76, 0.79, 0.73]},
+    {"turn": 30, "_note": "She is questioned directly. Her stillness reads as a closed account.", "player_card": "suspect:estranged_daughter", "scene": {"LOCATION": "location:waiting_room", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_estranged_daughter", "STANCE": "stance:hostile", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:closing_in"}, "convergence_after": [0.77, 0.80, 0.75]},
+    {"turn": 31, "_note": "The envelope laid open between them. Her name on the grievance.", "player_card": "object:sealed_envelope", "scene": {"LOCATION": "location:waiting_room", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_estranged_daughter", "STANCE": "stance:hostile", "ACTION": "action:examines", "OBJECT_FOCUS": "object:sealed_envelope", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:name_uncovered", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.78, 0.81, 0.76]},
+    {"turn": 32, "_note": "Accusation. The daughter — wrongly. Voss walks.", "player_card": "ACCUSE:suspect:estranged_daughter", "scene": {"LOCATION": "location:waiting_room", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_estranged_daughter", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.78, 0.81, 0.76]}
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:estranged_daughter",
+    "final_convergence": [0.78, 0.81, 0.76],
+    "_note": "The broken wax was hesitation, not rehearsal — she had opened her own letter twice and sent it nowhere. The satchel at the carriage siding, never examined, held the thread that led north with Voss."
+  }
+}

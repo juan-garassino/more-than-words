@@ -670,6 +670,41 @@
       "length": 6,
       "starting_hypothesis": "counterfactual",
       "tags": ["counterfactual", "transition_divergence", "partial_correct"]
+    },
+    {
+      "id": "cf_wrong_aldworth_via_countersign",
+      "outcome": "wrong_aldworth",
+      "length": 7,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "revelation_divergence", "wrong_aldworth", "countersignature_authorship_misread", "wrong_accusation"]
+    },
+    {
+      "id": "cf_wrong_owen_via_visitor_gap",
+      "outcome": "wrong_owen_stroud",
+      "length": 7,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "object_focus_divergence", "wrong_owen_stroud", "visitor_gap_misread", "wrong_accusation"]
+    },
+    {
+      "id": "cf_wrong_parris_via_shift_cover",
+      "outcome": "wrong_parris",
+      "length": 7,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "revelation_divergence", "wrong_parris", "shift_cover_misread", "wrong_accusation"]
+    },
+    {
+      "id": "cf_wrong_porter_via_lock_override",
+      "outcome": "wrong_night_porter",
+      "length": 7,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "presence_divergence", "wrong_night_porter", "lock_override_misread", "wrong_accusation"]
+    },
+    {
+      "id": "cf_wrong_dray_via_alarm_negligence",
+      "outcome": "wrong_callum_dray",
+      "length": 7,
+      "starting_hypothesis": "counterfactual",
+      "tags": ["counterfactual", "presence_divergence", "wrong_callum_dray", "alarm_delay_misread", "right_person_wrong_motive", "wrong_accusation"]
     }
   ]
 }

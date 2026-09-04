@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_clerk_to_stationmaster",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of wrong_railway_clerk_via_ledger. At turn 26 the stationmaster steps in from the platform door — a PRESENCE divergence — and the detective's theory pivots upward: the clerk's forgeries were ordered, not improvised. The station key on the cash-tin lock, the paid_off thread, and the door left open at eleven re-organize the same ledger chain around the stationmaster. She accuses him — wrongly. He took a bribe to overlook a door; he did not follow anyone through it.",
+  "outcome": "wrong_stationmaster",
+  "branch_of": "wrong_railway_clerk_via_ledger",
+  "branch_turn": 26,
+  "divergence_token": "PRESENCE=presence:with_stationmaster",
+  "starting_hypothesis": "ledger_first",
+  "tags": [
+    "counterfactual_branch",
+    "presence_divergence",
+    "wrong_accusation",
+    "stationmaster",
+    "bribe_chain",
+    "door_left_open"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:signal_box",
+      "location:platform_one",
+      "location:carriage_siding",
+      "location:goods_shed",
+      "location:station_office",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.60, 0.60, 0.60]
+  },
+  "turns": [
+    {"turn": 26, "_note": "DIVERGENCE: the stationmaster enters the office instead of the clerk answering. Theory pivots upward — who ordered the forgeries?", "player_card": "witness:stationmaster", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_stationmaster", "STANCE": "stance:defensive", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:closed_posture", "ATMOSPHERE": "atmosphere:lamp_steady", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.63, 0.63, 0.63]},
+    {"turn": 27, "_note": "The station key hangs on his chain — same key that fits the cash-tin lock.", "player_card": "object:station_key", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_stationmaster", "STANCE": "stance:defensive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:station_key", "TELL": "emotion:measured_breath", "ATMOSPHERE": "atmosphere:lamp_steady", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.66, 0.66, 0.66]},
+    {"turn": 28, "_note": "Paid_off — a payment sits in the ledger under the wrong column. Read as his cover.", "player_card": "modifier:paid_off", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_stationmaster", "STANCE": "stance:evasive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:ledger_book", "TELL": "emotion:paused_reply", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:closing_in"}, "convergence_after": [0.70, 0.70, 0.70]},
+    {"turn": 29, "_note": "The eleven o'clock door was left open — and his round put him beside it.", "player_card": "action:door_left_open", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_stationmaster", "STANCE": "stance:hostile", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:station_key", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "BEAT": "beat:closing_in"}, "convergence_after": [0.75, 0.75, 0.75]},
+    {"turn": 30, "_note": "The key laid flat on the desk. He does not touch it.", "player_card": "object:station_key", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_stationmaster", "STANCE": "stance:hostile", "ACTION": "action:examines", "OBJECT_FOCUS": "object:station_key", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 31, "_note": "Paid_off pressed again — the bribe read as the motive for murder.", "player_card": "modifier:paid_off", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_stationmaster", "STANCE": "stance:hostile", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:station_key", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.77, 0.77, 0.77]},
+    {"turn": 32, "_note": "Accusation. The stationmaster — wrongly.", "player_card": "ACCUSE:suspect:stationmaster", "scene": {"LOCATION": "location:station_office", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_stationmaster", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.77, 0.77, 0.77]}
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:stationmaster",
+    "final_convergence": [0.77, 0.77, 0.77],
+    "_note": "The clerk's ledger chain was real but pointed downward, not up. The stationmaster's key and bribe covered a door left open for Voss — he never walked through it himself."
+  }
+}

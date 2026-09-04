@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_guard_to_voss_near_miss",
+  "case_id": "amber_cipher",
+  "description": "Counterfactual branch of wrong_platform_guard_via_lantern. At turn 30 the detective sets the initialed cufflink under the guard's lantern — an OBJECT_FOCUS divergence — and the initials refuse the theory: R.V. is nobody's name on this platform roster. The ambush reading collapses at its peak. The RV thread runs through the cipher sheet to the goods shed, and she accuses Voss correctly. A near miss on the guard, recovered in time.",
+  "outcome": "correct_voss_after_near_miss",
+  "branch_of": "wrong_platform_guard_via_lantern",
+  "branch_turn": 30,
+  "divergence_token": "OBJECT_FOCUS=object:initialed_cufflink",
+  "starting_hypothesis": "object_first_lantern",
+  "tags": [
+    "counterfactual_branch",
+    "object_focus_divergence",
+    "near_miss",
+    "voss_correct",
+    "guard_misread_broken",
+    "cufflink_contradiction"
+  ],
+  "opening": {
+    "tokens": [
+      "location:thornfield_crossing",
+      "location:platform_two",
+      "location:signal_box",
+      "location:station_office",
+      "location:goods_shed",
+      "location:platform_one",
+      "event:aldous_verne_discovered",
+      "time:between_trains"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.70, 0.70, 0.70]
+  },
+  "turns": [
+    {"turn": 30, "_note": "DIVERGENCE: the cufflink held under the guard's own lantern. R.V. — not his initials, not his cuff.", "player_card": "object:initialed_cufflink", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:defensive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:initialed_cufflink", "TELL": "emotion:paused_reply", "ATMOSPHERE": "atmosphere:lamp_flickers", "REVELATION": "revelation:contradiction_surfaces", "BEAT": "beat:closing_in"}, "convergence_after": [0.70, 0.70, 0.70]},
+    {"turn": 31, "_note": "R.V. recalled against the roster. The guard's shoulders come down.", "player_card": "modifier:initialed_RV", "scene": {"LOCATION": "location:platform_one", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_platform_guard", "STANCE": "stance:cooperative", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:initialed_cufflink", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_flickers", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in"}, "convergence_after": [0.70, 0.70, 0.70]},
+    {"turn": 32, "_note": "Cross to the signal box to run the initials against the cipher.", "player_card": "travel:to_signal_box", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:arrives", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_flickers", "REVELATION": "revelation:none", "BEAT": "beat:closing_in"}, "convergence_after": [0.72, 0.72, 0.72]},
+    {"turn": 33, "_note": "The cipher sheet resolves around the same two letters.", "player_card": "object:cipher_sheet", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:examines", "OBJECT_FOCUS": "object:cipher_sheet", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:lamp_flickers", "REVELATION": "revelation:name_uncovered", "BEAT": "beat:closing_in"}, "convergence_after": [0.74, 0.74, 0.74]},
+    {"turn": 34, "_note": "The operator confirms who filed the late forms.", "player_card": "witness:telegraph_operator", "scene": {"LOCATION": "location:signal_box", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_telegraph_operator", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object:cipher_sheet", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:closing_in"}, "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 35, "_note": "To the goods shed. Voss is waiting among the crates.", "player_card": "travel:to_goods_shed", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:defensive", "ACTION": "action:arrives", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:closed_posture", "ATMOSPHERE": "atmosphere:fog_thickens", "REVELATION": "revelation:none", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.77, 0.77, 0.77]},
+    {"turn": 36, "_note": "The cufflink set down between them.", "player_card": "object:initialed_cufflink", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object:initialed_cufflink", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.78, 0.78, 0.78]},
+    {"turn": 37, "_note": "Accusation. Voss — recovered from the guard misread.", "player_card": "ACCUSE:suspect:renard_voss", "scene": {"LOCATION": "location:goods_shed", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_renard_voss", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:fixed_stare", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "BEAT": "beat:verdict_ready"}, "convergence_after": [0.78, 0.78, 0.78]}
+  ],
+  "ending": {
+    "type": "correct_voss_after_near_miss",
+    "accused": "suspect:renard_voss",
+    "near_miss_target": "suspect:platform_guard",
+    "near_miss_peak_convergence": 0.70,
+    "near_miss_peak_turn": 29,
+    "true_culprit": "suspect:renard_voss",
+    "final_convergence": [0.78, 0.78, 0.78],
+    "_note": "The ambush theory peaked at 0.70 on the guard; the cufflink under his own lantern broke it at turn 30. The RV thread ran through the cipher to the goods shed with the chain intact."
+  }
+}

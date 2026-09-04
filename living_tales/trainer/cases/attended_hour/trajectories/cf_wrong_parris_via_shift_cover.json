@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_parris_via_shift_cover",
+  "case_id": "attended_hour",
+  "description": "Counterfactual: at turn 23 of dray_via_parris_avoidance, the unsigned badge line reads as Parris hiding his own presence, not Dray's. The detective pulls the duty roster and finds Parris countersigned the round cover — proof, to the detective, that Parris stood at bed three during the attended hour and papered over it as malpractice cover. Parris accused. Different misread from the avoidance singleton: roster and shift-cover paperwork, not the avoided ward or the notes rewrite.",
+  "outcome": "wrong_parris",
+  "branch_of": "dray_via_parris_avoidance",
+  "branch_turn": 23,
+  "divergence_token": "REVELATION=revelation:partial_match",
+  "tags": [
+    "counterfactual",
+    "revelation_divergence",
+    "wrong_parris",
+    "shift_cover_misread",
+    "roster_paper_chain",
+    "dray_dismissed",
+    "wrong_accusation"
+  ],
+  "_authoring_note": "7-turn CF — Parris signed the shift cover as senior consultant formality; the detective reads the signature as placing him on the ward. Parris arc: evasive -> defensive -> hostile, rigid composure throughout. No avoided_ward tell used.",
+  "opening": {
+    "tokens": [
+      "location:briar_clinic",
+      "location:hospital_exterior",
+      "location:cardiac_ward_crime_space",
+      "location:doctor_office",
+      "location:medication_charting_area",
+      "location:nurse_station_vantage",
+      "location:rear_clinical_corridor",
+      "event:harold_stroud_discovered",
+      "time:attended_observation"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.52, 0.52, 0.5]
+  },
+  "turns": [
+    {
+      "turn": 23,
+      "_note": "Divergence: the unsigned badge line reads as Parris's own gap, not Dray's.",
+      "player_card": "modifier:badge_unsigned",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_dr_parris",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:corridor_badge",
+        "TELL": "emotion:professional_calm",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.55, 0.55, 0.53]
+    },
+    {
+      "turn": 24,
+      "_note": "The duty roster pulled at the station: Parris countersigned the round cover.",
+      "player_card": "action:records_accessed",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_records_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fluorescent_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.58, 0.58, 0.56]
+    },
+    {
+      "turn": 25,
+      "_note": "The clinical notes carry a margin initial in the cover period. Read as his.",
+      "player_card": "object:clinical_notes",
+      "scene": {
+        "LOCATION": "location:nurse_station_vantage",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_records_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:clinical_notes",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.61, 0.6, 0.59]
+    },
+    {
+      "turn": 26,
+      "_note": "Back to the rear corridor. Parris answers the roster question a beat too late.",
+      "player_card": "travel:to_rear_clinical_corridor",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_dr_parris",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:corridor_dims",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.64, 0.63, 0.62]
+    },
+    {
+      "turn": 27,
+      "_note": "Malpractice cover, misapplied to the senior consultant himself.",
+      "player_card": "motive:malpractice_cover",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_dr_parris",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:clipped_answers",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.69, 0.68, 0.67]
+    },
+    {
+      "turn": 28,
+      "_note": "Confrontation. Parris goes rigid, gives nothing.",
+      "player_card": "suspect:dr_parris",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_dr_parris",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rigid_composure",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.76, 0.75, 0.75]
+    },
+    {
+      "turn": 29,
+      "_note": "Accusation. Parris named on the shift-cover paperwork.",
+      "player_card": "ACCUSE:suspect:dr_parris",
+      "scene": {
+        "LOCATION": "location:rear_clinical_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_dr_parris",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:corridor_badge",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "MEDICAL_TELL": "medical_tell:none"
+      },
+      "convergence_after": [0.79, 0.78, 0.78]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:dr_parris",
+    "final_convergence": [0.79, 0.78, 0.78],
+    "_note": "Player accuses Parris on the roster countersignature, the unsigned badge line, and a margin initial in the cover period. Missed: the cover signature was a formality of seniority — the man he covered for was Dray, whose hand wrote the amendment. The paperwork pointed through Parris, not at him."
+  }
+}
