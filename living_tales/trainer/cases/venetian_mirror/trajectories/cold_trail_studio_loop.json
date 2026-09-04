@@ -80,7 +80,7 @@
         "OBJECT_FOCUS": "object:linen_fragment",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -152,7 +152,7 @@
         "OBJECT_FOCUS": "object:provenance_file",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -224,7 +224,7 @@
         "OBJECT_FOCUS": "object:forged_canvas",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -296,7 +296,7 @@
         "OBJECT_FOCUS": "object:forged_canvas",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -368,7 +368,7 @@
         "OBJECT_FOCUS": "object:cracked_mirror",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lantern_gutters",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -440,7 +440,7 @@
         "OBJECT_FOCUS": "object:restoration_notes",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -512,7 +512,7 @@
         "OBJECT_FOCUS": "object:restoration_notes",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:canal_mist_thickens",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -584,7 +584,7 @@
         "OBJECT_FOCUS": "object:pigment_sample",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -656,7 +656,7 @@
         "OBJECT_FOCUS": "object:auction_catalogue",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -728,7 +728,7 @@
         "OBJECT_FOCUS": "object:pigment_sample",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -800,7 +800,7 @@
         "OBJECT_FOCUS": "object:linen_fragment",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -872,7 +872,7 @@
         "OBJECT_FOCUS": "object:provenance_file",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -944,7 +944,7 @@
         "OBJECT_FOCUS": "object:forged_canvas",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -1016,7 +1016,7 @@
         "OBJECT_FOCUS": "object:forged_canvas",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -1088,7 +1088,7 @@
         "OBJECT_FOCUS": "object:cracked_mirror",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lantern_gutters",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -1160,7 +1160,7 @@
         "OBJECT_FOCUS": "object:restoration_notes",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },

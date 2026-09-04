@@ -38,7 +38,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.05, 0.05, 0.08]
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.08
+      ]
     },
     {
       "turn": 2,
@@ -58,7 +62,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.09, 0.09, 0.12]
+      "convergence_after": [
+        0.09,
+        0.09,
+        0.12
+      ]
     },
     {
       "turn": 3,
@@ -78,7 +86,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.12, 0.12, 0.15]
+      "convergence_after": [
+        0.12,
+        0.12,
+        0.15
+      ]
     },
     {
       "turn": 4,
@@ -98,7 +110,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.15, 0.15, 0.18]
+      "convergence_after": [
+        0.15,
+        0.15,
+        0.18
+      ]
     },
     {
       "turn": 5,
@@ -114,11 +130,15 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:hesitated",
         "ATMOSPHERE": "atmosphere:lantern_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.18, 0.18, 0.20]
+      "convergence_after": [
+        0.18,
+        0.18,
+        0.2
+      ]
     },
     {
       "turn": 6,
@@ -134,11 +154,15 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:glanced_aside",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.20, 0.20, 0.22]
+      "convergence_after": [
+        0.2,
+        0.2,
+        0.22
+      ]
     },
     {
       "turn": 7,
@@ -158,7 +182,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.22, 0.22, 0.24]
+      "convergence_after": [
+        0.22,
+        0.22,
+        0.24
+      ]
     },
     {
       "turn": 8,
@@ -178,7 +206,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.24, 0.24, 0.25]
+      "convergence_after": [
+        0.24,
+        0.24,
+        0.25
+      ]
     },
     {
       "turn": 9,
@@ -191,14 +223,18 @@
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:defensive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.27, 0.26, 0.28]
+      "convergence_after": [
+        0.27,
+        0.26,
+        0.28
+      ]
     },
     {
       "turn": 10,
@@ -218,7 +254,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.30, 0.30, 0.30]
+      "convergence_after": [
+        0.3,
+        0.3,
+        0.3
+      ]
     },
     {
       "turn": 11,
@@ -238,7 +278,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.32, 0.33, 0.32]
+      "convergence_after": [
+        0.32,
+        0.33,
+        0.32
+      ]
     },
     {
       "turn": 12,
@@ -258,7 +302,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.35, 0.36, 0.34]
+      "convergence_after": [
+        0.35,
+        0.36,
+        0.34
+      ]
     },
     {
       "turn": 13,
@@ -278,7 +326,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.37, 0.38, 0.36]
+      "convergence_after": [
+        0.37,
+        0.38,
+        0.36
+      ]
     },
     {
       "turn": 14,
@@ -298,7 +350,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.39, 0.40, 0.38]
+      "convergence_after": [
+        0.39,
+        0.4,
+        0.38
+      ]
     },
     {
       "turn": 15,
@@ -318,7 +374,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.42, 0.42, 0.40]
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.4
+      ]
     },
     {
       "turn": 16,
@@ -338,7 +398,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.44, 0.45, 0.42]
+      "convergence_after": [
+        0.44,
+        0.45,
+        0.42
+      ]
     },
     {
       "turn": 17,
@@ -358,7 +422,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.47, 0.48, 0.44]
+      "convergence_after": [
+        0.47,
+        0.48,
+        0.44
+      ]
     },
     {
       "turn": 18,
@@ -371,14 +439,18 @@
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:defensive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:gondola_passes",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.51, 0.52, 0.50]
+      "convergence_after": [
+        0.51,
+        0.52,
+        0.5
+      ]
     },
     {
       "turn": 19,
@@ -391,14 +463,18 @@
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:evasive",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.52, 0.54, 0.50]
+      "convergence_after": [
+        0.52,
+        0.54,
+        0.5
+      ]
     },
     {
       "turn": 20,
@@ -418,7 +494,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.54, 0.55, 0.52]
+      "convergence_after": [
+        0.54,
+        0.55,
+        0.52
+      ]
     },
     {
       "turn": 21,
@@ -438,7 +518,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.56, 0.57, 0.54]
+      "convergence_after": [
+        0.56,
+        0.57,
+        0.54
+      ]
     },
     {
       "turn": 22,
@@ -458,7 +542,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.58, 0.59, 0.56]
+      "convergence_after": [
+        0.58,
+        0.59,
+        0.56
+      ]
     },
     {
       "turn": 23,
@@ -478,7 +566,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.59, 0.60, 0.57]
+      "convergence_after": [
+        0.59,
+        0.6,
+        0.57
+      ]
     },
     {
       "turn": 24,
@@ -498,7 +590,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.59, 0.60, 0.57]
+      "convergence_after": [
+        0.59,
+        0.6,
+        0.57
+      ]
     },
     {
       "turn": 25,
@@ -518,7 +614,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.61, 0.62, 0.58]
+      "convergence_after": [
+        0.61,
+        0.62,
+        0.58
+      ]
     },
     {
       "turn": 26,
@@ -530,7 +630,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:evasive",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:guest_list",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -538,7 +638,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.63, 0.64, 0.60]
+      "convergence_after": [
+        0.63,
+        0.64,
+        0.6
+      ]
     },
     {
       "turn": 27,
@@ -558,7 +662,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.65, 0.66, 0.62]
+      "convergence_after": [
+        0.65,
+        0.66,
+        0.62
+      ]
     },
     {
       "turn": 28,
@@ -578,7 +686,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.68, 0.69, 0.64]
+      "convergence_after": [
+        0.68,
+        0.69,
+        0.64
+      ]
     },
     {
       "turn": 29,
@@ -598,7 +710,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.70, 0.71, 0.66]
+      "convergence_after": [
+        0.7,
+        0.71,
+        0.66
+      ]
     },
     {
       "turn": 30,
@@ -618,7 +734,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.72, 0.73, 0.68]
+      "convergence_after": [
+        0.72,
+        0.73,
+        0.68
+      ]
     },
     {
       "turn": 31,
@@ -638,7 +758,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.73, 0.74, 0.70]
+      "convergence_after": [
+        0.73,
+        0.74,
+        0.7
+      ]
     },
     {
       "turn": 32,
@@ -658,7 +782,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.75, 0.76, 0.72]
+      "convergence_after": [
+        0.75,
+        0.76,
+        0.72
+      ]
     },
     {
       "turn": 33,
@@ -671,14 +799,18 @@
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.77, 0.78, 0.76]
+      "convergence_after": [
+        0.77,
+        0.78,
+        0.76
+      ]
     },
     {
       "turn": 34,
@@ -690,7 +822,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:guest_list",
         "TELL": "emotion:practised_dismay",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -698,7 +830,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.77, 0.78, 0.75]
+      "convergence_after": [
+        0.77,
+        0.78,
+        0.75
+      ]
     },
     {
       "turn": 35,
@@ -718,7 +854,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.78, 0.79, 0.76]
+      "convergence_after": [
+        0.78,
+        0.79,
+        0.76
+      ]
     },
     {
       "turn": 36,
@@ -738,7 +878,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.79, 0.80, 0.76]
+      "convergence_after": [
+        0.79,
+        0.8,
+        0.76
+      ]
     },
     {
       "turn": 37,
@@ -758,7 +902,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.79, 0.80, 0.76]
+      "convergence_after": [
+        0.79,
+        0.8,
+        0.76
+      ]
     },
     {
       "turn": 38,
@@ -778,7 +926,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.80, 0.80, 0.76]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.76
+      ]
     },
     {
       "turn": 39,
@@ -798,7 +950,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.80, 0.80, 0.76]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.76
+      ]
     },
     {
       "turn": 40,
@@ -811,14 +967,18 @@
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:hostile",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
         "REVELATION": "revelation:confirmation",
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.80, 0.80, 0.76]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.76
+      ]
     },
     {
       "turn": 41,
@@ -838,13 +998,21 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.80, 0.80, 0.76]
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.76
+      ]
     }
   ],
   "ending": {
     "type": "wrong_accusation",
     "accused": "suspect:carlo_bassi",
-    "final_convergence": [0.80, 0.80, 0.76],
+    "final_convergence": [
+      0.8,
+      0.8,
+      0.76
+    ],
     "_note": "Convergence min ~0.76. The detective named Bassi on the strength of the torn glove, the misaddressed invitation, the alibi gap, and the silk residue on the railing. None of which placed his hand on the cut. The Countess remained gracious and unaccused."
   }
 }

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_red_herring_carnival_to_framed",
+  "case_id": "venetian_mirror",
+  "branch_of": "red_herring_trap_carnival_mask",
+  "branch_turn": 14,
+  "divergence_token": "ACTION=action:authenticates",
+  "description": "Counterfactual branch from red_herring_trap_carnival_mask at turn 14. Instead of confronting Bassi, the detective authenticates the white mask itself — finds it factory-printed for the previous owners' company. The frame against Bassi is unmasked; no accusation lodged.",
+  "outcome": "framed_suspect",
+  "starting_hypothesis": "branched_from_carnival_mask_action",
+  "tags": ["counterfactual_branch", "framed_suspect", "red_herring_trap_carnival_mask", "bassi_framed"],
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF anchor: rather than confronting Bassi, the detective checks the white mask's provenance against the auction catalogue.", "player_card": "object:auction_catalogue",
+      "scene": {"LOCATION": "location:canal_entrance", "TRANSITION": "transition:none", "CAUSE": "cause:examining_provenance", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:authenticates", "OBJECT_FOCUS": "object:auction_catalogue", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:canal_mist_thickens", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.56, 0.55, 0.54]},
+    {"turn": 2, "_note": "Factory-printed mask. From the previous owners' company.", "player_card": "modifier:carnival_mask",
+      "scene": {"LOCATION": "location:canal_entrance", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:notices", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "forbidden_dims": ["suspect:carlo_bassi"],
+      "convergence_after": [0.58, 0.57, 0.56]},
+    {"turn": 3, "_note": "Bassi at the gate, charm thickened — but his mask did not match.", "player_card": "suspect:carlo_bassi",
+      "scene": {"LOCATION": "location:canal_entrance", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_carlo_bassi", "STANCE": "stance:defensive", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:over_explained", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:alibi_holds", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "forbidden_dims": ["suspect:carlo_bassi"],
+      "convergence_after": [0.6, 0.59, 0.58]},
+    {"turn": 4, "_note": "Pelosi's hand. The mask placed for Bassi to be found near.", "player_card": "suspect:signora_pelosi",
+      "scene": {"LOCATION": "location:canal_entrance", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_signora_pelosi", "STANCE": "stance:defensive", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:stiff_formality", "ATMOSPHERE": "atmosphere:lantern_gutters", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "forbidden_dims": ["suspect:carlo_bassi"],
+      "convergence_after": [0.62, 0.61, 0.6]},
+    {"turn": 5, "_note": "Frame dismantled — Pelosi confirmed.", "player_card": "modifier:notes_destroyed",
+      "scene": {"LOCATION": "location:canal_entrance", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_signora_pelosi", "STANCE": "stance:defensive", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "forbidden_dims": ["suspect:carlo_bassi"],
+      "convergence_after": [0.65, 0.65, 0.65]},
+    {"turn": 6, "_note": "Bassi cleared. The carnival mask read as planted.", "player_card": "object:guest_list",
+      "scene": {"LOCATION": "location:canal_entrance", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:guest_list", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:canal_mist_lifts", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "forbidden_dims": ["suspect:carlo_bassi"],
+      "convergence_after": [0.68, 0.68, 0.68]},
+    {"turn": 7, "_note": "No accusation. Frame unmasked.", "player_card": "ACCUSE:none",
+      "scene": {"LOCATION": "location:canal_entrance", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:notices", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.68, 0.68, 0.68]}
+  ],
+  "ending": {
+    "type": "framed_suspect",
+    "accused": "suspect:carlo_bassi",
+    "final_convergence": [0.68, 0.68, 0.68]
+  }
+}

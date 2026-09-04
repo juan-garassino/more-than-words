@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_framed_rizzoli_recovers",
+  "case_id": "venetian_mirror",
+  "branch_of": "framed_elena_rizzoli",
+  "branch_turn": 22,
+  "divergence_token": "CAUSE=cause:recognized_object",
+  "description": "Counterfactual branch from framed_elena_rizzoli at turn 22. The detective notices the marginalia in the Countess's hand by recognition rather than by following Rizzoli's deflection — the chain of evidence pivots earlier. Frame dismantled in time; the Countess is named.",
+  "outcome": "correct_countess_morvaine",
+  "starting_hypothesis": "branched_from_framed_rizzoli_cause",
+  "tags": ["counterfactual_branch", "correct_countess_morvaine", "framed_elena_rizzoli", "recovered"],
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.61, 0.61, 0.61]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF anchor: withdrawn to the salon, the catalogue amendments seen plain in the Countess's hand.", "player_card": "object:auction_catalogue",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:none", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:auction_catalogue", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:lantern_steady", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.63, 0.63, 0.63]},
+    {"turn": 2, "_note": "Back to the gallery. The Countess at the head of the room.", "player_card": "travel:to_mirror_gallery",
+      "scene": {"LOCATION": "location:mirror_gallery", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:defensive", "ACTION": "action:arrives", "OBJECT_FOCUS": "object:auction_catalogue", "TELL": "emotion:polished_grace", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.66, 0.66, 0.66]},
+    {"turn": 3, "_note": "The provenance binder, the Vienna line.", "player_card": "object:provenance_file",
+      "scene": {"LOCATION": "location:mirror_gallery", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:evasive", "ACTION": "action:authenticates", "OBJECT_FOCUS": "object:provenance_file", "TELL": "emotion:polished_grace", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:provenance_gap", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.68, 0.68, 0.68]},
+    {"turn": 4, "_note": "Up to the balcony.", "player_card": "travel:to_main_balcony",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:defensive", "ACTION": "action:arrives", "OBJECT_FOCUS": "object:balcony_railing", "TELL": "emotion:polished_grace", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:none", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.76, 0.76, 0.76]},
+    {"turn": 5, "_note": "Score, fibre — hers.", "player_card": "modifier:silk_residue",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:hostile", "ACTION": "action:examines", "OBJECT_FOCUS": "object:balcony_railing", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.8, 0.8, 0.8]},
+    {"turn": 6, "_note": "The operation.", "player_card": "motive:forgery_operation",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:hostile", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:practised_dismay", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.83, 0.83, 0.83]},
+    {"turn": 7, "_note": "Accused.", "player_card": "ACCUSE:suspect:countess_morvaine",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.83, 0.83, 0.83]}
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:countess_morvaine",
+    "final_convergence": [0.83, 0.83, 0.83]
+  }
+}

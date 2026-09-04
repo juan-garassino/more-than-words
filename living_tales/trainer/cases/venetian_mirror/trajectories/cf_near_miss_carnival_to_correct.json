@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_near_miss_carnival_to_correct",
+  "case_id": "venetian_mirror",
+  "branch_of": "near_miss_recovers_from_carnival_mask",
+  "branch_turn": 14,
+  "divergence_token": "REVELATION=revelation:name_uncovered",
+  "description": "Counterfactual branch from near_miss_recovers_from_carnival_mask at turn 14. The detective sees the pale-rose fibre against the lantern earlier and reads the recovery sooner — the REVELATION turns from contradiction to name_uncovered. Clean accusation, not a near miss.",
+  "outcome": "correct_countess_morvaine",
+  "starting_hypothesis": "branched_from_carnival_mask_revelation",
+  "tags": ["counterfactual_branch", "correct_countess_morvaine", "near_miss_recovers_from_carnival_mask", "earlier_recovery"],
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF anchor: on the parapet, the fibre against the lantern — pale rose, named at once.", "player_card": "modifier:silk_residue",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:none", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_carlo_bassi", "STANCE": "stance:defensive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:balcony_railing", "TELL": "tell:glanced_aside", "ATMOSPHERE": "atmosphere:lantern_steady", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.43, 0.43, 0.42]},
+    {"turn": 2, "_note": "The glove on the parapet — cuff intact, pale rose.", "player_card": "object:silk_glove",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:silk_glove", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.47, 0.47, 0.46]},
+    {"turn": 3, "_note": "Cross to the salon. The Countess at her cuff.", "player_card": "travel:to_private_salon",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:cooperative", "ACTION": "action:arrives", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:polished_grace", "ATMOSPHERE": "atmosphere:lantern_steady", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.55, 0.55, 0.55]},
+    {"turn": 4, "_note": "Her cuff matched. Name uncovered.", "player_card": "suspect:countess_morvaine",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:evasive", "ACTION": "action:questions", "OBJECT_FOCUS": "object:silk_glove", "TELL": "emotion:polished_grace", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:name_uncovered", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.7, 0.7, 0.7]},
+    {"turn": 5, "_note": "Up to the balcony, with her.", "player_card": "travel:to_main_balcony",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:returned", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:defensive", "ACTION": "action:arrives", "OBJECT_FOCUS": "object:balcony_railing", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:gondola_passes", "REVELATION": "revelation:none", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.78, 0.78, 0.78]},
+    {"turn": 6, "_note": "The score, the operation.", "player_card": "motive:forgery_operation",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:hostile", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:practised_dismay", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.83, 0.83, 0.83]},
+    {"turn": 7, "_note": "Accused.", "player_card": "ACCUSE:suspect:countess_morvaine",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.83, 0.83, 0.83]}
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:countess_morvaine",
+    "final_convergence": [0.83, 0.83, 0.83]
+  }
+}

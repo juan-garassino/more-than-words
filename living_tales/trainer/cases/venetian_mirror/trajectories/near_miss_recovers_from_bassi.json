@@ -2,7 +2,7 @@
   "schema_version": 1,
   "trajectory_id": "near_miss_recovers_from_bassi",
   "case_id": "venetian_mirror",
-  "description": "Detective nearly accuses Bassi at the rail \u2014 the white-silk torn cuff matches everything except the dye in the score (pale rose, not white). Recovers, lands Morvaine.",
+  "description": "Detective nearly accuses Bassi at the rail — the white-silk torn cuff matches everything except the dye in the score (pale rose, not white). Recovers, lands Morvaine.",
   "outcome": "near_miss",
   "starting_hypothesis": "object_first_glove_then_recover",
   "tags": [
@@ -99,7 +99,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:gondola_passes",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -120,7 +120,7 @@
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:evasive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:lantern_steady",
         "REVELATION": "revelation:partial_match",
@@ -147,7 +147,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -255,7 +255,7 @@
     },
     {
       "turn": 9,
-      "_note": "A fibre. White silk in the score \u2014 the detective filed it as Bassi's.",
+      "_note": "A fibre. White silk in the score — the detective filed it as Bassi's.",
       "player_card": "modifier:silk_residue",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -291,7 +291,7 @@
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:defensive",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
@@ -414,7 +414,7 @@
     },
     {
       "turn": 15,
-      "_note": "The fibre \u2014 but on closer look, pale rose, not white. Not Bassi's mask.",
+      "_note": "The fibre — but on closer look, pale rose, not white. Not Bassi's mask.",
       "player_card": "modifier:silk_residue",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -438,14 +438,14 @@
     },
     {
       "turn": 16,
-      "_note": "His torn glove \u2014 the dye, white. Not the rose in the score.",
+      "_note": "His torn glove — the dye, white. Not the rose in the score.",
       "player_card": "object:silk_glove",
       "scene": {
         "LOCATION": "location:main_balcony",
         "TRANSITION": "transition:stayed",
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_carlo_bassi",
-        "STANCE": "stance:defensive",
+        "STANCE": "stance:hostile",
         "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:tightened",
@@ -465,7 +465,7 @@
     },
     {
       "turn": 17,
-      "_note": "His dismay \u2014 practised, but the dismay was about the courier's fate, not the fall.",
+      "_note": "His dismay — practised, but the dismay was about the courier's fate, not the fall.",
       "player_card": "emotion:practised_dismay",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -498,7 +498,7 @@
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:defensive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:alibi_holds",
@@ -737,7 +737,7 @@
         "CAUSE": "cause:recognized_object",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -881,7 +881,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:guest_list",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:silence_holds",

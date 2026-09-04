@@ -18,24 +18,24 @@
 
   "TRANSITION": {
     "transition:stayed": {
-      "en": ["Still at", "Held position at", "Remained at", "Did not move from"],
-      "es": ["Aún en", "Sin moverse de", "Permanecía en", "Continuaba en"]
+      "en": ["Still at", "Held position at", "Remained at", "Did not move from", "Lingered at", "Kept to"],
+      "es": ["Aún en", "Sin moverse de", "Permanecía en", "Continuaba en", "Se demoraba en", "Se mantenía en"]
     },
     "transition:crossed_to": {
-      "en": ["Crossed to", "Moved across to", "Stepped over to", "Walked through to"],
-      "es": ["Cruzó hasta", "Atravesó hasta", "Pasó hasta", "Caminó hasta"]
+      "en": ["Crossed to", "Moved across to", "Stepped over to", "Walked through to", "Made his way over to", "Carried on to"],
+      "es": ["Cruzó hasta", "Atravesó hasta", "Pasó hasta", "Caminó hasta", "Se encaminó hacia", "Prosiguió hasta"]
     },
     "transition:entered": {
-      "en": ["Entered", "Stepped into", "Passed into", "Went into"],
-      "es": ["Entró en", "Pasó a", "Se adentró en", "Penetró en"]
+      "en": ["Entered", "Stepped into", "Passed into", "Went into", "Slipped into", "Crossed the threshold of"],
+      "es": ["Entró en", "Pasó a", "Se adentró en", "Penetró en", "Se deslizó en", "Cruzó el umbral de"]
     },
     "transition:exited": {
       "en": ["Stepped out of", "Left", "Passed out of", "Withdrew from"],
       "es": ["Salió de", "Abandonó", "Se retiró de", "Dejó atrás"]
     },
     "transition:returned": {
-      "en": ["Returned to", "Came back to", "Went back to", "Doubled back to"],
-      "es": ["Volvió a", "Regresó a", "Retornó a", "Volvió sobre sus pasos a"]
+      "en": ["Returned to", "Came back to", "Went back to", "Doubled back to", "Found his way back to", "Retraced his steps to"],
+      "es": ["Volvió a", "Regresó a", "Retornó a", "Volvió sobre sus pasos a", "Encontró el camino de vuelta a", "Deshizo el camino hasta"]
     },
     "transition:pursued_to": {
       "en": ["Followed the lead to", "Tracked the matter to", "Followed the thread to", "Carried the question to"],
@@ -50,47 +50,47 @@
       "es": ["Bajó a", "Descendió a", "Se adentró bajando a", "Tomó la bajada hasta"]
     },
     "transition:none": {
-      "en": ["Began at", "Started at", "Opened at", "Set out from"],
-      "es": ["Comenzó en", "Empezó en", "Inició en", "Partió desde"]
+      "en": ["Began at", "Started at", "Opened at", "Set out from", "Took up the thread at", "The night opened at"],
+      "es": ["Comenzó en", "Empezó en", "Inició en", "Partió desde", "Retomó el hilo en", "La noche se abrió en"]
     }
   },
 
   "CAUSE": {
     "cause:following_witness_lead": {
-      "en": ["On the witness's word,", "Acting on what the witness had said,", "Following the witness's account,", "Taking the witness at his word,"],
-      "es": ["Por la palabra del testigo,", "Atendiendo lo dicho por el testigo,", "Siguiendo el relato del testigo,", "Conforme al testimonio,"]
+      "en": ["On the witness's word,", "Acting on what the witness had said,", "Following the witness's account,", "Taking the witness at his word,", "The testimony pointed across the palazzo;", "What the witness had let drop warranted a look;"],
+      "es": ["Por la palabra del testigo,", "Atendiendo lo dicho por el testigo,", "Siguiendo el relato del testigo,", "Conforme al testimonio,", "El testimonio apuntaba al otro extremo del palazzo;", "Lo que el testigo dejó caer merecía una mirada;"]
     },
     "cause:examining_evidence": {
-      "en": ["Tracing the evidence,", "Following the evidence,", "Working from the evidence,", "Carrying the evidence forward,"],
-      "es": ["Siguiendo la evidencia,", "Trazando la evidencia,", "Partiendo de las pruebas,", "Llevando la prueba adelante,"]
+      "en": ["Tracing the evidence,", "Working from what was in hand,", "With the proofs laid out in order,", "The facts ran toward one door;", "Weighing the matter piece by piece,", "Carrying the evidence forward,"],
+      "es": ["Siguiendo la evidencia,", "Trabajando con lo que tenía en mano,", "Con las pruebas dispuestas en orden,", "Los hechos corrían hacia una sola puerta;", "Sopesando el asunto pieza a pieza,", "Llevando la prueba adelante,"]
     },
     "cause:recognized_object": {
-      "en": ["Something about the object struck him;", "The object held his attention;", "A look at the object stopped him;", "The thing in question caught his eye;"],
-      "es": ["Algo del objeto lo detuvo;", "El objeto retuvo su atención;", "Algo en el objeto lo hizo pararse;", "La cosa en cuestión le llamó la mirada;"]
+      "en": ["Something about the object struck him;", "The object held his attention;", "A look at the object stopped him;", "The thing in question would not be dismissed;", "He had seen its like in the catalogue before;"],
+      "es": ["Algo del objeto lo detuvo;", "El objeto retuvo su atención;", "Algo en el objeto lo hizo pararse;", "La cosa en cuestión no se dejaba descartar;", "Había visto algo semejante en el catálogo;"]
     },
     "cause:noticed_inconsistency": {
-      "en": ["A detail did not match;", "Something did not add up;", "One detail refused to fit;", "An inconsistency stood out;"],
-      "es": ["Un detalle no encajaba;", "Algo no cuadraba;", "Un detalle se resistía;", "Una inconsistencia saltaba a la vista;"]
+      "en": ["A detail did not match;", "Something did not add up;", "One detail refused to fit;", "An inconsistency stood out;", "The hours of the evening did not agree;", "A small thing sat wrong in the account;"],
+      "es": ["Un detalle no encajaba;", "Algo no cuadraba;", "Un detalle se resistía;", "Una inconsistencia saltaba a la vista;", "Las horas de la velada no concordaban;", "Una pequeñez desentonaba en el relato;"]
     },
     "cause:pursued_suspicion": {
-      "en": ["On a hunch,", "Following a suspicion,", "Acting on a doubt,", "On the strength of a suspicion,"],
-      "es": ["Por una corazonada,", "Siguiendo una sospecha,", "Movido por una duda,", "Llevado por la sospecha,"]
+      "en": ["On a hunch,", "Following a suspicion,", "Acting on a doubt,", "A suspicion had taken hold;", "Doubt would not let the matter rest;", "The suspicion was worth the crossing,"],
+      "es": ["Por una corazonada,", "Siguiendo una sospecha,", "Movido por una duda,", "Una sospecha había echado raíz;", "La duda no dejaba descansar el asunto;", "La sospecha valía el trayecto,"]
     },
     "cause:revisiting_scene": {
-      "en": ["Returning to confirm,", "Going back to check,", "To check the matter again,", "Coming back to verify,"],
-      "es": ["Volviendo para confirmar,", "Regresando a comprobar,", "Para verificar de nuevo,", "Para corroborarlo,"]
+      "en": ["Returning to confirm,", "Going back to check,", "Coming back to verify,", "The ground deserved a second look;", "Something there had been left unexamined;"],
+      "es": ["Volviendo para confirmar,", "Regresando a comprobar,", "Para corroborarlo,", "El lugar merecía una segunda mirada;", "Algo quedaba allí sin examinar;"]
     },
     "cause:summoned": {
-      "en": ["Called by name,", "Summoned by name,", "On being called,", "Hailed by name,"],
-      "es": ["Llamado por su nombre,", "Convocado por su nombre,", "Al ser llamado,", "Reclamado por su nombre,"]
+      "en": ["Called by name,", "Summoned by name,", "On being called,", "Word had been sent for him;", "A message required his presence;"],
+      "es": ["Llamado por su nombre,", "Convocado por su nombre,", "Al ser llamado,", "Habían mandado por él;", "Un recado requería su presencia;"]
     },
     "cause:chronological_drift": {
-      "en": ["As the hour wore on,", "As the night drew on,", "As Carnevale wore on,", "With the hour advancing,"],
-      "es": ["Mientras la hora se alargaba,", "A medida que avanzaba la noche del Carnaval,", "Conforme corría la hora,", "Con la noche ya avanzada,"]
+      "en": ["As the hour wore on,", "As the night drew on,", "As Carnevale wore on,", "With the hour advancing,", "With the masks still abroad in the calli,", "The night left little room;"],
+      "es": ["Mientras la hora se alargaba,", "A medida que avanzaba la noche del Carnaval,", "Conforme corría la hora,", "Con la noche ya avanzada,", "Con las máscaras aún sueltas por las calles,", "La noche dejaba poco margen;"]
     },
     "cause:examining_provenance": {
-      "en": ["Reading the provenance card,", "Working from the provenance line,", "Following the provenance,", "On the strength of the provenance,"],
-      "es": ["Leyendo la cédula de procedencia,", "Partiendo de la línea de procedencia,", "Siguiendo la procedencia,", "A partir de la cédula,"]
+      "en": ["Reading the provenance card,", "Working from the provenance line,", "Following the provenance,", "On the strength of the provenance,", "The canvas's paper trail said enough;", "Tracing the picture's paper history,"],
+      "es": ["Leyendo la cédula de procedencia,", "Partiendo de la línea de procedencia,", "Siguiendo la procedencia,", "A partir de la cédula,", "El rastro de papel del lienzo decía bastante;", "Trazando la historia documental del cuadro,"]
     },
     "cause:none": {"en": "", "es": ""}
   },
@@ -102,25 +102,29 @@
           "the Countess received the inspector in the gallery, gloves still on",
           "the Countess waited at the head of the gallery with her gloves drawn straight",
           "the Countess stood by the long mirror, her hands gloved",
-          "the Countess kept her place beneath the chandelier, the gloves uncreased"
+          "the Countess kept her place beneath the chandelier, the gloves uncreased",
+          "the Countess turned from the balcony window as the inspector came in, unhurried"
         ],
         "warming": [
           "the Countess offered coffee without being asked",
           "the Countess answered in long, composed sentences",
           "the Countess let the small foreign flourishes settle through her English",
-          "the Countess set the cup down and drew the cuff of the left glove straight"
+          "the Countess set the cup down and drew the cuff of the left glove straight",
+          "the Countess spoke of the palazzo's history as though it excused the present"
         ],
         "breaking": [
           "the Countess held her smile a beat too long",
           "the Countess tightened the gloves at the wrist, very slightly",
           "the Countess let the silence stand before answering",
-          "the Countess's composure thinned at the edge of the answer"
+          "the Countess's composure thinned at the edge of the answer",
+          "the Countess's accent slipped, for one word only"
         ],
         "broken": [
           "the Countess named the hour on the balcony at last",
           "the Countess admitted the Zurich line without further flourish",
           "the Countess let the gloves rest in her lap and did not adjust them again",
-          "the Countess spoke the prior matter in Milan plainly"
+          "the Countess spoke the prior matter in Milan plainly",
+          "the Countess asked, quietly, what would become of the collection"
         ]
       },
       "es": {
@@ -128,25 +132,29 @@
           "la Condesa recibió al inspector en la galería, con los guantes aún puestos",
           "la Condesa esperaba a la cabecera de la galería con los guantes bien estirados",
           "la Condesa se mantenía junto al espejo largo, las manos enguantadas",
-          "la Condesa permanecía bajo la araña de cristal, los guantes sin un pliegue"
+          "la Condesa permanecía bajo la araña de cristal, los guantes sin un pliegue",
+          "la Condesa se volvió desde la ventana del balcón al entrar el inspector, sin prisa"
         ],
         "warming": [
           "la Condesa ofreció café sin que se lo pidieran",
           "la Condesa respondía en frases largas y compuestas",
           "la Condesa dejaba caer pequeños giros extranjeros en su italiano",
-          "la Condesa posó la taza y estiró el puño del guante izquierdo"
+          "la Condesa posó la taza y estiró el puño del guante izquierdo",
+          "la Condesa hablaba de la historia del palazzo como si excusara el presente"
         ],
         "breaking": [
           "la Condesa sostuvo la sonrisa un instante de más",
           "la Condesa apretó los guantes en la muñeca, muy levemente",
           "la Condesa dejó posarse el silencio antes de responder",
-          "la compostura de la Condesa se afinaba en el borde de la respuesta"
+          "la compostura de la Condesa se afinaba en el borde de la respuesta",
+          "el acento de la Condesa se deslizó, en una sola palabra"
         ],
         "broken": [
           "la Condesa nombró por fin la hora en el balcón",
           "la Condesa admitió la línea de Zúrich sin más adornos",
           "la Condesa dejó los guantes sobre el regazo y no volvió a ajustarlos",
-          "la Condesa habló del asunto anterior en Milán con claridad"
+          "la Condesa habló del asunto anterior en Milán con claridad",
+          "la Condesa preguntó, en voz baja, qué sería de la colección"
         ]
       }
     },
@@ -156,25 +164,29 @@
           "Carlo Bassi stood by the canal door, his white silk mask still in his hand",
           "Bassi waited at the foot of the gallery, the white mask hanging from his fingers",
           "Bassi held his place near the door, the silk mask half-lowered",
-          "Bassi kept by the canal entrance, the mask resting against his coat"
+          "Bassi kept by the canal entrance, the mask resting against his coat",
+          "Bassi bowed a fraction too well for a guest"
         ],
         "warming": [
           "Bassi laughed first and answered second",
           "Bassi spoke in clean, rehearsed phrasing, half a beat ahead",
           "Bassi turned the white mask between his fingers as he spoke",
-          "Bassi gave the order of the evening as though it had been a charming mishap"
+          "Bassi gave the order of the evening as though it had been a charming mishap",
+          "Bassi offered names freely, each one pointing somewhere else"
         ],
         "breaking": [
           "Bassi's charm thickened rather than thinned",
           "Bassi produced the torn glove from his coat with a small flourish",
           "Bassi's eyes went briefly to the salon door",
-          "Bassi let the rehearsed line falter for the first time"
+          "Bassi let the rehearsed line falter for the first time",
+          "Bassi asked for wine and then did not drink it"
         ],
         "broken": [
           "Bassi named himself the courier and not the hand on the railing",
           "Bassi gave up the invitation that had been printed for someone else",
           "Bassi spoke the truth he had wished the inspector only to suspect",
-          "Bassi set the white mask on the table and did not pick it up again"
+          "Bassi set the white mask on the table and did not pick it up again",
+          "Bassi's voice dropped to the register of a man done performing"
         ]
       },
       "es": {
@@ -182,25 +194,29 @@
           "Carlo Bassi estaba junto a la puerta del canal, la máscara de seda blanca aún en la mano",
           "Bassi esperaba al pie de la galería, la máscara blanca colgando de los dedos",
           "Bassi se mantenía cerca de la puerta, la máscara de seda a media altura",
-          "Bassi permanecía en la entrada del canal, la máscara apoyada en la solapa"
+          "Bassi permanecía en la entrada del canal, la máscara apoyada en la solapa",
+          "Bassi saludó con una reverencia demasiado ensayada para un invitado"
         ],
         "warming": [
           "Bassi reía primero y respondía después",
           "Bassi hablaba con frases limpias y ensayadas, medio compás por delante",
           "Bassi giraba la máscara blanca entre los dedos mientras hablaba",
-          "Bassi daba el orden de la velada como si hubiera sido un percance gracioso"
+          "Bassi daba el orden de la velada como si hubiera sido un percance gracioso",
+          "Bassi ofrecía nombres con soltura, cada uno señalando hacia otra parte"
         ],
         "breaking": [
           "el encanto de Bassi se espesaba en vez de afinarse",
           "Bassi sacó el guante roto del bolsillo con un pequeño ademán",
           "los ojos de Bassi se desviaron un instante hacia la puerta del salón",
-          "la frase ensayada de Bassi vaciló por primera vez"
+          "la frase ensayada de Bassi vaciló por primera vez",
+          "Bassi pidió vino y luego no lo bebió"
         ],
         "broken": [
           "Bassi se nombró a sí mismo correo y no la mano en la balaustrada",
           "Bassi entregó la invitación que habían impreso para otro",
           "Bassi dijo la verdad que había querido que el inspector sólo sospechara",
-          "Bassi dejó la máscara blanca sobre la mesa y no volvió a tomarla"
+          "Bassi dejó la máscara blanca sobre la mesa y no volvió a tomarla",
+          "la voz de Bassi bajó al registro de un hombre que ha dejado de actuar"
         ]
       }
     },
@@ -210,25 +226,29 @@
           "Dr Winter was at the inventory desk",
           "Dr Winter stood by the lectern with his small notebook in hand",
           "Dr Winter waited at the desk, the notebook tapped twice against his palm",
-          "Dr Winter kept his place at the inventory, his sleeves rolled to the cuff"
+          "Dr Winter kept his place at the inventory, his sleeves rolled to the cuff",
+          "Dr Winter did not look up until the second question"
         ],
         "warming": [
           "Dr Winter answered in numbered order: first, second, finally",
           "Dr Winter named the modern pigments by their chemical formulas",
           "Dr Winter set out the sequence of varnishes without ornament",
-          "Dr Winter tapped the notebook twice against his palm between answers"
+          "Dr Winter tapped the notebook twice against his palm between answers",
+          "Dr Winter allowed that the light in the studio had been poor that week"
         ],
         "breaking": [
           "Dr Winter became more precise rather than less",
           "Dr Winter named the third pigment after the small pause",
           "Dr Winter held the notebook still for the first time",
-          "Dr Winter would not soften the consonants at the close of the line"
+          "Dr Winter would not soften the consonants at the close of the line",
+          "Dr Winter corrected his own date, once, in a lower voice"
         ],
         "broken": [
           "Dr Winter said the report would say what it would say",
           "Dr Winter named the cadmium in the underpaint without being asked twice",
           "Dr Winter set the notebook flat on the desk and gave the closing finding",
-          "Dr Winter spoke the date the varnish post-dated by"
+          "Dr Winter spoke the date the varnish post-dated by",
+          "Dr Winter closed the inventory and said the rest belonged to the police"
         ]
       },
       "es": {
@@ -236,25 +256,29 @@
           "el doctor Winter estaba en el escritorio de inventario",
           "el doctor Winter se mantenía junto al atril con su pequeño cuaderno",
           "el doctor Winter esperaba en el escritorio, golpeando el cuaderno dos veces contra la palma",
-          "el doctor Winter permanecía en el inventario, las mangas remangadas hasta el puño"
+          "el doctor Winter permanecía en el inventario, las mangas remangadas hasta el puño",
+          "el doctor Winter no levantó la vista hasta la segunda pregunta"
         ],
         "warming": [
           "el doctor Winter respondía en orden numerado: primero, segundo, finalmente",
           "el doctor Winter nombró los pigmentos modernos por sus fórmulas químicas",
           "el doctor Winter expuso la secuencia de los barnices sin adorno",
-          "el doctor Winter golpeaba dos veces el cuaderno contra la palma entre respuestas"
+          "el doctor Winter golpeaba dos veces el cuaderno contra la palma entre respuestas",
+          "el doctor Winter concedió que la luz del taller había sido pobre esa semana"
         ],
         "breaking": [
           "el doctor Winter se volvía más preciso, no menos",
           "el doctor Winter nombró el tercer pigmento tras la pequeña pausa",
           "el doctor Winter mantuvo quieto el cuaderno por primera vez",
-          "el doctor Winter no suavizó las consonantes al cerrar la línea"
+          "el doctor Winter no suavizó las consonantes al cerrar la línea",
+          "el doctor Winter corrigió su propia fecha, una vez, en voz más baja"
         ],
         "broken": [
           "el doctor Winter dijo que el informe diría lo que tuviera que decir",
           "el doctor Winter nombró el cadmio del subpintado sin que se lo pidieran dos veces",
           "el doctor Winter dejó el cuaderno plano sobre el escritorio y dio el dictamen final",
-          "el doctor Winter dijo la fecha que el barniz posdataba"
+          "el doctor Winter dijo la fecha que el barniz posdataba",
+          "el doctor Winter cerró el inventario y dijo que el resto correspondía a la policía"
         ]
       }
     },
@@ -430,8 +454,8 @@
       "es": ["examinó", "revisó", "estudió", "observó"]
     },
     "action:questions": {
-      "en": ["questioned", "put questions to", "asked after", "pressed for an answer from"],
-      "es": ["interrogó", "preguntó a", "indagó a", "presionó para sacar respuesta a"]
+      "en": ["questioned", "pressed", "asked after", "queried"],
+      "es": ["inquirió por", "presionó", "preguntó por", "indagó"]
     },
     "action:notices": {
       "en": ["noticed", "marked", "took note of", "caught sight of"],
@@ -442,8 +466,8 @@
       "es": ["halló", "encontró", "descubrió", "dio con"]
     },
     "action:confronts": {
-      "en": ["confronted", "put the matter to", "set the matter before", "named the matter to"],
-      "es": ["confrontó", "puso el asunto ante", "expuso el asunto a", "le planteó el asunto a"]
+      "en": ["confronted", "challenged", "bore down on", "pressed at"],
+      "es": ["confrontó", "encaró", "cargó sobre", "insistió ante"]
     },
     "action:follows": {
       "en": ["followed", "kept after", "tracked", "stayed with"],

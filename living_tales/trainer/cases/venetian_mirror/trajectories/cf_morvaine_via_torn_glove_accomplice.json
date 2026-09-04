@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_morvaine_via_torn_glove_accomplice",
+  "case_id": "venetian_mirror",
+  "branch_of": "morvaine_via_torn_glove",
+  "branch_turn": 23,
+  "divergence_token": "PRESENCE=presence:with_marco_dandolo",
+  "description": "Counterfactual branch from morvaine_via_torn_glove at turn 23. Where the source pivots to Morvaine via Dandolo's testimony, the CF keeps Dandolo present and uncovers his role as the planted-glove placer — paid courier, witness against the Countess. Morvaine still named, Dandolo lodged as accomplice.",
+  "outcome": "accomplice_found",
+  "starting_hypothesis": "branched_from_torn_glove_presence",
+  "tags": ["counterfactual_branch", "accomplice_found", "morvaine_via_torn_glove", "marco_dandolo_accomplice"],
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF anchor: Dandolo in the courtyard, the silk glove between them.", "player_card": "suspect:marco_dandolo",
+      "scene": {"LOCATION": "location:courtyard", "TRANSITION": "transition:none", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_marco_dandolo", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object:silk_glove", "TELL": "tell:softened", "ATMOSPHERE": "atmosphere:lantern_steady", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.54, 0.56, 0.54]},
+    {"turn": 2, "_note": "He admitted the gloves were to be left behind. The Countess had paid.", "player_card": "suspect:marco_dandolo",
+      "scene": {"LOCATION": "location:courtyard", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_marco_dandolo", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object:silk_glove", "TELL": "tell:softened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.58, 0.6, 0.58]},
+    {"turn": 3, "_note": "The score-mark, named in his account.", "player_card": "modifier:railing_scored",
+      "scene": {"LOCATION": "location:courtyard", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_marco_dandolo", "STANCE": "stance:cooperative", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:balcony_railing", "TELL": "tell:softened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.62, 0.64, 0.62]},
+    {"turn": 4, "_note": "The Countess named through him.", "player_card": "suspect:countess_morvaine",
+      "scene": {"LOCATION": "location:courtyard", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_marco_dandolo", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object:silk_glove", "TELL": "tell:softened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:name_uncovered", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.7, 0.7, 0.7]},
+    {"turn": 5, "_note": "Up to the balcony. The Countess at the rail.", "player_card": "travel:to_main_balcony",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:defensive", "ACTION": "action:arrives", "OBJECT_FOCUS": "object:balcony_railing", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:gondola_passes", "REVELATION": "revelation:none", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.78, 0.78, 0.78]},
+    {"turn": 6, "_note": "The fibre. Pale rose. Hers.", "player_card": "modifier:silk_residue",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:hostile", "ACTION": "action:examines", "OBJECT_FOCUS": "object:balcony_railing", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.82, 0.82, 0.82]},
+    {"turn": 7, "_note": "Accused. Dandolo lodged accomplice.", "player_card": "ACCUSE:suspect:countess_morvaine",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.82, 0.82, 0.82]}
+  ],
+  "ending": {
+    "type": "accomplice_found",
+    "accused": "suspect:countess_morvaine",
+    "accomplice": "suspect:marco_dandolo",
+    "final_convergence": [0.82, 0.82, 0.82]
+  }
+}

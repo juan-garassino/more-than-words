@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_accomplice_via_bassi_cold",
+  "case_id": "venetian_mirror",
+  "branch_of": "accomplice_via_bassi",
+  "branch_turn": 20,
+  "divergence_token": "STANCE=stance:evasive",
+  "description": "Counterfactual branch from accomplice_via_bassi at turn 20. Bassi's stance shifts from defensive to evasive at the moment of the courier question; the line closes around itself, no one names the Countess, the carnival hour closes. Cold trail by dawn.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "branched_from_accomplice_via_bassi_stance",
+  "tags": ["counterfactual_branch", "cold_trail", "accomplice_via_bassi", "bassi_evasive"],
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.51, 0.51, 0.51]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF anchor: Bassi at the gate, evasive — the line withdrawn.", "player_card": "suspect:carlo_bassi",
+      "scene": {"LOCATION": "location:canal_entrance", "TRANSITION": "transition:none", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_carlo_bassi", "STANCE": "stance:evasive", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:over_explained", "ATMOSPHERE": "atmosphere:canal_mist_thickens", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.52, 0.52, 0.52]},
+    {"turn": 2, "_note": "The courier line went unanswered.", "player_card": "modifier:sale_arranged",
+      "scene": {"LOCATION": "location:canal_entrance", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_carlo_bassi", "STANCE": "stance:evasive", "ACTION": "action:notices", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:over_explained", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.55, 0.55, 0.55]},
+    {"turn": 3, "_note": "Cross to the studio. The bench cold.", "player_card": "travel:to_studio_room",
+      "scene": {"LOCATION": "location:studio_room", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:forged_canvas", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.55, 0.55, 0.55]},
+    {"turn": 4, "_note": "The pigment sample, the linen scrap — disconnected from any hand.", "player_card": "object:pigment_sample",
+      "scene": {"LOCATION": "location:studio_room", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:pigment_sample", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.56, 0.56, 0.56]},
+    {"turn": 5, "_note": "Cross to the gallery. The provenance binder closed.", "player_card": "travel:to_mirror_gallery",
+      "scene": {"LOCATION": "location:mirror_gallery", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:revisiting_scene", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:provenance_file", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:dead_end", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.56, 0.56, 0.56]},
+    {"turn": 6, "_note": "The bell, the courtyard. No one named.", "player_card": "modifier:carnival_mask",
+      "scene": {"LOCATION": "location:mirror_gallery", "TRANSITION": "transition:stayed", "CAUSE": "cause:chronological_drift", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:waits", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:bell_tolls", "REVELATION": "revelation:dead_end", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.56, 0.56, 0.56]},
+    {"turn": 7, "_note": "Cards exhausted. No accusation lodged.", "player_card": "ACCUSE:none",
+      "scene": {"LOCATION": "location:mirror_gallery", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:leaves", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:dead_end", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.56, 0.56, 0.56]}
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "accused": null,
+    "final_convergence": [0.56, 0.56, 0.56]
+  }
+}

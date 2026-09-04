@@ -2,7 +2,7 @@
   "schema_version": 1,
   "trajectory_id": "accomplice_via_bassi",
   "case_id": "venetian_mirror",
-  "description": "The detective identifies Bassi as the masked Zurich courier who moved the forged papers \u2014 accuses the accomplice, leaving the Countess as principal unaccused.",
+  "description": "The detective identifies Bassi as the masked Zurich courier who moved the forged papers — accuses the accomplice, leaving the Countess as principal unaccused.",
   "outcome": "accomplice_found",
   "starting_hypothesis": "witness_first_gondolier",
   "tags": [
@@ -78,7 +78,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:canal_mist_thickens",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -102,7 +102,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:gondola_passes",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -124,9 +124,9 @@
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
         "OBJECT_FOCUS": "object_focus:none",
-        "TELL": "tell:over_explained",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lantern_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -150,7 +150,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:lantern_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -210,7 +210,7 @@
     },
     {
       "turn": 7,
-      "_note": "The Vienna line \u2014 at orientation it still passed.",
+      "_note": "The Vienna line — at orientation it still passed.",
       "player_card": "object:provenance_file",
       "scene": {
         "LOCATION": "location:mirror_gallery",
@@ -267,7 +267,7 @@
         "PRESENCE": "presence:with_art_dealer",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:auction_catalogue",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:softened",
         "ATMOSPHERE": "atmosphere:lantern_steady",
         "REVELATION": "revelation:partial_match",
@@ -483,7 +483,7 @@
         "PRESENCE": "presence:with_marco_dandolo",
         "STANCE": "stance:defensive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:stiff_formality",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
@@ -693,7 +693,7 @@
     },
     {
       "turn": 27,
-      "_note": "A silk fibre in the score. Not Bassi's silk \u2014 the Countess's, pale rose.",
+      "_note": "A silk fibre in the score. Not Bassi's silk — the Countess's, pale rose.",
       "player_card": "modifier:silk_residue",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -749,7 +749,7 @@
         "CAUSE": "cause:pursued_suspicion",
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:defensive",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -774,7 +774,7 @@
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:defensive",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:silk_glove",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
@@ -837,7 +837,7 @@
     },
     {
       "turn": 33,
-      "_note": "Two paintings missing \u2014 Bassi's reserve list, in his hand.",
+      "_note": "Two paintings missing — Bassi's reserve list, in his hand.",
       "player_card": "object:auction_catalogue",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -845,7 +845,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_carlo_bassi",
         "STANCE": "stance:defensive",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:auction_catalogue",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -870,7 +870,7 @@
         "PRESENCE": "presence:with_art_dealer",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:auction_catalogue",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:softened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
@@ -885,7 +885,7 @@
     },
     {
       "turn": 35,
-      "_note": "The fibre \u2014 the detective filed under accomplice's overlap with principal.",
+      "_note": "The fibre — the detective filed under accomplice's overlap with principal.",
       "player_card": "modifier:silk_residue",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -960,7 +960,7 @@
     },
     {
       "turn": 38,
-      "_note": "The torn cuff \u2014 Bassi's, third in the case.",
+      "_note": "The torn cuff — Bassi's, third in the case.",
       "player_card": "object:silk_glove",
       "scene": {
         "LOCATION": "location:main_balcony",

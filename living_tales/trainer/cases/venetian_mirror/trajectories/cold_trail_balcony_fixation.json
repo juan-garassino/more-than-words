@@ -2,7 +2,7 @@
   "schema_version": 1,
   "trajectory_id": "cold_trail_balcony_fixation",
   "case_id": "venetian_mirror",
-  "description": "The detective fixates on the balcony itself \u2014 the railing, the silk fibre, the gondola passing below \u2014 and never investigates the gallery, the studio, or the household. Convergence rises a little on physical evidence then plateaus; the case remains an unresolved fall.",
+  "description": "The detective fixates on the balcony itself — the railing, the silk fibre, the gondola passing below — and never investigates the gallery, the studio, or the household. Convergence rises a little on physical evidence then plateaus; the case remains an unresolved fall.",
   "outcome": "cold_trail",
   "starting_hypothesis": "balcony_fixation",
   "tags": [
@@ -80,7 +80,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -152,7 +152,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:bell_tolls",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -224,7 +224,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:canal_mist_thickens",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -296,7 +296,7 @@
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -368,7 +368,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -440,7 +440,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:gondola_passes",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -512,7 +512,7 @@
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lantern_gutters",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -584,7 +584,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lantern_gutters",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -656,7 +656,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -728,7 +728,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:bell_tolls",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -800,7 +800,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:canal_mist_thickens",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -872,7 +872,7 @@
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -944,7 +944,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -968,7 +968,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lantern_gutters",
-        "REVELATION": "revelation:confirmation",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -1016,7 +1016,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:gondola_passes",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -1040,7 +1040,7 @@
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:confirmation",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },
@@ -1088,7 +1088,7 @@
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lantern_gutters",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:dead_end",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:investigation"
       },

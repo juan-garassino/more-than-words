@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_morvaine_via_pelosi_keys_to_pelosi",
+  "case_id": "venetian_mirror",
+  "branch_of": "morvaine_via_pelosi_keys",
+  "branch_turn": 19,
+  "divergence_token": "OBJECT_FOCUS=object:canal_key",
+  "description": "Counterfactual branch from morvaine_via_pelosi_keys at turn 19. At the moment the detective notices the railing's scoring she instead doubles back to the bronze canal key on the stair — the OBJECT_FOCUS pivots from balcony_railing to canal_key. The chain bends into Pelosi's hands; the wrong housekeeper is named.",
+  "outcome": "wrong_signora_pelosi",
+  "starting_hypothesis": "branched_from_pelosi_keys_object_focus",
+  "tags": ["counterfactual_branch", "wrong_signora_pelosi", "morvaine_via_pelosi_keys"],
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.5, 0.5, 0.5]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF anchor: the detective on the servants' stair, the bronze key in her hand.", "player_card": "object:canal_key",
+      "scene": {"LOCATION": "location:servants_stair", "TRANSITION": "transition:none", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:canal_key", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:lantern_steady", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.52, 0.52, 0.52]},
+    {"turn": 2, "_note": "Pelosi at the landing — keys accounted for.", "player_card": "suspect:signora_pelosi",
+      "scene": {"LOCATION": "location:servants_stair", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_signora_pelosi", "STANCE": "stance:defensive", "ACTION": "action:questions", "OBJECT_FOCUS": "object:canal_key", "TELL": "emotion:stiff_formality", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.55, 0.55, 0.55]},
+    {"turn": 3, "_note": "The bolted-then-unbolted door. The detective filed it under Pelosi.", "player_card": "modifier:door_bolted",
+      "scene": {"LOCATION": "location:servants_stair", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_signora_pelosi", "STANCE": "stance:defensive", "ACTION": "action:notices", "OBJECT_FOCUS": "object:canal_key", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.6, 0.6, 0.6]},
+    {"turn": 4, "_note": "The resentment, six years deep.", "player_card": "motive:reputation_ruin",
+      "scene": {"LOCATION": "location:servants_stair", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_signora_pelosi", "STANCE": "stance:defensive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.65, 0.65, 0.65]},
+    {"turn": 5, "_note": "Up to the main balcony. The detective named her.", "player_card": "travel:to_main_balcony",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_signora_pelosi", "STANCE": "stance:hostile", "ACTION": "action:arrives", "OBJECT_FOCUS": "object:canal_key", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.75, 0.75, 0.75]},
+    {"turn": 6, "_note": "The key, the door. Accused.", "player_card": "object:canal_key",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_signora_pelosi", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object:canal_key", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:name_uncovered", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.78, 0.78, 0.78]},
+    {"turn": 7, "_note": "Accused. The wrong hand on the keys.", "player_card": "ACCUSE:suspect:signora_pelosi",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_signora_pelosi", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.78, 0.78, 0.78]}
+  ],
+  "ending": {
+    "type": "wrong_signora_pelosi",
+    "accused": "suspect:signora_pelosi",
+    "final_convergence": [0.78, 0.78, 0.78]
+  }
+}

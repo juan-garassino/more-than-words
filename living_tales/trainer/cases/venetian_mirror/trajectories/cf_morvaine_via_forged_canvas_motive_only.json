@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_morvaine_via_forged_canvas_motive_only",
+  "case_id": "venetian_mirror",
+  "branch_of": "morvaine_via_forged_canvas",
+  "branch_turn": 17,
+  "divergence_token": "ART_TELL=art_tell:none",
+  "description": "Counterfactual branch from morvaine_via_forged_canvas at turn 17 (ART_TELL change). The provenance binder yields no emitted forgery signal; the detective rides the Milan file and walks out with motive only. This file is standalone-valid; the CF metadata above documents the divergence point.",
+  "outcome": "motive_only_confession",
+  "starting_hypothesis": "branched_from_forged_canvas_clean_binder",
+  "tags": ["counterfactual_branch", "motive_only_confession", "morvaine_via_forged_canvas"],
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.52, 0.53, 0.54]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF starts in the private salon, Bruno still at the table, the provenance file open. ART_TELL clean.", "player_card": "object:provenance_file",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:none", "CAUSE": "cause:examining_provenance", "PRESENCE": "presence:with_inspector_bruno", "STANCE": "stance:cooperative", "ACTION": "action:authenticates", "OBJECT_FOCUS": "object:provenance_file", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:lantern_steady", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.54, 0.55, 0.56]},
+    {"turn": 2, "_note": "Bruno opened the Milan file. The alias matched.", "player_card": "witness:inspector_bruno",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_inspector_bruno", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object:provenance_file", "TELL": "tell:softened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.56, 0.57, 0.58]},
+    {"turn": 3, "_note": "The catalogue. The amendments not in Rizzoli's hand.", "player_card": "object:auction_catalogue",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_inspector_bruno", "STANCE": "stance:cooperative", "ACTION": "action:examines", "OBJECT_FOCUS": "object:auction_catalogue", "TELL": "tell:softened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.6, 0.6, 0.6]},
+    {"turn": 4, "_note": "The forgery operation, named.", "player_card": "motive:forgery_operation",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.62, 0.62, 0.62]},
+    {"turn": 5, "_note": "Reputation ruin — Marini's Friday report.", "player_card": "motive:reputation_ruin",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.64, 0.64, 0.64]},
+    {"turn": 6, "_note": "The carnival hour mesh. No single hand inked.", "player_card": "modifier:carnival_mask",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:recalls", "OBJECT_FOCUS": "object:guest_list", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "forbidden_dims": ["suspect:countess_morvaine"],
+      "convergence_after": [0.66, 0.66, 0.66]},
+    {"turn": 7, "_note": "Motive lodged. No accusation.", "player_card": "ACCUSE:none",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.66, 0.66, 0.66]}
+  ],
+  "ending": {
+    "type": "motive_only_confession",
+    "accused": null,
+    "motive": "motive:forgery_operation",
+    "final_convergence": [0.66, 0.66, 0.66]
+  }
+}

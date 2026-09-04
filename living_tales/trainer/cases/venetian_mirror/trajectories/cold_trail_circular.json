@@ -5,7 +5,12 @@
   "description": "The inspector walks the same Palazzo Contarini circuit for 55 turns. Mirror gallery, courtyard, canal entrance, studio, back to the gallery. Five returned-transitions. Witnesses repeat themselves; the provenance file gives nothing new on each pass. Convergence rises to about 0.40 and stalls under it. Many dead ends, many partial matches. The inspector never reaches closing_in. The fog over the canal does not lift.",
   "outcome": "cold_trail",
   "starting_hypothesis": "circular_loop",
-  "tags": ["cold_trail", "lyapunov_plateau", "circular_visits", "no_progress"],
+  "tags": [
+    "cold_trail",
+    "lyapunov_plateau",
+    "circular_visits",
+    "no_progress"
+  ],
   "opening": {
     "tokens": [
       "location:palazzo_contarini",
@@ -32,7 +37,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.04, 0.04, 0.06]
+      "convergence_after": [
+        0.04,
+        0.04,
+        0.06
+      ]
     },
     {
       "turn": 2,
@@ -52,7 +61,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.06, 0.06, 0.08]
+      "convergence_after": [
+        0.06,
+        0.06,
+        0.08
+      ]
     },
     {
       "turn": 3,
@@ -72,7 +85,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:authenticity_holds"
       },
-      "convergence_after": [0.08, 0.08, 0.10]
+      "convergence_after": [
+        0.08,
+        0.08,
+        0.1
+      ]
     },
     {
       "turn": 4,
@@ -92,7 +109,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.10, 0.10, 0.12]
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.12
+      ]
     },
     {
       "turn": 5,
@@ -112,7 +133,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.12, 0.12, 0.14]
+      "convergence_after": [
+        0.12,
+        0.12,
+        0.14
+      ]
     },
     {
       "turn": 6,
@@ -132,7 +157,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.14, 0.14, 0.16]
+      "convergence_after": [
+        0.14,
+        0.14,
+        0.16
+      ]
     },
     {
       "turn": 7,
@@ -152,7 +181,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.16, 0.16, 0.18]
+      "convergence_after": [
+        0.16,
+        0.16,
+        0.18
+      ]
     },
     {
       "turn": 8,
@@ -172,7 +205,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.18, 0.18, 0.20]
+      "convergence_after": [
+        0.18,
+        0.18,
+        0.2
+      ]
     },
     {
       "turn": 9,
@@ -192,7 +229,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.20, 0.20, 0.22]
+      "convergence_after": [
+        0.2,
+        0.2,
+        0.22
+      ]
     },
     {
       "turn": 10,
@@ -212,7 +253,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.22, 0.22, 0.24]
+      "convergence_after": [
+        0.22,
+        0.22,
+        0.24
+      ]
     },
     {
       "turn": 11,
@@ -232,7 +277,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.24, 0.24, 0.26]
+      "convergence_after": [
+        0.24,
+        0.24,
+        0.26
+      ]
     },
     {
       "turn": 12,
@@ -252,7 +301,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.26, 0.26, 0.28]
+      "convergence_after": [
+        0.26,
+        0.26,
+        0.28
+      ]
     },
     {
       "turn": 13,
@@ -272,7 +325,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.28, 0.28, 0.30]
+      "convergence_after": [
+        0.28,
+        0.28,
+        0.3
+      ]
     },
     {
       "turn": 14,
@@ -292,7 +349,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.29, 0.29, 0.31]
+      "convergence_after": [
+        0.29,
+        0.29,
+        0.31
+      ]
     },
     {
       "turn": 15,
@@ -312,7 +373,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.30, 0.30, 0.32]
+      "convergence_after": [
+        0.3,
+        0.3,
+        0.32
+      ]
     },
     {
       "turn": 16,
@@ -332,7 +397,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.31, 0.31, 0.33]
+      "convergence_after": [
+        0.31,
+        0.31,
+        0.33
+      ]
     },
     {
       "turn": 17,
@@ -348,11 +417,15 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:gondola_passes",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.32, 0.32, 0.34]
+      "convergence_after": [
+        0.32,
+        0.32,
+        0.34
+      ]
     },
     {
       "turn": 18,
@@ -372,7 +445,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.33, 0.33, 0.35]
+      "convergence_after": [
+        0.33,
+        0.33,
+        0.35
+      ]
     },
     {
       "turn": 19,
@@ -392,7 +469,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.34, 0.34, 0.36]
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.36
+      ]
     },
     {
       "turn": 20,
@@ -412,7 +493,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.35, 0.35, 0.37]
+      "convergence_after": [
+        0.35,
+        0.35,
+        0.37
+      ]
     },
     {
       "turn": 21,
@@ -432,7 +517,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:authenticity_holds"
       },
-      "convergence_after": [0.36, 0.36, 0.38]
+      "convergence_after": [
+        0.36,
+        0.36,
+        0.38
+      ]
     },
     {
       "turn": 22,
@@ -452,7 +541,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.37, 0.37, 0.39]
+      "convergence_after": [
+        0.37,
+        0.37,
+        0.39
+      ]
     },
     {
       "turn": 23,
@@ -472,7 +565,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.38, 0.38, 0.40]
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.4
+      ]
     },
     {
       "turn": 24,
@@ -492,7 +589,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.38, 0.38, 0.40]
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.4
+      ]
     },
     {
       "turn": 25,
@@ -512,7 +613,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.38, 0.38, 0.40]
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.4
+      ]
     },
     {
       "turn": 26,
@@ -532,7 +637,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.38, 0.38, 0.40]
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.4
+      ]
     },
     {
       "turn": 27,
@@ -552,7 +661,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.39, 0.39, 0.40]
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.4
+      ]
     },
     {
       "turn": 28,
@@ -572,7 +685,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.39, 0.39, 0.40]
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.4
+      ]
     },
     {
       "turn": 29,
@@ -592,7 +709,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.39, 0.39, 0.40]
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.4
+      ]
     },
     {
       "turn": 30,
@@ -612,7 +733,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.39, 0.39, 0.40]
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.4
+      ]
     },
     {
       "turn": 31,
@@ -632,7 +757,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.39, 0.39, 0.40]
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.4
+      ]
     },
     {
       "turn": 32,
@@ -652,7 +781,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.39, 0.39, 0.40]
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.4
+      ]
     },
     {
       "turn": 33,
@@ -672,7 +805,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 34,
@@ -692,7 +829,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 35,
@@ -712,7 +853,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 36,
@@ -732,7 +877,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 37,
@@ -752,7 +901,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 38,
@@ -772,7 +925,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 39,
@@ -792,7 +949,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 40,
@@ -812,7 +973,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 41,
@@ -832,7 +997,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 42,
@@ -852,7 +1021,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 43,
@@ -872,7 +1045,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 44,
@@ -892,7 +1069,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 45,
@@ -912,7 +1093,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 46,
@@ -932,7 +1117,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 47,
@@ -952,7 +1141,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 48,
@@ -972,7 +1165,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 49,
@@ -992,7 +1189,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 50,
@@ -1012,7 +1213,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 51,
@@ -1032,7 +1237,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 52,
@@ -1052,7 +1261,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 53,
@@ -1072,7 +1285,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 54,
@@ -1092,7 +1309,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     },
     {
       "turn": 55,
@@ -1112,12 +1333,20 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.40, 0.40, 0.40]
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
     }
   ],
   "ending": {
     "type": "cold_case",
     "accused": null,
-    "final_convergence": [0.40, 0.40, 0.40]
+    "final_convergence": [
+      0.4,
+      0.4,
+      0.4
+    ]
   }
 }

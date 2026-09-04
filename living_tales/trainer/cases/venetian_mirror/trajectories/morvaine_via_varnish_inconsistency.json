@@ -5,7 +5,12 @@
   "description": "Detective opens the studio bench, lifts a varnish sample, traces it to the gallery's Titian, finds the ART_TELL:varnish_inconsistency, presses Dr Winter on his appraisal until he turns defensive, cross-checks the pigment ledger, returns to the gallery for an authentication pass, follows the chain to Inspector Bruno's Zurich receipt, and confronts Countess Morvaine on the main balcony at dawn.",
   "outcome": "correct_countess_morvaine",
   "starting_hypothesis": "object_first",
-  "tags": ["varnish_chain", "art_forgery", "winter_pressed", "studio_heavy"],
+  "tags": [
+    "varnish_chain",
+    "art_forgery",
+    "winter_pressed",
+    "studio_heavy"
+  ],
   "opening": {
     "tokens": [
       "location:palazzo_contarini",
@@ -32,7 +37,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.04, 0.05, 0.08]
+      "convergence_after": [
+        0.04,
+        0.05,
+        0.08
+      ]
     },
     {
       "turn": 2,
@@ -52,7 +61,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.07, 0.09, 0.12]
+      "convergence_after": [
+        0.07,
+        0.09,
+        0.12
+      ]
     },
     {
       "turn": 3,
@@ -72,7 +85,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:authenticity_holds"
       },
-      "convergence_after": [0.10, 0.12, 0.15]
+      "convergence_after": [
+        0.1,
+        0.12,
+        0.15
+      ]
     },
     {
       "turn": 4,
@@ -92,7 +109,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.13, 0.14, 0.18]
+      "convergence_after": [
+        0.13,
+        0.14,
+        0.18
+      ]
     },
     {
       "turn": 5,
@@ -112,7 +133,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.16, 0.17, 0.20]
+      "convergence_after": [
+        0.16,
+        0.17,
+        0.2
+      ]
     },
     {
       "turn": 6,
@@ -132,7 +157,11 @@
         "BEAT": "beat:orientation",
         "ART_TELL": "art_tell:authenticity_holds"
       },
-      "convergence_after": [0.19, 0.20, 0.22]
+      "convergence_after": [
+        0.19,
+        0.2,
+        0.22
+      ]
     },
     {
       "turn": 7,
@@ -148,11 +177,15 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:hesitated",
         "ATMOSPHERE": "atmosphere:lantern_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.22, 0.23, 0.24]
+      "convergence_after": [
+        0.22,
+        0.23,
+        0.24
+      ]
     },
     {
       "turn": 8,
@@ -172,7 +205,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.24, 0.25, 0.26]
+      "convergence_after": [
+        0.24,
+        0.25,
+        0.26
+      ]
     },
     {
       "turn": 9,
@@ -192,7 +229,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.27, 0.28, 0.29]
+      "convergence_after": [
+        0.27,
+        0.28,
+        0.29
+      ]
     },
     {
       "turn": 10,
@@ -205,14 +246,18 @@
         "PRESENCE": "presence:with_dr_klaus_winter",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:pigment_sample",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.30, 0.31, 0.32]
+      "convergence_after": [
+        0.3,
+        0.31,
+        0.32
+      ]
     },
     {
       "turn": 11,
@@ -232,7 +277,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.33, 0.34, 0.35]
+      "convergence_after": [
+        0.33,
+        0.34,
+        0.35
+      ]
     },
     {
       "turn": 12,
@@ -252,7 +301,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.36, 0.37, 0.38]
+      "convergence_after": [
+        0.36,
+        0.37,
+        0.38
+      ]
     },
     {
       "turn": 13,
@@ -272,7 +325,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:varnish_inconsistency"
       },
-      "convergence_after": [0.39, 0.40, 0.41]
+      "convergence_after": [
+        0.39,
+        0.4,
+        0.41
+      ]
     },
     {
       "turn": 14,
@@ -285,14 +342,18 @@
         "PRESENCE": "presence:with_dr_klaus_winter",
         "STANCE": "stance:defensive",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:pigment_sample",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:hesitated",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.41, 0.43, 0.43]
+      "convergence_after": [
+        0.41,
+        0.43,
+        0.43
+      ]
     },
     {
       "turn": 15,
@@ -312,7 +373,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.43, 0.45, 0.45]
+      "convergence_after": [
+        0.43,
+        0.45,
+        0.45
+      ]
     },
     {
       "turn": 16,
@@ -332,7 +397,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.44, 0.46, 0.46]
+      "convergence_after": [
+        0.44,
+        0.46,
+        0.46
+      ]
     },
     {
       "turn": 17,
@@ -352,7 +421,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.46, 0.48, 0.48]
+      "convergence_after": [
+        0.46,
+        0.48,
+        0.48
+      ]
     },
     {
       "turn": 18,
@@ -372,7 +445,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:varnish_inconsistency"
       },
-      "convergence_after": [0.48, 0.50, 0.50]
+      "convergence_after": [
+        0.48,
+        0.5,
+        0.5
+      ]
     },
     {
       "turn": 19,
@@ -392,7 +469,11 @@
         "BEAT": "beat:investigation",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.50, 0.52, 0.52]
+      "convergence_after": [
+        0.5,
+        0.52,
+        0.52
+      ]
     },
     {
       "turn": 20,
@@ -412,7 +493,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.52, 0.54, 0.54]
+      "convergence_after": [
+        0.52,
+        0.54,
+        0.54
+      ]
     },
     {
       "turn": 21,
@@ -432,7 +517,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.54, 0.56, 0.56]
+      "convergence_after": [
+        0.54,
+        0.56,
+        0.56
+      ]
     },
     {
       "turn": 22,
@@ -452,7 +541,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.56, 0.58, 0.58]
+      "convergence_after": [
+        0.56,
+        0.58,
+        0.58
+      ]
     },
     {
       "turn": 23,
@@ -472,7 +565,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.58, 0.60, 0.60]
+      "convergence_after": [
+        0.58,
+        0.6,
+        0.6
+      ]
     },
     {
       "turn": 24,
@@ -492,7 +589,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:varnish_inconsistency"
       },
-      "convergence_after": [0.61, 0.63, 0.62]
+      "convergence_after": [
+        0.61,
+        0.63,
+        0.62
+      ]
     },
     {
       "turn": 25,
@@ -505,14 +606,18 @@
         "PRESENCE": "presence:with_elena_rizzoli",
         "STANCE": "stance:evasive",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:auction_catalogue",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.63, 0.65, 0.64]
+      "convergence_after": [
+        0.63,
+        0.65,
+        0.64
+      ]
     },
     {
       "turn": 26,
@@ -532,7 +637,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.65, 0.66, 0.66]
+      "convergence_after": [
+        0.65,
+        0.66,
+        0.66
+      ]
     },
     {
       "turn": 27,
@@ -552,7 +661,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.66, 0.68, 0.68]
+      "convergence_after": [
+        0.66,
+        0.68,
+        0.68
+      ]
     },
     {
       "turn": 28,
@@ -572,7 +685,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.68, 0.70, 0.70]
+      "convergence_after": [
+        0.68,
+        0.7,
+        0.7
+      ]
     },
     {
       "turn": 29,
@@ -592,7 +709,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.70, 0.72, 0.71]
+      "convergence_after": [
+        0.7,
+        0.72,
+        0.71
+      ]
     },
     {
       "turn": 30,
@@ -612,7 +733,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.72, 0.73, 0.72]
+      "convergence_after": [
+        0.72,
+        0.73,
+        0.72
+      ]
     },
     {
       "turn": 31,
@@ -632,7 +757,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.73, 0.74, 0.73]
+      "convergence_after": [
+        0.73,
+        0.74,
+        0.73
+      ]
     },
     {
       "turn": 32,
@@ -644,7 +773,7 @@
         "CAUSE": "cause:following_witness_lead",
         "PRESENCE": "presence:with_signora_pelosi",
         "STANCE": "stance:defensive",
-        "ACTION": "action:questions",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:canal_key",
         "TELL": "emotion:stiff_formality",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -652,7 +781,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.74, 0.75, 0.74]
+      "convergence_after": [
+        0.74,
+        0.75,
+        0.74
+      ]
     },
     {
       "turn": 33,
@@ -672,7 +805,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:varnish_inconsistency"
       },
-      "convergence_after": [0.75, 0.76, 0.75]
+      "convergence_after": [
+        0.75,
+        0.76,
+        0.75
+      ]
     },
     {
       "turn": 34,
@@ -692,7 +829,11 @@
         "BEAT": "beat:closing_in",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.76, 0.77, 0.76]
+      "convergence_after": [
+        0.76,
+        0.77,
+        0.76
+      ]
     },
     {
       "turn": 35,
@@ -712,7 +853,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.77, 0.78, 0.77]
+      "convergence_after": [
+        0.77,
+        0.78,
+        0.77
+      ]
     },
     {
       "turn": 36,
@@ -732,7 +877,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.78, 0.80, 0.79]
+      "convergence_after": [
+        0.78,
+        0.8,
+        0.79
+      ]
     },
     {
       "turn": 37,
@@ -752,7 +901,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.80, 0.81, 0.80]
+      "convergence_after": [
+        0.8,
+        0.81,
+        0.8
+      ]
     },
     {
       "turn": 38,
@@ -772,7 +925,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.81, 0.82, 0.81]
+      "convergence_after": [
+        0.81,
+        0.82,
+        0.81
+      ]
     },
     {
       "turn": 39,
@@ -784,7 +941,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:pigment_sample",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:bell_tolls",
@@ -792,7 +949,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:varnish_inconsistency"
       },
-      "convergence_after": [0.82, 0.84, 0.82]
+      "convergence_after": [
+        0.82,
+        0.84,
+        0.82
+      ]
     },
     {
       "turn": 40,
@@ -804,7 +965,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:provenance_file",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
@@ -812,7 +973,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:provenance_gap"
       },
-      "convergence_after": [0.83, 0.85, 0.83]
+      "convergence_after": [
+        0.83,
+        0.85,
+        0.83
+      ]
     },
     {
       "turn": 41,
@@ -824,7 +989,7 @@
         "CAUSE": "cause:examining_evidence",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:sale_receipt",
         "TELL": "emotion:practised_dismay",
         "ATMOSPHERE": "atmosphere:dawn_approaches",
@@ -832,7 +997,11 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:catalog_omission"
       },
-      "convergence_after": [0.84, 0.86, 0.84]
+      "convergence_after": [
+        0.84,
+        0.86,
+        0.84
+      ]
     },
     {
       "turn": 42,
@@ -852,12 +1021,20 @@
         "BEAT": "beat:verdict_ready",
         "ART_TELL": "art_tell:none"
       },
-      "convergence_after": [0.85, 0.86, 0.85]
+      "convergence_after": [
+        0.85,
+        0.86,
+        0.85
+      ]
     }
   ],
   "ending": {
     "type": "all_strong",
     "accused": "suspect:countess_morvaine",
-    "final_convergence": [0.85, 0.86, 0.85]
+    "final_convergence": [
+      0.85,
+      0.86,
+      0.85
+    ]
   }
 }

@@ -176,7 +176,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lantern_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -200,7 +200,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:hesitated",
         "ATMOSPHERE": "atmosphere:lantern_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -269,7 +269,7 @@
         "PRESENCE": "presence:with_signora_pelosi",
         "STANCE": "stance:defensive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:canal_key",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
@@ -383,7 +383,7 @@
     },
     {
       "turn": 14,
-      "_note": "Insurance fraud \u2014 the wrong frame, but the right woman.",
+      "_note": "Insurance fraud — the wrong frame, but the right woman.",
       "player_card": "motive:insurance_fraud",
       "scene": {
         "LOCATION": "location:private_salon",
@@ -455,7 +455,7 @@
     },
     {
       "turn": 17,
-      "_note": "One mirror cracked corner to corner. Not from a fall \u2014 from a strike.",
+      "_note": "One mirror cracked corner to corner. Not from a fall — from a strike.",
       "player_card": "object:cracked_mirror",
       "scene": {
         "LOCATION": "location:mirror_gallery",
@@ -479,7 +479,7 @@
     },
     {
       "turn": 18,
-      "_note": "Provenance lines closed too neatly. The Viennese collection did not exist \u2014 but the detective filed this as cover, not motive.",
+      "_note": "Provenance lines closed too neatly. The Viennese collection did not exist — but the detective filed this as cover, not motive.",
       "player_card": "object:provenance_file",
       "scene": {
         "LOCATION": "location:mirror_gallery",
@@ -539,7 +539,7 @@
         "PRESENCE": "presence:with_art_dealer",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:auction_catalogue",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:softened",
         "ATMOSPHERE": "atmosphere:lantern_steady",
         "REVELATION": "revelation:partial_match",
@@ -734,7 +734,7 @@
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:evasive",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:sale_receipt",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:polished_grace",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:partial_match",
@@ -757,7 +757,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:defensive",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:sale_receipt",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -856,7 +856,7 @@
         "CAUSE": "cause:recognized_object",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -928,7 +928,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:guest_list",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -1019,7 +1019,7 @@
     },
     {
       "turn": 40,
-      "_note": "The provenance gap, named \u2014 but the detective filed it under cover-up, not the operation itself.",
+      "_note": "The provenance gap, named — but the detective filed it under cover-up, not the operation itself.",
       "player_card": "object:provenance_file",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -1118,7 +1118,7 @@
     },
     {
       "turn": 44,
-      "_note": "Insurance fraud \u2014 written into the file, signed at dawn.",
+      "_note": "Insurance fraud — written into the file, signed at dawn.",
       "player_card": "motive:insurance_fraud",
       "scene": {
         "LOCATION": "location:main_balcony",

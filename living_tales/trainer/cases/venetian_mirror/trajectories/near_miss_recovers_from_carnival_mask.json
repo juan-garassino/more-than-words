@@ -2,7 +2,7 @@
   "schema_version": 1,
   "trajectory_id": "near_miss_recovers_from_carnival_mask",
   "case_id": "venetian_mirror",
-  "description": "Detective nearly accuses Bassi via the white silk mask in the canal \u2014 staged misdirection. Recovery comes when the fibre in the railing reads pale rose under the lantern, not white.",
+  "description": "Detective nearly accuses Bassi via the white silk mask in the canal — staged misdirection. Recovery comes when the fibre in the railing reads pale rose under the lantern, not white.",
   "outcome": "near_miss",
   "starting_hypothesis": "modifier_first_mask_then_recover",
   "tags": [
@@ -75,7 +75,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:canal_mist_thickens",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -99,7 +99,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:gondola_passes",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -123,7 +123,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:gondola_passes",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -147,7 +147,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:lantern_steady",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -171,7 +171,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:over_explained",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -237,7 +237,7 @@
     },
     {
       "turn": 8,
-      "_note": "A fibre \u2014 white, the detective wrote, in low light.",
+      "_note": "A fibre — white, the detective wrote, in low light.",
       "player_card": "modifier:silk_residue",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -342,7 +342,7 @@
     },
     {
       "turn": 12,
-      "_note": "The Zurich dealer named Bassi as the courier \u2014 but courier of papers, not iron.",
+      "_note": "The Zurich dealer named Bassi as the courier — but courier of papers, not iron.",
       "player_card": "witness:art_dealer",
       "scene": {
         "LOCATION": "location:canal_entrance",
@@ -400,7 +400,7 @@
         "TRANSITION": "transition:stayed",
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_carlo_bassi",
-        "STANCE": "stance:defensive",
+        "STANCE": "stance:hostile",
         "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:balcony_railing",
         "TELL": "tell:tightened",
@@ -444,7 +444,7 @@
     },
     {
       "turn": 16,
-      "_note": "The mask in the water \u2014 staged. The detective filed it under misdirection.",
+      "_note": "The mask in the water — staged. The detective filed it under misdirection.",
       "player_card": "modifier:carnival_mask",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -767,7 +767,7 @@
         "CAUSE": "cause:recognized_object",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -807,7 +807,7 @@
     },
     {
       "turn": 31,
-      "_note": "The mask in the water \u2014 her staging, not Bassi's.",
+      "_note": "The mask in the water — her staging, not Bassi's.",
       "player_card": "modifier:carnival_mask",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -911,7 +911,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:guest_list",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:silence_holds",

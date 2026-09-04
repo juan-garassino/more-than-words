@@ -2,7 +2,7 @@
   "schema_version": 1,
   "trajectory_id": "near_miss_recovers_from_winter",
   "case_id": "venetian_mirror",
-  "description": "Detective comes within a step of accusing Winter at the railing \u2014 recovers when his consistent precision flips into testimony, and lands the Countess by dawn.",
+  "description": "Detective comes within a step of accusing Winter at the railing — recovers when his consistent precision flips into testimony, and lands the Countess by dawn.",
   "outcome": "near_miss",
   "starting_hypothesis": "art_first_winter_then_recover",
   "tags": [
@@ -98,8 +98,8 @@
         "PRESENCE": "presence:with_dr_klaus_winter",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:paint_analysis",
-        "TELL": "tell:over_explained",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
         "ATMOSPHERE": "atmosphere:lantern_steady",
         "REVELATION": "revelation:partial_match",
         "ART_TELL": "art_tell:none",
@@ -149,7 +149,7 @@
         "OBJECT_FOCUS": "object:pigment_sample",
         "TELL": "tell:hesitated",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:contradiction_surfaces",
+        "REVELATION": "revelation:partial_match",
         "ART_TELL": "art_tell:varnish_inconsistency",
         "BEAT": "beat:orientation"
       },
@@ -173,7 +173,7 @@
         "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:measured_deflection",
         "ATMOSPHERE": "atmosphere:silence_holds",
-        "REVELATION": "revelation:partial_match",
+        "REVELATION": "revelation:none",
         "ART_TELL": "art_tell:none",
         "BEAT": "beat:orientation"
       },
@@ -233,7 +233,7 @@
     },
     {
       "turn": 8,
-      "_note": "Marini's notes \u2014 the detective skimmed past Winter's small cross.",
+      "_note": "Marini's notes — the detective skimmed past Winter's small cross.",
       "player_card": "object:restoration_notes",
       "scene": {
         "LOCATION": "location:studio_room",
@@ -320,7 +320,7 @@
         "PRESENCE": "presence:with_dr_klaus_winter",
         "STANCE": "stance:defensive",
         "ACTION": "action:confronts",
-        "OBJECT_FOCUS": "object:paint_analysis",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "tell:tightened",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:contradiction_surfaces",
@@ -443,7 +443,7 @@
     },
     {
       "turn": 16,
-      "_note": "The detective took Winter to the railing \u2014 within a step of accusing him.",
+      "_note": "The detective took Winter to the railing — within a step of accusing him.",
       "player_card": "travel:to_main_balcony",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -545,7 +545,7 @@
     },
     {
       "turn": 20,
-      "_note": "Winter's deflection \u2014 read again, in better light, as precision, not concealment.",
+      "_note": "Winter's deflection — read again, in better light, as precision, not concealment.",
       "player_card": "emotion:measured_deflection",
       "scene": {
         "LOCATION": "location:main_balcony",
@@ -626,7 +626,7 @@
         "PRESENCE": "presence:with_dr_klaus_winter",
         "STANCE": "stance:cooperative",
         "ACTION": "action:questions",
-        "OBJECT_FOCUS": "object:paint_analysis",
+        "OBJECT_FOCUS": "object_focus:none",
         "TELL": "emotion:measured_deflection",
         "ATMOSPHERE": "atmosphere:silence_holds",
         "REVELATION": "revelation:alibi_holds",
@@ -841,7 +841,7 @@
         "CAUSE": "cause:recognized_object",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:silk_glove",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:silence_holds",
@@ -961,7 +961,7 @@
         "CAUSE": "cause:noticed_inconsistency",
         "PRESENCE": "presence:with_countess_morvaine",
         "STANCE": "stance:hostile",
-        "ACTION": "action:confronts",
+        "ACTION": "action:examines",
         "OBJECT_FOCUS": "object:guest_list",
         "TELL": "tell:paled",
         "ATMOSPHERE": "atmosphere:silence_holds",

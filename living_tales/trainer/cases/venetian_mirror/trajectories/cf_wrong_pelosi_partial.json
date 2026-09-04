@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_pelosi_partial",
+  "case_id": "venetian_mirror",
+  "branch_of": "wrong_signora_pelosi_via_keys",
+  "branch_turn": 16,
+  "divergence_token": "TRANSITION=transition:pursued_to",
+  "description": "Counterfactual branch from wrong_signora_pelosi_via_keys at turn 16. The detective pursues the lead off the servants' stair to the salon instead of staying — Pelosi falls away as suspect, the Countess emerges, but the motive misreads as insurance fraud rather than the forgery operation. Right name, wrong why.",
+  "outcome": "partial_correct",
+  "starting_hypothesis": "branched_from_wrong_pelosi_transition",
+  "tags": ["counterfactual_branch", "partial_correct", "wrong_signora_pelosi_via_keys", "motive_misread"],
+  "opening": {
+    "tokens": [
+      "location:palazzo_contarini",
+      "event:luca_marini_discovered",
+      "time:carnival_evening"
+    ]
+  },
+  "turns": [
+    {"turn": 1, "_note": "CF anchor: the detective pursues the lead off the stair, into the salon.", "player_card": "travel:to_private_salon",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:none", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:polished_grace", "ATMOSPHERE": "atmosphere:lantern_steady", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.43, 0.44, 0.46]},
+    {"turn": 2, "_note": "The Countess offered coffee. The detective accepted.", "player_card": "suspect:countess_morvaine",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object:provenance_file", "TELL": "emotion:polished_grace", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.47, 0.48, 0.5]},
+    {"turn": 3, "_note": "The sale receipt on the drawer. Insurance line, the detective read.", "player_card": "object:sale_receipt",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:noticed_inconsistency", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:evasive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:sale_receipt", "TELL": "emotion:polished_grace", "ATMOSPHERE": "atmosphere:lantern_gutters", "REVELATION": "revelation:contradiction_surfaces", "ART_TELL": "art_tell:none", "BEAT": "beat:investigation"},
+      "convergence_after": [0.55, 0.55, 0.55]},
+    {"turn": 4, "_note": "Insurance, the detective named — the wrong motive.", "player_card": "motive:insurance_fraud",
+      "scene": {"LOCATION": "location:private_salon", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:evasive", "ACTION": "action:recalls", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:polished_grace", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:motive_emerges", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "forbidden_dims": ["motive:forgery_operation"],
+      "convergence_after": [0.65, 0.65, 0.65]},
+    {"turn": 5, "_note": "Up to the balcony. Score, fibre.", "player_card": "travel:to_main_balcony",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:pursued_suspicion", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:defensive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:balcony_railing", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:gondola_passes", "REVELATION": "revelation:partial_match", "ART_TELL": "art_tell:none", "BEAT": "beat:closing_in"},
+      "convergence_after": [0.76, 0.76, 0.75]},
+    {"turn": 6, "_note": "The fibre. Pale rose. Hers.", "player_card": "modifier:silk_residue",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:recognized_object", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:hostile", "ACTION": "action:examines", "OBJECT_FOCUS": "object:balcony_railing", "TELL": "tell:paled", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.83, 0.83, 0.75]},
+    {"turn": 7, "_note": "Accused. Right name. Wrong why.", "player_card": "ACCUSE:suspect:countess_morvaine",
+      "scene": {"LOCATION": "location:main_balcony", "TRANSITION": "transition:stayed", "CAUSE": "cause:none", "PRESENCE": "presence:with_countess_morvaine", "STANCE": "stance:hostile", "ACTION": "action:confronts", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:tightened", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:confirmation", "ART_TELL": "art_tell:none", "BEAT": "beat:verdict_ready"},
+      "convergence_after": [0.83, 0.83, 0.75]}
+  ],
+  "ending": {
+    "type": "partial_correct",
+    "accused": "suspect:countess_morvaine",
+    "final_convergence": [0.83, 0.83, 0.75]
+  }
+}
