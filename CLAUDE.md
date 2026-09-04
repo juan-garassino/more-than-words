@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Living Tales
 
 > **GCP migration note (2026-06-07):** When deployed as a user-facing product, cloud target is **`garassino-ai`** / `europe-west1` (apps tier, multi-user). Future deploys piggyback on the GAR repo `garassino-ai/app-images`. See workspace root `CLAUDE.md` § "GCP architecture".
@@ -5,6 +9,22 @@
 Living Tales is a symbolic mystery game where a per-case overfitted transformer co-narrates with the player through token dialogue. The new engine is **v3 (SceneLM)** — a ~4.3M-param decoder-only transformer doing next-token prediction over the case's symbolic language (code shipped 2026-06-12; first Colab training run pending). v2 (structured-scene, parallel dim decoding) remains the last *trained* runtime; the legacy Hopfield/KD/REINFORCE path is preserved on disk but is not the runtime.
 
 There is **no LLM at runtime.** The engine emits token IDs over a per-dim vocabulary; the composer slot-fills hand-authored phrases (`phrases.json`) into Obra-Dinn third-person past prose. Tokens are symbolic; the model never sees or emits natural language.
+
+## Repo Layout
+
+The active Python tree is `living_tales/trainer/` — note the nesting: models live in `living_tales/trainer/trainer/` (e.g. `trainer/trainer/scene_lm.py`), generation in `trainer/generator/`, CLIs in `trainer/tools/`, tests in `trainer/tests/`, packed case data in `trainer/cases/<case>/`. Paths below in "V3 Architecture" are relative to `living_tales/trainer/`.
+
+Everything else at the repo root is legacy or supporting material:
+
+- `Makefile` (root, ~765 lines) — v3 targets (`train-scene-lm-*`, `eval-gate-scene-lm`) plus the full legacy Hopfield/KD/REINFORCE pipelines (`ac-*`, `acm-*`, `fob-*`, `train-all*`) and v2 targets (`train-v2-*`, `eval-gate`).
+- `cases/*.json` — 19 source case specs (mystery + creature variants); `make <prefix>-s02-pack` packs one into `living_tales/trainer/cases/<case>/`.
+- `living_tales/trainer/{core,engine,rl,validator}/` + `trainer/train.py` — legacy Hopfield-era engine, preserved, not the runtime.
+- `living_tales/ios/` — Swift app that consumes packed `.cartridge` exports.
+- `evals/` — separate pytest harness (convergence/diversity/chronology/oscillation/overfitting metrics): `cd evals && PYTHONPATH=../living_tales/trainer python3 -m pytest tests/ -q`.
+- `art/`, `living_tales_sprites/`, `review_*/`, `living_tales/IMAGES.md` — pixel-art pipeline: catalogue, prompt logs, generated assets. `DESIGN.md` at root is the style guide.
+- `docs/cases/` — 24 narrative case specs; `docs/superpowers/{specs,plans}/` — dated design docs (v3 lives there).
+
+Deps are just `numpy torch rich` (`living_tales/trainer/requirements.txt`; Colab installs via `make colab-install`).
 
 ## Game Loop
 
@@ -18,8 +38,10 @@ Player plays a symbolic card → model emits a complete 11-12-dim scene tuple (T
 - **`SceneVocab`** (`trainer/scene_lm_vocab.py`): union vocab across cases (~436 tokens); per-case slot template + legal-id sets; cards = tokens.json ∪ trajectory-played cards.
 - **Converter + dataset** (`trainer/scene_lm_dataset.py`): mechanical trajectory→sequence conversion (golden fixture in `tests/fixtures/`); loss masks (player's card/accused input-only; boundary markers + outcome supervised), ×2 binding weights on card-controlled dims, class-balanced CE weights on REVELATION/TRANSITION/BEAT, turn-boundary truncation augmentation, cf-branch anchoring.
 - **Two-stage training** (`tools/train_scene_lm.py`): `base` (union corpus, universal dims) → `outputs/_base/scene_lm_base.pt`; `adapter` (frozen base + LoRA + embedding) → `outputs/<case>/scene_lm_full.pt`.
+- **Hard-mask constraints** (`generator/constraints_compiler.py`): `ConstraintMask` compiles each case's `constraints.json` into per-dim legal-id masks; the runtime intersects it with the grammar mask at every scene position.
 - **Runtime** (`generator/scene_lm_runtime.py`): `SceneLMEngine.step/accuse/resolve`; `AttractorMeter` measures convergence (validated: turn-level Spearman 0.925 vs authored `convergence_after`); endings picked hash-stably from authored trajectory `ending` blocks; ledger at `outputs/<case>/ledger.json`. **Zero scaffolds**: no convergence boosts, no card forcing, no per-dim temperatures, no beat injection, no vocab wrapper.
 - **Composer** (`generator/structured_scene_composer.py`): variant picker hash-stable on `(turn_idx, token_id)` plus optional per-run `run_salt` (set by the v3 loop so replays read fresh); voice-arc stages (cold/warming/breaking/broken); v3 pygame loop tracks NPC interview counts so stages actually advance.
+- **Error analysis** (`tools/error_analysis_scene_lm.py`): the diagnosis layer behind the gate — teacher-forced per-dim/per-beat/per-depth accuracy (train vs held-out), per-dim confusion pairs, outcome confusion matrix + per-class recall, untruncated free-run miss logs; writes `outputs/<case>/error_analysis.{json,md}` with an error→lever map. `run_probes()` in `tools/eval_scene_lm.py` is importable for mid-training validation.
 - **Eval gate** (`tools/eval_scene_lm.py`): 6 probes — binding ≥0.95, coherence violations 0, closing-arc ≥2/3, diversity max-share ≤0.40, outcome accuracy ≥0.90, convergence Spearman ≥0.70. Design docs: `docs/superpowers/specs/2026-06-12-scene-language-model-design.md` + `docs/superpowers/plans/2026-06-12-scene-lm-v3.md`.
 - **v2 reference** (`trainer/structured_scene_model_v2.py`, `tools/train_structured_v2.py`, `trainer/trajectory_dataset_v2.py`, `generator/discovery_beats.py` + `beats.json`): preserved untouched for A/B; beats.json is demoted to an eval reference in v3.
 
@@ -30,6 +52,8 @@ Player plays a symbolic card → model emits a complete 11-12-dim scene tuple (T
 | amber_cipher | 59 (49 full + 10 cf branches) | none |
 | attended_hour | 59 | MEDICAL_TELL |
 | venetian_mirror | 59 | ART_TELL |
+
+Per-case anatomy under `living_tales/trainer/cases/<case>/`: `dimensions.json` (dim list incl. case-specific), `constraints.json` (hard-mask rules), `tokens.json` (cards + attractor weights), `phrases.json` (en+es composer banks: plain string, variant list, or voice-arc dict cold/warming/breaking/broken), `beats.json` (v2 eval reference), `art_prompts.md` (diffusion prompt sheet, see lt-art skill), `trajectories/` with `manifest.json` + one JSON per trajectory.
 
 Total: 177 trajectories across ~16 outcome classes per case (correct_*, partial_correct, accomplice_found, framed_suspect, motive_only_confession, late_revelation, near_miss, red_herring_trap, cold_trail, per-suspect wrong_*). Accusations are authored as in-stream `ACCUSE:*` turns with confrontation scenes; `ending.accused` names the accused.
 

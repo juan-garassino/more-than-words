@@ -64,7 +64,8 @@ def spearman(a, b):
     return 1.0 - 6.0 * d2 / (n * (n * n - 1))
 
 
-def probe_binding(make_engine, vocab, case_id, n_turns=25, n_seeds=3):
+def probe_binding(make_engine, vocab, case_id, n_turns=25, n_seeds=3,
+                  max_misses=10):
     hits = total = 0
     misses = []
     for seed in range(n_seeds):
@@ -79,7 +80,7 @@ def probe_binding(make_engine, vocab, case_id, n_turns=25, n_seeds=3):
                 total += 1
                 ok = bool(check(card, scene))
                 hits += ok
-                if not ok and len(misses) < 10:
+                if not ok and len(misses) < max_misses:
                     misses.append({"card": card,
                                    "OBJECT_FOCUS": scene.get("OBJECT_FOCUS"),
                                    "PRESENCE": scene.get("PRESENCE"),
