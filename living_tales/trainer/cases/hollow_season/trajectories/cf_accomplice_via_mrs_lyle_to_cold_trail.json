@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_accomplice_via_mrs_lyle_to_cold_trail",
+  "case_id": "hollow_season",
+  "description": "Counterfactual from accomplice_via_mrs_lyle at turn 22. At the moment Mrs Lyle would shift defensive, she stays cooperative — the conspiracy theory collapses; the player loses the chain and circles. Cold trail.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "accomplice_via_mrs_lyle",
+  "branch_turn": 22,
+  "divergence_token": "STANCE=stance:cooperative",
+  "tags": ["counterfactual", "stance_divergence", "cold_trail", "batch2_cf", "hand_paced"],
+  "pre_branch_state": {"convergence_dims": [0.58, 0.62, 0.50]},
+  "opening": {"tokens": ["location:library", "event:sir_geoffrey_discovered", "time:sunday_before_breakfast"]},
+  "turns": [
+    {"turn": 22, "_note": "Branch. Mrs Lyle remains cooperative — no defensive signal to lock conspiracy.", "player_card": "witness:mrs_lyle", "scene": {"LOCATION": "location:servants_hall", "TRANSITION": "transition:descended_to", "CAUSE": "cause:following_witness_lead", "PRESENCE": "presence:with_mrs_lyle", "STANCE": "stance:cooperative", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in", "PROTOCOL_TELL": "protocol_tell:proper_form_observed"}, "convergence_after": [0.58, 0.62, 0.50]},
+    {"turn": 23, "_note": "Press the green sack. She gives the basket round.", "player_card": "object:wastepaper_basket", "scene": {"LOCATION": "location:servants_hall", "TRANSITION": "transition:stayed", "CAUSE": "cause:examining_evidence", "PRESENCE": "presence:with_mrs_lyle", "STANCE": "stance:cooperative", "ACTION": "action:examines", "OBJECT_FOCUS": "object:wastepaper_basket", "TELL": "emotion:steady_hands", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in", "PROTOCOL_TELL": "protocol_tell:proper_form_observed"}, "convergence_after": [0.58, 0.62, 0.50]},
+    {"turn": 24, "_note": "Cross to library. Edmund summoned but offers nothing new.", "player_card": "travel:to_library", "scene": {"LOCATION": "location:library", "TRANSITION": "transition:returned", "CAUSE": "cause:summoned", "PRESENCE": "presence:with_edmund_carrow", "STANCE": "stance:cooperative", "ACTION": "action:waits", "OBJECT_FOCUS": "object_focus:none", "TELL": "emotion:measured_breath", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:dead_end", "BEAT": "beat:closing_in", "PROTOCOL_TELL": "protocol_tell:proper_form_observed"}, "convergence_after": [0.58, 0.62, 0.50]},
+    {"turn": 25, "_note": "Cross to village_rooms. No new evidence.", "player_card": "travel:to_village_rooms", "scene": {"LOCATION": "location:village_rooms", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:revisiting_scene", "PRESENCE": "presence:alone", "STANCE": "stance:none", "ACTION": "action:examines", "OBJECT_FOCUS": "object:wastepaper_basket", "TELL": "tell:none", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:dead_end", "BEAT": "beat:closing_in", "PROTOCOL_TELL": "protocol_tell:none"}, "convergence_after": [0.58, 0.62, 0.50]},
+    {"turn": 26, "_note": "Cross to gatehouse_lodge. Finch as a default; the chain repeats.", "player_card": "travel:to_gatehouse_lodge", "scene": {"LOCATION": "location:gatehouse_lodge", "TRANSITION": "transition:crossed_to", "CAUSE": "cause:revisiting_scene", "PRESENCE": "presence:with_hector_finch", "STANCE": "stance:defensive", "ACTION": "action:questions", "OBJECT_FOCUS": "object_focus:none", "TELL": "tell:over_explained", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:partial_match", "BEAT": "beat:closing_in", "PROTOCOL_TELL": "protocol_tell:proper_form_observed"}, "convergence_after": [0.58, 0.62, 0.50]},
+    {"turn": 27, "_note": "Cold trail — convergence flat. Player abandons.", "player_card": "object:audit_letter", "scene": {"LOCATION": "location:gatehouse_lodge", "TRANSITION": "transition:stayed", "CAUSE": "cause:revisiting_scene", "PRESENCE": "presence:with_hector_finch", "STANCE": "stance:defensive", "ACTION": "action:examines", "OBJECT_FOCUS": "object:audit_letter", "TELL": "tell:over_explained", "ATMOSPHERE": "atmosphere:silence_holds", "REVELATION": "revelation:dead_end", "BEAT": "beat:closing_in", "PROTOCOL_TELL": "protocol_tell:proper_form_observed"}, "convergence_after": [0.58, 0.62, 0.50]}
+  ],
+  "ending": {"type": "abandoned", "accused": null, "final_convergence": [0.58, 0.62, 0.50], "_note": "CF — stance divergence collapsed the conspiracy theory; cold trail."}
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_partial_misread_to_correct",
+  "case_id": "orchard_at_dusk",
+  "description": "Counterfactual branch of partial_correct_misread_motive_a. At turn 25 REVELATION diverges from partial_match to buried_motive_surfaces — the detective recognises that the boundary_fraud he's been chasing is the surface and the 1884 transaction is the cause. The case lands on Crale on the right motive. 6-turn CF.",
+  "outcome": "correct_thomas_crale",
+  "branch_of": "partial_correct_misread_motive_a",
+  "branch_turn": 25,
+  "divergence_token": "REVELATION=revelation:buried_motive_surfaces",
+  "starting_hypothesis": "object_first_field_gate_surface",
+  "tags": ["counterfactual_branch","revelation_divergence","correct_crale","motive_corrected"],
+  "opening": {"tokens": ["location:crale_orchard","event:oates_found_at_dusk","time:dusk_hour"]},
+  "pre_branch_state": {"convergence_dims": [0.74, 0.73, 0.66]},
+  "turns": [
+    {"turn":25,"_note":"DIVERGENCE. The detective lifts the loose slip in the older quires — the 1884 receipt. The surface fades; the buried thread surfaces.","player_card":"object:1884_receipt","scene":{"LOCATION":"location:cider_press","TRANSITION":"transition:crossed_to","CAUSE":"cause:examining_evidence","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:1884_receipt","TELL":"tell:none","ATMOSPHERE":"atmosphere:cider_press_turns","REVELATION":"revelation:buried_motive_surfaces","BEAT":"beat:closing_in"},"convergence_after":[0.76,0.76,0.7]},
+    {"turn":26,"_note":"Cross to the parish church to corroborate.","player_card":"travel:to_parish_church","scene":{"LOCATION":"location:parish_church","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_reverend_caddick","STANCE":"stance:cooperative","ACTION":"action:arrives","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:church_bell_tolls","REVELATION":"revelation:none","BEAT":"beat:closing_in"},"convergence_after":[0.77,0.77,0.72]},
+    {"turn":27,"_note":"Caddick fetches the register — Alderton burial 1884, the date matches.","player_card":"object:parish_register","scene":{"LOCATION":"location:parish_church","TRANSITION":"transition:stayed","CAUSE":"cause:reading_survey_record","PRESENCE":"presence:with_reverend_caddick","STANCE":"stance:cooperative","ACTION":"action:examines","OBJECT_FOCUS":"object:parish_register","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:confirmation","BEAT":"beat:closing_in"},"convergence_after":[0.79,0.79,0.78]},
+    {"turn":28,"_note":"Pre-register money — the right motive.","player_card":"motive:pre_register_money","scene":{"LOCATION":"location:parish_church","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_reverend_caddick","STANCE":"stance:cooperative","ACTION":"action:recalls","OBJECT_FOCUS":"object:parish_register","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:motive_emerges","BEAT":"beat:closing_in"},"convergence_after":[0.81,0.81,0.82]},
+    {"turn":29,"_note":"Cross to the field gate. Crale at the hinge.","player_card":"travel:to_field_gate","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_thomas_crale","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:field_gate_hinge","TELL":"tell:silent","ATMOSPHERE":"atmosphere:dawn_approaches","REVELATION":"revelation:name_uncovered","BEAT":"beat:verdict_ready"},"convergence_after":[0.84,0.83,0.84]},
+    {"turn":30,"_note":"Accusation on the right man with the right motive.","player_card":"ACCUSE:suspect:thomas_crale","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:stayed","CAUSE":"cause:none","PRESENCE":"presence:with_thomas_crale","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:1884_receipt","TELL":"tell:silent","ATMOSPHERE":"atmosphere:dawn_approaches","REVELATION":"revelation:confirmation","BEAT":"beat:verdict_ready"},"convergence_after":[0.86,0.84,0.85]}
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:thomas_crale",
+    "final_convergence": [0.86, 0.84, 0.85],
+    "_note": "REVELATION pivot at the ledger: buried thread surfaced in time. 6-turn CF."
+  }
+}

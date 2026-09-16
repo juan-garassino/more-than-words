@@ -1,0 +1,952 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_mrs_oake_b",
+  "case_id": "sulphur_line",
+  "description": "2nd wrong-mrs-oake path. Detective misreads the widow's-document signature as Mrs Oake's hand; the canal evidence is read as proof of her household errand. Accuses Mrs Oake.",
+  "outcome": "wrong_mrs_oake",
+  "starting_hypothesis": "alibi_first",
+  "tags": [
+    "wife_signature_misread",
+    "widow_document_misread",
+    "wrong_suspect",
+    "wave2"
+  ],
+  "opening": {
+    "tokens": [
+      "location:works_gate",
+      "event:gould_discovered_at_dawn",
+      "time:monday_inspection_begins"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.06
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.08,
+        0.09,
+        0.1
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.11,
+        0.12,
+        0.13
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "modifier:widow_document_unread_by_signer",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.14,
+        0.15,
+        0.16
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "object:widows_document",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.17,
+        0.18,
+        0.19
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "travel:to_works_gate",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.2,
+        0.21,
+        0.22
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "witness:night_watchman",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.23,
+        0.24,
+        0.24
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.26,
+        0.27,
+        0.28
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.29,
+        0.3,
+        0.31
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "motive:birch_concealment",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.33,
+        0.34
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:canal_water_still",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.35,
+        0.36,
+        0.37
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "object:shoe_print_cast",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:shoe_print_cast",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:winter_dusk_falls",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:shoe_prints_paired"
+      },
+      "convergence_after": [
+        0.38,
+        0.39,
+        0.4
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "object:canal_button",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:winter_dusk_falls",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:button_at_bend"
+      },
+      "convergence_after": [
+        0.41,
+        0.42,
+        0.43
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.45,
+        0.46
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "modifier:button_matches_oake_coat",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.47,
+        0.48,
+        0.48
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.49,
+        0.49,
+        0.5
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "modifier:widow_document_unread_by_signer",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.51,
+        0.52,
+        0.52
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.53,
+        0.53,
+        0.54
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "object:dispatch_ledger",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.56
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.57,
+        0.57,
+        0.58
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.59,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "object:widows_document",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.61,
+        0.62,
+        0.62
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "motive:birch_concealment",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.63,
+        0.64,
+        0.64
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "modifier:widow_document_unread_by_signer",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.65,
+        0.66,
+        0.66
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "object:canal_button",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.67,
+        0.68,
+        0.68
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "witness:widow_birch",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_widow_birch",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:bargained_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.69,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.71,
+        0.72,
+        0.72
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "modifier:button_matches_oake_coat",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.73,
+        0.74,
+        0.74
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "object:widows_document",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.76
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "motive:birch_concealment",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.79
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "object:canal_button",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.79,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "modifier:widow_document_unread_by_signer",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.81,
+        0.82,
+        0.82
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "witness:widow_birch",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_widow_birch",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:bargained_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.83,
+        0.83
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "motive:birch_concealment",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_widow_birch",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:bargained_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.83,
+        0.84,
+        0.84
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.84,
+        0.85,
+        0.85
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "modifier:button_matches_oake_coat",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.85,
+        0.85,
+        0.86
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "object:widows_document",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "ACCUSE:suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:mrs_oake",
+    "final_convergence": [
+      0.86,
+      0.86,
+      0.86
+    ]
+  }
+}

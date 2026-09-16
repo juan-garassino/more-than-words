@@ -1,0 +1,809 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_eliza_crale",
+  "case_id": "orchard_at_dusk",
+  "description": "Wrong accusation on Eliza. The detective reads her defensive replies and her habitual presence at the orchard as silent guilt. Suspect-dim climbs to 0.78. Evidence-dim 0.66 (the ledger handwriting, the kettle hour). Motive-dim 0.50 — protecting her husband does not equal acting for him. Wrong. ~41 turns.",
+  "outcome": "wrong_eliza_crale",
+  "starting_hypothesis": "suspect_first_eliza_silence",
+  "tags": [
+    "wrong_eliza",
+    "silent_wife_misread",
+    "ledger_handwriting_misread",
+    "stance_misread",
+    "motive_plateau"
+  ],
+  "opening": {
+    "tokens": [
+      "location:crale_orchard",
+      "event:oates_found_at_dusk",
+      "time:dusk_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the body. Apple in the grass.",
+      "player_card": "object:apple_in_grass",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:apple_in_grass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.04, 0.06, 0.03]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to the cider press. Eliza in the doorway with a damp cloth. First NPC.",
+      "player_card": "travel:to_cider_press",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.06, 0.07, 0.04]
+    },
+    {
+      "turn": 3,
+      "_note": "Question Eliza on the surveyor. Cool civility, no warmth. Detective reads coolness as concealment.",
+      "player_card": "suspect:eliza_crale",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.14, 0.08, 0.05]
+    },
+    {
+      "turn": 4,
+      "_note": "Examine the press ledger on the shelf — Eliza's hand on every line.",
+      "player_card": "object:cider_press_ledger",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.16, 0.16, 0.06]
+    },
+    {
+      "turn": 5,
+      "_note": "Cross to the farmhouse. Eliza follows. Tilling on the back step in the doorway.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.18, 0.17, 0.07]
+    },
+    {
+      "turn": 6,
+      "_note": "Question Tilling on Friday. Supper at seven cleanly. Detective reads honesty as rehearsal.",
+      "player_card": "witness:hob_tilling",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.22, 0.18, 0.08]
+    },
+    {
+      "turn": 7,
+      "_note": "Cross to the inn. Sowerby behind the bar.",
+      "player_card": "travel:to_village_inn",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.23, 0.19, 0.09]
+    },
+    {
+      "turn": 8,
+      "_note": "Sowerby gives the Thursday confrontation. Webb loud, Oates pale. Detective takes it as background to Eliza's silence.",
+      "player_card": "witness:ned_sowerby",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.28, 0.20, 0.12]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to the orchard lane. Eliza on the boundary path with a basket. Caught.",
+      "player_card": "travel:to_orchard_lane",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.36, 0.21, 0.14]
+    },
+    {
+      "turn": 10,
+      "_note": "Press Eliza on what she was doing on the lane. She gives apples and apples and apples.",
+      "player_card": "suspect:eliza_crale",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.44, 0.22, 0.18]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to the field gate. The hinge. Detective reads the scrape as small hand work.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.46, 0.30, 0.20]
+    },
+    {
+      "turn": 12,
+      "_note": "Cross to Webb Farm. Ainsworth at the kitchen door.",
+      "player_card": "travel:to_webb_farm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.47, 0.31, 0.21]
+    },
+    {
+      "turn": 13,
+      "_note": "Press Ainsworth on Eliza on the lane Friday. Ainsworth saw nothing of Eliza — but saw Crale. Detective dismisses the Crale sighting as wrong-time-wrong-person.",
+      "player_card": "witness:martha_ainsworth",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.49, 0.32, 0.22]
+    },
+    {
+      "turn": 14,
+      "_note": "Cross to the parish church. Caddick at the vestry.",
+      "player_card": "travel:to_parish_church",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:church_bell_tolls",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.50, 0.33, 0.23]
+    },
+    {
+      "turn": 15,
+      "_note": "Question Caddick on Eliza. He gives her twenty-nine years of steady marriage. Detective hears it as the vicar protecting his parish.",
+      "player_card": "witness:reverend_caddick",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.51, 0.34, 0.24]
+    },
+    {
+      "turn": 16,
+      "_note": "Cross to the cider press. Examine the ledger a second time. Detective reads the handwriting hours.",
+      "player_card": "travel:to_cider_press",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.53, 0.42, 0.26]
+    },
+    {
+      "turn": 17,
+      "_note": "Notice the Friday-six entry in the ledger. Detective reads it as Eliza pressing alone with the farmhand away — and the gate moved.",
+      "player_card": "modifier:gate_moved_friday_four_pm",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.58, 0.48, 0.30]
+    },
+    {
+      "turn": 18,
+      "_note": "Cross to the farmhouse. Eliza at the table. Question her on the press hour.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.60, 0.48, 0.31]
+    },
+    {
+      "turn": 19,
+      "_note": "Question Eliza on Friday-six. She gives a kettle and a loaf — no press hour. Detective reads the absence as omission.",
+      "player_card": "suspect:eliza_crale",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.64, 0.49, 0.33]
+    },
+    {
+      "turn": 20,
+      "_note": "Crale arrives, sets a bucket down, listens at the door. Detective sees the lifetime of being his wife and reads it as conspiracy.",
+      "player_card": "suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.66, 0.50, 0.34]
+    },
+    {
+      "turn": 21,
+      "_note": "Cross to the cider press a third time. Detective wants Eliza alone again.",
+      "player_card": "travel:to_cider_press",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.68, 0.51, 0.36]
+    },
+    {
+      "turn": 22,
+      "_note": "Lay the motive. Protect the orchard. Eliza pales — not from guilt but at being read so wrong.",
+      "player_card": "motive:protect_the_orchard",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.72, 0.52, 0.42]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to the orchard. The body's place. Detective imagines Eliza here with a stone in hand.",
+      "player_card": "travel:to_crale_orchard",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:lamp_in_long_grass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.73, 0.56, 0.43]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to the orchard lane. The drainage stone. Detective measures by his own hand and reads it as Eliza's reach.",
+      "player_card": "travel:to_orchard_lane",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:drainage_stone",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.73, 0.60, 0.44]
+    },
+    {
+      "turn": 25,
+      "_note": "Briggs on the lane. Falls into step.",
+      "player_card": "witness:constable_briggs",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_constable_briggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.73, 0.61, 0.45]
+    },
+    {
+      "turn": 26,
+      "_note": "Briggs on Eliza — she has been at the cider press every harvest week for twenty-nine years. Detective dismisses.",
+      "player_card": "witness:constable_briggs",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_constable_briggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.74, 0.62, 0.46]
+    },
+    {
+      "turn": 27,
+      "_note": "Cross to the inn. Sowerby again. Detective wants Eliza placed somewhere uncomfortable.",
+      "player_card": "travel:to_village_inn",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.74, 0.62, 0.47]
+    },
+    {
+      "turn": 28,
+      "_note": "Sowerby — Eliza came to the inn Wednesday with butter. Nothing of Friday. Detective files Wednesday as her cover-up trip.",
+      "player_card": "witness:ned_sowerby",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.75, 0.63, 0.48]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to the field gate. Examine the hinge a third time. Detective measures the scrape against a remembered length.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.76, 0.64, 0.49]
+    },
+    {
+      "turn": 30,
+      "_note": "Cross to the farmhouse a third time. Eliza at the table. Tilling absent.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.77, 0.64, 0.50]
+    },
+    {
+      "turn": 31,
+      "_note": "Lay the kettle hour. Eliza closes her hand on the table edge. Detective reads as guilt.",
+      "player_card": "modifier:supper_at_seven",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.77, 0.65, 0.50]
+    },
+    {
+      "turn": 32,
+      "_note": "Crale arrives. He stands between his wife and the detective. Detective sees the protection as proof.",
+      "player_card": "suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.65, 0.50]
+    },
+    {
+      "turn": 33,
+      "_note": "Cross to the orchard. Reconstruct the path Eliza would have walked. Six minutes from the kitchen.",
+      "player_card": "travel:to_crale_orchard",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:apple_in_grass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.65, 0.50]
+    },
+    {
+      "turn": 34,
+      "_note": "Cross to the cider press. Eliza at the press. Detective measures the hinge against her wrist height.",
+      "player_card": "travel:to_cider_press",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.66, 0.50]
+    },
+    {
+      "turn": 35,
+      "_note": "Cross to the orchard lane. Briggs at the gate. Tilling with the scythe over shoulder.",
+      "player_card": "travel:to_orchard_lane",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:harvest_scythe",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.66, 0.50]
+    },
+    {
+      "turn": 36,
+      "_note": "Question Tilling on Eliza Friday afternoon. He says she was at the press. Detective dismisses as protecting his mistress.",
+      "player_card": "witness:hob_tilling",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.66, 0.50]
+    },
+    {
+      "turn": 37,
+      "_note": "Cross to the farmhouse a fourth time. Briggs in tow.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_constable_briggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.66, 0.50]
+    },
+    {
+      "turn": 38,
+      "_note": "Question Briggs — does he agree. He hesitates; says Eliza has never lifted a hand in her life he knows of.",
+      "player_card": "witness:constable_briggs",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_constable_briggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.66, 0.50]
+    },
+    {
+      "turn": 39,
+      "_note": "Eliza at the table. The detective lays the gate, the ledger, the kettle. The lamp lit early.",
+      "player_card": "suspect:eliza_crale",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.66, 0.50]
+    },
+    {
+      "turn": 40,
+      "_note": "Lay the motive. Protect the orchard. Eliza shakes her head once.",
+      "player_card": "motive:protect_the_orchard",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:flat_denial",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.66, 0.50]
+    },
+    {
+      "turn": 41,
+      "_note": "Accusation in the kitchen. Wrong. Eliza answers in a single low sentence — and Crale's hand finds her shoulder.",
+      "player_card": "ACCUSE:suspect:eliza_crale",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:flat_denial",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.66, 0.50]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:eliza_crale",
+    "final_convergence": [0.78, 0.66, 0.50],
+    "_note": "Wrong. Suspect-dim 0.78 on Eliza, evidence-dim 0.66 (ledger handwriting, kettle), motive-dim plateaus at 0.50. Protecting her husband is not the same as acting for him."
+  }
+}

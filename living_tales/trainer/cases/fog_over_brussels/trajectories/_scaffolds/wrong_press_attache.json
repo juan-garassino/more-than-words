@@ -1,0 +1,991 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_press_attache",
+  "case_id": "fog_over_brussels",
+  "description": "Press attach\u00e9 placed at the seating boundary near Brennan. The seating plan and his easy dispatch access \u2014 close on him at closing_in. Forty-second interval never played.",
+  "outcome": "wrong_press_attache",
+  "starting_hypothesis": "press_attache_first",
+  "tags": [
+    "wrong_accusation",
+    "press_attache",
+    "seating_misread"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open at the gate.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.04,
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.065,
+        0.065,
+        0.06
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Flute on the floor.",
+      "player_card": "object:champagne_flute",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.095,
+        0.095,
+        0.085
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "With witness:press_attache.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [
+        0.13,
+        0.13,
+        0.11
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Cross to kitchen_corridor.",
+      "player_card": "travel:to_kitchen_corridor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.16,
+        0.16,
+        0.135
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "With witness:press_attache.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [
+        0.19,
+        0.19,
+        0.16
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Cross to embassy_kitchen.",
+      "player_card": "travel:to_embassy_kitchen",
+      "scene": {
+        "LOCATION": "location:embassy_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.22,
+        0.22,
+        0.185
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "With witness:press_attache.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:embassy_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [
+        0.25,
+        0.25,
+        0.21
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to kitchen_corridor.",
+      "player_card": "travel:to_kitchen_corridor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.28,
+        0.28,
+        0.235
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Examine seating_plan.",
+      "player_card": "object:seating_plan",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.31,
+        0.31,
+        0.26
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to reception_room.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.285
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "With witness:press_attache.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.37,
+        0.37,
+        0.31
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Cross to east_wing_landing.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.34
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Cross to west_wing_stairwell.",
+      "player_card": "travel:to_west_wing_stairwell",
+      "scene": {
+        "LOCATION": "location:west_wing_stairwell",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.43,
+        0.43,
+        0.365
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Cross to cipher_room.",
+      "player_card": "travel:to_cipher_room",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:entered",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.455,
+        0.455,
+        0.385
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Examine decoded_dispatch.",
+      "player_card": "object:decoded_dispatch",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_dispatch_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:decoded_dispatch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.48,
+        0.48,
+        0.41
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross to document_room.",
+      "player_card": "travel:to_document_room",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:draft_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.505,
+        0.505,
+        0.435
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Examine draft_report.",
+      "player_card": "object:draft_report",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_dispatch_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:draft_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.53,
+        0.53,
+        0.46
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Cross-reference seating_plan against the draft.",
+      "player_card": "object:draft_report",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.555,
+        0.555,
+        0.485
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to reception_room.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.58,
+        0.58,
+        0.51
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "With witness:press_attache.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.605,
+        0.605,
+        0.535
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "With witness:press_attache.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.625,
+        0.625,
+        0.555
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "With witness:press_attache.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.645,
+        0.645,
+        0.575
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Drift.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.665,
+        0.665,
+        0.595
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Drift.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.685,
+        0.685,
+        0.615
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Drift.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.7,
+        0.7,
+        0.635
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Drift.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.71,
+        0.71,
+        0.65
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Drift.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.72,
+        0.72,
+        0.665
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Drift.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.73,
+        0.73,
+        0.68
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Drift.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.74,
+        0.74,
+        0.69
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Drift.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.695
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Drift.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.7
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Drift.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.705
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Drift.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.71
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Drift.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.715
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Drift.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.72
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Drift.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.725
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Drift.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.73
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Drift.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.73
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Wrong accusation: press_attache.",
+      "player_card": "ACCUSE:suspect:press_attache",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [
+        0.745,
+        0.745,
+        0.73
+      ]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "final_convergence": [
+      0.745,
+      0.745,
+      0.73
+    ],
+    "accused": "suspect:press_attache"
+  }
+}

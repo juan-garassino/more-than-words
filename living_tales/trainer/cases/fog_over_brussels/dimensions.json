@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "case_id": "fog_over_brussels",
+
+  "_comment": "Multidimensional structured-scene schema for the Cold-War Belgian Embassy case. Each engine turn emits one token per dim. Universal core dimensions are shared with amber_cipher and attended_hour; case-specific extension DIPLOMATIC_TELL covers embassy-protocol micro-signals (language slips, protocol breaks, signet-ring twists, etc.). Tokens with dim=null (anchor_tokens below) are graph/convergence anchors only — never emitted directly. Killer: Brennan (cultural attaché). Victim: Ilse Brenner (cipher clerk). Red herring: Helena Voss (ambassador's wife).",
+
+  "dimensions": [
+    {
+      "name": "LOCATION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "location:reception_room",
+        "location:kitchen_corridor",
+        "location:embassy_kitchen",
+        "location:cipher_room",
+        "location:document_room",
+        "location:ambassadors_office",
+        "location:east_wing_landing",
+        "location:west_wing_stairwell",
+        "location:embassy_entrance",
+        "location:rue_de_la_loi",
+        "location:none"
+      ]
+    },
+    {
+      "name": "TRANSITION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "transition:stayed",
+        "transition:crossed_to",
+        "transition:entered",
+        "transition:exited",
+        "transition:returned",
+        "transition:pursued_to",
+        "transition:called_away_to",
+        "transition:descended_to",
+        "transition:none"
+      ]
+    },
+    {
+      "name": "CAUSE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "cause:following_witness_lead",
+        "cause:examining_evidence",
+        "cause:recognized_object",
+        "cause:noticed_inconsistency",
+        "cause:pursued_suspicion",
+        "cause:revisiting_scene",
+        "cause:summoned",
+        "cause:chronological_drift",
+        "cause:reading_dispatch_signal",
+        "cause:tracing_tray_route",
+        "cause:none"
+      ]
+    },
+    {
+      "name": "PRESENCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "presence:with_brennan",
+        "presence:with_helena_voss",
+        "presence:with_catering_supervisor",
+        "presence:with_ambassador_voss",
+        "presence:with_cipher_supervisor",
+        "presence:with_embassy_doctor",
+        "presence:with_catering_runner",
+        "presence:with_press_attache",
+        "presence:with_chief_of_security",
+        "presence:with_kitchen_porter",
+        "presence:alone"
+      ]
+    },
+    {
+      "name": "STANCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "stance:cooperative",
+        "stance:defensive",
+        "stance:evasive",
+        "stance:hostile",
+        "stance:unaware",
+        "stance:none"
+      ]
+    },
+    {
+      "name": "ACTION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "action:examines",
+        "action:questions",
+        "action:notices",
+        "action:discovers",
+        "action:confronts",
+        "action:follows",
+        "action:waits",
+        "action:leaves",
+        "action:arrives",
+        "action:recalls",
+        "action:cross_references",
+        "action:none"
+      ]
+    },
+    {
+      "name": "OBJECT_FOCUS",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "object:champagne_flute",
+        "object:catering_tray",
+        "object:draft_report",
+        "object:decoded_dispatch",
+        "object:secondary_encoding_sheet",
+        "object:duplicate_desk_key",
+        "object:guest_list",
+        "object:seating_plan",
+        "object:post_mortem_panel",
+        "object:secondary_terminal_log",
+        "object:catering_timing_note",
+        "object:signet_ring",
+        "object:cipher_clerks_file",
+        "object_focus:none"
+      ]
+    },
+    {
+      "name": "TELL",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "emotion:steady_hands",
+        "emotion:fixed_stare",
+        "emotion:avoided_contact",
+        "emotion:measured_breath",
+        "emotion:paused_reply",
+        "emotion:closed_posture",
+        "tell:paled",
+        "tell:tightened",
+        "tell:none"
+      ]
+    },
+    {
+      "name": "ATMOSPHERE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "atmosphere:fog_thickens",
+        "atmosphere:fog_lifts",
+        "atmosphere:lamp_flickers",
+        "atmosphere:lamp_steady",
+        "atmosphere:silence_holds",
+        "atmosphere:reception_murmur",
+        "atmosphere:heating_hum",
+        "atmosphere:cold_corridor",
+        "atmosphere:dawn_approaches",
+        "atmosphere:none"
+      ]
+    },
+    {
+      "name": "REVELATION",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "revelation:name_uncovered": 0.5,
+        "revelation:motive_emerges": 0.5,
+        "revelation:confirmation": 0.4
+      },
+      "vocab": [
+        "revelation:contradiction_surfaces",
+        "revelation:alibi_holds",
+        "revelation:name_uncovered",
+        "revelation:motive_emerges",
+        "revelation:dead_end",
+        "revelation:partial_match",
+        "revelation:confirmation",
+        "revelation:none"
+      ]
+    },
+    {
+      "name": "BEAT",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "beat:closing_in": 0.5,
+        "beat:verdict_ready": 0.75
+      },
+      "vocab": [
+        "beat:orientation",
+        "beat:investigation",
+        "beat:closing_in",
+        "beat:verdict_ready"
+      ]
+    },
+    {
+      "name": "DIPLOMATIC_TELL",
+      "universal": false,
+      "always_emit": true,
+      "case_specific": true,
+      "_comment": "Embassy-protocol micro-signals that operate orthogonally to the universal TELL. They register on the detective's eye as forms of cold-war diplomatic concealment: a language slip when surprised, a protocol break in the seating order, a hand at the signet ring, an over-careful French. Gated by convergence so the heavier tells only appear once the case has assembled.",
+      "gated_by_convergence": {
+        "diplomatic_tell:language_slipped": 0.4,
+        "diplomatic_tell:protocol_broken": 0.4,
+        "diplomatic_tell:cover_intact": 0.0
+      },
+      "vocab": [
+        "diplomatic_tell:cover_intact",
+        "diplomatic_tell:language_slipped",
+        "diplomatic_tell:protocol_broken",
+        "diplomatic_tell:signet_ring_turned",
+        "diplomatic_tell:french_too_correct",
+        "diplomatic_tell:rehearsed_phrasing",
+        "diplomatic_tell:none"
+      ]
+    }
+  ],
+
+  "_anchors_only_comment": "Tokens that contribute to convergence + graph but are never directly emitted as scene-tuple slots. They remain as player cards (motives, modifiers, time markers) or graph anchors driving logit_bias.",
+  "anchor_tokens": {
+    "MOTIVE": [
+      "motive:double_agent_exposure",
+      "motive:leverage_in_1955",
+      "motive:four_year_compliance",
+      "motive:source_protection",
+      "motive:protocol_silence",
+      "motive:terminal_misuse"
+    ],
+    "MODIFIER": [
+      "modifier:forty_second_interval",
+      "modifier:tasteless_compound",
+      "modifier:no_post_mortem_signature",
+      "modifier:second_key_copied",
+      "modifier:heated_east_wing",
+      "modifier:cold_west_wing",
+      "modifier:four_languages",
+      "modifier:sixty_three_guests",
+      "modifier:arrangement_broke_down",
+      "modifier:draft_left_on_desk"
+    ],
+    "EVENT": [
+      "event:champagne_compound",
+      "event:tray_intercept",
+      "event:secondary_encoding_decoded",
+      "event:arrangement_broken_29_nov",
+      "event:ilse_collapse_2247"
+    ],
+    "TIME_LEGACY": [
+      "time:eight_oh_five_pm",
+      "time:eight_fifteen_pm",
+      "time:forty_second_interval",
+      "time:ten_forty_seven_pm",
+      "time:intermission_hour"
+    ]
+  },
+
+  "_player_cards_comment": "Tokens the player can play as cards. Includes inquiry cards (witnesses/objects/motives/legacy actions) and travel cards.",
+  "player_cards": {
+    "inquiry": "@all_PLAYER_or_SHARED_with_dim_in_[OBJECT_FOCUS,PRESENCE,MOTIVE]",
+    "travel": [
+      "travel:to_reception_room",
+      "travel:to_kitchen_corridor",
+      "travel:to_embassy_kitchen",
+      "travel:to_cipher_room",
+      "travel:to_document_room",
+      "travel:to_ambassadors_office",
+      "travel:to_east_wing_landing",
+      "travel:to_west_wing_stairwell",
+      "travel:to_embassy_entrance",
+      "travel:to_rue_de_la_loi"
+    ]
+  }
+}

@@ -1,0 +1,601 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "correct_thomas_crale_via_registry_office",
+  "case_id": "orchard_at_dusk",
+  "description": "Late-game closing arc: detective travels to Bristol registry office (turn >= 22) and finds the 1884 deed transfer that names Crale and Alderton. Buried motive surfaces; Crale named at the field gate at dawn.",
+  "outcome": "correct_thomas_crale",
+  "starting_hypothesis": "registry_office_late_close",
+  "tags": [
+    "correct_crale",
+    "registry_office",
+    "wave2",
+    "1884_receipt",
+    "buried_motive_late",
+    "bristol_close"
+  ],
+  "opening": {
+    "tokens": [
+      "location:crale_orchard",
+      "event:oates_found_at_dusk",
+      "time:dusk_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Body in long grass; the lamp.",
+      "player_card": "object:lamp_in_long_grass",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:lamp_in_long_grass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.04, 0.05, 0.06]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to the gate.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.08, 0.1, 0.08]
+    },
+    {
+      "turn": 3,
+      "_note": "Fresh paint scrape.",
+      "player_card": "object:field_gate_hinge",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.12, 0.14, 0.1]
+    },
+    {
+      "turn": 4,
+      "_note": "Gate had been moved Friday afternoon.",
+      "player_card": "modifier:gate_moved_friday_four_pm",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.16, 0.18, 0.12]
+    },
+    {
+      "turn": 5,
+      "_note": "Cross to the inn. Sowerby behind the bar.",
+      "player_card": "travel:to_village_inn",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.2, 0.2, 0.14]
+    },
+    {
+      "turn": 6,
+      "_note": "Sowerby recalls Thursday confrontation.",
+      "player_card": "witness:ned_sowerby",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.24, 0.24, 0.18]
+    },
+    {
+      "turn": 7,
+      "_note": "Oates would file Monday in Bristol.",
+      "player_card": "object:solicitor_letter",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:solicitor_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.28, 0.28, 0.2]
+    },
+    {
+      "turn": 8,
+      "_note": "Cross to Webb Farm; Ainsworth at kitchen window.",
+      "player_card": "travel:to_webb_farm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.3, 0.3, 0.22]
+    },
+    {
+      "turn": 9,
+      "_note": "Question Ainsworth.",
+      "player_card": "witness:martha_ainsworth",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.34, 0.32, 0.24]
+    },
+    {
+      "turn": 10,
+      "_note": "Ainsworth saw Crale on the lane at four.",
+      "player_card": "modifier:gate_moved_friday_four_pm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.4, 0.38, 0.28]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to the parish church.",
+      "player_card": "travel:to_parish_church",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:church_bell_tolls",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.42, 0.4, 0.32]
+    },
+    {
+      "turn": 12,
+      "_note": "Caddick on Alderton; the autumn of 1884.",
+      "player_card": "witness:reverend_caddick",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.46, 0.42, 0.4]
+    },
+    {
+      "turn": 13,
+      "_note": "Parish register: marriage 1882; burial of Alderton 1898.",
+      "player_card": "object:parish_register",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.5, 0.46, 0.46]
+    },
+    {
+      "turn": 14,
+      "_note": "Return to the farmhouse kitchen.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.52, 0.48, 0.48]
+    },
+    {
+      "turn": 15,
+      "_note": "Cider press ledger entries in Eliza's hand.",
+      "player_card": "object:cider_press_ledger",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "tell:glanced_aside",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.54, 0.52, 0.52]
+    },
+    {
+      "turn": 16,
+      "_note": "1884 receipt slipped between ledger pages.",
+      "player_card": "object:1884_receipt",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.58, 0.58, 0.56]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross to the press; cider press turns below.",
+      "player_card": "travel:to_cider_press",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.6, 0.6, 0.58]
+    },
+    {
+      "turn": 18,
+      "_note": "Recall Caddick: money moved which would not have stood the asking.",
+      "player_card": "motive:1884_transaction",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.62, 0.62, 0.62]
+    },
+    {
+      "turn": 19,
+      "_note": "Return to the parish church for the register.",
+      "player_card": "travel:to_parish_church",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.64, 0.64, 0.62]
+    },
+    {
+      "turn": 20,
+      "_note": "Caddick concedes: a matter not for the church.",
+      "player_card": "witness:reverend_caddick",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.66, 0.66, 0.66]
+    },
+    {
+      "turn": 21,
+      "_note": "Re-read the 1884 receipt against the register.",
+      "player_card": "object:parish_register",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.68, 0.68, 0.7]
+    },
+    {
+      "turn": 22,
+      "_note": "Cross to Bristol. Registry office at last.",
+      "player_card": "travel:to_registry_office",
+      "scene": {
+        "LOCATION": "location:registry_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.7, 0.7, 0.7]
+    },
+    {
+      "turn": 23,
+      "_note": "Bristol deeds: 1884 transfer of seven acres, signed Crale + Alderton.",
+      "player_card": "object:1884_receipt",
+      "scene": {
+        "LOCATION": "location:registry_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:buried_motive_surfaces",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.74, 0.74, 0.78]
+    },
+    {
+      "turn": 24,
+      "_note": "Alderton died 1898; the silence held.",
+      "player_card": "modifier:alderton_died_1898",
+      "scene": {
+        "LOCATION": "location:registry_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.76, 0.78, 0.8]
+    },
+    {
+      "turn": 25,
+      "_note": "Nineteen years silence.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:registry_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:buried_motive_surfaces",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.78, 0.8, 0.82]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to the field gate. Dawn approaches.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.8, 0.8, 0.82]
+    },
+    {
+      "turn": 27,
+      "_note": "Set the 1884 receipt on the gate-post.",
+      "player_card": "object:1884_receipt",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.82, 0.82, 0.84]
+    },
+    {
+      "turn": 28,
+      "_note": "Press Crale on Alderton.",
+      "player_card": "modifier:alderton_died_1898",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.84, 0.85, 0.86]
+    },
+    {
+      "turn": 29,
+      "_note": "Name him.",
+      "player_card": "suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.86, 0.87, 0.88]
+    },
+    {
+      "turn": 30,
+      "_note": "Accusation.",
+      "player_card": "ACCUSE:suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.88, 0.88, 0.9]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:thomas_crale",
+    "final_convergence": [0.88, 0.88, 0.9],
+    "_note": "Registry-office close. Bristol seals the chain."
+  }
+}

@@ -1,0 +1,994 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_mrs_lyle_servants_hall",
+  "case_id": "hollow_season",
+  "description": "Standard 40t wrong accusation. The detective fixates on Mrs Lyle from the green-sack interview \u2014 the receipt in her possession, the wastepaper collected, the duty log signed in her hand. Edmund's emotional geography offered (turn 17 portrait, turn 22 doorframe) but never read. Final accusation of Lyle at turn 40. Convergence ~0.78 suspect/evidence, motive plateau ~0.55.",
+  "outcome": "wrong_mrs_lyle",
+  "starting_hypothesis": "lyle_servants_hall_plateau",
+  "tags": [
+    "wrong_mrs_lyle",
+    "deeper_plateau",
+    "lyle_chain",
+    "wastepaper_misread",
+    "hand_paced"
+  ],
+  "opening": {
+    "tokens": [
+      "location:library",
+      "event:sir_geoffrey_discovered",
+      "time:sunday_before_breakfast"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the body.",
+      "player_card": "object:brandy_decanter",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.04,
+        0.05,
+        0.04
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to servants_hall. Mrs Lyle at the bell board.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.06
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "She produces the green sack. The receipt at the bottom.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.18,
+        0.2,
+        0.08
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Press her on the receipt. She gives the village rooms, the basket. Player marks her.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.24,
+        0.22,
+        0.1
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Duty log examined. Mrs Lyle's hand on every entry.",
+      "player_card": "object:duty_log",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_household_record",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.28,
+        0.28,
+        0.12
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Cross to library. Lay the receipt against the decanter.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.3,
+        0.3,
+        0.14
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Hadley at the door. Second NPC.",
+      "player_card": "witness:butler_hadley",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_butler_hadley",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.32,
+        0.32,
+        0.16
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "He gives Mrs Lyle's Saturday \u2014 kitchen, back stairs, basket round.",
+      "player_card": "witness:butler_hadley",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_butler_hadley",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.18
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to village_rooms.",
+      "player_card": "travel:to_village_rooms",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.36,
+        0.36,
+        0.2
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Wastepaper basket emptied. Ash-mark at the bottom.",
+      "player_card": "object:wastepaper_basket",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.22
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Mrs Lyle into the village rooms. The basket she emptied. Press her on the round.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.46,
+        0.44,
+        0.24
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Mrs Penrose summoned. Third NPC. She gives the kitchen Saturday at quarter past.",
+      "player_card": "witness:mrs_penrose",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_mrs_penrose",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rehearsed_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.48,
+        0.46,
+        0.26
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Cross to library. The decanter again. The receipt theory tightens.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.28
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Press the window latch.",
+      "player_card": "object:french_window_latch",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:french_window_latch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rooks_settle",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:door_left_unlatched"
+      },
+      "convergence_after": [
+        0.52,
+        0.52,
+        0.3
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Aldhurst at the door. Fourth NPC. Press him on Mrs Lyle's Sunday morning.",
+      "player_card": "witness:solicitor_aldhurst",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_solicitor_aldhurst",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:over_polished_manner",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.54,
+        0.54,
+        0.32
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "He gives the new will \u2014 player notes; does not pursue Edmund.",
+      "player_card": "object:new_will_draft",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_solicitor_aldhurst",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "emotion:over_polished_manner",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.34
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross to drawing_room. The portrait \u2014 Mrs Lyle had dusted Saturday.",
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.56,
+        0.56,
+        0.34
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Cross to servants_hall. Press her on Saturday.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.58,
+        0.58,
+        0.36
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "She gives the kitchen, back stairs, basket round once more. Cooperative under pressure.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.36
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Press the duty log \u2014 her hand on every entry.",
+      "player_card": "object:duty_log",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.62,
+        0.62,
+        0.37
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Cross to library. Confront her with the receipt in the library.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.64,
+        0.64,
+        0.38
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "She names the doorframe \u2014 Edmund's habit. Player ignores.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:library_doorframe",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.65,
+        0.65,
+        0.4
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to estate_office. Press the will \u2014 but as a frame for Lyle.",
+      "player_card": "travel:to_estate_office",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.66,
+        0.66,
+        0.42
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to walled_garden. The under-gardener. Fifth NPC.",
+      "player_card": "witness:under_gardener",
+      "scene": {
+        "LOCATION": "location:walled_garden",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_under_gardener",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:long_grass_stills",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.67,
+        0.67,
+        0.42
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "He gives Mrs Lyle on the kitchen path. Misread.",
+      "player_card": "witness:under_gardener",
+      "scene": {
+        "LOCATION": "location:walled_garden",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_under_gardener",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.68,
+        0.68,
+        0.44
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to library. Press the burned note.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.69,
+        0.69,
+        0.46
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Cross to servants_hall. Lay the burned note plain.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.7,
+        0.7,
+        0.48
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "She gives the bin round Friday evening. The note had not been hers.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.71,
+        0.71,
+        0.5
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Press the receipt one more time.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.72,
+        0.72,
+        0.5
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Mrs Penrose returns. Sixth NPC count. She gives the Saturday brandy tray. Misread again.",
+      "player_card": "witness:mrs_penrose",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_penrose",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rehearsed_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.74,
+        0.74,
+        0.52
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Cross to library. The decanter, the receipt \u2014 all in one chain.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.52
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Press the duty log.",
+      "player_card": "object:duty_log",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.76,
+        0.53
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Cross to servants_hall. Lay all out before her.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.54
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "She gives the basket history once more, calm. Player reads silence as guilt.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.78,
+        0.77,
+        0.55
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Press the green sack.",
+      "player_card": "object:wastepaper_basket",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.55
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Hadley reappears. He gives Mrs Lyle's basket round in full \u2014 corroborates her account. Player reads as conspiracy.",
+      "player_card": "witness:butler_hadley",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_butler_hadley",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.55
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Cross to library. Lay the receipt against the brandy.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.55
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Cross to servants_hall.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.79,
+        0.79,
+        0.55
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Press once more.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.79,
+        0.79,
+        0.55
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Accusation. Wrong.",
+      "player_card": "ACCUSE:suspect:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.55
+      ]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:mrs_lyle",
+    "final_convergence": [
+      0.8,
+      0.8,
+      0.55
+    ],
+    "_note": "Lyle plateau. Edmund's emotional geography offered (T17 portrait, T22 doorframe) and ignored. Wrong accusation."
+  }
+}

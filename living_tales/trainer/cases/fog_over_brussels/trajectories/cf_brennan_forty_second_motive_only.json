@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_brennan_forty_second_motive_only",
+  "case_id": "fog_over_brussels",
+  "description": "Counterfactual branch of brennan_via_forty_second_interval. At turn 33 the detective's revelation lands on motive_emerges (the 1957 source) instead of partial_match — the chain to motive closes faster than the chain to the tray. Brennan admits the why; the warrant cannot lodge.",
+  "outcome": "motive_only_confession",
+  "branch_of": "brennan_via_forty_second_interval",
+  "branch_turn": 33,
+  "divergence_token": "REVELATION=revelation:motive_emerges",
+  "starting_hypothesis": "counterfactual_branch",
+  "tags": [
+    "counterfactual_branch",
+    "motive_only_confession",
+    "revelation_divergence",
+    "forty_second_branch"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:kitchen_corridor",
+      "location:embassy_kitchen",
+      "location:kitchen_corridor",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "location:west_wing_stairwell",
+      "location:cipher_room",
+      "location:document_room",
+      "location:kitchen_corridor",
+      "location:reception_room",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.84, 0.89, 0.72]
+  },
+  "turns": [
+    {
+      "turn": 33,
+      "_note": "DIVERGENCE: revelation lands motive_emerges instead of partial_match. Motive dim jumps; others creep.",
+      "player_card": "object:secondary_encoding_sheet",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.85, 0.89, 0.84]
+    },
+    {
+      "turn": 34,
+      "_note": "Cross to the reception. Brennan at the chandelier. Press for the why.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.86, 0.90, 0.88]
+    },
+    {
+      "turn": 35,
+      "_note": "He names the 1957 source. The motive surfaces; he does not admit the tray.",
+      "player_card": "motive:double_agent_exposure",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.86, 0.91, 0.92]
+    },
+    {
+      "turn": 36,
+      "_note": "Press for the tray. He gives nothing on the tray. The chain does not close.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.87, 0.91, 0.93]
+    },
+    {
+      "turn": 37,
+      "_note": "Cross to the embassy entrance. Chief shakes his head. Motive alone does not lodge the warrant.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.88, 0.91, 0.93]
+    }
+  ],
+  "ending": {
+    "type": "motive_only_confession",
+    "true_culprit": "suspect:brennan",
+    "final_convergence": [0.88, 0.91, 0.93],
+    "_note": "Motive surfaced (double_agent_exposure, 1957 source). The tray chain did not close. No warrant lodged."
+  }
+}

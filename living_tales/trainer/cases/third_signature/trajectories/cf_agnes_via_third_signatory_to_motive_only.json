@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_agnes_via_third_signatory_to_motive_only",
+  "case_id": "third_signature",
+  "description": "CF: in agnes_via_third_signatory, the third signatory's hand reads as authentic, not matching \u2014 the detective is left with the 1921 motive but no mechanism, and Agnes confesses motive only.",
+  "outcome": "motive_only_confession",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "agnes_via_third_signatory",
+  "branch_turn": 17,
+  "divergence_token": "SIGNATURE_TELL=signature_tell:authenticity_holds",
+  "tags": [
+    "cf_signature_divergence",
+    "motive_only_outcome",
+    "third_signatory_path",
+    "counterfactual"
+  ],
+  "_authoring_note": "CF \u2014 diverges from agnes_via_third_signatory at turn 17 on SIGNATURE_TELL=signature_tell:authenticity_holds.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:basement_records",
+      "event:pemberton_discovered",
+      "time:body_found_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 17,
+      "player_card": "object:trust_deed",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_signature_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:authenticity_holds"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "_note": "CF divergence: the hand on the deed reads as authentic \u2014 no match landing."
+    },
+    {
+      "turn": 18,
+      "player_card": "motive:1921_scandal",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:letter_1921",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.52,
+        0.52,
+        0.52
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "object:letter_1921",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.53,
+        0.53,
+        0.53
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "motive:1921_scandal",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:letter_1921",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "travel:to_reading_room",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.56,
+        0.56,
+        0.56
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "witness:agnes_vail",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:letter_1921",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.58,
+        0.58,
+        0.58
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "motive:1921_scandal",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:letter_1921",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "witness:agnes_vail",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:letter_1921",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.62,
+        0.62,
+        0.62
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "ACCUSE:suspect:agnes_vail",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:letter_1921",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    }
+  ],
+  "ending": {
+    "type": "motive_only_confession",
+    "accused": "suspect:agnes_vail",
+    "final_convergence": [
+      0.65,
+      0.45,
+      0.65
+    ]
+  }
+}

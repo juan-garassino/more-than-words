@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_agnes_via_register_entry_815_to_carey",
+  "case_id": "third_signature",
+  "description": "CF: in agnes_via_register_entry_815, the detective pivots away from the register to the publisher_contract and accuses Carey instead.",
+  "outcome": "wrong_carey",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "agnes_via_register_entry_815",
+  "branch_turn": 11,
+  "divergence_token": "OBJECT_FOCUS=object:publisher_contract",
+  "tags": [
+    "cf_object_divergence",
+    "carey_outcome",
+    "register_to_contract",
+    "counterfactual"
+  ],
+  "_authoring_note": "CF \u2014 diverges from agnes_via_register_entry_815 at turn 11 on OBJECT_FOCUS=object:publisher_contract.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.27,
+      0.27,
+      0.27
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:reading_room",
+      "event:pemberton_discovered",
+      "time:body_found_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 11,
+      "player_card": "object:publisher_contract",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:legal_hedging",
+        "ATMOSPHERE": "atmosphere:coal_fire_settles",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "_note": "CF divergence: instead of staying on the register, the detective crosses to Carey with the publisher contract."
+    },
+    {
+      "turn": 12,
+      "player_card": "object:publisher_contract",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "emotion:legal_hedging",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.32,
+        0.32
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "witness:carey",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "emotion:legal_hedging",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "motive:rival_estate_dispute",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "modifier:contract_unsigned",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "suspect:carey",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "motive:manuscript_attribution",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "object:publisher_contract",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "suspect:carey",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.76,
+        0.76
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "ACCUSE:suspect:carey",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.78
+      ]
+    }
+  ],
+  "ending": {
+    "type": "wrong_carey",
+    "accused": "suspect:carey",
+    "final_convergence": [
+      0.78,
+      0.55,
+      0.78
+    ]
+  }
+}

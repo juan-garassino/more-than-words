@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "case_id": "hollow_season",
+  "_comment": "Reusable scene-tuple templates for trajectory authoring. Each snippet fixes 5-7 of the dim slots (the constants that define the scene type) and lists the slots the author must supply per use (the variables that distinguish one instance from another). Token IDs are drawn from cases/hollow_season/dimensions.json. The protocol_breach_moment template uses the case-specific PROTOCOL_TELL extension dim and the emotional_geography_moment carries the LATE-phase emotional pivot that breaks the Finch false plateau (Edmund's attachment to the house as the site of his only stable memory).",
+
+  "snippets": {
+
+    "cold_object_examination": {
+      "description": "Detective alone with a single object — the brandy decanter in the library, the wastepaper basket from Edmund's village rooms, the timber ledger on Finch's desk. Cold, methodical inspection. No NPC pressure, no tell, no stance, no protocol breach. Used for opening turns and quiet evidence beats between interviews.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "first_witness_interview_cooperative": {
+      "description": "First contact with a household witness — Hadley at the duty log, the under-gardener at the bean canes, the village chemist at his counter book — who has no reason to lie. They give what they saw or what their book recorded, plainly. The detective is questioning, the witness is open, the late-summer light slants in across the room. Use early in trajectory before any pressure has built.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "witness_reinterview_defensive": {
+      "description": "Returning to a witness already questioned, this time with the postbox record or the chemist's counter book in hand. Their stance shifts to defensive; the procedural language tightens, the qualifiers double up. Use mid-game, second or third pass on a suspect, after a contradiction has surfaced elsewhere.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "TELL": "emotion:closed_posture",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "PRESENCE", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "transition_pursuing_lead": {
+      "description": "A movement turn — the detective is in motion between the house and the lodge, or up the avenue, or down to the village rooms, having just been pointed somewhere by a witness or by a paper that was meant to be burned. Brief, kinetic. The rooks settle in the limes; the long grass stills behind her. The scene proper begins next turn.",
+      "template": {
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "dead_end_witness": {
+      "description": "A witness has nothing useful — the ladies' maid who is sure the back stair lamp was still alight at half past eleven, the butler whose duty-log times are correct down to the quarter hour. Cooperative but uninformed (for the killer's purposes — their alibi for someone else holds). The lead closes here. Used to puncture momentum and force the detective back to the decanter and the basket.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands",
+        "REVELATION": "revelation:dead_end",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "BEAT"]
+    },
+
+    "revelation_object_recognition": {
+      "description": "An object the detective has already seen — the brandy decanter, the timber ledger, the wastepaper basket — suddenly resolves into meaning. Alone, looking at the same thing in a new light. Late investigation or closing-in beat. Pairs with name_uncovered, motive_emerges, or emotional_geography_lands revelations.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "confrontation_hostile": {
+      "description": "Direct accusation. The detective has the chain in hand — the chemist's receipt, the burned corner of the note, the unwitnessed will — and is putting it to the suspect across the library desk or the lodge table. The stance is hostile, the tell is sharp, the beat is closing_in or verdict_ready. Use sparingly — once or twice per trajectory.",
+      "template": {
+        "CAUSE": "cause:pursued_suspicion",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION"]
+    },
+
+    "revisit_for_reframing": {
+      "description": "The detective returns to a room already visited — the library, the drawing room, the summer house — alone, to look at it again with the new context. Nothing dramatic — a quiet recasting of an earlier scene. Often produces a partial_match or contradiction_surfaces.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "atmospheric_interlude": {
+      "description": "A low-activity beat. The rooks settle in the lime avenue; the dust motes hang in the south window; a service bell rings two corridors away. Time passes; the house breathes around the detective. Minimal scene activity, no revelation, no NPC. Used to mark act breaks or simply to give the prose a place to rest. One or two per trajectory.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "ATMOSPHERE", "BEAT"]
+    },
+
+    "discovery_moment": {
+      "description": "A find — a physical object surfaces from where it had been hidden or missed. The chemist's receipt comes out of the green sack of saved paper in the back scullery; a burned corner of a note is lifted from the cold grate of Edmund's village rooms; the timber ledger is found with a column in a hand that does not match the rest. Alone, the act of finding. Distinct from object_recognition: this is the first time the object enters the case, not the moment its meaning lands.",
+      "template": {
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:partial_match",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "protocol_breach_moment": {
+      "description": "Case-specific snippet. The detective registers an Edwardian protocol breach — a servant addressed by a Christian name where the surname is now used, a door left unlatched that ought never to be, a letter burned that ought to have been answered, the service bell not rung when the bell was the proper means. The PROTOCOL_TELL slot carries which breach. None of these are evidence in the legal sense; together they are the texture of a household coming undone. Use 2-3 times per trajectory, especially around Edmund's scenes.",
+      "template": {
+        "CAUSE": "cause:noting_protocol_breach",
+        "ACTION": "action:notices",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "STANCE", "OBJECT_FOCUS", "PROTOCOL_TELL", "TELL", "REVELATION"]
+    },
+
+    "emotional_geography_moment": {
+      "description": "Case-specific snippet. The case's central pivot. Alone in the drawing room or the library, the detective reads the small domestic signals that map Edmund to the house — the eleven minutes he stood before his mother's portrait on the Saturday before dinner, the doorframe of the library he had touched on entering it since he was twelve, the specific quality of his composure at breakfast when the audit was mentioned. The REVELATION is emotional_geography_lands — the motive plateau breaks. Use once per trajectory, LATE phase, and only on convergence_min >= 0.6.",
+      "template": {
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:emotional_geography_lands",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS"]
+    }
+
+  }
+}

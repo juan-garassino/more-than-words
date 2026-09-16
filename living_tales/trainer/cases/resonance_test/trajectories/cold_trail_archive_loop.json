@@ -1,0 +1,1303 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cold_trail_archive_loop",
+  "case_id": "resonance_test",
+  "description": "The detective ends in the archive basement and never leaves it for long. Norwood, the manuscript, the tape, the catalogue \u2014 examined three times each, never read deeply enough. The name on the card stays uninvestigated. Marta is never re-questioned. Convergence plateaus at 0.42.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "archive_obsession",
+  "tags": [
+    "archive_no_card",
+    "norwood_repeat",
+    "never_climbs"
+  ],
+  "opening": {
+    "tokens": [
+      "location:practice_wing_basement",
+      "event:stairwell_fall",
+      "time:thursday_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open.",
+      "player_card": "object:austrian_publisher_catalogue",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_silent",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.04,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.06,
+        0.07,
+        0.06
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Examine.",
+      "player_card": "object:austrian_publisher_catalogue",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.09,
+        0.1,
+        0.09
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Cross.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.11,
+        0.12,
+        0.11
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Question.",
+      "player_card": "witness:archive_clerk_norwood",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.13,
+        0.14,
+        0.13
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Examine \u2014 never read the name.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.15,
+        0.16,
+        0.15
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.18,
+        0.19,
+        0.18
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Examine.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:tape_hiss_room",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.2,
+        0.21,
+        0.2
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.22,
+        0.23,
+        0.22
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Examine.",
+      "player_card": "object:austrian_publisher_catalogue",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.24,
+        0.24,
+        0.24
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.25,
+        0.26,
+        0.25
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Question.",
+      "player_card": "witness:archive_clerk_norwood",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.27,
+        0.28,
+        0.27
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Examine card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.29,
+        0.3,
+        0.29
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Modifier.",
+      "player_card": "modifier:vienna_premiere",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.31,
+        0.32,
+        0.31
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.33,
+        0.32
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.33,
+        0.34,
+        0.33
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Modifier.",
+      "player_card": "modifier:hungarian_origin",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.35,
+        0.36,
+        0.35
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Examine.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:tape_hiss_room",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.36,
+        0.37,
+        0.36
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Listen.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:hearing_passage_again",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:tape_hiss_room",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:tape_hiss"
+      },
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.38
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Examine card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.41
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Examine card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.41
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Examine card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.41
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Examine card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.41
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Examine card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.41
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 41,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 42,
+      "_note": "Examine card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.41
+      ]
+    },
+    {
+      "turn": 43,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 44,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 45,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 46,
+      "_note": "Examine card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.41
+      ]
+    },
+    {
+      "turn": 47,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 48,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 49,
+      "_note": "Return.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 50,
+      "_note": "Examine card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.41
+      ]
+    },
+    {
+      "turn": 51,
+      "_note": "Examine.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 52,
+      "_note": "Return.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 53,
+      "_note": "Cross.",
+      "player_card": "travel:to_courtyard",
+      "scene": {
+        "LOCATION": "location:courtyard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:leaves",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "final_convergence": [
+      0.42,
+      0.42,
+      0.42
+    ],
+    "_note": "Archive obsessive loop without resolution."
+  }
+}

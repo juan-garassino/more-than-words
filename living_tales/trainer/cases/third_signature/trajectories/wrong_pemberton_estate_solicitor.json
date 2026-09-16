@@ -1,0 +1,951 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_pemberton_estate_solicitor",
+  "case_id": "third_signature",
+  "description": "Player fixates on Kemp the archivist \u2014 suspects he held the 1921 letters and falsified records.",
+  "outcome": "wrong_kemp",
+  "starting_hypothesis": "archivist_suspicion",
+  "tags": [
+    "archivist_misread",
+    "kemp_wrong",
+    "archive_misled"
+  ],
+  "opening": {
+    "tokens": [
+      "location:reading_room",
+      "event:pemberton_discovered",
+      "time:body_found_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "object:port_glass",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:port_glass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "object:port_decanter",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:port_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "travel:to_manuscript_archive",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "witness:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "travel:to_basement_records",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "object:trust_deed",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "object:trust_deed",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "travel:to_manuscript_archive",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "witness:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "travel:to_club_corridor",
+      "scene": {
+        "LOCATION": "location:club_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "object:port_glass",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:port_glass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "travel:to_manuscript_archive",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "witness:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "suspect:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "suspect:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "travel:to_basement_records",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "object:trust_deed",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "object:trust_deed",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "travel:to_manuscript_archive",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "suspect:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "suspect:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "suspect:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "suspect:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "suspect:archivist_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "ACCUSE:suspect:walter_kemp",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    }
+  ],
+  "ending": {
+    "type": "wrong_kemp",
+    "accused": "suspect:walter_kemp",
+    "final_convergence": [
+      0.8,
+      0.55,
+      0.78
+    ]
+  }
+}

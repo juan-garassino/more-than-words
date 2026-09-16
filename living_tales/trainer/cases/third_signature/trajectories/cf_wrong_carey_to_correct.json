@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_carey_to_correct",
+  "case_id": "third_signature",
+  "description": "CF: in wrong_carey, the detective notices the unsigned-contract inconsistency at turn 24 and pivots to the lodge \u2014 leftward slope leads to the deed and the correct verdict.",
+  "outcome": "correct_agnes_vail",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "wrong_carey",
+  "branch_turn": 24,
+  "divergence_token": "CAUSE=cause:noticed_inconsistency",
+  "tags": [
+    "cf_cause_divergence",
+    "correct_outcome",
+    "carey_recovery",
+    "counterfactual"
+  ],
+  "_authoring_note": "CF \u2014 diverges from wrong_carey at turn 24 on CAUSE=cause:noticed_inconsistency.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:smoking_room",
+      "event:pemberton_discovered",
+      "time:body_found_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 24,
+      "player_card": "modifier:contract_unsigned",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.52,
+        0.52,
+        0.52
+      ],
+      "_note": "CF divergence: the contract is unsigned \u2014 Carey had no operative motive."
+    },
+    {
+      "turn": 25,
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "object:sign_in_register",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_signature_signal",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:leftward_slope"
+      },
+      "convergence_after": [
+        0.58,
+        0.58,
+        0.58
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "modifier:leftward_hand",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:leftward_slope"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "travel:to_basement_records",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.62,
+        0.62,
+        0.62
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "object:trust_deed",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_signature_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:third_signatory_revealed"
+      },
+      "convergence_after": [
+        0.66,
+        0.66,
+        0.66
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "motive:1921_scandal",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "modifier:seven_minute_gap",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "ACCUSE:suspect:agnes_vail",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:third_signatory_revealed"
+      },
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.78
+      ]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:agnes_vail",
+    "final_convergence": [
+      0.85,
+      0.75,
+      0.82
+    ]
+  }
+}

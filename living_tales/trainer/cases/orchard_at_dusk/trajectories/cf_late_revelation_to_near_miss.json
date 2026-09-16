@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_late_revelation_to_near_miss",
+  "case_id": "orchard_at_dusk",
+  "description": "Counterfactual branch of late_revelation_after_webb. At turn 20 TRANSITION diverges from stayed to crossed_to — instead of pressing Webb in place, the detective rushes to the field gate to confront the hinge. The bolt of action moves too fast; he accuses Webb without the buried-motive correction. Near miss. 7-turn CF.",
+  "outcome": "near_miss",
+  "branch_of": "late_revelation_after_webb",
+  "branch_turn": 20,
+  "divergence_token": "TRANSITION=transition:crossed_to",
+  "starting_hypothesis": "wrong_then_right_after_webb",
+  "tags": ["counterfactual_branch","transition_divergence","near_miss","rushed_verdict"],
+  "opening": {"tokens": ["location:crale_orchard","event:oates_found_at_dusk","time:dusk_hour"]},
+  "pre_branch_state": {"convergence_dims": [0.78, 0.78, 0.76]},
+  "turns": [
+    {"turn":20,"_note":"DIVERGENCE. Instead of staying with Webb to press him further, the detective bolts to the field gate.","player_card":"travel:to_field_gate","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:arrives","OBJECT_FOCUS":"object_focus:none","TELL":"tell:none","ATMOSPHERE":"atmosphere:wind_in_the_long_grass","REVELATION":"revelation:none","BEAT":"beat:closing_in"},"convergence_after":[0.78,0.78,0.76]},
+    {"turn":21,"_note":"The hinge — gate moved Friday four. Webb's surface motive holds in the detective's head.","player_card":"object:field_gate_hinge","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:field_gate_hinge","TELL":"tell:none","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:contradiction_surfaces","BEAT":"beat:closing_in"},"convergence_after":[0.8,0.79,0.76]},
+    {"turn":22,"_note":"Cross to the village inn. Webb at the bar — the detective will lock the case.","player_card":"travel:to_village_inn","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:lamp_lit_early","REVELATION":"revelation:partial_match","BEAT":"beat:verdict_ready"},"convergence_after":[0.81,0.8,0.76]},
+    {"turn":23,"_note":"Lay the surveyors' fee.","player_card":"object:surveyors_fee","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:examining_evidence","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:surveyors_fee","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:name_uncovered","BEAT":"beat:verdict_ready"},"convergence_after":[0.83,0.81,0.78]},
+    {"turn":24,"_note":"Boundary fraud named. The buried thread never surfaces.","player_card":"motive:boundary_fraud","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:examining_evidence","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:surveyors_fee","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:motive_emerges","BEAT":"beat:verdict_ready"},"convergence_after":[0.84,0.82,0.76]},
+    {"turn":25,"_note":"The 1884 receipt is at the cider press — unfetched, the detective forgets.","player_card":"object:1884_receipt","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:examining_evidence","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:notices","OBJECT_FOCUS":"object:1884_receipt","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:verdict_ready"},"convergence_after":[0.84,0.82,0.77]},
+    {"turn":26,"_note":"Accuse Webb. Crale walks at dawn. Near miss.","player_card":"ACCUSE:suspect:amos_webb","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:none","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:surveyors_fee","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:confirmation","BEAT":"beat:verdict_ready"},"convergence_after":[0.85,0.83,0.78]}
+  ],
+  "ending": {
+    "type": "near_miss",
+    "accused": "suspect:amos_webb",
+    "true_culprit": "suspect:thomas_crale",
+    "final_convergence": [0.85, 0.83, 0.78],
+    "_note": "TRANSITION pivot: detective bolted, missed the buried motive. 7-turn CF."
+  }
+}

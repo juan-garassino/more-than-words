@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_red_herring_helena_near",
+  "case_id": "fog_over_brussels",
+  "description": "Counterfactual branch of red_herring_trap_helena_voss. At turn 31 the beat advances to verdict_ready and the detective spots the steer \u2014 but only manages to accuse the chief of security (the accomplice). Near miss.",
+  "outcome": "near_miss",
+  "branch_of": "red_herring_trap_helena_voss",
+  "branch_turn": 31,
+  "divergence_token": "BEAT=beat:verdict_ready",
+  "starting_hypothesis": "counterfactual_branch",
+  "tags": [
+    "counterfactual_branch",
+    "near_miss",
+    "beat_divergence",
+    "red_herring_recovery"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "location:ambassadors_office",
+      "location:reception_room",
+      "location:west_wing_stairwell",
+      "location:cipher_room",
+      "location:document_room",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "location:reception_room",
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "location:embassy_entrance",
+      "location:reception_room",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.81,
+      0.81,
+      0.81
+    ]
+  },
+  "turns": [
+    {
+      "turn": 31,
+      "_note": "DIVERGENCE: beat advances; the detective sees through Helena.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.82, 0.84, 0.80]
+    },
+    {
+      "turn": 32,
+      "_note": "Chief of security on the landing.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.87, 0.84, 0.80]
+    },
+    {
+      "turn": 33,
+      "_note": "Press: he saw the figure.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.91, 0.86, 0.80]
+    },
+    {
+      "turn": 34,
+      "_note": "Near-miss accusation: chief of security.",
+      "player_card": "ACCUSE:suspect:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.93, 0.87, 0.81]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "final_convergence": [0.93, 0.87, 0.81],
+    "accused": "suspect:chief_of_security",
+    "true_culprit": "suspect:brennan",
+    "_note": "Near-miss: accomplice accused (chief of security); Brennan walks."
+  }
+}

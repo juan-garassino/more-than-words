@@ -1,0 +1,792 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "correct_thomas_crale_via_tilling_afternoon_gap",
+  "case_id": "orchard_at_dusk",
+  "description": "Witness-first via Hob Tilling. His honest testimony \u2014 upper field, supper at seven, no sight of Crale between two and seven \u2014 decides the case.",
+  "outcome": "correct_thomas_crale",
+  "starting_hypothesis": "witness_first_tilling",
+  "tags": [
+    "correct_crale",
+    "tilling_gap",
+    "afternoon_alibi_collapse",
+    "mechanism_chain"
+  ],
+  "opening": {
+    "tokens": [
+      "location:crale_orchard",
+      "event:oates_found_at_dusk",
+      "time:dusk_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the body.",
+      "player_card": "object:apple_in_grass",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:apple_in_grass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.04,
+        0.05,
+        0.06
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to the Crale kitchen \u2014 Tilling stands with his cap in his hand.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.06,
+        0.08,
+        0.06
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "First question to Tilling \u2014 Friday's hours.",
+      "player_card": "witness:hob_tilling",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.1,
+        0.12,
+        0.08
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Supper at seven, as every Friday. Crale at the table.",
+      "player_card": "modifier:supper_at_seven",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.14,
+        0.16,
+        0.1
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Press Tilling on the afternoon.",
+      "player_card": "witness:hob_tilling",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.18,
+        0.2,
+        0.14
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Upper field cutting hay till half past five. Then the press till six.",
+      "player_card": "modifier:farmhand_in_upper_field",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.22,
+        0.24,
+        0.16
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Did Tilling see Crale between two and seven?",
+      "player_card": "witness:hob_tilling",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.26,
+        0.28,
+        0.18
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Tilling said it without hesitation: he had not seen Mr Crale between two and seven.",
+      "player_card": "modifier:farmhand_in_upper_field",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.32,
+        0.34,
+        0.22
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to the cider press. Confirm Tilling's hour.",
+      "player_card": "travel:to_cider_press",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.34,
+        0.36,
+        0.24
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Press ledger: Tilling at six. Crale not at the press at all.",
+      "player_card": "object:cider_press_ledger",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.38,
+        0.4,
+        0.26
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to Webb Farm. Ainsworth at the window.",
+      "player_card": "travel:to_webb_farm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.4,
+        0.42,
+        0.28
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Ainsworth saw Crale on the lane at four.",
+      "player_card": "witness:martha_ainsworth",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.44,
+        0.46,
+        0.3
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Crale was alone on the lane, heading toward the gate.",
+      "player_card": "modifier:gate_moved_friday_four_pm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.48,
+        0.5,
+        0.34
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Cross to the field gate.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.5,
+        0.52,
+        0.36
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "The hinge: paint scrape, moved within the week.",
+      "player_card": "object:field_gate_hinge",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.52,
+        0.54,
+        0.38
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Walk the lane's long-grass route.",
+      "player_card": "travel:to_orchard_lane",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:drainage_stone",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.54,
+        0.56,
+        0.4
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "The stone above the grass.",
+      "player_card": "object:drainage_stone",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:drainage_stone",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.56,
+        0.58,
+        0.42
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Cross to the inn \u2014 Sowerby.",
+      "player_card": "travel:to_village_inn",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.58,
+        0.6,
+        0.44
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Sowerby confirms Webb's Monday-file threat.",
+      "player_card": "witness:ned_sowerby",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.62,
+        0.64,
+        0.48
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Surface motive: Webb would file the correction Monday.",
+      "player_card": "motive:boundary_fraud",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.66,
+        0.68,
+        0.52
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Return to the Crale kitchen with the chain.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.68,
+        0.7,
+        0.54
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Re-question Tilling \u2014 the upper-field hours, again.",
+      "player_card": "witness:hob_tilling",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.72,
+        0.72,
+        0.56
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Supper at seven is solid. The afternoon is open.",
+      "player_card": "modifier:supper_at_seven",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.74,
+        0.74,
+        0.6
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to the gate. Crale is there.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.76,
+        0.76,
+        0.62
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Question Crale on the afternoon.",
+      "player_card": "suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.64
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Place the moved gate. Crale's hand leaves the rail.",
+      "player_card": "modifier:gate_moved_friday_four_pm",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.66
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Place Tilling's gap: Crale was not seen between two and seven.",
+      "player_card": "modifier:farmhand_in_upper_field",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:flat_denial",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.82,
+        0.82,
+        0.7
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Lay the apple on the gate-post.",
+      "player_card": "object:apple_in_grass",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:apple_in_grass",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.84,
+        0.84,
+        0.72
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "The hinge between them.",
+      "player_card": "object:field_gate_hinge",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.76
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Name the motive.",
+      "player_card": "motive:boundary_fraud",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.87,
+        0.87,
+        0.8
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Name him.",
+      "player_card": "suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.89,
+        0.84
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Accusation. Tilling's afternoon gap is the case.",
+      "player_card": "ACCUSE:suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.9,
+        0.9,
+        0.86
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "The long grass at the boundary. The dusk.",
+      "player_card": "modifier:long_grass_uncut",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.9,
+        0.9,
+        0.86
+      ]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:thomas_crale",
+    "final_convergence": [
+      0.9,
+      0.9,
+      0.86
+    ],
+    "_note": "Tilling's afternoon gap is the case."
+  }
+}

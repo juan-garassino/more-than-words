@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_red_herring_trap_finch_audit_to_near_miss",
+  "case_id": "hollow_season",
+  "description": "Counterfactual: in the red-herring trap the eleven-minute-portrait modifier surfaces just before closing-in; the detective barely pivots to Edmund \u2014 near miss.",
+  "outcome": "near_miss",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "red_herring_trap_finch_audit",
+  "branch_turn": 26,
+  "divergence_token": "BEAT=beat:closing_in",
+  "tags": [
+    "counterfactual",
+    "beat_divergence",
+    "near_miss",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from red_herring_trap_finch_audit at turn 26 on BEAT=beat:closing_in.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.6,
+      0.65,
+      0.6
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:carrow_hall",
+      "event:archibald_discovered",
+      "time:late_october"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 38,
+      "player_card": "modifier:eleven_minutes_at_portrait",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.66,
+        0.68,
+        0.64
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.8,
+        0.76
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.83,
+        0.8
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "ACCUSE:suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.84,
+        0.85,
+        0.82
+      ]
+    }
+  ],
+  "ending": {
+    "type": "near_miss",
+    "accused": "suspect:edmund_carrow",
+    "final_convergence": [
+      0.84,
+      0.85,
+      0.82
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=red_herring_trap_finch_audit"
+  }
+}

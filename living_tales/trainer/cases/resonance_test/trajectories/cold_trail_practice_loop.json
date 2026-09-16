@@ -1,0 +1,991 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cold_trail_practice_loop",
+  "case_id": "resonance_test",
+  "description": "Player loops through practice room A, harmony classroom and recital hall, never visiting the archive basement or the porter's lodge. Convergence flat-lines around 0.44 and the night ends without an arrest.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "scene_revisit",
+  "tags": [
+    "circular_path",
+    "practice_loop",
+    "never_archive"
+  ],
+  "opening": {
+    "tokens": [
+      "location:practice_wing_basement",
+      "event:stairwell_fall",
+      "time:thursday_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open.",
+      "player_card": "object:broken_handrail",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_silent",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.04,
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to practice room A.",
+      "player_card": "travel:to_practice_room_a",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.06,
+        0.07,
+        0.06
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Examine sign-in book.",
+      "player_card": "object:practice_room_sign_in_book",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:practice_room_sign_in_book",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.08,
+        0.09,
+        0.08
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Cross to harmony classroom.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.1,
+        0.11,
+        0.1
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Question Marta briefly.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.12,
+        0.13,
+        0.12
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Cross to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Examine printed score.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.16,
+        0.17,
+        0.16
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Question Pryce.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.18,
+        0.19,
+        0.18
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Return to practice room A.",
+      "player_card": "travel:to_practice_room_a",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.2,
+        0.21,
+        0.2
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Question attendant again.",
+      "player_card": "witness:practice_room_attendant",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:practice_room_sign_in_book",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.22,
+        0.23,
+        0.22
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Return to harmony classroom.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.24,
+        0.25,
+        0.24
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Question Marta again. Same brief answers.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.26,
+        0.27,
+        0.26
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Cross to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.28,
+        0.28,
+        0.28
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Examine printed score.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Return to practice room A.",
+      "player_card": "travel:to_practice_room_a",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.31,
+        0.31,
+        0.31
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Modifier \u2014 alone after nine.",
+      "player_card": "modifier:alone_after_nine",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.33,
+        0.32
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross to harmony classroom.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.33,
+        0.34,
+        0.33
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Question Marta.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.35,
+        0.36,
+        0.35
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Cross to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.36,
+        0.37,
+        0.36
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Question Pryce.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.37,
+        0.38,
+        0.37
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Return to practice room A.",
+      "player_card": "travel:to_practice_room_a",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.38,
+        0.39,
+        0.38
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Examine the sign-in book again.",
+      "player_card": "object:practice_room_sign_in_book",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:practice_room_sign_in_book",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.39,
+        0.4,
+        0.39
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to harmony classroom.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Question Marta. She gives the same answers.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.41,
+        0.4
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Return to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.41,
+        0.41
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Examine printed score.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.41,
+        0.42,
+        0.41
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Cross to practice room A.",
+      "player_card": "travel:to_practice_room_a",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Modifier \u2014 alone after nine.",
+      "player_card": "modifier:alone_after_nine",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.43,
+        0.42
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to harmony classroom.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.43,
+        0.42
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Examine printed score on her desk.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.43,
+        0.43,
+        0.43
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Question Marta.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.43,
+        0.43,
+        0.43
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Cross to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.43,
+        0.44,
+        0.43
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Question Pryce.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.44,
+        0.44
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Return to practice room A.",
+      "player_card": "travel:to_practice_room_a",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.44,
+        0.44
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Examine the sign-in book.",
+      "player_card": "object:practice_room_sign_in_book",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:practice_room_sign_in_book",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.44,
+        0.44
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Cross to harmony classroom.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.44,
+        0.44
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Question Marta.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.44,
+        0.44
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Cross to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.44,
+        0.44
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Examine printed score.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.44,
+        0.44
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Dawn approaches; walks out without an arrest.",
+      "player_card": "travel:to_courtyard",
+      "scene": {
+        "LOCATION": "location:courtyard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:leaves",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.44,
+        0.44
+      ]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "final_convergence": [
+      0.44,
+      0.44,
+      0.44
+    ],
+    "_note": "Practice rooms loop; verdict never unlocks."
+  }
+}

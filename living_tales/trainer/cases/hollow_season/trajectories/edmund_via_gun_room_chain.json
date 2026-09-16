@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "edmund_via_gun_room_chain",
+  "case_id": "hollow_season",
+  "description": "Detective enters and exits the gun room mid-investigation, recovering the medicine phial that ties the brandy to Edmund's chest-complaint cover.",
+  "outcome": "correct_edmund_carrow",
+  "starting_hypothesis": "correct_via_gun_room",
+  "tags": [
+    "correct_path",
+    "gun_room_entered_exited",
+    "medicine_phial_chain",
+    "wave2"
+  ],
+  "opening": {
+    "tokens": [
+      "location:carrow_hall",
+      "event:archibald_discovered",
+      "time:late_october"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "object:brandy_decanter",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.04,
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "object:french_window_latch",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:french_window_latch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rooks_settle",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:door_left_unlatched"
+      },
+      "convergence_after": [
+        0.08,
+        0.08,
+        0.08
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "witness:butler_hadley",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_butler_hadley",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.12,
+        0.12,
+        0.12
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.14,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:over_polished_manner",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.18,
+        0.18,
+        0.18
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "object:new_will_draft",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_solicitor_aldhurst",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "emotion:over_polished_manner",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.22,
+        0.24,
+        0.22
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "travel:to_gatehouse_lodge",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:rooks_settle",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.24,
+        0.26,
+        0.26
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "object:timber_ledger",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.28,
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "motive:audit_evasion",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.36,
+        0.4,
+        0.38
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "travel:to_servants_hall",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.36,
+        0.4,
+        0.38
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.4,
+        0.44,
+        0.4
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "object:wastepaper_basket",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.48,
+        0.44
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "modifier:paper_saved_for_reuse",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.48,
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.52,
+        0.56,
+        0.52
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "travel:to_gun_room",
+      "scene": {
+        "LOCATION": "location:gun_room",
+        "TRANSITION": "transition:entered",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:door_left_unlatched"
+      },
+      "convergence_after": [
+        0.54,
+        0.58,
+        0.54
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "object:medicine_phial",
+      "scene": {
+        "LOCATION": "location:gun_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:medicine_phial",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.56,
+        0.6,
+        0.56
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:exited",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.58,
+        0.62,
+        0.58
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "travel:to_village_rooms",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:long_grass_stills",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.64,
+        0.6
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "object:burned_note",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.62,
+        0.66,
+        0.62
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.66,
+        0.7,
+        0.64
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "witness:village_chemist",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_village_chemist",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.68,
+        0.72,
+        0.66
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.72,
+        0.76,
+        0.7
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "object:mothers_portrait",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:emotional_geography_lands",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.8,
+        0.74
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:library_doorframe",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.8,
+        0.76
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "modifier:doorframe_touched_on_entry",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:library_doorframe",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.8,
+        0.82,
+        0.78
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.84,
+        0.8
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.83,
+        0.85,
+        0.81
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "object:brandy_decanter",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.84,
+        0.86,
+        0.82
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "object:french_window_latch",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:french_window_latch",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.84,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.85,
+        0.86,
+        0.84
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "object:brandy_decanter",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.85,
+        0.86,
+        0.84
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "object:french_window_latch",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:french_window_latch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.85
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "witness:ladies_maid",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ladies_maid",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "modifier:cold_august_dawn",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "witness:under_gardener",
+      "scene": {
+        "LOCATION": "location:walled_garden",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_under_gardener",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:rooks_settle",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.87,
+        0.87,
+        0.87
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.87,
+        0.87,
+        0.87
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.87,
+        0.87,
+        0.87
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "object:burned_note",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.87,
+        0.87,
+        0.87
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "object:mothers_portrait",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:emotional_geography_lands",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "object:new_will_draft",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "ACCUSE:suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:edmund_carrow",
+    "final_convergence": [
+      0.88,
+      0.88,
+      0.88
+    ]
+  }
+}

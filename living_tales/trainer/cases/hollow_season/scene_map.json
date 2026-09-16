@@ -1,0 +1,132 @@
+{
+  "_art_dir": "art/hollow_season/direct_pixel_art_v1/pixel_320x320",
+  "_default": "hollow_season_library_pixel_320x320_v01.png",
+  "_briefing": "hollow_season_library_pixel_320x320_v01.png",
+  "_ending": "hollow_season_walled_garden_pixel_320x320_v01.png",
+  "location:library":            "hollow_season_library_pixel_320x320_v01.png",
+  "location:drawing_room":       "hollow_season_drawing_room_pixel_320x320_v01.png",
+  "location:dining_room":        "hollow_season_dining_room_pixel_320x320_v01.png",
+  "location:gun_room":           "hollow_season_gun_room_pixel_320x320_v01.png",
+  "location:summer_house":       "hollow_season_summer_house_pixel_320x320_v01.png",
+  "location:walled_garden":      "hollow_season_walled_garden_pixel_320x320_v01.png",
+  "location:gatehouse_lodge":    "hollow_season_gatehouse_lodge_pixel_320x320_v01.png",
+  "location:servants_hall":      "hollow_season_servants_hall_pixel_320x320_v01.png",
+  "location:estate_office":      "hollow_season_estate_office_pixel_320x320_v01.png",
+  "location:village_rooms":      "hollow_season_village_rooms_pixel_320x320_v01.png",
+
+  "_locations": {
+    "location:library": {
+      "summary_en": "Sir Geoffrey's library. South-facing french windows, a worn leather armchair, the brandy decanter on a small table. The room where he was found.",
+      "summary_es": "La biblioteca de Sir Geoffrey. Ventanales al sur, un sillón de cuero gastado, el decantador de brandy en una mesilla. La sala donde fue hallado."
+    },
+    "location:drawing_room": {
+      "summary_en": "The principal reception room. Edmund's mother's portrait hangs above the chimneypiece.",
+      "summary_es": "El salón principal. El retrato de la madre de Edmund cuelga sobre la chimenea."
+    },
+    "location:dining_room": {
+      "summary_en": "The long mahogany table. The Saturday dinner was laid here, eight covers, the family and Mr Aldhurst.",
+      "summary_es": "La larga mesa de caoba. La cena del sábado se sirvió aquí, ocho cubiertos, la familia y el señor Aldhurst."
+    },
+    "location:gun_room": {
+      "summary_en": "Off the boot lobby. Sport equipment racked, dog leads on hooks, the side passage to the library not three yards from the gun-room door.",
+      "summary_es": "Junto al vestíbulo de las botas. Equipo deportivo en estanterías, correas de perro en ganchos, el pasillo lateral a la biblioteca a tres yardas de la puerta."
+    },
+    "location:summer_house": {
+      "summary_en": "A small pavilion at the end of the south lawn. Croquet mallets propped against the wall. The house visible through the lime trees.",
+      "summary_es": "Un pequeño pabellón al final del prado sur. Mazas de cróquet apoyadas en la pared. La casa visible entre los tilos."
+    },
+    "location:walled_garden": {
+      "summary_en": "The kitchen garden behind a brick wall. Late August beans on the canes, plums beginning to drop.",
+      "summary_es": "La huerta tras un muro de ladrillo. Judías tardías en las cañas, las ciruelas empezando a caer."
+    },
+    "location:gatehouse_lodge": {
+      "summary_en": "The estate manager's lodge at the foot of the avenue. Two rooms downstairs, the timber accounts kept in the second.",
+      "summary_es": "La casa del administrador al pie de la avenida. Dos habitaciones abajo, las cuentas del bosque guardadas en la segunda."
+    },
+    "location:servants_hall": {
+      "summary_en": "Below stairs. The long deal table, the bell board, the housekeeper's chair at the head.",
+      "summary_es": "Bajo escalera. La larga mesa de tablero, el cuadro de campanillas, la silla de la ama de llaves a la cabecera."
+    },
+    "location:estate_office": {
+      "summary_en": "The room above the gun room where Sir Geoffrey kept the timber ledger and the household duty log.",
+      "summary_es": "La sala sobre la armería donde Sir Geoffrey guardaba el libro del bosque y el registro de servicio."
+    },
+    "location:village_rooms": {
+      "summary_en": "Edmund's rented rooms above the post office in the village. Two narrow flights up, a coal scuttle on the landing.",
+      "summary_es": "Las habitaciones alquiladas de Edmund sobre la oficina de correos en el pueblo. Dos tramos estrechos, un cubo de carbón en el descansillo."
+    }
+  },
+
+  "_npcs": {
+    "presence:with_edmund_carrow": {
+      "role": "suspect",
+      "name_en": "Edmund Carrow",
+      "name_es": "Edmund Carrow",
+      "summary_en": "Sir Geoffrey's nephew and heir, thirty-eight; raised at Ashworth Park between twelve and twenty after his mother's death; lives in rented village rooms.",
+      "summary_es": "Sobrino y heredero de Sir Geoffrey, treinta y ocho años; criado en Ashworth Park entre los doce y los veinte tras la muerte de su madre; vive en habitaciones alquiladas del pueblo."
+    },
+    "presence:with_hector_finch": {
+      "role": "suspect",
+      "name_en": "Hector Finch",
+      "name_es": "Hector Finch",
+      "summary_en": "Estate manager at Ashworth Park, eleven years in post; a quiet ledger-skimmer carrying a private debt; the audit is on Monday.",
+      "summary_es": "Administrador de la finca de Ashworth Park, once años en el puesto; sustraía discretamente del libro para cubrir una deuda privada; la auditoría es el lunes."
+    },
+    "presence:with_mrs_lyle": {
+      "role": "suspect",
+      "name_en": "Mrs Lyle",
+      "name_es": "la señora Lyle",
+      "summary_en": "Housekeeper at Ashworth Park, twenty-three years in the family's service; saves paper from the wastepaper baskets for reuse below stairs.",
+      "summary_es": "Ama de llaves de Ashworth Park, veintitrés años al servicio de la familia; guarda el papel de las papeleras para reutilizarlo abajo."
+    },
+    "presence:with_croft": {
+      "role": "suspect",
+      "name_en": "Mr Croft",
+      "name_es": "el señor Croft",
+      "summary_en": "Solicitor's assistant in the village office; owes Edmund a sum he cannot repay; posted the note about the will from the village postbox on Friday evening.",
+      "summary_es": "Auxiliar del abogado en el despacho del pueblo; debe a Edmund una suma que no puede pagar; echó la nota sobre el testamento al buzón del pueblo el viernes por la noche."
+    },
+    "presence:with_mrs_penrose": {
+      "role": "suspect",
+      "name_en": "Mrs Penrose",
+      "name_es": "la señora Penrose",
+      "summary_en": "Sir Geoffrey's sister-in-law, the house's lady; ordered the dinner on Saturday and took the after-dinner withdrawal at half past nine.",
+      "summary_es": "Cuñada de Sir Geoffrey, la señora de la casa; mandó preparar la cena del sábado y se retiró tras ella a las nueve y media."
+    },
+    "presence:with_butler_hadley": {
+      "role": "witness",
+      "name_en": "Hadley",
+      "name_es": "Hadley",
+      "summary_en": "Butler at Ashworth Park, thirty-one years in service; locked the front door at eleven on Saturday and the side door at quarter past.",
+      "summary_es": "Mayordomo de Ashworth Park, treinta y un años de servicio; cerró la puerta principal a las once del sábado y la lateral a las once y cuarto."
+    },
+    "presence:with_under_gardener": {
+      "role": "witness",
+      "name_en": "the under-gardener",
+      "name_es": "el jardinero ayudante",
+      "summary_en": "Came in at six on Sunday morning to draw the canes and saw the library french windows standing open.",
+      "summary_es": "Llegó a las seis de la mañana del domingo a sacar las cañas y vio los ventanales de la biblioteca abiertos."
+    },
+    "presence:with_ladies_maid": {
+      "role": "witness",
+      "name_en": "the ladies' maid",
+      "name_es": "la doncella",
+      "summary_en": "Attends Mrs Penrose; left a lamp lit on the back stair for Edmund's late return on Saturday night.",
+      "summary_es": "Atiende a la señora Penrose; dejó una lámpara encendida en la escalera de servicio para la vuelta tardía de Edmund el sábado por la noche."
+    },
+    "presence:with_village_chemist": {
+      "role": "witness",
+      "name_en": "the village chemist",
+      "name_es": "el boticario del pueblo",
+      "summary_en": "Sold a small bottle of sleeping compound on Friday afternoon; will not say to whom until the receipt is produced.",
+      "summary_es": "Vendió un frasquito de compuesto para dormir el viernes por la tarde; no dirá a quién hasta que se le muestre el recibo."
+    },
+    "presence:with_solicitor_aldhurst": {
+      "role": "witness",
+      "name_en": "Mr Aldhurst",
+      "name_es": "el señor Aldhurst",
+      "summary_en": "Family solicitor; drafted the new will on Thursday; came down for Saturday dinner; had not yet secured a second witness by Sunday morning.",
+      "summary_es": "Abogado de la familia; redactó el nuevo testamento el jueves; vino a cenar el sábado; aún no había conseguido un segundo testigo el domingo por la mañana."
+    }
+  }
+}

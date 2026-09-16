@@ -1,0 +1,829 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "correct_thomas_crale_via_parish_register",
+  "case_id": "orchard_at_dusk",
+  "description": "Witness-first chain. Caddick at the vestry on turn 3, the parish register opens at 1884 by turn 11, a midgame cross-reference with Hob Tilling on the upper-field hour braces the bridge, and the convergence closes on Crale at the field gate around turn 38. Surface motive (boundary_fraud) thickens into buried motive (1884 transaction). ~42 turns.",
+  "outcome": "correct_thomas_crale",
+  "starting_hypothesis": "witness_first_caddick",
+  "tags": [
+    "correct_crale",
+    "caddick_register_bridge",
+    "tilling_cross_reference",
+    "buried_motive",
+    "parish_register",
+    "boundary_fraud_surface"
+  ],
+  "opening": {
+    "tokens": [
+      "location:crale_orchard",
+      "event:oates_found_at_dusk",
+      "time:dusk_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the body. The apple in the grass, the lamp dark beside the head.",
+      "player_card": "object:apple_in_grass",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:apple_in_grass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.03, 0.06, 0.03]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross the orchard to where the lamp lay. The wick is dry of oil — burned till it went out.",
+      "player_card": "object:lamp_in_long_grass",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:lamp_in_long_grass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.04, 0.11, 0.04]
+    },
+    {
+      "turn": 3,
+      "_note": "Cross to St Bartholomew's. Caddick in the vestry doorway. First NPC contact.",
+      "player_card": "travel:to_parish_church",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:church_bell_tolls",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.08, 0.12, 0.05]
+    },
+    {
+      "turn": 4,
+      "_note": "Question Caddick on the surveyor. He gives the Monday arrival, the Thursday confrontation. Names without weight, yet.",
+      "player_card": "witness:reverend_caddick",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.14, 0.13, 0.06]
+    },
+    {
+      "turn": 5,
+      "_note": "Cross to the inn. Sowerby behind the bar with a damp cloth.",
+      "player_card": "travel:to_village_inn",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [0.15, 0.14, 0.07]
+    },
+    {
+      "turn": 6,
+      "_note": "Sowerby gives the Thursday confrontation. Webb loud, Oates pale. Four heard it.",
+      "player_card": "witness:ned_sowerby",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.22, 0.16, 0.09]
+    },
+    {
+      "turn": 7,
+      "_note": "Examine the solicitor's letter Sowerby kept after the row. Bristol address. Preliminary consultation fee.",
+      "player_card": "object:solicitor_letter",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:solicitor_letter",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.23, 0.26, 0.13]
+    },
+    {
+      "turn": 8,
+      "_note": "Return to the parish church. The register sits in the vestry under a brass weight.",
+      "player_card": "travel:to_parish_church",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:church_bell_tolls",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.24, 0.27, 0.14]
+    },
+    {
+      "turn": 9,
+      "_note": "Question Caddick on Crale. He answers easily — twelve years a farmer, took the farm from his father. Then a small pause: he buried Alderton in '98.",
+      "player_card": "suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.30, 0.28, 0.18]
+    },
+    {
+      "turn": 10,
+      "_note": "Ask the vicar to open the register. He brings it without question.",
+      "player_card": "object:parish_register",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.31, 0.34, 0.20]
+    },
+    {
+      "turn": 11,
+      "_note": "Bridge. The register opens at 1884 — a marriage banns page Caddick took dictation for as a young curate. A column of names; Alderton's hand twice.",
+      "player_card": "modifier:alderton_died_1898",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.33, 0.38, 0.30]
+    },
+    {
+      "turn": 12,
+      "_note": "Caddick volunteers — he saw the two of them, Alderton and Crale, leave the vestry together that summer. He had thought nothing of it for nineteen years.",
+      "player_card": "witness:reverend_caddick",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.36, 0.40, 0.40]
+    },
+    {
+      "turn": 13,
+      "_note": "Cross to the lane. The two paths still visible — one mown, one not.",
+      "player_card": "travel:to_orchard_lane",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.37, 0.41, 0.41]
+    },
+    {
+      "turn": 14,
+      "_note": "Cross to the field gate. The hinge has a fresh paint scrape — twelve-foot arc into the long grass.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.38, 0.50, 0.42]
+    },
+    {
+      "turn": 15,
+      "_note": "Notice the inconsistency: Thursday morning the gate stood north; Friday dusk it stood south. Someone moved it.",
+      "player_card": "modifier:gate_moved_friday_four_pm",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.42, 0.56, 0.43]
+    },
+    {
+      "turn": 16,
+      "_note": "Cross to the farmhouse kitchen. Eliza at the deal table. She does not stand.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.45, 0.56, 0.44]
+    },
+    {
+      "turn": 17,
+      "_note": "Question Eliza on Friday. She gives the supper hour at seven. Nothing before it. The hour before is a closed door.",
+      "player_card": "suspect:eliza_crale",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:flat_denial",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.50, 0.57, 0.45]
+    },
+    {
+      "turn": 18,
+      "_note": "Tilling comes in from the back step with mud on his boots. Cross-reference time — the upper field at four.",
+      "player_card": "witness:hob_tilling",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.54, 0.58, 0.46]
+    },
+    {
+      "turn": 19,
+      "_note": "Tilling places himself in the upper field till past five. He did not see Crale. The four o'clock has no farmhand in it.",
+      "player_card": "modifier:farmhand_in_upper_field",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_hob_tilling",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.58, 0.62, 0.47]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to Webb Farm. Ainsworth at the kitchen door, drying a cup.",
+      "player_card": "travel:to_webb_farm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.59, 0.62, 0.48]
+    },
+    {
+      "turn": 21,
+      "_note": "Ainsworth saw Crale on the lane at four — alone, walking up toward the gate. The bridge is built.",
+      "player_card": "witness:martha_ainsworth",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_martha_ainsworth",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [0.66, 0.63, 0.51]
+    },
+    {
+      "turn": 22,
+      "_note": "Webb himself in the yard. Hostile from the moment of recognition. The detective lets him speak.",
+      "player_card": "suspect:amos_webb",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:flat_denial",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.68, 0.64, 0.50]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to the cider press. The ledger on the shelf — Eliza's hand on every line.",
+      "player_card": "travel:to_cider_press",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.69, 0.69, 0.51]
+    },
+    {
+      "turn": 24,
+      "_note": "Inside the back of the ledger — folded thin, an older paper, a 1884 receipt for cash unrecorded in any account.",
+      "player_card": "object:1884_receipt",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.70, 0.74, 0.62]
+    },
+    {
+      "turn": 25,
+      "_note": "Return to the parish church. The 1884 page open again — the receipt's hand matches a name on the page. Caddick at the lectern.",
+      "player_card": "travel:to_parish_church",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.71, 0.76, 0.68]
+    },
+    {
+      "turn": 26,
+      "_note": "Caddick names it without being asked. The money in 1884 was not Alderton's to give. The buried motive surfaces.",
+      "player_card": "motive:1884_transaction",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:buried_motive_surfaces",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.73, 0.77, 0.78]
+    },
+    {
+      "turn": 27,
+      "_note": "Cross to the orchard lane. Walk the unmown path; the drainage stone where the long grass hides it.",
+      "player_card": "travel:to_orchard_lane",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:drainage_stone",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.74, 0.79, 0.78]
+    },
+    {
+      "turn": 28,
+      "_note": "Briggs walking his round. He stops without being asked. The detective shows him the receipt.",
+      "player_card": "witness:constable_briggs",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_constable_briggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.76, 0.80, 0.80]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to the field gate. The hinge. The arc into the long grass. The drainage stone two metres on.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [0.80, 0.82, 0.81]
+    },
+    {
+      "turn": 30,
+      "_note": "Cross back to the farmhouse. Eliza at the table — she sees what is in the detective's hand.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.82, 0.83, 0.82]
+    },
+    {
+      "turn": 31,
+      "_note": "Question Eliza on the hand in the back of the ledger. She says she has not opened that page in twenty years.",
+      "player_card": "suspect:eliza_crale",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.83, 0.84, 0.83]
+    },
+    {
+      "turn": 32,
+      "_note": "Eliza names the year. 1884. Her voice flat as a closed door. She says her husband does not know she remembers it.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.84, 0.84, 0.85]
+    },
+    {
+      "turn": 33,
+      "_note": "Cross back to the field gate. Wait. The sun lower, the long grass turning bronze.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.84, 0.84, 0.85]
+    },
+    {
+      "turn": 34,
+      "_note": "Crale comes up the lane at last light to lock the gate. Finds the detective at the hinge.",
+      "player_card": "suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.86, 0.85, 0.86]
+    },
+    {
+      "turn": 35,
+      "_note": "Name the moved-gate hour. Four. The denial is flat.",
+      "player_card": "modifier:gate_moved_friday_four_pm",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "emotion:flat_denial",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.88, 0.87, 0.86]
+    },
+    {
+      "turn": 36,
+      "_note": "Lay the receipt on the gate-post. 1884. Crale's eyes do not leave it.",
+      "player_card": "object:1884_receipt",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.89, 0.89, 0.89]
+    },
+    {
+      "turn": 37,
+      "_note": "Cross down the unmown path with Crale beside. The drainage stone where Oates fell.",
+      "player_card": "object:drainage_stone",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:drainage_stone",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.90, 0.90, 0.89]
+    },
+    {
+      "turn": 38,
+      "_note": "Name the why — not the seven acres but the nineteen years of silence.",
+      "player_card": "motive:alderton_silence",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.91, 0.91, 0.92]
+    },
+    {
+      "turn": 39,
+      "_note": "Cross back to the orchard. The body's place. The lamp still on the grass.",
+      "player_card": "travel:to_crale_orchard",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:lamp_in_long_grass",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.91, 0.92, 0.92]
+    },
+    {
+      "turn": 40,
+      "_note": "Briggs arrives at the orchard gate. The detective hands him the receipt.",
+      "player_card": "witness:constable_briggs",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_constable_briggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.92, 0.92, 0.92]
+    },
+    {
+      "turn": 41,
+      "_note": "Cross to the lane. Three abreast — detective, Crale, Briggs. Dawn approaches.",
+      "player_card": "travel:to_orchard_lane",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.92, 0.92, 0.92]
+    },
+    {
+      "turn": 42,
+      "_note": "Accusation in the lane at first light. The register, the receipt, the gate, the hour.",
+      "player_card": "ACCUSE:suspect:thomas_crale",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_thomas_crale",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [0.93, 0.93, 0.93]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:thomas_crale",
+    "final_convergence": [0.93, 0.93, 0.93],
+    "_note": "Witness-first via Caddick's parish register, Hob Tilling's upper-field cross-reference at turn 18-19, the 1884 receipt in the ledger, and the moved-hinge confrontation at the gate. Surface motive bridges into buried motive at turn 26 and again at turn 38."
+  }
+}

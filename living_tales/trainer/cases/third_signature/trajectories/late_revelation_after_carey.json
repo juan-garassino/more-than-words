@@ -1,0 +1,1090 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "late_revelation_after_carey",
+  "case_id": "third_signature",
+  "description": "Player follows Carey to a plateau ~0.65, then pivots via Wills's seven minutes to Agnes \u2014 late-game recovery.",
+  "outcome": "late_revelation",
+  "starting_hypothesis": "carey_recover_pivot",
+  "tags": [
+    "late_revelation",
+    "post_plateau_recovery",
+    "carey_then_agnes"
+  ],
+  "opening": {
+    "tokens": [
+      "location:reading_room",
+      "event:pemberton_discovered",
+      "time:body_found_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "object:port_glass",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:port_glass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "travel:to_smoking_room",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:legal_hedging",
+        "ATMOSPHERE": "atmosphere:coal_fire_settles",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "witness:carey",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "emotion:legal_hedging",
+        "ATMOSPHERE": "atmosphere:pipe_smoke_drifts",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "object:publisher_contract",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "emotion:legal_hedging",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "motive:rival_estate_dispute",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "emotion:legal_hedging",
+        "ATMOSPHERE": "atmosphere:pipe_smoke_drifts",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "travel:to_dining_room",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_dining_steward",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "witness:dining_steward",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_dining_steward",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "travel:to_club_corridor",
+      "scene": {
+        "LOCATION": "location:club_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "travel:to_smoking_room",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:legal_hedging",
+        "ATMOSPHERE": "atmosphere:coal_fire_settles",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "witness:carey",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "motive:manuscript_attribution",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "object:publisher_contract",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "suspect:carey",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "motive:rival_estate_dispute",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_carey",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:publisher_contract",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "travel:to_dining_room",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_dining_steward",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "witness:dining_steward",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_dining_steward",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "witness:dining_steward",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_dining_steward",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "travel:to_reading_room",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "object:port_glass",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:port_glass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "object:port_decanter",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:port_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "object:sign_in_register",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:leftward_slope"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "modifier:seven_minute_gap",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "_note": "LATE REVELATION: the seven minutes name a different suspect.",
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "modifier:black_gloves",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "travel:to_basement_records",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "object:trust_deed",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:hand_match"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "object:trust_deed",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:third_signatory_revealed"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "motive:1921_scandal",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "object:letter_1921",
+      "scene": {
+        "LOCATION": "location:basement_records",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:letter_1921",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:hand_match"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "travel:to_manuscript_archive",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "travel:to_reading_room",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "witness:agnes_vail",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "object:trust_deed",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:third_signatory_revealed"
+      },
+      "convergence_after": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "suspect:agnes_vail",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:third_signatory_revealed"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "motive:1921_scandal",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:letter_1921",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "motive:reputation_protection",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "object:fountain_pen",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:fountain_pen",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:nib_pressure_match"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "object:port_glass",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:port_glass",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "modifier:90_minute_delay",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:port_glass",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 43,
+      "player_card": "modifier:seven_minute_gap",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 44,
+      "player_card": "modifier:black_gloves",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:evening_bag",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.78
+      ]
+    },
+    {
+      "turn": 45,
+      "player_card": "suspect:agnes_vail",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    {
+      "turn": 46,
+      "player_card": "ACCUSE:suspect:agnes_vail",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_agnes_vail",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:trust_deed",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    }
+  ],
+  "ending": {
+    "type": "late_revelation",
+    "accused": "suspect:agnes_vail",
+    "final_convergence": [
+      0.92,
+      0.9,
+      0.88
+    ]
+  }
+}

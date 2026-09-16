@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_helena_recovers_to_brennan",
+  "case_id": "fog_over_brussels",
+  "description": "Counterfactual branch of wrong_helena_voss. At turn 8 the cause shifts from following Helena's lead to tracing the tray route. The corridor becomes the spine; the bridge token surfaces; Brennan named at dawn.",
+  "outcome": "correct_brennan",
+  "branch_of": "wrong_helena_voss",
+  "branch_turn": 8,
+  "divergence_token": "CAUSE=cause:tracing_tray_route",
+  "starting_hypothesis": "counterfactual_branch",
+  "tags": [
+    "counterfactual_branch",
+    "correct_brennan",
+    "cause_divergence",
+    "helena_recovery"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "location:ambassadors_office",
+      "location:reception_room",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.205,
+      0.205,
+      0.205
+    ]
+  },
+  "turns": [
+    {
+      "turn": 8,
+      "_note": "DIVERGENCE: switch from Helena to the tray route.",
+      "player_card": "travel:to_kitchen_corridor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.22, 0.30, 0.21]
+    },
+    {
+      "turn": 9,
+      "_note": "Catering supervisor on the timing book.",
+      "player_card": "witness:catering_supervisor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.30, 0.42, 0.22]
+    },
+    {
+      "turn": 10,
+      "_note": "Bridge token: forty-second interval.",
+      "player_card": "modifier:forty_second_interval",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.35, 0.62, 0.40]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.40, 0.66, 0.42]
+    },
+    {
+      "turn": 12,
+      "_note": "Press Brennan on the timing note.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:language_slipped"
+      },
+      "convergence_after": [0.62, 0.70, 0.55]
+    },
+    {
+      "turn": 13,
+      "_note": "Confront with the ring turned.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:signet_ring",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.78, 0.74, 0.66]
+    },
+    {
+      "turn": 14,
+      "_note": "Accusation: Brennan.",
+      "player_card": "ACCUSE:suspect:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:fog_lifts",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.85, 0.82, 0.78]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "final_convergence": [
+      0.78,
+      0.78,
+      0.72
+    ],
+    "accused": "suspect:brennan",
+    "_note": "Helena spared; tray route surfaced bridge token; Brennan named."
+  }
+}

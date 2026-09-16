@@ -1,0 +1,849 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_ambassador_voss",
+  "case_id": "fog_over_brussels",
+  "description": "Standard ~41t. Detective fixates on the brothers' political tension and the ambassador's evasive answers about his wife's whereabouts. Misreads protective silence as guilt. Motive dim plateaus near 0.45; suspect dim climbs on stance and protocol slips. Wrong accusation at turn 41.",
+  "outcome": "wrong_ambassador_voss",
+  "starting_hypothesis": "ambassador_first",
+  "tags": [
+    "wrong_accusation",
+    "ambassador_voss",
+    "protocol_silence_misread",
+    "hand_paced"
+  ],
+  "opening": {
+    "tokens": [
+      "location:ambassadors_office",
+      "event:arrangement_broken_29_nov",
+      "time:intermission_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open in the ambassador's office. The terminal on the side table. The desk untouched.",
+      "player_card": "object:secondary_terminal_log",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.06, 0.12, 0.04]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to the east-wing landing. Heating hum. Reception murmur below.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.07, 0.13, 0.05]
+    },
+    {
+      "turn": 3,
+      "_note": "Cross to the reception. Press attache by the side table. First NPC contact.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.14, 0.14, 0.06]
+    },
+    {
+      "turn": 4,
+      "_note": "He lays the seating plan. The brothers Voss at opposite ends of the room.",
+      "player_card": "object:seating_plan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.18, 0.22, 0.07]
+    },
+    {
+      "turn": 5,
+      "_note": "Cross back to the office. Ambassador Voss at his desk. He answers questions about guests by name.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.25, 0.23, 0.08]
+    },
+    {
+      "turn": 6,
+      "_note": "Question him on his wife's whereabouts. He refuses, politely, without elaboration. The cuff is pulled.",
+      "player_card": "witness:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.32, 0.25, 0.13]
+    },
+    {
+      "turn": 7,
+      "_note": "Examine the terminal log on the side table. Helena's hand on every line. The detective reads the ambassador's silence as cover for his wife.",
+      "player_card": "object:secondary_terminal_log",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.38, 0.34, 0.18]
+    },
+    {
+      "turn": 8,
+      "_note": "Cross to the east-wing landing. Helena at the rail. The detective reads her closeness to the office as guilt-by-association.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.40, 0.35, 0.20]
+    },
+    {
+      "turn": 9,
+      "_note": "Question Helena on the corridor at eight-fifteen. She names forty minutes away. Cooperative.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.42, 0.36, 0.22]
+    },
+    {
+      "turn": 10,
+      "_note": "Cross to the kitchen corridor. Walk the forty seconds. The catering supervisor approaches.",
+      "player_card": "travel:to_kitchen_corridor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.44, 0.38, 0.23]
+    },
+    {
+      "turn": 11,
+      "_note": "He opens the timing book. The forty-second entry against the second tray.",
+      "player_card": "object:catering_timing_note",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.45, 0.45, 0.24]
+    },
+    {
+      "turn": 12,
+      "_note": "BRIDGE TOKEN — misread. Forty seconds. The detective fits the figure into the ambassador's outline.",
+      "player_card": "modifier:forty_second_interval",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.50, 0.53, 0.25]
+    },
+    {
+      "turn": 13,
+      "_note": "Cross up the west-wing stairwell. Then ascending to the office.",
+      "player_card": "travel:to_west_wing_stairwell",
+      "scene": {
+        "LOCATION": "location:west_wing_stairwell",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.50, 0.53, 0.25]
+    },
+    {
+      "turn": 14,
+      "_note": "Cross to the office. The ambassador at his desk. The cuff is pulled twice.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.55, 0.55, 0.27]
+    },
+    {
+      "turn": 15,
+      "_note": "Press on the corridor at eight-fifteen. He answers each question by reference to the chief of security.",
+      "player_card": "witness:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.60, 0.55, 0.30]
+    },
+    {
+      "turn": 16,
+      "_note": "Cross to the east-wing landing. Chief of security with folder open.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.64, 0.57, 0.31]
+    },
+    {
+      "turn": 17,
+      "_note": "Examine the corridor entry log. The ambassador's name on a brief eight-twenty entry. The detective reads it as opportunity.",
+      "player_card": "object:guest_list",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.68, 0.60, 0.32]
+    },
+    {
+      "turn": 18,
+      "_note": "Descend the west-wing stairwell. Into the cold corridor.",
+      "player_card": "travel:to_west_wing_stairwell",
+      "scene": {
+        "LOCATION": "location:west_wing_stairwell",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.68, 0.60, 0.32]
+    },
+    {
+      "turn": 19,
+      "_note": "Cross to the cipher room. Re-examine the dispatch.",
+      "player_card": "travel:to_cipher_room",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:reading_dispatch_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:decoded_dispatch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.70, 0.65, 0.35]
+    },
+    {
+      "turn": 20,
+      "_note": "Pull the secondary encoding sheet. Names a source. Names 1957. The detective reads the ambassador's age as fitting.",
+      "player_card": "object:secondary_encoding_sheet",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_dispatch_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.71, 0.68, 0.42]
+    },
+    {
+      "turn": 21,
+      "_note": "Cross to the document room. The drawer with the duplicate desk key. The detective reads it as the ambassador's access.",
+      "player_card": "travel:to_document_room",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.74, 0.70, 0.43]
+    },
+    {
+      "turn": 22,
+      "_note": "Cipher supervisor at the door. He gives terminal access dates plainly.",
+      "player_card": "witness:cipher_supervisor",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_cipher_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:cipher_clerks_file",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.76, 0.72, 0.44]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross up. Cross to the office. The ambassador beside the desk. The duplicate key in evidence.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.78, 0.75, 0.45]
+    },
+    {
+      "turn": 24,
+      "_note": "Lay the key. He answers — politely — that the key was always his to commission. The detective reads it as admission.",
+      "player_card": "witness:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.80, 0.78, 0.46]
+    },
+    {
+      "turn": 25,
+      "_note": "Press on the corridor. He answers in the careful English of one who knew it was preferred. A pause where a pause was not invited.",
+      "player_card": "witness:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:french_too_correct"
+      },
+      "convergence_after": [0.82, 0.80, 0.47]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to the reception. Brennan visible. The detective glances at him and looks away.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.82, 0.81, 0.47]
+    },
+    {
+      "turn": 27,
+      "_note": "Press attache lays the seating plan again. Ambassador on the east end. The detective reads east as cover.",
+      "player_card": "object:seating_plan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.83, 0.83, 0.48]
+    },
+    {
+      "turn": 28,
+      "_note": "Cross to the east-wing landing. Helena at the rail. She names the figure in the corridor — does not name the name.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.84, 0.84, 0.48]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to the office. Ambassador beside the duplicate key, the encoding sheet, the timing note.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.85, 0.85, 0.48]
+    },
+    {
+      "turn": 30,
+      "_note": "Press the 1957 date. He answers — without elaboration — that 1957 was a year he was posted in Vienna.",
+      "player_card": "witness:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:french_too_correct"
+      },
+      "convergence_after": [0.85, 0.85, 0.48]
+    },
+    {
+      "turn": 31,
+      "_note": "Cross to the east-wing landing. The detective fits the ambassador's silence to a confessional outline.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.86, 0.86, 0.48]
+    },
+    {
+      "turn": 32,
+      "_note": "Chief of security drifts past. He produces the protocol logs. The ambassador's eight-twenty corridor entry.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.87, 0.87, 0.49]
+    },
+    {
+      "turn": 33,
+      "_note": "Cross to the office. Ambassador beside. The detective lays the eight-twenty entry.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.88, 0.88, 0.50]
+    },
+    {
+      "turn": 34,
+      "_note": "Press the corridor. He answers — at last — that he had stepped out to look for his wife. The detective reads it as evasion.",
+      "player_card": "witness:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.89, 0.88, 0.50]
+    },
+    {
+      "turn": 35,
+      "_note": "Cross to the kitchen corridor. Walk it alone. The forty seconds named in the detective's mouth.",
+      "player_card": "modifier:forty_second_interval",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.90, 0.89, 0.50]
+    },
+    {
+      "turn": 36,
+      "_note": "Cross to the embassy entrance. The chief beside. The folder open.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.90, 0.89, 0.50]
+    },
+    {
+      "turn": 37,
+      "_note": "Return to the office. Ambassador beside. The detective lays the timing note, the duplicate key, the seating plan.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.90, 0.90, 0.50]
+    },
+    {
+      "turn": 38,
+      "_note": "Name the why — career protection, the threat of the dispatch surfacing. The ambassador answers in a tense not used before.",
+      "player_card": "motive:career_protection",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.91, 0.91, 0.50]
+    },
+    {
+      "turn": 39,
+      "_note": "Cross to the east-wing landing. Helena at the rail. She does not look up.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.91, 0.91, 0.50]
+    },
+    {
+      "turn": 40,
+      "_note": "Return to the office. The case reads as built. Ambassador beside the desk.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.91, 0.91, 0.50]
+    },
+    {
+      "turn": 41,
+      "_note": "Accusation in the office. Ambassador Voss. The motive dim never crossed 0.55. Wrong.",
+      "player_card": "ACCUSE:suspect:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.91, 0.91, 0.50]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "accused": "suspect:ambassador_voss",
+    "final_convergence": [0.91, 0.91, 0.50],
+    "_note": "Hand-paced wrong accusation on the brothers' tension misread. The ambassador's protective silence is read as guilt. Motive dim plateaus at 0.50. Brennan glanced at turn 26 and dismissed."
+  }
+}

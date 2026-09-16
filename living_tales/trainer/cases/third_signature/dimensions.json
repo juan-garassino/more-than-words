@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "case_id": "third_signature",
+
+  "_comment": "Multidimensional structured-scene schema for the London Literary Club case, Winter 1935. The Aldgate Club, Bloomsbury. A literary executor (Charles Pemberton) dies of cardiac arrest after the evening port; the surface motive is manuscript-attribution fraud (a posthumous Marsh novel actually written by Agnes Vail née Rutherford), the buried motive is a 1921 financial scandal whose disclosure Agnes cannot allow. Carey, a rival estate solicitor, is the false plateau — placed near the corridor, motive on paper, but no access to the port. The seven minutes Wills the porter remembers is the break-token. Universal core dimensions shared with amber_cipher / attended_hour / venetian_mirror; case-specific extension SIGNATURE_TELL covers handwriting / typescript / dedication-page observables, which are central to the case's authorship pivot. Tokens listed in anchor_tokens are graph/convergence anchors only — never emitted directly.",
+
+  "dimensions": [
+    {
+      "name": "LOCATION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "location:club_steps",
+        "location:porters_lodge",
+        "location:smoking_room",
+        "location:reading_room",
+        "location:library",
+        "location:dining_room",
+        "location:manuscript_archive",
+        "location:members_snug",
+        "location:basement_records",
+        "location:club_corridor",
+        "location:none"
+      ]
+    },
+    {
+      "name": "TRANSITION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "transition:stayed",
+        "transition:crossed_to",
+        "transition:entered",
+        "transition:exited",
+        "transition:returned",
+        "transition:pursued_to",
+        "transition:called_away_to",
+        "transition:descended_to",
+        "transition:none"
+      ]
+    },
+    {
+      "name": "CAUSE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "cause:following_witness_lead",
+        "cause:examining_evidence",
+        "cause:recognized_object",
+        "cause:noticed_inconsistency",
+        "cause:pursued_suspicion",
+        "cause:revisiting_scene",
+        "cause:summoned",
+        "cause:chronological_drift",
+        "cause:reading_signature_signal",
+        "cause:cross_referencing_register",
+        "cause:none"
+      ]
+    },
+    {
+      "name": "PRESENCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "presence:with_agnes_vail",
+        "presence:with_carey",
+        "presence:with_wills",
+        "presence:with_hugh_emberly",
+        "presence:with_colonel_norris",
+        "presence:with_lillian_march",
+        "presence:with_publisher_dent",
+        "presence:with_dr_pryce",
+        "presence:with_archivist_kemp",
+        "presence:with_club_secretary",
+        "presence:with_dining_steward",
+        "presence:with_biographer_holm",
+        "presence:alone"
+      ]
+    },
+    {
+      "name": "STANCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "stance:cooperative",
+        "stance:defensive",
+        "stance:evasive",
+        "stance:hostile",
+        "stance:unaware",
+        "stance:none"
+      ]
+    },
+    {
+      "name": "ACTION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "action:examines",
+        "action:questions",
+        "action:notices",
+        "action:discovers",
+        "action:confronts",
+        "action:follows",
+        "action:waits",
+        "action:leaves",
+        "action:arrives",
+        "action:recalls",
+        "action:cross_references",
+        "action:transcribes",
+        "action:none"
+      ]
+    },
+    {
+      "name": "OBJECT_FOCUS",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "object:sign_in_register",
+        "object:key_log",
+        "object:port_decanter",
+        "object:port_glass",
+        "object:bound_proof",
+        "object:typescript_page",
+        "object:dedication_page",
+        "object:fountain_pen",
+        "object:letter_1921",
+        "object:trust_deed",
+        "object:club_ledger",
+        "object:publisher_contract",
+        "object:correspondence_box",
+        "object:evening_bag",
+        "object_focus:none"
+      ]
+    },
+    {
+      "name": "TELL",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "emotion:studied_composure",
+        "emotion:careful_diction",
+        "emotion:rigid_courtesy",
+        "emotion:prolonged_silence",
+        "emotion:forced_lightness",
+        "emotion:legal_hedging",
+        "tell:paled",
+        "tell:tightened",
+        "tell:glanced_aside",
+        "tell:silent",
+        "tell:hesitated",
+        "tell:over_explained",
+        "tell:softened",
+        "tell:none"
+      ]
+    },
+    {
+      "name": "ATMOSPHERE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "atmosphere:fog_thickens",
+        "atmosphere:fog_lifts",
+        "atmosphere:lamp_flickers",
+        "atmosphere:lamp_steady",
+        "atmosphere:silence_holds",
+        "atmosphere:silence_breaks",
+        "atmosphere:coal_fire_settles",
+        "atmosphere:pipe_smoke_drifts",
+        "atmosphere:rain_on_window",
+        "atmosphere:dawn_approaches",
+        "atmosphere:none"
+      ]
+    },
+    {
+      "name": "REVELATION",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "revelation:name_uncovered": 0.5,
+        "revelation:motive_emerges": 0.5,
+        "revelation:confirmation": 0.4
+      },
+      "vocab": [
+        "revelation:contradiction_surfaces",
+        "revelation:alibi_holds",
+        "revelation:name_uncovered",
+        "revelation:motive_emerges",
+        "revelation:dead_end",
+        "revelation:partial_match",
+        "revelation:confirmation",
+        "revelation:none"
+      ]
+    },
+    {
+      "name": "BEAT",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "beat:closing_in": 0.5,
+        "beat:verdict_ready": 0.75
+      },
+      "vocab": [
+        "beat:orientation",
+        "beat:investigation",
+        "beat:closing_in",
+        "beat:verdict_ready"
+      ]
+    },
+    {
+      "name": "SIGNATURE_TELL",
+      "universal": false,
+      "always_emit": true,
+      "case_specific": true,
+      "_comment": "Handwriting / typescript / dedication-page observables. SIGNATURE_TELL fires when the detective is inspecting written matter — a signature in the sign-in register, the leftward slope of a hand, the nib pressure on a deed, the margin notations of a typescript. The case's central pivot is authorship (Agnes wrote the novel Marsh published; Agnes also signed the 1921 deed as the third signatory). Tells: hand-match landing, marginal correction, pressure mark, dedication-page handwriting matching letters from 1921, nib match, register slope, typescript correction in the same hand. authenticity_holds is the cooperative null used in early-game.",
+      "gated_by_convergence": {
+        "signature_tell:hand_match": 0.5,
+        "signature_tell:third_signatory_revealed": 0.6,
+        "signature_tell:dedication_match": 0.4
+      },
+      "vocab": [
+        "signature_tell:hand_match",
+        "signature_tell:leftward_slope",
+        "signature_tell:nib_pressure_match",
+        "signature_tell:margin_correction",
+        "signature_tell:dedication_match",
+        "signature_tell:third_signatory_revealed",
+        "signature_tell:typescript_correction",
+        "signature_tell:authenticity_holds",
+        "signature_tell:none"
+      ]
+    }
+  ],
+
+  "_anchors_only_comment": "Tokens that contribute to convergence + graph but are never directly emitted as scene-tuple slots. Player cards (motives, modifiers, legacy actions, legacy time tokens, the three INVARIANT culprit/event/motive tokens) and graph anchors driving logit_bias. The emotion:* tokens listed in TELL ABOVE are emitted; the ACTION_LEGACY and TIME_LEGACY listed here are not.",
+  "anchor_tokens": {
+    "INVARIANT": [
+      "suspect:agnes_vail",
+      "event:evening_port",
+      "motive:1921_scandal"
+    ],
+    "MOTIVE": [
+      "motive:manuscript_attribution",
+      "motive:ghost_authorship",
+      "motive:biographer_threat",
+      "motive:royalty_arrangement",
+      "motive:reputation_protection",
+      "motive:rival_estate_dispute",
+      "motive:1921_scandal"
+    ],
+    "MODIFIER": [
+      "modifier:seven_minute_gap",
+      "modifier:leftward_hand",
+      "modifier:sediment_in_glass",
+      "modifier:key_signed_out",
+      "modifier:eight_oh_five_entry",
+      "modifier:eight_forty_exit",
+      "modifier:90_minute_delay",
+      "modifier:black_gloves",
+      "modifier:nib_pressure_heavy",
+      "modifier:margin_correction_same_hand",
+      "modifier:contract_unsigned",
+      "modifier:dedication_unattributed"
+    ],
+    "EVENT": [
+      "event:port_decanted",
+      "event:pemberton_discovered",
+      "event:tuesday_meeting",
+      "event:wednesday_evening"
+    ],
+    "TIME_LEGACY": [
+      "time:after_dinner_hour",
+      "time:eight_oh_five",
+      "time:eight_forty",
+      "time:ten_fifteen",
+      "time:ninety_minutes",
+      "time:body_found_evening"
+    ],
+    "ACTION_LEGACY": [
+      "action:port_decanted",
+      "action:register_signed",
+      "action:key_requested",
+      "action:reading_room_entered",
+      "action:archive_searched",
+      "action:deed_compared",
+      "action:typescript_collated",
+      "action:dedication_inspected",
+      "action:contract_drafted",
+      "action:biographer_briefed"
+    ]
+  },
+
+  "_player_cards_comment": "Tokens the player can play as cards. Inquiry cards (witnesses/objects/motives/legacy actions) + travel cards (one per location).",
+  "player_cards": {
+    "inquiry": "@all_PLAYER_or_SHARED_with_dim_in_[OBJECT_FOCUS,PRESENCE,ACTION_LEGACY,MOTIVE]",
+    "travel": [
+      "travel:to_club_steps",
+      "travel:to_porters_lodge",
+      "travel:to_smoking_room",
+      "travel:to_reading_room",
+      "travel:to_library",
+      "travel:to_dining_room",
+      "travel:to_manuscript_archive",
+      "travel:to_members_snug",
+      "travel:to_basement_records",
+      "travel:to_club_corridor"
+    ]
+  }
+}

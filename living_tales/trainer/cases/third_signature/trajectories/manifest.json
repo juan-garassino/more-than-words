@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "case_id": "third_signature",
+  "_comment": "Index of hand-authored trajectories for the third_signature case (Aldgate Club, Bloomsbury, Winter 1935). Wave 1 (25) + Wave 2 (25) = 50 trajectories total. Outcome distribution: correct_agnes_vail 10, wrong (Carey/Kemp/Dent/Steward/Norris/March) 10, cold_trail 5, partial_correct 6, accomplice_found 4, framed_suspect 4, late_revelation 3, motive_only_confession 3, red_herring_trap 3, near_miss 2. SIGNATURE_TELL is the case-specific dim; the third_signatory_break beat fires at convergence_min >= 0.65 (suspect+evidence). Wave 2 adds entered/exited/pursued_to/called_away_to transitions, deeper Carey plateau, near-miss recovery class, and the framed_widow_pemberton + framed_dining_steward false-staging arcs.",
+  "trajectories": [
+    { "id": "agnes_via_third_signatory",            "outcome": "correct_agnes_vail",      "length": 45, "starting_hypothesis": "deed_pivot",                  "tags": ["signature_chain", "third_signatory", "trust_deed", "case_pivot"] },
+    { "id": "agnes_via_register_entry_815",         "outcome": "correct_agnes_vail",      "length": 44, "starting_hypothesis": "register_first",              "tags": ["register_chain", "eight_oh_five", "porter_heavy"] },
+    { "id": "agnes_via_dedication_match",           "outcome": "correct_agnes_vail",      "length": 46, "starting_hypothesis": "dedication_first",            "tags": ["dedication_chain", "novel_pivot", "1918_letters"] },
+    { "id": "agnes_via_wills_bridge_token",         "outcome": "correct_agnes_vail",      "length": 43, "starting_hypothesis": "witness_first_wills",         "tags": ["wills_bridge", "seven_minutes", "porter_chain"] },
+    { "id": "agnes_via_carey_alibi_collapse",       "outcome": "correct_agnes_vail",      "length": 47, "starting_hypothesis": "carey_first_then_pivot",      "tags": ["carey_eliminated", "mechanism_gap", "late_pivot"] },
+    { "id": "agnes_via_trust_deed_1921",            "outcome": "correct_agnes_vail",      "length": 42, "starting_hypothesis": "archive_first",               "tags": ["trust_deed", "1921_scandal", "archive_chain"] },
+    { "id": "agnes_via_side_room_entry",            "outcome": "correct_agnes_vail",      "length": 41, "starting_hypothesis": "side_room_first",             "tags": ["signature_chain", "members_snug_entry", "transition_entered", "trust_deed"] },
+    { "id": "agnes_via_called_away_lodge",          "outcome": "correct_agnes_vail",      "length": 41, "starting_hypothesis": "lodge_summons_first",         "tags": ["signature_chain", "called_away_to", "wills_bridge", "case_pivot"] },
+    { "id": "agnes_via_library_exit",               "outcome": "correct_agnes_vail",      "length": 41, "starting_hypothesis": "library_first",               "tags": ["signature_chain", "library_exit", "transition_exited", "dedication_chain"] },
+    { "id": "agnes_via_pursued_rival_solicitor",    "outcome": "correct_agnes_vail",      "length": 41, "starting_hypothesis": "rival_solicitor_chase",       "tags": ["signature_chain", "transition_pursued_to", "carey_eliminated", "case_pivot"] },
+
+    { "id": "wrong_carey",                          "outcome": "wrong_carey",             "length": 41, "starting_hypothesis": "carey_first",                 "tags": ["red_herring_path", "carey_chain", "missed_signature"] },
+    { "id": "wrong_pemberton_estate_solicitor",     "outcome": "wrong_kemp",              "length": 40, "starting_hypothesis": "archivist_suspicion",         "tags": ["archivist_misread", "kemp_wrong", "archive_misled"] },
+    { "id": "wrong_publisher",                      "outcome": "wrong_publisher_dent",    "length": 41, "starting_hypothesis": "publisher_first",             "tags": ["dent_misread", "contract_misled", "publisher_chain"] },
+    { "id": "wrong_steward",                        "outcome": "wrong_dining_steward",    "length": 40, "starting_hypothesis": "steward_corridor",            "tags": ["steward_misread", "corridor_window", "dining_chain"] },
+    { "id": "wrong_member_norris",                  "outcome": "wrong_colonel_norris",    "length": 41, "starting_hypothesis": "norris_decanter",             "tags": ["norris_misread", "decanter_chain", "port_pourer"] },
+    { "id": "wrong_widow_pemberton",                "outcome": "wrong_lillian_march",     "length": 42, "starting_hypothesis": "march_publisher",             "tags": ["march_misread", "publisher_rep", "tuesday_meeting"] },
+    { "id": "wrong_carey_deep_plateau",             "outcome": "wrong_carey",             "length": 42, "starting_hypothesis": "carey_first_deep_plateau",    "tags": ["red_herring_path", "carey_chain", "deep_plateau", "missed_signature"] },
+    { "id": "wrong_publisher_dent_2",               "outcome": "wrong_publisher_dent",    "length": 41, "starting_hypothesis": "publisher_first_2",           "tags": ["dent_misread_2", "contract_chain", "publisher_chain"] },
+    { "id": "wrong_kemp_2",                         "outcome": "wrong_kemp",              "length": 41, "starting_hypothesis": "archive_first_2",             "tags": ["archivist_misread_2", "kemp_wrong_2", "archive_misled"] },
+    { "id": "wrong_widow_pemberton_path",           "outcome": "wrong_lillian_march",     "length": 41, "starting_hypothesis": "march_publisher_2",           "tags": ["march_misread_2", "publisher_rep_chain", "missed_deed"] },
+
+    { "id": "cold_trail_circular",                  "outcome": "cold_trail",              "length": 47, "starting_hypothesis": "circular_evidence",           "tags": ["circular_chain", "no_pivot", "exhausted"] },
+    { "id": "cold_trail_signature_loop",            "outcome": "cold_trail",              "length": 46, "starting_hypothesis": "signature_loop",              "tags": ["signature_circles", "no_convergence", "dedication_loop"] },
+    { "id": "cold_trail_register_loop",             "outcome": "cold_trail",              "length": 45, "starting_hypothesis": "register_loop",               "tags": ["register_circles", "porter_unasked", "loop_chain"] },
+    { "id": "cold_trail_signature_loop_2",          "outcome": "cold_trail",              "length": 42, "starting_hypothesis": "signature_loop_2",            "tags": ["signature_circles", "no_deed", "no_accusation"] },
+    { "id": "cold_trail_register_dead_end",         "outcome": "cold_trail",              "length": 41, "starting_hypothesis": "register_dead_end",           "tags": ["register_circles", "porter_question_unframed", "no_archive"] },
+
+    { "id": "partial_correct_misread_motive_a",     "outcome": "partial_correct",         "length": 43, "starting_hypothesis": "right_killer_wrong_why_a",    "tags": ["partial_correct", "manuscript_motive_wrong", "1921_missed"] },
+    { "id": "partial_correct_misread_motive_b",     "outcome": "partial_correct",         "length": 44, "starting_hypothesis": "right_killer_wrong_why_b",    "tags": ["partial_correct", "royalty_motive_wrong", "scandal_missed"] },
+    { "id": "partial_vail_wrong_signature",         "outcome": "partial_correct",         "length": 42, "starting_hypothesis": "right_killer_wrong_sig",      "tags": ["partial_correct", "dedication_only", "deed_missed"] },
+    { "id": "partial_vail_wrong_signature_chain",   "outcome": "partial_correct",         "length": 41, "starting_hypothesis": "right_killer_dedication_only_2", "tags": ["partial_correct", "dedication_chain_only", "no_deed", "ghost_authorship_misread"] },
+    { "id": "partial_via_dedication_misread",       "outcome": "partial_correct",         "length": 41, "starting_hypothesis": "right_killer_biographer_threat", "tags": ["partial_correct", "biographer_threat_misread", "dedication_chain_only"] },
+    { "id": "partial_carey_close_but_wrong",        "outcome": "partial_correct",         "length": 41, "starting_hypothesis": "right_killer_carey_residue_motive", "tags": ["partial_correct", "manuscript_motive_wrong", "carey_residue"] },
+
+    { "id": "accomplice_via_publisher",             "outcome": "accomplice_found",        "length": 44, "starting_hypothesis": "dent_accomplice",             "tags": ["accomplice", "dent_complicit", "concealment"] },
+    { "id": "accomplice_via_wills",                 "outcome": "accomplice_found",        "length": 43, "starting_hypothesis": "wills_accomplice",            "tags": ["accomplice", "wills_complicit", "porter_silence"] },
+    { "id": "accomplice_via_publisher_dent",        "outcome": "accomplice_found",        "length": 41, "starting_hypothesis": "agnes_plus_dent_complicit",   "tags": ["accomplice", "dent_complicit", "publisher_chain", "concealment"] },
+    { "id": "accomplice_via_wills_porter",          "outcome": "accomplice_found",        "length": 41, "starting_hypothesis": "agnes_plus_wills_complicit",  "tags": ["accomplice", "wills_complicit", "porter_silence", "rare"] },
+
+    { "id": "framed_carey",                         "outcome": "framed_suspect",          "length": 42, "starting_hypothesis": "carey_planted",               "tags": ["framed", "carey_planted_evidence", "false_chain"] },
+    { "id": "framed_publisher",                     "outcome": "framed_suspect",          "length": 41, "starting_hypothesis": "dent_planted",                "tags": ["framed", "dent_planted_contract", "false_chain"] },
+    { "id": "framed_widow_pemberton",               "outcome": "framed_suspect",          "length": 41, "starting_hypothesis": "march_planted_evidence",      "tags": ["framed", "march_planted_contract", "false_chain"] },
+    { "id": "framed_dining_steward_2",              "outcome": "framed_suspect",          "length": 41, "starting_hypothesis": "steward_planted_evidence",    "tags": ["framed", "steward_planted_glass", "false_chain"] },
+
+    { "id": "late_revelation_after_carey",          "outcome": "late_revelation",         "length": 46, "starting_hypothesis": "carey_recover_pivot",         "tags": ["late_revelation", "post_plateau_recovery", "carey_then_agnes"] },
+    { "id": "late_revelation_after_publisher_dent", "outcome": "late_revelation",         "length": 41, "starting_hypothesis": "publisher_recover_pivot",     "tags": ["late_revelation", "post_dent_plateau_recovery", "dent_then_agnes"] },
+    { "id": "late_revelation_after_carey_plateau",  "outcome": "late_revelation",         "length": 41, "starting_hypothesis": "carey_plateau_recover_late",  "tags": ["late_revelation", "carey_then_agnes_late", "deep_plateau"] },
+
+    { "id": "motive_only_via_authorship_dispute",   "outcome": "motive_only_confession",  "length": 43, "starting_hypothesis": "motive_first",                "tags": ["motive_only", "authorship_confession", "incomplete_chain"] },
+    { "id": "motive_only_via_authorship_dispute_2", "outcome": "motive_only_confession",  "length": 41, "starting_hypothesis": "motive_first_authorship_2",   "tags": ["motive_only", "authorship_confession", "incomplete_chain_2"] },
+    { "id": "motive_only_via_1921_scandal",         "outcome": "motive_only_confession",  "length": 41, "starting_hypothesis": "motive_first_1921",           "tags": ["motive_only", "1921_scandal_confession", "incomplete_chain"] },
+
+    { "id": "near_miss_recovers_from_carey",        "outcome": "near_miss",               "length": 41, "starting_hypothesis": "carey_then_late_pivot",       "tags": ["near_miss", "carey_recovery", "late_pivot"] },
+    { "id": "near_miss_recovers_from_publisher_dent","outcome": "near_miss",              "length": 41, "starting_hypothesis": "publisher_then_late_pivot",   "tags": ["near_miss", "publisher_recovery", "late_pivot"] },
+
+    { "id": "red_herring_trap_carey_false_plateau", "outcome": "red_herring_trap",        "length": 44, "starting_hypothesis": "carey_red_herring",           "tags": ["red_herring_trap", "carey_false_verdict", "missed_mechanism"] },
+    { "id": "red_herring_trap_carey_extended",      "outcome": "red_herring_trap",        "length": 41, "starting_hypothesis": "carey_red_herring_extended",  "tags": ["red_herring_trap", "carey_false_verdict_extended", "missed_mechanism"] },
+    { "id": "red_herring_trap_dedication_decoy",    "outcome": "red_herring_trap",        "length": 41, "starting_hypothesis": "dedication_decoy",            "tags": ["red_herring_trap", "biographer_false_verdict", "dedication_chain_only"] },
+
+    { "id": "cf_agnes_via_third_signatory_to_motive_only",   "outcome": "motive_only_confession", "length": 9,  "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_signature_divergence", "motive_only_outcome"] },
+    { "id": "cf_agnes_via_register_entry_815_to_carey",      "outcome": "wrong_carey",            "length": 10, "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_object_divergence", "carey_outcome"] },
+    { "id": "cf_agnes_via_dedication_match_to_accomplice",   "outcome": "accomplice_found",       "length": 10, "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_presence_divergence", "accomplice_outcome"] },
+    { "id": "cf_wrong_carey_to_correct",                     "outcome": "correct_agnes_vail",     "length": 9,  "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_cause_divergence", "correct_outcome"] },
+    { "id": "cf_accomplice_via_publisher_to_cold",           "outcome": "cold_trail",             "length": 19, "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_stance_divergence", "cold_trail_outcome"] },
+    { "id": "cf_framed_carey_to_correct",                    "outcome": "correct_agnes_vail",     "length": 9,  "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_revelation_divergence", "correct_outcome"] },
+    { "id": "cf_red_herring_trap_carey_to_near_miss",        "outcome": "near_miss",              "length": 11, "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_beat_divergence", "near_miss_outcome"] },
+    { "id": "cf_cold_trail_circular_to_late_revelation",     "outcome": "late_revelation",        "length": 11, "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_atmosphere_divergence", "late_revelation_outcome"] },
+    { "id": "cf_partial_correct_misread_motive_a_to_correct","outcome": "correct_agnes_vail",     "length": 8,  "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_signature_divergence", "correct_outcome"] },
+    { "id": "cf_late_revelation_after_carey_to_near_miss",   "outcome": "near_miss",              "length": 9,  "starting_hypothesis": "counterfactual", "tags": ["counterfactual", "cf_transition_divergence", "near_miss_outcome"] }
+  ]
+}

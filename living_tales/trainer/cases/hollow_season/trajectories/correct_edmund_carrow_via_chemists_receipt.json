@@ -1,0 +1,831 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "correct_edmund_carrow_via_chemists_receipt",
+  "case_id": "hollow_season",
+  "description": "Standard ~42t correct close. Sir Geoffrey in the library at dawn; Mrs Lyle the first NPC at the servants_hall on turn 4, Hadley and Mrs Penrose inside the first fifteen turns. Locations rotate library / drawing_room / servants_hall / estate_office / dining_room / village_rooms. Bridge clue (chemists_receipt) lands at turn 22 out of the green sack. Verdict reads turn 40 in the library.",
+  "outcome": "correct_edmund_carrow",
+  "starting_hypothesis": "object_first_receipt",
+  "tags": [
+    "correct_edmund_carrow",
+    "standard",
+    "chemist_receipt_chain",
+    "wastepaper_basket_bridge",
+    "lyle_first_contact",
+    "hand_paced"
+  ],
+  "opening": {
+    "tokens": [
+      "location:library",
+      "event:sir_geoffrey_discovered",
+      "time:sunday_before_breakfast"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the body. The decanter on the small table, the french windows on the latch, the south light not yet on the carpet.",
+      "player_card": "object:brandy_decanter",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.03, 0.06, 0.03]
+    },
+    {
+      "turn": 2,
+      "_note": "The french window latch. The catch is set but the curtain hangs on the outside of the frame. A small wrong note.",
+      "player_card": "object:french_window_latch",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:french_window_latch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rooks_settle",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:door_left_unlatched"
+      },
+      "convergence_after": [0.04, 0.12, 0.04]
+    },
+    {
+      "turn": 3,
+      "_note": "Cross to the drawing room. The mother's portrait above the chimneypiece. The room is still cold under the morning chimney.",
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.05, 0.13, 0.05]
+    },
+    {
+      "turn": 4,
+      "_note": "Descend to the servants_hall. Mrs Lyle at the head of the deal table, the bell board behind her. First NPC contact. She gives the rounds without being pressed.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.14, 0.14, 0.06]
+    },
+    {
+      "turn": 5,
+      "_note": "She produces the duty log without ceremony. The Saturday entries in her hand, the Sunday rounds half-marked.",
+      "player_card": "object:duty_log",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_household_record",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.15, 0.22, 0.07]
+    },
+    {
+      "turn": 6,
+      "_note": "Hadley arrives at the hall door, gloves on, pantry key on his belt. He waits to be addressed.",
+      "player_card": "witness:butler_hadley",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_butler_hadley",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.22, 0.23, 0.08]
+    },
+    {
+      "turn": 7,
+      "_note": "He gives the front door at eleven and the side door at quarter past, and adds that the french windows were not on his round because Sir Geoffrey kept them himself.",
+      "player_card": "witness:butler_hadley",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_butler_hadley",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.24, 0.31, 0.10]
+    },
+    {
+      "turn": 8,
+      "_note": "Cross to the dining room. The Saturday table still set in memory; eight covers, the solicitor's chair empty at last sight.",
+      "player_card": "travel:to_dining_room",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.25, 0.32, 0.11]
+    },
+    {
+      "turn": 9,
+      "_note": "Mrs Penrose at the dining-room door, the morning post tray in her hand. Cooperative — practised, even — and giving times as if reading from the household book.",
+      "player_card": "witness:mrs_penrose",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_penrose",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:morning_post_tray",
+        "TELL": "emotion:over_polished_manner",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.30, 0.33, 0.13]
+    },
+    {
+      "turn": 10,
+      "_note": "She names the dinner hour and the withdrawal. The post tray is the morning's; one of the envelopes carries the solicitor's seal.",
+      "player_card": "object:morning_post_tray",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_penrose",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:morning_post_tray",
+        "TELL": "emotion:over_polished_manner",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.31, 0.40, 0.14]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to the estate office. The timber ledger open on the desk. Finch's hand visible in the columns.",
+      "player_card": "travel:to_estate_office",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.32, 0.46, 0.15]
+    },
+    {
+      "turn": 12,
+      "_note": "The audit letter folded inside the ledger's back. The Monday date in copperplate. A motive surface on the page, neat and unsealed.",
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.33, 0.50, 0.22]
+    },
+    {
+      "turn": 13,
+      "_note": "Finch comes up from the gatehouse to find the detective at his desk. Defensive on entry — finds the pince-nez wire before he answers.",
+      "player_card": "witness:hector_finch",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.40, 0.52, 0.24]
+    },
+    {
+      "turn": 14,
+      "_note": "He gives the timber prices for 1904 and 1905 in falling order without being asked. The over-explanation surfaces on its own — he is rehearsed.",
+      "player_card": "object:timber_ledger",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_household_record",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.45, 0.55, 0.25]
+    },
+    {
+      "turn": 15,
+      "_note": "Cross back to the library. The decanter again — held to the light. The brandy a fraction clouded at the base.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.46, 0.60, 0.26]
+    },
+    {
+      "turn": 16,
+      "_note": "Mrs Lyle returns at the library door — the housekeeper's rounds carry her past. She mentions, in passing, the village rooms basket she has not yet sorted.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.52, 0.62, 0.28]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross to the village rooms. The narrow flights up, the coal scuttle on the landing. The basket already emptied — Mrs Lyle's Sunday round.",
+      "player_card": "travel:to_village_rooms",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.53, 0.63, 0.30]
+    },
+    {
+      "turn": 18,
+      "_note": "Examine the basket. Empty. Two scraps caught in the wickerwork — Mrs Lyle's hands have been quick but not exhaustive.",
+      "player_card": "object:wastepaper_basket",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.54, 0.66, 0.31]
+    },
+    {
+      "turn": 19,
+      "_note": "Edmund's lamp on the bedside table. Cold but uncovered — the manner of a man who left in a hurry. Suspect dim drifts on the room itself.",
+      "player_card": "suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.58, 0.66, 0.32]
+    },
+    {
+      "turn": 20,
+      "_note": "Return to the servants_hall. The green sack of paper at Mrs Lyle's elbow, untouched.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.59, 0.67, 0.40]
+    },
+    {
+      "turn": 21,
+      "_note": "She fetches the sack. The bringing of it takes a quarter of an hour longer than it ought — she sorts it on the deal table herself, slowly.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.60, 0.70, 0.42]
+    },
+    {
+      "turn": 22,
+      "_note": "BRIDGE CLUE. The receipt at the third pass through the sack. Friday afternoon, the preparation in copperplate, the small sum. Evidence dim leaps.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.62, 0.82, 0.52]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to the village rooms. The chemist's shop is across the lane from the postbox. Lay the receipt against the bedside lamp.",
+      "player_card": "travel:to_village_rooms",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.65, 0.83, 0.54]
+    },
+    {
+      "turn": 24,
+      "_note": "The village chemist at the counter-book. He produces the Friday entry without name in copperplate and confirms, only on the receipt being shown, the buyer.",
+      "player_card": "witness:village_chemist",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_village_chemist",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.72, 0.84, 0.56]
+    },
+    {
+      "turn": 25,
+      "_note": "Cross to the library. The decanter and the receipt on the same small table. The mechanism cluster names itself.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.73, 0.86, 0.58]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to the drawing room. The portrait again — eleven minutes was Edmund's last Saturday. Motive surface drifts toward something other than money.",
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.74, 0.86, 0.64]
+    },
+    {
+      "turn": 27,
+      "_note": "Mrs Lyle at the drawing-room door, the green sack in her hand. She volunteers the eleven minutes — she had seen them, on the Saturday, and not spoken.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.76, 0.87, 0.62]
+    },
+    {
+      "turn": 28,
+      "_note": "Cross to the library. The doorframe Edmund touched on entry — Mrs Lyle's account placed against the room. Motive emerges through the geography of the house.",
+      "player_card": "object:library_doorframe",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:library_doorframe",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:emotional_geography_lands",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.77, 0.87, 0.72]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to the estate office. Lay the receipt beside the audit letter. Two motives in the room — one Finch's, one not.",
+      "player_card": "travel:to_estate_office",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.78, 0.88, 0.74]
+    },
+    {
+      "turn": 30,
+      "_note": "Finch at the desk again, this time confronted. The audit motive is his and only his. Defensive turning toward something flatter.",
+      "player_card": "suspect:hector_finch",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.80, 0.88, 0.74]
+    },
+    {
+      "turn": 31,
+      "_note": "He gives his gatehouse lamp and the desk hours. The chemist's preparation is not his. Cleanly out — and the deeper motive opens.",
+      "player_card": "witness:hector_finch",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.82, 0.88, 0.76]
+    },
+    {
+      "turn": 32,
+      "_note": "Cross to the village rooms. Edmund's bedside lamp again. The receipt placed beside it. The room arranges itself around the absent man.",
+      "player_card": "travel:to_village_rooms",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.83, 0.89, 0.78]
+    },
+    {
+      "turn": 33,
+      "_note": "Edmund arrives at his own door, hat in hand, having been sent for. He addresses the detective without ceremony — measured, complete, half a beat slow.",
+      "player_card": "witness:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.85, 0.90, 0.80]
+    },
+    {
+      "turn": 34,
+      "_note": "Lay the receipt plain on the bedside table. He does not pale. He waits a half-second longer than for any prior question. He says he cannot account for it.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.88, 0.92, 0.82]
+    },
+    {
+      "turn": 35,
+      "_note": "Cross to the library. Edmund beside. The french windows still on the catch. Name the cold August night and the chest complaint.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:french_window_latch",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:door_left_unlatched"
+      },
+      "convergence_after": [0.89, 0.92, 0.84]
+    },
+    {
+      "turn": 36,
+      "_note": "Cross to the drawing room with him beside. The portrait. He does not touch the chimneypiece — a small abstinence where there had been a habit.",
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:noting_protocol_breach",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dust_motes_hang",
+        "REVELATION": "revelation:emotional_geography_lands",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [0.90, 0.92, 0.88]
+    },
+    {
+      "turn": 37,
+      "_note": "Return to the library. Mrs Lyle at the door with the green sack. She addresses Edmund by his Christian name — the habit of twenty-three years. He does not return it.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noting_protocol_breach",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:addressed_above_station"
+      },
+      "convergence_after": [0.91, 0.93, 0.89]
+    },
+    {
+      "turn": 38,
+      "_note": "Name the why aloud — the house, the mother, the careful habit of returning. Motive lands clean.",
+      "player_card": "motive:house_as_mother",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:library_doorframe",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.92, 0.93, 0.92]
+    },
+    {
+      "turn": 39,
+      "_note": "Walk Edmund to the french windows. Name the cold August dawn aloud. He does not move his hand to the latch.",
+      "player_card": "modifier:window_left_open",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:french_window_latch",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:door_left_unlatched"
+      },
+      "convergence_after": [0.93, 0.94, 0.93]
+    },
+    {
+      "turn": 40,
+      "_note": "Verdict reads. The receipt, the decanter, the doorframe, the portrait, the cold August dawn. The accusation comes in the room where it happened.",
+      "player_card": "ACCUSE:suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.94, 0.95, 0.94]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "accused": "suspect:edmund_carrow",
+    "final_convergence": [0.94, 0.95, 0.94],
+    "_note": "Hand-paced. Mrs Lyle first contact at servants_hall turn 4, Hadley turn 6, Mrs Penrose turn 9. Bridge clue (chemists_receipt) lands turn 22 in the green sack. Finch alibi holds turn 30-31. Emotional geography lands turn 28, motive emerges turn 38. Verdict turn 40 in the library."
+  }
+}

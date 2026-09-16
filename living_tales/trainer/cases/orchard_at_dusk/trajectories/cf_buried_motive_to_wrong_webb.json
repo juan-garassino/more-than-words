@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_buried_motive_to_wrong_webb",
+  "case_id": "orchard_at_dusk",
+  "description": "Counterfactual branch of correct_thomas_crale_via_buried_motive. At turn 26 the detective's OBJECT_FOCUS pivots from the boundary_post to the solicitor_letter — Webb's modern fee trail. Convergence races toward Webb on surface motive; Crale walks. 7-turn CF.",
+  "outcome": "wrong_amos_webb",
+  "branch_of": "correct_thomas_crale_via_buried_motive",
+  "branch_turn": 26,
+  "divergence_token": "OBJECT_FOCUS=object:solicitor_letter",
+  "starting_hypothesis": "motive_first_buried",
+  "tags": ["counterfactual_branch","object_focus_divergence","wrong_webb","surface_motive_pivot"],
+  "opening": {"tokens": ["location:crale_orchard","event:oates_found_at_dusk","time:dusk_hour"]},
+  "pre_branch_state": {"convergence_dims": [0.56, 0.57, 0.5]},
+  "turns": [
+    {"turn":26,"_note":"DIVERGENCE. The detective leaves Caddick and crosses to the village inn — the solicitor letter Sowerby keeps at the till is the new fixation.","player_card":"travel:to_village_inn","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_ned_sowerby","STANCE":"stance:cooperative","ACTION":"action:arrives","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:lamp_lit_early","REVELATION":"revelation:none","BEAT":"beat:closing_in"},"convergence_after":[0.58,0.6,0.5]},
+    {"turn":27,"_note":"Examine the letter — Webb's fee, the surface motive flares.","player_card":"object:solicitor_letter","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:examining_evidence","PRESENCE":"presence:with_ned_sowerby","STANCE":"stance:cooperative","ACTION":"action:examines","OBJECT_FOCUS":"object:solicitor_letter","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in"},"convergence_after":[0.6,0.64,0.52]},
+    {"turn":28,"_note":"Amos Webb arrives — angry. The detective reads it as guilt.","player_card":"suspect:amos_webb","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:silence_breaks","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in"},"convergence_after":[0.66,0.66,0.56]},
+    {"turn":29,"_note":"Surveyors' fee laid plain.","player_card":"object:surveyors_fee","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:examining_evidence","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:surveyors_fee","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:name_uncovered","BEAT":"beat:closing_in"},"convergence_after":[0.74,0.72,0.6]},
+    {"turn":30,"_note":"Boundary fraud named on Webb.","player_card":"motive:boundary_fraud","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:examining_evidence","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:surveyors_fee","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:motive_emerges","BEAT":"beat:closing_in"},"convergence_after":[0.8,0.78,0.76]},
+    {"turn":31,"_note":"Cross to Webb Farm. Walk Webb to his own gate.","player_card":"travel:to_webb_farm","scene":{"LOCATION":"location:webb_farm","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:lamp_lit_early","REVELATION":"revelation:partial_match","BEAT":"beat:verdict_ready"},"convergence_after":[0.8,0.78,0.76]},
+    {"turn":32,"_note":"Accusation. Crale walks at dawn.","player_card":"ACCUSE:suspect:amos_webb","scene":{"LOCATION":"location:webb_farm","TRANSITION":"transition:stayed","CAUSE":"cause:none","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:surveyors_fee","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:dawn_approaches","REVELATION":"revelation:confirmation","BEAT":"beat:verdict_ready"},"convergence_after":[0.82,0.8,0.78]}
+  ],
+  "ending": {
+    "type": "wrong_amos_webb",
+    "accused": "suspect:amos_webb",
+    "true_culprit": "suspect:thomas_crale",
+    "final_convergence": [0.82, 0.8, 0.78],
+    "_note": "OBJECT_FOCUS pivoted to solicitor_letter. Surface motive carried; buried motive abandoned. 7-turn CF."
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "case_id": "sulphur_line",
+  "_comment": "Index of hand-authored trajectories. First wave of the 50-trajectory bootstrap for sulphur_line. Outcomes: correct_silas_oake (6), wrong_<suspect> (6), cold_trail (3), partial_correct (3), accomplice_found (2), framed_suspect (2), late_revelation (1), motive_only_confession (1), red_herring_trap (1). Length norm 40-47 turns. Red herring James Whitlow uses a structural false-plateau at turn 10+ suspect 0.55. Bridge token industrial_tell:shadow_of_gap fires LATE (convergence >= 0.6).",
+  "trajectories": [
+    {
+      "id": "oake_via_shadow_of_gap",
+      "outcome": "correct_silas_oake",
+      "length": 44,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "log_revision_chain",
+        "shadow_of_gap_pivot",
+        "case_canonical"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "oake_via_maintenance_log_revision",
+      "outcome": "correct_silas_oake",
+      "length": 43,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "maintenance_log_chain",
+        "ink_does_not_match",
+        "hand_does_not_match"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "oake_via_scales_mismatch",
+      "outcome": "correct_silas_oake",
+      "length": 45,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "dispatch_ledger_chain",
+        "scales_mismatch",
+        "works_clerk_heavy"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "oake_via_sulphur_dispatch_record",
+      "outcome": "correct_silas_oake",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "dispatch_chain",
+        "sulphur_on_coat",
+        "dispatch_porter_first"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "oake_via_widow_birch_paid_silence",
+      "outcome": "correct_silas_oake",
+      "length": 46,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "widow_birch_chain",
+        "silence_payments",
+        "birch_concealment_motive"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "oake_via_craggs_corroboration",
+      "outcome": "correct_silas_oake",
+      "length": 44,
+      "starting_hypothesis": "suspect_first",
+      "tags": [
+        "craggs_breaks",
+        "foreman_corroborates",
+        "hand_does_not_match"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_james_whitlow",
+      "outcome": "wrong_james_whitlow",
+      "length": 43,
+      "starting_hypothesis": "red_herring_first",
+      "tags": [
+        "false_plateau_whitlow",
+        "grievance_misread",
+        "designed_red_herring"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_mrs_oake",
+      "outcome": "wrong_mrs_oake",
+      "length": 41,
+      "starting_hypothesis": "alibi_first",
+      "tags": [
+        "wife_alibi_misread",
+        "household_clock",
+        "wrong_suspect"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_craggs",
+      "outcome": "wrong_foreman_craggs",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "foreman_signature_misread",
+        "keys_on_belt",
+        "wrong_suspect"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_hicks",
+      "outcome": "wrong_alderman_hicks",
+      "length": 41,
+      "starting_hypothesis": "motive_first",
+      "tags": [
+        "licence_motive_misread",
+        "deferred_inspections",
+        "wrong_suspect"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_dr_poole",
+      "outcome": "wrong_dr_poole",
+      "length": 41,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "poole_certificate_misread",
+        "1886_signoff",
+        "wrong_suspect"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_bargee",
+      "outcome": "wrong_bargee",
+      "length": 40,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "bargee_proximity_misread",
+        "towpath_witness",
+        "wrong_suspect"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "cold_trail_circular",
+      "outcome": "cold_trail",
+      "length": 47,
+      "starting_hypothesis": "circular_loop",
+      "tags": [
+        "cold_trail",
+        "circular_visits",
+        "no_progress"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "cold_trail_log_loop",
+      "outcome": "cold_trail",
+      "length": 46,
+      "starting_hypothesis": "log_focus",
+      "tags": [
+        "cold_trail",
+        "log_loop",
+        "no_npc_pressure"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "cold_trail_canal_loop",
+      "outcome": "cold_trail",
+      "length": 47,
+      "starting_hypothesis": "canal_focus",
+      "tags": [
+        "cold_trail",
+        "canal_loop",
+        "atmosphere_heavy"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "partial_correct_misread_motive_a",
+      "outcome": "partial_correct",
+      "length": 43,
+      "starting_hypothesis": "object_first_misread_motive",
+      "tags": [
+        "partial_correct",
+        "misread_motive",
+        "embezzlement_wrong",
+        "concealment_missed"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "partial_correct_misread_motive_b",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "witness_first_misread_motive",
+      "tags": [
+        "partial_correct",
+        "misread_motive",
+        "licence_wrong",
+        "concealment_missed"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "partial_correct_oake_wrong_night",
+      "outcome": "partial_correct",
+      "length": 41,
+      "starting_hypothesis": "object_first_misread_night",
+      "tags": [
+        "partial_correct",
+        "wrong_night",
+        "thursday_misread"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "accomplice_via_craggs",
+      "outcome": "accomplice_found",
+      "length": 42,
+      "starting_hypothesis": "accomplice_first_craggs",
+      "tags": [
+        "accomplice_found",
+        "craggs_signed",
+        "primary_walks"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "accomplice_via_widow_birch",
+      "outcome": "accomplice_found",
+      "length": 43,
+      "starting_hypothesis": "accomplice_first_widow",
+      "tags": [
+        "accomplice_found",
+        "widow_birch_signed",
+        "silence_signed_witness"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "framed_james_whitlow",
+      "outcome": "framed_suspect",
+      "length": 44,
+      "starting_hypothesis": "frame_first_whitlow",
+      "tags": [
+        "framed_suspect",
+        "whitlow_planted",
+        "oake_walks"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "framed_craggs",
+      "outcome": "framed_suspect",
+      "length": 43,
+      "starting_hypothesis": "frame_first_craggs",
+      "tags": [
+        "framed_suspect",
+        "craggs_keys_planted",
+        "oake_walks"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "late_revelation_after_whitlow",
+      "outcome": "late_revelation",
+      "length": 47,
+      "starting_hypothesis": "red_herring_first_recovery",
+      "tags": [
+        "late_revelation",
+        "false_plateau_whitlow",
+        "wrong_then_right",
+        "shadow_of_gap_recovery"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "motive_only_via_concealment",
+      "outcome": "motive_only_confession",
+      "length": 42,
+      "starting_hypothesis": "motive_first_concealment",
+      "tags": [
+        "motive_only_confession",
+        "birch_concealment",
+        "widow_volunteers"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "red_herring_trap_whitlow_revision",
+      "outcome": "red_herring_trap",
+      "length": 44,
+      "starting_hypothesis": "red_herring_inflated_whitlow",
+      "tags": [
+        "red_herring_trap",
+        "whitlow_inflated",
+        "grievance_misread",
+        "convergence_trap"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "oake_via_reading_maintenance_log",
+      "outcome": "correct_silas_oake",
+      "length": 40,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "maintenance_log_chain",
+        "reading_maintenance_log_cause",
+        "shadow_of_gap_pivot",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "oake_via_summoned_by_foreman",
+      "outcome": "correct_silas_oake",
+      "length": 40,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "foreman_summons",
+        "called_away_transition",
+        "summoned_cause",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "oake_via_descended_to_canal_level",
+      "outcome": "correct_silas_oake",
+      "length": 40,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "canal_descent",
+        "descended_to_transition",
+        "entered_transition",
+        "shadow_of_gap_pivot",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "oake_via_chemist_office_entered",
+      "outcome": "correct_silas_oake",
+      "length": 40,
+      "starting_hypothesis": "suspect_first",
+      "tags": [
+        "office_first",
+        "entered_transition",
+        "exited_transition",
+        "shadow_of_gap_pivot",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_james_whitlow_b",
+      "outcome": "wrong_james_whitlow",
+      "length": 40,
+      "starting_hypothesis": "red_herring_first",
+      "tags": [
+        "false_plateau_whitlow",
+        "grievance_misread_b",
+        "designed_red_herring",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_mrs_oake_b",
+      "outcome": "wrong_mrs_oake",
+      "length": 40,
+      "starting_hypothesis": "alibi_first",
+      "tags": [
+        "wife_signature_misread",
+        "widow_document_misread",
+        "wrong_suspect",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_hicks_b",
+      "outcome": "wrong_alderman_hicks",
+      "length": 40,
+      "starting_hypothesis": "motive_first",
+      "tags": [
+        "licence_motive_misread_b",
+        "1882_borderline",
+        "wrong_suspect",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "wrong_widow_birch",
+      "outcome": "wrong_widow_birch",
+      "length": 40,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "widow_birch_misread",
+        "concealment_misread_as_guilt",
+        "wrong_suspect",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "cold_trail_summons_loop",
+      "outcome": "cold_trail",
+      "length": 40,
+      "starting_hypothesis": "summons_loop",
+      "tags": [
+        "cold_trail",
+        "summons_loop",
+        "no_log_thread",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    },
+    {
+      "id": "cold_trail_dispatch_yard_circular",
+      "outcome": "cold_trail",
+      "length": 40,
+      "starting_hypothesis": "circular_yard",
+      "tags": [
+        "cold_trail",
+        "yard_circular",
+        "no_npc_pressure",
+        "wave2"
+      ],
+      "_status": "draft_v1"
+    }
+  ]
+}

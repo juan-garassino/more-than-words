@@ -1,0 +1,1042 @@
+{
+  "schema_version": 2,
+  "case_id": "third_signature",
+  "voice": "third_person_past",
+  "_comment": "Variant phrase set for the structured-scene engine. Each token may be a string, a list of 2-5 variants, or a staged dict (cold/warming/breaking/broken) for top NPCs (Agnes Vail, Carey, Wills the porter). Voice: third-person past, Obra-Dinn-style — cold, mannered, reconstructive. London literary club register: gentleman publisher, bound proof, typescript margin, dedication page, gin-and-soda, sign-in book, porter's lodge. Winter 1935, the Aldgate Club, Bloomsbury.",
+
+  "LOCATION": {
+    "location:club_steps": {
+      "en": ["the club steps", "the Aldgate's front steps", "the steps at the entrance", "the steps under the lamp"],
+      "es": ["los escalones del club", "los escalones del Aldgate", "los peldaños de la entrada", "la escalinata bajo la farola"]
+    },
+    "location:porters_lodge": {
+      "en": ["the porter's lodge", "the lodge by the door", "Wills's lodge", "the small lodge at the entrance"],
+      "es": ["la portería", "la garita del portero junto a la puerta", "la portería de Wills", "el cuartito de la entrada"]
+    },
+    "location:smoking_room": {
+      "en": ["the smoking room", "the smoking room by the fire", "the members' smoking room", "the smoking room off the corridor"],
+      "es": ["el salón de fumadores", "el salón de fumadores junto al fuego", "el salón de fumadores de socios", "el fumadero del pasillo"]
+    },
+    "location:reading_room": {
+      "en": ["the reading room", "the private reading room", "the reading room at the end of the corridor", "the room where the body had been found"],
+      "es": ["la sala de lectura", "la sala de lectura privada", "la sala de lectura al fondo del pasillo", "la sala donde fue hallado el cuerpo"]
+    },
+    "location:library": {
+      "en": ["the library", "the club library", "the long library", "the library on the first floor"],
+      "es": ["la biblioteca", "la biblioteca del club", "la biblioteca larga", "la biblioteca del primer piso"]
+    },
+    "location:dining_room": {
+      "en": ["the dining room", "the members' dining room", "the panelled dining room", "the dining room at the front"],
+      "es": ["el comedor", "el comedor de socios", "el comedor revestido en madera", "el comedor del frente"]
+    },
+    "location:manuscript_archive": {
+      "en": ["the manuscript archive", "the Marsh-papers archive", "Kemp's archive room", "the archive on the second floor"],
+      "es": ["el archivo de manuscritos", "el archivo de los papeles Marsh", "la sala de archivo de Kemp", "el archivo del segundo piso"]
+    },
+    "location:members_snug": {
+      "en": ["the members' snug", "the small snug behind the smoking room", "the snug by the back stair", "the panelled snug"],
+      "es": ["el saloncito de socios", "el pequeño saloncito tras el fumadero", "el saloncito junto a la escalera trasera", "el reservado revestido"]
+    },
+    "location:basement_records": {
+      "en": ["the basement records room", "the records room below", "the basement file room", "the records vault in the cellar"],
+      "es": ["la sala de archivos del sótano", "la sala de registros del piso inferior", "el archivo del sótano", "el depósito de registros en la bodega"]
+    },
+    "location:club_corridor": {
+      "en": ["the club corridor", "the panelled corridor", "the corridor outside the reading room", "the long corridor on the ground floor"],
+      "es": ["el pasillo del club", "el pasillo revestido", "el pasillo frente a la sala de lectura", "el largo pasillo de la planta baja"]
+    },
+    "location:none": {"en": "", "es": ""}
+  },
+
+  "TRANSITION": {
+    "transition:stayed": {
+      "en": ["Still at", "Remained at", "Held position at", "Did not move from"],
+      "es": ["Aún en", "Permaneció en", "Se mantuvo en", "Sin moverse de"]
+    },
+    "transition:crossed_to": {
+      "en": ["Crossed to", "Walked through to", "Stepped over to", "Moved across to"],
+      "es": ["Cruzó hasta", "Caminó hasta", "Pasó hasta", "Se desplazó a"]
+    },
+    "transition:entered": {
+      "en": ["Entered", "Stepped into", "Went into", "Passed into"],
+      "es": ["Entró en", "Pasó a", "Se adentró en", "Ingresó en"]
+    },
+    "transition:exited": {
+      "en": ["Stepped out of", "Left", "Withdrew from", "Walked out of"],
+      "es": ["Salió de", "Abandonó", "Se retiró de", "Dejó atrás"]
+    },
+    "transition:returned": {
+      "en": ["Returned to", "Came back to", "Went back to", "Doubled back to"],
+      "es": ["Volvió a", "Regresó a", "Retornó a", "Volvió sobre sus pasos a"]
+    },
+    "transition:pursued_to": {
+      "en": ["Followed the matter to", "Tracked the question to", "Carried the thread to", "Followed the lead to"],
+      "es": ["Siguió el asunto hasta", "Llevó la cuestión hasta", "Trasladó el hilo a", "Siguió la pista hasta"]
+    },
+    "transition:called_away_to": {
+      "en": ["Was sent for at", "Was summoned to", "Was called to", "Was asked to step into"],
+      "es": ["La hicieron acudir a", "Fue convocada a", "Fue llamada a", "La pidieron a"]
+    },
+    "transition:descended_to": {
+      "en": ["Descended to", "Took the steps down to", "Went down to", "Made her way down to"],
+      "es": ["Bajó a", "Tomó la escalera hasta", "Descendió a", "Se adentró bajando a"]
+    },
+    "transition:none": {
+      "en": ["Began at", "Started at", "First stood at", "Opened the evening at"],
+      "es": ["Comenzó en", "Empezó en", "Se detuvo primero en", "Inició la velada en"]
+    }
+  },
+
+  "CAUSE": {
+    "cause:following_witness_lead": {
+      "en": ["On the witness's word,", "Acting on what the witness had said,", "Following the witness's account,", "Taking the witness at his word,"],
+      "es": ["Por la palabra del testigo,", "Atendiendo lo dicho por el testigo,", "Siguiendo el relato del testigo,", "Conforme al testimonio,"]
+    },
+    "cause:examining_evidence": {
+      "en": ["Tracing the evidence,", "Following the paper trail,", "Working from the evidence,", "Carrying the evidence forward,"],
+      "es": ["Siguiendo la evidencia,", "Trazando el rastro documental,", "Partiendo de las pruebas,", "Llevando la prueba adelante,"]
+    },
+    "cause:recognized_object": {
+      "en": ["Something about the page struck her;", "The object held her attention;", "A look at the paper stopped her;", "The thing in her hand caught her eye;"],
+      "es": ["Algo de la página la detuvo;", "El objeto retuvo su atención;", "Algo en el papel la hizo pararse;", "La cosa en la mano le llamó la mirada;"]
+    },
+    "cause:noticed_inconsistency": {
+      "en": ["A detail did not match;", "Something did not add up;", "One entry refused to fit;", "An inconsistency stood out;"],
+      "es": ["Un detalle no encajaba;", "Algo no cuadraba;", "Una entrada se resistía;", "Una inconsistencia saltaba a la vista;"]
+    },
+    "cause:pursued_suspicion": {
+      "en": ["On a hunch,", "Following a suspicion,", "Acting on a doubt,", "On the strength of a suspicion,"],
+      "es": ["Por una corazonada,", "Siguiendo una sospecha,", "Movida por una duda,", "Llevada por la sospecha,"]
+    },
+    "cause:revisiting_scene": {
+      "en": ["Returning to confirm,", "Going back to check,", "To check the matter again,", "Coming back to verify,"],
+      "es": ["Volviendo para confirmar,", "Regresando a comprobar,", "Para verificar de nuevo,", "Para corroborarlo,"]
+    },
+    "cause:summoned": {
+      "en": ["Called by name,", "Summoned by name,", "On being called,", "Sent for by name,"],
+      "es": ["Llamada por su nombre,", "Convocada por su nombre,", "Al ser llamada,", "Reclamada por su nombre,"]
+    },
+    "cause:chronological_drift": {
+      "en": ["As the evening wore on,", "As the hour drew on,", "As the night pressed forward,", "With the hour advancing,"],
+      "es": ["Mientras avanzaba la velada,", "A medida que avanzaba la hora,", "Conforme corría la noche,", "Con la hora ya avanzada,"]
+    },
+    "cause:reading_signature_signal": {
+      "en": ["Reading the hand on the page,", "On the slope of the signature,", "Working from the handwriting,", "Following what the page said in ink,"],
+      "es": ["Leyendo la letra en la página,", "Por la inclinación de la firma,", "A partir de la caligrafía,", "Siguiendo lo dicho por la tinta,"]
+    },
+    "cause:cross_referencing_register": {
+      "en": ["Cross-referencing the register,", "Comparing the book to the log,", "Matching the entries by hour,", "Reading register and key log together,"],
+      "es": ["Cotejando el registro,", "Comparando el libro con el cuadernillo de llaves,", "Cruzando las entradas por hora,", "Leyendo registro y llaves a la par,"]
+    },
+    "cause:none": {"en": "", "es": ""}
+  },
+
+  "PRESENCE": {
+    "presence:with_agnes_vail": {
+      "en": {
+        "cold": [
+          "Agnes Vail kept her place by the fire",
+          "Mrs Vail waited in the chair by the lamp",
+          "Agnes Vail sat with her gloves still on",
+          "Mrs Vail stood, courteously, when the detective came in"
+        ],
+        "warming": [
+          "Agnes Vail spoke of the dear Mr Pemberton in measured terms",
+          "Mrs Vail inclined her head at the question and answered it carefully",
+          "Agnes Vail turned the wedding ring once, slowly, on her finger",
+          "Mrs Vail said one was given to understand the matter was distressing"
+        ],
+        "breaking": [
+          "Agnes Vail's courtesy grew more cordial as the questions narrowed",
+          "Mrs Vail did not remove her gloves even by the coal fire",
+          "Agnes Vail's hand stilled briefly when the register was opened",
+          "Mrs Vail named the eight-five entry without consulting the book"
+        ],
+        "broken": [
+          "Agnes Vail removed the left glove to take up the pen",
+          "Mrs Vail signed her name with the leftward slope of 1921",
+          "Agnes Vail did not look up while the dedication page was laid beside the deed",
+          "Mrs Vail said nothing when the seven minutes were named"
+        ]
+      },
+      "es": {
+        "cold": [
+          "Agnes Vail se mantuvo junto al fuego",
+          "la señora Vail esperaba en la butaca junto a la lámpara",
+          "Agnes Vail estaba sentada con los guantes aún puestos",
+          "la señora Vail se levantó, cortés, al entrar la detective"
+        ],
+        "warming": [
+          "Agnes Vail hablaba del querido señor Pemberton con palabras medidas",
+          "la señora Vail inclinó la cabeza ante la pregunta y la respondió con cuidado",
+          "Agnes Vail giraba la alianza una vez, despacio, en el dedo",
+          "la señora Vail dijo que se daba a entender que el asunto era doloroso"
+        ],
+        "breaking": [
+          "la cortesía de Agnes Vail se volvió más cordial al estrecharse las preguntas",
+          "la señora Vail no se quitó los guantes ni junto al fuego de carbón",
+          "la mano de Agnes Vail se quedó quieta un instante al abrirse el registro",
+          "la señora Vail nombró la entrada de las ocho y cinco sin consultar el libro"
+        ],
+        "broken": [
+          "Agnes Vail se quitó el guante izquierdo para tomar la pluma",
+          "la señora Vail firmó con la inclinación a la izquierda de 1921",
+          "Agnes Vail no alzó la vista cuando la dedicatoria fue puesta junto al documento",
+          "la señora Vail no dijo nada cuando se nombraron los siete minutos"
+        ]
+      }
+    },
+    "presence:with_carey": {
+      "en": {
+        "cold": [
+          "Carey stood with his briefcase under one arm",
+          "Mr Carey kept his place by the dining-room door",
+          "Carey waited with the small precision of his trade",
+          "Mr Carey nodded, professionally, and offered his card"
+        ],
+        "warming": [
+          "Carey answered with the measured hedging of his calling",
+          "Mr Carey produced the dinner-receipt without being asked",
+          "Carey said the matter of the Marsh estate was, in his view, on the record",
+          "Mr Carey rotated the briefcase a half-turn between answers"
+        ],
+        "breaking": [
+          "Carey's charm thickened rather than thinned",
+          "Mr Carey named the cigarette and the corridor and the steward and offered nothing more",
+          "Carey did not lift his eyes from the detective's pen while he spoke",
+          "Mr Carey produced the cloakroom ticket and laid it on the table without commentary"
+        ],
+        "broken": [
+          "Carey said his contempt for the late Pemberton was a matter of public record",
+          "Mr Carey added that he had had no occasion to go near the port",
+          "Carey did not vary his cadence when the corridor witnesses were named",
+          "Mr Carey closed the briefcase and waited for the next question without speaking"
+        ]
+      },
+      "es": {
+        "cold": [
+          "Carey estaba con el maletín bajo un brazo",
+          "el señor Carey se mantenía junto a la puerta del comedor",
+          "Carey esperaba con la pequeña precisión de su oficio",
+          "el señor Carey saludó, profesional, y ofreció su tarjeta"
+        ],
+        "warming": [
+          "Carey respondía con la cautela medida de su profesión",
+          "el señor Carey sacó el recibo de la cena sin que se lo pidieran",
+          "Carey dijo que el asunto del legado Marsh era, a su juicio, de registro público",
+          "el señor Carey giraba el maletín medio giro entre respuestas"
+        ],
+        "breaking": [
+          "el encanto de Carey se espesó en lugar de adelgazarse",
+          "el señor Carey nombró el cigarrillo, el pasillo y el camarero y no ofreció más",
+          "Carey no apartó los ojos de la pluma de la detective mientras hablaba",
+          "el señor Carey sacó el resguardo del guardarropa y lo dejó sobre la mesa sin comentario"
+        ],
+        "broken": [
+          "Carey dijo que su desprecio por el difunto Pemberton constaba en actas",
+          "el señor Carey añadió que no había tenido ocasión de acercarse al oporto",
+          "Carey no varió la cadencia cuando se nombraron a los testigos del pasillo",
+          "el señor Carey cerró el maletín y esperó la siguiente pregunta sin hablar"
+        ]
+      }
+    },
+    "presence:with_wills": {
+      "en": {
+        "cold": [
+          "Wills the porter sat at the lodge with the book open",
+          "Wills kept his place behind the small counter",
+          "the old porter stood at the lodge door",
+          "Wills was where he had been since 1908, at the lodge"
+        ],
+        "warming": [
+          "Wills answered in the order he had been asked",
+          "the porter named the hour and the gentleman without elaboration",
+          "Wills laid his hand on the open register and waited",
+          "the old porter gave the eight-five entry as it stood"
+        ],
+        "breaking": [
+          "Wills paused before the question he had not been asked before",
+          "the porter said he had stepped out to take Mr Dent's hat",
+          "Wills set his finger on the eight-fifteen line of the key log",
+          "the old porter named the bell that had sounded at eight-twenty-two"
+        ],
+        "broken": [
+          "Wills named the lady in the black gloves at the side table",
+          "the porter said it had been seven minutes and no more",
+          "Wills said no one had asked him in the right way until now",
+          "the old porter named Mrs Vail and the decanter and said nothing further"
+        ]
+      },
+      "es": {
+        "cold": [
+          "Wills el portero estaba en la portería con el libro abierto",
+          "Wills se mantenía detrás del pequeño mostrador",
+          "el viejo portero estaba junto a la puerta de la portería",
+          "Wills seguía donde había estado desde 1908, en la portería"
+        ],
+        "warming": [
+          "Wills respondía en el orden en que se le había preguntado",
+          "el portero nombró la hora y al caballero sin elaborar",
+          "Wills apoyó la mano sobre el registro abierto y esperó",
+          "el viejo portero dio la entrada de las ocho y cinco tal como constaba"
+        ],
+        "breaking": [
+          "Wills hizo una pausa ante la pregunta que nunca le habían hecho",
+          "el portero dijo que había salido a tomar el sombrero del señor Dent",
+          "Wills posó el dedo en la línea de las ocho y cuarto del libro de llaves",
+          "el viejo portero nombró la campana que había sonado a las ocho y veintidós"
+        ],
+        "broken": [
+          "Wills nombró a la dama de los guantes negros junto a la mesa auxiliar",
+          "el portero dijo que habían sido siete minutos y no más",
+          "Wills dijo que nadie le había preguntado de la manera correcta hasta ahora",
+          "el viejo portero nombró a la señora Vail y al decantador y no dijo más"
+        ]
+      }
+    },
+    "presence:with_hugh_emberly": {
+      "en": [
+        "Hugh Emberly was at his usual chair by the fire",
+        "Emberly stood with a glass in his hand and offered courtesies",
+        "Hugh Emberly waited beside the smoking-room hearth",
+        "Emberly kept his place near the long shelf"
+      ],
+      "es": [
+        "Hugh Emberly estaba en su butaca habitual junto al fuego",
+        "Emberly esperaba con una copa en la mano y ofrecía cortesías",
+        "Hugh Emberly aguardaba junto al hogar del fumadero",
+        "Emberly se mantenía cerca de la estantería larga"
+      ]
+    },
+    "presence:with_colonel_norris": {
+      "en": [
+        "Colonel Norris stood squarely by the side table",
+        "Norris waited with the formality of forty years' membership",
+        "the Colonel kept his place at the smoking-room hearth",
+        "Norris stood as the detective entered"
+      ],
+      "es": [
+        "el coronel Norris estaba firme junto a la mesa auxiliar",
+        "Norris esperaba con la formalidad de cuarenta años de socio",
+        "el coronel se mantenía junto al hogar del fumadero",
+        "Norris se puso en pie al entrar la detective"
+      ]
+    },
+    "presence:with_lillian_march": {
+      "en": [
+        "Lillian March sat with the publisher's letter before her",
+        "Miss March waited with her papers in order",
+        "Lillian March kept her place at the dining-room table",
+        "Miss March stood, briefly, and resumed her seat"
+      ],
+      "es": [
+        "Lillian March estaba sentada con la carta del editor delante",
+        "la señorita March esperaba con sus papeles en orden",
+        "Lillian March se mantenía en su lugar en la mesa del comedor",
+        "la señorita March se levantó un instante y volvió a su asiento"
+      ]
+    },
+    "presence:with_publisher_dent": {
+      "en": [
+        "Percival Dent waited with his pipe in his palm",
+        "Mr Dent kept his chair by the smoking-room fire",
+        "Percival Dent stood, slowly, to greet her",
+        "Mr Dent set the pipe-bowl against his palm and waited"
+      ],
+      "es": [
+        "Percival Dent esperaba con la pipa en la palma",
+        "el señor Dent permanecía en su butaca junto al fuego del fumadero",
+        "Percival Dent se puso en pie, despacio, para saludarla",
+        "el señor Dent apoyó la cazoleta contra la palma y esperó"
+      ]
+    },
+    "presence:with_dr_pryce": {
+      "en": [
+        "Dr Pryce stood by the reading-room door",
+        "Pryce waited with his notebook in his hand",
+        "Dr Pryce kept his place beside the side table",
+        "Pryce stood, clinically composed, as the detective came in"
+      ],
+      "es": [
+        "el doctor Pryce estaba junto a la puerta de la sala de lectura",
+        "Pryce esperaba con su cuaderno en la mano",
+        "el doctor Pryce se mantenía junto a la mesa auxiliar",
+        "Pryce esperaba en pie, clínicamente sereno, al entrar la detective"
+      ]
+    },
+    "presence:with_archivist_kemp": {
+      "en": [
+        "the archivist Kemp stood at the catalogue desk",
+        "Kemp waited with the Marsh folder under his arm",
+        "Kemp kept his place at the long table in the archive",
+        "the archivist stood with the catalogue open at the right entry"
+      ],
+      "es": [
+        "el archivero Kemp estaba en el escritorio del catálogo",
+        "Kemp esperaba con la carpeta Marsh bajo el brazo",
+        "Kemp se mantenía en la mesa larga del archivo",
+        "el archivero estaba con el catálogo abierto en la entrada correcta"
+      ]
+    },
+    "presence:with_club_secretary": {
+      "en": [
+        "the club secretary kept her place at the office desk",
+        "the secretary stood with the membership roll open",
+        "the club secretary waited at the door of her office",
+        "the secretary sat squarely at her desk and waited"
+      ],
+      "es": [
+        "la secretaria del club se mantenía en su escritorio",
+        "la secretaria estaba con el registro de socios abierto",
+        "la secretaria del club esperaba en la puerta de su oficina",
+        "la secretaria estaba sentada en su mesa y esperaba"
+      ]
+    },
+    "presence:with_dining_steward": {
+      "en": [
+        "the dining steward stood in the dining-room doorway",
+        "the steward waited at the threshold of the dining room",
+        "the dining steward kept his place by the service door",
+        "the steward stood with the wine list still in his hand"
+      ],
+      "es": [
+        "el camarero del comedor estaba en el umbral del comedor",
+        "el camarero esperaba en la puerta del comedor",
+        "el camarero del comedor se mantenía junto a la puerta de servicio",
+        "el camarero estaba con la carta de vinos aún en la mano"
+      ]
+    },
+    "presence:with_biographer_holm": {
+      "en": [
+        "the biographer Holm sat with his chapter draft in his hand",
+        "Holm waited with the typescript pages laid out",
+        "the biographer kept his place at the smoking-room table",
+        "Holm stood when the detective entered and resumed at her gesture"
+      ],
+      "es": [
+        "el biógrafo Holm estaba sentado con el borrador del capítulo en la mano",
+        "Holm esperaba con las páginas del mecanoscrito desplegadas",
+        "el biógrafo se mantenía en la mesa del fumadero",
+        "Holm se puso en pie al entrar la detective y se sentó a su seña"
+      ]
+    },
+    "presence:alone": {
+      "en": [
+        "no one else was there",
+        "the room stood empty otherwise",
+        "no other person was present",
+        "the place was hers alone"
+      ],
+      "es": [
+        "no había nadie más",
+        "la sala estaba vacía por lo demás",
+        "no había ninguna otra persona",
+        "el lugar quedaba para ella sola"
+      ]
+    }
+  },
+
+  "STANCE": {
+    "stance:cooperative": {
+      "en": ["open, willing to speak", "ready to answer", "open to the questions", "willing enough to give what was asked"],
+      "es": ["abierto, dispuesto a hablar", "dispuesto a responder", "abierto a las preguntas", "lo bastante dispuesto a dar lo pedido"]
+    },
+    "stance:defensive": {
+      "en": ["the hands held in view", "the shoulders squared at the question", "the back straightening at the question", "the briefcase set squarely on the knee"],
+      "es": ["con las manos a la vista", "con los hombros tensos ante la pregunta", "con la espalda erguida ante la pregunta", "con el maletín firme sobre la rodilla"]
+    },
+    "stance:evasive": {
+      "en": ["the eyes finding the floor", "the gaze sliding to the door", "the answer hedged with profession", "the words chosen and re-chosen"],
+      "es": ["con los ojos en el suelo", "con la mirada deslizándose a la puerta", "con la respuesta acotada por el oficio", "con las palabras escogidas y reescogidas"]
+    },
+    "stance:hostile": {
+      "en": ["the jaw set, the voice low", "the mouth set in a hard line", "the voice gone flat and quiet", "the courtesy turned cold"],
+      "es": ["con la mandíbula tensa, la voz baja", "con la boca en una línea dura", "con la voz vuelta plana y queda", "con la cortesía vuelta fría"]
+    },
+    "stance:unaware": {
+      "en": ["still unaware of her purpose", "yet to grasp why she had come", "not yet knowing what she was after", "without sense of the matter at hand"],
+      "es": ["aún ignorando el propósito de su visita", "sin haber comprendido por qué había venido", "sin saber aún qué buscaba", "sin captar todavía el asunto"]
+    },
+    "stance:none": {"en": "", "es": ""}
+  },
+
+  "ACTION": {
+    "action:examines": {
+      "en": ["examined", "looked over", "studied", "took in"],
+      "es": ["examinó", "revisó", "estudió", "observó"]
+    },
+    "action:questions": {
+      "en": ["questioned", "put questions to", "asked after", "pressed for an answer from"],
+      "es": ["interrogó", "preguntó a", "indagó a", "presionó para sacar respuesta a"]
+    },
+    "action:notices": {
+      "en": ["noticed", "marked", "took note of", "caught sight of"],
+      "es": ["advirtió", "reparó en", "tomó nota de", "se fijó en"]
+    },
+    "action:discovers": {
+      "en": ["found", "came upon", "uncovered", "turned up"],
+      "es": ["halló", "encontró", "descubrió", "dio con"]
+    },
+    "action:confronts": {
+      "en": ["confronted", "put the matter to", "set the question before", "named the matter to"],
+      "es": ["confrontó", "puso el asunto ante", "expuso la cuestión a", "le planteó el asunto a"]
+    },
+    "action:follows": {
+      "en": ["followed", "kept after", "tracked", "stayed with"],
+      "es": ["siguió", "fue tras", "rastreó", "se mantuvo tras"]
+    },
+    "action:waits": {
+      "en": ["waited", "held her place", "stayed where she was", "kept still"],
+      "es": ["esperó", "se mantuvo en su sitio", "permaneció donde estaba", "se quedó quieta"]
+    },
+    "action:leaves": {
+      "en": ["stepped away from", "moved off from", "withdrew from", "turned out of"],
+      "es": ["se alejó de", "se apartó de", "se retiró de", "salió de"]
+    },
+    "action:arrives": {
+      "en": ["stepped into", "came into", "set foot in", "passed into"],
+      "es": ["entró en", "llegó a", "puso pie en", "pasó a"]
+    },
+    "action:recalls": {
+      "en": ["recalled", "remembered", "called to mind", "brought back to mind"],
+      "es": ["recordó", "rememoró", "trajo a la memoria", "volvió a tener presente"]
+    },
+    "action:cross_references": {
+      "en": ["cross-referenced", "set the entries side by side", "matched the lines by hour", "read the books together"],
+      "es": ["cotejó", "puso las entradas lado a lado", "cruzó las líneas por hora", "leyó los libros a la par"]
+    },
+    "action:transcribes": {
+      "en": ["transcribed", "copied out", "took down in her own hand", "set down word for word"],
+      "es": ["transcribió", "copió", "anotó con su propia mano", "puso por escrito palabra por palabra"]
+    },
+    "action:none": {
+      "en": ["stood", "kept still", "stayed where she was", "held her place"],
+      "es": ["se detuvo", "permaneció quieta", "se quedó donde estaba", "mantuvo su sitio"]
+    }
+  },
+
+  "OBJECT_FOCUS": {
+    "object:sign_in_register": {
+      "en": ["the sign-in register", "the porter's book", "the club register", "the open sign-in book"],
+      "es": ["el libro de firmas", "el libro del portero", "el registro del club", "el libro de entradas abierto"]
+    },
+    "object:key_log": {
+      "en": ["the key log", "the porter's key-out book", "the reading-room key log", "the small key ledger"],
+      "es": ["el libro de llaves", "el cuadernillo de llaves del portero", "el registro de la llave de la sala de lectura", "el pequeño libro de llaves"]
+    },
+    "object:port_decanter": {
+      "en": ["the port decanter", "the cut-crystal decanter", "the decanter on the side table", "the evening's decanter"],
+      "es": ["el decantador de oporto", "el decantador de cristal tallado", "el decantador de la mesa auxiliar", "el decantador de la velada"]
+    },
+    "object:port_glass": {
+      "en": ["the port glass", "Pemberton's glass", "the glass on the small table", "the half-emptied glass"],
+      "es": ["la copa de oporto", "la copa de Pemberton", "la copa sobre la mesita", "la copa medio vacía"]
+    },
+    "object:bound_proof": {
+      "en": ["the bound proof", "the proof of The Sulphur and the Stone", "the publisher's bound proof", "the proof copy"],
+      "es": ["la prueba encuadernada", "la prueba de El azufre y la piedra", "la prueba encuadernada del editor", "el ejemplar de prueba"]
+    },
+    "object:typescript_page": {
+      "en": ["the typescript page", "a sheet of the Marsh typescript", "the typescript with its margin notes", "the typed page from the archive"],
+      "es": ["la página mecanografiada", "una hoja del mecanoscrito Marsh", "el mecanoscrito con sus notas al margen", "la página mecanografiada del archivo"]
+    },
+    "object:dedication_page": {
+      "en": ["the dedication page", "the novel's dedication leaf", "the dedication leaf of the proof", "the page bearing the dedication"],
+      "es": ["la página de la dedicatoria", "la hoja de dedicatoria de la novela", "la hoja de dedicatoria de la prueba", "la página de la dedicatoria"]
+    },
+    "object:fountain_pen": {
+      "en": ["the fountain pen", "the pen Mrs Vail had used", "the heavy black fountain pen", "the pen left on the lodge counter"],
+      "es": ["la pluma estilográfica", "la pluma que había usado la señora Vail", "la pesada estilográfica negra", "la pluma dejada en el mostrador de la portería"]
+    },
+    "object:letter_1921": {
+      "en": ["the 1921 letter", "the letter dated 1921 in a woman's hand", "the held-back letter from 1921", "the letter in the Marsh correspondence"],
+      "es": ["la carta de 1921", "la carta fechada en 1921 con caligrafía de mujer", "la carta retenida de 1921", "la carta de la correspondencia Marsh"]
+    },
+    "object:trust_deed": {
+      "en": ["the trust deed", "the 1921 trust deed", "the deed of trust with three signatures", "the deed in the executor's file"],
+      "es": ["el documento fiduciario", "el documento fiduciario de 1921", "la escritura con tres firmas", "la escritura en el legajo del albacea"]
+    },
+    "object:club_ledger": {
+      "en": ["the club ledger", "the membership ledger", "the long club ledger", "the bound club ledger"],
+      "es": ["el libro de cuentas del club", "el libro de socios", "el largo libro del club", "el libro encuadernado del club"]
+    },
+    "object:publisher_contract": {
+      "en": ["the publisher's contract", "the firm's contract with the estate", "the contract for The Sulphur and the Stone", "the publication contract"],
+      "es": ["el contrato del editor", "el contrato de la editorial con el legado", "el contrato de El azufre y la piedra", "el contrato de publicación"]
+    },
+    "object:correspondence_box": {
+      "en": ["the correspondence box", "the box of Marsh correspondence", "the executor's correspondence box", "the small black box of letters"],
+      "es": ["la caja de correspondencia", "la caja de correspondencia Marsh", "la caja de correspondencia del albacea", "la cajita negra de cartas"]
+    },
+    "object:evening_bag": {
+      "en": ["the evening bag", "Mrs Vail's evening bag", "the small black evening bag", "the evening bag left on the side table"],
+      "es": ["el bolso de noche", "el bolso de noche de la señora Vail", "el pequeño bolso negro", "el bolso de noche dejado en la mesa auxiliar"]
+    },
+    "object_focus:none": {"en": "", "es": ""}
+  },
+
+  "TELL": {
+    "emotion:studied_composure": {
+      "en": ["the composure stayed unhurried", "the manner stayed studied", "the calm stayed in place", "the bearing did not slip"],
+      "es": ["la compostura se mantuvo sin prisa", "la actitud siguió estudiada", "la calma se mantuvo en su sitio", "el porte no cedió"]
+    },
+    "emotion:careful_diction": {
+      "en": ["the words were chosen with care", "the diction stayed careful", "each word was set down with weight", "the speech kept its small precision"],
+      "es": ["las palabras fueron escogidas con cuidado", "la dicción siguió cuidada", "cada palabra fue puesta con peso", "el discurso conservó su pequeña precisión"]
+    },
+    "emotion:rigid_courtesy": {
+      "en": ["the courtesy held but tightened", "the politeness went rigid", "the small civilities went stiff", "the manners stayed but stiffened"],
+      "es": ["la cortesía se mantuvo pero se tensó", "la educación se volvió rígida", "las pequeñas civilidades se endurecieron", "los modales se mantuvieron pero se rigidizaron"]
+    },
+    "emotion:prolonged_silence": {
+      "en": ["the silence ran past comfort", "the pause stretched too long", "the silence held longer than the question allowed", "the answer did not come"],
+      "es": ["el silencio se prolongó más de lo cómodo", "la pausa se alargó demasiado", "el silencio duró más de lo que la pregunta permitía", "la respuesta no llegó"]
+    },
+    "emotion:forced_lightness": {
+      "en": ["a small laugh came too easily", "the tone went lighter than the matter", "an easy phrase was offered to fill the silence", "the manner brightened at the wrong place"],
+      "es": ["una risita llegó con demasiada facilidad", "el tono se aligeró más de lo que pedía el asunto", "una frase ligera fue ofrecida para llenar el silencio", "los modales se animaron en el lugar equivocado"]
+    },
+    "emotion:legal_hedging": {
+      "en": ["the answer arrived with its small lawyerly hedges", "the words insofar as and without prejudice came naturally", "the sentence was cushioned in legal habit", "the reply was hedged by the trade"],
+      "es": ["la respuesta llegó con sus pequeñas cautelas de abogado", "las palabras en cuanto y sin perjuicio salieron con naturalidad", "la frase venía acolchada por el hábito legal", "la contestación venía protegida por el oficio"]
+    },
+    "tell:paled": {
+      "en": ["all colour drained at the question", "the colour went out of the face at the question", "the face lost its colour at the question", "the colour fled at the question"],
+      "es": ["todo el color se retiró ante la pregunta", "el color huyó del rostro ante la pregunta", "la cara perdió el color ante la pregunta", "el color desapareció ante la pregunta"]
+    },
+    "tell:tightened": {
+      "en": ["the shoulders tightened", "the shoulders drew up", "the shoulders set", "a tightness came into the shoulders"],
+      "es": ["los hombros se tensaron", "los hombros se elevaron", "los hombros se afirmaron", "una tensión asomó en los hombros"]
+    },
+    "tell:glanced_aside": {
+      "en": ["the eyes went briefly to the door", "the gaze slipped sideways once", "a glance was cast aside", "the eyes drifted off the question"],
+      "es": ["los ojos fueron un instante a la puerta", "la mirada se deslizó a un lado una vez", "se desvió la vista", "los ojos se apartaron de la pregunta"]
+    },
+    "tell:silent": {
+      "en": ["no answer came", "the reply did not come at all", "silence took the place of an answer", "the question was met with nothing"],
+      "es": ["no llegó respuesta", "la contestación no llegó en absoluto", "el silencio ocupó el lugar de la respuesta", "la pregunta fue recibida con nada"]
+    },
+    "tell:hesitated": {
+      "en": ["the answer paused before coming", "a small hesitation preceded the answer", "the reply waited a beat", "the words came after a pause"],
+      "es": ["la respuesta tardó en llegar", "una pequeña vacilación precedió la contestación", "la respuesta esperó un instante", "las palabras llegaron tras una pausa"]
+    },
+    "tell:over_explained": {
+      "en": ["unprompted detail followed the answer", "more was said than the question asked", "the explanation ran past its need", "the answer kept going after it should have stopped"],
+      "es": ["llegaron detalles no pedidos tras la respuesta", "se dijo más de lo que la pregunta pedía", "la explicación se prolongó más de lo necesario", "la respuesta siguió cuando debió haberse detenido"]
+    },
+    "tell:softened": {
+      "en": ["the stance eased a fraction", "the manner went a little gentler", "the edge came off the answer", "the courtesy returned"],
+      "es": ["la postura cedió un poco", "los modos se volvieron algo más suaves", "se quitó el filo a la respuesta", "la cortesía regresó"]
+    },
+    "tell:none": {"en": "", "es": ""}
+  },
+
+  "ATMOSPHERE": {
+    "atmosphere:fog_thickens": {
+      "en": [
+        "Outside, the Bloomsbury fog thickened against the windows.",
+        "The fog grew heavier in the square beyond the glass.",
+        "Beyond the panes, the fog closed in on the street lamps.",
+        "Outside, the fog drew tighter around the lamps."
+      ],
+      "es": [
+        "Fuera, la niebla de Bloomsbury se espesaba contra las ventanas.",
+        "La niebla se hacía más densa en la plaza, al otro lado del cristal.",
+        "Más allá de los cristales, la niebla se cerraba sobre las farolas.",
+        "Fuera, la niebla se apretaba alrededor de las farolas."
+      ]
+    },
+    "atmosphere:fog_lifts": {
+      "en": [
+        "The fog had begun to lift.",
+        "The fog was thinning.",
+        "The fog had started to give way.",
+        "The fog was drawing back."
+      ],
+      "es": [
+        "La niebla empezaba a levantarse.",
+        "La niebla se iba aclarando.",
+        "La niebla había comenzado a ceder.",
+        "La niebla se retiraba."
+      ]
+    },
+    "atmosphere:lamp_flickers": {
+      "en": [
+        "A lamp flickered in its wall sconce.",
+        "The corridor lamp wavered against the wainscot.",
+        "A wall lamp guttered briefly in the panelled corridor.",
+        "The lamp at the corridor's end shook its light."
+      ],
+      "es": [
+        "Una lámpara parpadeó en su aplique.",
+        "La lámpara del pasillo vaciló contra el zócalo.",
+        "Una aplique titubeó un instante en el pasillo revestido.",
+        "La lámpara del fondo del pasillo agitó su luz."
+      ]
+    },
+    "atmosphere:lamp_steady": {
+      "en": [
+        "The lamps held steady.",
+        "The lamps burned steady in their sconces.",
+        "The lamps did not waver against the wainscot.",
+        "The lamps kept their light."
+      ],
+      "es": [
+        "Las lámparas ardían firmes.",
+        "Las lámparas se mantenían firmes en sus apliques.",
+        "Las lámparas no vacilaban contra el zócalo.",
+        "Las lámparas conservaban su luz."
+      ]
+    },
+    "atmosphere:silence_holds": {
+      "en": [
+        "Silence held between them.",
+        "The silence stayed.",
+        "Quiet held in the panelled room.",
+        "No word came after."
+      ],
+      "es": [
+        "El silencio se mantuvo entre ellos.",
+        "El silencio se sostuvo.",
+        "La quietud se quedó en la sala revestida.",
+        "No vino palabra después."
+      ]
+    },
+    "atmosphere:silence_breaks": {
+      "en": [
+        "A footstep broke the quiet of the corridor.",
+        "A bell sounded somewhere in the building.",
+        "A door closed faintly at the far end of the corridor.",
+        "The dining-room door opened and shut once."
+      ],
+      "es": [
+        "Un paso rompió la quietud del pasillo.",
+        "Una campana sonó en algún lugar del edificio.",
+        "Una puerta se cerró débilmente al fondo del pasillo.",
+        "La puerta del comedor se abrió y se cerró una vez."
+      ]
+    },
+    "atmosphere:coal_fire_settles": {
+      "en": [
+        "The coal fire settled into itself in the grate.",
+        "A coal collapsed quietly in the smoking-room fire.",
+        "The fire in the grate gave up a small sigh.",
+        "The coal fire shifted and held its low glow."
+      ],
+      "es": [
+        "El fuego de carbón se asentó sobre sí mismo en la rejilla.",
+        "Un carbón se desmoronó en silencio en el fuego del fumadero.",
+        "El fuego de la rejilla soltó un pequeño suspiro.",
+        "El fuego de carbón se movió y mantuvo su brasa baja."
+      ]
+    },
+    "atmosphere:pipe_smoke_drifts": {
+      "en": [
+        "Pipe smoke held against the carved wainscot.",
+        "A thread of pipe smoke drifted along the cornice.",
+        "Pipe smoke hung in the warm air above the fire.",
+        "The smell of pipe tobacco settled in the panelled corridor."
+      ],
+      "es": [
+        "El humo de pipa se sostenía contra el zócalo tallado.",
+        "Un hilo de humo de pipa se deslizaba por la cornisa.",
+        "El humo de pipa colgaba en el aire caliente sobre el fuego.",
+        "El olor a tabaco de pipa se asentaba en el pasillo revestido."
+      ]
+    },
+    "atmosphere:rain_on_window": {
+      "en": [
+        "Rain marked the dark glass at the long window.",
+        "Cold rain ran down the panes of the dining-room window.",
+        "A thin rain struck the windows at the far end of the room.",
+        "Rain came against the windows in soft, even waves."
+      ],
+      "es": [
+        "La lluvia marcaba el cristal oscuro del ventanal.",
+        "Lluvia fría bajaba por los cristales del ventanal del comedor.",
+        "Una lluvia fina golpeaba las ventanas al fondo de la sala.",
+        "La lluvia llegaba a las ventanas en oleadas suaves y parejas."
+      ]
+    },
+    "atmosphere:dawn_approaches": {
+      "en": [
+        "The first grey of dawn pressed at the windows of the long library.",
+        "A grey light was gathering at the windows of the smoking room.",
+        "The dawn was beginning to show at the panelled windows.",
+        "The first dawn-light reached the windows of the corridor."
+      ],
+      "es": [
+        "El primer gris del alba presionaba en las ventanas de la biblioteca larga.",
+        "Una luz gris se reunía en las ventanas del fumadero.",
+        "El alba empezaba a asomar en las ventanas revestidas.",
+        "La primera luz del alba alcanzaba las ventanas del pasillo."
+      ]
+    },
+    "atmosphere:none": {"en": "", "es": ""}
+  },
+
+  "REVELATION": {
+    "revelation:contradiction_surfaces": {
+      "en": [
+        "The two accounts no longer agreed.",
+        "The accounts had ceased to match.",
+        "The register and the key log did not line up.",
+        "What had been said before no longer fit what was said now."
+      ],
+      "es": [
+        "Los dos relatos ya no concordaban.",
+        "Los relatos habían dejado de coincidir.",
+        "El registro y el libro de llaves no cuadraban.",
+        "Lo dicho antes ya no encajaba con lo dicho ahora."
+      ]
+    },
+    "revelation:alibi_holds": {
+      "en": [
+        "The alibi held.",
+        "The alibi stood.",
+        "The account stood up.",
+        "There was no break in the alibi."
+      ],
+      "es": [
+        "La coartada se sostuvo.",
+        "La coartada aguantó.",
+        "La versión se mantuvo en pie.",
+        "No hubo grieta en la coartada."
+      ]
+    },
+    "revelation:name_uncovered": {
+      "en": [
+        "A name became legible at last.",
+        "A name surfaced at last.",
+        "At last a name could be read on the page.",
+        "A name was finally plain in the hand."
+      ],
+      "es": [
+        "Un nombre se hizo legible al fin.",
+        "Un nombre salió a la luz al fin.",
+        "Al fin pudo leerse un nombre en la página.",
+        "Un nombre quedó por fin claro en la letra."
+      ]
+    },
+    "revelation:motive_emerges": {
+      "en": [
+        "A reason rose to the surface.",
+        "A motive came into view.",
+        "A reason for the matter became plain.",
+        "The motive showed itself."
+      ],
+      "es": [
+        "Un motivo salió a la superficie.",
+        "Un motivo se hizo visible.",
+        "La razón del asunto quedó clara.",
+        "El motivo se mostró."
+      ]
+    },
+    "revelation:dead_end": {
+      "en": [
+        "The line went nowhere.",
+        "The thread broke off.",
+        "The lead came to nothing.",
+        "The trail ended there."
+      ],
+      "es": [
+        "La línea no llevaba a ninguna parte.",
+        "El hilo se cortó.",
+        "La pista no daba nada.",
+        "El rastro terminaba allí."
+      ]
+    },
+    "revelation:partial_match": {
+      "en": [
+        "Close — but not certain.",
+        "Near enough — but not sure.",
+        "It came close, without closing.",
+        "Almost — and not quite."
+      ],
+      "es": [
+        "Cercano — pero no seguro.",
+        "Cerca — pero sin certeza.",
+        "Se aproximaba, sin cerrar.",
+        "Casi — y no del todo."
+      ]
+    },
+    "revelation:confirmation": {
+      "en": [
+        "An earlier hypothesis was confirmed.",
+        "An earlier guess proved out.",
+        "What had been suspected was now proven.",
+        "An earlier reading of the page held."
+      ],
+      "es": [
+        "Se confirmó una hipótesis anterior.",
+        "Una conjetura previa quedó probada.",
+        "Lo que se sospechaba quedó demostrado.",
+        "Una lectura anterior se sostuvo."
+      ]
+    },
+    "revelation:none": {"en": "", "es": ""}
+  },
+
+  "BEAT": {
+    "beat:orientation":   {"en": "",  "es": ""},
+    "beat:investigation": {"en": "",  "es": ""},
+    "beat:closing_in": {
+      "en": [
+        "The shape of it was visible now.",
+        "The outline of the matter was plain now.",
+        "The case had begun to take its shape.",
+        "The figure of the thing stood out now."
+      ],
+      "es": [
+        "Su forma ya era visible.",
+        "El contorno del asunto era ya claro.",
+        "El caso empezaba a tomar su forma.",
+        "La figura del asunto destacaba ya."
+      ]
+    },
+    "beat:verdict_ready": {
+      "en": [
+        "Time to name them.",
+        "It was time to name them.",
+        "The naming was at hand.",
+        "The hour to name them had come."
+      ],
+      "es": [
+        "Era hora de nombrarlos.",
+        "Llegaba el momento de nombrarlos.",
+        "El nombrarlos estaba a la mano.",
+        "Había llegado la hora de nombrarlos."
+      ]
+    }
+  },
+
+  "SIGNATURE_TELL": {
+    "signature_tell:hand_match": {
+      "en": [
+        "the hand on this page was the hand on that page",
+        "the same hand had written both",
+        "the slope and the pressure read the same on both sheets",
+        "the two pages, set side by side, were the work of one hand"
+      ],
+      "es": [
+        "la mano de esta página era la misma de aquella otra",
+        "la misma mano había escrito ambas",
+        "la inclinación y la presión coincidían en las dos hojas",
+        "las dos páginas, puestas lado a lado, eran obra de una sola mano"
+      ]
+    },
+    "signature_tell:leftward_slope": {
+      "en": [
+        "the signature sloped leftward in the way a few hands did",
+        "the loops fell consistently to the left of the line",
+        "the script leaned the way it had been taught to lean",
+        "the letters all leaned the same small angle leftward"
+      ],
+      "es": [
+        "la firma se inclinaba a la izquierda como pocas manos lo hacían",
+        "los lazos caían siempre a la izquierda del renglón",
+        "la letra se inclinaba como había sido enseñada a inclinarse",
+        "las letras se inclinaban todas con el mismo pequeño ángulo a la izquierda"
+      ]
+    },
+    "signature_tell:nib_pressure_match": {
+      "en": [
+        "the nib pressure on this entry matched the nib pressure on that one",
+        "the downstrokes carried the same weight as the deed's downstrokes",
+        "the pen had pressed the paper at the same angle on both pages",
+        "the heaviness of the ink on the downstrokes matched"
+      ],
+      "es": [
+        "la presión del plumín en esta entrada coincidía con la de aquella otra",
+        "los trazos descendentes tenían el mismo peso que los del documento",
+        "la pluma había presionado el papel con el mismo ángulo en ambas páginas",
+        "la densidad de la tinta en los descendentes coincidía"
+      ]
+    },
+    "signature_tell:margin_correction": {
+      "en": [
+        "a small correction in the margin was made by the same hand",
+        "the margin note matched the main text in slope and pressure",
+        "the page had been corrected by the hand that had written it",
+        "the marginal mark was in the same hand as the body of the page"
+      ],
+      "es": [
+        "una pequeña corrección al margen había sido hecha por la misma mano",
+        "la nota al margen coincidía con el texto principal en inclinación y presión",
+        "la página había sido corregida por la mano que la había escrito",
+        "la marca al margen estaba en la misma letra que el cuerpo de la página"
+      ]
+    },
+    "signature_tell:dedication_match": {
+      "en": [
+        "the novel's dedication had been written in the hand of the letters from 1918",
+        "the dedication leaf and the 1918 correspondence were the same hand",
+        "the dedication had been set down by the hand that had written the letters of 1918",
+        "the dedication page matched the letter in slope and in pen"
+      ],
+      "es": [
+        "la dedicatoria de la novela había sido escrita con la letra de las cartas de 1918",
+        "la hoja de dedicatoria y la correspondencia de 1918 eran una misma mano",
+        "la dedicatoria había sido puesta por la mano que había escrito las cartas de 1918",
+        "la página de dedicatoria coincidía con la carta en inclinación y en pluma"
+      ]
+    },
+    "signature_tell:third_signatory_revealed": {
+      "en": [
+        "the third signatory on the deed was the hand on the register",
+        "the third name on the 1921 deed read in the same hand as the eight-five entry",
+        "the deed's third signature matched the hand that had signed the porter's book that night",
+        "the third signatory on the trust deed was Agnes Vail in her own hand"
+      ],
+      "es": [
+        "el tercer firmante del documento era la mano del registro",
+        "el tercer nombre del documento de 1921 se leía con la misma letra que la entrada de las ocho y cinco",
+        "la tercera firma del documento coincidía con la mano que había firmado el libro del portero esa noche",
+        "el tercer firmante del documento fiduciario era Agnes Vail de su propia mano"
+      ]
+    },
+    "signature_tell:typescript_correction": {
+      "en": [
+        "the typescript's marginal correction was in the same hand as the letters of 1921",
+        "the correction on the typed page matched the 1921 hand",
+        "the margin of the typescript carried the same hand as the deed",
+        "the typescript had been corrected by the hand that had signed the deed"
+      ],
+      "es": [
+        "la corrección al margen del mecanoscrito estaba en la misma letra que las cartas de 1921",
+        "la corrección en la página mecanografiada coincidía con la letra de 1921",
+        "el margen del mecanoscrito llevaba la misma mano que el documento",
+        "el mecanoscrito había sido corregido por la mano que había firmado el documento"
+      ]
+    },
+    "signature_tell:authenticity_holds": {
+      "en": [
+        "the hand on the page was, on its own, unremarkable",
+        "the signature did not, at first reading, set anything off",
+        "the page presented itself as what it claimed to be",
+        "nothing in the hand contradicted what the page said"
+      ],
+      "es": [
+        "la letra de la página era, por sí sola, anodina",
+        "la firma no provocaba, a primera vista, nada en particular",
+        "la página se presentaba como lo que decía ser",
+        "nada en la letra contradecía lo que la página afirmaba"
+      ]
+    },
+    "signature_tell:none": {"en": "", "es": ""}
+  },
+
+  "TRAVEL_CARDS": {
+    "_comment": "Player travel cards. Their action label is what appears on the card; their played effect forces the corresponding LOCATION + a TRANSITION.",
+    "travel:to_club_steps":         {"en": "Go to the club steps",          "es": "Ir a los escalones del club"},
+    "travel:to_porters_lodge":      {"en": "Go to the porter's lodge",      "es": "Ir a la portería"},
+    "travel:to_smoking_room":       {"en": "Go to the smoking room",        "es": "Ir al salón de fumadores"},
+    "travel:to_reading_room":       {"en": "Go to the reading room",        "es": "Ir a la sala de lectura"},
+    "travel:to_library":            {"en": "Go to the library",             "es": "Ir a la biblioteca"},
+    "travel:to_dining_room":        {"en": "Go to the dining room",         "es": "Ir al comedor"},
+    "travel:to_manuscript_archive": {"en": "Go to the manuscript archive",  "es": "Ir al archivo de manuscritos"},
+    "travel:to_members_snug":       {"en": "Go to the members' snug",       "es": "Ir al saloncito de socios"},
+    "travel:to_basement_records":   {"en": "Go to the basement records",    "es": "Ir al archivo del sótano"},
+    "travel:to_club_corridor":      {"en": "Go to the club corridor",       "es": "Ir al pasillo del club"}
+  }
+}

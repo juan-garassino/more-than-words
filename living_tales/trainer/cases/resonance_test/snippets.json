@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "case_id": "resonance_test",
+  "_comment": "Reusable scene-tuple templates for trajectory authoring. Each snippet fixes 5-7 of the dim slots (the constants that define the scene type) and lists the slots the author must supply per use (the variables that distinguish one instance from another). Token IDs are drawn from cases/resonance_test/dimensions.json. The listening_moment template is case-specific and uses the AUDIO_TELL extension dimension; the archive_card_moment uses the case-specific cause:reading_archive_card and revelation:authorship_inverts to render the case's pivotal late-game discovery.",
+
+  "snippets": {
+
+    "cold_object_examination": {
+      "description": "Detective alone with a single object — a printed score on a music stand, a tape reel in its battered case, an index card pulled from a Royal Academy drawer. Cold, methodical inspection. No NPC pressure, no tell, no stance. Used for opening turns and quiet evidence beats between interviews.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "first_witness_interview_cooperative": {
+      "description": "First contact with a conservatory witness — the practice-room attendant, the archive clerk, the records clerk — who has no reason to lie. They give what they saw or what their book recorded, plainly. The detective is questioning, the witness is open, the radiator ticks in the background. Use early in trajectory before any pressure has built.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "witness_reinterview_defensive": {
+      "description": "Returning to a witness already questioned, this time with the maintenance log entry or the sign-in book stamp in hand. Their stance shifts to defensive; the institutional language tightens, the qualifiers double up. Use mid-game, second or third pass on a witness, after a contradiction has surfaced elsewhere.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "TELL": "emotion:closed_posture",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "PRESENCE", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "transition_pursuing_lead": {
+      "description": "A movement turn — the detective is in motion between rooms of the converted Victorian warehouse, having just been pointed somewhere by a witness or an entry in a log. Brief, kinetic. The corridor lights are sodium, the staircase boards are loud, the air smells of rosin and turpentine. The scene proper begins next turn.",
+      "template": {
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "dead_end_witness": {
+      "description": "A witness has nothing useful — the ensemble leader who only remembers the slow movement, the neighbour who confirms exactly the alibi the suspect gave, the porter who is sure he locked the gate at ten. Cooperative but uninformed (for the killer's purposes — the alibi holds). The lead closes here. Used to puncture momentum and force the detective back to the score and the archive.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:dead_end",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "BEAT"]
+    },
+
+    "revelation_object_recognition": {
+      "description": "An object the detective has already seen — the printed score, the conservatory sign-in book, the tape reel from 1955 — suddenly resolves into meaning. Alone, looking at the same thing in a new light. Late investigation or closing-in beat. Pairs with name_uncovered or motive_emerges revelations.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "confrontation_hostile": {
+      "description": "Direct accusation. The detective has the chain in hand — the manuscript, the panel switch, the sign-in book — and is putting it to the suspect across a tutor's desk or a faculty lounge table. The stance is hostile, the tell is sharp, the beat is closing_in or verdict_ready. Use sparingly — once or twice per trajectory.",
+      "template": {
+        "CAUSE": "cause:pursued_suspicion",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION"]
+    },
+
+    "revisit_for_reframing": {
+      "description": "The detective returns to a room already visited — the recital hall, the practice wing basement, the faculty lounge — alone, to look at it again with the new context. Nothing dramatic — a quiet recasting of an earlier scene. Often produces a partial_match or contradiction_surfaces.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "atmospheric_interlude": {
+      "description": "A low-activity beat. The radiator ticks; somewhere a piano is being practised through the wall; the sodium lamp in the corridor hums. Time passes; the conservatory breathes around the detective. Minimal scene activity, no revelation, no NPC. Used to mark act breaks or simply to give the prose a place to rest. One or two per trajectory.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "ATMOSPHERE", "BEAT"]
+    },
+
+    "discovery_moment": {
+      "description": "A find — a physical object surfaces from where it had been hidden or missed. The drawer of uncollected student work yields a manuscript with a handwritten name on the first page; a tape reel labelled 1955 is pulled from the back of a shelf in the archive basement. Alone, the act of finding. Distinct from object_recognition: this is the first time the object enters the case, not the moment its meaning lands.",
+      "template": {
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:partial_match",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "listening_moment": {
+      "description": "Case-specific snippet. The detective is listening — to the tape reel turning at half speed in the archive basement, to a student ensemble taking the slow movement once more in the recital hall, to a tutor humming a passage under her breath in the harmony classroom. The AUDIO_TELL slot carries what the listening produces: a modulation recognised (audio_tell:score_recognized), a held interval (audio_tell:interval_held_too_long), a voice that breaks at a certain pitch (audio_tell:voice_breaks_on_pitch), the hiss of the 1955 reel (audio_tell:tape_hiss). The detective listens — observes by ear rather than by eye — and the moment yields a partial_match or contradiction_surfaces. Use once or twice per trajectory.",
+      "template": {
+        "CAUSE": "cause:hearing_passage_again",
+        "ACTION": "action:listens",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "STANCE", "OBJECT_FOCUS", "AUDIO_TELL", "TELL", "REVELATION"]
+    },
+
+    "archive_card_moment": {
+      "description": "Case-specific snippet. The detective is in the periodicals library or the archive basement, reading a small card filed under uncollected student work 1951–1953. The card bears a name in a small clear handwriting. The revelation is authorship_inverts — the case turns. Use once per trajectory, LATE phase, and only on convergence_min >= 0.6.",
+      "template": {
+        "CAUSE": "cause:reading_archive_card",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:authorship_inverts",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS"]
+    }
+
+  }
+}

@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "motive_only_via_1884_transaction",
+  "case_id": "orchard_at_dusk",
+  "description": "Detective uncovers the buried 1884 motive thoroughly \u2014 Caddick confirms, the receipt is found in the cider press ledger, Eliza confirms the hand \u2014 but the act itself is never traced. The motive closes; the man is not named. Dawn comes with the case unfinished.",
+  "outcome": "motive_only_confession",
+  "starting_hypothesis": "motive_first_buried",
+  "tags": [
+    "motive_only_confession",
+    "1884_transaction",
+    "motive_without_man",
+    "buried_motive_only"
+  ],
+  "opening": {
+    "tokens": [
+      "location:crale_orchard",
+      "event:oates_found_at_dusk",
+      "time:dusk_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the body in the long grass.",
+      "player_card": "object:apple_in_grass",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:apple_in_grass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.04,
+        0.05,
+        0.06
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to the inn.",
+      "player_card": "travel:to_village_inn",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.06,
+        0.08,
+        0.08
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Sowerby on Thursday.",
+      "player_card": "witness:ned_sowerby",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.12
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Webb's threat to file Monday. Public matter.",
+      "player_card": "modifier:confrontation_witnessed_thursday",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.14,
+        0.14,
+        0.18
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Cross to St Bartholomew's.",
+      "player_card": "travel:to_parish_church",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:church_bell_tolls",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.16,
+        0.16,
+        0.22
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Question the vicar.",
+      "player_card": "witness:reverend_caddick",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.18,
+        0.18,
+        0.26
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Register \u2014 1884 entry.",
+      "player_card": "object:parish_register",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.2,
+        0.2,
+        0.3
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Caddick's quiet matter \u2014 Alderton's silence in '84.",
+      "player_card": "motive:alderton_silence",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.22,
+        0.22,
+        0.34
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to the cider press.",
+      "player_card": "travel:to_cider_press",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.24,
+        0.24,
+        0.36
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Eliza's ledger.",
+      "player_card": "object:cider_press_ledger",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.26,
+        0.28,
+        0.4
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Between the September pages \u2014 the 1884 receipt.",
+      "player_card": "object:1884_receipt",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.3,
+        0.32,
+        0.46
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Same Bristol solicitor's hand as the surveyor's fee.",
+      "player_card": "modifier:fee_paid_via_solicitor",
+      "scene": {
+        "LOCATION": "location:cider_press",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.32,
+        0.36,
+        0.5
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Return to Caddick with the receipt.",
+      "player_card": "travel:to_parish_church",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:church_bell_tolls",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.34,
+        0.38,
+        0.54
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Set the receipt on the vestry table. Caddick paled.",
+      "player_card": "object:1884_receipt",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.36,
+        0.42,
+        0.58
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Caddick gives the 1884 matter.",
+      "player_card": "witness:reverend_caddick",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.38,
+        0.46,
+        0.62
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Crale's money from somewhere it ought not have come from.",
+      "player_card": "motive:1884_transaction",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.4,
+        0.5,
+        0.66
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Pre-register money \u2014 Caddick had known and not asked.",
+      "player_card": "motive:pre_register_money",
+      "scene": {
+        "LOCATION": "location:parish_church",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.42,
+        0.52,
+        0.7
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Cross to the Crale kitchen.",
+      "player_card": "travel:to_crale_farmhouse_kitchen",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.54,
+        0.62,
+        0.72
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Press Eliza on the receipt.",
+      "player_card": "suspect:eliza_crale",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.58,
+        0.66,
+        0.74
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Eliza confirms the hand but does not name the source.",
+      "player_card": "object:1884_receipt",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.62,
+        0.68,
+        0.76
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "The motive is clear \u2014 but the man is not yet accused.",
+      "player_card": "motive:1884_transaction",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.7,
+        0.78
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Pre-register money \u2014 the source confirmed.",
+      "player_card": "motive:pre_register_money",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:buried_motive_surfaces",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.8
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Nineteen years of silence. The detective sees the motive whole.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_farmhouse_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_eliza_crale",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Return to the orchard. The motive holds; the act is not certain.",
+      "player_card": "travel:to_crale_orchard",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:1884_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Dusk. The orchard. The motive without the man.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "The motive sits in the hand. The accusation does not come.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "The cider press turns below.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Dawn comes. The motive holds. The man is not named.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Stay.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Stay.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Dawn. No accusation.",
+      "player_card": "modifier:nineteen_years_silence",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.72,
+        0.82
+      ]
+    }
+  ],
+  "ending": {
+    "type": "motive_only_confession",
+    "accused": "none",
+    "final_convergence": [
+      0.66,
+      0.72,
+      0.82
+    ],
+    "_note": "Motive only \u2014 the 1884 transaction surfaces, but no accusation."
+  }
+}

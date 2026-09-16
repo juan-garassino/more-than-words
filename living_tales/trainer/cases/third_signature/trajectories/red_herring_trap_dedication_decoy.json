@@ -1,0 +1,974 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "red_herring_trap_dedication_decoy",
+  "case_id": "third_signature",
+  "description": "Dedication-decoy red-herring trap. The dedication chain leads the detective to accuse the biographer Holm \u2014 he had requested the very correspondence file in October. Verdict_ready fires on convergence, but the killer is Agnes.",
+  "outcome": "red_herring_trap",
+  "starting_hypothesis": "dedication_decoy",
+  "tags": [
+    "red_herring_trap",
+    "biographer_false_verdict",
+    "dedication_chain_only"
+  ],
+  "opening": {
+    "tokens": [
+      "location:reading_room",
+      "event:pemberton_discovered",
+      "time:body_found_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "object:port_glass",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:port_glass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "travel:to_manuscript_archive",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_signature_signal",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "modifier:dedication_unattributed",
+      "scene": {
+        "LOCATION": "location:manuscript_archive",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_archivist_kemp",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "travel:to_smoking_room",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:coal_fire_settles",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.13,
+        0.13,
+        0.13
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "witness:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:pipe_smoke_drifts",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.17,
+        0.17,
+        0.17
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.24,
+        0.24,
+        0.24
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "object:typescript_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:typescript_page",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:typescript_correction"
+      },
+      "convergence_after": [
+        0.28,
+        0.28,
+        0.28
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "modifier:dedication_unattributed",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.32,
+        0.32
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "witness:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.36,
+        0.36,
+        0.36
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.43,
+        0.43,
+        0.43
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "suspect:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "object:typescript_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:typescript_page",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:typescript_correction"
+      },
+      "convergence_after": [
+        0.58,
+        0.58,
+        0.58
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "modifier:dedication_unattributed",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "suspect:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.62,
+        0.62,
+        0.62
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.67,
+        0.67,
+        0.67
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "suspect:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.72,
+        0.72,
+        0.72
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "object:typescript_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:typescript_page",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:typescript_correction"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.76,
+        0.76,
+        0.76
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "suspect:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "modifier:dedication_unattributed",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:rigid_courtesy",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "suspect:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "object:typescript_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:typescript_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:typescript_correction"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "suspect:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "object:correspondence_box",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "modifier:dedication_unattributed",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "suspect:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "object:dedication_page",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "motive:biographer_threat",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:correspondence_box",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "ACCUSE:suspect:biographer_holm",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_biographer_holm",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dedication_page",
+        "TELL": "emotion:prolonged_silence",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "SIGNATURE_TELL": "signature_tell:dedication_match"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    }
+  ],
+  "ending": {
+    "type": "red_herring_trap",
+    "accused": "suspect:biographer_holm",
+    "final_convergence": [
+      0.77,
+      0.5,
+      0.77
+    ]
+  }
+}

@@ -1,0 +1,952 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cold_trail_summons_loop",
+  "case_id": "sulphur_line",
+  "description": "Cold-trail variant. Detective is summoned from location to location by NPCs, never finds the maintenance-log thread. Walks out the gate at dawn with no name.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "summons_loop",
+  "tags": [
+    "cold_trail",
+    "summons_loop",
+    "no_log_thread",
+    "wave2"
+  ],
+  "opening": {
+    "tokens": [
+      "location:works_gate",
+      "event:gould_discovered_at_dawn",
+      "time:monday_inspection_begins"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "witness:night_watchman",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.054,
+        0.054,
+        0.054
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:works_whistle",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.058,
+        0.058,
+        0.058
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.062,
+        0.062,
+        0.062
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "travel:to_oake_office",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.066,
+        0.066,
+        0.066
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.07,
+        0.07,
+        0.07
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "travel:to_workers_lockers",
+      "scene": {
+        "LOCATION": "location:workers_lockers",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_dispatch_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.074,
+        0.074,
+        0.074
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_bargee",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:canal_water_still",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.078,
+        0.078,
+        0.078
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:works_whistle",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.082,
+        0.082,
+        0.082
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.086,
+        0.086,
+        0.086
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "travel:to_oake_office",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.09,
+        0.09,
+        0.09
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.094,
+        0.094,
+        0.094
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "travel:to_workers_lockers",
+      "scene": {
+        "LOCATION": "location:workers_lockers",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_dispatch_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.098,
+        0.098,
+        0.098
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_bargee",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:canal_water_still",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.102,
+        0.102,
+        0.102
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:works_whistle",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.106,
+        0.106,
+        0.106
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.11,
+        0.11,
+        0.11
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "travel:to_oake_office",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.114,
+        0.114,
+        0.114
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.118,
+        0.118,
+        0.118
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "travel:to_workers_lockers",
+      "scene": {
+        "LOCATION": "location:workers_lockers",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_dispatch_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.122,
+        0.122,
+        0.122
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_bargee",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:canal_water_still",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.126,
+        0.126,
+        0.126
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:works_whistle",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.13,
+        0.13,
+        0.13
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.134,
+        0.134,
+        0.134
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "travel:to_oake_office",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.138,
+        0.138,
+        0.138
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.142,
+        0.142,
+        0.142
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "travel:to_workers_lockers",
+      "scene": {
+        "LOCATION": "location:workers_lockers",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_dispatch_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.146,
+        0.146,
+        0.146
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_bargee",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:canal_water_still",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:works_whistle",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.154,
+        0.154,
+        0.154
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.158,
+        0.158,
+        0.158
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "travel:to_oake_office",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.162,
+        0.162,
+        0.162
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.166,
+        0.166,
+        0.166
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "travel:to_workers_lockers",
+      "scene": {
+        "LOCATION": "location:workers_lockers",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_dispatch_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.17,
+        0.17,
+        0.17
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_bargee",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:canal_water_still",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.174,
+        0.174,
+        0.174
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:works_whistle",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.178,
+        0.178,
+        0.178
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.182,
+        0.182,
+        0.182
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "travel:to_oake_office",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.186,
+        0.186,
+        0.186
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.19,
+        0.19,
+        0.19
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "travel:to_workers_lockers",
+      "scene": {
+        "LOCATION": "location:workers_lockers",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_dispatch_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.194,
+        0.194,
+        0.194
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_bargee",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:canal_water_still",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.198,
+        0.198,
+        0.198
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:called_away_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:works_whistle",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.202,
+        0.202,
+        0.202
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "travel:to_works_gate",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:leaves",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.206,
+        0.206,
+        0.206
+      ]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "accused": "presence:none",
+    "final_convergence": [
+      0.206,
+      0.206,
+      0.206
+    ]
+  }
+}

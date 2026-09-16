@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "case_id": "orchard_at_dusk",
+  "_comment": "Index of hand-authored trajectories for orchard_at_dusk. 29 base trajectories + 10 counterfactual branches.",
+  "trajectories": [
+    {
+      "id": "correct_thomas_crale_via_field_gate",
+      "outcome": "correct_thomas_crale",
+      "length": 32,
+      "starting_hypothesis": "object_first_field_gate",
+      "tags": [
+        "correct_crale",
+        "mechanism_chain",
+        "moved_gate",
+        "ainsworth_window",
+        "tilling_gap",
+        "boundary_fraud_surface"
+      ]
+    },
+    {
+      "id": "correct_thomas_crale_via_buried_motive",
+      "outcome": "correct_thomas_crale",
+      "length": 50,
+      "starting_hypothesis": "motive_first_buried",
+      "tags": [
+        "correct_crale",
+        "buried_motive",
+        "1884_receipt",
+        "parish_register",
+        "alderton_silence"
+      ]
+    },
+    {
+      "id": "correct_thomas_crale_via_parish_register",
+      "outcome": "correct_thomas_crale",
+      "length": 42,
+      "starting_hypothesis": "witness_first_caddick",
+      "tags": [
+        "correct_crale",
+        "caddick_heavy",
+        "parish_register",
+        "1884_receipt",
+        "buried_motive"
+      ]
+    },
+    {
+      "id": "correct_thomas_crale_via_tilling_afternoon_gap",
+      "outcome": "correct_thomas_crale",
+      "length": 48,
+      "starting_hypothesis": "witness_first_tilling",
+      "tags": [
+        "correct_crale",
+        "tilling_gap",
+        "afternoon_alibi_collapse",
+        "mechanism_chain"
+      ]
+    },
+    {
+      "id": "correct_thomas_crale_via_webb_alibi_collapse",
+      "outcome": "correct_thomas_crale",
+      "length": 45,
+      "starting_hypothesis": "suspect_first_webb",
+      "tags": [
+        "correct_crale",
+        "webb_alibi_holds",
+        "ainsworth_cross_check",
+        "redirect_to_crale"
+      ]
+    },
+    {
+      "id": "correct_thomas_crale_via_cider_press_ledger",
+      "outcome": "correct_thomas_crale",
+      "length": 32,
+      "starting_hypothesis": "object_first_ledger",
+      "tags": [
+        "correct_crale",
+        "cider_press_ledger",
+        "1884_receipt",
+        "eliza_handwriting",
+        "buried_motive"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_amos_webb",
+      "outcome": "wrong_amos_webb",
+      "length": 42,
+      "starting_hypothesis": "suspect_first_webb_fixation",
+      "tags": [
+        "wrong_webb",
+        "surface_motive",
+        "anger_misread",
+        "ainsworth_ignored"
+      ]
+    },
+    {
+      "id": "wrong_eliza_crale",
+      "outcome": "wrong_eliza_crale",
+      "length": 41,
+      "starting_hypothesis": "suspect_first_eliza_silence",
+      "tags": [
+        "wrong_eliza",
+        "silent_wife_misread",
+        "kettle_misread",
+        "ledger_handwriting_misread"
+      ]
+    },
+    {
+      "id": "wrong_hob_tilling",
+      "outcome": "wrong_hob_tilling",
+      "length": 40,
+      "starting_hypothesis": "suspect_first_tilling_misread",
+      "tags": [
+        "wrong_tilling",
+        "young_witness_misread",
+        "honest_taken_for_evasive",
+        "cap_turning"
+      ]
+    },
+    {
+      "id": "wrong_reverend_caddick",
+      "outcome": "wrong_reverend_caddick",
+      "length": 30,
+      "starting_hypothesis": "witness_first_caddick_silence_misread",
+      "tags": [
+        "wrong_caddick",
+        "vicar_silence_misread",
+        "1884_misattribution",
+        "vestry_close"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_constable_briggs",
+      "outcome": "wrong_constable_briggs",
+      "length": 31,
+      "starting_hypothesis": "witness_first_briggs_inquest",
+      "tags": [
+        "wrong_briggs",
+        "inquest_misread",
+        "procedural_silence_read_as_complicity"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "cold_trail_circular",
+      "outcome": "cold_trail",
+      "length": 52,
+      "starting_hypothesis": "circular_loop",
+      "tags": [
+        "cold_trail",
+        "circular_visits",
+        "lyapunov_plateau",
+        "no_accusation"
+      ]
+    },
+    {
+      "id": "cold_trail_registry_dead_end",
+      "outcome": "cold_trail",
+      "length": 50,
+      "starting_hypothesis": "registry_dead_end",
+      "tags": [
+        "cold_trail",
+        "registry_office",
+        "1884_unfindable",
+        "dead_end_revelation_heavy"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "partial_correct_misread_motive_a",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first_field_gate_surface",
+      "tags": [
+        "partial_correct",
+        "right_man_wrong_motive",
+        "boundary_fraud_surface",
+        "1884_missed"
+      ]
+    },
+    {
+      "id": "partial_correct_misread_motive_b",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first_field_gate_debt_misread",
+      "tags": [
+        "partial_correct",
+        "right_man_wrong_motive",
+        "debt_to_oates_misread"
+      ]
+    },
+    {
+      "id": "partial_correct_crale_wrong_window",
+      "outcome": "partial_correct",
+      "length": 36,
+      "starting_hypothesis": "object_first_wrong_window",
+      "tags": [
+        "partial_correct",
+        "right_man_wrong_window",
+        "supper_seven_misread"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "accomplice_via_amos_webb",
+      "outcome": "accomplice_found",
+      "length": 43,
+      "starting_hypothesis": "accomplice_first_webb",
+      "tags": [
+        "accomplice_found",
+        "webb_accomplice",
+        "theatre_misread",
+        "primary_walks"
+      ]
+    },
+    {
+      "id": "accomplice_via_eliza_crale",
+      "outcome": "accomplice_found",
+      "length": 43,
+      "starting_hypothesis": "accomplice_first_eliza",
+      "tags": [
+        "accomplice_found",
+        "eliza_accomplice",
+        "ledger_misread",
+        "primary_walks"
+      ]
+    },
+    {
+      "id": "framed_amos_webb",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "framed_first_webb",
+      "tags": [
+        "framed_suspect",
+        "framed_webb",
+        "planted_surveyors_fee",
+        "primary_walks"
+      ]
+    },
+    {
+      "id": "framed_hob_tilling",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "framed_first_tilling",
+      "tags": [
+        "framed_suspect",
+        "framed_tilling",
+        "planted_oates_notebook",
+        "primary_walks"
+      ]
+    },
+    {
+      "id": "late_revelation_after_webb",
+      "outcome": "late_revelation",
+      "length": 40,
+      "starting_hypothesis": "wrong_then_right_after_webb",
+      "tags": [
+        "late_revelation",
+        "webb_premature",
+        "1884_recovery",
+        "wrong_then_right"
+      ]
+    },
+    {
+      "id": "motive_only_via_1884_transaction",
+      "outcome": "motive_only_confession",
+      "length": 42,
+      "starting_hypothesis": "motive_first_buried",
+      "tags": [
+        "motive_only_confession",
+        "1884_transaction",
+        "motive_without_man",
+        "buried_motive_only"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "red_herring_trap_modern_boundary_dispute",
+      "outcome": "red_herring_trap",
+      "length": 42,
+      "starting_hypothesis": "motive_first_modern_boundary",
+      "tags": [
+        "red_herring_trap",
+        "modern_boundary_dispute",
+        "webb_inflated_weights",
+        "buried_motive_missed",
+        "convergence_trap"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "correct_thomas_crale_via_1884_receipt_direct",
+      "outcome": "correct_thomas_crale",
+      "length": 31,
+      "starting_hypothesis": "object_first_ledger_direct",
+      "tags": [
+        "correct_crale",
+        "wave2",
+        "1884_receipt",
+        "direct_find",
+        "buried_motive",
+        "eliza_handwriting"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "correct_thomas_crale_via_briggs_summons",
+      "outcome": "correct_thomas_crale",
+      "length": 29,
+      "starting_hypothesis": "witness_first_briggs_summons",
+      "tags": [
+        "correct_crale",
+        "wave2",
+        "briggs_summons",
+        "cause_summoned",
+        "buried_motive",
+        "mechanism_chain"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "correct_thomas_crale_via_sowerby_corroboration",
+      "outcome": "correct_thomas_crale",
+      "length": 28,
+      "starting_hypothesis": "witness_first_sowerby_double",
+      "tags": [
+        "correct_crale",
+        "wave2",
+        "sowerby_corroboration",
+        "oates_notebook",
+        "mechanism_chain"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "correct_thomas_crale_via_registry_office",
+      "outcome": "correct_thomas_crale",
+      "length": 30,
+      "starting_hypothesis": "registry_office_late_close",
+      "tags": [
+        "correct_crale",
+        "registry_office",
+        "wave2",
+        "1884_receipt",
+        "buried_motive_late",
+        "bristol_close"
+      ]
+    },
+    {
+      "id": "wrong_martha_ainsworth",
+      "outcome": "wrong_martha_ainsworth",
+      "length": 36,
+      "starting_hypothesis": "witness_first_ainsworth_misread",
+      "tags": [
+        "wrong_ainsworth",
+        "wave2",
+        "witness_as_suspect",
+        "debt_misread",
+        "primary_walks"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_outside_groom",
+      "outcome": "wrong_outside_groom",
+      "length": 34,
+      "starting_hypothesis": "outside_groom_theory",
+      "tags": [
+        "wrong_tilling",
+        "wave2",
+        "outside_groom_theory",
+        "alibi_dismissed",
+        "primary_walks"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "cf_field_gate_to_motive_only",
+      "outcome": "motive_only_confession",
+      "length": 6,
+      "branch_of": "correct_thomas_crale_via_field_gate",
+      "branch_turn": 27,
+      "divergence_token": "REVELATION=revelation:buried_motive_surfaces",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_buried_motive_to_wrong_webb",
+      "outcome": "wrong_amos_webb",
+      "length": 7,
+      "branch_of": "correct_thomas_crale_via_buried_motive",
+      "branch_turn": 26,
+      "divergence_token": "OBJECT_FOCUS=object:solicitor_letter",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_parish_register_to_accomplice",
+      "outcome": "accomplice_found",
+      "length": 6,
+      "branch_of": "correct_thomas_crale_via_parish_register",
+      "branch_turn": 30,
+      "divergence_token": "PRESENCE=presence:with_hob_tilling",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_wrong_webb_to_correct",
+      "outcome": "correct_thomas_crale",
+      "length": 7,
+      "branch_of": "wrong_amos_webb",
+      "branch_turn": 30,
+      "divergence_token": "CAUSE=cause:noticed_inconsistency",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_accomplice_webb_to_cold_trail",
+      "outcome": "cold_trail",
+      "length": 8,
+      "branch_of": "accomplice_via_amos_webb",
+      "branch_turn": 20,
+      "divergence_token": "STANCE=stance:evasive",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_framed_webb_to_correct",
+      "outcome": "correct_thomas_crale",
+      "length": 7,
+      "branch_of": "framed_amos_webb",
+      "branch_turn": 25,
+      "divergence_token": "REVELATION=revelation:contradiction_surfaces",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_red_herring_to_near_miss",
+      "outcome": "near_miss",
+      "length": 8,
+      "branch_of": "red_herring_trap_modern_boundary_dispute",
+      "branch_turn": 25,
+      "divergence_token": "BEAT=beat:investigation",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_cold_trail_to_late_revelation",
+      "outcome": "late_revelation",
+      "length": 8,
+      "branch_of": "cold_trail_circular",
+      "branch_turn": 30,
+      "divergence_token": "ATMOSPHERE=atmosphere:silence_breaks",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_partial_misread_to_correct",
+      "outcome": "correct_thomas_crale",
+      "length": 6,
+      "branch_of": "partial_correct_misread_motive_a",
+      "branch_turn": 25,
+      "divergence_token": "REVELATION=revelation:buried_motive_surfaces",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_late_revelation_to_near_miss",
+      "outcome": "near_miss",
+      "length": 7,
+      "branch_of": "late_revelation_after_webb",
+      "branch_turn": 20,
+      "divergence_token": "TRANSITION=transition:crossed_to",
+      "_status": "counterfactual_branch"
+    }
+  ]
+}

@@ -1,0 +1,1040 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_helena_voss",
+  "case_id": "fog_over_brussels",
+  "description": "Player follows the secondary terminal log and Helena's documented forty-minute absence to a wrong accusation. The forty-second-interval token is never played; the corridor stays unread. The accusation closes on closing_in, not verdict_ready.",
+  "outcome": "wrong_helena_voss",
+  "starting_hypothesis": "terminal_log_first",
+  "tags": [
+    "wrong_accusation",
+    "helena_voss",
+    "red_herring_path",
+    "terminal_log"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open. Rue de la Loi. Fog against the iron gate.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.04,
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.065,
+        0.065,
+        0.065
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Helena by the chandelier.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [
+        0.095,
+        0.095,
+        0.095
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Landing.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.11,
+        0.11,
+        0.11
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Office. Secondary terminal.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.135,
+        0.135,
+        0.135
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "The terminal log: Helena's personal communications.",
+      "player_card": "object:secondary_terminal_log",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.18,
+        0.18,
+        0.18
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.205,
+        0.205,
+        0.205
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Helena pressed on the terminal.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [
+        0.24,
+        0.24,
+        0.24
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Helena evasive on the geography.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [
+        0.27,
+        0.27,
+        0.27
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Landing.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.285,
+        0.285,
+        0.285
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Descend.",
+      "player_card": "travel:to_west_wing_stairwell",
+      "scene": {
+        "LOCATION": "location:west_wing_stairwell",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.305,
+        0.305,
+        0.305
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Cipher room.",
+      "player_card": "travel:to_cipher_room",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:entered",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.325,
+        0.325,
+        0.325
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Cipher supervisor on the terminal.",
+      "player_card": "witness:cipher_supervisor",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_cipher_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [
+        0.355,
+        0.355,
+        0.355
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "The log shows Helena's private traffic.",
+      "player_card": "object:secondary_terminal_log",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.395,
+        0.395,
+        0.395
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Document room.",
+      "player_card": "travel:to_document_room",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:draft_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.42,
+        0.42
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "The draft report.",
+      "player_card": "object:draft_report",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_dispatch_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:draft_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.455,
+        0.455,
+        0.455
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross-reference. Helena had the means to access.",
+      "player_card": "object:draft_report",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.495,
+        0.495,
+        0.495
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.52,
+        0.52,
+        0.52
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Helena, evasive about the corridor.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:draft_report",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Corridor.",
+      "player_card": "travel:to_kitchen_corridor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.575,
+        0.575,
+        0.575
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Catering supervisor.",
+      "player_card": "witness:catering_supervisor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [
+        0.605,
+        0.605,
+        0.605
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Reception with the terminal in mind.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.63,
+        0.63,
+        0.63
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Helena pressed hard.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [
+        0.665,
+        0.665,
+        0.665
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "The name in the player's mouth: Helena.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "She does not name the figure she saw.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [
+        0.725,
+        0.725,
+        0.725
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Step to the door.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.73,
+        0.73,
+        0.73
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Drift back into the reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.755,
+        0.755,
+        0.755
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Drift up to the landing.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.77,
+        0.77,
+        0.77
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Step to the door.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.775,
+        0.775,
+        0.775
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Drift back into the reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Drift up to the landing.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.815,
+        0.815,
+        0.815
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Step to the door.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.82,
+        0.82
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Drift back into the reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.845,
+        0.845,
+        0.845
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Drift up to the landing.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Step to the door.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.865,
+        0.865,
+        0.865
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Drift back into the reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.89,
+        0.89,
+        0.89
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Drift up to the landing.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.905,
+        0.905,
+        0.905
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Step to the door.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.91,
+        0.91,
+        0.91
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Drift back into the reception.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.935,
+        0.935,
+        0.935
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Drift up to the landing.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.95,
+        0.95,
+        0.95
+      ]
+    },
+    {
+      "turn": 41,
+      "_note": "Step to the door.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [
+        0.95,
+        0.95,
+        0.95
+      ]
+    },
+    {
+      "turn": 42,
+      "_note": "Wrong accusation: the player names Helena.",
+      "player_card": "ACCUSE:suspect:helena_voss",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [
+        0.95,
+        0.95,
+        0.95
+      ]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "accused": "suspect:helena_voss",
+    "final_convergence": [
+      0.95,
+      0.95,
+      0.95
+    ]
+  }
+}

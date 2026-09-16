@@ -1,0 +1,59 @@
+{
+  "_comment": "Convergence-threshold discovery beats for orchard_at_dusk. Mirrors amber_cipher / hollow_season schema. The easy-difficulty case fires its early beats slightly sooner than amber_cipher — the suspect web is simpler and the mechanism tokens (the moved field gate, the long-grass path, the four-pm afternoon gap) exclude Webb quickly. The case-specific buried_motive_surfaces beat fires once the motive dim crosses 0.7 and the player is past turn 22 — it represents the late-game pivot from the surface motive (motive:boundary_fraud) to the buried one (motive:1884_transaction / alderton_silence). verdict_ready waits to turn 26 because the closing arc requires either the parish-register entry or the registry-office filing.",
+  "schema_version": 1,
+  "case_id": "orchard_at_dusk",
+
+  "convergence_dim_names": ["suspect", "evidence", "motive"],
+
+  "beats": [
+    {
+      "id": "first_thread",
+      "trigger": { "any_dim_gte": 0.4 },
+      "min_turn": 5,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:contradiction_surfaces" }
+    },
+    {
+      "id": "false_plateau_webb",
+      "trigger": { "dim": "suspect", "gte": 0.5 },
+      "min_turn": 8,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:partial_match" }
+    },
+    {
+      "id": "name_surfaces",
+      "trigger": { "dim": "suspect", "gte": 0.6 },
+      "min_turn": 12,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:name_uncovered" }
+    },
+    {
+      "id": "motive_emerges",
+      "trigger": { "dim": "motive", "gte": 0.6 },
+      "min_turn": 14,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:motive_emerges" }
+    },
+    {
+      "id": "buried_motive_surfaces",
+      "trigger": { "dim": "motive", "gte": 0.7 },
+      "min_turn": 22,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:buried_motive_surfaces" }
+    },
+    {
+      "id": "closing_in",
+      "trigger": { "min_dim_gte": 0.65 },
+      "min_turn": 20,
+      "fire_once": true,
+      "inject": { "BEAT": "beat:closing_in" }
+    },
+    {
+      "id": "verdict_ready",
+      "trigger": { "min_dim_gte": 0.8 },
+      "min_turn": 26,
+      "fire_once": true,
+      "inject": { "BEAT": "beat:verdict_ready" }
+    }
+  ]
+}

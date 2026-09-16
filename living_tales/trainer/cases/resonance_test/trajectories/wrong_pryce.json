@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_pryce",
+  "case_id": "resonance_test",
+  "description": "Player misreads Pryce's enthusiasm and over-correction as evasion. Her sign-in time + the slow-movement fixation accumulate on a wrong angle.",
+  "outcome": "wrong_ensemble_leader_pryce",
+  "starting_hypothesis": "witness_first",
+  "tags": [
+    "pryce_wrongly_accused",
+    "enthusiasm_misread",
+    "reputation_preserved_motive"
+  ],
+  "opening": {
+    "tokens": [
+      "location:practice_wing_basement",
+      "event:stairwell_fall",
+      "time:thursday_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_silent",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.04,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.07,
+        0.08,
+        0.07
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Question Pryce. Eager, talkative.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.1,
+        0.11,
+        0.1
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Pryce fixates on the slow movement.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.12,
+        0.14,
+        0.12
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Examine printed score.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.14,
+        0.16,
+        0.14
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Cross to practice room A.",
+      "player_card": "travel:to_practice_room_a",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.16,
+        0.18,
+        0.16
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Examine the sign-in book.",
+      "player_card": "object:practice_room_sign_in_book",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:practice_room_sign_in_book",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.19,
+        0.21,
+        0.19
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Misread \u2014 Pryce's name first in line on Thursday.",
+      "player_card": "witness:practice_room_attendant",
+      "scene": {
+        "LOCATION": "location:practice_room_a",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_practice_room_attendant",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:practice_room_sign_in_book",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.22,
+        0.24,
+        0.22
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.24,
+        0.26,
+        0.24
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Question Pryce again \u2014 where she was Thursday afternoon.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.27,
+        0.29,
+        0.27
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Modifier \u2014 argument at lunch (misread as Pryce's).",
+      "player_card": "modifier:public_argument_at_lunch",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.3,
+        0.32,
+        0.3
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Cross to ashby office.",
+      "player_card": "travel:to_ashby_office",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_silent",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.34,
+        0.32
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Examine examiners marksheet \u2014 Pryce's mark.",
+      "player_card": "object:examiners_marksheet",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.35,
+        0.37,
+        0.35
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Examine the tape reel.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:tape_hiss_room",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:tape_hiss"
+      },
+      "convergence_after": [
+        0.37,
+        0.39,
+        0.37
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Cross to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.39,
+        0.41,
+        0.39
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Question Pryce. She over-corrects \u2014 she had heard the slow movement before.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.44,
+        0.42
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Misread \u2014 Pryce's youth becomes evasion.",
+      "player_card": "modifier:vienna_premiere",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.45,
+        0.47,
+        0.45
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Examine the sign-in book again.",
+      "player_card": "object:practice_room_sign_in_book",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:practice_room_sign_in_book",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.47,
+        0.49,
+        0.47
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Cross to courtyard.",
+      "player_card": "travel:to_courtyard",
+      "scene": {
+        "LOCATION": "location:courtyard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_neighbour_thirsk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.51,
+        0.5
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Question Thirsk \u2014 misuse: she saw a young woman in the courtyard.",
+      "player_card": "witness:neighbour_thirsk",
+      "scene": {
+        "LOCATION": "location:courtyard",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_neighbour_thirsk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.52,
+        0.54,
+        0.52
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Return to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.55,
+        0.56,
+        0.55
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Confront with sign-in.",
+      "player_card": "object:practice_room_sign_in_book",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:practice_room_sign_in_book",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.57,
+        0.58,
+        0.57
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Modifier \u2014 argument at lunch.",
+      "player_card": "modifier:public_argument_at_lunch",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Motive \u2014 reputation preserved (wrong).",
+      "player_card": "motive:reputation_preserved",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.63,
+        0.63,
+        0.63
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Confront Pryce.",
+      "player_card": "suspect:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.65,
+        0.65,
+        0.65
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to practice wing basement.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.67,
+        0.67,
+        0.67
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Misread handrail.",
+      "player_card": "modifier:handrail_unsecured",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.69,
+        0.69,
+        0.69
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Return to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.71,
+        0.71,
+        0.71
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Confront with marksheet.",
+      "player_card": "object:examiners_marksheet",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.76,
+        0.76
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Confront with printed score.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.76,
+        0.76
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Modifier \u2014 reputation preserved.",
+      "player_card": "motive:reputation_preserved",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.78,
+        0.78
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Confront with sign-in.",
+      "player_card": "object:practice_room_sign_in_book",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:practice_room_sign_in_book",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Question \u2014 Pryce hesitates.",
+      "player_card": "suspect:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.81,
+        0.81,
+        0.81
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Examine tape reel.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.82,
+        0.82
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Modifier \u2014 argument at lunch.",
+      "player_card": "modifier:public_argument_at_lunch",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.83,
+        0.83,
+        0.83
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Cross to faculty lounge.",
+      "player_card": "travel:to_faculty_lounge",
+      "scene": {
+        "LOCATION": "location:faculty_lounge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eleanor_fairchild",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rehearsed_diction",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.84,
+        0.84,
+        0.84
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Question Fairchild.",
+      "player_card": "witness:eleanor_fairchild",
+      "scene": {
+        "LOCATION": "location:faculty_lounge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eleanor_fairchild",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "emotion:rehearsed_diction",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Return to recital hall.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Confront once more.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.87,
+        0.87,
+        0.87
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Dawn approaches. Pryce accused.",
+      "player_card": "suspect:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.87,
+        0.87,
+        0.87
+      ]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:ensemble_leader_pryce",
+    "true_culprit": "suspect:marta_solis",
+    "final_convergence": [
+      0.87,
+      0.87,
+      0.87
+    ],
+    "_note": "Pryce's youth misread; Marta walks."
+  }
+}

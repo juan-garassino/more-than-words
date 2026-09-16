@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "framed_amos_webb",
+  "case_id": "orchard_at_dusk",
+  "description": "Crale plants Oates's surveyor-fee envelope in Webb's yard. Detective traces it, fixates on Webb, and convicts him while Crale walks at dawn.",
+  "outcome": "framed_suspect",
+  "starting_hypothesis": "framed_first_webb",
+  "tags": [
+    "framed_suspect",
+    "framed_webb",
+    "planted_surveyors_fee",
+    "primary_walks"
+  ],
+  "opening": {
+    "tokens": [
+      "location:crale_orchard",
+      "event:oates_found_at_dusk",
+      "time:dusk_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the body in the long grass.",
+      "player_card": "object:apple_in_grass",
+      "scene": {
+        "LOCATION": "location:crale_orchard",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:apple_in_grass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.04,
+        0.05,
+        0.06
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to the gate.",
+      "player_card": "travel:to_field_gate",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.08,
+        0.1,
+        0.08
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Paint scrape.",
+      "player_card": "object:field_gate_hinge",
+      "scene": {
+        "LOCATION": "location:field_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.12,
+        0.14,
+        0.1
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Walk the lane.",
+      "player_card": "travel:to_orchard_lane",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:surveyors_fee",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.16,
+        0.18,
+        0.12
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Find the planted surveyors_fee \u2014 placed where the body lay.",
+      "player_card": "object:surveyors_fee",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:surveyors_fee",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_in_the_long_grass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.22,
+        0.22,
+        0.16
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Cross to location:webb_farm.",
+      "player_card": "travel:to_webb_farm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.26,
+        0.26,
+        0.2
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Question amos_webb.",
+      "player_card": "suspect:amos_webb",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation"
+      },
+      "convergence_after": [
+        0.32,
+        0.3,
+        0.22
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Set the surveyors_fee before them. amos_webb cannot account for it.",
+      "player_card": "object:surveyors_fee",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:surveyors_fee",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.38,
+        0.34,
+        0.26
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to the inn \u2014 confirm framed_id's whereabouts.",
+      "player_card": "travel:to_village_inn",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.4,
+        0.36,
+        0.28
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Sowerby on amos_webb's Thursday hours.",
+      "player_card": "witness:ned_sowerby",
+      "scene": {
+        "LOCATION": "location:village_inn",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ned_sowerby",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.44,
+        0.4,
+        0.3
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Return to amos_webb.",
+      "player_card": "travel:to_webb_farm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.46,
+        0.44,
+        0.32
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Press amos_webb on the planted object.",
+      "player_card": "suspect:amos_webb",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.5,
+        0.48,
+        0.36
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Set the hinge alongside the planted evidence.",
+      "player_card": "object:field_gate_hinge",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.54,
+        0.52,
+        0.4
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "The four-pm hour, put to amos_webb.",
+      "player_card": "modifier:gate_moved_friday_four_pm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.58,
+        0.56,
+        0.44
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Press amos_webb hostile.",
+      "player_card": "suspect:amos_webb",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation"
+      },
+      "convergence_after": [
+        0.62,
+        0.6,
+        0.54
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "The motive \u2014 detective fixes it on amos_webb.",
+      "player_card": "motive:boundary_fraud",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.66,
+        0.64,
+        0.58
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Walk the lane again. The planted object's position is significant.",
+      "player_card": "travel:to_orchard_lane",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:surveyors_fee",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.68,
+        0.66,
+        0.54
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "The surveyors_fee \u2014 proof, as detective reads it.",
+      "player_card": "object:surveyors_fee",
+      "scene": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:surveyors_fee",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.7,
+        0.68,
+        0.58
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Return to amos_webb hostile.",
+      "player_card": "travel:to_webb_farm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.74,
+        0.72,
+        0.62
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Confront amos_webb with the planted evidence.",
+      "player_card": "suspect:amos_webb",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.78,
+        0.76,
+        0.66
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Set the planted object once more.",
+      "player_card": "object:surveyors_fee",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:surveyors_fee",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.82,
+        0.8,
+        0.7
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "amos_webb denies. Detective reads denial as guilt.",
+      "player_card": "suspect:amos_webb",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:flat_denial",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.84,
+        0.82,
+        0.74
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Lay the hinge alongside.",
+      "player_card": "object:field_gate_hinge",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.85,
+        0.84,
+        0.76
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "The four-pm hour. Detective claims this proves it.",
+      "player_card": "modifier:gate_moved_friday_four_pm",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.86,
+        0.85,
+        0.78
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "The motive \u2014 fixed.",
+      "player_card": "motive:boundary_fraud",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.87,
+        0.86,
+        0.8
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Press amos_webb one last time.",
+      "player_card": "suspect:amos_webb",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.87,
+        0.86,
+        0.8
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Final placement.",
+      "player_card": "object:surveyors_fee",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:surveyors_fee",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in"
+      },
+      "convergence_after": [
+        0.88,
+        0.87,
+        0.82
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Name them.",
+      "player_card": "suspect:amos_webb",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.84
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Name the why.",
+      "player_card": "motive:boundary_fraud",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:field_gate_hinge",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Framed accusation \u2014 amos_webb named while Crale walks at dawn.",
+      "player_card": "ACCUSE:suspect:amos_webb",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_amos_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:surveyors_fee",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Dawn.",
+      "player_card": "modifier:long_grass_uncut",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Dawn.",
+      "player_card": "modifier:long_grass_uncut",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Dawn.",
+      "player_card": "modifier:long_grass_uncut",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Dawn.",
+      "player_card": "modifier:long_grass_uncut",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Dawn.",
+      "player_card": "modifier:long_grass_uncut",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Dawn.",
+      "player_card": "modifier:long_grass_uncut",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Dawn.",
+      "player_card": "modifier:long_grass_uncut",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Dawn.",
+      "player_card": "modifier:long_grass_uncut",
+      "scene": {
+        "LOCATION": "location:webb_farm",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready"
+      },
+      "convergence_after": [
+        0.89,
+        0.88,
+        0.85
+      ]
+    }
+  ],
+  "ending": {
+    "type": "framed_suspect",
+    "accused": "suspect:amos_webb",
+    "final_convergence": [
+      0.89,
+      0.88,
+      0.85
+    ],
+    "_note": "Framed \u2014 Webb named, Crale walks."
+  }
+}

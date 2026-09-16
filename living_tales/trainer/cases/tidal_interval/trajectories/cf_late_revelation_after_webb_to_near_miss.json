@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_late_revelation_after_webb_to_near_miss",
+  "case_id": "tidal_interval",
+  "description": "Counterfactual: in late_revelation_after_webb, the detective stays in the common room instead of pursuing the marker; convergence rises just enough for a thin verdict. Barely-correct.",
+  "outcome": "near_miss",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "late_revelation_after_webb",
+  "branch_turn": 28,
+  "divergence_token": "TRANSITION=transition:stayed",
+  "tags": [
+    "counterfactual",
+    "transition_divergence",
+    "near_miss",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from late_revelation_after_webb at turn 28 on TRANSITION=transition:stayed.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.68,
+      0.68,
+      0.68
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:common_room",
+      "event:sarah_does_not_return",
+      "event:final_report_approved"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 38,
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.72,
+        0.72,
+        0.72
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "modifier:schedule_in_piers_hand",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.76,
+        0.76
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "motive:fishing_economy",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "object:path_marker",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.84,
+        0.84,
+        0.84
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "ACCUSE:suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    }
+  ],
+  "ending": {
+    "type": "near_miss",
+    "accused": "suspect:piers_dunne",
+    "final_convergence": [
+      0.88,
+      0.88,
+      0.88
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=late_revelation_after_webb"
+  }
+}

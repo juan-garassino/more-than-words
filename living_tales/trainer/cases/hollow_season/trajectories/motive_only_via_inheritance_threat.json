@@ -1,0 +1,871 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "motive_only_via_inheritance_threat",
+  "case_id": "hollow_season",
+  "description": "Standard 42t motive-only confession. The detective follows the inheritance line: the new will Thursday, Croft's note Friday, Edmund's knowledge. Motive dim climbs strongly; evidence dim plateaus at ~0.6 because the chemist's receipt is never recovered. Edmund confesses to the threat but the detective cannot place him at the decanter. No accusation.",
+  "outcome": "motive_only_confession",
+  "starting_hypothesis": "motive_only_inheritance",
+  "tags": [
+    "motive_only_confession",
+    "high_motive_low_physical",
+    "no_accusation",
+    "inheritance_threat",
+    "hand_paced"
+  ],
+  "opening": {
+    "tokens": [
+      "location:library",
+      "event:sir_geoffrey_discovered",
+      "time:sunday_before_breakfast"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the body. The decanter, the chair.",
+      "player_card": "object:brandy_decanter",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.03, 0.06, 0.04]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to estate_office. Aldhurst already at the desk with the case open.",
+      "player_card": "travel:to_estate_office",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.04, 0.12, 0.10]
+    },
+    {
+      "turn": 3,
+      "_note": "Aldhurst at the office. The new will Thursday, unwitnessed by a second party. Third NPC arc starts at T8 — but NPC count begins here.",
+      "player_card": "witness:solicitor_aldhurst",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_solicitor_aldhurst",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:over_polished_manner",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.10, 0.16, 0.20]
+    },
+    {
+      "turn": 4,
+      "_note": "He produces the will — Thursday. Names rearranged. Edmund retains, the timber rights reduced.",
+      "player_card": "object:new_will_draft",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_solicitor_aldhurst",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "emotion:over_polished_manner",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.14, 0.22, 0.30]
+    },
+    {
+      "turn": 5,
+      "_note": "Cross to gatehouse_lodge. Finch at the desk. Second NPC.",
+      "player_card": "witness:hector_finch",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.18, 0.23, 0.32]
+    },
+    {
+      "turn": 6,
+      "_note": "Finch gives the audit Monday — his motive. Useful, but not the line.",
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.20, 0.24, 0.34]
+    },
+    {
+      "turn": 7,
+      "_note": "Cross to village_rooms. Edmund's lamp. The geography opens.",
+      "player_card": "travel:to_village_rooms",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.22, 0.25, 0.36]
+    },
+    {
+      "turn": 8,
+      "_note": "Wastepaper basket; the ash-mark; the burned_note's outline. Friday note found.",
+      "player_card": "object:wastepaper_basket",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [0.24, 0.30, 0.40]
+    },
+    {
+      "turn": 9,
+      "_note": "Croft summoned. He arrives at the village rooms, hat in his hand. Third NPC.",
+      "player_card": "witness:croft",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_croft",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.26, 0.32, 0.44]
+    },
+    {
+      "turn": 10,
+      "_note": "He gives the postbox hour. The note for Edmund posted at six forty-five Friday.",
+      "player_card": "object:postbox_record",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_croft",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:postbox_record",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.28, 0.34, 0.48]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to library. The decanter, the window. The mechanism cluster begins to take shape.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:french_window_latch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rooks_settle",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:door_left_unlatched"
+      },
+      "convergence_after": [0.30, 0.38, 0.50]
+    },
+    {
+      "turn": 12,
+      "_note": "Cross to walled_garden. The under-gardener at the south wall. Fourth NPC.",
+      "player_card": "witness:under_gardener",
+      "scene": {
+        "LOCATION": "location:walled_garden",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_under_gardener",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:long_grass_stills",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.32, 0.39, 0.52]
+    },
+    {
+      "turn": 13,
+      "_note": "He gives the open windows at six. Edmund's habit walked the garden Saturday at dusk.",
+      "player_card": "witness:under_gardener",
+      "scene": {
+        "LOCATION": "location:walled_garden",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_under_gardener",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:long_grass_stills",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.34, 0.40, 0.55]
+    },
+    {
+      "turn": 14,
+      "_note": "Cross to drawing_room. The portrait. Mrs Lyle on the chimneypiece. Fifth NPC.",
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.36, 0.41, 0.60]
+    },
+    {
+      "turn": 15,
+      "_note": "Mrs Lyle names the eleven minutes Saturday — Edmund stood there.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.38, 0.42, 0.66]
+    },
+    {
+      "turn": 16,
+      "_note": "Cross to library. The doorframe — the brass cold; Edmund's habit named.",
+      "player_card": "object:library_doorframe",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:library_doorframe",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.40, 0.44, 0.70]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross to dining_room. The Saturday dinner — Edmund seated where his mother used to sit.",
+      "player_card": "travel:to_dining_room",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:bell_for_dinner",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.40, 0.45, 0.72]
+    },
+    {
+      "turn": 18,
+      "_note": "Hadley at the dining room door, the duty log open. Sixth NPC.",
+      "player_card": "witness:butler_hadley",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_butler_hadley",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.42, 0.48, 0.74]
+    },
+    {
+      "turn": 19,
+      "_note": "Cross to estate_office. Lay the will draft beside the postbox record. Edmund knew.",
+      "player_card": "travel:to_estate_office",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.44, 0.50, 0.76]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to summer_house. The chair Edmund kept in his mother's hand. The geography deepens.",
+      "player_card": "travel:to_summer_house",
+      "scene": {
+        "LOCATION": "location:summer_house",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:long_grass_stills",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.46, 0.50, 0.78]
+    },
+    {
+      "turn": 21,
+      "_note": "Edmund summoned to summer_house. He arrives cooperative, the small abstinence at the threshold.",
+      "player_card": "witness:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:summer_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.50, 0.52, 0.80]
+    },
+    {
+      "turn": 22,
+      "_note": "Press him on the Thursday. He gives the day, his last visit before. He is silent on the will.",
+      "player_card": "object:new_will_draft",
+      "scene": {
+        "LOCATION": "location:summer_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.52, 0.54, 0.82]
+    },
+    {
+      "turn": 23,
+      "_note": "He produces a small admission — that he had heard, that he was not sure when. The story is mid-formed.",
+      "player_card": "witness:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:summer_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.54, 0.56, 0.84]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to drawing_room. The portrait. Edmund follows. He stands a moment too long.",
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.55, 0.57, 0.86]
+    },
+    {
+      "turn": 25,
+      "_note": "Name the eleven minutes aloud. He does not interrupt.",
+      "player_card": "object:mothers_portrait",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.56, 0.58, 0.87]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to library. The doorframe. His hand at his side. Habit broken.",
+      "player_card": "object:library_doorframe",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:library_doorframe",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.58, 0.59, 0.88]
+    },
+    {
+      "turn": 27,
+      "_note": "Name the motive — the house as the mother. He listens; nothing in his face says no.",
+      "player_card": "motive:house_as_mother",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:library_doorframe",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.59, 0.60, 0.92]
+    },
+    {
+      "turn": 28,
+      "_note": "Name the will draft on the small table. He gives a smaller voice — he had loved the room.",
+      "player_card": "object:new_will_draft",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.60, 0.60, 0.93]
+    },
+    {
+      "turn": 29,
+      "_note": "He gives the Thursday — he had been told the change. He looks at his uncle's chair.",
+      "player_card": "witness:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.61, 0.60, 0.93]
+    },
+    {
+      "turn": 30,
+      "_note": "Press on the chemist. He gives a flat denial — he has not been into a chemist's shop.",
+      "player_card": "object:chemists_receipt",
+      "_alt_note": "Player has no receipt. Card played as accusation token; Edmund denies.",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.61, 0.62, 0.93]
+    },
+    {
+      "turn": 31,
+      "_note": "Cross to village_rooms. The basket again. The receipt does not surface.",
+      "player_card": "travel:to_village_rooms",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [0.62, 0.62, 0.93]
+    },
+    {
+      "turn": 32,
+      "_note": "Mrs Lyle at the village rooms; she has not had the green sack today. The bridge remains uncrossed.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.62, 0.63, 0.93]
+    },
+    {
+      "turn": 33,
+      "_note": "Return to library. Edmund still there. The will draft beside the decanter.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.63, 0.64, 0.93]
+    },
+    {
+      "turn": 34,
+      "_note": "Name the threat. He gives the will aloud — he had known, he had been afraid.",
+      "player_card": "motive:inheritance_entailed",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.64, 0.64, 0.94]
+    },
+    {
+      "turn": 35,
+      "_note": "He gives the inheritance whole — the house, the gardens, the mother's room. The motive surfaced. The chemist still missing.",
+      "player_card": "witness:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.65, 0.65, 0.94]
+    },
+    {
+      "turn": 36,
+      "_note": "Cross to drawing_room. The portrait. He looks at it once; he does not look again.",
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.66, 0.65, 0.94]
+    },
+    {
+      "turn": 37,
+      "_note": "Name the burned note. He gives the Friday — he had received, he had read, he had burned.",
+      "player_card": "object:burned_note",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [0.66, 0.66, 0.94]
+    },
+    {
+      "turn": 38,
+      "_note": "Cross to library. The decanter alone. The chemist's hand still not in the picture.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.66, 0.66, 0.94]
+    },
+    {
+      "turn": 39,
+      "_note": "Hadley at the door. He gives the side-passage Saturday. Edmund's chair.",
+      "player_card": "witness:butler_hadley",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_butler_hadley",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.66, 0.67, 0.94]
+    },
+    {
+      "turn": 40,
+      "_note": "Edmund gives the whole confession in his small voice — the inheritance, the house, the mother. The chemist is not named. Dawn approaches.",
+      "player_card": "motive:house_as_mother",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.66, 0.67, 0.95]
+    },
+    {
+      "turn": 41,
+      "_note": "The chemist's receipt called for one last time — Mrs Lyle's sack on her arm — but the paper is not there.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.66, 0.67, 0.95]
+    },
+    {
+      "turn": 42,
+      "_note": "No accusation. The detective leaves the library with the motive named and the mechanism unnamed. Edmund stays.",
+      "player_card": "motive:inheritance_entailed",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:leaves",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [0.66, 0.67, 0.95]
+    }
+  ],
+  "ending": {
+    "type": "motive_only",
+    "accused": null,
+    "final_convergence": [0.66, 0.67, 0.95],
+    "_note": "Motive dim very high (0.95) — inheritance threat + house_as_mother surfaced and Edmund confessed the threat. Evidence dim plateaus around 0.67 — the chemist's receipt never recovered. No accusation."
+  }
+}

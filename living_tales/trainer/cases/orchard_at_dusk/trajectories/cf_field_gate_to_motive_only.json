@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_field_gate_to_motive_only",
+  "case_id": "orchard_at_dusk",
+  "description": "Counterfactual branch of correct_thomas_crale_via_field_gate. At turn 27 the detective is alone at the gate with name_uncovered queued — instead the REVELATION pivots to buried_motive_surfaces; the detective fixates on the 1884 thread and never confronts Crale at the gate. Ends with motive_only_confession.",
+  "outcome": "motive_only_confession",
+  "branch_of": "correct_thomas_crale_via_field_gate",
+  "branch_turn": 27,
+  "divergence_token": "REVELATION=revelation:buried_motive_surfaces",
+  "starting_hypothesis": "object_first_field_gate_fast",
+  "tags": ["counterfactual_branch","revelation_divergence","motive_only","buried_motive_thread"],
+  "opening": {"tokens": ["location:crale_orchard","event:oates_found_at_dusk","time:dusk_hour"]},
+  "pre_branch_state": {"convergence_dims": [0.76, 0.72, 0.72]},
+  "turns": [
+    {"turn":27,"_note":"DIVERGENCE. Alone at the gate, the detective recalls Caddick's earlier hint at '84 — the buried thread surfaces in his head, not Crale's name.","player_card":"modifier:nineteen_years_silence","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:crossed_to","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:recalls","OBJECT_FOCUS":"object:field_gate_hinge","TELL":"tell:none","ATMOSPHERE":"atmosphere:dusk_light_through_branches","REVELATION":"revelation:buried_motive_surfaces","BEAT":"beat:closing_in"},"convergence_after":[0.78,0.74,0.76]},
+    {"turn":28,"_note":"Cross to the parish church. Caddick — the 1884 register.","player_card":"travel:to_parish_church","scene":{"LOCATION":"location:parish_church","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_reverend_caddick","STANCE":"stance:cooperative","ACTION":"action:arrives","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:church_bell_tolls","REVELATION":"revelation:none","BEAT":"beat:closing_in"},"convergence_after":[0.78,0.74,0.78]},
+    {"turn":29,"_note":"Open the register. The Alderton entry; the buried thread now fully named.","player_card":"object:parish_register","scene":{"LOCATION":"location:parish_church","TRANSITION":"transition:stayed","CAUSE":"cause:reading_survey_record","PRESENCE":"presence:with_reverend_caddick","STANCE":"stance:cooperative","ACTION":"action:examines","OBJECT_FOCUS":"object:parish_register","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:confirmation","BEAT":"beat:closing_in"},"convergence_after":[0.78,0.76,0.82]},
+    {"turn":30,"_note":"Name the why — pre-register money. The motive is full. The man, however, is not in front of the detective.","player_card":"motive:pre_register_money","scene":{"LOCATION":"location:parish_church","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_reverend_caddick","STANCE":"stance:cooperative","ACTION":"action:recalls","OBJECT_FOCUS":"object:parish_register","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:motive_emerges","BEAT":"beat:verdict_ready"},"convergence_after":[0.79,0.78,0.86]},
+    {"turn":31,"_note":"Cross back to the field gate at dawn. Crale is gone — locked it himself, walked into the orchard.","player_card":"travel:to_field_gate","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:returned","CAUSE":"cause:revisiting_scene","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:notices","OBJECT_FOCUS":"object:field_gate_hinge","TELL":"tell:none","ATMOSPHERE":"atmosphere:dawn_approaches","REVELATION":"revelation:partial_match","BEAT":"beat:verdict_ready"},"convergence_after":[0.79,0.78,0.86]},
+    {"turn":32,"_note":"Motive only. No accusation lands.","player_card":"motive:1884_transaction","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:stayed","CAUSE":"cause:none","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:notices","OBJECT_FOCUS":"object:field_gate_hinge","TELL":"tell:none","ATMOSPHERE":"atmosphere:dawn_approaches","REVELATION":"revelation:motive_emerges","BEAT":"beat:verdict_ready"},"convergence_after":[0.79,0.78,0.86]}
+  ],
+  "ending": {
+    "type": "motive_only_confession",
+    "accused": null,
+    "final_convergence": [0.79, 0.78, 0.86],
+    "_note": "REVELATION pivot: name was at the door but buried_motive surfaced instead. Crale walks. 6-turn CF."
+  }
+}

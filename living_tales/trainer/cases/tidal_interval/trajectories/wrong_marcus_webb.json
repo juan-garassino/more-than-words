@@ -1,0 +1,870 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_marcus_webb",
+  "case_id": "tidal_interval",
+  "description": "Standard 42t designed red-herring path. Detective falls for Webb — documented grievance, present on island, no specific alibi. Suspect-dim climbs to 0.85 on Webb's plausible chain. Motive-dim plateaus around 0.55 because the methodology_grievance doesn't require death. Player accuses Webb wrongly at turn 41.",
+  "outcome": "wrong_marcus_webb",
+  "starting_hypothesis": "wrong_suspect_first",
+  "tags": [
+    "hand_paced",
+    "wrong_webb",
+    "red_herring_path",
+    "methodology_grievance_overweight",
+    "motive_plateau"
+  ],
+  "opening": {
+    "tokens": [
+      "location:common_room",
+      "event:sarah_does_not_return",
+      "event:final_report_approved"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the common room. The Friday confrontation between Webb and Sarah on everyone's mind. The journal letter pinned to the noticeboard.",
+      "player_card": "object:journal_letter",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.08, 0.06, 0.04]
+    },
+    {
+      "turn": 2,
+      "_note": "Eira at the urn. She names the Friday confrontation — Webb loud, Sarah pale.",
+      "player_card": "witness:cook",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eira_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:softened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.14, 0.09, 0.10]
+    },
+    {
+      "turn": 3,
+      "_note": "Cross to the dorms. Webb's door at the end of the corridor.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.18, 0.11, 0.12]
+    },
+    {
+      "turn": 4,
+      "_note": "Question Webb on Friday. He produces the journal letter before the question lands. Statistically literate, impatient.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.24, 0.16, 0.18]
+    },
+    {
+      "turn": 5,
+      "_note": "Question Webb on Sunday afternoon. He gives the dorm, the binder, no one else.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:glanced_aside",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.30, 0.18, 0.24]
+    },
+    {
+      "turn": 6,
+      "_note": "Examine the methodology binder on his desk. Pages marked at Sarah's variable selection. Margin notes sharp.",
+      "player_card": "object:journal_letter",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.35, 0.24, 0.30]
+    },
+    {
+      "turn": 7,
+      "_note": "Cross to research lab. The final report on Sarah's desk. Approved Monday — the day after.",
+      "player_card": "travel:to_research_lab",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.38, 0.27, 0.36]
+    },
+    {
+      "turn": 8,
+      "_note": "Tovi at her desk. She names the Friday reconciliation — Webb's complaint, Sarah's reply.",
+      "player_card": "suspect:tovi_ansgar",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_tovi_ansgar",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:softened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.43, 0.30, 0.40]
+    },
+    {
+      "turn": 9,
+      "_note": "Return to common room. Read the journal letter against the final report. Webb's three paragraphs do not match Sarah's conclusions.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.45, 0.34, 0.42]
+    },
+    {
+      "turn": 10,
+      "_note": "Question Eira on Webb's Sunday afternoon. She did not see him after lunch. He skipped tea.",
+      "player_card": "witness:cook",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eira_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.50, 0.36, 0.44]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to the weather tower. The tide chart. Detective notes Webb knew the schedule from his Thursday review — would have heard about the Sunday window.",
+      "player_card": "travel:to_weather_tower",
+      "scene": {
+        "LOCATION": "location:weather_tower",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:storm_intensifies"
+      },
+      "convergence_after": [0.52, 0.40, 0.46]
+    },
+    {
+      "turn": 12,
+      "_note": "Examine the weather log. Sunday spike. Webb had attended the Thursday weather briefing — Kestrel said so.",
+      "player_card": "object:weather_log",
+      "scene": {
+        "LOCATION": "location:weather_tower",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:weather_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.54, 0.46, 0.47]
+    },
+    {
+      "turn": 13,
+      "_note": "Return to dorms. Webb again — third pass. Hands stay on the binder.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.56, 0.47, 0.48]
+    },
+    {
+      "turn": 14,
+      "_note": "Question Webb on the eastern path. He says he has not walked it since Friday. Glances at the window.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:glanced_aside",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.62, 0.48, 0.49]
+    },
+    {
+      "turn": 15,
+      "_note": "Cross to the eastern path. The fork. The marker tilted.",
+      "player_card": "travel:to_eastern_path",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [0.64, 0.52, 0.50]
+    },
+    {
+      "turn": 16,
+      "_note": "Wrongly attribute the marker displacement to Webb — he had Thursday and Friday to walk this path. Detective fixes on the surface chain.",
+      "player_card": "modifier:marker_displaced_eleven_meters",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:traces_route",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:tide_floods"
+      },
+      "convergence_after": [0.67, 0.55, 0.51]
+    },
+    {
+      "turn": 17,
+      "_note": "Return to common room. The journal letter again — read it as Webb's prelude to the act.",
+      "player_card": "object:journal_letter",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.70, 0.58, 0.52]
+    },
+    {
+      "turn": 18,
+      "_note": "Question Kestrel on Webb. She places him at the Thursday weather briefing. No call signs Sunday afternoon.",
+      "player_card": "witness:radio_operator",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_kestrel_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:radio_handset",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.72, 0.61, 0.53]
+    },
+    {
+      "turn": 19,
+      "_note": "Cross to the jetty. Mira. She gives the slack hour, the boat secured. Does not mention Webb.",
+      "player_card": "travel:to_jetty",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:wind_bitten_calm",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.73, 0.62, 0.54]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to weather tower. Read the tide chart against the journal letter date — Webb's letter dated Friday afternoon.",
+      "player_card": "travel:to_weather_tower",
+      "scene": {
+        "LOCATION": "location:weather_tower",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.75, 0.66, 0.55]
+    },
+    {
+      "turn": 21,
+      "_note": "Return to dorms. Webb again. Stance shifts hostile when his Sunday afternoon is named for the fourth time.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.78, 0.68, 0.55]
+    },
+    {
+      "turn": 22,
+      "_note": "Webb names his methodology grievance as motive — for the journal letter, not for any walk. Detective reads grievance as cover for personal stake.",
+      "player_card": "motive:methodology_grievance",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.79, 0.69, 0.55]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to common room. Lay the journal letter beside the resupply schedule. The dates align.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.80, 0.71, 0.55]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to research lab. Examine the final report annotations. Webb's pencil critiques on Sarah's transect notes.",
+      "player_card": "travel:to_research_lab",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:research_notebook",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.81, 0.73, 0.55]
+    },
+    {
+      "turn": 25,
+      "_note": "Tovi names Webb's Friday speech in the common room. The pattern reads — public confrontation, then act.",
+      "player_card": "suspect:tovi_ansgar",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_tovi_ansgar",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:softened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.82, 0.74, 0.55]
+    },
+    {
+      "turn": 26,
+      "_note": "Return to dorms. Lay the journal letter on the table in front of Webb.",
+      "player_card": "object:journal_letter",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.83, 0.76, 0.55]
+    },
+    {
+      "turn": 27,
+      "_note": "Examine Webb's boots at the door. No fresh soil. But Webb could have changed them.",
+      "player_card": "object:boot_with_fresh_soil",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:boot_with_fresh_soil",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.83, 0.77, 0.55]
+    },
+    {
+      "turn": 28,
+      "_note": "Cross to eastern path. Walk Webb to the fork.",
+      "player_card": "travel:to_eastern_path",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:path_unstable"
+      },
+      "convergence_after": [0.84, 0.78, 0.55]
+    },
+    {
+      "turn": 29,
+      "_note": "Lay the marker on the path. Name the Thursday inspection.",
+      "player_card": "modifier:marker_displaced_eleven_meters",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:path_unstable"
+      },
+      "convergence_after": [0.85, 0.79, 0.55]
+    },
+    {
+      "turn": 30,
+      "_note": "Webb denies the Thursday walk. He had only walked the western path.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.79, 0.55]
+    },
+    {
+      "turn": 31,
+      "_note": "Detective reads denial as evasion. Return to dorms.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.80, 0.55]
+    },
+    {
+      "turn": 32,
+      "_note": "Examine the journal letter one more time. Read the methodology critique as cover.",
+      "player_card": "object:journal_letter",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.80, 0.55]
+    },
+    {
+      "turn": 33,
+      "_note": "Cross to common room. Lay the chain together — letter, schedule, marker.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.80, 0.55]
+    },
+    {
+      "turn": 34,
+      "_note": "Question Eira a third pass. She did not see Webb after lunch Sunday — but nor did she see Piers, exactly.",
+      "player_card": "witness:cook",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eira_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.80, 0.56]
+    },
+    {
+      "turn": 35,
+      "_note": "Detective discounts the Piers detail. Webb's chain is plainly the chain.",
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.80, 0.56]
+    },
+    {
+      "turn": 36,
+      "_note": "Return to dorms. Confront Webb on the Friday confrontation, the Sunday absence, the Thursday inspection.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.80, 0.56]
+    },
+    {
+      "turn": 37,
+      "_note": "Webb names his grievance plainly. Detective hears it as confession of motive.",
+      "player_card": "motive:methodology_grievance",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.80, 0.57]
+    },
+    {
+      "turn": 38,
+      "_note": "Cross to common room. The chain hangs together for the detective, even if motive-dim feels light.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.80, 0.57]
+    },
+    {
+      "turn": 39,
+      "_note": "Return to eastern path one last time. The marker still wrong.",
+      "player_card": "travel:to_eastern_path",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:traces_route",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:path_unstable"
+      },
+      "convergence_after": [0.85, 0.80, 0.57]
+    },
+    {
+      "turn": 40,
+      "_note": "Read the journal letter aloud. Name Webb.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.85, 0.80, 0.57]
+    },
+    {
+      "turn": 41,
+      "_note": "Accusation. The detective names Webb. The chain hangs in the air.",
+      "player_card": "ACCUSE:suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.85, 0.80, 0.57]
+    },
+    {
+      "turn": 42,
+      "_note": "The accusation does not close. Webb's alibi softens but does not collapse — and the marker's soil never matched his boots.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.85, 0.80, 0.57]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:marcus_webb",
+    "final_convergence": [0.85, 0.80, 0.57],
+    "_note": "Motive-dim plateau at 0.55-0.57 throughout — methodology grievance is too thin for the act. The detective doesn't notice."
+  }
+}

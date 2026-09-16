@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_chief_of_security",
+  "case_id": "fog_over_brussels",
+  "description": "Standard ~42t wrong accusation. The detective opens on the corridor entry log and reads access control as opportunity. The chief of security keeps his folder squared; his cooperation reads as procedural exposure. The bridge token surfaces but the detective files it under access, not protocol. Brennan visible at intervals; never pressed. Wrong arrest of the chief of security at turn 42.",
+  "outcome": "wrong_chief_of_security",
+  "starting_hypothesis": "logs_first",
+  "tags": [
+    "wrong_accusation",
+    "chief_of_security",
+    "access_misread",
+    "hand_paced"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open at the iron gate. Fog against the lamps.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.03, 0.04, 0.03]
+    },
+    {
+      "turn": 2,
+      "_note": "Chief of security at the porter's lodge with his folder squared. First NPC contact. Suspect dim moves on a first name attached to procedure.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.13, 0.05, 0.04]
+    },
+    {
+      "turn": 3,
+      "_note": "Examine the guest list — sixty-three names — handed across without ceremony. Evidence dim moves on the named geography.",
+      "player_card": "object:guest_list",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.14, 0.16, 0.05]
+    },
+    {
+      "turn": 4,
+      "_note": "Cross to the east-wing landing. Heating hum. The chief follows two paces behind, folder under arm.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.15, 0.17, 0.06]
+    },
+    {
+      "turn": 5,
+      "_note": "Ask the chief about access control to the west wing. He names two keys, three doors, the corridor camera the embassy does not own. The detective reads it as access exposed.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.22, 0.18, 0.07]
+    },
+    {
+      "turn": 6,
+      "_note": "Press attache drifts past with a glass. The press attache names two guests near the kitchen door. Brief — suspect dim drifts a notch.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.24, 0.19, 0.08]
+    },
+    {
+      "turn": 7,
+      "_note": "Cross down to the west-wing stairwell. The cold corridor. The chief returned to the entrance.",
+      "player_card": "travel:to_west_wing_stairwell",
+      "scene": {
+        "LOCATION": "location:west_wing_stairwell",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.25, 0.20, 0.09]
+    },
+    {
+      "turn": 8,
+      "_note": "Enter the cipher room. The draft report still in its folder on Ilse's desk. Evidence dim moves on the document — the secondary encoding underneath.",
+      "player_card": "travel:to_cipher_room",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:entered",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:draft_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.26, 0.32, 0.10]
+    },
+    {
+      "turn": 9,
+      "_note": "Open the dispatch beside the draft. November 28th, routine — and inside it, the secondary encoding the chief could not have seen, the detective tells himself.",
+      "player_card": "object:decoded_dispatch",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_dispatch_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:decoded_dispatch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.27, 0.39, 0.11]
+    },
+    {
+      "turn": 10,
+      "_note": "Cross to the document room. The drawer Ilse did not use. The duplicate desk key on its hook. The detective reads it as the chief's spare.",
+      "player_card": "travel:to_document_room",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.34, 0.46, 0.12]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to the embassy kitchen. Catering supervisor at the back step with the timing book. First non-chief NPC encounter — he gives times without being asked.",
+      "player_card": "travel:to_embassy_kitchen",
+      "scene": {
+        "LOCATION": "location:embassy_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.35, 0.47, 0.13]
+    },
+    {
+      "turn": 12,
+      "_note": "Examine the catering timing note. The supervisor lays it on the counter. The detective scans it for access events, not for tray windows.",
+      "player_card": "object:catering_timing_note",
+      "scene": {
+        "LOCATION": "location:embassy_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.36, 0.54, 0.14]
+    },
+    {
+      "turn": 13,
+      "_note": "Cross to the kitchen corridor. The forty-second window underfoot. The detective reads it as the chief's corridor blind spot.",
+      "player_card": "travel:to_kitchen_corridor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.38, 0.55, 0.15]
+    },
+    {
+      "turn": 14,
+      "_note": "Return to the entrance. The chief at his lodge. Press him on the access procedure. Cooperative, exact — the detective hears it as practised.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.46, 0.56, 0.16]
+    },
+    {
+      "turn": 15,
+      "_note": "He tilts open the corridor entry log. Names and minutes. Brennan's name on it at eight-fourteen. The detective reads the eight-fourteen and not the name.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.52, 0.58, 0.18]
+    },
+    {
+      "turn": 16,
+      "_note": "Cross to the ambassador's office. Ambassador Voss at his desk. He confirms the chief's role in setting the rota for the evening.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.58, 0.59, 0.19]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross to the east-wing landing. Alone. Recall the chief's procedural answers. Suspect dim climbs on the rota — the detective convinces himself.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.62, 0.59, 0.20]
+    },
+    {
+      "turn": 18,
+      "_note": "Cross to the reception. Brennan in conversation by the chandelier. He answers two questions, plays the cuff at official distance. The detective files him as peripheral.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.63, 0.59, 0.20]
+    },
+    {
+      "turn": 19,
+      "_note": "Examine the champagne flute on the side table. The detective frames it as where access could intersect with timing. Evidence dim climbs on a misread.",
+      "player_card": "object:champagne_flute",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:champagne_flute",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.64, 0.65, 0.21]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to the kitchen corridor. The catering supervisor at the corridor mouth. He names the forty seconds. The detective hears it as a window the chief left open.",
+      "player_card": "modifier:forty_second_interval",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.69, 0.72, 0.22]
+    },
+    {
+      "turn": 21,
+      "_note": "Cross to the entrance. The chief on his round. Lay the timing note against the corridor log. He turns the page without ceremony.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.74, 0.74, 0.23]
+    },
+    {
+      "turn": 22,
+      "_note": "Press him on the rota — did anyone cross the corridor in his blind minute. He stiffens. Cooperative becomes formal. The detective reads it as guilt.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.78, 0.75, 0.24]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to the east-wing landing. Alone. Re-read what the chief has said. Recall the duplicate key.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.79, 0.75, 0.25]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to the document room. The drawer Ilse did not use. The duplicate desk key in hand. The detective frames it as the chief's spare for access reasons.",
+      "player_card": "object:duplicate_desk_key",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.80, 0.81, 0.26]
+    },
+    {
+      "turn": 25,
+      "_note": "Cross to the cipher room. The cipher supervisor at the desk, file open. The detective asks who had access to the personnel file. The supervisor names the chief in his procedural inventory.",
+      "player_card": "witness:cipher_supervisor",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_cipher_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:cipher_clerks_file",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.83, 0.82, 0.28]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to the entrance. The chief on his round, folder squared. Lay the duplicate key on the lodge desk. He does not pick it up.",
+      "player_card": "object:duplicate_desk_key",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.85, 0.83, 0.29]
+    },
+    {
+      "turn": 27,
+      "_note": "The chief names every officer who has been issued a spare in eighteen months. Brennan's name is among them, spoken plainly. The detective hears only that the chief knows who has copies.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.86, 0.83, 0.30]
+    },
+    {
+      "turn": 28,
+      "_note": "Cross to the kitchen corridor with the chief at the detective's shoulder. The forty seconds underfoot. Press him on it.",
+      "player_card": "modifier:forty_second_interval",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.87, 0.85, 0.33]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to the reception. Brennan still on the chandelier line. The detective does not press him.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.87, 0.85, 0.34]
+    },
+    {
+      "turn": 30,
+      "_note": "Cross back to the entrance. Lay the seating plan beside the corridor entry log. The detective draws a line through the chief's rota.",
+      "player_card": "object:seating_plan",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.88, 0.87, 0.36]
+    },
+    {
+      "turn": 31,
+      "_note": "Press the chief on the rota minute the corridor camera does not cover. He names the procedure plainly. The detective hears procedure as alibi.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.89, 0.88, 0.37]
+    },
+    {
+      "turn": 32,
+      "_note": "Cross to the cipher room. Re-read the draft report. Ilse's hand on access listings three times. The detective reads it as fingerprint, not as warning.",
+      "player_card": "travel:to_cipher_room",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:draft_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.90, 0.89, 0.38]
+    },
+    {
+      "turn": 33,
+      "_note": "Cross to the document room. Alone. Recall the duplicate key. The detective's hypothesis closes.",
+      "player_card": "travel:to_document_room",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.91, 0.89, 0.40]
+    },
+    {
+      "turn": 34,
+      "_note": "Cross to the entrance. The chief at his lodge. Hostile, now — the questions have crossed a line.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.92, 0.89, 0.41]
+    },
+    {
+      "turn": 35,
+      "_note": "Press him on the duplicate key. He names two officers who handled spares. Brennan again — spoken flat. The detective hears it as deflection.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.92, 0.90, 0.43]
+    },
+    {
+      "turn": 36,
+      "_note": "Cross to the east-wing landing. Recall the corridor log, the duplicate key, the forty seconds. The detective lays them in sequence.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.93, 0.91, 0.44]
+    },
+    {
+      "turn": 37,
+      "_note": "Cross to the entrance. Confront the chief on the chronology — the corridor camera blind minute, the duplicate key, the rota. He pales.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.93, 0.91, 0.45]
+    },
+    {
+      "turn": 38,
+      "_note": "Press him for a motive. He has none to offer. Motive dim cannot climb. He is not the killer.",
+      "player_card": "motive:protocol_silence",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.93, 0.91, 0.47]
+    },
+    {
+      "turn": 39,
+      "_note": "Cross to the document room. Lay the duplicate key on the desk. The detective tells himself the motive will surface in the procedure file.",
+      "player_card": "travel:to_document_room",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.93, 0.92, 0.48]
+    },
+    {
+      "turn": 40,
+      "_note": "Cross to the cipher room. Re-read the file. Press attache passes the door — Brennan glimpsed once more in the periphery, never approached.",
+      "player_card": "travel:to_cipher_room",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cipher_clerks_file",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.93, 0.92, 0.49]
+    },
+    {
+      "turn": 41,
+      "_note": "Return to the entrance. The chief on his round. The detective files the case as built.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.93, 0.92, 0.49]
+    },
+    {
+      "turn": 42,
+      "_note": "Accusation — the chief of security. The motive dim never crossed 0.5. Wrong.",
+      "player_card": "ACCUSE:suspect:chief_of_security",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.93, 0.92, 0.49]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "accused": "suspect:chief_of_security",
+    "final_convergence": [0.93, 0.92, 0.49],
+    "_note": "Hand-paced wrong accusation. The detective reads access control as opportunity; motive plateaus at 0.49 because the chief has no motive. Brennan glimpsed three times, never approached."
+  }
+}

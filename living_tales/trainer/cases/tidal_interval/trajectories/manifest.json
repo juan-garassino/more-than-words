@@ -1,0 +1,763 @@
+{
+  "schema_version": 1,
+  "case_id": "tidal_interval",
+  "_comment": "Index of hand-authored trajectories for The Tidal Interval. Wave 2 of 2 (50 total = 25 wave1 + 25 wave2). The trainer loads the manifest first, then reads each listed trajectory file.",
+  "trajectories": [
+    {
+      "id": "dunne_via_path_marker",
+      "outcome": "correct_piers_dunne",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "path_marker_chain",
+        "marker_displaced",
+        "callan_early_lead",
+        "common_room_confrontation"
+      ]
+    },
+    {
+      "id": "dunne_via_tidal_window",
+      "outcome": "correct_piers_dunne",
+      "length": 33,
+      "starting_hypothesis": "object_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "speedy",
+        "tidal_window_chain",
+        "weather_tower_heavy",
+        "TIDAL_TELL_rich"
+      ]
+    },
+    {
+      "id": "dunne_via_radio_log",
+      "outcome": "correct_piers_dunne",
+      "length": 48,
+      "starting_hypothesis": "object_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "slow_burn",
+        "radio_log_chain",
+        "webb_false_lead",
+        "tovi_pivot",
+        "satellite_log_first"
+      ]
+    },
+    {
+      "id": "dunne_via_callan_corroboration",
+      "outcome": "correct_piers_dunne",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "callan_corroboration_chain",
+        "jetty_heavy",
+        "boat_skipper_breaks",
+        "tide_chart_annotated",
+        "witness_first_pattern"
+      ]
+    },
+    {
+      "id": "dunne_via_webb_alibi_collapse",
+      "outcome": "correct_piers_dunne",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "tags": [
+        "webb_false_start",
+        "alibi_redirect",
+        "obvious_suspect_collapse",
+        "logistics_redirect"
+      ]
+    },
+    {
+      "id": "dunne_via_research_notebook",
+      "outcome": "correct_piers_dunne",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "notebook_chain",
+        "research_lab_anchor",
+        "tovi_witness",
+        "common_room_team_interview"
+      ]
+    },
+    {
+      "id": "wrong_marcus_webb",
+      "outcome": "wrong_marcus_webb",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "wrong_webb",
+        "red_herring_path",
+        "methodology_grievance_overweight",
+        "motive_plateau"
+      ]
+    },
+    {
+      "id": "wrong_mira_callan",
+      "outcome": "wrong_mira_callan",
+      "length": 41,
+      "starting_hypothesis": "witness_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "wrong_callan",
+        "skipper_misread",
+        "brother_on_boats_misread",
+        "jetty_access_overweight"
+      ]
+    },
+    {
+      "id": "wrong_oren_halloway",
+      "outcome": "wrong_oren_halloway",
+      "length": 40,
+      "starting_hypothesis": "wrong_suspect_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "wrong_halloway",
+        "director_evasion_misread",
+        "career_pressure_overweight"
+      ]
+    },
+    {
+      "id": "wrong_tovi_ansgar",
+      "outcome": "wrong_tovi_ansgar",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "tovi_misread",
+        "junior_researcher_trap",
+        "resolved_dispute_misread"
+      ]
+    },
+    {
+      "id": "wrong_niall_brackett",
+      "outcome": "wrong_niall_brackett",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "tags": [
+        "brackett_trap",
+        "generator_misread",
+        "engineer_misread"
+      ]
+    },
+    {
+      "id": "wrong_kestrel_lin",
+      "outcome": "wrong_kestrel_lin",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "lin_trap",
+        "silent_log_misread",
+        "radio_silence_misread"
+      ]
+    },
+    {
+      "id": "cold_trail_circular",
+      "outcome": "cold_trail",
+      "length": 50,
+      "starting_hypothesis": "object_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "cold_trail",
+        "slow_burn",
+        "storm_intensifies",
+        "convergence_plateau",
+        "circular_path"
+      ]
+    },
+    {
+      "id": "cold_trail_storm_loop",
+      "outcome": "cold_trail",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "cold_trail_storm",
+        "weather_log_loop",
+        "generator_loop",
+        "no_marker_visit"
+      ]
+    },
+    {
+      "id": "cold_trail_radio_silence",
+      "outcome": "cold_trail",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "cold_trail_radio",
+        "radio_bench_locked",
+        "static_loop",
+        "no_movement"
+      ]
+    },
+    {
+      "id": "partial_dunne_misread_motive_a",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "partial_correct",
+        "correct_dunne",
+        "misread_motive_personal_grudge",
+        "asymmetric_close"
+      ]
+    },
+    {
+      "id": "partial_dunne_misread_motive_b",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "right_suspect_wrong_motive",
+        "father_legacy_misread",
+        "partial_chain"
+      ]
+    },
+    {
+      "id": "partial_dunne_wrong_window",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "right_suspect_loose_window",
+        "tidal_window_missed",
+        "partial_chain"
+      ]
+    },
+    {
+      "id": "accomplice_via_callan",
+      "outcome": "accomplice_found",
+      "length": 43,
+      "starting_hypothesis": "witness_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "accomplice_callan",
+        "stance_arc_breaking",
+        "harbour_grief_chain",
+        "dunne_late"
+      ]
+    },
+    {
+      "id": "accomplice_via_webb",
+      "outcome": "accomplice_found",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "accomplice_chain",
+        "webb_as_foil",
+        "misdirection_named",
+        "dunne_correctly_accused"
+      ]
+    },
+    {
+      "id": "framed_marcus_webb",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "framed_webb",
+        "false_plateau_chain",
+        "verdict_at_38"
+      ]
+    },
+    {
+      "id": "framed_mira_callan",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "framed_chain",
+        "callan_circumstantial",
+        "tide_chart_misread",
+        "high_apparent_convergence_wrong_suspect"
+      ]
+    },
+    {
+      "id": "late_revelation_after_webb",
+      "outcome": "late_revelation",
+      "length": 46,
+      "starting_hypothesis": "wrong_suspect_first",
+      "_status": "hand_paced",
+      "tags": [
+        "hand_paced",
+        "late_revelation",
+        "webb_false_start",
+        "tidal_window_pivot",
+        "verdict_at_44"
+      ]
+    },
+    {
+      "id": "motive_only_via_fishing_economy",
+      "outcome": "motive_only_confession",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "motive_first_chain",
+        "fishing_economy_anchored",
+        "loan_papers_first",
+        "confession_under_motive"
+      ]
+    },
+    {
+      "id": "red_herring_trap_storm_alibi",
+      "outcome": "red_herring_trap",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "tags": [
+        "red_herring_trap",
+        "webb_storm_alibi",
+        "high_apparent_convergence",
+        "wrong_accusation_with_confidence"
+      ]
+    },
+    {
+      "id": "dunne_via_sea_cave",
+      "outcome": "correct_piers_dunne",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "sea_cave_chain",
+        "storm_lantern_chain",
+        "marker_displaced",
+        "descended_to_cave",
+        "wave2"
+      ]
+    },
+    {
+      "id": "dunne_via_radio_summons",
+      "outcome": "correct_piers_dunne",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "radio_summons_chain",
+        "cause_summoned",
+        "called_away_to",
+        "satellite_log_first",
+        "wave2"
+      ]
+    },
+    {
+      "id": "dunne_via_storm_pursuit",
+      "outcome": "correct_piers_dunne",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "tags": [
+        "storm_pursuit_chain",
+        "pursued_to",
+        "sea_cave_chain",
+        "storm_lantern_chain",
+        "wave2"
+      ]
+    },
+    {
+      "id": "dunne_via_weather_tower_radio",
+      "outcome": "correct_piers_dunne",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "weather_tower_chain",
+        "entered_tower",
+        "satellite_log",
+        "storm_warning_anchor",
+        "wave2"
+      ]
+    },
+    {
+      "id": "wrong_marcus_webb_v2",
+      "outcome": "wrong_marcus_webb",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "tags": [
+        "webb_trap_v2",
+        "journal_letter_first",
+        "dorms_heavy",
+        "methodology_misread",
+        "wave2"
+      ]
+    },
+    {
+      "id": "wrong_mira_callan_v2",
+      "outcome": "wrong_mira_callan",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "callan_trap_v2",
+        "tide_chart_misread",
+        "family_on_boats_misread",
+        "no_marker_visit",
+        "wave2"
+      ]
+    },
+    {
+      "id": "wrong_oren_halloway_v2",
+      "outcome": "wrong_oren_halloway",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "director_trap_v2",
+        "career_pressure_misread",
+        "final_report_first",
+        "common_room_anchor",
+        "wave2"
+      ]
+    },
+    {
+      "id": "wrong_tovi_ansgar_v2",
+      "outcome": "wrong_tovi_ansgar",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "tovi_trap_v2",
+        "research_lab_anchor",
+        "methodology_misread",
+        "wave2"
+      ]
+    },
+    {
+      "id": "cold_trail_sea_cave_loop",
+      "outcome": "cold_trail",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "cold_trail_sea_cave",
+        "sea_cave_loop",
+        "storm_lantern_loop",
+        "wave2"
+      ]
+    },
+    {
+      "id": "cold_trail_storm_summons_loop",
+      "outcome": "cold_trail",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "cold_trail_storm_summons",
+        "radio_loop",
+        "static_loop",
+        "wave2"
+      ]
+    },
+    {
+      "id": "partial_dunne_wrong_marker",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "right_suspect_weak_marker",
+        "no_tidal_window",
+        "partial_chain",
+        "wave2"
+      ]
+    },
+    {
+      "id": "partial_motive_only_window",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "right_suspect_motive_only",
+        "tidal_window_seen",
+        "no_marker_chain",
+        "partial_chain",
+        "wave2"
+      ]
+    },
+    {
+      "id": "partial_via_callan_misread",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "callan_misread",
+        "right_suspect_no_window",
+        "partial_chain",
+        "wave2"
+      ]
+    },
+    {
+      "id": "accomplice_via_oren_halloway",
+      "outcome": "accomplice_found",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "accomplice_chain",
+        "halloway_named",
+        "director_complicity",
+        "wave2"
+      ]
+    },
+    {
+      "id": "accomplice_via_kestrel_lin",
+      "outcome": "accomplice_found",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "accomplice_chain",
+        "kestrel_lin_named",
+        "radio_log_complicity",
+        "wave2"
+      ]
+    },
+    {
+      "id": "framed_oren_halloway",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "tags": [
+        "framed_chain",
+        "halloway_circumstantial",
+        "career_pressure_motive",
+        "high_apparent_convergence_wrong",
+        "wave2"
+      ]
+    },
+    {
+      "id": "framed_kestrel_lin",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "framed_chain",
+        "lin_circumstantial",
+        "radio_log_misread",
+        "high_apparent_convergence_wrong",
+        "wave2"
+      ]
+    },
+    {
+      "id": "late_revelation_after_callan",
+      "outcome": "late_revelation",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "late_revelation",
+        "callan_first_then_redirect",
+        "slow_start_fast_close",
+        "wave2"
+      ]
+    },
+    {
+      "id": "late_revelation_after_storm_pass",
+      "outcome": "late_revelation",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "late_revelation",
+        "weather_tower_first",
+        "storm_pass",
+        "slow_start_fast_close",
+        "wave2"
+      ]
+    },
+    {
+      "id": "motive_only_via_protected_area_report",
+      "outcome": "motive_only_confession",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "motive_first_chain",
+        "protected_area_report_anchor",
+        "loan_papers_first",
+        "no_marker_chain",
+        "wave2"
+      ]
+    },
+    {
+      "id": "motive_only_via_fishing_quota_threat",
+      "outcome": "motive_only_confession",
+      "length": 42,
+      "starting_hypothesis": "object_first",
+      "tags": [
+        "motive_first_chain",
+        "fishing_quota_anchored",
+        "no_marker_chain",
+        "wave2"
+      ]
+    },
+    {
+      "id": "near_miss_recovers_from_webb",
+      "outcome": "near_miss",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "tags": [
+        "near_miss",
+        "webb_first",
+        "recovers_to_dunne",
+        "barely_correct",
+        "wave2"
+      ]
+    },
+    {
+      "id": "near_miss_recovers_from_callan",
+      "outcome": "near_miss",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "tags": [
+        "near_miss",
+        "callan_first",
+        "recovers_to_dunne",
+        "barely_correct",
+        "wave2"
+      ]
+    },
+    {
+      "id": "red_herring_trap_storm_alibi_decoy",
+      "outcome": "red_herring_trap",
+      "length": 42,
+      "starting_hypothesis": "wrong_suspect_first",
+      "tags": [
+        "red_herring_trap",
+        "storm_alibi_decoy",
+        "webb_circumstantial",
+        "high_apparent_convergence",
+        "wave2"
+      ]
+    },
+    {
+      "id": "red_herring_trap_satellite_log_misread",
+      "outcome": "red_herring_trap",
+      "length": 42,
+      "starting_hypothesis": "witness_first",
+      "tags": [
+        "red_herring_trap",
+        "satellite_log_misread",
+        "lin_circumstantial",
+        "high_apparent_convergence",
+        "wave2"
+      ]
+    },
+    {
+      "id": "cf_dunne_via_path_marker_motive_only",
+      "outcome": "motive_only_confession",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "tidal_tell_divergence",
+        "motive_only_confession",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_dunne_via_tidal_window_to_webb",
+      "outcome": "wrong_marcus_webb",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "object_focus_divergence",
+        "wrong_marcus_webb",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_dunne_via_radio_log_to_accomplice",
+      "outcome": "accomplice_found",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "presence_divergence",
+        "accomplice_found",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_wrong_marcus_webb_to_correct",
+      "outcome": "correct_piers_dunne",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "cause_divergence",
+        "correct_piers_dunne",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_accomplice_via_callan_to_cold",
+      "outcome": "cold_trail",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "stance_divergence",
+        "cold_trail",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_framed_marcus_webb_to_correct",
+      "outcome": "correct_piers_dunne",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "revelation_divergence",
+        "correct_piers_dunne",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_red_herring_trap_storm_alibi_to_near_miss",
+      "outcome": "near_miss",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "beat_divergence",
+        "near_miss",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_cold_trail_radio_silence_to_late",
+      "outcome": "late_revelation",
+      "length": 7,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "atmosphere_divergence",
+        "late_revelation",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_partial_dunne_misread_motive_a_to_correct",
+      "outcome": "correct_piers_dunne",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "tidal_tell_divergence",
+        "correct_piers_dunne",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_late_revelation_after_webb_to_near_miss",
+      "outcome": "near_miss",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "transition_divergence",
+        "near_miss",
+        "wave2_cf"
+      ]
+    }
+  ]
+}

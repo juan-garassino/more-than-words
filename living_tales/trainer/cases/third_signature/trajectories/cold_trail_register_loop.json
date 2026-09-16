@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cold_trail_register_loop",
+  "case_id": "third_signature",
+  "description": "Detective combs through the register and key log but never frames the seven-minute question to Wills.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "register_loop",
+  "tags": [
+    "register_circles",
+    "porter_unasked",
+    "loop_chain"
+  ],
+  "opening": {
+    "tokens": [
+      "location:reading_room",
+      "event:pemberton_discovered",
+      "time:body_found_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "object:sign_in_register",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "object:key_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "object:sign_in_register",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:cross_referencing_register",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "travel:to_reading_room",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "object:port_glass",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:port_glass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "object:port_decanter",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:port_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "object:sign_in_register",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "object:key_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "object:key_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:cross_referencing_register",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "travel:to_club_corridor",
+      "scene": {
+        "LOCATION": "location:club_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "travel:to_smoking_room",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_colonel_norris",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:coal_fire_settles",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "witness:colonel_norris",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_colonel_norris",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:port_decanter",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:pipe_smoke_drifts",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "witness:colonel_norris",
+      "scene": {
+        "LOCATION": "location:smoking_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_colonel_norris",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:port_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "object:sign_in_register",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "object:key_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "travel:to_reading_room",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "object:port_glass",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:port_glass",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "object:port_decanter",
+      "scene": {
+        "LOCATION": "location:reading_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:port_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "object:sign_in_register",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "object:key_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:cross_referencing_register",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "travel:to_club_corridor",
+      "scene": {
+        "LOCATION": "location:club_corridor",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "travel:to_dining_room",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_dining_steward",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "witness:dining_steward",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_dining_steward",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "witness:dining_steward",
+      "scene": {
+        "LOCATION": "location:dining_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_dining_steward",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "object:sign_in_register",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "modifier:contract_unsigned",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "object:key_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "witness:wills",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_wills",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "modifier:contract_unsigned",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "turn": 43,
+      "player_card": "object:sign_in_register",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:sign_in_register",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 44,
+      "player_card": "modifier:contract_unsigned",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "turn": 45,
+      "player_card": "object:key_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:key_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    {
+      "turn": 46,
+      "player_card": "modifier:contract_unsigned",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "convergence_after": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "accused": null,
+    "final_convergence": [
+      0.35,
+      0.35,
+      0.2
+    ]
+  }
+}

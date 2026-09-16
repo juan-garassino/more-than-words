@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_marta_via_audio_recognition_to_wrong_haldane",
+  "case_id": "resonance_test",
+  "description": "Counterfactual: the player's object focus shifts from the tape reel to the broken handrail; the negligence frame holds and Haldane is wrongly accused.",
+  "outcome": "wrong_peter_haldane",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "marta_via_audio_recognition",
+  "branch_turn": 20,
+  "divergence_token": "OBJECT_FOCUS=object:broken_handrail",
+  "tags": [
+    "counterfactual",
+    "object_focus_divergence",
+    "wrong_haldane",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from marta_via_audio_recognition at turn 20 on OBJECT_FOCUS=object:broken_handrail.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.55,
+      0.6,
+      0.55
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:practice_wing_basement"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 20,
+      "_note": "Diverge \u2014 object focus shifts to the broken handrail instead of the tape.",
+      "player_card": "object:broken_handrail",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.58,
+        0.62,
+        0.58
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Modifier \u2014 handrail unsecured.",
+      "player_card": "modifier:handrail_unsecured",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.64,
+        0.6
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Cross to porter's lodge.",
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.63,
+        0.66,
+        0.63
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Examine maintenance log.",
+      "player_card": "object:maintenance_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.66,
+        0.7,
+        0.66
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Modifier \u2014 reported three times.",
+      "player_card": "modifier:reported_three_times",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Motive \u2014 institutional silence (misread).",
+      "player_card": "motive:institutional_silence",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.78,
+        0.76
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Press Haldane.",
+      "player_card": "suspect:peter_haldane",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.8,
+        0.82,
+        0.8
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Dawn \u2014 Haldane accused.",
+      "player_card": "suspect:peter_haldane",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.84,
+        0.82
+      ]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:peter_haldane",
+    "true_culprit": "suspect:marta_solis",
+    "final_convergence": [
+      0.82,
+      0.84,
+      0.82
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=marta_via_audio_recognition"
+  }
+}

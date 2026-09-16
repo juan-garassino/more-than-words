@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "case_id": "tidal_interval",
+
+  "_comment": "Multidimensional structured-scene schema for The Tidal Interval. Setting: Tern Island Marine Research Station, October storm season, present day. Victim: Dr. Sarah Okafor (lead marine biologist). Killer: Piers Dunne (logistics coordinator). Red herring: Dr. Marcus Webb (visiting methodology reviewer). Mechanism: a wooden path marker was moved twelve degrees at the fork of the eastern path two hours before the victim's evening walk — sending her, in storm-darkness, toward an unfenced cliff section rather than the longer safe route. Case-specific dim: TIDAL_TELL — observable environmental/temporal signals (storm intensity, tide stage, generator and radio reliability) that act as the case's structural clock. Each engine turn emits one token per dim.",
+
+  "dimensions": [
+    {
+      "name": "LOCATION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "location:research_lab",
+        "location:dorms",
+        "location:weather_tower",
+        "location:jetty",
+        "location:sea_cave",
+        "location:generator_room",
+        "location:common_room",
+        "location:eastern_path",
+        "location:none"
+      ]
+    },
+    {
+      "name": "TRANSITION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "transition:stayed",
+        "transition:crossed_to",
+        "transition:entered",
+        "transition:exited",
+        "transition:returned",
+        "transition:pursued_to",
+        "transition:called_away_to",
+        "transition:descended_to",
+        "transition:none"
+      ]
+    },
+    {
+      "name": "CAUSE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "cause:following_witness_lead",
+        "cause:examining_evidence",
+        "cause:recognized_object",
+        "cause:noticed_inconsistency",
+        "cause:pursued_suspicion",
+        "cause:revisiting_scene",
+        "cause:summoned",
+        "cause:chronological_drift",
+        "cause:reading_tide_chart",
+        "cause:radio_message_received",
+        "cause:none"
+      ]
+    },
+    {
+      "name": "PRESENCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "presence:with_piers_dunne",
+        "presence:with_marcus_webb",
+        "presence:with_oren_halloway",
+        "presence:with_mira_callan",
+        "presence:with_tovi_ansgar",
+        "presence:with_kestrel_lin",
+        "presence:with_niall_brackett",
+        "presence:with_eira_voss",
+        "presence:with_padraic_burne",
+        "presence:alone"
+      ]
+    },
+    {
+      "name": "STANCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "stance:cooperative",
+        "stance:defensive",
+        "stance:evasive",
+        "stance:hostile",
+        "stance:unaware",
+        "stance:none"
+      ]
+    },
+    {
+      "name": "ACTION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "action:examines",
+        "action:questions",
+        "action:notices",
+        "action:discovers",
+        "action:confronts",
+        "action:follows",
+        "action:waits",
+        "action:leaves",
+        "action:arrives",
+        "action:recalls",
+        "action:radios",
+        "action:traces_route",
+        "action:none"
+      ]
+    },
+    {
+      "name": "OBJECT_FOCUS",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "object:path_marker",
+        "object:tide_chart",
+        "object:weather_log",
+        "object:radio_handset",
+        "object:research_notebook",
+        "object:final_report",
+        "object:resupply_schedule",
+        "object:storm_lantern",
+        "object:boot_with_fresh_soil",
+        "object:sea_chart_overlay",
+        "object:journal_letter",
+        "object:satellite_log",
+        "object_focus:none"
+      ]
+    },
+    {
+      "name": "TELL",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "tell:paled",
+        "tell:tightened",
+        "tell:glanced_aside",
+        "tell:silent",
+        "tell:hesitated",
+        "tell:over_explained",
+        "tell:softened",
+        "emotion:wind_bitten_calm",
+        "emotion:harbour_grief",
+        "tell:none"
+      ]
+    },
+    {
+      "name": "ATMOSPHERE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "atmosphere:storm_holds_off",
+        "atmosphere:rain_against_glass",
+        "atmosphere:silence_holds",
+        "atmosphere:gulls_overhead",
+        "atmosphere:dawn_approaches",
+        "atmosphere:wind_rises",
+        "atmosphere:waves_against_rock",
+        "atmosphere:none"
+      ]
+    },
+    {
+      "name": "REVELATION",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "revelation:name_uncovered": 0.5,
+        "revelation:motive_emerges": 0.5,
+        "revelation:confirmation": 0.4
+      },
+      "vocab": [
+        "revelation:contradiction_surfaces",
+        "revelation:alibi_holds",
+        "revelation:name_uncovered",
+        "revelation:motive_emerges",
+        "revelation:dead_end",
+        "revelation:partial_match",
+        "revelation:confirmation",
+        "revelation:tidal_window_identified",
+        "revelation:none"
+      ]
+    },
+    {
+      "name": "BEAT",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "beat:closing_in": 0.5,
+        "beat:verdict_ready": 0.75
+      },
+      "vocab": [
+        "beat:orientation",
+        "beat:investigation",
+        "beat:closing_in",
+        "beat:verdict_ready"
+      ]
+    },
+    {
+      "name": "TIDAL_TELL",
+      "universal": false,
+      "always_emit": true,
+      "case_specific": true,
+      "_comment": "Case-specific dim. Observable environmental/temporal signals — the storm, the tide, the failing generator, the static-broken radio. Functions as the case's structural clock and isolation pressure. Most scenes either emit a tidal_tell or tidal_tell:none. Some tokens are gated by convergence so the late-game tells (tide_floods, path_unstable) only appear once the player is closing in on the mechanism.",
+      "gated_by_convergence": {
+        "tidal_tell:tide_floods": 0.4,
+        "tidal_tell:path_unstable": 0.5
+      },
+      "vocab": [
+        "tidal_tell:storm_intensifies",
+        "tidal_tell:tide_recedes",
+        "tidal_tell:tide_floods",
+        "tidal_tell:radio_breaks_static",
+        "tidal_tell:generator_falters",
+        "tidal_tell:wind_drops",
+        "tidal_tell:path_unstable",
+        "tidal_tell:none"
+      ]
+    }
+  ],
+
+  "_anchors_only_comment": "Tokens that contribute to convergence + graph but are never directly emitted as scene-tuple slots. They remain as player cards (motives, modifiers) or graph anchors driving logit_bias.",
+  "anchor_tokens": {
+    "MOTIVE": [
+      "motive:fishing_economy",
+      "motive:father_legacy",
+      "motive:processing_facility_debt",
+      "motive:methodology_grievance",
+      "motive:career_pressure",
+      "motive:family_on_the_boats"
+    ],
+    "MODIFIER": [
+      "modifier:marker_displaced_eleven_meters",
+      "modifier:fresh_soil_on_base",
+      "modifier:socket_hole_compressed",
+      "modifier:schedule_in_piers_hand",
+      "modifier:tide_data_annotated",
+      "modifier:radio_log_blank",
+      "modifier:generator_serviced_late",
+      "modifier:storm_warning_issued",
+      "modifier:walk_routine_documented",
+      "modifier:processing_facility_loan_due"
+    ],
+    "EVENT": [
+      "event:sarah_does_not_return",
+      "event:tidal_window",
+      "event:marker_moved",
+      "event:final_report_approved"
+    ]
+  },
+
+  "_player_cards_comment": "Tokens the player can play as cards. Inquiry cards bias the engine toward connected responses; travel cards force LOCATION + a sensible TRANSITION.",
+  "player_cards": {
+    "inquiry": "@all_PLAYER_or_SHARED_with_dim_in_[OBJECT_FOCUS,PRESENCE,MOTIVE]",
+    "travel": [
+      "travel:to_research_lab",
+      "travel:to_dorms",
+      "travel:to_weather_tower",
+      "travel:to_jetty",
+      "travel:to_sea_cave",
+      "travel:to_generator_room",
+      "travel:to_common_room",
+      "travel:to_eastern_path"
+    ]
+  }
+}

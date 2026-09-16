@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "case_id": "tidal_interval",
+  "_comment": "Reusable scene-tuple templates for trajectory authoring. Each snippet fixes 5-7 of the dim slots (the constants that define the scene type) and lists the slots the author must supply per use (the variables that distinguish one instance from another). Token IDs are drawn from cases/tidal_interval/dimensions.json. The tidal_reading and storm_isolation snippets are case-specific and use the TIDAL_TELL extension dimension.",
+
+  "snippets": {
+
+    "cold_object_examination": {
+      "description": "Detective alone with a single piece of station evidence — a logbook page, the path marker brought back from the fork, a tide chart on the lab wall. Cold, methodical inspection. No NPC pressure, no tell, no stance. Used for opening turns and quiet evidence beats between interviews.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "first_witness_interview_cooperative": {
+      "description": "First contact with a station witness — the cook, the radio operator, the generator engineer, the lighthouse keeper across the headland — who has no reason to lie. They give what they saw plainly within the small institutional rhythms of their role. The detective is questioning, the witness is open, the tell is steady. Use early in trajectory before any pressure has built.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "witness_reinterview_defensive": {
+      "description": "Returning to a station witness already questioned, this time with the path marker or the resupply schedule in hand. Their stance shifts to defensive; the small operational language tightens around them. Use mid-game, second or third pass on a witness, after a contradiction has surfaced elsewhere.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "TELL": "tell:tightened",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "PRESENCE", "OBJECT_FOCUS", "ATMOSPHERE", "TIDAL_TELL", "REVELATION"]
+    },
+
+    "transition_pursuing_lead": {
+      "description": "A movement turn — the detective is in motion between the station buildings, having just been pointed somewhere by witness or evidence. Brief, kinetic. The wind in the wires and the salt on the door handles pass by; the scene proper begins next turn.",
+      "template": {
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "dead_end_witness": {
+      "description": "A witness has nothing useful — the cook who saw Sarah at six and nothing after, the lighthouse keeper who saw a single lantern and no second figure. Cooperative but uninformed. The lead closes here. Used to puncture momentum and force the detective back to the schedule and the marker.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:dead_end",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "BEAT"]
+    },
+
+    "revelation_object_recognition": {
+      "description": "An object the detective has already seen — the path marker, the resupply schedule, the tide chart with the Sunday window pencilled in — suddenly resolves into meaning. Alone, looking at the same thing in a new light. Late investigation or closing-in beat. Pairs with name_uncovered, motive_emerges, or tidal_window_identified revelations.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "TIDAL_TELL", "REVELATION", "BEAT"]
+    },
+
+    "confrontation_hostile": {
+      "description": "Direct accusation. The detective has the chain in hand — the displaced marker, the schedule in Piers's handwriting, the loan papers — and is putting it to the suspect across the common room. The stance is hostile, the tell is sharp, the beat is closing_in or verdict_ready. Use sparingly — once or twice per trajectory.",
+      "template": {
+        "CAUSE": "cause:pursued_suspicion",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:closing_in"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "TIDAL_TELL", "REVELATION"]
+    },
+
+    "revisit_for_reframing": {
+      "description": "The detective returns to a location already visited — the eastern path at the fork, the common room with the schedule still on the wall, the dorms with Sarah's notebook on the desk — alone, to look at it again with the new context. Nothing dramatic — a quiet recasting of an earlier scene. Often produces a partial_match or contradiction_surfaces.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "TIDAL_TELL", "REVELATION"]
+    },
+
+    "atmospheric_interlude": {
+      "description": "A low-activity beat. The wind keens against the weather tower; somewhere the generator coughs and steadies. Time passes; the storm breathes around the detective. Minimal scene activity, no revelation, no NPC. Used to mark act breaks, hour changes, or simply to give the prose a place to rest. One or two per trajectory.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "ATMOSPHERE", "TIDAL_TELL", "BEAT"]
+    },
+
+    "tidal_reading": {
+      "description": "Case-specific snippet. The detective consults the tide chart, the weather log, the resupply schedule, or the sea-chart overlay alone in the lab or weather tower, working out the forty-minute window between passable and impassable at the eastern rocks. The TIDAL_TELL slot carries the environmental layer — tide_recedes, tide_floods, storm_intensifies — that anchors the case's structural clock. Late uses (with tidal_tell:path_unstable) pair with revelation:tidal_window_identified and reframe the mechanism layer.",
+      "template": {
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none",
+        "TRANSITION": "transition:stayed"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "TIDAL_TELL", "REVELATION", "BEAT"]
+    },
+
+    "storm_isolation": {
+      "description": "Case-specific snippet. The radio breaks into static, the generator drops a phase, the satellite link fails — the detective notes the island closing in on itself. Often used as a transition between interviews, or to mark the moment a witness's account becomes unverifiable because the outside world has gone silent. Alone or with a witness; the TIDAL_TELL slot carries the failure mode.",
+      "template": {
+        "CAUSE": "cause:chronological_drift",
+        "ACTION": "action:notices",
+        "STANCE": "stance:none",
+        "TELL": "tell:none",
+        "TRANSITION": "transition:stayed",
+        "PRESENCE": "presence:alone"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "TIDAL_TELL", "REVELATION", "BEAT"]
+    },
+
+    "radio_summons": {
+      "description": "The detective is at the radio handset, or has just heard a transmission come through, and a witness or fragment of information arrives across the static. Use when the lighthouse keeper or the mainland coastguard supplies a piece of timing the station could not.",
+      "template": {
+        "CAUSE": "cause:radio_message_received",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:radios",
+        "TELL": "tell:none",
+        "OBJECT_FOCUS": "object:radio_handset"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "ATMOSPHERE", "TIDAL_TELL", "REVELATION", "BEAT"]
+    },
+
+    "route_trace_at_marker": {
+      "description": "Late-game snippet. The detective stands at the fork on the eastern path with the displaced marker, or with the sea-chart overlay, and walks the route Sarah would have walked. The action is traces_route; the TIDAL_TELL is typically path_unstable; the revelation is tidal_window_identified or confirmation. Use once near the closing arc.",
+      "template": {
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:traces_route",
+        "TELL": "tell:none",
+        "BEAT": "beat:closing_in"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "ATMOSPHERE", "TIDAL_TELL", "REVELATION"]
+    }
+
+  }
+}

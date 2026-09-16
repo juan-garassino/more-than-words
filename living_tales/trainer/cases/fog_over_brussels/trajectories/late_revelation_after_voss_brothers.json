@@ -1,0 +1,850 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "late_revelation_after_voss_brothers",
+  "case_id": "fog_over_brussels",
+  "description": "Slow-burn ~46t late revelation. The detective opens on the ambassador's silence on his wife and reads the Voss household as the case. The trail through Helena and Ambassador Voss runs to the late twenties; the secondary encoding and the bridge token break the case mid-thirties and Brennan is named at dawn.",
+  "outcome": "late_revelation",
+  "starting_hypothesis": "ambassador_first_then_brennan",
+  "tags": [
+    "late_revelation",
+    "wrong_then_right",
+    "ambassador_voss",
+    "brennan_recovery",
+    "hand_paced"
+  ],
+  "opening": {
+    "tokens": [
+      "location:ambassadors_office",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open at the ambassador's office. Ambassador Voss at the desk. Cuff pulled.",
+      "player_card": "witness:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.10, 0.05, 0.05]
+    },
+    {
+      "turn": 2,
+      "_note": "Press him on his wife. He closes the cuff and refuses. The detective reads it as a husband concealing.",
+      "player_card": "witness:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.20, 0.06, 0.10]
+    },
+    {
+      "turn": 3,
+      "_note": "Cross to the east-wing landing. Helena at the rail.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.22, 0.07, 0.11]
+    },
+    {
+      "turn": 4,
+      "_note": "Press on the November 28th argument. She turns the band once.",
+      "player_card": "modifier:arrangement_broke_down",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.28, 0.10, 0.18]
+    },
+    {
+      "turn": 5,
+      "_note": "Cross to the cipher room. Terminal log. Helena's hand on the personal communications.",
+      "player_card": "travel:to_cipher_room",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:secondary_terminal_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.29, 0.18, 0.20]
+    },
+    {
+      "turn": 6,
+      "_note": "Cipher supervisor at the door. Names the personal communication dates.",
+      "player_card": "witness:cipher_supervisor",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_cipher_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:cipher_clerks_file",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.36, 0.25, 0.21]
+    },
+    {
+      "turn": 7,
+      "_note": "Cross to the document room. Duplicate desk key. The detective reads it as the ambassador's spare.",
+      "player_card": "travel:to_document_room",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.42, 0.33, 0.22]
+    },
+    {
+      "turn": 8,
+      "_note": "Cross to the ambassador's office. Press him on the duplicate. Closed cuff.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.48, 0.34, 0.24]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to the reception. Catering supervisor cooperative.",
+      "player_card": "witness:catering_supervisor",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.49, 0.35, 0.25]
+    },
+    {
+      "turn": 10,
+      "_note": "Examine the timing note. Eight-fourteen tray.",
+      "player_card": "object:catering_timing_note",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.50, 0.42, 0.26]
+    },
+    {
+      "turn": 11,
+      "_note": "Press attache enters. Names the seating order — Ambassador Voss in row one, Helena two rows behind, Brennan in row three.",
+      "player_card": "witness:press_attache",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.55, 0.43, 0.27]
+    },
+    {
+      "turn": 12,
+      "_note": "Examine the seating plan. The detective files Brennan's row as peripheral.",
+      "player_card": "object:seating_plan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_press_attache",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.56, 0.50, 0.28]
+    },
+    {
+      "turn": 13,
+      "_note": "Cross to the ambassador's office. Press him on the seating change.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.62, 0.51, 0.29]
+    },
+    {
+      "turn": 14,
+      "_note": "He names a small protocol change. Closed cuff still.",
+      "player_card": "witness:ambassador_voss",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.65, 0.51, 0.30]
+    },
+    {
+      "turn": 15,
+      "_note": "Cross to the embassy entrance. Chief reads the corridor log — Ambassador Voss eight-twelve, Brennan eight-fourteen. The detective files Brennan as peripheral.",
+      "player_card": "object:guest_list",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.70, 0.55, 0.31]
+    },
+    {
+      "turn": 16,
+      "_note": "Cross to the east-wing landing. Helena at the rail. The detective composes the case against the Voss household.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.71, 0.56, 0.32]
+    },
+    {
+      "turn": 17,
+      "_note": "Press her on the November 29th meeting. She names the procedural disagreement plainly. The detective hears it as composed.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.74, 0.58, 0.33]
+    },
+    {
+      "turn": 18,
+      "_note": "Cross to the kitchen corridor. The catering supervisor at the corridor mouth.",
+      "player_card": "travel:to_kitchen_corridor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.75, 0.62, 0.34]
+    },
+    {
+      "turn": 19,
+      "_note": "BRIDGE TOKEN — forty seconds. The detective hears the corridor named, files it against the ambassador's eight-twelve exit; the framing slips for the first time.",
+      "player_card": "modifier:forty_second_interval",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.76, 0.70, 0.42]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to the embassy kitchen. Porter at the back step. He saw a figure with the tray.",
+      "player_card": "witness:kitchen_porter",
+      "scene": {
+        "LOCATION": "location:embassy_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:with_kitchen_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "emotion:avoided_contact",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.77, 0.71, 0.44]
+    },
+    {
+      "turn": 21,
+      "_note": "Cross to the cipher room. Re-read the dispatch with the corridor framing rebuilt.",
+      "player_card": "travel:to_cipher_room",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:decoded_dispatch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.78, 0.73, 0.46]
+    },
+    {
+      "turn": 22,
+      "_note": "Open the secondary encoding sheet. THE BREAK. The 1957 source.",
+      "player_card": "object:secondary_encoding_sheet",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_dispatch_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.79, 0.76, 0.64]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to the reception. Brennan at the chandelier. The signet on the right hand.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:signet_ring",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.83, 0.78, 0.68]
+    },
+    {
+      "turn": 24,
+      "_note": "Press on the corridor minute. The ring is turned. French at official pitch.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:signet_ring",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.86, 0.80, 0.72]
+    },
+    {
+      "turn": 25,
+      "_note": "Cross to the document room. Lay the duplicate key — now framed as Brennan's eighteen-month-old copy.",
+      "player_card": "object:duplicate_desk_key",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.87, 0.83, 0.74]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to the east-wing landing. Recall the chain. Ambassador's silence was a husband's silence, not the murderer's.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.88, 0.85, 0.78]
+    },
+    {
+      "turn": 27,
+      "_note": "Cross to the embassy entrance. Press the chief — Brennan eight-fourteen.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.89, 0.86, 0.80]
+    },
+    {
+      "turn": 28,
+      "_note": "Cross to the embassy kitchen. Porter names Brennan now that he sees him in profile.",
+      "player_card": "witness:kitchen_porter",
+      "scene": {
+        "LOCATION": "location:embassy_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:with_kitchen_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "emotion:avoided_contact",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.90, 0.87, 0.82]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to the kitchen corridor. The forty seconds, now correctly framed.",
+      "player_card": "travel:to_kitchen_corridor",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.90, 0.88, 0.83]
+    },
+    {
+      "turn": 30,
+      "_note": "Cross to the reception. Brennan defensive. Lay the secondary encoding and corridor log.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.91, 0.89, 0.85]
+    },
+    {
+      "turn": 31,
+      "_note": "Press for motive. He names the 1957 source.",
+      "player_card": "motive:double_agent_exposure",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.92, 0.90, 0.88]
+    },
+    {
+      "turn": 32,
+      "_note": "Cross to the ambassador's office. Voss now cooperative — he releases the closed cuff. He knew Helena was being pressured, did not know by whom.",
+      "player_card": "travel:to_ambassadors_office",
+      "scene": {
+        "LOCATION": "location:ambassadors_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_ambassador_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.92, 0.91, 0.89]
+    },
+    {
+      "turn": 33,
+      "_note": "Cross to the east-wing landing. Helena at the rail. She names Brennan in the corridor at eight-fifteen — what she saw.",
+      "player_card": "witness:helena_voss",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_helena_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:seating_plan",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.93, 0.92, 0.90]
+    },
+    {
+      "turn": 34,
+      "_note": "Cross to the reception. Brennan held.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:signet_ring",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.93, 0.92, 0.90]
+    },
+    {
+      "turn": 35,
+      "_note": "Press for the leverage. He names 1955.",
+      "player_card": "motive:leverage_in_1955",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.93, 0.93, 0.92]
+    },
+    {
+      "turn": 36,
+      "_note": "Cross to the document room. Recall the duplicate key.",
+      "player_card": "travel:to_document_room",
+      "scene": {
+        "LOCATION": "location:document_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:duplicate_desk_key",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.93, 0.93, 0.92]
+    },
+    {
+      "turn": 37,
+      "_note": "Cross to the cipher room. Lay the dispatch and the secondary encoding side by side.",
+      "player_card": "travel:to_cipher_room",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:decoded_dispatch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.93, 0.93, 0.92]
+    },
+    {
+      "turn": 38,
+      "_note": "Cross to the kitchen corridor with Brennan beside. The forty seconds underfoot, named in his presence.",
+      "player_card": "modifier:forty_second_interval",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.94, 0.93, 0.92]
+    },
+    {
+      "turn": 39,
+      "_note": "Cross to the embassy kitchen. Porter names Brennan plainly with him beside.",
+      "player_card": "witness:kitchen_porter",
+      "scene": {
+        "LOCATION": "location:embassy_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:with_kitchen_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "emotion:avoided_contact",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.94, 0.93, 0.92]
+    },
+    {
+      "turn": 40,
+      "_note": "Cross to the reception. Brennan held. The detective lays it out.",
+      "player_card": "travel:to_reception_room",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:signet_ring",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.94, 0.93, 0.92]
+    },
+    {
+      "turn": 41,
+      "_note": "Accusation — Brennan. Late but correct. The Voss household was a husband concealing his wife's heart, not the murderer.",
+      "player_card": "ACCUSE:suspect:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:signet_ring",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.94, 0.93, 0.92]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "accused": "suspect:brennan",
+    "final_convergence": [0.94, 0.93, 0.92],
+    "_note": "Hand-paced late revelation via the Voss brothers (ambassador) false trail. Detective read the closed cuff as concealment of murder; in fact it was a husband concealing his wife's terminal misuse. Brennan named at dawn after the bridge token broke the framing at turn 19."
+  }
+}

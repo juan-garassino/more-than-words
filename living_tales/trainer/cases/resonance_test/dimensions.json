@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "case_id": "resonance_test",
+
+  "_comment": "Multidimensional structured-scene schema for the music conservatory case (Aldgate Conservatory, East London, winter term 1974). Each engine turn emits one token per dim. Universal core dimensions mirror amber_cipher/attended_hour; case-specific extension AUDIO_TELL covers musical observation (a recognised modulation, a held interval, the hiss of a tape reel) — central to this case because the inciting event is a composer recognising his own theft from the sound of a student performance. Tokens with dim=null (anchor_tokens below) are graph/convergence anchors only — never emitted directly.",
+
+  "dimensions": [
+    {
+      "name": "LOCATION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "location:practice_room_a",
+        "location:practice_wing_basement",
+        "location:recital_hall",
+        "location:faculty_lounge",
+        "location:ashby_office",
+        "location:archive_basement",
+        "location:library_periodicals",
+        "location:porters_lodge",
+        "location:harmony_classroom",
+        "location:courtyard",
+        "location:none"
+      ]
+    },
+    {
+      "name": "TRANSITION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "transition:stayed",
+        "transition:crossed_to",
+        "transition:entered",
+        "transition:exited",
+        "transition:returned",
+        "transition:pursued_to",
+        "transition:called_away_to",
+        "transition:descended_to",
+        "transition:none"
+      ]
+    },
+    {
+      "name": "CAUSE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "cause:following_witness_lead",
+        "cause:examining_evidence",
+        "cause:recognized_object",
+        "cause:noticed_inconsistency",
+        "cause:pursued_suspicion",
+        "cause:revisiting_scene",
+        "cause:summoned",
+        "cause:chronological_drift",
+        "cause:hearing_passage_again",
+        "cause:reading_archive_card",
+        "cause:none"
+      ]
+    },
+    {
+      "name": "PRESENCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "presence:with_marta_solis",
+        "presence:with_james_okafor",
+        "presence:with_peter_haldane",
+        "presence:with_nikolai_renko",
+        "presence:with_eleanor_fairchild",
+        "presence:with_archive_clerk_norwood",
+        "presence:with_practice_room_attendant",
+        "presence:with_ensemble_leader_pryce",
+        "presence:with_neighbour_thirsk",
+        "presence:with_night_porter_keaveney",
+        "presence:with_records_clerk_aldgate",
+        "presence:alone"
+      ]
+    },
+    {
+      "name": "STANCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "stance:cooperative",
+        "stance:defensive",
+        "stance:evasive",
+        "stance:hostile",
+        "stance:unaware",
+        "stance:none"
+      ]
+    },
+    {
+      "name": "ACTION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "action:examines",
+        "action:questions",
+        "action:notices",
+        "action:discovers",
+        "action:confronts",
+        "action:follows",
+        "action:waits",
+        "action:leaves",
+        "action:arrives",
+        "action:recalls",
+        "action:listens",
+        "action:none"
+      ]
+    },
+    {
+      "name": "OBJECT_FOCUS",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "object:printed_score",
+        "object:original_manuscript",
+        "object:tape_reel_1955",
+        "object:metronome",
+        "object:examiners_marksheet",
+        "object:maintenance_log",
+        "object:stairwell_light_panel",
+        "object:broken_handrail",
+        "object:austrian_publisher_catalogue",
+        "object:archive_index_card",
+        "object:scholarship_letter",
+        "object:practice_room_sign_in_book",
+        "object:rosin_powder",
+        "object_focus:none"
+      ]
+    },
+    {
+      "name": "TELL",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "emotion:steady_breath",
+        "emotion:fixed_stare",
+        "emotion:avoided_contact",
+        "emotion:rehearsed_diction",
+        "emotion:paused_reply",
+        "emotion:closed_posture",
+        "tell:paled",
+        "tell:tightened",
+        "tell:glanced_aside",
+        "tell:silent",
+        "tell:hesitated",
+        "tell:over_explained",
+        "tell:softened",
+        "tell:none"
+      ]
+    },
+    {
+      "name": "ATMOSPHERE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "atmosphere:radiator_ticks",
+        "atmosphere:radiator_silent",
+        "atmosphere:lamp_flickers",
+        "atmosphere:lamp_steady",
+        "atmosphere:silence_holds",
+        "atmosphere:silence_breaks",
+        "atmosphere:distant_practice",
+        "atmosphere:dawn_approaches",
+        "atmosphere:wind_rises",
+        "atmosphere:tape_hiss_room",
+        "atmosphere:none"
+      ]
+    },
+    {
+      "name": "REVELATION",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "revelation:name_uncovered": 0.5,
+        "revelation:motive_emerges": 0.5,
+        "revelation:confirmation": 0.4
+      },
+      "vocab": [
+        "revelation:contradiction_surfaces",
+        "revelation:alibi_holds",
+        "revelation:name_uncovered",
+        "revelation:motive_emerges",
+        "revelation:dead_end",
+        "revelation:partial_match",
+        "revelation:confirmation",
+        "revelation:authorship_inverts",
+        "revelation:none"
+      ]
+    },
+    {
+      "name": "BEAT",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "beat:closing_in": 0.5,
+        "beat:verdict_ready": 0.75
+      },
+      "vocab": [
+        "beat:orientation",
+        "beat:investigation",
+        "beat:closing_in",
+        "beat:verdict_ready"
+      ]
+    },
+    {
+      "name": "AUDIO_TELL",
+      "universal": false,
+      "always_emit": true,
+      "case_specific": true,
+      "gated_by_convergence": {
+        "audio_tell:score_recognized": 0.4,
+        "audio_tell:voice_breaks_on_pitch": 0.4
+      },
+      "vocab": [
+        "audio_tell:score_recognized",
+        "audio_tell:interval_held_too_long",
+        "audio_tell:voice_breaks_on_pitch",
+        "audio_tell:tape_hiss",
+        "audio_tell:tuning_drifts",
+        "audio_tell:silence_between_movements",
+        "audio_tell:none"
+      ]
+    }
+  ],
+
+  "_anchors_only_comment": "Tokens that contribute to convergence + graph but are never directly emitted as scene-tuple slots. They remain as player cards (motives, modifiers, legacy actions, legacy time tokens) or graph anchors driving logit_bias.",
+  "anchor_tokens": {
+    "MOTIVE": [
+      "motive:stolen_composition",
+      "motive:protect_secret",
+      "motive:already_exposed",
+      "motive:scholarship_threat",
+      "motive:institutional_silence",
+      "motive:reputation_preserved"
+    ],
+    "MODIFIER": [
+      "modifier:lights_off_after_nine",
+      "modifier:handrail_unsecured",
+      "modifier:reported_three_times",
+      "modifier:never_acted_on",
+      "modifier:initials_in_own_hand",
+      "modifier:hungarian_origin",
+      "modifier:vienna_premiere",
+      "modifier:scholarship_due_friday",
+      "modifier:public_argument_at_lunch",
+      "modifier:alone_after_nine"
+    ],
+    "EVENT": [
+      "event:stairwell_fall",
+      "event:ashby_recognises_quartet",
+      "event:panel_meeting_friday"
+    ],
+    "TIME_LEGACY": [
+      "time:winter_term_1974",
+      "time:monday_morning",
+      "time:thursday_evening",
+      "time:friday_panel",
+      "time:nine_pm",
+      "time:nine_fifteen_pm",
+      "time:nine_forty_five_pm"
+    ],
+    "ACTION_LEGACY": [
+      "action:score_examined",
+      "action:lights_switched_off",
+      "action:argument_witnessed",
+      "action:archive_consulted",
+      "action:home_at_nine_thirty",
+      "action:body_found_basement",
+      "action:maintenance_request_filed",
+      "action:examination_played",
+      "action:tape_pulled_from_shelf"
+    ]
+  },
+
+  "_player_cards_comment": "Tokens the player can play as cards. Includes inquiry cards (witnesses/objects/motives/legacy actions) and travel cards (one per emittable location).",
+  "player_cards": {
+    "inquiry": "@all_PLAYER_or_SHARED_with_dim_in_[OBJECT_FOCUS,PRESENCE,ACTION_LEGACY,MOTIVE]",
+    "travel": [
+      "travel:to_practice_room_a",
+      "travel:to_practice_wing_basement",
+      "travel:to_recital_hall",
+      "travel:to_faculty_lounge",
+      "travel:to_ashby_office",
+      "travel:to_archive_basement",
+      "travel:to_library_periodicals",
+      "travel:to_porters_lodge",
+      "travel:to_harmony_classroom",
+      "travel:to_courtyard"
+    ]
+  }
+}

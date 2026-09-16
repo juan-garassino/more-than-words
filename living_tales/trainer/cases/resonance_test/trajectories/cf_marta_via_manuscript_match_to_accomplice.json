@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_marta_via_manuscript_match_to_accomplice",
+  "case_id": "resonance_test",
+  "description": "Counterfactual: Norwood does not leave the room at the moment of discovery; his calm reads as complicity, and he is accused as Marta's accomplice.",
+  "outcome": "accomplice_found",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "marta_via_manuscript_match",
+  "branch_turn": 25,
+  "divergence_token": "PRESENCE=presence:with_archive_clerk_norwood",
+  "tags": [
+    "counterfactual",
+    "presence_divergence",
+    "accomplice_found",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from marta_via_manuscript_match at turn 25 on PRESENCE=presence:with_archive_clerk_norwood.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.62,
+      0.66,
+      0.62
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:archive_basement"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 25,
+      "_note": "Diverge \u2014 Norwood remains present at the moment of discovery.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_archive_card",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:authorship_inverts",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.66,
+        0.7,
+        0.66
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Examine manuscript with Norwood.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.7,
+        0.74,
+        0.7
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Misread Norwood's calm as complicity.",
+      "player_card": "suspect:archive_clerk_norwood",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.76,
+        0.75
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Motive \u2014 institutional silence (misread).",
+      "player_card": "motive:institutional_silence",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.78,
+        0.76
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Confront Norwood.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.8,
+        0.78
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Press.",
+      "player_card": "suspect:archive_clerk_norwood",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.8,
+        0.82,
+        0.8
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Dawn \u2014 Norwood accused as accomplice.",
+      "player_card": "suspect:archive_clerk_norwood",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.84,
+        0.82
+      ]
+    }
+  ],
+  "ending": {
+    "type": "accomplice_found",
+    "accused": "suspect:archive_clerk_norwood",
+    "true_culprit": "suspect:marta_solis",
+    "final_convergence": [
+      0.82,
+      0.84,
+      0.82
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=marta_via_manuscript_match"
+  }
+}

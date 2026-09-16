@@ -1,0 +1,114 @@
+{
+  "_art_dir": "art/orchard_at_dusk/direct_pixel_art_v1/pixel_320x320",
+  "_default": "orchard_at_dusk_orchard_at_dusk_pixel_320x320_v01.png",
+  "_briefing": "orchard_at_dusk_orchard_at_dusk_pixel_320x320_v01.png",
+  "_ending": "orchard_at_dusk_field_gate_in_long_grass_pixel_320x320_v01.png",
+
+  "location:crale_orchard":              "orchard_at_dusk_crale_orchard_pixel_320x320_v01.png",
+  "location:cider_press":                "orchard_at_dusk_cider_press_pixel_320x320_v01.png",
+  "location:crale_farmhouse_kitchen":    "orchard_at_dusk_crale_farmhouse_kitchen_pixel_320x320_v01.png",
+  "location:orchard_lane":               "orchard_at_dusk_orchard_lane_pixel_320x320_v01.png",
+  "location:field_gate":                 "orchard_at_dusk_field_gate_in_long_grass_pixel_320x320_v01.png",
+  "location:webb_farm":                  "orchard_at_dusk_webb_farm_yard_pixel_320x320_v01.png",
+  "location:village_inn":                "orchard_at_dusk_hawk_and_shoe_inn_pixel_320x320_v01.png",
+  "location:parish_church":              "orchard_at_dusk_parish_church_pixel_320x320_v01.png",
+  "location:registry_office":            "orchard_at_dusk_bristol_registry_office_pixel_320x320_v01.png",
+
+  "_locations": {
+    "location:crale_orchard": {
+      "summary_en": "Seven acres of old apple trees on the slope above the Crale farmhouse. The drainage was finished in 1899 and the productivity has climbed since. The orchard is the boundary in dispute.",
+      "summary_es": "Siete acres de viejos manzanos en la ladera sobre la granja Crale. El drenaje se terminó en 1899 y la productividad ha subido desde entonces. El huerto es el límite en disputa."
+    },
+    "location:cider_press": {
+      "summary_en": "The cider press shed at the orchard's foot. The press turned all of harvest week. The ledger of pressings sits on a shelf beside the door.",
+      "summary_es": "El cobertizo del lagar al pie del huerto. El lagar estuvo girando toda la semana de la cosecha. El libro de prensados descansa en un estante junto a la puerta."
+    },
+    "location:crale_farmhouse_kitchen": {
+      "summary_en": "The kitchen of the Crale farmhouse. The supper of seven o'clock was taken here. Eliza Crale sits at the deal table; the kettle is always on the hob.",
+      "summary_es": "La cocina de la casa de los Crale. La cena de las siete se tomó aquí. Eliza Crale se sienta a la mesa de madera; la tetera siempre está sobre la hornilla."
+    },
+    "location:orchard_lane": {
+      "summary_en": "The lane between Crale Farm and Webb Farm. It runs along the disputed boundary. Two paths cross the orchard from the lane to the boundary — one mown short, the other left in long grass.",
+      "summary_es": "El sendero entre la granja Crale y la granja Webb. Corre a lo largo del límite en disputa. Dos caminos cruzan el huerto desde el sendero hasta el límite — uno segado, el otro dejado con hierba alta."
+    },
+    "location:field_gate": {
+      "summary_en": "The field gate on the orchard path. It was in one position on Thursday morning and another by Friday evening. Twelve feet, by the measure. Three minutes' work for one man.",
+      "summary_es": "El portón del campo en el camino del huerto. Estaba en una posición el jueves por la mañana y en otra el viernes por la tarde. Doce pies, según la medida. Tres minutos de trabajo para un hombre."
+    },
+    "location:webb_farm": {
+      "summary_en": "The Webb farmstead, half a mile east of Crale Farm by the lane. Amos Webb keeps a smaller holding here, inherited through his wife's father, who died in 1898.",
+      "summary_es": "La hacienda Webb, a media milla al este de la granja Crale por el sendero. Amos Webb lleva aquí una hacienda más pequeña, heredada por el padre de su esposa, que murió en 1898."
+    },
+    "location:village_inn": {
+      "summary_en": "The Hawk and Shoe, on Thornfield High Street. The Thursday confrontation between Webb and Oates was heard from the snug. Ned Sowerby kept the bar.",
+      "summary_es": "El Halcón y la Herradura, en la calle mayor de Thornfield. La confrontación del jueves entre Webb y Oates se oyó desde el reservado. Ned Sowerby atendía la barra."
+    },
+    "location:parish_church": {
+      "summary_en": "St Bartholomew's, Thornfield. Reverend Caddick has held the living for twenty-six years and remembers names and the years they belong to. The parish register sits in the vestry.",
+      "summary_es": "San Bartolomé, Thornfield. El reverendo Caddick lleva veintiséis años en la parroquia y recuerda los nombres y los años a que pertenecen. El registro parroquial está en la sacristía."
+    },
+    "location:registry_office": {
+      "summary_en": "The Bristol land registry on Corn Street, where Oates was due to file his correction on Monday and where the 1884 paper may yet be found, if it was ever filed at all.",
+      "summary_es": "El registro de tierras de Bristol en Corn Street, donde Oates debía presentar su corrección el lunes y donde el papel de 1884 aún podría hallarse, si es que se llegó a presentar."
+    }
+  },
+
+  "_npcs": {
+    "presence:with_thomas_crale": {
+      "role": "suspect",
+      "name_en": "Thomas Crale",
+      "name_es": "Thomas Crale",
+      "summary_en": "Fifty-eight, farmer, took the farm from his father in 1891. Has run it without distinction for twelve years. A man with a secret older than his marriage and a debt older than his land.",
+      "summary_es": "Cincuenta y ocho años, granjero, tomó la granja de su padre en 1891. La ha llevado sin distinción durante doce años. Un hombre con un secreto más viejo que su matrimonio y una deuda más vieja que su tierra."
+    },
+    "presence:with_amos_webb": {
+      "role": "suspect",
+      "name_en": "Amos Webb",
+      "name_es": "Amos Webb",
+      "summary_en": "Forty-four, neighbour, inherited Webb Farm through his wife on Alderton's death in 1898. The clearest visible motive in the case and the wrong man. Angry in a way that looks like guilt.",
+      "summary_es": "Cuarenta y cuatro años, vecino, heredó la granja Webb a través de su esposa tras la muerte de Alderton en 1898. El motivo visible más claro del caso y el hombre equivocado. Iracundo de una forma que parece culpa."
+    },
+    "presence:with_eliza_crale": {
+      "role": "suspect",
+      "name_en": "Eliza Crale",
+      "name_es": "Eliza Crale",
+      "summary_en": "Fifty-two, Thomas Crale's wife of twenty-nine years. Keeps the farmhouse kitchen and the cider press ledger. Knows the shape of what her husband does not say.",
+      "summary_es": "Cincuenta y dos años, esposa de Thomas Crale desde hace veintinueve. Lleva la cocina de la granja y el libro del lagar. Conoce la forma de lo que su marido no dice."
+    },
+    "presence:with_hob_tilling": {
+      "role": "suspect",
+      "name_en": "Hob Tilling",
+      "name_es": "Hob Tilling",
+      "summary_en": "Twenty-three, farmhand, three seasons on Crale Farm. Took supper with Crale at seven on Friday — his honest alibi for that hour. Was in the upper field at four. He does not yet know that the gap is the case.",
+      "summary_es": "Veintitrés años, peón, tres temporadas en la granja Crale. Cenó con Crale a las siete el viernes — su coartada honesta para esa hora. A las cuatro estaba en el campo de arriba. Aún no sabe que ese hueco es el caso."
+    },
+    "presence:with_reverend_caddick": {
+      "role": "witness",
+      "name_en": "Reverend Caddick",
+      "name_es": "el reverendo Caddick",
+      "summary_en": "Vicar of St Bartholomew's, twenty-six years in the parish. Buried Alderton in 1898 and remembers something he was not asked to remember from 1884. Will speak if the right question is put.",
+      "summary_es": "Vicario de San Bartolomé, veintiséis años en la parroquia. Enterró a Alderton en 1898 y recuerda algo que no le pidieron recordar de 1884. Hablará si se le hace la pregunta correcta."
+    },
+    "presence:with_constable_briggs": {
+      "role": "witness",
+      "name_en": "Constable Briggs",
+      "name_es": "el agente Briggs",
+      "summary_en": "Village constable, recorded the death as accidental at the coroner's instruction. Has the inquest book and knows what it does not contain.",
+      "summary_es": "Agente del pueblo, asentó la muerte como accidental por instrucción del juez. Tiene el libro del sumario y sabe lo que no figura en él."
+    },
+    "presence:with_ned_sowerby": {
+      "role": "witness",
+      "name_en": "Ned Sowerby",
+      "name_es": "Ned Sowerby",
+      "summary_en": "Innkeeper of the Hawk and Shoe. Heard the Thursday-evening confrontation between Webb and Oates from behind the bar. Counted four witnesses and remembers what each of them paid for.",
+      "summary_es": "Tabernero del Halcón y la Herradura. Oyó la confrontación del jueves por la noche entre Webb y Oates desde detrás de la barra. Contó cuatro testigos y recuerda lo que pagó cada uno."
+    },
+    "presence:with_martha_ainsworth": {
+      "role": "witness",
+      "name_en": "Martha Ainsworth",
+      "name_es": "Martha Ainsworth",
+      "summary_en": "Amos Webb's sister-in-law, who keeps house at Webb Farm. Saw Crale come up the orchard lane at four on Friday afternoon. Saw him come up alone.",
+      "summary_es": "Cuñada de Amos Webb, que lleva la casa en la granja Webb. Vio a Crale subir por el sendero del huerto a las cuatro del viernes por la tarde. Lo vio subir solo."
+    }
+  }
+}

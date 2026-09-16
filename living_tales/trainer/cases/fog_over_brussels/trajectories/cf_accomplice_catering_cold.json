@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_accomplice_catering_cold",
+  "case_id": "fog_over_brussels",
+  "description": "Counterfactual branch of accomplice_via_catering_supervisor. At turn 24 the supervisor's stance turns hostile \u2014 he refuses to confirm what he saw, and the case collapses into a cold trail by dawn.",
+  "outcome": "cold_trail",
+  "branch_of": "accomplice_via_catering_supervisor",
+  "branch_turn": 24,
+  "divergence_token": "STANCE=stance:hostile",
+  "starting_hypothesis": "counterfactual_branch",
+  "tags": [
+    "counterfactual_branch",
+    "cold_trail",
+    "stance_divergence",
+    "supervisor_hostile"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:kitchen_corridor",
+      "location:embassy_kitchen",
+      "location:kitchen_corridor",
+      "location:west_wing_stairwell",
+      "location:cipher_room",
+      "location:document_room",
+      "location:kitchen_corridor",
+      "location:reception_room",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.78,
+      0.78,
+      0.78
+    ]
+  },
+  "turns": [
+    {
+      "turn": 24,
+      "_note": "DIVERGENCE: supervisor turns hostile, refuses to confirm.",
+      "player_card": "witness:catering_supervisor",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.79, 0.76, 0.77]
+    },
+    {
+      "turn": 25,
+      "_note": "He walks off into the kitchen.",
+      "player_card": "travel:to_embassy_kitchen",
+      "scene": {
+        "LOCATION": "location:embassy_kitchen",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.79, 0.76, 0.77]
+    },
+    {
+      "turn": 26,
+      "_note": "Empty. No second tray today.",
+      "player_card": "object:catering_tray",
+      "scene": {
+        "LOCATION": "location:embassy_kitchen",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.79, 0.76, 0.77]
+    },
+    {
+      "turn": 27,
+      "_note": "Drift back to the entrance.",
+      "player_card": "travel:to_embassy_entrance",
+      "scene": {
+        "LOCATION": "location:embassy_entrance",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_thickens",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.79, 0.76, 0.77]
+    },
+    {
+      "turn": 28,
+      "_note": "The morning came; the file was closed.",
+      "player_card": "travel:to_rue_de_la_loi",
+      "scene": {
+        "LOCATION": "location:rue_de_la_loi",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.79, 0.76, 0.77]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "final_convergence": [0.79, 0.76, 0.77],
+    "true_culprit": "suspect:brennan",
+    "_note": "Supervisor refused to confirm; trail went cold by dawn."
+  }
+}

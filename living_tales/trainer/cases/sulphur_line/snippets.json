@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "case_id": "sulphur_line",
+  "_comment": "Reusable scene-tuple templates for trajectory authoring. Each snippet fixes 5-7 of the dim slots (the constants that define the scene type) and lists the slots the author must supply per use (the variables that distinguish one instance from another). Token IDs are drawn from cases/sulphur_line/dimensions.json. The log_revision_moment and shadow_of_gap_moment snippets use the case-specific INDUSTRIAL_TELL extension dim; shadow_of_gap_moment carries the LATE-phase pivot that closes the case onto Oake (a reference in an earlier entry to a note that should have followed it and did not).",
+
+  "snippets": {
+
+    "cold_object_examination": {
+      "description": "Detective alone with a single object — the maintenance log open on its bracket at the foreman's station, the accident log on the office desk, the sulphur scales in the dispatch office, the canal button on the office blotter. Cold, methodical inspection. No NPC pressure, no tell, no stance, no industrial tell beyond what the object itself carries. Used for opening turns and quiet evidence beats between interviews.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "first_witness_interview_cooperative": {
+      "description": "First contact with a works witness — the works clerk at her dispatch ledger, the night watchman at the gate hut, the bargee at the wharf, the widow Birch at her front room, the dispatch porter on the loading bench — who has no reason to lie. They give what they saw or what their book recorded, plainly. The detective is questioning, the witness is open, the gas lamps in the works yard are steady. Use early in trajectory before any pressure has built.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "INDUSTRIAL_TELL": "industrial_tell:safety_record_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "witness_reinterview_defensive": {
+      "description": "Returning to a witness already questioned — Craggs at his station with the maintenance log open, Oake in his office with the duty record on the desk, Mrs Oake in the front room with the supper hour now in dispute — this time with the revision or the scales mismatch in hand. Their stance shifts to defensive; the procedural language tightens, the qualifiers double up. Use mid-game, second or third pass on a suspect, after a contradiction has surfaced elsewhere.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "TELL": "emotion:closed_posture",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "PRESENCE", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "transition_pursuing_lead": {
+      "description": "A movement turn — the detective is in motion between the works yard and the dispatch office, the foreman's station and the canal path, the gate and the manager's house, having just been pointed somewhere by a witness or by an entry in a ledger that does not match the entry above it. Brief, kinetic. The chimney smoke settles against the winter sky; the works whistle sounds the half-hour. The scene proper begins next turn.",
+      "template": {
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "dead_end_witness": {
+      "description": "A witness has nothing useful — the dispatch porter who can say only that he was not asked to load on the Friday, the night watchman whose round did not take in the service road, the bargee whose two figures on the towpath were not faces he could name. Cooperative but uninformed. The lead closes here. Used to puncture momentum and force the detective back to the maintenance log and the canal bend.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands",
+        "REVELATION": "revelation:dead_end",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "INDUSTRIAL_TELL": "industrial_tell:safety_record_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "BEAT"]
+    },
+
+    "revelation_object_recognition": {
+      "description": "An object the detective has already seen — the maintenance log, the accident log, the canal button on the office blotter, the dispatch ledger — suddenly resolves into meaning. Alone, looking at the same thing in a new light. Late investigation or closing-in beat. Pairs with name_uncovered, motive_emerges, or shadow_of_gap_lands revelations.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "confrontation_hostile": {
+      "description": "Direct accusation. The detective has the chain in hand — the revised maintenance log, the button at the bend, the widow's document, the dispatch ledger mismatch — and is putting it to the suspect across the office desk or the foreman's station. The stance is hostile, the tell is sharp, the beat is closing_in or verdict_ready. Use sparingly — once or twice per trajectory.",
+      "template": {
+        "CAUSE": "cause:pursued_suspicion",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION"]
+    },
+
+    "revisit_for_reframing": {
+      "description": "The detective returns to a location already visited — the canal path, the foreman's station, the dispatch office, the manager's house — alone, to look at it again with the new context. Nothing dramatic — a quiet recasting of an earlier scene. Often produces a partial_match or contradiction_surfaces.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "atmospheric_interlude": {
+      "description": "A low-activity beat. The chimney smoke settles against the winter sky; the works whistle sounds the half-hour; the canal water is still under the towpath lamp. Time passes; the works breathe around the detective. Minimal scene activity, no revelation, no NPC. Used to mark act breaks or simply to give the prose a place to rest. One or two per trajectory.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "ATMOSPHERE", "BEAT"]
+    },
+
+    "discovery_moment": {
+      "description": "A find — a physical object surfaces from where it had been hidden or missed. The canal button is lifted from the gravel at the bend; the revised entry is found in the maintenance log; the widow's document copy is brought out of a drawer in the manager's office; the scales mismatch is read off the dispatch ledger for the first time. Alone, the act of finding. Distinct from object_recognition: this is the first time the object enters the case, not the moment its meaning lands.",
+      "template": {
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:partial_match",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "log_revision_moment": {
+      "description": "Case-specific snippet. The detective is reading a log — maintenance or accident — and registers a small particular: the ink does not match, the hand does not match, the entry has been revised. Not a forgery; a revision. The INDUSTRIAL_TELL slot carries which signal. Used 3-5 times per trajectory, MID phase onward, always with the relevant log object in focus. This is the case's mechanical signal cluster — the moment Gould knew, which is the moment the case's clock started.",
+      "template": {
+        "CAUSE": "cause:tracing_log_revision",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "INDUSTRIAL_TELL", "REVELATION"]
+    },
+
+    "canal_path_walk": {
+      "description": "Case-specific snippet. The detective walks the canal towpath alone — the path Gould walked every evening for four evenings and did not complete on the fifth. The bend, unlit and unmarked at the edge. Two pairs of prints in the gravel; a button in the verge. The atmosphere is the canal at dusk or after. Use once or twice per trajectory, MID-to-LATE phase. Pairs with industrial_tell:button_at_bend or industrial_tell:shoe_prints_paired.",
+      "template": {
+        "LOCATION": "location:canal_path",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:winter_dusk_falls",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["TRANSITION", "OBJECT_FOCUS", "INDUSTRIAL_TELL", "REVELATION"]
+    },
+
+    "shadow_of_gap_moment": {
+      "description": "Case-specific snippet. The case's central pivot. Alone in the foreman's station or the dispatch office or the manager's office, the detective reads the maintenance log or the accident log and registers not the gap itself but the shadow of it — a reference in an earlier entry to a note that should have followed it and did not. The REVELATION is shadow_of_gap_lands; the INDUSTRIAL_TELL is industrial_tell:shadow_of_gap. The motive plateau breaks: the case closes onto Oake. Use once per trajectory, LATE phase, and only on convergence_min >= 0.6.",
+      "template": {
+        "CAUSE": "cause:tracing_log_revision",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:shadow_of_gap_lands",
+        "INDUSTRIAL_TELL": "industrial_tell:shadow_of_gap",
+        "BEAT": "beat:closing_in"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS"]
+    }
+
+  }
+}

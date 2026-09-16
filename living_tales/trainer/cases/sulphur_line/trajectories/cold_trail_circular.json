@@ -1,0 +1,1159 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cold_trail_circular",
+  "case_id": "sulphur_line",
+  "description": "Circular loop. Detective walks foreman \u2192 dispatch \u2192 canal \u2192 processing line \u2192 gate and back, several times. Witnesses repeat themselves. Convergence stalls around 0.30. Many dead_end revelations. Walks out the gate at the close.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "circular_loop",
+  "tags": [
+    "cold_trail",
+    "circular_visits",
+    "no_progress"
+  ],
+  "opening": {
+    "tokens": [
+      "location:works_gate",
+      "event:gould_discovered_at_dawn",
+      "time:monday_inspection_begins"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open. Gate book.",
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.06
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Back to foreman_station.",
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.075,
+        0.075,
+        0.075
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:maintenance_log",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.085,
+        0.085,
+        0.085
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Back to dispatch_office.",
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:dispatch_ledger",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.11,
+        0.11,
+        0.11
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Back to canal_path.",
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.125,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:canal_button",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.135,
+        0.135,
+        0.135
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Back to processing_line.",
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:valve_part",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.16,
+        0.16,
+        0.16
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Back to works_gate.",
+      "player_card": "witness:night_watchman",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.175,
+        0.175,
+        0.175
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.185,
+        0.185,
+        0.185
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Back to foreman_station.",
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:maintenance_log",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.21,
+        0.21,
+        0.21
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Back to dispatch_office.",
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.225,
+        0.225,
+        0.225
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:dispatch_ledger",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.235,
+        0.235,
+        0.235
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Back to canal_path.",
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:canal_button",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.26,
+        0.26,
+        0.26
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Back to processing_line.",
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.275,
+        0.275,
+        0.275
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:valve_part",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.285,
+        0.285,
+        0.285
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Back to works_gate.",
+      "player_card": "witness:night_watchman",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.31,
+        0.31,
+        0.31
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Back to foreman_station.",
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.325,
+        0.325,
+        0.325
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:maintenance_log",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.335,
+        0.335,
+        0.335
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Back to dispatch_office.",
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:dispatch_ledger",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Back to canal_path.",
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:canal_button",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Back to processing_line.",
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:valve_part",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Back to works_gate.",
+      "player_card": "witness:night_watchman",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Back to foreman_station.",
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:maintenance_log",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Back to dispatch_office.",
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:dispatch_ledger",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Back to canal_path.",
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:canal_button",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Back to processing_line.",
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:valve_part",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Back to works_gate.",
+      "player_card": "witness:night_watchman",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 41,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 42,
+      "_note": "Back to foreman_station.",
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 43,
+      "_note": "Examine. Yields nothing.",
+      "player_card": "object:maintenance_log",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 44,
+      "_note": "Time passes.",
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 45,
+      "_note": "Time passes.",
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 46,
+      "_note": "Time passes.",
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 47,
+      "_note": "Walk out the gate.",
+      "player_card": "travel:to_works_gate",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:leaves",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    }
+  ],
+  "ending": {
+    "type": "cold_case",
+    "accused": "suspect:silas_oake",
+    "final_convergence": [
+      0.34,
+      0.34,
+      0.34
+    ]
+  }
+}

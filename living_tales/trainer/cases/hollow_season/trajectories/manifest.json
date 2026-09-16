@@ -1,0 +1,910 @@
+{
+  "schema_version": 1,
+  "case_id": "hollow_season",
+  "_comment": "Wave 1 + Wave 2 + Batch 2 quality-pass (20 hand_paced refurbs + 10 batch-2 CF branches).",
+  "trajectories": [
+    {
+      "id": "correct_edmund_carrow_via_chemists_receipt",
+      "outcome": "correct_edmund_carrow",
+      "length": 40,
+      "starting_hypothesis": "object_first_receipt",
+      "tags": [
+        "chemist_receipt_chain",
+        "wastepaper_basket_bridge",
+        "lyle_corroboration",
+        "emotional_geography"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "correct_edmund_carrow_via_emotional_geography",
+      "outcome": "correct_edmund_carrow",
+      "length": 45,
+      "starting_hypothesis": "motive_first_emotional_pivot",
+      "tags": [
+        "emotional_geography_pivot",
+        "finch_plateau_broken",
+        "portrait_chain",
+        "doorframe_chain",
+        "case_pivot"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "correct_edmund_carrow_via_burned_note",
+      "outcome": "correct_edmund_carrow",
+      "length": 34,
+      "starting_hypothesis": "object_first_burned_note",
+      "tags": [
+        "burned_note_chain",
+        "croft_link",
+        "will_change_friday",
+        "letter_burned_protocol"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "edmund_via_lyle_corroboration",
+      "outcome": "correct_edmund_carrow",
+      "length": 40,
+      "starting_hypothesis": "witness_first_housekeeper",
+      "tags": [
+        "lyle_anchored",
+        "wastepaper_basket_bridge",
+        "housekeeper_loyalty",
+        "green_sack_evidence"
+      ]
+    },
+    {
+      "id": "correct_edmund_carrow_via_finch_alibi_collapse",
+      "outcome": "correct_edmund_carrow",
+      "length": 42,
+      "starting_hypothesis": "suspect_first_finch_then_edmund",
+      "tags": [
+        "finch_pressed_first",
+        "alibi_holds_for_finch",
+        "snap_back_to_edmund",
+        "long_recovery"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "edmund_via_protocol_breach",
+      "outcome": "correct_edmund_carrow",
+      "length": 41,
+      "starting_hypothesis": "protocol_first",
+      "tags": [
+        "protocol_tell_heavy",
+        "edwardian_class_signals",
+        "addressed_above_station",
+        "letter_burned",
+        "door_left_unlatched"
+      ]
+    },
+    {
+      "id": "wrong_hector_finch",
+      "outcome": "wrong_hector_finch",
+      "length": 42,
+      "starting_hypothesis": "suspect_first_audit_motive",
+      "tags": [
+        "red_herring_path",
+        "audit_evasion_misread",
+        "finch_chain",
+        "designed_wrong"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_mrs_lyle",
+      "outcome": "wrong_mrs_lyle",
+      "length": 41,
+      "starting_hypothesis": "suspect_first_lyle",
+      "tags": [
+        "wrong_accusation",
+        "lyle_chain",
+        "housekeeper_loyalty_misread",
+        "receipt_in_her_sack"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_mr_croft",
+      "outcome": "wrong_mr_croft",
+      "length": 40,
+      "starting_hypothesis": "suspect_first_croft",
+      "tags": [
+        "wrong_accusation",
+        "croft_chain",
+        "debt_misread",
+        "burned_note_overweighted"
+      ]
+    },
+    {
+      "id": "wrong_mrs_penrose",
+      "outcome": "wrong_mrs_penrose",
+      "length": 40,
+      "starting_hypothesis": "suspect_first_penrose",
+      "tags": [
+        "wrong_accusation",
+        "penrose_chain",
+        "rehearsed_grief_misread",
+        "knew_will_change_friday"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_outside_groom",
+      "outcome": "wrong_under_gardener",
+      "length": 40,
+      "starting_hypothesis": "outside_outsider_groom",
+      "tags": [
+        "wrong_accusation",
+        "outsider_misread",
+        "under_gardener_overweighted",
+        "window_chain"
+      ]
+    },
+    {
+      "id": "wrong_estate_solicitor",
+      "outcome": "wrong_solicitor_aldhurst",
+      "length": 41,
+      "starting_hypothesis": "suspect_first_solicitor",
+      "tags": [
+        "wrong_accusation",
+        "aldhurst_chain",
+        "drafted_the_will",
+        "solicitor_misread"
+      ]
+    },
+    {
+      "id": "cold_trail_circular",
+      "outcome": "cold_trail",
+      "length": 50,
+      "starting_hypothesis": "circular_loop",
+      "tags": [
+        "cold_trail",
+        "lyapunov_plateau",
+        "circular_visits",
+        "no_progress"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "cold_trail_audit_loop",
+      "outcome": "cold_trail",
+      "length": 43,
+      "starting_hypothesis": "finch_plateau_no_escape",
+      "tags": [
+        "cold_trail",
+        "finch_plateau",
+        "audit_loop",
+        "no_emotional_geography"
+      ]
+    },
+    {
+      "id": "cold_trail_protocol_loop",
+      "outcome": "cold_trail",
+      "length": 42,
+      "starting_hypothesis": "protocol_only_no_evidence",
+      "tags": [
+        "cold_trail",
+        "protocol_only",
+        "no_physical_evidence",
+        "atmospherics_only"
+      ]
+    },
+    {
+      "id": "partial_correct_misread_motive_a",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "motive_first_audit_misread",
+      "tags": [
+        "partial_correct",
+        "right_culprit_wrong_motive",
+        "audit_motive_misread"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "partial_correct_misread_motive_b",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "motive_first_debt_misread",
+      "tags": [
+        "partial_correct",
+        "right_culprit_wrong_motive",
+        "debt_motive_misread"
+      ]
+    },
+    {
+      "id": "partial_correct_edmund_wrong_night",
+      "outcome": "partial_correct",
+      "length": 41,
+      "starting_hypothesis": "wrong_night_friday",
+      "tags": [
+        "partial_correct",
+        "right_culprit_wrong_night",
+        "Friday_misread",
+        "no_emotional_geography"
+      ]
+    },
+    {
+      "id": "accomplice_via_mrs_lyle",
+      "outcome": "accomplice_found",
+      "length": 43,
+      "starting_hypothesis": "edmund_with_lyle_complicity",
+      "tags": [
+        "accomplice_found",
+        "edmund_correct",
+        "lyle_as_accomplice",
+        "loyalty_misread_as_complicity"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "accomplice_via_finch",
+      "outcome": "accomplice_found",
+      "length": 42,
+      "starting_hypothesis": "edmund_with_finch_complicity",
+      "tags": [
+        "accomplice_found",
+        "edmund_correct",
+        "finch_as_accomplice",
+        "audit_cover_theory"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "framed_hector_finch",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "framed_first_finch",
+      "tags": [
+        "framed_suspect",
+        "finch_framed",
+        "audit_evidence_planted_theory",
+        "edmund_walks"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "framed_mrs_penrose",
+      "outcome": "framed_suspect",
+      "length": 41,
+      "starting_hypothesis": "framed_first_penrose",
+      "tags": [
+        "framed_suspect",
+        "penrose_framed",
+        "rehearsed_grief_misread_as_guilt",
+        "edmund_walks"
+      ]
+    },
+    {
+      "id": "late_revelation_after_finch",
+      "outcome": "late_revelation",
+      "length": 35,
+      "starting_hypothesis": "late_recovery_from_finch_plateau",
+      "tags": [
+        "late_revelation",
+        "post_plateau_recovery",
+        "finch_first_then_edmund",
+        "long_plateau"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "motive_only_via_inheritance_threat",
+      "outcome": "motive_only_confession",
+      "length": 40,
+      "starting_hypothesis": "motive_only_inheritance",
+      "tags": [
+        "motive_only_confession",
+        "high_motive_low_physical",
+        "no_accusation",
+        "emotional_geography_landed"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "red_herring_trap_finch_audit",
+      "outcome": "red_herring_trap",
+      "length": 42,
+      "starting_hypothesis": "trap_first_audit_inflated",
+      "tags": [
+        "red_herring_trap",
+        "finch_audit_inflated_weights",
+        "confident_wrong",
+        "trap"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "edmund_via_summons_chain",
+      "outcome": "correct_edmund_carrow",
+      "length": 42,
+      "starting_hypothesis": "correct_via_summons",
+      "tags": [
+        "correct_path",
+        "cause_summoned",
+        "lyle_anchored",
+        "emotional_geography",
+        "wave2"
+      ]
+    },
+    {
+      "id": "edmund_via_gun_room_chain",
+      "outcome": "correct_edmund_carrow",
+      "length": 42,
+      "starting_hypothesis": "correct_via_gun_room",
+      "tags": [
+        "correct_path",
+        "gun_room_entered_exited",
+        "medicine_phial_chain",
+        "wave2"
+      ]
+    },
+    {
+      "id": "edmund_via_postbox_record",
+      "outcome": "correct_edmund_carrow",
+      "length": 42,
+      "starting_hypothesis": "correct_via_postbox_record",
+      "tags": [
+        "correct_path",
+        "postbox_record_bridge",
+        "croft_link",
+        "emotional_geography",
+        "wave2"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "edmund_via_morning_post_tray",
+      "outcome": "correct_edmund_carrow",
+      "length": 42,
+      "starting_hypothesis": "correct_via_morning_post_tray",
+      "tags": [
+        "correct_path",
+        "morning_post_tray_chain",
+        "lyle_corroboration",
+        "wave2"
+      ]
+    },
+    {
+      "id": "wrong_hector_finch_deep_plateau",
+      "outcome": "wrong_hector_finch",
+      "length": 40,
+      "starting_hypothesis": "deeper_finch_plateau_audit",
+      "tags": [
+        "wrong_accusation",
+        "finch_chain",
+        "deeper_plateau",
+        "audit_evasion_misread",
+        "wave2"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_mrs_lyle_servants_hall",
+      "outcome": "wrong_mrs_lyle",
+      "length": 40,
+      "starting_hypothesis": "lyle_servants_hall_plateau",
+      "tags": [
+        "wrong_accusation",
+        "lyle_chain",
+        "wastepaper_misread",
+        "deeper_plateau",
+        "wave2"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_under_gardener_window_chain",
+      "outcome": "wrong_under_gardener",
+      "length": 40,
+      "starting_hypothesis": "gardener_window_plateau",
+      "tags": [
+        "wrong_accusation",
+        "under_gardener_chain",
+        "window_chain",
+        "deeper_plateau",
+        "wave2"
+      ]
+    },
+    {
+      "id": "wrong_solicitor_aldhurst_will_chain",
+      "outcome": "wrong_solicitor_aldhurst",
+      "length": 40,
+      "starting_hypothesis": "solicitor_will_plateau",
+      "tags": [
+        "wrong_accusation",
+        "aldhurst_chain",
+        "will_chain",
+        "deeper_plateau",
+        "wave2"
+      ]
+    },
+    {
+      "id": "cold_trail_summons_loop",
+      "outcome": "cold_trail",
+      "length": 42,
+      "starting_hypothesis": "summons_loop_no_progress",
+      "tags": [
+        "cold_trail",
+        "summons_loop",
+        "lyle_loop",
+        "no_emotional_geography",
+        "wave2"
+      ]
+    },
+    {
+      "id": "cold_trail_gun_room_dead_end",
+      "outcome": "cold_trail",
+      "length": 42,
+      "starting_hypothesis": "gun_room_dead_end",
+      "tags": [
+        "cold_trail",
+        "gun_room_loop",
+        "medicine_phial_dead_end",
+        "wave2"
+      ]
+    },
+    {
+      "id": "partial_edmund_wrong_motive_audit",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "partial_audit_misread_motive",
+      "tags": [
+        "partial_correct",
+        "audit_motive_misread",
+        "no_emotional_geography",
+        "wave2"
+      ]
+    },
+    {
+      "id": "partial_via_postbox_misread",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "partial_postbox_misread",
+      "tags": [
+        "partial_correct",
+        "postbox_misread",
+        "procedural_motive",
+        "wave2"
+      ]
+    },
+    {
+      "id": "partial_finch_close_but_wrong",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "partial_finch_close_pivot",
+      "tags": [
+        "partial_correct",
+        "finch_close_pivot",
+        "weak_motive",
+        "wave2"
+      ]
+    },
+    {
+      "id": "accomplice_via_mrs_penrose",
+      "outcome": "accomplice_found",
+      "length": 42,
+      "starting_hypothesis": "edmund_with_penrose_complicity",
+      "tags": [
+        "accomplice_found",
+        "edmund_correct",
+        "penrose_silence",
+        "wave2"
+      ]
+    },
+    {
+      "id": "accomplice_via_mr_croft",
+      "outcome": "accomplice_found",
+      "length": 42,
+      "starting_hypothesis": "edmund_with_croft_complicity",
+      "tags": [
+        "accomplice_found",
+        "edmund_correct",
+        "croft_messenger",
+        "wave2"
+      ]
+    },
+    {
+      "id": "framed_mrs_lyle",
+      "outcome": "framed_suspect",
+      "length": 40,
+      "starting_hypothesis": "framed_first_lyle",
+      "tags": [
+        "framed_suspect",
+        "lyle_framed",
+        "receipt_planted_in_sack",
+        "edmund_walks",
+        "wave2"
+      ]
+    },
+    {
+      "id": "framed_under_gardener",
+      "outcome": "framed_suspect",
+      "length": 40,
+      "starting_hypothesis": "framed_first_under_gardener",
+      "tags": [
+        "framed_suspect",
+        "under_gardener_framed",
+        "window_latch_misdirection",
+        "edmund_walks",
+        "wave2"
+      ]
+    },
+    {
+      "id": "late_revelation_after_penrose",
+      "outcome": "late_revelation",
+      "length": 35,
+      "starting_hypothesis": "late_recovery_from_penrose_plateau",
+      "tags": [
+        "late_revelation",
+        "penrose_plateau_recovery",
+        "lyle_save",
+        "wave2"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "late_revelation_after_finch_audit_collapse",
+      "outcome": "late_revelation",
+      "length": 35,
+      "starting_hypothesis": "late_recovery_from_finch_audit_collapse",
+      "tags": [
+        "late_revelation",
+        "finch_audit_collapse",
+        "lyle_save",
+        "wave2"
+      ]
+    },
+    {
+      "id": "motive_only_via_belonging",
+      "outcome": "motive_only_confession",
+      "length": 42,
+      "starting_hypothesis": "motive_only_house_as_mother",
+      "tags": [
+        "motive_only_confession",
+        "house_as_mother",
+        "no_accusation",
+        "emotional_geography_landed",
+        "wave2"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "motive_only_via_protocol_breach_history",
+      "outcome": "motive_only_confession",
+      "length": 42,
+      "starting_hypothesis": "motive_only_protocol_history",
+      "tags": [
+        "motive_only_confession",
+        "protocol_breach_history",
+        "no_accusation",
+        "wave2"
+      ]
+    },
+    {
+      "id": "near_miss_recovers_from_finch",
+      "outcome": "near_miss",
+      "length": 35,
+      "starting_hypothesis": "near_miss_from_finch_plateau",
+      "tags": [
+        "near_miss",
+        "finch_plateau_recovery",
+        "barely_correct",
+        "wave2"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "near_miss_recovers_from_lyle",
+      "outcome": "near_miss",
+      "length": 35,
+      "starting_hypothesis": "near_miss_from_lyle_plateau",
+      "tags": [
+        "near_miss",
+        "lyle_plateau_recovery",
+        "barely_correct",
+        "wave2"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "red_herring_trap_audit_trail_extended",
+      "outcome": "red_herring_trap",
+      "length": 40,
+      "starting_hypothesis": "trap_extended_audit",
+      "tags": [
+        "red_herring_trap",
+        "audit_trail_extended",
+        "high_convergence_wrong",
+        "wave2"
+      ]
+    },
+    {
+      "id": "red_herring_trap_burned_note_misread",
+      "outcome": "red_herring_trap",
+      "length": 40,
+      "starting_hypothesis": "trap_burned_note_misread",
+      "tags": [
+        "red_herring_trap",
+        "burned_note_misread",
+        "croft_chain",
+        "wave2"
+      ]
+    },
+    {
+      "id": "cf_edmund_via_chemists_receipt_to_motive_only",
+      "outcome": "motive_only_confession",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "protocol_tell_divergence",
+        "motive_only_confession",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_edmund_via_emotional_geography_to_finch",
+      "outcome": "wrong_hector_finch",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "object_focus_divergence",
+        "wrong_hector_finch",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_edmund_via_burned_note_to_accomplice",
+      "outcome": "accomplice_found",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "presence_divergence",
+        "accomplice_found",
+        "croft_messenger",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_wrong_hector_finch_to_correct",
+      "outcome": "correct_edmund_carrow",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "cause_divergence",
+        "correct_edmund_carrow",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_accomplice_via_mrs_lyle_to_cold",
+      "outcome": "cold_trail",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "stance_divergence",
+        "cold_trail",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_framed_hector_finch_to_correct",
+      "outcome": "correct_edmund_carrow",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "revelation_divergence",
+        "correct_edmund_carrow",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_red_herring_trap_finch_audit_to_near_miss",
+      "outcome": "near_miss",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "beat_divergence",
+        "near_miss",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_cold_trail_audit_loop_to_late_revelation",
+      "outcome": "late_revelation",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "atmosphere_divergence",
+        "late_revelation",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_partial_correct_misread_motive_a_to_correct",
+      "outcome": "correct_edmund_carrow",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "protocol_tell_divergence",
+        "correct_edmund_carrow",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_late_revelation_after_finch_to_near_miss",
+      "outcome": "near_miss",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "tags": [
+        "counterfactual",
+        "transition_divergence",
+        "near_miss",
+        "wave2_cf"
+      ]
+    },
+    {
+      "id": "cf_correct_edmund_carrow_via_chemists_receipt_to_motive_only",
+      "outcome": "motive_only_confession",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "correct_edmund_carrow_via_chemists_receipt",
+      "branch_turn": 28,
+      "divergence_token": "PROTOCOL_TELL=protocol_tell:servants_bell_unused",
+      "tags": [
+        "counterfactual",
+        "protocol_tell_divergence",
+        "motive_only_confession",
+        "batch2_cf"
+      ]
+    },
+    {
+      "id": "cf_correct_edmund_carrow_via_emotional_geography_to_finch",
+      "outcome": "wrong_hector_finch",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "correct_edmund_carrow_via_emotional_geography",
+      "branch_turn": 28,
+      "divergence_token": "OBJECT_FOCUS=object:audit_letter",
+      "tags": [
+        "counterfactual",
+        "object_focus_divergence",
+        "wrong_hector_finch",
+        "batch2_cf"
+      ]
+    },
+    {
+      "id": "cf_correct_edmund_carrow_via_burned_note_to_accomplice",
+      "outcome": "accomplice_found",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "correct_edmund_carrow_via_burned_note",
+      "branch_turn": 18,
+      "divergence_token": "PRESENCE=presence:with_croft",
+      "tags": [
+        "counterfactual",
+        "presence_divergence",
+        "accomplice_found",
+        "batch2_cf"
+      ]
+    },
+    {
+      "id": "cf_wrong_hector_finch_to_correct_edmund",
+      "outcome": "correct_edmund_carrow",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "wrong_hector_finch",
+      "branch_turn": 30,
+      "divergence_token": "CAUSE=cause:noticed_inconsistency",
+      "tags": [
+        "counterfactual",
+        "cause_divergence",
+        "correct_edmund_carrow",
+        "batch2_cf"
+      ]
+    },
+    {
+      "id": "cf_accomplice_via_mrs_lyle_to_cold_trail",
+      "outcome": "cold_trail",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "accomplice_via_mrs_lyle",
+      "branch_turn": 22,
+      "divergence_token": "STANCE=stance:cooperative",
+      "tags": [
+        "counterfactual",
+        "stance_divergence",
+        "cold_trail",
+        "batch2_cf"
+      ]
+    },
+    {
+      "id": "cf_framed_hector_finch_to_correct_edmund",
+      "outcome": "correct_edmund_carrow",
+      "length": 7,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "framed_hector_finch",
+      "branch_turn": 24,
+      "divergence_token": "REVELATION=revelation:emotional_geography_lands",
+      "tags": [
+        "counterfactual",
+        "revelation_divergence",
+        "correct_edmund_carrow",
+        "batch2_cf"
+      ]
+    },
+    {
+      "id": "cf_red_herring_trap_finch_audit_to_near_miss_b",
+      "outcome": "near_miss",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "red_herring_trap_finch_audit",
+      "branch_turn": 28,
+      "divergence_token": "BEAT=beat:closing_in",
+      "tags": [
+        "counterfactual",
+        "beat_divergence",
+        "near_miss",
+        "batch2_cf"
+      ]
+    },
+    {
+      "id": "cf_cold_trail_circular_to_late_revelation",
+      "outcome": "late_revelation",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "cold_trail_circular",
+      "branch_turn": 40,
+      "divergence_token": "ATMOSPHERE=atmosphere:dawn_approaches",
+      "tags": [
+        "counterfactual",
+        "atmosphere_divergence",
+        "late_revelation",
+        "batch2_cf"
+      ]
+    },
+    {
+      "id": "cf_partial_correct_misread_motive_a_to_correct_b",
+      "outcome": "correct_edmund_carrow",
+      "length": 6,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "partial_correct_misread_motive_a",
+      "branch_turn": 30,
+      "divergence_token": "PROTOCOL_TELL=protocol_tell:door_left_unlatched",
+      "tags": [
+        "counterfactual",
+        "protocol_tell_divergence",
+        "correct_edmund_carrow",
+        "batch2_cf"
+      ]
+    },
+    {
+      "id": "cf_late_revelation_after_finch_to_near_miss_b",
+      "outcome": "near_miss",
+      "length": 5,
+      "starting_hypothesis": "counterfactual",
+      "branch_of": "late_revelation_after_finch",
+      "branch_turn": 24,
+      "divergence_token": "TRANSITION=transition:stayed",
+      "tags": [
+        "counterfactual",
+        "transition_divergence",
+        "near_miss",
+        "batch2_cf"
+      ]
+    }
+  ]
+}

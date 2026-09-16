@@ -1,0 +1,976 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "framed_hector_finch",
+  "case_id": "hollow_season",
+  "description": "Player concludes Finch was framed: phial planted, ledger pages exposed. Edmund walks.",
+  "outcome": "framed_suspect",
+  "starting_hypothesis": "framed_first_finch",
+  "tags": [
+    "framed_suspect",
+    "finch_framed",
+    "audit_evidence_planted_theory",
+    "edmund_walks"
+  ],
+  "opening": {
+    "tokens": [
+      "location:library",
+      "event:sir_geoffrey_discovered",
+      "time:sunday_before_breakfast"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "object:brandy_decanter",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:brandy_decanter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.04,
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "object:french_window_latch",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:french_window_latch",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rooks_settle",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:door_left_unlatched"
+      },
+      "convergence_after": [
+        0.08,
+        0.08,
+        0.08
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "witness:butler_hadley",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_butler_hadley",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:summer_light_slants",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rooks_settle",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.14,
+        0.16,
+        0.14
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "travel:to_gatehouse_lodge",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:rooks_settle",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.16,
+        0.18,
+        0.16
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "suspect:hector_finch",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.2,
+        0.22,
+        0.18
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "object:timber_ledger",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.22,
+        0.24,
+        0.2
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.26,
+        0.28,
+        0.22
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "motive:audit_evasion",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.36,
+        0.28
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.36,
+        0.4,
+        0.32
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "modifier:audit_scheduled_monday",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.44,
+        0.36
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "suspect:hector_finch",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.44,
+        0.48,
+        0.4
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "object:medicine_phial",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:medicine_phial",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.48,
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "object:burned_note",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.52,
+        0.54,
+        0.44
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "suspect:hector_finch",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.56,
+        0.58,
+        0.48
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "object:timber_ledger",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.62,
+        0.52
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.64,
+        0.66,
+        0.56
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "motive:audit_evasion",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.68,
+        0.7,
+        0.6
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.7,
+        0.72,
+        0.62
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "object:medicine_phial",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:medicine_phial",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.72,
+        0.74,
+        0.64
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "object:burned_note",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.74,
+        0.76,
+        0.66
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "modifier:audit_scheduled_monday",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.78,
+        0.68
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "object:timber_ledger",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.79,
+        0.7
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "suspect:hector_finch",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.72
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.81,
+        0.82,
+        0.74
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.83,
+        0.76
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "object:medicine_phial",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:medicine_phial",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.83,
+        0.84,
+        0.78
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "modifier:audit_scheduled_monday",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.84,
+        0.84,
+        0.8
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "object:timber_ledger",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.85,
+        0.85,
+        0.81
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.85,
+        0.86,
+        0.82
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "suspect:hector_finch",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.82
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "motive:audit_evasion",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "object:medicine_phial",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:medicine_phial",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "object:burned_note",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "object:timber_ledger",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "suspect:hector_finch",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "motive:audit_evasion",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "modifier:audit_scheduled_monday",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "ACCUSE:suspect:hector_finch",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.83
+      ]
+    }
+  ],
+  "ending": {
+    "type": "framed",
+    "accused": "suspect:hector_finch",
+    "framer_suspect": "suspect:edmund_carrow",
+    "final_convergence": [
+      0.86,
+      0.86,
+      0.83
+    ]
+  }
+}

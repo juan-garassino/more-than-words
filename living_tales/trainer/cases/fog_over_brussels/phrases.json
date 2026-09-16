@@ -1,0 +1,875 @@
+{
+  "schema_version": 2,
+  "case_id": "fog_over_brussels",
+  "voice": "third_person_past",
+  "_comment": "Slot-fillable phrases per dim token in en + es. Each entry is either a plain string, a list of 3-5 interchangeable variants, or (for top-NPC PRESENCE tokens — Brennan, Helena Voss, the catering supervisor) a dict of voice-arc stages cold/warming/breaking/broken. The composer picks variants deterministically by hash(turn_idx, token_id). All variants must work in any place the original string worked. Voice: third-person past, methodical, cold, reconstructive — Obra Dinn cartouche cadence, 1961 diplomatic-file register.",
+
+  "LOCATION": {
+    "location:reception_room":      {"en": ["the reception room", "the embassy reception room"], "es": ["la sala de recepción", "el salón de recepción de la embajada"]},
+    "location:kitchen_corridor":    {"en": ["the kitchen corridor", "the corridor between the kitchen and the reception"], "es": ["el corredor de cocina", "el pasillo entre la cocina y la recepción"]},
+    "location:embassy_kitchen":     {"en": ["the embassy kitchen", "the reception kitchen"], "es": ["la cocina de la embajada", "la cocina de la recepción"]},
+    "location:cipher_room":         {"en": ["the cipher room", "the cipher room in the west wing"], "es": ["la sala de cifrado", "la sala de cifrado del ala oeste"]},
+    "location:document_room":       {"en": ["the document room", "the document room beside the cipher room"], "es": ["la sala de documentos", "la sala de documentos junto a la de cifrado"]},
+    "location:ambassadors_office":  {"en": ["the ambassador's office", "the ambassador's office on the first floor"], "es": ["el despacho del embajador", "el despacho del embajador en la primera planta"]},
+    "location:east_wing_landing":   {"en": ["the east wing landing", "the landing of the east wing"], "es": ["el rellano del ala este", "el descansillo del ala este"]},
+    "location:west_wing_stairwell": {"en": ["the west wing stairwell", "the stairwell of the cold wing"], "es": ["la escalera del ala oeste", "la escalera del ala fría"]},
+    "location:embassy_entrance":    {"en": ["the embassy entrance", "the door on the Rue de la Loi"], "es": ["la entrada de la embajada", "la puerta de la Rue de la Loi"]},
+    "location:rue_de_la_loi":       {"en": ["the Rue de la Loi", "the avenue outside the embassy"], "es": ["la Rue de la Loi", "la avenida frente a la embajada"]},
+    "location:none":                {"en": "", "es": ""}
+  },
+
+  "TRANSITION": {
+    "transition:stayed": {
+      "en": ["Still at", "Held position at", "Remained at", "Did not move from"],
+      "es": ["Aún en", "Sin moverse de", "Permanecía en", "Continuaba en"]
+    },
+    "transition:crossed_to": {
+      "en": ["Crossed to", "Moved across to", "Stepped through to", "Walked through to"],
+      "es": ["Cruzó hasta", "Atravesó hasta", "Pasó hasta", "Caminó hasta"]
+    },
+    "transition:entered": {
+      "en": ["Entered", "Stepped into", "Passed into", "Went into"],
+      "es": ["Entró en", "Pasó a", "Se adentró en", "Penetró en"]
+    },
+    "transition:exited": {
+      "en": ["Stepped out of", "Left", "Passed out of", "Withdrew from"],
+      "es": ["Salió de", "Abandonó", "Se retiró de", "Dejó atrás"]
+    },
+    "transition:returned": {
+      "en": ["Returned to", "Came back to", "Went back to", "Doubled back to"],
+      "es": ["Volvió a", "Regresó a", "Retornó a", "Volvió sobre sus pasos a"]
+    },
+    "transition:pursued_to": {
+      "en": ["Followed the lead to", "Tracked the matter to", "Followed the thread to", "Carried the question to"],
+      "es": ["Siguió la pista hasta", "Llevó el asunto hasta", "Siguió el hilo hasta", "Trasladó la cuestión a"]
+    },
+    "transition:called_away_to": {
+      "en": ["Was summoned to", "Was called to", "Was sent for at", "Was bidden to"],
+      "es": ["Fue llamada a", "Fue requerida en", "La hicieron acudir a", "La reclamaron en"]
+    },
+    "transition:descended_to": {
+      "en": ["Descended to", "Went down to", "Took the stair down to", "Stepped down to"],
+      "es": ["Bajó a", "Descendió a", "Tomó la escalera hacia", "Se adentró bajando a"]
+    },
+    "transition:none": {
+      "en": ["Began at", "Started at", "Opened at", "Set out from"],
+      "es": ["Comenzó en", "Empezó en", "Inició en", "Partió desde"]
+    }
+  },
+
+  "CAUSE": {
+    "cause:following_witness_lead": {
+      "en": ["On the witness's word,", "Acting on what the witness had said,", "Following the witness's account,", "Taking the witness at his word,"],
+      "es": ["Por la palabra del testigo,", "Atendiendo lo dicho por el testigo,", "Siguiendo el relato del testigo,", "Conforme al testimonio,"]
+    },
+    "cause:examining_evidence": {
+      "en": ["Tracing the evidence,", "Following the evidence,", "Working from the evidence,", "Carrying the evidence forward,"],
+      "es": ["Siguiendo la evidencia,", "Trazando la evidencia,", "Partiendo de las pruebas,", "Llevando la prueba adelante,"]
+    },
+    "cause:recognized_object": {
+      "en": ["Something about the object struck her;", "The object held her attention;", "A look at the object stopped her;", "The thing in question caught her eye;"],
+      "es": ["Algo del objeto la detuvo;", "El objeto retuvo su atención;", "Algo en el objeto la hizo pararse;", "La cosa en cuestión le llamó la mirada;"]
+    },
+    "cause:noticed_inconsistency": {
+      "en": ["A detail did not match;", "Something did not add up;", "One detail refused to fit;", "An inconsistency stood out;"],
+      "es": ["Un detalle no encajaba;", "Algo no cuadraba;", "Un detalle se resistía;", "Una inconsistencia saltaba a la vista;"]
+    },
+    "cause:pursued_suspicion": {
+      "en": ["On a hunch,", "Following a suspicion,", "Acting on a doubt,", "On the strength of a suspicion,"],
+      "es": ["Por una corazonada,", "Siguiendo una sospecha,", "Movida por una duda,", "Llevada por la sospecha,"]
+    },
+    "cause:revisiting_scene": {
+      "en": ["Returning to confirm,", "Going back to check,", "To check the matter again,", "Coming back to verify,"],
+      "es": ["Volviendo para confirmar,", "Regresando a comprobar,", "Para verificar de nuevo,", "Para corroborarlo,"]
+    },
+    "cause:summoned": {
+      "en": ["Called by name,", "Summoned by name,", "On being called,", "Hailed by name,"],
+      "es": ["Llamada por su nombre,", "Convocada por su nombre,", "Al ser llamada,", "Reclamada por su nombre,"]
+    },
+    "cause:chronological_drift": {
+      "en": ["As the hour wore on,", "As the evening drew on,", "As the reception aged,", "With the hour advancing,"],
+      "es": ["Mientras la hora se alargaba,", "A medida que avanzaba la velada,", "Conforme envejecía la recepción,", "Con la hora ya avanzada,"]
+    },
+    "cause:reading_dispatch_signal": {
+      "en": ["Reading the dispatch's signal,", "On the strength of the dispatch,", "Working from the decoded text,", "Following what the dispatch said beneath the dispatch,"],
+      "es": ["Leyendo la señal del despacho,", "Por lo dicho en el despacho,", "A partir del texto decodificado,", "Siguiendo lo que el despacho decía bajo el despacho,"]
+    },
+    "cause:tracing_tray_route": {
+      "en": ["Walking the tray's path,", "Tracing the corridor the tray had crossed,", "Following the route between the kitchen and the reception,", "Retracing the forty seconds,"],
+      "es": ["Recorriendo el camino de la bandeja,", "Trazando el corredor que había cruzado la bandeja,", "Siguiendo la ruta entre la cocina y la recepción,", "Recorriendo los cuarenta segundos,"]
+    },
+    "cause:none": {"en": "", "es": ""}
+  },
+
+  "PRESENCE": {
+    "presence:with_brennan": {
+      "en": {
+        "cold": [
+          "Brennan was already there, charming as required",
+          "the cultural attache stood with his glass at the proper height",
+          "Brennan kept the polite line of his shoulders",
+          "the attache had taken the side of the room nearest the door"
+        ],
+        "warming": [
+          "Brennan answered each question once and lightly",
+          "Brennan kept his hands in view and the signet ring untouched",
+          "Brennan named the corridor by its proper minute",
+          "the attache replied in the register the question had been put in"
+        ],
+        "breaking": [
+          "Brennan turned the signet ring through a full revolution",
+          "Brennan repeated the corridor answer word for word",
+          "Brennan's French came back a fraction too correct",
+          "the attache let a pause sit where a pause had not been invited"
+        ],
+        "broken": [
+          "Brennan held the signet ring rather than turned it",
+          "Brennan's voice dropped half a tone",
+          "Brennan acknowledged the corridor in a tense the earlier accounts had not used",
+          "the attache stopped covering and did not begin again"
+        ]
+      },
+      "es": {
+        "cold": [
+          "Brennan ya estaba allí, encantador como exigía el caso",
+          "el agregado cultural sostenía la copa a la altura debida",
+          "Brennan mantenía la línea cortés de los hombros",
+          "el agregado había tomado el lado de la sala más cercano a la puerta"
+        ],
+        "warming": [
+          "Brennan respondía a cada pregunta una sola vez y con ligereza",
+          "Brennan mantenía las manos a la vista y el sello sin tocar",
+          "Brennan nombró el corredor por el minuto que le correspondía",
+          "el agregado respondía en el registro en que se le preguntaba"
+        ],
+        "breaking": [
+          "Brennan dio una vuelta entera al anillo de sello",
+          "Brennan repitió la respuesta del corredor palabra por palabra",
+          "el francés de Brennan volvió un punto demasiado correcto",
+          "el agregado dejó posarse una pausa donde no se la había invitado"
+        ],
+        "broken": [
+          "Brennan sujetó el anillo de sello en lugar de girarlo",
+          "la voz de Brennan bajó medio tono",
+          "Brennan reconoció el corredor en un tiempo verbal que los relatos anteriores no habían usado",
+          "el agregado dejó de cubrir y no volvió a empezar"
+        ]
+      }
+    },
+    "presence:with_helena_voss": {
+      "en": {
+        "cold": [
+          "Helena Voss kept her place by the chandelier",
+          "the ambassador's wife held her glass at the formal angle",
+          "Helena gave the courteous half-greeting and waited",
+          "Helena's wedding band caught the light at the proper turn of her wrist"
+        ],
+        "warming": [
+          "Helena offered a dry observation about the seating",
+          "Helena's French softened a tone into something nearer candour",
+          "Helena gave the minute of her departure without consulting anyone",
+          "the ambassador's wife turned the band once and let it rest"
+        ],
+        "breaking": [
+          "Helena's account became firm in timing and evasive in geography",
+          "Helena turned the wedding band twice within a single answer",
+          "Helena set the glass down and picked it up again at the same place",
+          "the ambassador's wife repeated a phrase from the earlier account word for word"
+        ],
+        "broken": [
+          "Helena named the corridor she had been in",
+          "Helena named what she had seen and did not say why she was there to see it",
+          "Helena spoke the forty seconds without being asked for them",
+          "the ambassador's wife did not look up after the last sentence"
+        ]
+      },
+      "es": {
+        "cold": [
+          "Helena Voss mantuvo su sitio bajo la araña",
+          "la esposa del embajador sostenía la copa en el ángulo formal",
+          "Helena ofreció el medio saludo cortés y esperó",
+          "la alianza de Helena prendía la luz en el giro debido de la muñeca"
+        ],
+        "warming": [
+          "Helena ofreció una observación seca sobre el plano de mesas",
+          "el francés de Helena se ablandó un tono hacia algo más cercano a la franqueza",
+          "Helena dio el minuto de su salida sin consultar a nadie",
+          "la esposa del embajador giró la alianza una vez y la dejó quieta"
+        ],
+        "breaking": [
+          "el relato de Helena se hizo firme en los tiempos y evasivo en la geografía",
+          "Helena giró la alianza dos veces en una sola respuesta",
+          "Helena dejó la copa y la volvió a tomar en el mismo sitio",
+          "la esposa del embajador repitió una frase del relato anterior palabra por palabra"
+        ],
+        "broken": [
+          "Helena nombró el corredor en el que había estado",
+          "Helena nombró lo que había visto y no dijo por qué estaba allí para verlo",
+          "Helena pronunció los cuarenta segundos sin que se los pidieran",
+          "la esposa del embajador no levantó la vista tras la última frase"
+        ]
+      }
+    },
+    "presence:with_catering_supervisor": {
+      "en": {
+        "cold": [
+          "the catering supervisor stood with the timing book closed",
+          "the catering supervisor had the apron tied at the customary knot",
+          "the catering supervisor waited beside the kitchen-side door",
+          "the catering supervisor kept the pencil in the apron pocket"
+        ],
+        "warming": [
+          "the catering supervisor opened the timing book on the counter",
+          "the catering supervisor produced a minute in three syllables",
+          "the catering supervisor named the second tray and the chandelier line",
+          "the catering supervisor held the pencil point down without using it"
+        ],
+        "breaking": [
+          "the catering supervisor named the forty-second interval without commentary",
+          "the catering supervisor rested the pencil on the page and did not draw",
+          "the catering supervisor waited for the next question rather than continuing",
+          "the catering supervisor read the line twice and the second time was the same as the first"
+        ],
+        "broken": [
+          "the catering supervisor gave the tray's departure and the tray's arrival",
+          "the catering supervisor gave the count of seconds and did not give a name",
+          "the catering supervisor handed the timing book across the counter",
+          "the catering supervisor said he had thought nothing of it at the time"
+        ]
+      },
+      "es": {
+        "cold": [
+          "el supervisor de catering estaba con el libro de tiempos cerrado",
+          "el supervisor de catering llevaba el delantal anudado en el nudo de costumbre",
+          "el supervisor de catering esperaba junto a la puerta de cocina",
+          "el supervisor de catering mantenía el lápiz en el bolsillo del delantal"
+        ],
+        "warming": [
+          "el supervisor de catering abrió el libro de tiempos sobre el mostrador",
+          "el supervisor de catering produjo un minuto en tres sílabas",
+          "el supervisor de catering nombró la segunda bandeja y la línea de la araña",
+          "el supervisor de catering sostuvo el lápiz con la punta hacia abajo sin usarlo"
+        ],
+        "breaking": [
+          "el supervisor de catering nombró el intervalo de cuarenta segundos sin comentario",
+          "el supervisor de catering apoyó el lápiz sobre la página y no trazó",
+          "el supervisor de catering esperó la próxima pregunta en lugar de continuar",
+          "el supervisor de catering leyó la línea dos veces y la segunda fue igual que la primera"
+        ],
+        "broken": [
+          "el supervisor de catering dio la salida de la bandeja y su llegada",
+          "el supervisor de catering dio la cuenta de segundos y no dio un nombre",
+          "el supervisor de catering pasó el libro de tiempos por encima del mostrador",
+          "el supervisor de catering dijo que en su momento no le había dado importancia"
+        ]
+      }
+    },
+    "presence:with_ambassador_voss": {
+      "en": [
+        "the ambassador stood by his desk in shirtsleeves",
+        "the ambassador kept his place at the office door",
+        "the ambassador was beside the bookcase, his cuff a quarter-inch longer at one wrist",
+        "the ambassador waited with the file closed in his hand"
+      ],
+      "es": [
+        "el embajador estaba junto a su escritorio en mangas de camisa",
+        "el embajador se mantenía en la puerta del despacho",
+        "el embajador estaba al lado de la estantería, con un puño un cuarto de pulgada más largo que el otro",
+        "el embajador esperaba con la carpeta cerrada en la mano"
+      ]
+    },
+    "presence:with_cipher_supervisor": {
+      "en": [
+        "the cipher supervisor sat at his desk with the file open",
+        "the cipher supervisor kept his place at the cipher room counter",
+        "the cipher supervisor stood with the panel sheet in his hand",
+        "the cipher supervisor was at the window, his back to the desk"
+      ],
+      "es": [
+        "el supervisor de cifrado estaba sentado a su escritorio con la carpeta abierta",
+        "el supervisor de cifrado se mantenía en el mostrador de la sala de cifrado",
+        "el supervisor de cifrado estaba de pie con la hoja del panel en la mano",
+        "el supervisor de cifrado estaba en la ventana, de espaldas al escritorio"
+      ]
+    },
+    "presence:with_embassy_doctor": {
+      "en": [
+        "the embassy doctor sat with his bag at his feet",
+        "the embassy doctor kept his place beside the document room door",
+        "the embassy doctor stood with the panel form folded in his pocket",
+        "the embassy doctor waited by the long table"
+      ],
+      "es": [
+        "el médico de la embajada estaba sentado con el maletín a los pies",
+        "el médico de la embajada se mantenía junto a la puerta de la sala de documentos",
+        "el médico de la embajada estaba de pie con el formulario del panel doblado en el bolsillo",
+        "el médico de la embajada esperaba junto a la mesa larga"
+      ]
+    },
+    "presence:with_catering_runner": {
+      "en": [
+        "the catering runner stood with his hands against his apron",
+        "the catering runner waited a few paces from the kitchen door",
+        "the catering runner kept his place near the supervisor",
+        "the catering runner stood in the doorway with no tray in hand"
+      ],
+      "es": [
+        "el camarero corredor estaba con las manos sobre el delantal",
+        "el camarero corredor esperaba a unos pasos de la puerta de la cocina",
+        "el camarero corredor se mantenía cerca del supervisor",
+        "el camarero corredor estaba en el umbral sin bandeja en la mano"
+      ]
+    },
+    "presence:with_press_attache": {
+      "en": [
+        "the press attache stood at the edge of the room with his notebook closed",
+        "the press attache kept his place near the chandelier line",
+        "the press attache waited beside the seating plan on the marble stand",
+        "the press attache had taken the corner that looked over the room"
+      ],
+      "es": [
+        "el agregado de prensa estaba al borde de la sala con la libreta cerrada",
+        "el agregado de prensa se mantenía cerca de la línea de la araña",
+        "el agregado de prensa esperaba junto al plano de mesas sobre el atril de mármol",
+        "el agregado de prensa había tomado el rincón que daba a toda la sala"
+      ]
+    },
+    "presence:with_chief_of_security": {
+      "en": [
+        "the chief of security stood with the folder squared against his chest",
+        "the chief of security kept his place at the corridor door",
+        "the chief of security waited beside the access log on the table",
+        "the chief of security stood at the head of the stair"
+      ],
+      "es": [
+        "el jefe de seguridad estaba con la carpeta apretada contra el pecho",
+        "el jefe de seguridad se mantenía en la puerta del corredor",
+        "el jefe de seguridad esperaba junto al registro de accesos sobre la mesa",
+        "el jefe de seguridad estaba en lo alto de la escalera"
+      ]
+    },
+    "presence:with_kitchen_porter": {
+      "en": [
+        "the kitchen porter leaned against the kitchen wall",
+        "the kitchen porter waited a few paces from the door he had closed",
+        "the kitchen porter kept his place near the second tray station",
+        "the kitchen porter stood with both hands against his apron"
+      ],
+      "es": [
+        "el mozo de cocina se apoyaba contra el muro de la cocina",
+        "el mozo de cocina esperaba a unos pasos de la puerta que había cerrado",
+        "el mozo de cocina se mantenía cerca de la segunda estación de bandejas",
+        "el mozo de cocina estaba con ambas manos sobre el delantal"
+      ]
+    },
+    "presence:alone": {
+      "en": [
+        "no one else was there",
+        "the room stood empty otherwise",
+        "no other person was present",
+        "the place was hers alone"
+      ],
+      "es": [
+        "no había nadie más",
+        "la sala quedaba vacía por lo demás",
+        "no había ninguna otra persona",
+        "el lugar era suyo solo"
+      ]
+    }
+  },
+
+  "STANCE": {
+    "stance:cooperative": {
+      "en": ["open, willing to answer", "willing to speak in the proper register", "ready enough to speak", "open to the questions in the order put"],
+      "es": ["abierto, dispuesto a responder", "dispuesto a hablar en el registro debido", "lo bastante dispuesto a hablar", "abierto a las preguntas en el orden en que se hacían"]
+    },
+    "stance:defensive": {
+      "en": ["the hands held in view", "the glass set down with care", "the shoulders squared at the question", "the back straightening at the question"],
+      "es": ["con las manos a la vista", "con la copa dejada con cuidado", "con los hombros tensos ante la pregunta", "con la espalda erguida ante la pregunta"]
+    },
+    "stance:evasive": {
+      "en": ["the eyes finding the chandelier", "the gaze drifting to the door", "the answers given in the wrong language and corrected", "the eyes refusing to land on the matter"],
+      "es": ["con los ojos en la araña", "con la mirada en la puerta", "con las respuestas dadas en el idioma equivocado y corregidas", "con los ojos que no querían posarse en el asunto"]
+    },
+    "stance:hostile": {
+      "en": ["the courtesy gone, the answers short", "the jaw set, the voice flat", "the words trimmed back to the minimum", "the voice gone polite and cold at the same time"],
+      "es": ["la cortesía desaparecida, las respuestas cortas", "con la mandíbula tensa, la voz plana", "las palabras reducidas al mínimo", "la voz vuelta cortés y fría a la vez"]
+    },
+    "stance:unaware": {
+      "en": ["still unaware of her purpose", "yet to grasp why she had come", "not yet knowing what she was after", "without sense of the matter at hand"],
+      "es": ["aún ignorando el propósito de su visita", "sin haber comprendido por qué había venido", "sin saber aún qué buscaba", "sin captar todavía el asunto"]
+    },
+    "stance:none": {"en": "", "es": ""}
+  },
+
+  "ACTION": {
+    "action:examines": {
+      "en": ["examined", "looked over", "studied", "took in"],
+      "es": ["examinó", "revisó", "estudió", "observó"]
+    },
+    "action:questions": {
+      "en": ["questioned", "put questions to", "asked after", "pressed for an answer from"],
+      "es": ["interrogó", "preguntó a", "indagó a", "presionó para sacar respuesta a"]
+    },
+    "action:notices": {
+      "en": ["noticed", "marked", "took note of", "caught sight of"],
+      "es": ["advirtió", "reparó en", "tomó nota de", "se fijó en"]
+    },
+    "action:discovers": {
+      "en": ["found", "came upon", "uncovered", "turned up"],
+      "es": ["halló", "encontró", "descubrió", "dio con"]
+    },
+    "action:confronts": {
+      "en": ["confronted", "put the matter to", "set the matter before", "named the matter to"],
+      "es": ["confrontó", "puso el asunto ante", "expuso el asunto a", "le planteó el asunto a"]
+    },
+    "action:follows": {
+      "en": ["followed", "kept after", "tracked", "stayed with"],
+      "es": ["siguió", "fue tras", "rastreó", "se mantuvo tras"]
+    },
+    "action:waits": {
+      "en": ["waited", "held her place", "stayed where she was", "kept still"],
+      "es": ["esperó", "se mantuvo en su sitio", "permaneció donde estaba", "se quedó quieta"]
+    },
+    "action:leaves": {
+      "en": ["stepped away from", "moved off from", "withdrew from", "turned out of"],
+      "es": ["se alejó de", "se apartó de", "se retiró de", "salió de"]
+    },
+    "action:arrives": {
+      "en": ["stepped into", "came into", "set foot in", "passed into"],
+      "es": ["entró en", "llegó a", "puso pie en", "pasó a"]
+    },
+    "action:recalls": {
+      "en": ["recalled", "remembered", "called to mind", "brought back to mind"],
+      "es": ["recordó", "rememoró", "trajo a la memoria", "volvió a tener presente"]
+    },
+    "action:cross_references": {
+      "en": ["laid alongside", "set side by side with", "matched against", "cross-checked with"],
+      "es": ["puso al lado de", "colocó junto a", "cotejó con", "contrastó con"]
+    },
+    "action:none": {
+      "en": ["stood", "kept still", "stayed where she was", "held her place"],
+      "es": ["se detuvo", "permaneció quieta", "se quedó donde estaba", "mantuvo su sitio"]
+    }
+  },
+
+  "OBJECT_FOCUS": {
+    "object:champagne_flute":          {"en": ["the champagne flute", "the half-emptied flute"], "es": ["la copa de champán", "la copa medio vaciada"]},
+    "object:catering_tray":            {"en": ["the catering tray", "the tray of flutes in its brass frame"], "es": ["la bandeja del catering", "la bandeja de copas en su marco de latón"]},
+    "object:draft_report":             {"en": ["the draft report", "Ilse's draft report"], "es": ["el borrador del informe", "el borrador del informe de Ilse"]},
+    "object:decoded_dispatch":         {"en": ["the decoded dispatch", "the November 28th dispatch"], "es": ["el despacho decodificado", "el despacho del 28 de noviembre"]},
+    "object:secondary_encoding_sheet": {"en": ["the secondary encoding sheet", "the layered cipher inside the dispatch"], "es": ["la hoja del cifrado secundario", "el cifrado en capas dentro del despacho"]},
+    "object:duplicate_desk_key":       {"en": ["the duplicate desk key", "the copy of Ilse's desk key"], "es": ["la llave duplicada del escritorio", "la copia de la llave del escritorio de Ilse"]},
+    "object:guest_list":               {"en": ["the guest list", "the list of sixty-three names"], "es": ["la lista de invitados", "la lista de sesenta y tres nombres"]},
+    "object:seating_plan":             {"en": ["the seating plan", "the seating plan with the conversations marked"], "es": ["el plano de mesas", "el plano de mesas con las conversaciones marcadas"]},
+    "object:post_mortem_panel":        {"en": ["the post-mortem panel", "the panel that did not extend to the compound"], "es": ["el panel post mortem", "el panel que no alcanzaba al compuesto"]},
+    "object:secondary_terminal_log":   {"en": ["the secondary terminal log", "the cipher room's second terminal log"], "es": ["el registro del terminal secundario", "el registro del segundo terminal de la sala de cifrado"]},
+    "object:catering_timing_note":     {"en": ["the catering timing note", "the small daily timing note"], "es": ["la nota de tiempos del catering", "la pequeña nota diaria de tiempos"]},
+    "object:signet_ring":              {"en": ["the signet ring", "the signet ring on the third finger"], "es": ["el anillo de sello", "el anillo de sello del tercer dedo"]},
+    "object:cipher_clerks_file":       {"en": ["Ilse's personnel file", "the cipher clerk's file"], "es": ["el expediente personal de Ilse", "el expediente de la oficial de cifrado"]},
+    "object_focus:none":               {"en": "", "es": ""}
+  },
+
+  "TELL": {
+    "emotion:steady_hands": {
+      "en": ["the hands stayed steady", "the hands did not shake", "no tremor came to the hands", "the hands kept still on the glass"],
+      "es": ["las manos no temblaron", "las manos se mantuvieron firmes", "no asomó temblor en las manos", "las manos siguieron quietas sobre la copa"]
+    },
+    "emotion:fixed_stare": {
+      "en": ["the stare did not waver", "the eyes held their line", "the gaze did not move", "the eyes stayed where they had been"],
+      "es": ["la mirada no se desvió", "los ojos sostuvieron su línea", "la mirada no se movió", "los ojos se mantuvieron donde estaban"]
+    },
+    "emotion:avoided_contact": {
+      "en": ["the eyes did not lift to meet hers", "the gaze did not come up to her", "the eyes stayed on the chandelier", "the gaze did not cross hers"],
+      "es": ["los ojos no se alzaron a cruzar la mirada", "la mirada no llegó a la suya", "los ojos siguieron en la araña", "la mirada no se cruzó con la suya"]
+    },
+    "emotion:measured_breath": {
+      "en": ["the breathing stayed measured", "the breath kept its pace", "the breathing did not quicken", "the breath stayed even"],
+      "es": ["la respiración se mantuvo medida", "el aliento conservó su ritmo", "la respiración no se aceleró", "el aliento se mantuvo parejo"]
+    },
+    "emotion:paused_reply": {
+      "en": ["the answer paused before coming", "the reply was slow in coming", "a pause came before the answer", "the answer waited a moment"],
+      "es": ["la respuesta tardó en llegar", "la contestación llegó despacio", "hubo una pausa antes de responder", "la respuesta esperó un instante"]
+    },
+    "emotion:closed_posture": {
+      "en": ["the jacket stayed buttoned", "the shoulders did not open", "the arms remained at the sides", "the posture did not give"],
+      "es": ["la chaqueta siguió abrochada", "los hombros no se abrieron", "los brazos quedaron a los costados", "la postura no cedió"]
+    },
+    "tell:paled": {
+      "en": ["all colour drained at the question", "the colour went out of the face at the question", "the face lost its colour at the question", "the colour fled at the question"],
+      "es": ["todo el color se retiró ante la pregunta", "el color huyó del rostro ante la pregunta", "la cara perdió el color ante la pregunta", "el color desapareció ante la pregunta"]
+    },
+    "tell:tightened": {
+      "en": ["the shoulders tightened", "the shoulders drew up", "the shoulders set", "a tightness came into the shoulders"],
+      "es": ["los hombros se tensaron", "los hombros se elevaron", "los hombros se afirmaron", "una tensión asomó en los hombros"]
+    },
+    "tell:none": {"en": "", "es": ""}
+  },
+
+  "ATMOSPHERE": {
+    "atmosphere:fog_thickens": {
+      "en": [
+        "Outside, the fog thickened against the embassy windows.",
+        "Beyond the windows, the Brussels fog drew tighter around the lamps.",
+        "The fog on the Rue de la Loi grew heavier as the hour passed.",
+        "Outside, the fog closed in on the iron gate."
+      ],
+      "es": [
+        "Fuera, la niebla se espesaba contra las ventanas de la embajada.",
+        "Más allá de las ventanas, la niebla de Bruselas se apretaba en torno a las lámparas.",
+        "La niebla de la Rue de la Loi se hacía más densa con la hora.",
+        "Fuera, la niebla se cerraba sobre la verja de hierro."
+      ]
+    },
+    "atmosphere:fog_lifts": {
+      "en": [
+        "The fog on the avenue had begun to thin.",
+        "The Brussels fog was drawing back from the lamps.",
+        "The fog had started to give way along the Rue de la Loi.",
+        "The fog had lifted enough to show the railings."
+      ],
+      "es": [
+        "La niebla de la avenida empezaba a aclararse.",
+        "La niebla de Bruselas se retiraba de las lámparas.",
+        "La niebla había comenzado a ceder a lo largo de la Rue de la Loi.",
+        "La niebla se había levantado lo bastante para mostrar las rejas."
+      ]
+    },
+    "atmosphere:lamp_flickers": {
+      "en": [
+        "A lamp wavered in the east wing landing.",
+        "A sconce in the corridor shook its light.",
+        "At the far end of the corridor, a lamp guttered.",
+        "A bulb in the cipher room shook and steadied."
+      ],
+      "es": [
+        "Una lámpara vaciló en el rellano del ala este.",
+        "Un aplique del corredor agitó su luz.",
+        "Al fondo del corredor, una lámpara titiló.",
+        "Una bombilla de la sala de cifrado tembló y se estabilizó."
+      ]
+    },
+    "atmosphere:lamp_steady": {
+      "en": [
+        "The chandeliers held steady above the reception.",
+        "The lamps did not waver.",
+        "The light in the cipher room held even.",
+        "The corridor sconces burned steady."
+      ],
+      "es": [
+        "Las arañas se mantenían firmes sobre la recepción.",
+        "Las lámparas no vacilaban.",
+        "La luz de la sala de cifrado se mantenía pareja.",
+        "Los apliques del corredor ardían firmes."
+      ]
+    },
+    "atmosphere:silence_holds": {
+      "en": [
+        "Silence held between them.",
+        "The silence stayed.",
+        "Quiet held between them.",
+        "No word came after."
+      ],
+      "es": [
+        "El silencio se mantuvo entre ellos.",
+        "El silencio se sostuvo.",
+        "La quietud se quedó entre ellos.",
+        "No vino palabra después."
+      ]
+    },
+    "atmosphere:reception_murmur": {
+      "en": [
+        "The four languages of the reception ran on beneath the conversation.",
+        "The murmur of sixty-three guests carried up from the floor below.",
+        "The reception kept its sound: glassware, four languages, the slow movement of bodies.",
+        "Below them, the reception murmured in its four languages."
+      ],
+      "es": [
+        "Las cuatro lenguas de la recepción seguían corriendo bajo la conversación.",
+        "El murmullo de sesenta y tres invitados subía desde la planta baja.",
+        "La recepción conservaba su sonido: cristalería, cuatro lenguas, el movimiento lento de los cuerpos.",
+        "Más abajo, la recepción murmuraba en sus cuatro lenguas."
+      ]
+    },
+    "atmosphere:heating_hum": {
+      "en": [
+        "The east wing heating ticked in the wall.",
+        "Warm air moved evenly through the office.",
+        "The radiator in the corner gave its small steady note.",
+        "The heating in the east wing held its hum."
+      ],
+      "es": [
+        "La calefacción del ala este crepitaba en la pared.",
+        "Aire tibio se movía parejo por el despacho.",
+        "El radiador del rincón daba su pequeña nota constante.",
+        "La calefacción del ala este sostenía su zumbido."
+      ]
+    },
+    "atmosphere:cold_corridor": {
+      "en": [
+        "The west wing held its cold.",
+        "Cold air sat in the corridor unmoving.",
+        "The unheated wing kept its chill against the wall.",
+        "The corridor was cold the way the cipher room was cold."
+      ],
+      "es": [
+        "El ala oeste conservaba su frío.",
+        "El aire frío se quedaba en el corredor sin moverse.",
+        "El ala sin calefacción mantenía su gélido contra el muro.",
+        "El corredor estaba frío como estaba fría la sala de cifrado."
+      ]
+    },
+    "atmosphere:dawn_approaches": {
+      "en": [
+        "The first grey of dawn pressed at the embassy windows.",
+        "A grey light gathered along the Rue de la Loi.",
+        "The dawn was beginning to show at the windows.",
+        "The first dawn-light reached the iron gate."
+      ],
+      "es": [
+        "El primer gris del alba presionaba en las ventanas de la embajada.",
+        "Una luz gris se reunía a lo largo de la Rue de la Loi.",
+        "El alba empezaba a asomar en las ventanas.",
+        "La primera luz del alba alcanzaba la verja de hierro."
+      ]
+    },
+    "atmosphere:none": {"en": "", "es": ""}
+  },
+
+  "REVELATION": {
+    "revelation:contradiction_surfaces": {
+      "en": [
+        "The two accounts no longer agreed.",
+        "The accounts had ceased to match.",
+        "The two stories no longer lined up.",
+        "What had been said before no longer fit what was said now."
+      ],
+      "es": [
+        "Los dos relatos ya no concordaban.",
+        "Los relatos habían dejado de coincidir.",
+        "Las dos versiones ya no encajaban.",
+        "Lo dicho antes ya no cuadraba con lo dicho ahora."
+      ]
+    },
+    "revelation:alibi_holds": {
+      "en": [
+        "The alibi held.",
+        "The account stood up.",
+        "There was no break in the alibi.",
+        "The cover did not crack."
+      ],
+      "es": [
+        "La coartada se sostuvo.",
+        "La versión se mantuvo en pie.",
+        "No hubo grieta en la coartada.",
+        "La cobertura no se rompió."
+      ]
+    },
+    "revelation:name_uncovered": {
+      "en": [
+        "A name became legible at last.",
+        "A name surfaced from the encoding.",
+        "At last a name could be read.",
+        "A name was finally plain."
+      ],
+      "es": [
+        "Un nombre se hizo legible al fin.",
+        "Un nombre salió a la luz del cifrado.",
+        "Al fin pudo leerse un nombre.",
+        "Un nombre quedó por fin claro."
+      ]
+    },
+    "revelation:motive_emerges": {
+      "en": [
+        "A reason rose to the surface.",
+        "A motive came into view.",
+        "The four years of compliance began to take shape.",
+        "The motive showed itself in its structure if not its content."
+      ],
+      "es": [
+        "Un motivo salió a la superficie.",
+        "Un motivo se hizo visible.",
+        "Los cuatro años de cumplimiento comenzaban a tomar forma.",
+        "El motivo se mostró en su estructura si no en su contenido."
+      ]
+    },
+    "revelation:dead_end": {
+      "en": [
+        "The line went nowhere.",
+        "The thread broke off.",
+        "The lead came to nothing.",
+        "The trail ended there."
+      ],
+      "es": [
+        "La línea no llevaba a ninguna parte.",
+        "El hilo se cortó.",
+        "La pista no daba nada.",
+        "El rastro terminaba allí."
+      ]
+    },
+    "revelation:partial_match": {
+      "en": [
+        "Close — but not certain.",
+        "Near enough — but not sure.",
+        "It came close, without closing.",
+        "Almost — and not quite."
+      ],
+      "es": [
+        "Cercano — pero no seguro.",
+        "Cerca — pero sin certeza.",
+        "Se aproximaba, sin cerrar.",
+        "Casi — y no del todo."
+      ]
+    },
+    "revelation:confirmation": {
+      "en": [
+        "An earlier hypothesis was confirmed.",
+        "An earlier guess proved out.",
+        "What had been suspected was now proven.",
+        "An earlier reading held."
+      ],
+      "es": [
+        "Se confirmó una hipótesis anterior.",
+        "Una conjetura previa quedó probada.",
+        "Lo que se sospechaba quedó demostrado.",
+        "Una lectura anterior se sostuvo."
+      ]
+    },
+    "revelation:none": {"en": "", "es": ""}
+  },
+
+  "BEAT": {
+    "beat:orientation":   {"en": "", "es": ""},
+    "beat:investigation": {"en": "", "es": ""},
+    "beat:closing_in": {
+      "en": [
+        "The shape of the corridor was visible now.",
+        "The outline of the matter was plain now.",
+        "The case had begun to take its shape around the forty seconds.",
+        "The figure of the thing stood out now."
+      ],
+      "es": [
+        "La forma del corredor ya era visible.",
+        "El contorno del asunto era ya claro.",
+        "El caso empezaba a tomar su forma en torno a los cuarenta segundos.",
+        "La figura del asunto destacaba ya."
+      ]
+    },
+    "beat:verdict_ready": {
+      "en": [
+        "Time to name them.",
+        "It was time to name them.",
+        "The naming was at hand.",
+        "The hour to name them had come."
+      ],
+      "es": [
+        "Era hora de nombrarlos.",
+        "Llegaba el momento de nombrarlos.",
+        "El nombrarlos estaba a la mano.",
+        "Había llegado la hora de nombrarlos."
+      ]
+    }
+  },
+
+  "DIPLOMATIC_TELL": {
+    "diplomatic_tell:cover_intact": {
+      "en": [
+        "the embassy cover held",
+        "no diplomatic seam showed",
+        "the protocol stayed clean",
+        "nothing in the manner gave the embassy away"
+      ],
+      "es": [
+        "la cobertura de la embajada se mantuvo",
+        "no se vio costura diplomática",
+        "el protocolo siguió limpio",
+        "nada en los modales delataba a la embajada"
+      ]
+    },
+    "diplomatic_tell:language_slipped": {
+      "en": [
+        "the answer came in the wrong language and was corrected",
+        "a phrase escaped in French where English had been used",
+        "the language slipped a register and was set back",
+        "the answer was begun in one language and finished in another"
+      ],
+      "es": [
+        "la respuesta vino en el idioma equivocado y fue corregida",
+        "una frase se escapó en francés donde se había hablado inglés",
+        "el idioma resbaló un registro y se enderezó",
+        "la respuesta empezó en una lengua y acabó en otra"
+      ]
+    },
+    "diplomatic_tell:protocol_broken": {
+      "en": [
+        "a small protocol was missed and not recovered",
+        "the seating courtesy was broken in passing",
+        "the order of address was wrong by half a degree",
+        "the diplomatic form gave a quarter inch"
+      ],
+      "es": [
+        "un pequeño protocolo se omitió y no se recuperó",
+        "la cortesía de mesa se rompió de pasada",
+        "el orden de tratamiento estuvo equivocado por medio grado",
+        "la forma diplomática cedió un cuarto de pulgada"
+      ]
+    },
+    "diplomatic_tell:signet_ring_turned": {
+      "en": [
+        "the signet ring was turned through a full revolution",
+        "the signet ring was turned once on the third finger",
+        "the hand went to the signet ring and stayed there",
+        "the signet ring was held rather than turned"
+      ],
+      "es": [
+        "el anillo de sello giró una vuelta entera",
+        "el anillo de sello giró una vez en el tercer dedo",
+        "la mano fue al anillo de sello y se quedó allí",
+        "el anillo de sello quedó sujeto en lugar de girado"
+      ]
+    },
+    "diplomatic_tell:french_too_correct": {
+      "en": [
+        "the French came back a fraction too correct",
+        "the diction was a degree more precise than the question deserved",
+        "the French was the French of rehearsal, not of habit",
+        "the phrasing reached for a register the previous answer had not"
+      ],
+      "es": [
+        "el francés volvió un punto demasiado correcto",
+        "la dicción fue un grado más precisa de lo que la pregunta pedía",
+        "el francés fue el francés del ensayo, no del hábito",
+        "el fraseo alcanzó un registro que la respuesta anterior no había usado"
+      ]
+    },
+    "diplomatic_tell:rehearsed_phrasing": {
+      "en": [
+        "the phrasing matched an earlier answer word for word",
+        "the sentence was a sentence the witness had already given",
+        "the answer arrived in the same order as before",
+        "the line was repeated as if to settle the speaker into it"
+      ],
+      "es": [
+        "el fraseo coincidió con una respuesta anterior palabra por palabra",
+        "la frase era una frase que el testigo ya había dado",
+        "la respuesta llegó en el mismo orden que antes",
+        "la línea se repitió como para asentar al hablante en ella"
+      ]
+    },
+    "diplomatic_tell:none": {"en": "", "es": ""}
+  },
+
+  "TRAVEL_CARDS": {
+    "_comment": "Player travel cards. Their action label is what appears on the card; their played effect forces the corresponding LOCATION + a TRANSITION.",
+    "travel:to_reception_room":      {"en": "Go to the reception room",       "es": "Ir a la sala de recepción"},
+    "travel:to_kitchen_corridor":    {"en": "Go to the kitchen corridor",     "es": "Ir al corredor de cocina"},
+    "travel:to_embassy_kitchen":     {"en": "Go to the embassy kitchen",      "es": "Ir a la cocina de la embajada"},
+    "travel:to_cipher_room":         {"en": "Go to the cipher room",          "es": "Ir a la sala de cifrado"},
+    "travel:to_document_room":       {"en": "Go to the document room",        "es": "Ir a la sala de documentos"},
+    "travel:to_ambassadors_office":  {"en": "Go to the ambassador's office",  "es": "Ir al despacho del embajador"},
+    "travel:to_east_wing_landing":   {"en": "Go to the east wing landing",    "es": "Ir al rellano del ala este"},
+    "travel:to_west_wing_stairwell": {"en": "Go to the west wing stairwell",  "es": "Ir a la escalera del ala oeste"},
+    "travel:to_embassy_entrance":    {"en": "Go to the embassy entrance",     "es": "Ir a la entrada de la embajada"},
+    "travel:to_rue_de_la_loi":       {"en": "Go to the Rue de la Loi",        "es": "Ir a la Rue de la Loi"}
+  }
+}

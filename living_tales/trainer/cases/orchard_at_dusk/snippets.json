@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "case_id": "orchard_at_dusk",
+  "_comment": "Reusable scene-tuple templates for trajectory authoring. Each snippet fixes 5-6 of the 11 dim slots (the constants that define the scene type) and lists the slots the author must supply per use (the variables that distinguish one instance from another). Token IDs are drawn from cases/orchard_at_dusk/dimensions.json. Snippet set is the universal eleven from amber_cipher plus three case-specific templates for the rural register: the cider-press ledger pass, the vestry consultation with Reverend Caddick, and the boundary-walk recollection.",
+
+  "snippets": {
+
+    "cold_object_examination": {
+      "description": "Detective alone with a single object — the field gate hinge, the long-grass lamp, the parish register. Cold, methodical inspection in the orchard's quiet. No NPC pressure. Used for opening turns and quiet evidence beats between interviews.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "first_witness_interview_cooperative": {
+      "description": "First contact with a witness who has no reason to lie — Sowerby behind the bar, Briggs at the constable's room, Caddick in the vestry. They give what they know plainly. Use early in trajectory before any pressure has built.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:lamp_lit_early"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "suspect_interview_defensive": {
+      "description": "Returning to a suspect (Crale at the gate, Webb at his yard, Eliza at the kitchen) with new evidence in hand. Their stance shifts to defensive; the body adjusts. Use mid-game, second or third pass on a suspect, after a contradiction has surfaced elsewhere.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "TELL": "emotion:closed_posture",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "PRESENCE", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "transition_pursuing_lead": {
+      "description": "A movement turn — the detective is in motion between farm, lane, inn, or church, having just been pointed somewhere by witness or evidence. Brief, kinetic. The action is the arrival itself.",
+      "template": {
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "dead_end_witness": {
+      "description": "A witness has nothing useful — the milk-route inquiry, the Sunday-school child, the surface neighbour. Cooperative but uninformed. Punctures momentum and forces the detective back to the orchard.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands",
+        "REVELATION": "revelation:dead_end",
+        "ATMOSPHERE": "atmosphere:silence_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "BEAT"]
+    },
+
+    "revelation_object_recognition": {
+      "description": "An object the detective has already seen (the field gate, the 1884 receipt, the boundary post) suddenly resolves into meaning. Alone, looking at the same thing in a new light. Closing-in beat. Pairs with name_uncovered or motive_emerges.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "confrontation_hostile": {
+      "description": "Direct accusation. The detective has the chain in hand and puts it to the suspect — Crale at the field gate, Webb at his yard. Stance hostile, tell sharp, beat closing_in or verdict_ready. Use once or twice per trajectory.",
+      "template": {
+        "CAUSE": "cause:pursued_suspicion",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:closing_in"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION"]
+    },
+
+    "revisit_for_reframing": {
+      "description": "The detective returns to a location (the orchard, the field gate, the lane) to look at it again with new context. Quiet recasting of an earlier scene. Often produces partial_match or contradiction_surfaces.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "atmospheric_interlude": {
+      "description": "A low-activity beat. The press turns; the rooks settle; the apples drop into long grass. No NPC, no revelation. Used to mark act breaks or the falling of dusk. One or two per trajectory.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "ATMOSPHERE", "BEAT"]
+    },
+
+    "discovery_moment": {
+      "description": "A find — the lamp in the long grass, the receipt in the back of the cider press ledger, the entry in the parish register. The first surfacing of the object. Alone, the act of finding.",
+      "template": {
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:partial_match"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "cider_press_ledger_pass": {
+      "description": "Case-specific. The detective at the cider press shed working through the ledger of pressings — pages of weights and dates in Eliza Crale's hand, with a single sheet folded between the September pages. Quiet, methodical. The atmosphere is the press itself, turning.",
+      "template": {
+        "LOCATION": "location:cider_press",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:cider_press_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cider_press_turns"
+      },
+      "fill_in_per_turn": ["TRANSITION", "REVELATION", "BEAT"]
+    },
+
+    "vestry_consultation": {
+      "description": "Case-specific. The detective in the vestry of St Bartholomew's with Reverend Caddick, the parish register open between them. The vicar's hand flat on the prayer book. The question put to him is about 1884, not about Oates. This is the channel by which the buried motive surfaces.",
+      "template": {
+        "LOCATION": "location:parish_church",
+        "CAUSE": "cause:reading_survey_record",
+        "PRESENCE": "presence:with_reverend_caddick",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:parish_register",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:church_bell_tolls"
+      },
+      "fill_in_per_turn": ["TRANSITION", "REVELATION", "BEAT"]
+    },
+
+    "boundary_walk_recollection": {
+      "description": "Case-specific. The detective walks the orchard lane between the field gate and the drainage stone at dusk, alone, recalling what has been said by Webb and Tilling and matching it to the long grass underfoot. The atmosphere is the dusk light through bare branches; the action is recall.",
+      "template": {
+        "LOCATION": "location:orchard_lane",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dusk_light_through_branches"
+      },
+      "fill_in_per_turn": ["OBJECT_FOCUS", "REVELATION", "BEAT"]
+    }
+
+  }
+}

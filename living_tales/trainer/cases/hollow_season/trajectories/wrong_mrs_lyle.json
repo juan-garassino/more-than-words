@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "wrong_mrs_lyle",
+  "case_id": "hollow_season",
+  "description": "Standard ~41t wrong path. Detective fixates on Mrs Lyle's access — twenty-three years in the house, keys to every room, the green sack with the receipt produced in her hand. Her loyalty to Edmund (the quarter-hour delay fetching the sack) reads as accomplice behaviour. The chemist's confirmation comes too late and is misweighted. Wrong accusation in the servants_hall turn 41.",
+  "outcome": "wrong_mrs_lyle",
+  "starting_hypothesis": "suspect_first_lyle",
+  "tags": [
+    "wrong_mrs_lyle",
+    "housekeeper_loyalty_misread",
+    "access_chain",
+    "receipt_in_her_sack",
+    "designed_wrong",
+    "hand_paced"
+  ],
+  "opening": {
+    "tokens": [
+      "location:library",
+      "event:sir_geoffrey_discovered",
+      "time:sunday_before_breakfast"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the body. Decanter, chair, window.",
+      "player_card": "object:brandy_decanter",
+      "scene": {"LOCATION":"location:library","TRANSITION":"transition:none","CAUSE":"cause:examining_evidence","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:brandy_decanter","TELL":"tell:none","ATMOSPHERE":"atmosphere:summer_light_slants","REVELATION":"revelation:partial_match","BEAT":"beat:orientation","PROTOCOL_TELL":"protocol_tell:none"},
+      "convergence_after": [0.04, 0.06, 0.04]
+    },
+    {
+      "turn": 2,
+      "_note": "The french_window_latch. Curtain on the outside. Whoever opened them came from inside.",
+      "player_card": "object:french_window_latch",
+      "scene": {"LOCATION":"location:library","TRANSITION":"transition:stayed","CAUSE":"cause:examining_evidence","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:french_window_latch","TELL":"tell:none","ATMOSPHERE":"atmosphere:rooks_settle","REVELATION":"revelation:partial_match","BEAT":"beat:orientation","PROTOCOL_TELL":"protocol_tell:door_left_unlatched"},
+      "convergence_after": [0.06, 0.12, 0.06]
+    },
+    {
+      "turn": 3,
+      "_note": "Descend to the servants_hall. Mrs Lyle at the deal table. First NPC contact.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:descended_to","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:orientation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.14, 0.14, 0.08]
+    },
+    {
+      "turn": 4,
+      "_note": "She produces the duty_log. Twenty-three years in service; every room's key on her board.",
+      "player_card": "object:duty_log",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:reading_household_record","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:cooperative","ACTION":"action:examines","OBJECT_FOCUS":"object:duty_log","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:orientation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.16, 0.22, 0.09]
+    },
+    {
+      "turn": 5,
+      "_note": "Cross to the library. The decanter again. The household keys could have unlatched the french windows.",
+      "player_card": "travel:to_library",
+      "scene": {"LOCATION":"location:library","TRANSITION":"transition:returned","CAUSE":"cause:revisiting_scene","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:brandy_decanter","TELL":"tell:none","ATMOSPHERE":"atmosphere:summer_light_slants","REVELATION":"revelation:partial_match","BEAT":"beat:orientation","PROTOCOL_TELL":"protocol_tell:door_left_unlatched"},
+      "convergence_after": [0.20, 0.24, 0.10]
+    },
+    {
+      "turn": 6,
+      "_note": "Hadley at the library door. He gives the side door at quarter past — and the housekeeper's bell rung at quarter to twelve.",
+      "player_card": "witness:butler_hadley",
+      "scene": {"LOCATION":"location:library","TRANSITION":"transition:stayed","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_butler_hadley","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object:duty_log","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:orientation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.26, 0.28, 0.12]
+    },
+    {
+      "turn": 7,
+      "_note": "He adds — Lyle had crossed to Sir Geoffrey's library on the Saturday night with a tray. The detective notes the access.",
+      "player_card": "witness:butler_hadley",
+      "scene": {"LOCATION":"location:library","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_butler_hadley","STANCE":"stance:cooperative","ACTION":"action:recalls","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:contradiction_surfaces","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.34, 0.34, 0.14]
+    },
+    {
+      "turn": 8,
+      "_note": "Cross to the dining_room. Mrs Penrose at the table. She gives Lyle's Saturday rounds without commentary.",
+      "player_card": "witness:mrs_penrose",
+      "scene": {"LOCATION":"location:dining_room","TRANSITION":"transition:crossed_to","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_mrs_penrose","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:over_polished_manner","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.36, 0.36, 0.16]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to the servants_hall. Lyle at the bell board. The detective rehearses the tray.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.42, 0.40, 0.18]
+    },
+    {
+      "turn": 10,
+      "_note": "She gives the Saturday tray — a small bell, a small carafe of water, retired by half past ten. Steady, complete. The detective hears it as rehearsed.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:cooperative","ACTION":"action:recalls","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.46, 0.42, 0.22]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to the village_rooms. Edmund's bedside lamp. The basket emptied — Lyle's Sunday rounds.",
+      "player_card": "travel:to_village_rooms",
+      "scene": {"LOCATION":"location:village_rooms","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:wastepaper_basket","TELL":"tell:none","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:none"},
+      "convergence_after": [0.48, 0.46, 0.24]
+    },
+    {
+      "turn": 12,
+      "_note": "Cross to the servants_hall. The green sack at her elbow. The detective asks for it.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:returned","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.50, 0.48, 0.26]
+    },
+    {
+      "turn": 13,
+      "_note": "She fetches the sack. A quarter of an hour longer than it ought to take. The delay reads as suspicious.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:cooperative","ACTION":"action:waits","OBJECT_FOCUS":"object:wastepaper_basket","TELL":"emotion:paused_reply","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:contradiction_surfaces","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.54, 0.52, 0.30]
+    },
+    {
+      "turn": 14,
+      "_note": "She sorts the sack. The receipt at the second pass, in her hand. The detective takes the placement as her own work, not Edmund's.",
+      "player_card": "object:chemists_receipt",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:cooperative","ACTION":"action:discovers","OBJECT_FOCUS":"object:chemists_receipt","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_breaks","REVELATION":"revelation:contradiction_surfaces","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.62, 0.62, 0.52]
+    },
+    {
+      "turn": 15,
+      "_note": "Cross to the library. Lay the receipt against the decanter. The detective's theory: the housekeeper had the keys, the rounds, the tray.",
+      "player_card": "travel:to_library",
+      "scene": {"LOCATION":"location:library","TRANSITION":"transition:crossed_to","CAUSE":"cause:examining_evidence","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:brandy_decanter","TELL":"tell:none","ATMOSPHERE":"atmosphere:summer_light_slants","REVELATION":"revelation:partial_match","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:door_left_unlatched"},
+      "convergence_after": [0.64, 0.66, 0.40]
+    },
+    {
+      "turn": 16,
+      "_note": "Cross to the gun_room. The side passage. The detective rehearses the route from servants_hall to library.",
+      "player_card": "travel:to_gun_room",
+      "scene": {"LOCATION":"location:gun_room","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:notices","OBJECT_FOCUS":"object_focus:none","TELL":"tell:none","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:investigation","PROTOCOL_TELL":"protocol_tell:none"},
+      "convergence_after": [0.66, 0.68, 0.52]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross to the village_rooms. The chemist on his counter book. He gives the Friday entry — and names the buyer as not Mrs Lyle.",
+      "player_card": "witness:village_chemist",
+      "scene": {"LOCATION":"location:village_rooms","TRANSITION":"transition:crossed_to","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_village_chemist","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object:chemists_receipt","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.68, 0.70, 0.52]
+    },
+    {
+      "turn": 18,
+      "_note": "The detective takes the chemist's account as deflection — Lyle could have sent Croft, could have sent the under-gardener.",
+      "player_card": "witness:village_chemist",
+      "scene": {"LOCATION":"location:village_rooms","TRANSITION":"transition:stayed","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_village_chemist","STANCE":"stance:cooperative","ACTION":"action:recalls","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.70, 0.72, 0.54]
+    },
+    {
+      "turn": 19,
+      "_note": "Cross to the servants_hall. Press Lyle on the receipt. She gives the sack honestly, with the loyalty visible behind it.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:returned","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:cooperative","ACTION":"action:confronts","OBJECT_FOCUS":"object:chemists_receipt","TELL":"emotion:paused_reply","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.72, 0.74, 0.56]
+    },
+    {
+      "turn": 20,
+      "_note": "She mentions Edmund — the loyalty, the years, the village rooms. The detective takes the loyalty as accomplice.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:paused_reply","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.74, 0.74, 0.58]
+    },
+    {
+      "turn": 21,
+      "_note": "Cross to the dining_room. Penrose again. She gives the Saturday hours; Edmund withdrew at half past nine. Detective takes the timing for Edmund-as-courier.",
+      "player_card": "witness:mrs_penrose",
+      "scene": {"LOCATION":"location:dining_room","TRANSITION":"transition:crossed_to","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_mrs_penrose","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:over_polished_manner","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.74, 0.74, 0.58]
+    },
+    {
+      "turn": 22,
+      "_note": "Cross to the library. The decanter, the window, the latch. Detective rehearses Lyle's rounds against the mechanism.",
+      "player_card": "travel:to_library",
+      "scene": {"LOCATION":"location:library","TRANSITION":"transition:crossed_to","CAUSE":"cause:revisiting_scene","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:brandy_decanter","TELL":"tell:none","ATMOSPHERE":"atmosphere:summer_light_slants","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:door_left_unlatched"},
+      "convergence_after": [0.75, 0.76, 0.58]
+    },
+    {
+      "turn": 23,
+      "_note": "Cross to the estate_office. The detective lays the duty_log against the receipt. Two lines: Lyle's bell-board, Lyle's rounds.",
+      "player_card": "travel:to_estate_office",
+      "scene": {"LOCATION":"location:estate_office","TRANSITION":"transition:crossed_to","CAUSE":"cause:examining_evidence","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:duty_log","TELL":"tell:none","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:none"},
+      "convergence_after": [0.75, 0.76, 0.58]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to the servants_hall. Press Lyle on the years; on the keys; on the bells.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:returned","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:defensive","ACTION":"action:confronts","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:paused_reply","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.76, 0.78, 0.58]
+    },
+    {
+      "turn": 25,
+      "_note": "She gives the keys plainly. She does not deny the rounds. She does not deny the tray. She does not see the accusation forming.",
+      "player_card": "suspect:mrs_lyle",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:defensive","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:paused_reply","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.78, 0.79, 0.60]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to the village_rooms. Edmund's lamp, the basket, the receipt — read as Lyle-placed.",
+      "player_card": "travel:to_village_rooms",
+      "scene": {"LOCATION":"location:village_rooms","TRANSITION":"transition:crossed_to","CAUSE":"cause:revisiting_scene","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:wastepaper_basket","TELL":"tell:none","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:none"},
+      "convergence_after": [0.78, 0.79, 0.60]
+    },
+    {
+      "turn": 27,
+      "_note": "Hadley arrives at the village rooms. He gives the housekeeper's Sunday round — paper saved for reuse, every Sunday for twenty years.",
+      "player_card": "witness:butler_hadley",
+      "scene": {"LOCATION":"location:village_rooms","TRANSITION":"transition:stayed","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_butler_hadley","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object:duty_log","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.78, 0.80, 0.60]
+    },
+    {
+      "turn": 28,
+      "_note": "The detective takes Hadley's account as confirmation, not as exoneration. The pattern is the access, the rounds, the loyalty.",
+      "player_card": "witness:butler_hadley",
+      "scene": {"LOCATION":"location:village_rooms","TRANSITION":"transition:stayed","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_butler_hadley","STANCE":"stance:cooperative","ACTION":"action:recalls","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:steady_hands","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.78, 0.80, 0.60]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to the servants_hall. Press Lyle on the chemist's preparation. She gives — honestly — that she had never bought it.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:defensive","ACTION":"action:confronts","OBJECT_FOCUS":"object:chemists_receipt","TELL":"emotion:closed_posture","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.80, 0.81, 0.62]
+    },
+    {
+      "turn": 30,
+      "_note": "Press the receipt against the years. The detective treats her honesty as composure under pressure.",
+      "player_card": "object:chemists_receipt",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:defensive","ACTION":"action:confronts","OBJECT_FOCUS":"object:chemists_receipt","TELL":"emotion:closed_posture","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:contradiction_surfaces","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.80, 0.82, 0.62]
+    },
+    {
+      "turn": 31,
+      "_note": "Cross to the library. The decanter, the latch. Detective rehearses the Saturday-night tray.",
+      "player_card": "travel:to_library",
+      "scene": {"LOCATION":"location:library","TRANSITION":"transition:crossed_to","CAUSE":"cause:revisiting_scene","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:brandy_decanter","TELL":"tell:none","ATMOSPHERE":"atmosphere:summer_light_slants","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:door_left_unlatched"},
+      "convergence_after": [0.81, 0.82, 0.62]
+    },
+    {
+      "turn": 32,
+      "_note": "Cross to the dining_room. Penrose. She gives Lyle's tray honestly — Saturday at half past ten. The detective hears the time as fact for Lyle.",
+      "player_card": "witness:mrs_penrose",
+      "scene": {"LOCATION":"location:dining_room","TRANSITION":"transition:crossed_to","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_mrs_penrose","STANCE":"stance:cooperative","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:over_polished_manner","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.81, 0.82, 0.62]
+    },
+    {
+      "turn": 33,
+      "_note": "Cross to the servants_hall. Press Lyle a third time. She has begun to soften — the loyalty surfacing in the quiet way it surfaces.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:returned","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:defensive","ACTION":"action:confronts","OBJECT_FOCUS":"object_focus:none","TELL":"tell:softened","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.82, 0.83, 0.64]
+    },
+    {
+      "turn": 34,
+      "_note": "She gives the quarter-hour delay — she had been sorting the sack before bringing it. The detective takes the delay as accomplice work.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:defensive","ACTION":"action:recalls","OBJECT_FOCUS":"object:wastepaper_basket","TELL":"tell:softened","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:contradiction_surfaces","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.84, 0.84, 0.66]
+    },
+    {
+      "turn": 35,
+      "_note": "Cross to the library. The detective rehearses the case: keys, tray, rounds, sack, receipt. The motive surface left untouched.",
+      "player_card": "travel:to_library",
+      "scene": {"LOCATION":"location:library","TRANSITION":"transition:crossed_to","CAUSE":"cause:revisiting_scene","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:examines","OBJECT_FOCUS":"object:brandy_decanter","TELL":"tell:none","ATMOSPHERE":"atmosphere:summer_light_slants","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:door_left_unlatched"},
+      "convergence_after": [0.84, 0.84, 0.66]
+    },
+    {
+      "turn": 36,
+      "_note": "Cross to the drawing_room. The portrait. The detective walks past it.",
+      "player_card": "travel:to_drawing_room",
+      "scene": {"LOCATION":"location:drawing_room","TRANSITION":"transition:crossed_to","CAUSE":"cause:chronological_drift","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:notices","OBJECT_FOCUS":"object:mothers_portrait","TELL":"tell:none","ATMOSPHERE":"atmosphere:dust_motes_hang","REVELATION":"revelation:none","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:none"},
+      "convergence_after": [0.84, 0.84, 0.66]
+    },
+    {
+      "turn": 37,
+      "_note": "Cross to the servants_hall. Lyle waits at the deal table, the sack at her elbow, the duty log open.",
+      "player_card": "travel:to_servants_hall",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:defensive","ACTION":"action:arrives","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:closed_posture","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.85, 0.84, 0.68]
+    },
+    {
+      "turn": 38,
+      "_note": "Press the receipt one last time. She gives the same honest answer.",
+      "player_card": "object:chemists_receipt",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:defensive","ACTION":"action:confronts","OBJECT_FOCUS":"object:chemists_receipt","TELL":"emotion:closed_posture","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.85, 0.85, 0.68]
+    },
+    {
+      "turn": 39,
+      "_note": "Press the bell board. The keys. The years. The detective treats every honest answer as the answer of a guilty woman.",
+      "player_card": "object:duty_log",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:duty_log","TELL":"tell:tightened","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:contradiction_surfaces","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.86, 0.86, 0.69]
+    },
+    {
+      "turn": 40,
+      "_note": "Press the loyalty. She gives the years; she gives the affection. The detective takes both for the motive.",
+      "player_card": "suspect:mrs_lyle",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object_focus:none","TELL":"tell:tightened","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.86, 0.86, 0.69]
+    },
+    {
+      "turn": 41,
+      "_note": "Wrong accusation. The detective names Mrs Lyle. She does not answer.",
+      "player_card": "ACCUSE:suspect:mrs_lyle",
+      "scene": {"LOCATION":"location:servants_hall","TRANSITION":"transition:stayed","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_mrs_lyle","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:chemists_receipt","TELL":"tell:silent","ATMOSPHERE":"atmosphere:dawn_approaches","REVELATION":"revelation:confirmation","BEAT":"beat:closing_in","PROTOCOL_TELL":"protocol_tell:proper_form_observed"},
+      "convergence_after": [0.86, 0.86, 0.69]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "accused": "suspect:mrs_lyle",
+    "final_convergence": [0.86, 0.86, 0.69],
+    "_note": "Wrong accusation. Detective fixates on Mrs Lyle's access, twenty-three years, and the quarter-hour delay bringing the green sack. Motive dim plateaus around 0.65 — Lyle's loyalty to Edmund is read as accomplice behaviour rather than affection."
+  }
+}

@@ -1,0 +1,793 @@
+{
+  "schema_version": 2,
+  "case_id": "orchard_at_dusk",
+  "voice": "third_person_past",
+  "_comment": "Slot-fillable phrases per dim token in en + es. Each entry is either a plain string, a list of 3-5 interchangeable variants, or (for top-NPC PRESENCE tokens) a dict of voice-arc stages cold/warming/breaking/broken. The composer picks variants deterministically by hash(turn_idx, token_id). All variants must work in any place the original string worked. Voice: third-person past, methodical, cold, reconstructive — Obra Dinn cartouche cadence with West Country / Edwardian rural register.",
+
+  "LOCATION": {
+    "location:crale_orchard":              {"en": "the Crale orchard",                "es": "el huerto de los Crale"},
+    "location:cider_press":                {"en": "the cider press",                  "es": "el lagar de sidra"},
+    "location:crale_farmhouse_kitchen":    {"en": "the farmhouse kitchen",            "es": "la cocina de la granja"},
+    "location:orchard_lane":               {"en": "the orchard lane",                 "es": "el sendero del huerto"},
+    "location:field_gate":                 {"en": "the field gate",                   "es": "el portón del campo"},
+    "location:webb_farm":                  {"en": "Webb Farm",                        "es": "la granja Webb"},
+    "location:village_inn":                {"en": "the Hawk and Shoe",                "es": "el Halcón y la Herradura"},
+    "location:parish_church":              {"en": "St Bartholomew's",                 "es": "la iglesia de San Bartolomé"},
+    "location:registry_office":            {"en": "the Bristol registry office",      "es": "el registro de Bristol"},
+    "location:none":                       {"en": "",                                  "es": ""}
+  },
+
+  "TRANSITION": {
+    "transition:stayed": {
+      "en": ["Still at", "Held position at", "Remained at", "Did not move from"],
+      "es": ["Aún en", "Sin moverse de", "Permanecía en", "Continuaba en"]
+    },
+    "transition:crossed_to": {
+      "en": ["Crossed to", "Moved across to", "Stepped over to", "Walked through to"],
+      "es": ["Cruzó hasta", "Atravesó hasta", "Pasó hasta", "Caminó hasta"]
+    },
+    "transition:entered": {
+      "en": ["Entered", "Stepped into", "Passed into", "Went into"],
+      "es": ["Entró en", "Pasó a", "Se adentró en", "Penetró en"]
+    },
+    "transition:exited": {
+      "en": ["Stepped out of", "Left", "Passed out of", "Withdrew from"],
+      "es": ["Salió de", "Abandonó", "Se retiró de", "Dejó atrás"]
+    },
+    "transition:returned": {
+      "en": ["Returned to", "Came back to", "Went back to", "Doubled back to"],
+      "es": ["Volvió a", "Regresó a", "Retornó a", "Volvió sobre sus pasos a"]
+    },
+    "transition:pursued_to": {
+      "en": ["Followed the lead to", "Tracked the matter to", "Followed the thread to", "Carried the question to"],
+      "es": ["Siguió la pista hasta", "Llevó el asunto hasta", "Siguió el hilo hasta", "Trasladó la cuestión a"]
+    },
+    "transition:called_away_to": {
+      "en": ["Was summoned to", "Was called to", "Was sent for at", "Was bidden to"],
+      "es": ["Fue llamada a", "Fue requerida en", "La hicieron acudir a", "La reclamaron en"]
+    },
+    "transition:descended_to": {
+      "en": ["Descended into", "Went down to", "Took the slope down to", "Made the descent to"],
+      "es": ["Bajó a", "Descendió a", "Tomó la bajada hasta", "Hizo el descenso a"]
+    },
+    "transition:none": {
+      "en": ["Began at", "Started at", "Opened at", "Set out from"],
+      "es": ["Comenzó en", "Empezó en", "Inició en", "Partió desde"]
+    }
+  },
+
+  "CAUSE": {
+    "cause:following_witness_lead": {
+      "en": ["On the witness's word,", "Acting on what the witness had said,", "Following the witness's account,", "Taking the witness at his word,"],
+      "es": ["Por la palabra del testigo,", "Atendiendo lo dicho por el testigo,", "Siguiendo el relato del testigo,", "Conforme al testimonio,"]
+    },
+    "cause:examining_evidence": {
+      "en": ["Tracing the evidence,", "Following the evidence,", "Working from the evidence,", "Carrying the evidence forward,"],
+      "es": ["Siguiendo la evidencia,", "Trazando la evidencia,", "Partiendo de las pruebas,", "Llevando la prueba adelante,"]
+    },
+    "cause:recognized_object": {
+      "en": ["Something about the object struck her;", "The object held her attention;", "A look at the object stopped her;", "The thing in question caught her eye;"],
+      "es": ["Algo del objeto la detuvo;", "El objeto retuvo su atención;", "Algo en el objeto la hizo pararse;", "La cosa en cuestión le llamó la mirada;"]
+    },
+    "cause:noticed_inconsistency": {
+      "en": ["A detail did not match;", "Something did not add up;", "One detail refused to fit;", "An inconsistency stood out;"],
+      "es": ["Un detalle no encajaba;", "Algo no cuadraba;", "Un detalle se resistía;", "Una inconsistencia saltaba a la vista;"]
+    },
+    "cause:pursued_suspicion": {
+      "en": ["On a hunch,", "Following a suspicion,", "Acting on a doubt,", "On the strength of a suspicion,"],
+      "es": ["Por una corazonada,", "Siguiendo una sospecha,", "Movida por una duda,", "Llevada por la sospecha,"]
+    },
+    "cause:revisiting_scene": {
+      "en": ["Returning to confirm,", "Going back to check,", "To check the matter again,", "Coming back to verify,"],
+      "es": ["Volviendo para confirmar,", "Regresando a comprobar,", "Para verificar de nuevo,", "Para corroborarlo,"]
+    },
+    "cause:summoned": {
+      "en": ["Called by name,", "Summoned by name,", "On being called,", "Hailed by name,"],
+      "es": ["Llamada por su nombre,", "Convocada por su nombre,", "Al ser llamada,", "Reclamada por su nombre,"]
+    },
+    "cause:chronological_drift": {
+      "en": ["As the dusk drew on,", "As the hour wore on,", "As the press kept turning,", "With the light failing,"],
+      "es": ["Mientras el atardecer avanzaba,", "Conforme se hacía tarde,", "Mientras el lagar seguía girando,", "Con la luz menguando,"]
+    },
+    "cause:reading_survey_record": {
+      "en": ["Working from the record,", "Reading the entry through,", "Following what the record said,", "On the strength of the entry,"],
+      "es": ["Trabajando con el registro,", "Leyendo la entrada,", "Siguiendo lo que decía el registro,", "Por lo que constaba en la entrada,"]
+    },
+    "cause:none": {"en": "", "es": ""}
+  },
+
+  "PRESENCE": {
+    "presence:with_thomas_crale": {
+      "en": {
+        "cold": [
+          "Thomas Crale leaned on the field gate",
+          "Crale stood with his hands at the top of the gate",
+          "Crale waited where the orchard met the lane",
+          "Crale was already at the gate when she came up"
+        ],
+        "warming": [
+          "Crale gave the times of his Friday afternoon in order",
+          "Crale answered each question once and waited for the next",
+          "Crale named the supper hour without being asked twice",
+          "Crale spoke of the gate as a matter of repairs"
+        ],
+        "breaking": [
+          "Crale's pauses lengthened by a beat between answers",
+          "Crale set the apple down on the gate-post and did not pick it up",
+          "Crale's right hand left the gate and stayed at his side",
+          "Crale named the constable by his rank instead of by his name"
+        ],
+        "broken": [
+          "Crale did not answer the question about 1884",
+          "Crale's voice dropped and did not come back up",
+          "Crale waited a half-second longer than he had waited for any question before",
+          "Crale said he could not account for the receipt"
+        ]
+      },
+      "es": {
+        "cold": [
+          "Thomas Crale se apoyaba en el portón del campo",
+          "Crale estaba con las manos sobre el portón",
+          "Crale esperaba donde el huerto se encontraba con el sendero",
+          "Crale ya estaba en el portón cuando ella subió"
+        ],
+        "warming": [
+          "Crale dio las horas de su viernes por la tarde en orden",
+          "Crale respondía a cada pregunta una sola vez y esperaba la siguiente",
+          "Crale nombró la hora de la cena sin que se lo pidieran dos veces",
+          "Crale hablaba del portón como un asunto de reparaciones"
+        ],
+        "breaking": [
+          "las pausas de Crale se alargaron un compás entre respuestas",
+          "Crale dejó la manzana sobre el poste del portón y no volvió a tomarla",
+          "la mano derecha de Crale soltó el portón y se quedó al costado",
+          "Crale nombró al agente por su grado en lugar de por su nombre"
+        ],
+        "broken": [
+          "Crale no respondió a la pregunta sobre 1884",
+          "la voz de Crale bajó y no volvió a subir",
+          "Crale esperó medio segundo más de lo que había esperado en ninguna respuesta anterior",
+          "Crale dijo que no podía dar cuenta del recibo"
+        ]
+      }
+    },
+    "presence:with_amos_webb": {
+      "en": {
+        "cold": [
+          "Amos Webb was in the yard with the dogs",
+          "Webb stood at his own gate with the lane behind him",
+          "Webb was already speaking when she came across the yard",
+          "Webb met her in the doorway of the Webb farmhouse"
+        ],
+        "warming": [
+          "Webb named the survey a lie before any question was put",
+          "Webb produced the private measurement on a folded sheet",
+          "Webb spoke loud enough that the dogs went quiet",
+          "Webb gave the times of the Thursday confrontation without being asked"
+        ],
+        "breaking": [
+          "Webb stopped mid-sentence and looked at the floor",
+          "Webb's fist came down on the table once and stayed there",
+          "Webb's hand went to the back of his neck at the verdict",
+          "Webb said the same thing a third time and quieter each time"
+        ],
+        "broken": [
+          "Webb stood at the orchard fence and looked not at the trees but at the farmhouse",
+          "Webb said there was a thing he had never been able to put words to",
+          "Webb named the year 1884 without being prompted",
+          "Webb said the Crales had owed his wife's father something he had never been told the shape of"
+        ]
+      },
+      "es": {
+        "cold": [
+          "Amos Webb estaba en el patio con los perros",
+          "Webb estaba en su propio portón con el sendero a la espalda",
+          "Webb ya estaba hablando cuando ella cruzó el patio",
+          "Webb la recibió en el umbral de la granja Webb"
+        ],
+        "warming": [
+          "Webb llamó mentira al estudio antes de que se le preguntara",
+          "Webb sacó la medida privada en una hoja doblada",
+          "Webb hablaba lo bastante alto para que los perros callaran",
+          "Webb dio las horas de la confrontación del jueves sin que se le preguntara"
+        ],
+        "breaking": [
+          "Webb se detuvo a mitad de frase y miró al suelo",
+          "el puño de Webb cayó sobre la mesa una vez y allí se quedó",
+          "la mano de Webb fue a la nuca al oír el veredicto",
+          "Webb dijo lo mismo por tercera vez, y más bajo cada vez"
+        ],
+        "broken": [
+          "Webb estaba en la cerca del huerto y miraba no los árboles sino la granja",
+          "Webb dijo que había algo a lo que nunca había podido poner palabras",
+          "Webb nombró el año 1884 sin que nadie se lo sugiriera",
+          "Webb dijo que los Crale habían debido al padre de su esposa algo cuya forma nunca le habían dicho"
+        ]
+      }
+    },
+    "presence:with_hob_tilling": {
+      "en": {
+        "cold": [
+          "Hob Tilling stood with his cap in his hand",
+          "the farmhand waited at the kitchen door with his cap turned",
+          "Tilling had been brought in from the yard and stood by the dresser",
+          "Tilling was at the kitchen table when she came in"
+        ],
+        "warming": [
+          "Tilling gave the times by the church clock he had been near all day",
+          "Tilling said he had taken his supper with Mr Crale at seven",
+          "Tilling named the upper field and the cutting of the last hay",
+          "Tilling answered each question and turned the cap a half-revolution between answers"
+        ],
+        "breaking": [
+          "Tilling did not understand which answer had been useful",
+          "Tilling waited longer before the next answer than he had waited before any other",
+          "Tilling looked at Mr Crale and then at the floor and gave the time again",
+          "Tilling said the words upper field a second time without being asked"
+        ],
+        "broken": [
+          "Tilling said he had not seen Mr Crale between two and seven",
+          "Tilling said it the way a boy says a thing he had not thought to be careful about",
+          "Tilling said he was sorry if he had said the wrong thing",
+          "Tilling said the kettle had not yet been on when he came in for supper"
+        ]
+      },
+      "es": {
+        "cold": [
+          "Hob Tilling estaba de pie con la gorra en la mano",
+          "el peón esperaba en la puerta de la cocina dándole vueltas a la gorra",
+          "a Tilling lo habían traído del patio y estaba junto al aparador",
+          "Tilling estaba a la mesa de la cocina cuando ella entró"
+        ],
+        "warming": [
+          "Tilling daba las horas por el reloj de la iglesia, junto al cual había estado todo el día",
+          "Tilling dijo que había cenado con el señor Crale a las siete",
+          "Tilling nombró el campo de arriba y el corte del último heno",
+          "Tilling respondía a cada pregunta y giraba la gorra media vuelta entre respuestas"
+        ],
+        "breaking": [
+          "Tilling no entendía cuál respuesta había sido útil",
+          "Tilling tardó más en la siguiente respuesta que en ninguna anterior",
+          "Tilling miró al señor Crale y luego al suelo y dio la hora otra vez",
+          "Tilling repitió las palabras campo de arriba una segunda vez sin que se lo pidieran"
+        ],
+        "broken": [
+          "Tilling dijo que no había visto al señor Crale entre las dos y las siete",
+          "Tilling lo dijo como dice un muchacho una cosa de la que no había pensado tener cuidado",
+          "Tilling dijo que lo lamentaba si había dicho algo que no debía",
+          "Tilling dijo que la tetera aún no estaba al fuego cuando entró a cenar"
+        ]
+      }
+    },
+    "presence:with_eliza_crale": {
+      "en": [
+        "Eliza Crale stood at the deal table folding cloth",
+        "Mrs Crale set down the kettle without offering tea",
+        "Eliza Crale was at the kitchen window when she came in",
+        "Mrs Crale kept her place at the table and folded the cloth a second time"
+      ],
+      "es": [
+        "Eliza Crale estaba a la mesa de madera plegando un paño",
+        "la señora Crale dejó la tetera sin ofrecer té",
+        "Eliza Crale estaba en la ventana de la cocina cuando ella entró",
+        "la señora Crale se mantuvo en su sitio a la mesa y plegó el paño una segunda vez"
+      ]
+    },
+    "presence:with_reverend_caddick": {
+      "en": [
+        "Reverend Caddick was in the vestry with the register open",
+        "the vicar had his right hand flat on the prayer book",
+        "Caddick stood at the lectern and waited for the question",
+        "Reverend Caddick was at the vestry table when she came in"
+      ],
+      "es": [
+        "el reverendo Caddick estaba en la sacristía con el registro abierto",
+        "el vicario tenía la mano derecha plana sobre el devocionario",
+        "Caddick estaba en el atril y esperaba la pregunta",
+        "el reverendo Caddick estaba a la mesa de la sacristía cuando ella entró"
+      ]
+    },
+    "presence:with_constable_briggs": {
+      "en": [
+        "Constable Briggs stood in the doorway of the parish station",
+        "the constable had the inquest book under his arm",
+        "Briggs waited at the desk with his helmet on the chair",
+        "Constable Briggs was at the lane gate when she came up"
+      ],
+      "es": [
+        "el agente Briggs estaba en la puerta de la comisaría parroquial",
+        "el agente tenía el libro del sumario bajo el brazo",
+        "Briggs esperaba en el escritorio con el casco sobre la silla",
+        "el agente Briggs estaba en el portón del sendero cuando ella subió"
+      ]
+    },
+    "presence:with_ned_sowerby": {
+      "en": [
+        "Ned Sowerby was behind the bar with the cloth in his hand",
+        "the innkeeper kept his place at the till",
+        "Sowerby stood at the tap with the day-book before him",
+        "Ned Sowerby was at the bar when she came in"
+      ],
+      "es": [
+        "Ned Sowerby estaba tras la barra con el trapo en la mano",
+        "el tabernero se mantenía junto a la caja",
+        "Sowerby estaba en el grifo con el libro del día delante",
+        "Ned Sowerby estaba en la barra cuando ella entró"
+      ]
+    },
+    "presence:with_martha_ainsworth": {
+      "en": [
+        "Martha Ainsworth was at the Webb kitchen window",
+        "Mrs Ainsworth waited at the kitchen table with the clock at her back",
+        "Martha Ainsworth stood at the dresser folding linen",
+        "Mrs Ainsworth was at the door of Webb Farm when she came across the yard"
+      ],
+      "es": [
+        "Martha Ainsworth estaba en la ventana de la cocina de los Webb",
+        "la señora Ainsworth esperaba a la mesa con el reloj a su espalda",
+        "Martha Ainsworth estaba en el aparador plegando ropa de cama",
+        "la señora Ainsworth estaba en la puerta de la granja Webb cuando ella cruzó el patio"
+      ]
+    },
+    "presence:alone": {
+      "en": [
+        "no one else was there",
+        "the place stood empty otherwise",
+        "no other person was present",
+        "the orchard was hers alone"
+      ],
+      "es": [
+        "no había nadie más",
+        "el lugar estaba vacío por lo demás",
+        "no había ninguna otra persona",
+        "el huerto quedaba para ella sola"
+      ]
+    }
+  },
+
+  "STANCE": {
+    "stance:cooperative": {
+      "en": ["open, willing to speak", "willing to answer", "ready enough to speak", "open to the questions"],
+      "es": ["abierto, dispuesto a hablar", "dispuesto a responder", "lo bastante dispuesto a hablar", "abierto a las preguntas"]
+    },
+    "stance:defensive": {
+      "en": ["the hands at the top of the gate", "the cap held tighter in the hand", "the shoulders squared at the question", "the back straightening at the question"],
+      "es": ["con las manos sobre el portón", "con la gorra apretada en la mano", "con los hombros tensos ante la pregunta", "con la espalda erguida ante la pregunta"]
+    },
+    "stance:evasive": {
+      "en": ["the eyes finding the floor", "the eyes drifting to the orchard", "the gaze sliding aside", "the eyes refusing to land"],
+      "es": ["con los ojos en el suelo", "con la mirada en el huerto", "la mirada deslizándose a un lado", "con los ojos sin posarse"]
+    },
+    "stance:hostile": {
+      "en": ["the jaw set, the voice low", "the fist on the table, the voice flat", "the mouth set in a hard line", "the voice gone flat and low"],
+      "es": ["con la mandíbula tensa, la voz baja", "con el puño en la mesa, la voz plana", "con la boca en una línea dura", "con la voz vuelta plana y baja"]
+    },
+    "stance:unaware": {
+      "en": ["still unaware of her purpose", "yet to grasp why she had come", "not yet knowing what she was after", "without sense of the matter at hand"],
+      "es": ["aún ignorando el propósito de su visita", "sin haber comprendido por qué había venido", "sin saber aún qué buscaba", "sin captar todavía el asunto"]
+    },
+    "stance:none": {"en": "", "es": ""}
+  },
+
+  "ACTION": {
+    "action:examines": {
+      "en": ["examined", "looked over", "studied", "took in"],
+      "es": ["examinó", "revisó", "estudió", "observó"]
+    },
+    "action:questions": {
+      "en": ["questioned", "put questions to", "asked after", "pressed for an answer from"],
+      "es": ["interrogó", "preguntó a", "indagó a", "presionó para sacar respuesta a"]
+    },
+    "action:notices": {
+      "en": ["noticed", "marked", "took note of", "caught sight of"],
+      "es": ["advirtió", "reparó en", "tomó nota de", "se fijó en"]
+    },
+    "action:discovers": {
+      "en": ["found", "came upon", "uncovered", "turned up"],
+      "es": ["halló", "encontró", "descubrió", "dio con"]
+    },
+    "action:confronts": {
+      "en": ["confronted", "put the matter to", "set the matter before", "named the matter to"],
+      "es": ["confrontó", "puso el asunto ante", "expuso el asunto a", "le planteó el asunto a"]
+    },
+    "action:follows": {
+      "en": ["followed", "kept after", "tracked", "stayed with"],
+      "es": ["siguió", "fue tras", "rastreó", "se mantuvo tras"]
+    },
+    "action:waits": {
+      "en": ["waited", "held her place", "stayed where she was", "kept still"],
+      "es": ["esperó", "se mantuvo en su sitio", "permaneció donde estaba", "se quedó quieta"]
+    },
+    "action:leaves": {
+      "en": ["stepped away from", "moved off from", "withdrew from", "turned out of"],
+      "es": ["se alejó de", "se apartó de", "se retiró de", "salió de"]
+    },
+    "action:arrives": {
+      "en": ["stepped into", "came into", "set foot in", "passed into"],
+      "es": ["entró en", "llegó a", "puso pie en", "pasó a"]
+    },
+    "action:recalls": {
+      "en": ["recalled", "remembered", "called to mind", "brought back to mind"],
+      "es": ["recordó", "rememoró", "trajo a la memoria", "volvió a tener presente"]
+    },
+    "action:none": {
+      "en": ["stood", "kept still", "stayed where she was", "held her place"],
+      "es": ["se detuvo", "permaneció quieta", "se quedó donde estaba", "mantuvo su sitio"]
+    }
+  },
+
+  "OBJECT_FOCUS": {
+    "object:field_gate_hinge":  {"en": "the field gate hinge",       "es": "la bisagra del portón"},
+    "object:drainage_stone":    {"en": "the drainage stone",         "es": "la piedra del drenaje"},
+    "object:survey_chain":      {"en": "the surveyor's chain",       "es": "la cadena del agrimensor"},
+    "object:oates_notebook":    {"en": "Oates's notebook",           "es": "el cuaderno de Oates"},
+    "object:surveyors_fee":     {"en": "the surveyor's fee",         "es": "los honorarios del agrimensor"},
+    "object:solicitor_letter":  {"en": "the solicitor's letter",     "es": "la carta del abogado"},
+    "object:cider_press_ledger":{"en": "the cider press ledger",     "es": "el libro del lagar"},
+    "object:1884_receipt":      {"en": "the 1884 receipt",           "es": "el recibo de 1884"},
+    "object:harvest_scythe":    {"en": "the harvest scythe",         "es": "la guadaña de la cosecha"},
+    "object:lamp_in_long_grass":{"en": "the lamp in the long grass", "es": "la linterna en la hierba alta"},
+    "object:parish_register":   {"en": "the parish register",        "es": "el registro parroquial"},
+    "object:boundary_post":     {"en": "the boundary post",          "es": "el poste del límite"},
+    "object:apple_in_grass":    {"en": "the apple in the grass",     "es": "la manzana en la hierba"},
+    "object_focus:none":        {"en": "",                            "es": ""}
+  },
+
+  "TELL": {
+    "emotion:steady_hands": {
+      "en": ["the hands stayed steady", "the hands did not shake", "no tremor came to the hands", "the hands kept still on the gate"],
+      "es": ["las manos no temblaron", "las manos se mantuvieron firmes", "no asomó temblor en las manos", "las manos siguieron quietas sobre el portón"]
+    },
+    "emotion:measured_breath": {
+      "en": ["the breathing stayed measured", "the breath kept its pace", "the breathing did not quicken", "the breath stayed even"],
+      "es": ["la respiración se mantuvo medida", "el aliento conservó su ritmo", "la respiración no se aceleró", "el aliento se mantuvo parejo"]
+    },
+    "emotion:paused_reply": {
+      "en": ["the answer paused before coming", "the reply was slow in coming", "a pause came before the answer", "the answer waited a moment"],
+      "es": ["la respuesta tardó en llegar", "la contestación llegó despacio", "hubo una pausa antes de responder", "la respuesta esperó un instante"]
+    },
+    "emotion:closed_posture": {
+      "en": ["the coat stayed buttoned", "the coat was not opened", "the arms stayed folded", "the body stayed closed at the chest"],
+      "es": ["el abrigo siguió abrochado", "el abrigo no se abrió", "los brazos siguieron cruzados", "el cuerpo se mantuvo cerrado al pecho"]
+    },
+    "emotion:avoided_contact": {
+      "en": ["the eyes did not lift to meet hers", "the gaze did not come up to her", "the eyes stayed on the orchard", "the gaze did not cross hers"],
+      "es": ["los ojos no se alzaron a cruzar la mirada", "la mirada no llegó a la suya", "los ojos siguieron en el huerto", "la mirada no se cruzó con la suya"]
+    },
+    "emotion:flat_denial": {
+      "en": ["the denial came flat and complete", "the no came without weight", "the denial was given once and only once", "the answer was no and nothing more"],
+      "es": ["la negación llegó plana y completa", "el no llegó sin peso", "la negación se dio una sola vez", "la respuesta fue no y nada más"]
+    },
+    "tell:paled": {
+      "en": ["all colour drained at the question", "the colour went out of the face at the question", "the face lost its colour at the question", "the colour fled at the question"],
+      "es": ["todo el color se retiró ante la pregunta", "el color huyó del rostro ante la pregunta", "la cara perdió el color ante la pregunta", "el color desapareció ante la pregunta"]
+    },
+    "tell:tightened": {
+      "en": ["the shoulders tightened", "the jaw set hard", "the shoulders drew up", "a tightness came into the shoulders"],
+      "es": ["los hombros se tensaron", "la mandíbula se apretó", "los hombros se elevaron", "una tensión asomó en los hombros"]
+    },
+    "tell:glanced_aside": {
+      "en": ["the eyes went briefly aside", "the gaze slid to the orchard and back", "the look broke for an instant", "the eyes left hers for a moment"],
+      "es": ["los ojos se desviaron un instante", "la mirada se fue al huerto y volvió", "la mirada se cortó por un momento", "los ojos abandonaron los suyos un instante"]
+    },
+    "tell:silent": {
+      "en": ["no answer came", "the answer did not come", "the silence stood in place of the answer", "no word was given"],
+      "es": ["no llegó respuesta", "la respuesta no llegó", "el silencio ocupó el lugar de la respuesta", "no se dio palabra"]
+    },
+    "tell:hesitated": {
+      "en": ["the answer hung a moment before it came", "a hesitation came before the answer", "the words waited at the lip", "the reply paused at the edge"],
+      "es": ["la respuesta colgó un momento antes de llegar", "una vacilación precedió la respuesta", "las palabras esperaron en el labio", "la respuesta se demoró al borde"]
+    },
+    "tell:over_explained": {
+      "en": ["more was given than had been asked", "the answer ran past the question", "details came that had not been requested", "the reply spilled past its question"],
+      "es": ["se dio más de lo preguntado", "la respuesta pasó de largo la pregunta", "llegaron detalles que no se habían pedido", "la respuesta se vertió más allá de la pregunta"]
+    },
+    "tell:none": {"en": "", "es": ""}
+  },
+
+  "ATMOSPHERE": {
+    "atmosphere:dusk_light_through_branches": {
+      "en": [
+        "The dusk light came through the bare west branches.",
+        "The last of the day was strained through the orchard's edge.",
+        "A late, flat light lay along the orchard's western line.",
+        "Dusk came through the limbs in long uneven bars."
+      ],
+      "es": [
+        "La luz del atardecer entraba por las ramas desnudas del oeste.",
+        "Lo último del día se colaba por el lindero del huerto.",
+        "Una luz tardía y plana se tendía sobre la línea oeste del huerto.",
+        "El atardecer entraba por las ramas en franjas largas y desiguales."
+      ]
+    },
+    "atmosphere:apples_fall_in_grass": {
+      "en": [
+        "An apple dropped into the long grass.",
+        "A late apple fell from the high branches.",
+        "Apples came down in the grass at uneven intervals.",
+        "Something fell soft into the grass beyond the path."
+      ],
+      "es": [
+        "Una manzana cayó en la hierba alta.",
+        "Una manzana tardía bajó desde las ramas altas.",
+        "Las manzanas caían sobre la hierba a intervalos desiguales.",
+        "Algo cayó blando en la hierba más allá del camino."
+      ]
+    },
+    "atmosphere:cider_press_turns": {
+      "en": [
+        "The cider press kept turning in the shed below.",
+        "The press groaned at its slow round below the slope.",
+        "The sound of the press came up through the orchard.",
+        "The press turned with the same slow weight it had carried all week."
+      ],
+      "es": [
+        "El lagar de sidra seguía girando en el cobertizo de abajo.",
+        "El lagar gemía en su lenta vuelta al pie de la ladera.",
+        "El sonido del lagar subía por el huerto.",
+        "El lagar giraba con el mismo peso lento que había llevado toda la semana."
+      ]
+    },
+    "atmosphere:rooks_in_the_orchard": {
+      "en": [
+        "The rooks were settling in the high branches.",
+        "Rooks called once and again from the orchard's top.",
+        "A rook lifted from the limes and settled back.",
+        "The rooks called once over the orchard and did not call again."
+      ],
+      "es": [
+        "Las grajas se asentaban en las ramas altas.",
+        "Las grajas graznaban una y otra vez desde lo alto del huerto.",
+        "Una graja se alzó de los tilos y volvió a posarse.",
+        "Las grajas graznaron una vez sobre el huerto y no graznaron más."
+      ]
+    },
+    "atmosphere:wind_in_the_long_grass": {
+      "en": [
+        "The wind moved through the long grass along the boundary.",
+        "A small wind ran along the unmown path.",
+        "The grass at the edge bent once and lay back.",
+        "The wind came up through the long grass and went down again."
+      ],
+      "es": [
+        "El viento se movió por la hierba alta a lo largo del límite.",
+        "Un viento pequeño corrió por el camino sin segar.",
+        "La hierba del borde se inclinó una vez y volvió a tenderse.",
+        "El viento subió por la hierba alta y volvió a bajar."
+      ]
+    },
+    "atmosphere:silence_holds": {
+      "en": [
+        "Silence held between them.",
+        "The silence stayed.",
+        "Quiet held between them.",
+        "No word came after."
+      ],
+      "es": [
+        "El silencio se mantuvo entre ellos.",
+        "El silencio se sostuvo.",
+        "La quietud se quedó entre ellos.",
+        "No vino palabra después."
+      ]
+    },
+    "atmosphere:silence_breaks": {
+      "en": [
+        "The silence broke on a single word.",
+        "Something gave in the silence.",
+        "The quiet broke without warning.",
+        "The silence broke and did not close again."
+      ],
+      "es": [
+        "El silencio se rompió en una sola palabra.",
+        "Algo cedió en el silencio.",
+        "La quietud se quebró sin aviso.",
+        "El silencio se rompió y no volvió a cerrarse."
+      ]
+    },
+    "atmosphere:church_bell_tolls": {
+      "en": [
+        "The church bell tolled the hour across the village.",
+        "St Bartholomew's bell carried over the lane.",
+        "The bell at the church gave the half hour.",
+        "The church bell sounded once and held."
+      ],
+      "es": [
+        "La campana de la iglesia dio la hora sobre el pueblo.",
+        "La campana de San Bartolomé llegó hasta el sendero.",
+        "La campana de la iglesia marcó la media hora.",
+        "La campana de la iglesia sonó una vez y se sostuvo."
+      ]
+    },
+    "atmosphere:lamp_lit_early": {
+      "en": [
+        "A lamp was lit early in the kitchen window.",
+        "The lamp had been lit before the light was gone.",
+        "A lamp burned in the kitchen against the early dusk.",
+        "The lamp at the window had been lit before its hour."
+      ],
+      "es": [
+        "Una lámpara se había encendido temprano en la ventana de la cocina.",
+        "La lámpara se había encendido antes de que se fuera la luz.",
+        "Una lámpara ardía en la cocina contra el temprano atardecer.",
+        "La lámpara de la ventana se había encendido antes de su hora."
+      ]
+    },
+    "atmosphere:dawn_approaches": {
+      "en": [
+        "The first grey of dawn pressed at the orchard.",
+        "A grey light was gathering over the eastern wall.",
+        "The dawn was beginning to show beyond the trees.",
+        "The first dawn-light reached the orchard's edge."
+      ],
+      "es": [
+        "El primer gris del alba presionaba sobre el huerto.",
+        "Una luz gris se reunía sobre el muro del este.",
+        "El alba empezaba a asomar más allá de los árboles.",
+        "La primera luz del alba alcanzaba el borde del huerto."
+      ]
+    },
+    "atmosphere:none": {"en": "", "es": ""}
+  },
+
+  "REVELATION": {
+    "revelation:contradiction_surfaces": {
+      "en": [
+        "The two accounts no longer agreed.",
+        "The accounts had ceased to match.",
+        "The two stories no longer lined up.",
+        "What had been said before no longer fit what was said now."
+      ],
+      "es": [
+        "Los dos relatos ya no concordaban.",
+        "Los relatos habían dejado de coincidir.",
+        "Las dos versiones ya no encajaban.",
+        "Lo dicho antes ya no cuadraba con lo dicho ahora."
+      ]
+    },
+    "revelation:alibi_holds": {
+      "en": [
+        "The alibi held.",
+        "The alibi stood.",
+        "The account stood up.",
+        "There was no break in the alibi."
+      ],
+      "es": [
+        "La coartada se sostuvo.",
+        "La coartada aguantó.",
+        "La versión se mantuvo en pie.",
+        "No hubo grieta en la coartada."
+      ]
+    },
+    "revelation:name_uncovered": {
+      "en": [
+        "A name became legible at last.",
+        "A name surfaced at last.",
+        "At last a name could be read.",
+        "A name was finally plain."
+      ],
+      "es": [
+        "Un nombre se hizo legible al fin.",
+        "Un nombre salió a la luz al fin.",
+        "Al fin pudo leerse un nombre.",
+        "Un nombre quedó por fin claro."
+      ]
+    },
+    "revelation:motive_emerges": {
+      "en": [
+        "A reason rose to the surface.",
+        "A motive came into view.",
+        "A reason for the matter became plain.",
+        "The motive showed itself."
+      ],
+      "es": [
+        "Un motivo salió a la superficie.",
+        "Un motivo se hizo visible.",
+        "La razón del asunto quedó clara.",
+        "El motivo se mostró."
+      ]
+    },
+    "revelation:dead_end": {
+      "en": [
+        "The line went nowhere.",
+        "The thread broke off.",
+        "The lead came to nothing.",
+        "The trail ended there."
+      ],
+      "es": [
+        "La línea no llevaba a ninguna parte.",
+        "El hilo se cortó.",
+        "La pista no daba nada.",
+        "El rastro terminaba allí."
+      ]
+    },
+    "revelation:partial_match": {
+      "en": [
+        "Close — but not certain.",
+        "Near enough — but not sure.",
+        "It came close, without closing.",
+        "Almost — and not quite."
+      ],
+      "es": [
+        "Cercano — pero no seguro.",
+        "Cerca — pero sin certeza.",
+        "Se aproximaba, sin cerrar.",
+        "Casi — y no del todo."
+      ]
+    },
+    "revelation:confirmation": {
+      "en": [
+        "An earlier hypothesis was confirmed.",
+        "An earlier guess proved out.",
+        "What had been suspected was now proven.",
+        "An earlier reading held."
+      ],
+      "es": [
+        "Se confirmó una hipótesis anterior.",
+        "Una conjetura previa quedó probada.",
+        "Lo que se sospechaba quedó demostrado.",
+        "Una lectura anterior se sostuvo."
+      ]
+    },
+    "revelation:buried_motive_surfaces": {
+      "en": [
+        "What had been buried since 1884 came forward.",
+        "The older reason rose under the surface one.",
+        "Nineteen years of silence gave at the edge.",
+        "Beneath the boundary fraud, the older matter showed itself."
+      ],
+      "es": [
+        "Lo que llevaba enterrado desde 1884 salió a la luz.",
+        "La razón más vieja se alzó bajo la de la superficie.",
+        "Diecinueve años de silencio cedieron en el borde.",
+        "Bajo el fraude del límite, el asunto más antiguo se mostró."
+      ]
+    },
+    "revelation:none": {"en": "", "es": ""}
+  },
+
+  "BEAT": {
+    "beat:orientation":   {"en": "",  "es": ""},
+    "beat:investigation": {"en": "",  "es": ""},
+    "beat:closing_in": {
+      "en": [
+        "The shape of it was visible now.",
+        "The outline of the matter was plain now.",
+        "The case had begun to take its shape.",
+        "The figure of the thing stood out now."
+      ],
+      "es": [
+        "Su forma ya era visible.",
+        "El contorno del asunto era ya claro.",
+        "El caso empezaba a tomar su forma.",
+        "La figura del asunto destacaba ya."
+      ]
+    },
+    "beat:verdict_ready": {
+      "en": [
+        "Time to name them.",
+        "It was time to name them.",
+        "The naming was at hand.",
+        "The hour to name them had come."
+      ],
+      "es": [
+        "Era hora de nombrarlos.",
+        "Llegaba el momento de nombrarlos.",
+        "El nombrarlos estaba a la mano.",
+        "Había llegado la hora de nombrarlos."
+      ]
+    }
+  },
+
+  "TRAVEL_CARDS": {
+    "_comment": "Player travel cards. Their action label is what appears on the card; their played effect forces the corresponding LOCATION + a TRANSITION.",
+    "travel:to_crale_orchard":           {"en": "Go to the Crale orchard",          "es": "Ir al huerto de los Crale"},
+    "travel:to_cider_press":             {"en": "Go to the cider press",            "es": "Ir al lagar"},
+    "travel:to_crale_farmhouse_kitchen": {"en": "Go to the farmhouse kitchen",      "es": "Ir a la cocina de la granja"},
+    "travel:to_orchard_lane":            {"en": "Go to the orchard lane",           "es": "Ir al sendero del huerto"},
+    "travel:to_field_gate":              {"en": "Go to the field gate",             "es": "Ir al portón del campo"},
+    "travel:to_webb_farm":               {"en": "Go to Webb Farm",                  "es": "Ir a la granja Webb"},
+    "travel:to_village_inn":             {"en": "Go to the Hawk and Shoe",          "es": "Ir al Halcón y la Herradura"},
+    "travel:to_parish_church":           {"en": "Go to St Bartholomew's",           "es": "Ir a San Bartolomé"},
+    "travel:to_registry_office":         {"en": "Go to the Bristol registry",       "es": "Ir al registro de Bristol"}
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_edmund_via_chemists_receipt_to_motive_only",
+  "case_id": "hollow_season",
+  "description": "Counterfactual: at the chemist's receipt turn the detective notes the servants' bell was not rung; she pursues the motive line and stops short of accusing.",
+  "outcome": "motive_only_confession",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "edmund_via_chemists_receipt",
+  "branch_turn": 18,
+  "divergence_token": "PROTOCOL_TELL=protocol_tell:servants_bell_unused",
+  "tags": [
+    "counterfactual",
+    "protocol_tell_divergence",
+    "motive_only_confession",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from edmund_via_chemists_receipt at turn 18 on PROTOCOL_TELL=protocol_tell:servants_bell_unused.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.6,
+      0.66,
+      0.6
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:carrow_hall",
+      "event:archibald_discovered",
+      "time:late_october"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 38,
+      "player_card": "object:burned_note",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:servants_bell_unused"
+      },
+      "convergence_after": [
+        0.72,
+        0.74,
+        0.7
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.8,
+        0.75
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "motive:house_as_mother",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:emotional_geography_lands",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.84,
+        0.8
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "object:new_will_draft",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.84
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "motive:house_as_mother",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.86
+      ]
+    }
+  ],
+  "ending": {
+    "type": "motive_only",
+    "accused": null,
+    "final_convergence": [
+      0.88,
+      0.88,
+      0.86
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=edmund_via_chemists_receipt"
+  }
+}

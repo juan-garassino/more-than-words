@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "case_id": "third_signature",
+  "_comment": "Reusable scene-tuple templates for third_signature trajectory authoring. Each snippet fixes 5-7 of the dim slots (the constants that define the scene type) and lists the slots the author must supply per use (the variables that distinguish one instance from another). Token IDs are drawn from cases/third_signature/dimensions.json. The signature_inspection_moment template is case-specific and uses the SIGNATURE_TELL extension dimension defined for third_signature — the handwriting / typescript / dedication-page tells that are the case's central authorship pivot.",
+
+  "snippets": {
+
+    "cold_object_examination": {
+      "description": "Detective alone with a single piece of evidence — a sign-in register, a typescript page, a fountain pen, a bound proof. Cold, methodical inspection. No NPC pressure, no tell, no stance. Used for opening turns and quiet evidence beats between interviews in the smoking room or library.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "first_witness_interview_cooperative": {
+      "description": "First contact with a club witness — Wills the porter, the club secretary, the dining steward, the biographer — who has no reason to lie. They give what they saw plainly within the small ceremonial language of their post. The detective is questioning, the witness is open, the tell is steady. Use early in trajectory before any pressure has built.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "member_interview_studied_composure": {
+      "description": "An Aldgate member — Emberly, Norris, Dent, Pryce — answering questions in the smoking room or members' snug. Mannered, polite, the small ceremonial language of forty years of dining at the same table. No deception in the speaker, but the answers are bounded by club convention. The tell is courtly rather than evasive.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:studied_composure",
+        "ATMOSPHERE": "atmosphere:coal_fire_settles",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "witness_reinterview_defensive": {
+      "description": "Returning to a witness already questioned, this time with a register entry or a typescript page in hand. Their stance shifts to defensive; the mannered language tightens. Use mid-game, second or third pass on a witness, after a contradiction has surfaced elsewhere.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "TELL": "tell:tightened",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "PRESENCE", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "transition_pursuing_lead": {
+      "description": "A movement turn — the detective is in motion between rooms of the Georgian townhouse, having just been pointed somewhere by witness or evidence. Brief, kinetic. Coal-fire warmth in the corridor, pipe smoke held in the wainscot; the scene proper begins next turn.",
+      "template": {
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "dead_end_witness": {
+      "description": "A witness has nothing useful — the dining steward who can only place Carey at the corridor, the archivist whose file does not yet read as significant. Cooperative but uninformed. The lead closes here. Used to puncture momentum and force the detective back to the register or the typescript.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:dead_end",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "BEAT"]
+    },
+
+    "carey_false_plateau_interview": {
+      "description": "Interviewing Carey, the rival estate solicitor. He is the case's false plateau — visible motive, documented antagonism, placement near the reading-room corridor at the right time. He is genuinely innocent of the mechanism. His stance is evasive in the legal sense (carefully hedged) but the answers, examined coldly, hold. The lead, if pursued exclusively, will eventually saturate killer and motive dims while mechanism remains open.",
+      "template": {
+        "PRESENCE": "presence:with_carey",
+        "CAUSE": "cause:pursued_suspicion",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "TELL": "emotion:legal_hedging",
+        "ATMOSPHERE": "atmosphere:lamp_steady",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "register_cross_reference": {
+      "description": "The detective at the porter's lodge or the secretary's office, with the sign-in book and the key log open before her. Cross-referencing entries by hand and hour. The work is silent and exact. Often produces a contradiction_surfaces — the eight-five entry next to a request for the reading-room key, or the absence of an entry that should be there. Mid-game evidence work.",
+      "template": {
+        "CAUSE": "cause:cross_referencing_register",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:cross_references",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "SIGNATURE_TELL", "REVELATION", "BEAT"]
+    },
+
+    "signature_inspection_moment": {
+      "description": "Case-specific snippet. The detective notices a small handwriting tell on a piece of written evidence — the leftward slope of the eight-five sign-in entry, the nib pressure on a 1921 trust deed, the dedication page of The Sulphur and the Stone in a hand that matches the letters of 1918, a marginal correction in the typescript made by the same hand that signed the register. SIGNATURE_TELL carries the specific paper-observable signal (hand_match for the cross-document match, leftward_slope for the slope tell, nib_pressure_match for pen-pressure correspondence, dedication_match for the novel's dedication matching Agnes's hand, third_signatory_revealed for the 1921 deed disclosure, typescript_correction for marginalia in the same hand, authenticity_holds as the early-game cooperative null). The detective examines clinically rather than interrogates; the moment yields partial_match in early game and hand_match / name_uncovered in late game. Use once per evidentiary document per trajectory.",
+      "template": {
+        "CAUSE": "cause:reading_signature_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "SIGNATURE_TELL", "REVELATION"]
+    },
+
+    "revelation_object_recognition": {
+      "description": "An object the detective has already seen — the sign-in register, the bound proof, the fountain pen, the dedication page — suddenly resolves into meaning. Alone, looking at the same thing in a new light. Late investigation or closing-in beat. Pairs with name_uncovered or motive_emerges revelations.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "SIGNATURE_TELL", "REVELATION", "BEAT"]
+    },
+
+    "confrontation_hostile": {
+      "description": "Direct accusation. The detective has the chain in hand — the register entry, the key log, the dedication match, the seven-minute gap — and is putting it to Agnes Vail across the reading-room table or to Carey in the dining room. The stance is hostile, the tell is sharp, the beat is closing_in or verdict_ready. Use sparingly — once or twice per trajectory.",
+      "template": {
+        "CAUSE": "cause:pursued_suspicion",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:closing_in",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION"]
+    },
+
+    "revisit_for_reframing": {
+      "description": "The detective returns to a room already visited — the reading room where Pemberton was found, the manuscript archive, the porter's lodge — alone, to look at it again with the new context. Nothing dramatic — a quiet recasting of an earlier scene. Often produces a partial_match or contradiction_surfaces.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "BEAT": "beat:investigation",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "atmospheric_interlude": {
+      "description": "A low-activity beat. The coal fire in the smoking-room grate settles into itself; pipe smoke holds against the carved wainscot; somewhere a member orders a gin-and-soda. Time passes; the club breathes around the detective. Minimal scene activity, no revelation, no NPC. Used to mark act breaks, hour changes, or simply to give the prose a place to rest. One or two per trajectory.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "REVELATION": "revelation:none",
+        "SIGNATURE_TELL": "signature_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "ATMOSPHERE", "BEAT"]
+    },
+
+    "wills_break_token_moment": {
+      "description": "The single most important witness moment in the case. The detective has the register, the key log, and the question framed correctly — and asks Wills the porter who was at the side table in the reading room between eight-fifteen and eight-twenty-two. He answers without embellishment. The seven-minute gap surfaces. The bridge token fires; mechanism dim can finally close on Agnes. Use this snippet at most once per trajectory, late game, after register cross-reference has already happened.",
+      "template": {
+        "PRESENCE": "presence:with_wills",
+        "CAUSE": "cause:cross_referencing_register",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:closing_in"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "SIGNATURE_TELL", "REVELATION"]
+    }
+
+  }
+}

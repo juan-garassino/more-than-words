@@ -135,7 +135,18 @@ def validate_trajectory(
     violations: List[Tuple[int, str, str]] = []  # (turn_idx, rule_id, info)
     vocab_violations: List[Tuple[int, str, str]] = []  # (turn_idx, dim, val)
 
-    state = _initial_state(traj.opening)
+    # Counterfactual-branch files may declare pre_branch_state with the
+    # convergence vector inherited from the source trajectory at the
+    # divergence turn. This lets a CF's first turn carry the right
+    # convergence_min for beat / revelation gates.
+    pre_branch = traj.raw.get("pre_branch_state") if traj.raw else None
+    init_conv = None
+    if isinstance(pre_branch, dict):
+        cv = pre_branch.get("convergence_dims") or pre_branch.get("convergence")
+        if isinstance(cv, list) and all(isinstance(x, (int, float)) for x in cv):
+            init_conv = [float(x) for x in cv]
+
+    state = _initial_state(traj.opening, initial_convergence=init_conv)
     for i, turn in enumerate(traj.turns):
         # Vocab-membership check first (cheap sanity).
         for dim, vocab in dim_vocab.items():

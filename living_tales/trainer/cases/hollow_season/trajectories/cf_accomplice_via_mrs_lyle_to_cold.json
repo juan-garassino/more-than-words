@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_accomplice_via_mrs_lyle_to_cold",
+  "case_id": "hollow_season",
+  "description": "Counterfactual: in the wastepaper-basket scene the detective turns hostile too early; Mrs Lyle goes silent and the chain freezes \u2014 cold trail.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "accomplice_via_mrs_lyle",
+  "branch_turn": 20,
+  "divergence_token": "STANCE=stance:hostile",
+  "tags": [
+    "counterfactual",
+    "stance_divergence",
+    "cold_trail",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from accomplice_via_mrs_lyle at turn 20 on STANCE=stance:hostile.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.5,
+      0.55,
+      0.5
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:carrow_hall",
+      "event:archibald_discovered",
+      "time:late_october"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 38,
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.58,
+        0.62,
+        0.56
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "object:wastepaper_basket",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.62,
+        0.58
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "object:duty_log",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_household_record",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:duty_log",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.62,
+        0.64,
+        0.6
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "modifier:cold_august_dawn",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.62,
+        0.64,
+        0.6
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.63,
+        0.64,
+        0.6
+      ]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "accused": null,
+    "final_convergence": [
+      0.63,
+      0.64,
+      0.6
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=accomplice_via_mrs_lyle"
+  }
+}

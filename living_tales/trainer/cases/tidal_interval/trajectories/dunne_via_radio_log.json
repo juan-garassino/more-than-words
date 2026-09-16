@@ -1,0 +1,991 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "dunne_via_radio_log",
+  "case_id": "tidal_interval",
+  "description": "Slow-burn ~48t. Detective opens with the radio handset on Sunday's bench, follows a false lead on Webb's methodology grievance through turns 8-20 (interviews Webb twice; Webb's alibi softens but doesn't close), then pivots via Tovi Ansgar's radio log testimony at turn 22 — Tovi names a satellite gap at Sunday eighteen-thirty that doesn't match Webb's room but does match Piers's eastern-door pattern. Long convergence ramp; verdict at turn 45.",
+  "outcome": "correct_piers_dunne",
+  "starting_hypothesis": "object_first",
+  "tags": [
+    "hand_paced",
+    "slow_burn",
+    "radio_log_chain",
+    "webb_false_lead",
+    "tovi_pivot",
+    "satellite_log_first"
+  ],
+  "opening": {
+    "tokens": [
+      "location:common_room",
+      "event:sarah_does_not_return",
+      "event:final_report_approved"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the common room. The radio handset on the bench, the dead Sunday log open beside it.",
+      "player_card": "object:radio_handset",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:radio_handset",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.03, 0.05, 0.04]
+    },
+    {
+      "turn": 2,
+      "_note": "Kestrel Lin at the radio bench. She reads the Sunday log entries in their time-stamps — fourteen-twenty no contact, sixteen-oh-six weather only, nineteen-hundred lost the satellite.",
+      "player_card": "witness:radio_operator",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_kestrel_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:radio_handset",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:radio_breaks_static"
+      },
+      "convergence_after": [0.07, 0.09, 0.06]
+    },
+    {
+      "turn": 3,
+      "_note": "Examine the satellite log itself. Three gaps Sunday afternoon. Kestrel hands the page across without comment.",
+      "player_card": "object:satellite_log",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_kestrel_lin",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:satellite_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:radio_breaks_static"
+      },
+      "convergence_after": [0.10, 0.14, 0.07]
+    },
+    {
+      "turn": 4,
+      "_note": "Cross to the dorms. Webb's room — door open, the methodology binder visible on the desk.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.12, 0.15, 0.09]
+    },
+    {
+      "turn": 5,
+      "_note": "Question Webb on Friday's confrontation. He produces the journal letter before the question is finished. Statistically literate; uniformly impatient.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.17, 0.19, 0.11]
+    },
+    {
+      "turn": 6,
+      "_note": "Examine the journal letter. Webb's complaint laid out in three paragraphs. No mention of any path, any walk, any hour.",
+      "player_card": "object:journal_letter",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.20, 0.24, 0.13]
+    },
+    {
+      "turn": 7,
+      "_note": "Question Webb on Sunday afternoon. He gives the dorm, the binder, no one else. Eyes go to the window after the third pass.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:glanced_aside",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.22, 0.26, 0.15]
+    },
+    {
+      "turn": 8,
+      "_note": "Cross to the common room. Eira at the kitchen counter — Sunday tea hour, six pm, Sarah present, Webb not down for tea.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:with_eira_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:softened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.24, 0.27, 0.16]
+    },
+    {
+      "turn": 9,
+      "_note": "Eira mentions Webb skipped tea Sunday — said he was working. Did not see him after lunch.",
+      "player_card": "witness:cook",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eira_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.27, 0.29, 0.17]
+    },
+    {
+      "turn": 10,
+      "_note": "Return to the dorms. Webb again. Question him on the eastern path — has he walked it. He says no, not since Friday.",
+      "player_card": "suspect:marcus_webb",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.30, 0.30, 0.18]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to the jetty. Mira Callan with the boat at the slipway. First non-Webb NPC after the long Webb spell.",
+      "player_card": "travel:to_jetty",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:wind_bitten_calm",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [0.32, 0.31, 0.20]
+    },
+    {
+      "turn": 12,
+      "_note": "Question Mira on Sunday afternoon. She gives the jetty, the boat secured, the lighthouse keeper at the headland for the relevant hour. No mention of Webb, no mention of Piers.",
+      "player_card": "witness:boat_skipper",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.34, 0.33, 0.22]
+    },
+    {
+      "turn": 13,
+      "_note": "Cross to the eastern path. Walk the fork alone, the marker tilted toward the unfenced cliff.",
+      "player_card": "travel:to_eastern_path",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [0.36, 0.38, 0.24]
+    },
+    {
+      "turn": 14,
+      "_note": "Notice the socket hole. Compressed earth at the rim. Whoever moved the post had to dig.",
+      "player_card": "modifier:socket_hole_compressed",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.40, 0.42, 0.26]
+    },
+    {
+      "turn": 15,
+      "_note": "Return to the dorms. Webb's hands have no soil. The methodology binder has not been off the desk in days.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.42, 0.43, 0.28]
+    },
+    {
+      "turn": 16,
+      "_note": "Cross to the weather tower. Read the tide chart. The Sunday window — annotated in blue. Not Webb's hand; he writes in pencil.",
+      "player_card": "travel:to_weather_tower",
+      "scene": {
+        "LOCATION": "location:weather_tower",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.45, 0.49, 0.30]
+    },
+    {
+      "turn": 17,
+      "_note": "Descend to the generator room. Niall at the relay.",
+      "player_card": "travel:to_generator_room",
+      "scene": {
+        "LOCATION": "location:generator_room",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_niall_brackett",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:generator_falters"
+      },
+      "convergence_after": [0.46, 0.50, 0.32]
+    },
+    {
+      "turn": 18,
+      "_note": "Brackett names cut-out times. Adds without prompting: heard the eastern door twice between three and five. Webb's room is on the western corridor; he does not pass that door.",
+      "player_card": "witness:generator_engineer",
+      "scene": {
+        "LOCATION": "location:generator_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_niall_brackett",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.53, 0.51, 0.34]
+    },
+    {
+      "turn": 19,
+      "_note": "Return to dorms. Final Webb pass. Alibi soft but holds — wrong corridor, wrong soil, wrong hand.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marcus_webb",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.54, 0.52, 0.36]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to the research lab. Tovi Ansgar at her desk, hand at the bracelet that had been Sarah's.",
+      "player_card": "travel:to_research_lab",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_tovi_ansgar",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:softened",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.55, 0.53, 0.38]
+    },
+    {
+      "turn": 21,
+      "_note": "Question Tovi on Sunday afternoon. She had been monitoring satellite uplink for her survey transmission window. She gives the timestamps from memory.",
+      "player_card": "suspect:tovi_ansgar",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_tovi_ansgar",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:softened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.56, 0.54, 0.40]
+    },
+    {
+      "turn": 22,
+      "_note": "Tovi names eighteen-thirty — the third satellite gap. She had been waiting for the uplink. Piers came through the common room with wet boots at eighteen-forty.",
+      "player_card": "witness:radio_operator",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_tovi_ansgar",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:harbour_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.62, 0.58, 0.43]
+    },
+    {
+      "turn": 23,
+      "_note": "Return to the common room. Read the satellite log against Tovi's timestamps. The eighteen-thirty gap is forty minutes.",
+      "player_card": "object:satellite_log",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:satellite_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.63, 0.62, 0.45]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to the weather tower. Lay the satellite log beside the tide chart. Eighteen-thirty corresponds to the receding tide — the window opening.",
+      "player_card": "travel:to_weather_tower",
+      "scene": {
+        "LOCATION": "location:weather_tower",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:tidal_window_identified",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.64, 0.67, 0.46]
+    },
+    {
+      "turn": 25,
+      "_note": "Cross to the eastern path. Trace the route from the fork at eighteen-thirty — the marker sends the walker toward the unfenced section forty minutes before Sarah's hour.",
+      "player_card": "travel:to_eastern_path",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:traces_route",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:tide_floods"
+      },
+      "convergence_after": [0.66, 0.69, 0.48]
+    },
+    {
+      "turn": 26,
+      "_note": "Return to the jetty. Mira again — second pass.",
+      "player_card": "travel:to_jetty",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.67, 0.70, 0.50]
+    },
+    {
+      "turn": 27,
+      "_note": "Ask Mira about her brother on Dunne's boats. The harbour falls into place as motive.",
+      "player_card": "witness:boat_skipper",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:harbour_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.68, 0.71, 0.62]
+    },
+    {
+      "turn": 28,
+      "_note": "Cross to the common room. Piers at the table with the resupply manifest. He has not looked up at the radio bench all day.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.69, 0.72, 0.64]
+    },
+    {
+      "turn": 29,
+      "_note": "Question Piers on Sunday eighteen-thirty. He gives a delivery to the slipway. The slipway log does not record one.",
+      "player_card": "suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.70, 0.73, 0.66]
+    },
+    {
+      "turn": 30,
+      "_note": "Examine the resupply schedule. The Sunday delivery hour is blank. His hand wrote nothing for that gap.",
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.74, 0.76, 0.69]
+    },
+    {
+      "turn": 31,
+      "_note": "Cross to the dorms. Piers's room. Boot at the wardrobe, fresh soil.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:boot_with_fresh_soil",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.75, 0.78, 0.71]
+    },
+    {
+      "turn": 32,
+      "_note": "Examine the boot soil. Eastern path fork — the compressed black peat. The same as the socket hole.",
+      "player_card": "modifier:fresh_soil_on_base",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:boot_with_fresh_soil",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.76, 0.80, 0.73]
+    },
+    {
+      "turn": 33,
+      "_note": "Read the loan papers in the drawer. The processing facility, the twelve employees, the father's facility.",
+      "player_card": "modifier:processing_facility_loan_due",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.77, 0.81, 0.78]
+    },
+    {
+      "turn": 34,
+      "_note": "Return to the eastern path. The bridge clue. Path marker eleven meters from the socket hole.",
+      "player_card": "modifier:marker_displaced_eleven_meters",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:traces_route",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:path_unstable"
+      },
+      "convergence_after": [0.79, 0.83, 0.79]
+    },
+    {
+      "turn": 35,
+      "_note": "Cross to the weather tower. The blue annotation in Piers's hand circles the Sunday window.",
+      "player_card": "travel:to_weather_tower",
+      "scene": {
+        "LOCATION": "location:weather_tower",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.80, 0.84, 0.80]
+    },
+    {
+      "turn": 36,
+      "_note": "Descend to the sea cave. The high-water mark from Sunday — the cave floods inside the forty-minute window.",
+      "player_card": "travel:to_sea_cave",
+      "scene": {
+        "LOCATION": "location:sea_cave",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:sea_chart_overlay",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:tide_floods"
+      },
+      "convergence_after": [0.81, 0.85, 0.81]
+    },
+    {
+      "turn": 37,
+      "_note": "Cross to the common room. Piers has not moved.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.82, 0.85, 0.81]
+    },
+    {
+      "turn": 38,
+      "_note": "Lay the satellite log beside the resupply schedule. Name the eighteen-thirty gap.",
+      "player_card": "object:satellite_log",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:satellite_log",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.83, 0.86, 0.82]
+    },
+    {
+      "turn": 39,
+      "_note": "Confront. Lay the boot, the marker, the chart, the log together.",
+      "player_card": "modifier:marker_displaced_eleven_meters",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.85, 0.87, 0.83]
+    },
+    {
+      "turn": 40,
+      "_note": "Name the harbour. The boats. The processing facility.",
+      "player_card": "motive:fishing_economy",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.86, 0.87, 0.85]
+    },
+    {
+      "turn": 41,
+      "_note": "Cross to the eastern path one last time. Dawn on the eastern rocks. Piers comes with.",
+      "player_card": "travel:to_eastern_path",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.86, 0.88, 0.85]
+    },
+    {
+      "turn": 42,
+      "_note": "Stand at the fork. The marker still wrong. Trace the route in his presence.",
+      "player_card": "object:path_marker",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:traces_route",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.87, 0.88, 0.86]
+    },
+    {
+      "turn": 43,
+      "_note": "Return to the common room. Lay the loan papers on the table.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.87, 0.88, 0.87]
+    },
+    {
+      "turn": 44,
+      "_note": "Question one final time on the Sunday walk routine. He has known it for years.",
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.88, 0.89, 0.87]
+    },
+    {
+      "turn": 45,
+      "_note": "Accusation. The radio gap, the marker, the boot, the loan, the boats.",
+      "player_card": "ACCUSE:suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:satellite_log",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.88, 0.89, 0.87]
+    },
+    {
+      "turn": 46,
+      "_note": "Piers names the boats himself. Plain word at last.",
+      "player_card": "suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.88, 0.89, 0.88]
+    },
+    {
+      "turn": 47,
+      "_note": "Cross to the eastern path. The marker stands at the corrected angle now. Dawn full on the rocks.",
+      "player_card": "travel:to_eastern_path",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.88, 0.89, 0.88]
+    },
+    {
+      "turn": 48,
+      "_note": "Final. The fork, the marker, the unfenced section. The case is closed.",
+      "player_card": "modifier:schedule_in_piers_hand",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:traces_route",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:wind_drops"
+      },
+      "convergence_after": [0.89, 0.90, 0.88]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:piers_dunne",
+    "final_convergence": [0.89, 0.90, 0.88],
+    "_note": "Slow-burn 48t. Webb is the long false lead (turns 4-19); Tovi's satellite-gap testimony at turn 22 is the pivot."
+  }
+}

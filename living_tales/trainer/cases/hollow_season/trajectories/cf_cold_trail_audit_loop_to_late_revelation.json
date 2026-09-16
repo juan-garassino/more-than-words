@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_cold_trail_audit_loop_to_late_revelation",
+  "case_id": "hollow_season",
+  "description": "Counterfactual: the wind rises and breaks the silence of the audit loop; Mrs Lyle yields the receipt fragment and a late accusation lands.",
+  "outcome": "late_revelation",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "cold_trail_audit_loop",
+  "branch_turn": 28,
+  "divergence_token": "ATMOSPHERE=atmosphere:wind_rises",
+  "tags": [
+    "counterfactual",
+    "atmosphere_divergence",
+    "late_revelation",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from cold_trail_audit_loop at turn 28 on ATMOSPHERE=atmosphere:wind_rises.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.5,
+      0.55,
+      0.5
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:carrow_hall",
+      "event:archibald_discovered",
+      "time:late_october"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 38,
+      "player_card": "modifier:cold_august_dawn",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.58,
+        0.62,
+        0.56
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "travel:to_servants_hall",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.64,
+        0.68,
+        0.62
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:emotional_geography_lands",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.84,
+        0.8
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "ACCUSE:suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.86
+      ]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:edmund_carrow",
+    "final_convergence": [
+      0.88,
+      0.88,
+      0.86
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=cold_trail_audit_loop"
+  }
+}

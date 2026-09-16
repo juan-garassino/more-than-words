@@ -1,0 +1,139 @@
+{
+  "_art_dir": "art/sulphur_line/direct_pixel_art_v1/pixel_320x320",
+  "_default": "sulphur_line_works_yard_pixel_320x320_v01.png",
+  "_briefing": "sulphur_line_works_gate_pixel_320x320_v01.png",
+  "_ending": "sulphur_line_canal_path_at_dusk_pixel_320x320_v01.png",
+  "location:works_yard":         "sulphur_line_works_yard_pixel_320x320_v01.png",
+  "location:processing_line":    "sulphur_line_processing_line_pixel_320x320_v01.png",
+  "location:sulphur_store":      "sulphur_line_sulphur_store_pixel_320x320_v01.png",
+  "location:dispatch_office":    "sulphur_line_dispatch_office_pixel_320x320_v01.png",
+  "location:foreman_station":    "sulphur_line_foreman_station_pixel_320x320_v01.png",
+  "location:canal_path":         "sulphur_line_canal_path_pixel_320x320_v01.png",
+  "location:works_gate":         "sulphur_line_works_gate_pixel_320x320_v01.png",
+  "location:oake_office":        "sulphur_line_oake_office_pixel_320x320_v01.png",
+  "location:oake_house":         "sulphur_line_oake_house_pixel_320x320_v01.png",
+  "location:workers_lockers":    "sulphur_line_workers_lockers_pixel_320x320_v01.png",
+
+  "_locations": {
+    "location:works_yard": {
+      "summary_en": "The open yard inside the works gate. Hand-carts, drums of bleaching powder, the chimney over the third processing line venting pale smoke against a winter sky.",
+      "summary_es": "El patio abierto tras la verja de la fábrica. Carretillas, bidones de polvo blanqueador, la chimenea de la tercera línea humeando pálida contra un cielo de invierno."
+    },
+    "location:processing_line": {
+      "summary_en": "The third processing line. Copper vessels in a row, the air close with sulphur, the valves on the gallery painted recently and not well.",
+      "summary_es": "La tercera línea de proceso. Cubas de cobre en hilera, el aire denso de azufre, las válvulas de la galería pintadas hace poco y no del todo bien."
+    },
+    "location:sulphur_store": {
+      "summary_en": "The sulphur storage shed, brick-built and unlit. Sacks stacked to the rafters, the smell of the cargo strong even with the doors shut.",
+      "summary_es": "El depósito de azufre, de ladrillo y sin luz. Sacos apilados hasta las vigas, el olor del cargamento fuerte aun con las puertas cerradas."
+    },
+    "location:dispatch_office": {
+      "summary_en": "The dispatch office. A high desk for the ledger, the iron scales bolted to the floor, the slate where the day's tonnage is chalked up.",
+      "summary_es": "La oficina de despacho. Un escritorio alto para el libro, las balanzas de hierro fijadas al suelo, la pizarra donde se anota el tonelaje del día."
+    },
+    "location:foreman_station": {
+      "summary_en": "Foreman Craggs's wooden box at the head of the processing line. Hooks for the keys, a stove, the maintenance log open on its bracket.",
+      "summary_es": "La caseta de madera del capataz Craggs en la cabecera de la línea. Ganchos para las llaves, una estufa, el libro de mantenimiento abierto en su atril."
+    },
+    "location:canal_path": {
+      "summary_en": "The towpath along the southern edge of the works. The canal the colour of weak tea, unlit at the bend, the edge unmarked where the path bends closest to the water.",
+      "summary_es": "La senda al borde sur de la fábrica. El canal del color del té flojo, sin luz en la curva, el borde sin marcar donde la senda dobla más cerca del agua."
+    },
+    "location:works_gate": {
+      "summary_en": "The main gate on the road side. The gatekeeper's hut, the signing-in book, the lamp over the lintel. The service road runs behind the storage from here.",
+      "summary_es": "La verja principal al lado de la carretera. La caseta del portero, el libro de firmas, la lámpara sobre el dintel. El camino de servicio corre detrás del depósito desde aquí."
+    },
+    "location:oake_office": {
+      "summary_en": "Silas Oake's office on the upper floor. A view across the yard to the canal. A bracket for his coat, a desk drawer with a small lockable box.",
+      "summary_es": "El despacho de Silas Oake en la planta alta. Vista al patio y al canal. Un perchero para el abrigo, un cajón del escritorio con una cajita con llave."
+    },
+    "location:oake_house": {
+      "summary_en": "The manager's house at the works edge. A front room with a fire kept low for the wife, a coat-stand in the hall, supper laid on the kitchen table at seven.",
+      "summary_es": "La casa del gerente en el linde de la fábrica. Una sala con la lumbre baja para la esposa, un perchero en el zaguán, la cena puesta en la cocina a las siete."
+    },
+    "location:workers_lockers": {
+      "summary_en": "The locker room at the gate. A row of tin lockers, work clothes on hooks, a basin and a tap that runs only cold.",
+      "summary_es": "El vestuario junto a la verja. Una fila de taquillas de hojalata, ropa de trabajo en ganchos, una pila y un grifo que sólo da agua fría."
+    }
+  },
+
+  "_npcs": {
+    "presence:with_silas_oake": {
+      "role": "suspect_killer",
+      "name_en": "Silas Oake",
+      "name_es": "Silas Oake",
+      "summary_en": "Works manager at Hartwick Chemical for twenty-three years; formally an immaculate safety record. Walked the canal path with Gould on Thursday evening and went home by the service road behind the sulphur storage.",
+      "summary_es": "Gerente de Hartwick Chemical durante veintitrés años; formalmente un historial de seguridad impecable. Caminó por la senda del canal con Gould el jueves por la tarde y volvió a casa por el camino de servicio detrás del depósito de azufre."
+    },
+    "presence:with_james_whitlow": {
+      "role": "suspect_red_herring",
+      "name_en": "James Whitlow",
+      "name_es": "James Whitlow",
+      "summary_en": "One of the two workers who witnessed the September 1886 valve failure and was paid to sign a silence document — payment received, document never finalised. Seen near the works twice in the past month. His grievance is genuine and his role is the opposite of suppression.",
+      "summary_es": "Uno de los dos obreros que presenciaron el fallo de válvula de septiembre de 1886 y a quien se pagó para firmar un documento de silencio — el pago se recibió, el documento nunca llegó a formalizarse. Visto cerca de la fábrica dos veces el último mes. Su agravio es genuino y su papel es el opuesto a la supresión."
+    },
+    "presence:with_mrs_oake": {
+      "role": "suspect",
+      "name_en": "Mrs Oake",
+      "name_es": "la señora Oake",
+      "summary_en": "Silas Oake's wife. Will say her husband left the house after supper as he did every Thursday and that she did not see him return till after nine, but did not look at the clock.",
+      "summary_es": "Esposa de Silas Oake. Dirá que su marido salió tras la cena como hacía cada jueves y que no lo vio volver hasta pasadas las nueve, pero que no miró el reloj."
+    },
+    "presence:with_foreman_craggs": {
+      "role": "suspect",
+      "name_en": "Foreman Craggs",
+      "name_es": "el capataz Craggs",
+      "summary_en": "Foreman of the third processing line. Signed the maintenance log entries that were later revised in a hand not entirely his own. Carries the line keys on his belt.",
+      "summary_es": "Capataz de la tercera línea de proceso. Firmó los asientos de mantenimiento que después fueron revisados en una letra no del todo suya. Lleva las llaves de la línea al cinturón."
+    },
+    "presence:with_alderman_hicks": {
+      "role": "suspect",
+      "name_en": "Alderman Hicks",
+      "name_es": "el concejal Hicks",
+      "summary_en": "Borough alderman with an interest in the works's licence. Deferred the Board of Trade inspection twice the previous year. Says he scarcely knew Gould but knew of the visit.",
+      "summary_es": "Concejal del distrito con interés en la licencia de la fábrica. Aplazó la inspección del Board of Trade dos veces el año anterior. Dice que apenas conocía a Gould pero conocía la visita."
+    },
+    "presence:with_dr_poole": {
+      "role": "suspect",
+      "name_en": "Dr Poole",
+      "name_es": "el doctor Poole",
+      "summary_en": "Works physician for the past nine years. Signed off on the Birch case in 1886 as natural workplace hazard. His annual reports omit chronic-exposure symptoms.",
+      "summary_es": "Médico de la fábrica durante los últimos nueve años. Cerró el caso Birch en 1886 como riesgo laboral natural. Sus informes anuales omiten los síntomas de exposición crónica."
+    },
+    "presence:with_works_clerk": {
+      "role": "witness",
+      "name_en": "the works clerk",
+      "name_es": "el oficinista de la fábrica",
+      "summary_en": "Keeps the dispatch ledger. Noticed last quarter that the sulphur arrivals as weighed did not match the arrivals as ledgered, and was told the scales were being recalibrated.",
+      "summary_es": "Lleva el libro de despacho. Notó el último trimestre que las llegadas de azufre pesadas no cuadraban con las asentadas, y se le dijo que las balanzas estaban siendo recalibradas."
+    },
+    "presence:with_night_watchman": {
+      "role": "witness",
+      "name_en": "the night watchman",
+      "name_es": "el sereno de la fábrica",
+      "summary_en": "Watches the works between seven and dawn. On Thursday saw Mr Oake leave by the main gate at quarter past six and did not see him return by the gate at all.",
+      "summary_es": "Vigila la fábrica entre las siete y el alba. El jueves vio salir al señor Oake por la verja principal a las seis y cuarto y no lo vio volver por la verja en absoluto."
+    },
+    "presence:with_bargee": {
+      "role": "witness",
+      "name_en": "the canal bargee",
+      "name_es": "el barquero del canal",
+      "summary_en": "Worked his horse along the canal from the wharf to the bridge on Thursday evening and saw two men walking the towpath in the direction of the works. He could not name them. One of them was not on the towpath when he came back.",
+      "summary_es": "Llevaba su caballo por el canal del muelle al puente el jueves por la tarde y vio a dos hombres caminando la senda en dirección a la fábrica. No supo nombrarlos. Uno de ellos no estaba en la senda al regresar."
+    },
+    "presence:with_widow_birch": {
+      "role": "witness",
+      "name_en": "the widow Birch",
+      "name_es": "la viuda Birch",
+      "summary_en": "Widow of Thomas Birch, who died after the September 1886 valve failure. Signed a document she did not fully understand and was paid a sum she remembers exactly to the shilling.",
+      "summary_es": "Viuda de Thomas Birch, que murió tras el fallo de válvula de septiembre de 1886. Firmó un documento que no comprendía del todo y recibió una suma que recuerda exactamente hasta el chelín."
+    },
+    "presence:with_dispatch_porter": {
+      "role": "witness",
+      "name_en": "the dispatch porter",
+      "name_es": "el mozo de despacho",
+      "summary_en": "Loaded the sulphur sacks from the rail siding to the storage shed every Tuesday and Friday. Was not asked to load on the Friday after the inspection began and was given no reason.",
+      "summary_es": "Cargaba los sacos de azufre del apartadero a la nave del depósito cada martes y viernes. No fue convocado a cargar el viernes después del inicio de la inspección y no se le dio razón."
+    }
+  }
+}

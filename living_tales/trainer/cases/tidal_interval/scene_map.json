@@ -1,0 +1,16 @@
+{
+  "_comment": "Backdrop art mapping for The Tidal Interval. Tern Island Marine Research Station — eastern edge of a small fishing island, October storm season. Eight playable locations plus briefing/ending plates. Pixel-art keys follow the project convention (case_id _ subject _ pixel_320x320_v01.png) and are not yet rendered; this map declares the slots so the runtime can fall back to a default plate until the art is generated.",
+  "_art_dir": "art/tidal_interval/direct_pixel_art_v1/pixel_320x320",
+  "_default":  "tidal_interval_research_station_exterior_pixel_320x320_v01.png",
+  "_briefing": "tidal_interval_research_station_exterior_pixel_320x320_v01.png",
+  "_ending":   "tidal_interval_eastern_path_marker_pixel_320x320_v01.png",
+
+  "location:research_lab":   "tidal_interval_research_lab_pixel_320x320_v01.png",
+  "location:dorms":          "tidal_interval_dorms_pixel_320x320_v01.png",
+  "location:weather_tower":  "tidal_interval_weather_tower_pixel_320x320_v01.png",
+  "location:jetty":          "tidal_interval_jetty_pixel_320x320_v01.png",
+  "location:sea_cave":       "tidal_interval_sea_cave_pixel_320x320_v01.png",
+  "location:generator_room": "tidal_interval_generator_room_pixel_320x320_v01.png",
+  "location:common_room":    "tidal_interval_common_room_pixel_320x320_v01.png",
+  "location:eastern_path":   "tidal_interval_eastern_path_pixel_320x320_v01.png"
+}

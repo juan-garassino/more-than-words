@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_accomplice_via_archive_clerk_to_cold",
+  "case_id": "resonance_test",
+  "description": "Counterfactual: at turn 30, Norwood stays cooperative; the accomplice frame collapses and the case goes cold.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "accomplice_via_archive_clerk",
+  "branch_turn": 30,
+  "divergence_token": "STANCE=stance:cooperative",
+  "tags": [
+    "counterfactual",
+    "stance_divergence",
+    "cold_trail",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from accomplice_via_archive_clerk at turn 30 on STANCE=stance:cooperative.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.6,
+      0.62,
+      0.6
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:archive_basement"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 30,
+      "_note": "Diverge \u2014 Norwood stays cooperative; the accomplice frame collapses.",
+      "player_card": "witness:archive_clerk_norwood",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.62,
+        0.6
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Cross to recital hall, lost.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.62,
+        0.6
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Question Pryce. No new lead.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.62,
+        0.6
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Return to practice wing basement.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.62,
+        0.6
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Dawn \u2014 walks out without an arrest.",
+      "player_card": "travel:to_courtyard",
+      "scene": {
+        "LOCATION": "location:courtyard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:leaves",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.62,
+        0.6
+      ]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "final_convergence": [
+      0.6,
+      0.62,
+      0.6
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=accomplice_via_archive_clerk"
+  }
+}

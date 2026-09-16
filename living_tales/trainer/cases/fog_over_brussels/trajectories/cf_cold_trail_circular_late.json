@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_cold_trail_circular_late",
+  "case_id": "fog_over_brussels",
+  "description": "Counterfactual branch of cold_trail_circular. At turn 22 the fog lifts over the kitchen corridor — the detective sees the forty-second window for what it is, breaks the plateau, and names Brennan at dawn after a long delay. Evidence-dim jumps first on the corridor-tray reading; suspect-dim follows when Brennan registers; motive-dim closes last.",
+  "outcome": "late_revelation",
+  "branch_of": "cold_trail_circular",
+  "branch_turn": 22,
+  "divergence_token": "ATMOSPHERE=atmosphere:fog_lifts",
+  "starting_hypothesis": "counterfactual_branch",
+  "tags": [
+    "counterfactual_branch",
+    "late_revelation",
+    "atmosphere_divergence",
+    "fog_lifts_recovery",
+    "circular_recovery"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "location:west_wing_stairwell",
+      "location:cipher_room",
+      "location:document_room",
+      "location:kitchen_corridor",
+      "location:embassy_kitchen",
+      "location:kitchen_corridor",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [0.37, 0.40, 0.22]
+  },
+  "turns": [
+    {
+      "turn": 22,
+      "_note": "DIVERGENCE: fog lifts at the corridor. Evidence dim breaks plateau on the tray.",
+      "player_card": "object:catering_tray",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_tray",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:fog_lifts",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.38, 0.55, 0.24]
+    },
+    {
+      "turn": 23,
+      "_note": "Catering supervisor steps in with the timing book. Names the forty seconds aloud.",
+      "player_card": "modifier:forty_second_interval",
+      "scene": {
+        "LOCATION": "location:kitchen_corridor",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:catering_timing_note",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:fog_lifts",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact"
+      },
+      "convergence_after": [0.40, 0.72, 0.36]
+    },
+    {
+      "turn": 24,
+      "_note": "Cross to the cipher room. Re-read the secondary encoding with new eyes. Motive dim jumps.",
+      "player_card": "object:secondary_encoding_sheet",
+      "scene": {
+        "LOCATION": "location:cipher_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:reading_dispatch_signal",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:cold_corridor",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.42, 0.74, 0.58]
+    },
+    {
+      "turn": 25,
+      "_note": "Cross to the reception. Brennan still at the chandelier. Suspect dim climbs hard.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:signet_ring",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.76, 0.78, 0.66]
+    },
+    {
+      "turn": 26,
+      "_note": "Press for the motive.",
+      "player_card": "motive:double_agent_exposure",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:secondary_encoding_sheet",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:reception_murmur",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.84, 0.83, 0.80]
+    },
+    {
+      "turn": 27,
+      "_note": "Late accusation: Brennan. The detective broke the plateau at the corridor.",
+      "player_card": "ACCUSE:suspect:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:signet_ring",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.87, 0.85, 0.82]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "accused": "suspect:brennan",
+    "final_convergence": [0.87, 0.85, 0.82],
+    "_note": "Fog lifted late on the corridor; bridge token surfaced; Brennan named at dawn after the circular plateau."
+  }
+}

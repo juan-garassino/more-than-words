@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_partial_dunne_misread_motive_a_to_correct",
+  "case_id": "tidal_interval",
+  "description": "Counterfactual: in partial_dunne_misread_motive_a, the path becomes unstable at the right moment \u2014 the tidal window snaps into focus and the motive aligns. Correct verdict.",
+  "outcome": "correct_piers_dunne",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "partial_dunne_misread_motive_a",
+  "branch_turn": 26,
+  "divergence_token": "TIDAL_TELL=tidal_tell:path_unstable",
+  "tags": [
+    "counterfactual",
+    "tidal_tell_divergence",
+    "correct_piers_dunne",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from partial_dunne_misread_motive_a at turn 26 on TIDAL_TELL=tidal_tell:path_unstable.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.68,
+      0.68,
+      0.68
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:eastern_path",
+      "event:sarah_does_not_return",
+      "event:final_report_approved"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 38,
+      "player_card": "travel:to_eastern_path",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:traces_route",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:tidal_window_identified",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:path_unstable"
+      },
+      "convergence_after": [
+        0.72,
+        0.72,
+        0.72
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "motive:fishing_economy",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:path_unstable"
+      },
+      "convergence_after": [
+        0.76,
+        0.76,
+        0.76
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "modifier:schedule_in_piers_hand",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.84,
+        0.84,
+        0.84
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "ACCUSE:suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:piers_dunne",
+    "final_convergence": [
+      0.88,
+      0.88,
+      0.88
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=partial_dunne_misread_motive_a"
+  }
+}

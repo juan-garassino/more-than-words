@@ -1,0 +1,670 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "motive_only_via_protected_area_report",
+  "case_id": "tidal_interval",
+  "description": "Speedy motive-only close anchored on the protected-area extension report. Detective lands on the report's page seven at turn 1 and follows the closure-of-fishing-grounds thread to the harbour. Mira at jetty turn 4, Eira at common room turn 7, Niall at generator room turn 11. Confession by motive at turn 30. The marker is never visited — evidence_dim caps at 0.65 while motive_dim closes near 0.97. 32 turns.",
+  "outcome": "motive_only_confession",
+  "starting_hypothesis": "object_first",
+  "tags": [
+    "hand_paced",
+    "speedy",
+    "motive_first_chain",
+    "protected_area_report_anchor",
+    "no_marker_chain"
+  ],
+  "opening": {
+    "tokens": [
+      "location:research_lab",
+      "event:sarah_does_not_return",
+      "event:final_report_approved"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Open at the lab. The final report face up — page seven on the desk, the extension paragraph circled in Sarah's hand.",
+      "player_card": "object:final_report",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.03, 0.07, 0.12]
+    },
+    {
+      "turn": 2,
+      "_note": "Read on. The recommendation — forty percent extension. Closes the most productive grounds within forty miles.",
+      "player_card": "object:final_report",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.05, 0.10, 0.22]
+    },
+    {
+      "turn": 3,
+      "_note": "Tovi Ansgar comes in for a fresh stack of sample slides. Names the Friday afternoon — Sarah had submitted the report to the director at three.",
+      "player_card": "witness:junior_researcher",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_tovi_ansgar",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:softened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.08, 0.13, 0.28]
+    },
+    {
+      "turn": 4,
+      "_note": "Cross to the jetty. Mira Callan on the boat — the dawn squall and the slack water both coming in.",
+      "player_card": "travel:to_jetty",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:wind_bitten_calm",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:storm_intensifies"
+      },
+      "convergence_after": [0.16, 0.16, 0.36]
+    },
+    {
+      "turn": 5,
+      "_note": "Ask Mira what the report's recommendation would do. She walks through the chain — three vessels, twelve crew, the buyer in Hapsfjord.",
+      "player_card": "witness:boat_skipper",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [0.20, 0.20, 0.44]
+    },
+    {
+      "turn": 6,
+      "_note": "Mira mentions her brother on the lead Dunne boat. Says his name without softening.",
+      "player_card": "witness:boat_skipper",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:harbour_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.22, 0.21, 0.52]
+    },
+    {
+      "turn": 7,
+      "_note": "Cross to the common room. Eira Voss at the urn. Hand goes still when the detective names the report.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:with_eira_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.25, 0.22, 0.56]
+    },
+    {
+      "turn": 8,
+      "_note": "Eira names Friday afternoon — the common-room confrontation between Sarah and Webb. Piers had stood at the doorway and not spoken.",
+      "player_card": "witness:cook",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eira_voss",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:softened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.32, 0.25, 0.62]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to the dorms. Piers's door ajar. The drawer half open.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.34, 0.30, 0.64]
+    },
+    {
+      "turn": 10,
+      "_note": "Read the journal letter — Piers's draft to his father, three pages, the loan figures in the margin.",
+      "player_card": "object:journal_letter",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.38, 0.40, 0.74]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to the generator room. Niall Brackett at the relay, oilskin wet. Names the harbour.",
+      "player_card": "travel:to_generator_room",
+      "scene": {
+        "LOCATION": "location:generator_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_niall_brackett",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:generator_falters"
+      },
+      "convergence_after": [0.40, 0.42, 0.75]
+    },
+    {
+      "turn": 12,
+      "_note": "Niall walks the dependency: the buyer in Hapsfjord pulls out, the boats stop, the processing facility closes, the village empties.",
+      "player_card": "witness:generator_engineer",
+      "scene": {
+        "LOCATION": "location:generator_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_niall_brackett",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:harbour_grief",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.42, 0.44, 0.82]
+    },
+    {
+      "turn": 13,
+      "_note": "Return to the dorms. The loan papers face up on the bed where the detective had left them.",
+      "player_card": "modifier:processing_facility_loan_due",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.46, 0.50, 0.84]
+    },
+    {
+      "turn": 14,
+      "_note": "Cross to the common room. Piers at the table with the manifest. The detective sits opposite.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.52, 0.51, 0.85]
+    },
+    {
+      "turn": 15,
+      "_note": "Ask Piers what the report's recommendation means for the operation. He walks the margin numbers — practised, over-explained.",
+      "player_card": "suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:over_explained",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.55, 0.52, 0.86]
+    },
+    {
+      "turn": 16,
+      "_note": "Name his father. The Dunne operation since 1968. Stance shifts — defensive at the word father.",
+      "player_card": "motive:father_legacy",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.58, 0.53, 0.88]
+    },
+    {
+      "turn": 17,
+      "_note": "Cross to the jetty. Mira pulling her oilskin on. Second pass.",
+      "player_card": "travel:to_jetty",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:storm_intensifies"
+      },
+      "convergence_after": [0.60, 0.54, 0.88]
+    },
+    {
+      "turn": 18,
+      "_note": "Ask whether she had told Piers about the report. She says yes — Friday evening, the harbour pub, after the director's approval.",
+      "player_card": "witness:boat_skipper",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:harbour_grief",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.62, 0.55, 0.90]
+    },
+    {
+      "turn": 19,
+      "_note": "Return to the research lab. Re-read the report's recommendation against the loan papers.",
+      "player_card": "travel:to_research_lab",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.63, 0.58, 0.91]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to the common room. Piers still at the manifest. The detective lays the loan papers down beside it.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.66, 0.58, 0.91]
+    },
+    {
+      "turn": 21,
+      "_note": "Name the protected area extension. Piers does not lift the page. Says only that his father had asked him to keep the operation through.",
+      "player_card": "suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.69, 0.60, 0.92]
+    },
+    {
+      "turn": 22,
+      "_note": "Name the fishing economy. Piers does not deny it. Lists his crew by name without prompting.",
+      "player_card": "motive:fishing_economy",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.72, 0.61, 0.93]
+    },
+    {
+      "turn": 23,
+      "_note": "Name the boats. Piers — twelve employees, his father's facility built with his own hands.",
+      "player_card": "motive:family_on_the_boats",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.74, 0.61, 0.94]
+    },
+    {
+      "turn": 24,
+      "_note": "Examine the loan modifier in front of Piers. He turns the page face down.",
+      "player_card": "modifier:processing_facility_loan_due",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:journal_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.76, 0.62, 0.94]
+    },
+    {
+      "turn": 25,
+      "_note": "Cross to the dorms one more time. The drawer closed now. The father's photograph still on the side table.",
+      "player_card": "travel:to_dorms",
+      "scene": {
+        "LOCATION": "location:dorms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.76, 0.62, 0.94]
+    },
+    {
+      "turn": 26,
+      "_note": "Return to the common room. Piers writing nothing now. His hand flat over the manifest.",
+      "player_card": "travel:to_common_room",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.78, 0.63, 0.95]
+    },
+    {
+      "turn": 27,
+      "_note": "Name his father plainly. Piers nods once. The first plain answer he has given.",
+      "player_card": "motive:father_legacy",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.80, 0.63, 0.96]
+    },
+    {
+      "turn": 28,
+      "_note": "Ask whether he had moved the marker. Piers says nothing. Stays defensive — not hostile, not denying.",
+      "player_card": "suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.80, 0.63, 0.96]
+    },
+    {
+      "turn": 29,
+      "_note": "Name the report again — the closure, the village. Piers gives the harbour as system.",
+      "player_card": "object:final_report",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.82, 0.64, 0.97]
+    },
+    {
+      "turn": 30,
+      "_note": "Name the boats, name the buyer, name the facility. Piers does not look up.",
+      "player_card": "motive:fishing_economy",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.83, 0.64, 0.97]
+    },
+    {
+      "turn": 31,
+      "_note": "Ask the final question. Piers admits the motive — names the operation, names the harbour. The marker stays unnamed.",
+      "player_card": "suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.84, 0.65, 0.97]
+    },
+    {
+      "turn": 32,
+      "_note": "Accusation. The harbour, the operation, the boats, the facility, the father.",
+      "player_card": "ACCUSE:suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [0.84, 0.65, 0.97]
+    }
+  ],
+  "ending": {
+    "type": "motive_only",
+    "accused": "suspect:piers_dunne",
+    "final_convergence": [0.84, 0.65, 0.97],
+    "_note": "Speedy motive-only. Detective never visits the path, never reads the marker. Motive_dim sprints early on the report+loan papers; evidence_dim caps at 0.65 since the mechanism is never examined; suspect_dim closes on Piers via his defensive arc. Confession is to the motive only — Piers never names the marker."
+  }
+}

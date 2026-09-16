@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "case_id": "hollow_season",
+
+  "_comment": "Multidimensional structured-scene schema for the Edwardian country-house case. Ashworth Park, August 1907 — the hollow season between harvest. Each engine turn emits one token per dim. Universal core dimensions are shared with amber_cipher / attended_hour / resonance_test; case-specific extensions cover the country-house setting, the household (family + staff), and the PROTOCOL_TELL extension dimension that registers Edwardian class-protocol breaches as evidential signal. Tokens with dim=null (anchor_tokens below) are graph/convergence anchors only — never emitted directly.",
+
+  "dimensions": [
+    {
+      "name": "LOCATION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "location:library",
+        "location:drawing_room",
+        "location:dining_room",
+        "location:gun_room",
+        "location:summer_house",
+        "location:walled_garden",
+        "location:gatehouse_lodge",
+        "location:servants_hall",
+        "location:estate_office",
+        "location:village_rooms",
+        "location:none"
+      ]
+    },
+    {
+      "name": "TRANSITION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "transition:stayed",
+        "transition:crossed_to",
+        "transition:entered",
+        "transition:exited",
+        "transition:returned",
+        "transition:pursued_to",
+        "transition:called_away_to",
+        "transition:descended_to",
+        "transition:none"
+      ]
+    },
+    {
+      "name": "CAUSE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "cause:following_witness_lead",
+        "cause:examining_evidence",
+        "cause:recognized_object",
+        "cause:noticed_inconsistency",
+        "cause:pursued_suspicion",
+        "cause:revisiting_scene",
+        "cause:summoned",
+        "cause:chronological_drift",
+        "cause:reading_household_record",
+        "cause:noting_protocol_breach",
+        "cause:none"
+      ]
+    },
+    {
+      "name": "PRESENCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "presence:with_edmund_carrow",
+        "presence:with_hector_finch",
+        "presence:with_mrs_lyle",
+        "presence:with_croft",
+        "presence:with_mrs_penrose",
+        "presence:with_butler_hadley",
+        "presence:with_under_gardener",
+        "presence:with_ladies_maid",
+        "presence:with_village_chemist",
+        "presence:with_solicitor_aldhurst",
+        "presence:alone"
+      ]
+    },
+    {
+      "name": "STANCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "stance:cooperative",
+        "stance:defensive",
+        "stance:evasive",
+        "stance:hostile",
+        "stance:unaware",
+        "stance:none"
+      ]
+    },
+    {
+      "name": "ACTION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "action:examines",
+        "action:questions",
+        "action:notices",
+        "action:discovers",
+        "action:confronts",
+        "action:follows",
+        "action:waits",
+        "action:leaves",
+        "action:arrives",
+        "action:recalls",
+        "action:none"
+      ]
+    },
+    {
+      "name": "OBJECT_FOCUS",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "object:brandy_decanter",
+        "object:french_window_latch",
+        "object:chemists_receipt",
+        "object:wastepaper_basket",
+        "object:new_will_draft",
+        "object:burned_note",
+        "object:timber_ledger",
+        "object:audit_letter",
+        "object:mothers_portrait",
+        "object:library_doorframe",
+        "object:postbox_record",
+        "object:medicine_phial",
+        "object:morning_post_tray",
+        "object:duty_log",
+        "object_focus:none"
+      ]
+    },
+    {
+      "name": "TELL",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "emotion:steady_hands",
+        "emotion:measured_breath",
+        "emotion:paused_reply",
+        "emotion:closed_posture",
+        "emotion:rehearsed_grief",
+        "emotion:over_polished_manner",
+        "tell:paled",
+        "tell:tightened",
+        "tell:glanced_aside",
+        "tell:silent",
+        "tell:hesitated",
+        "tell:over_explained",
+        "tell:softened",
+        "tell:none"
+      ]
+    },
+    {
+      "name": "ATMOSPHERE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "atmosphere:summer_light_slants",
+        "atmosphere:rooks_settle",
+        "atmosphere:long_grass_stills",
+        "atmosphere:dust_motes_hang",
+        "atmosphere:silence_holds",
+        "atmosphere:silence_breaks",
+        "atmosphere:bell_for_dinner",
+        "atmosphere:lamp_lit_early",
+        "atmosphere:wind_rises",
+        "atmosphere:dawn_approaches",
+        "atmosphere:none"
+      ]
+    },
+    {
+      "name": "REVELATION",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "revelation:name_uncovered": 0.5,
+        "revelation:motive_emerges": 0.5,
+        "revelation:confirmation": 0.4,
+        "revelation:emotional_geography_lands": 0.6
+      },
+      "vocab": [
+        "revelation:contradiction_surfaces",
+        "revelation:alibi_holds",
+        "revelation:name_uncovered",
+        "revelation:motive_emerges",
+        "revelation:dead_end",
+        "revelation:partial_match",
+        "revelation:confirmation",
+        "revelation:emotional_geography_lands",
+        "revelation:none"
+      ]
+    },
+    {
+      "name": "BEAT",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "beat:closing_in": 0.5,
+        "beat:verdict_ready": 0.75
+      },
+      "vocab": [
+        "beat:orientation",
+        "beat:investigation",
+        "beat:closing_in",
+        "beat:verdict_ready"
+      ]
+    },
+    {
+      "name": "PROTOCOL_TELL",
+      "universal": false,
+      "always_emit": true,
+      "case_specific": true,
+      "gated_by_convergence": {
+        "protocol_tell:addressed_above_station": 0.3,
+        "protocol_tell:letter_burned": 0.4,
+        "protocol_tell:servants_bell_unused": 0.3
+      },
+      "vocab": [
+        "protocol_tell:entered_without_announcement",
+        "protocol_tell:addressed_above_station",
+        "protocol_tell:door_left_unlatched",
+        "protocol_tell:letter_burned",
+        "protocol_tell:servants_bell_unused",
+        "protocol_tell:proper_form_observed",
+        "protocol_tell:none"
+      ]
+    }
+  ],
+
+  "_anchors_only_comment": "Tokens that contribute to convergence + graph but are never directly emitted as scene-tuple slots. They remain as player cards (motives, modifiers, legacy events) or graph anchors driving logit_bias. The emotional_geography motive tokens carry Edmund's attachment to the house and break the Finch false plateau.",
+  "anchor_tokens": {
+    "MOTIVE": [
+      "motive:inheritance_entailed",
+      "motive:audit_evasion",
+      "motive:house_as_mother",
+      "motive:childhood_stable_memory",
+      "motive:will_change_known",
+      "motive:debt_to_croft_called_in"
+    ],
+    "MODIFIER": [
+      "modifier:window_left_open",
+      "modifier:brandy_clouded",
+      "modifier:nightly_brandy_ritual",
+      "modifier:chest_complaint_known",
+      "modifier:cold_august_dawn",
+      "modifier:will_unwitnessed_by_second",
+      "modifier:receipt_dated_friday",
+      "modifier:paper_saved_for_reuse",
+      "modifier:doorframe_touched_on_entry",
+      "modifier:eleven_minutes_at_portrait",
+      "modifier:audit_scheduled_monday"
+    ],
+    "EVENT": [
+      "event:sir_geoffrey_discovered",
+      "event:will_drafted_thursday",
+      "event:note_arrived_friday_evening",
+      "event:window_opened_three_am",
+      "event:housekeeper_collects_paper"
+    ],
+    "TIME_LEGACY": [
+      "time:thursday_will_drafted",
+      "time:friday_evening_note",
+      "time:saturday_dinner",
+      "time:sunday_before_breakfast",
+      "time:monday_audit_scheduled"
+    ],
+    "ACTION_LEGACY": [
+      "action:brandy_dosed",
+      "action:window_opened",
+      "action:note_received_then_burned",
+      "action:receipt_discarded",
+      "action:will_drafted",
+      "action:doorframe_touched",
+      "action:portrait_stood_before"
+    ]
+  },
+
+  "_player_cards_comment": "Tokens the player can play as cards. Includes inquiry cards (suspects/witnesses/objects/motives/legacy actions) and travel cards (one per location — let the player choose to move).",
+  "player_cards": {
+    "inquiry": "@all_PLAYER_or_SHARED_with_dim_in_[OBJECT_FOCUS,PRESENCE,ACTION_LEGACY,MOTIVE]",
+    "travel": [
+      "travel:to_library",
+      "travel:to_drawing_room",
+      "travel:to_dining_room",
+      "travel:to_gun_room",
+      "travel:to_summer_house",
+      "travel:to_walled_garden",
+      "travel:to_gatehouse_lodge",
+      "travel:to_servants_hall",
+      "travel:to_estate_office",
+      "travel:to_village_rooms"
+    ]
+  }
+}

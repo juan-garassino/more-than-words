@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_edmund_via_burned_note_to_accomplice",
+  "case_id": "hollow_season",
+  "description": "Counterfactual: when examining the burned note the detective brings Mr Croft into the room; his hesitation outs him as messenger-accomplice.",
+  "outcome": "accomplice_found",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "edmund_via_burned_note",
+  "branch_turn": 22,
+  "divergence_token": "PRESENCE=presence:with_croft",
+  "tags": [
+    "counterfactual",
+    "presence_divergence",
+    "accomplice_found",
+    "croft_messenger",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from edmund_via_burned_note at turn 22 on PRESENCE=presence:with_croft.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.66,
+      0.7,
+      0.66
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:carrow_hall",
+      "event:archibald_discovered",
+      "time:late_october"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 38,
+      "player_card": "suspect:mr_croft",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_croft",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.72,
+        0.74,
+        0.7
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "object:postbox_record",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_croft",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:postbox_record",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.8,
+        0.76
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:burned_note",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.82,
+        0.84,
+        0.8
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "suspect:mr_croft",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_croft",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:postbox_record",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.85,
+        0.86,
+        0.84
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "ACCUSE:suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:none",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.86
+      ]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:edmund_carrow",
+    "final_convergence": [
+      0.88,
+      0.88,
+      0.86
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=edmund_via_burned_note"
+  }
+}

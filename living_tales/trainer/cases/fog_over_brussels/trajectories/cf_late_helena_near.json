@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_late_helena_near",
+  "case_id": "fog_over_brussels",
+  "description": "Counterfactual branch of late_revelation_after_helena. At turn 25 the detective pursues Brennan to a different room instead of confronting him at the chandelier \u2014 loses the moment, ends up accusing the chief of security.",
+  "outcome": "near_miss",
+  "branch_of": "late_revelation_after_helena",
+  "branch_turn": 25,
+  "divergence_token": "TRANSITION=transition:pursued_to",
+  "starting_hypothesis": "counterfactual_branch",
+  "tags": [
+    "counterfactual_branch",
+    "near_miss",
+    "transition_divergence",
+    "late_revelation_branch"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "location:ambassadors_office",
+      "location:reception_room",
+      "location:kitchen_corridor",
+      "location:reception_room",
+      "location:west_wing_stairwell",
+      "location:cipher_room",
+      "location:document_room",
+      "location:kitchen_corridor",
+      "location:reception_room",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.845,
+      0.845,
+      0.835
+    ]
+  },
+  "turns": [
+    {
+      "turn": 25,
+      "_note": "DIVERGENCE: detective pursues Brennan toward the landing.",
+      "player_card": "travel:to_east_wing_landing",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:follows",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "convergence_after": [0.86, 0.86, 0.84]
+    },
+    {
+      "turn": 26,
+      "_note": "Chief of security blocks the landing.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing"
+      },
+      "convergence_after": [0.90, 0.86, 0.84]
+    },
+    {
+      "turn": 27,
+      "_note": "Brennan gone past him into the office.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.93, 0.87, 0.84]
+    },
+    {
+      "turn": 28,
+      "_note": "Press: who let him through.",
+      "player_card": "witness:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:heating_hum",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.94, 0.88, 0.85]
+    },
+    {
+      "turn": 29,
+      "_note": "Near-miss accusation: chief of security.",
+      "player_card": "ACCUSE:suspect:chief_of_security",
+      "scene": {
+        "LOCATION": "location:east_wing_landing",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_chief_of_security",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:guest_list",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.95, 0.89, 0.86]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "final_convergence": [0.95, 0.89, 0.86],
+    "accused": "suspect:chief_of_security",
+    "true_culprit": "suspect:brennan",
+    "_note": "Chief of security accused as near-miss; Brennan slips through."
+  }
+}

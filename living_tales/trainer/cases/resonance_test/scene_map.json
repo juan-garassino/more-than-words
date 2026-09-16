@@ -1,0 +1,96 @@
+{
+  "_art_dir": "art/resonance_test/direct_pixel_art_v1/pixel_320x320",
+  "_default": "resonance_test_courtyard_pixel_320x320_v01.png",
+  "_briefing": "resonance_test_courtyard_pixel_320x320_v01.png",
+  "_ending": "resonance_test_practice_wing_basement_pixel_320x320_v01.png",
+  "location:practice_room_a":           "resonance_test_practice_room_a_pixel_320x320_v01.png",
+  "location:practice_wing_basement":    "resonance_test_practice_wing_basement_pixel_320x320_v01.png",
+  "location:recital_hall":              "resonance_test_recital_hall_pixel_320x320_v01.png",
+  "location:faculty_lounge":            "resonance_test_faculty_lounge_pixel_320x320_v01.png",
+  "location:ashby_office":              "resonance_test_ashby_office_pixel_320x320_v01.png",
+  "location:archive_basement":          "resonance_test_archive_basement_pixel_320x320_v01.png",
+  "location:library_periodicals":       "resonance_test_library_periodicals_pixel_320x320_v01.png",
+  "location:porters_lodge":             "resonance_test_porters_lodge_pixel_320x320_v01.png",
+  "location:harmony_classroom":         "resonance_test_harmony_classroom_pixel_320x320_v01.png",
+  "location:courtyard":                 "resonance_test_courtyard_pixel_320x320_v01.png",
+
+  "_npcs": {
+    "presence:with_marta_solis": {
+      "role": "suspect",
+      "name_en": "Marta Solís",
+      "name_es": "Marta Solís",
+      "summary_en": "Junior tutor in harmony and counterpoint; once Elena Varga of the Royal Academy, 1951–1953.",
+      "summary_es": "Tutora junior de armonía y contrapunto; en otro tiempo Elena Varga, de la Royal Academy, 1951–1953."
+    },
+    "presence:with_james_okafor": {
+      "role": "suspect",
+      "name_en": "James Okafor",
+      "name_es": "James Okafor",
+      "summary_en": "Third-year student, twenty-two, on scholarship; argued publicly with Ashby on Wednesday.",
+      "summary_es": "Estudiante de tercer año, veintidós años, becado; discutió en público con Ashby el miércoles."
+    },
+    "presence:with_peter_haldane": {
+      "role": "suspect",
+      "name_en": "Peter Haldane",
+      "name_es": "Peter Haldane",
+      "summary_en": "Conservatory caretaker; logged the broken handrail three times and acted on it never.",
+      "summary_es": "Conserje del conservatorio; anotó tres veces la barandilla rota y nunca actuó."
+    },
+    "presence:with_nikolai_renko": {
+      "role": "suspect",
+      "name_en": "Nikolai Renko",
+      "name_es": "Nikolai Renko",
+      "summary_en": "Panel composer, fifty-eight; knew Ashby's Vienna work and made his own quiet inquiries about it.",
+      "summary_es": "Compositor del tribunal, cincuenta y ocho años; conocía la obra vienesa de Ashby y hizo sus propias indagaciones discretas."
+    },
+    "presence:with_eleanor_fairchild": {
+      "role": "witness",
+      "name_en": "Professor Eleanor Fairchild",
+      "name_es": "la profesora Eleanor Fairchild",
+      "summary_en": "Chair of the examining panel; the institutional voice that closes ranks when pressed.",
+      "summary_es": "Presidenta del tribunal examinador; la voz institucional que cierra filas cuando se la presiona."
+    },
+    "presence:with_archive_clerk_norwood": {
+      "role": "witness",
+      "name_en": "Mr Norwood",
+      "name_es": "el señor Norwood",
+      "summary_en": "Archive clerk at the Royal Academy of Music; keeps the uncollected student work of 1951–1953.",
+      "summary_es": "Archivero de la Royal Academy of Music; guarda el material de alumno sin recoger de 1951–1953."
+    },
+    "presence:with_practice_room_attendant": {
+      "role": "witness",
+      "name_en": "the practice-room attendant",
+      "name_es": "el encargado de las salas de estudio",
+      "summary_en": "Keeps the sign-in book for the basement practice wing; saw who went down on Thursday night.",
+      "summary_es": "Lleva el libro de firmas del sótano de las salas de estudio; vio quién bajó el jueves por la noche."
+    },
+    "presence:with_ensemble_leader_pryce": {
+      "role": "witness",
+      "name_en": "Miss Pryce",
+      "name_es": "la señorita Pryce",
+      "summary_en": "Leader of the third-year ensemble that performed the quartet on Monday afternoon.",
+      "summary_es": "Líder del cuarteto de tercer año que interpretó la pieza el lunes por la tarde."
+    },
+    "presence:with_neighbour_thirsk": {
+      "role": "witness",
+      "name_en": "Mrs Thirsk",
+      "name_es": "la señora Thirsk",
+      "summary_en": "Marta Solís's neighbour; saw her at nine forty-five on Thursday evening at her own door.",
+      "summary_es": "Vecina de Marta Solís; la vio a las nueve y cuarenta y cinco del jueves por la noche en su puerta."
+    },
+    "presence:with_night_porter_keaveney": {
+      "role": "witness",
+      "name_en": "the night porter",
+      "name_es": "el portero nocturno",
+      "summary_en": "Holds the conservatory keys after nine; locked the courtyard gate at ten with Ashby still inside.",
+      "summary_es": "Tiene las llaves del conservatorio después de las nueve; cerró la verja del patio a las diez con Ashby aún dentro."
+    },
+    "presence:with_records_clerk_aldgate": {
+      "role": "witness",
+      "name_en": "the conservatory records clerk",
+      "name_es": "el oficinista de archivo del conservatorio",
+      "summary_en": "Keeps the conservatory's faculty files and the maintenance log of broken fittings.",
+      "summary_es": "Lleva los expedientes de la facultad y el libro de mantenimiento de los desperfectos."
+    }
+  }
+}

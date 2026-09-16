@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_red_herring_trap_finch_audit_to_near_miss_b",
+  "case_id": "hollow_season",
+  "description": "Counterfactual (batch 2) from red_herring_trap_finch_audit at turn 28. The player hesitates \u2014 beat shifts back to closing_in. Mrs Lyle produces the receipt late; Edmund accused with thin motive. Near miss.",
+  "outcome": "near_miss",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "red_herring_trap_finch_audit",
+  "branch_turn": 28,
+  "divergence_token": "BEAT=beat:closing_in",
+  "tags": [
+    "counterfactual",
+    "beat_divergence",
+    "near_miss",
+    "batch2_cf",
+    "hand_paced"
+  ],
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.66,
+      0.72,
+      0.5
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:library",
+      "event:sir_geoffrey_discovered",
+      "time:sunday_before_breakfast"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 28,
+      "_note": "Branch. The player hesitates \u2014 beat:closing_in instead of verdict_ready.",
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.68,
+        0.72,
+        0.52
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to servants_hall. Mrs Lyle with the green sack.",
+      "player_card": "witness:mrs_lyle",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:descended_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.7,
+        0.74,
+        0.56
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Receipt produced.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:servants_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mrs_lyle",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.74,
+        0.78,
+        0.6
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Cross to library. Lay receipt.",
+      "player_card": "travel:to_library",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.76,
+        0.78,
+        0.64
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Accuse Edmund \u2014 thin motive, no emotional geography landed.",
+      "player_card": "ACCUSE:suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.78,
+        0.8,
+        0.66
+      ]
+    }
+  ],
+  "ending": {
+    "type": "near_miss_accusation",
+    "accused": "suspect:edmund_carrow",
+    "final_convergence": [
+      0.78,
+      0.8,
+      0.66
+    ],
+    "_note": "CF \u2014 beat divergence; receipt recovered late but motive thin. Near miss."
+  }
+}

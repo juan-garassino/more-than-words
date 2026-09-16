@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "late_revelation_after_callan",
+  "case_id": "tidal_interval",
+  "description": "Slow-start: detective lingers at the jetty with Callan's tide annotations; pivots late to the path-marker and lands the correct accusation just in time.",
+  "outcome": "late_revelation",
+  "starting_hypothesis": "witness_first",
+  "tags": [
+    "late_revelation",
+    "callan_first_then_redirect",
+    "slow_start_fast_close",
+    "wave2"
+  ],
+  "opening": {
+    "tokens": [
+      "location:research_lab",
+      "event:sarah_does_not_return",
+      "event:final_report_approved"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "witness:boat_skipper",
+      "scene": {
+        "LOCATION": "location:research_lab",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:rain_against_glass",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.024,
+        0.024,
+        0.024
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "travel:to_jetty",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [
+        0.048,
+        0.048,
+        0.048
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "modifier:tide_data_annotated",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [
+        0.071,
+        0.071,
+        0.071
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "modifier:tide_data_annotated",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [
+        0.095,
+        0.095,
+        0.095
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "modifier:tide_data_annotated",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [
+        0.119,
+        0.119,
+        0.119
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "modifier:tide_data_annotated",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [
+        0.143,
+        0.143,
+        0.143
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "modifier:tide_data_annotated",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [
+        0.167,
+        0.167,
+        0.167
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "modifier:tide_data_annotated",
+      "scene": {
+        "LOCATION": "location:jetty",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_tide_chart",
+        "PRESENCE": "presence:with_mira_callan",
+        "STANCE": "stance:evasive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:tide_chart",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:waves_against_rock",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "TIDAL_TELL": "tidal_tell:tide_recedes"
+      },
+      "convergence_after": [
+        0.19,
+        0.19,
+        0.19
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "travel:to_eastern_path",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:storm_intensifies"
+      },
+      "convergence_after": [
+        0.214,
+        0.214,
+        0.214
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "modifier:marker_displaced_eleven_meters",
+      "scene": {
+        "LOCATION": "location:eastern_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:wind_rises",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:storm_intensifies"
+      },
+      "convergence_after": [
+        0.238,
+        0.238,
+        0.238
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.265,
+        0.265,
+        0.265
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.295,
+        0.295,
+        0.295
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.324,
+        0.324,
+        0.324
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.354,
+        0.354,
+        0.354
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.384,
+        0.384,
+        0.384
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.414,
+        0.414,
+        0.414
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.443,
+        0.443,
+        0.443
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.473,
+        0.473,
+        0.473
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.502,
+        0.502,
+        0.502
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.518,
+        0.518,
+        0.518
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.534,
+        0.534,
+        0.534
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.55,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.566,
+        0.566,
+        0.566
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.582,
+        0.582,
+        0.582
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.598,
+        0.598,
+        0.598
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.614,
+        0.614,
+        0.614
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.63,
+        0.63,
+        0.63
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.646,
+        0.646,
+        0.646
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.662,
+        0.662,
+        0.662
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.678,
+        0.678,
+        0.678
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.694,
+        0.694,
+        0.694
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.711,
+        0.711,
+        0.711
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.727,
+        0.727,
+        0.727
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.743,
+        0.743,
+        0.743
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.759,
+        0.759,
+        0.759
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "modifier:walk_routine_documented",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.775,
+        0.775,
+        0.775
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.793,
+        0.793,
+        0.793
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "object:resupply_schedule",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.81,
+        0.81,
+        0.81
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "modifier:schedule_in_piers_hand",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:resupply_schedule",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.828,
+        0.828,
+        0.828
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "motive:fishing_economy",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:final_report",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.845,
+        0.845,
+        0.845
+      ]
+    },
+    {
+      "turn": 41,
+      "player_card": "object:path_marker",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.863,
+        0.863,
+        0.863
+      ]
+    },
+    {
+      "turn": 42,
+      "player_card": "ACCUSE:suspect:piers_dunne",
+      "scene": {
+        "LOCATION": "location:common_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_piers_dunne",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:path_marker",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "TIDAL_TELL": "tidal_tell:none"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    }
+  ],
+  "ending": {
+    "type": "wrong",
+    "accused": "suspect:piers_dunne",
+    "final_convergence": [
+      0.88,
+      0.88,
+      0.88
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_art_dir": "art/third_signature/direct_pixel_art_v1/pixel_320x320",
+  "_default": "third_signature_club_steps_pixel_320x320_v01.png",
+  "_briefing": "third_signature_club_steps_pixel_320x320_v01.png",
+  "_ending": "third_signature_reading_room_pixel_320x320_v01.png",
+  "location:club_steps":          "third_signature_club_steps_pixel_320x320_v01.png",
+  "location:porters_lodge":       "third_signature_porters_lodge_pixel_320x320_v01.png",
+  "location:smoking_room":        "third_signature_smoking_room_pixel_320x320_v01.png",
+  "location:reading_room":        "third_signature_reading_room_pixel_320x320_v01.png",
+  "location:library":             "third_signature_library_pixel_320x320_v01.png",
+  "location:dining_room":         "third_signature_dining_room_pixel_320x320_v01.png",
+  "location:manuscript_archive":  "third_signature_manuscript_archive_pixel_320x320_v01.png",
+  "location:members_snug":        "third_signature_members_snug_pixel_320x320_v01.png",
+  "location:basement_records":    "third_signature_basement_records_pixel_320x320_v01.png",
+  "location:club_corridor":       "third_signature_club_corridor_pixel_320x320_v01.png"
+}

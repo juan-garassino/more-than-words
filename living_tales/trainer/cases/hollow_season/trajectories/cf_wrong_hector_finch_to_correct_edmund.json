@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_hector_finch_to_correct_edmund",
+  "case_id": "hollow_season",
+  "description": "Counterfactual from wrong_hector_finch at turn 30. At the moment the detective is about to lock in on Finch, the cause shifts to noticing the receipt's date \u2014 the chain reorders. Edmund recovered late; correct accusation at turn 35.",
+  "outcome": "correct_edmund_carrow",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "wrong_hector_finch",
+  "branch_turn": 30,
+  "divergence_token": "CAUSE=cause:noticed_inconsistency",
+  "tags": [
+    "counterfactual",
+    "cause_divergence",
+    "correct_edmund_carrow",
+    "batch2_cf",
+    "hand_paced"
+  ],
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.66,
+      0.7,
+      0.55
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:library",
+      "event:sir_geoffrey_discovered",
+      "time:sunday_before_breakfast"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 30,
+      "_note": "Branch. The receipt date catches; cause:noticed_inconsistency opens.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:hesitated",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.66,
+        0.74,
+        0.6
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Cross to village_rooms. Receipt and basket together.",
+      "player_card": "travel:to_village_rooms",
+      "scene": {
+        "LOCATION": "location:village_rooms",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:wastepaper_basket",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:letter_burned"
+      },
+      "convergence_after": [
+        0.68,
+        0.76,
+        0.64
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Cross to drawing_room. The portrait.",
+      "player_card": "travel:to_drawing_room",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:emotional_geography_lands",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.72,
+        0.78,
+        0.76
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Cross to library. Edmund summoned.",
+      "player_card": "witness:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:summoned",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.78,
+        0.82,
+        0.8
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Lay all out.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.84,
+        0.86,
+        0.84
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Accusation. Edmund.",
+      "player_card": "ACCUSE:suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.88
+      ]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "accused": "suspect:edmund_carrow",
+    "final_convergence": [
+      0.88,
+      0.88,
+      0.88
+    ],
+    "_note": "CF \u2014 cause divergence opens contradiction-surfacing; Edmund recovered."
+  }
+}

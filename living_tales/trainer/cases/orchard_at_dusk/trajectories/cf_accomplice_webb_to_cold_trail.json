@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_accomplice_webb_to_cold_trail",
+  "case_id": "orchard_at_dusk",
+  "description": "Counterfactual branch of accomplice_via_amos_webb. At turn 20 STANCE diverges: Caddick goes from cooperative to evasive — he will not name the 1884 thread. The detective fails to surface the buried motive cleanly; with Webb still framed as the act, the case stalls. Outcome: cold_trail. 8-turn CF.",
+  "outcome": "cold_trail",
+  "branch_of": "accomplice_via_amos_webb",
+  "branch_turn": 20,
+  "divergence_token": "STANCE=stance:evasive",
+  "starting_hypothesis": "accomplice_first_webb",
+  "tags": ["counterfactual_branch","stance_divergence","cold_trail","caddick_evasive"],
+  "opening": {"tokens": ["location:crale_orchard","event:oates_found_at_dusk","time:dusk_hour"]},
+  "pre_branch_state": {"convergence_dims": [0.66, 0.68, 0.65]},
+  "turns": [
+    {"turn":20,"_note":"DIVERGENCE. Caddick, asked about 1884, glances toward the vestry door. He will not be drawn.","player_card":"witness:reverend_caddick","scene":{"LOCATION":"location:parish_church","TRANSITION":"transition:crossed_to","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_reverend_caddick","STANCE":"stance:evasive","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"tell:glanced_aside","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:dead_end","BEAT":"beat:investigation"},"convergence_after":[0.66,0.68,0.65]},
+    {"turn":21,"_note":"Cross to the cider press. Eliza will not speak with Caddick's silence at her back.","player_card":"travel:to_cider_press","scene":{"LOCATION":"location:cider_press","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_eliza_crale","STANCE":"stance:evasive","ACTION":"action:arrives","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:closed_posture","ATMOSPHERE":"atmosphere:cider_press_turns","REVELATION":"revelation:none","BEAT":"beat:investigation"},"convergence_after":[0.66,0.68,0.65]},
+    {"turn":22,"_note":"Eliza will not produce the older quires.","player_card":"witness:eliza_crale","scene":{"LOCATION":"location:cider_press","TRANSITION":"transition:stayed","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_eliza_crale","STANCE":"stance:evasive","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:closed_posture","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:dead_end","BEAT":"beat:investigation"},"convergence_after":[0.66,0.68,0.65]},
+    {"turn":23,"_note":"Cross to the orchard lane. Briggs has nothing more.","player_card":"travel:to_orchard_lane","scene":{"LOCATION":"location:orchard_lane","TRANSITION":"transition:crossed_to","CAUSE":"cause:revisiting_scene","PRESENCE":"presence:with_constable_briggs","STANCE":"stance:cooperative","ACTION":"action:arrives","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:wind_in_the_long_grass","REVELATION":"revelation:dead_end","BEAT":"beat:investigation"},"convergence_after":[0.66,0.68,0.65]},
+    {"turn":24,"_note":"Cross to the field gate. The hinge tells what it told.","player_card":"travel:to_field_gate","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:crossed_to","CAUSE":"cause:revisiting_scene","PRESENCE":"presence:alone","STANCE":"stance:none","ACTION":"action:notices","OBJECT_FOCUS":"object:field_gate_hinge","TELL":"tell:none","ATMOSPHERE":"atmosphere:wind_in_the_long_grass","REVELATION":"revelation:partial_match","BEAT":"beat:investigation"},"convergence_after":[0.66,0.68,0.65]},
+    {"turn":25,"_note":"Cross to the village inn. Sowerby and Webb at the bar.","player_card":"travel:to_village_inn","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:arrives","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:lamp_lit_early","REVELATION":"revelation:dead_end","BEAT":"beat:investigation"},"convergence_after":[0.66,0.68,0.65]},
+    {"turn":26,"_note":"Webb will not be turned without the 1884 leverage. The case stalls.","player_card":"suspect:amos_webb","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:dead_end","BEAT":"beat:investigation"},"convergence_after":[0.66,0.68,0.65]},
+    {"turn":27,"_note":"No accusation. The orchard keeps its silence.","player_card":"modifier:nineteen_years_silence","scene":{"LOCATION":"location:village_inn","TRANSITION":"transition:stayed","CAUSE":"cause:none","PRESENCE":"presence:with_amos_webb","STANCE":"stance:hostile","ACTION":"action:leaves","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:flat_denial","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:dead_end","BEAT":"beat:investigation"},"convergence_after":[0.66,0.68,0.65]}
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "accused": null,
+    "final_convergence": [0.66, 0.68, 0.65],
+    "_note": "STANCE pivot: Caddick evasive at the buried thread; case stalls. 8-turn CF."
+  }
+}

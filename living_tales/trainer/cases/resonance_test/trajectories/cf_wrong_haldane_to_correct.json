@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_wrong_haldane_to_correct",
+  "case_id": "resonance_test",
+  "description": "Counterfactual: in wrong_haldane, the detective notices the panel timing inconsistency at turn 25; pivots to the archive and lands the correct verdict on Marta.",
+  "outcome": "correct_marta_solis",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "wrong_haldane",
+  "branch_turn": 25,
+  "divergence_token": "CAUSE=cause:noticed_inconsistency",
+  "tags": [
+    "counterfactual",
+    "cause_divergence",
+    "correct_marta_solis",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from wrong_haldane at turn 25 on CAUSE=cause:noticed_inconsistency.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.6,
+      0.62,
+      0.6
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:porters_lodge"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 25,
+      "_note": "Diverge \u2014 the detective notices the panel timing inconsistency instead of the maintenance log.",
+      "player_card": "modifier:lights_off_after_nine",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:stairwell_light_panel",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.63,
+        0.64,
+        0.63
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Cross to archive basement.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.66,
+        0.67,
+        0.66
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Read the archive card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_archive_card",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:authorship_inverts",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.7,
+        0.71,
+        0.7
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Manuscript.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.73,
+        0.74,
+        0.73
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Motive \u2014 stolen composition.",
+      "player_card": "motive:stolen_composition",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.77,
+        0.76
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Cross to harmony classroom.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.78,
+        0.79,
+        0.78
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Confront with manuscript.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.83,
+        0.82
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Dawn \u2014 accusation lands on Marta.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:marta_solis",
+    "final_convergence": [
+      0.86,
+      0.86,
+      0.86
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=wrong_haldane"
+  }
+}

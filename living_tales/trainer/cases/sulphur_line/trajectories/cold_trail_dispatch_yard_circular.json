@@ -1,0 +1,952 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cold_trail_dispatch_yard_circular",
+  "case_id": "sulphur_line",
+  "description": "Cold-trail. Detective loops yard-dispatch-processing-sulphur-store, never pressing an NPC. Walks out at dawn.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "circular_yard",
+  "tags": [
+    "cold_trail",
+    "yard_circular",
+    "no_npc_pressure",
+    "wave2"
+  ],
+  "opening": {
+    "tokens": [
+      "location:works_gate",
+      "event:gould_discovered_at_dawn",
+      "time:monday_inspection_begins"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player_card": "object:inspector_satchel",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:inspector_satchel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 2,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.054,
+        0.054,
+        0.054
+      ]
+    },
+    {
+      "turn": 3,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.058,
+        0.058,
+        0.058
+      ]
+    },
+    {
+      "turn": 4,
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.062,
+        0.062,
+        0.062
+      ]
+    },
+    {
+      "turn": 5,
+      "player_card": "travel:to_sulphur_store",
+      "scene": {
+        "LOCATION": "location:sulphur_store",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.066,
+        0.066,
+        0.066
+      ]
+    },
+    {
+      "turn": 6,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.07,
+        0.07,
+        0.07
+      ]
+    },
+    {
+      "turn": 7,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.074,
+        0.074,
+        0.074
+      ]
+    },
+    {
+      "turn": 8,
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.078,
+        0.078,
+        0.078
+      ]
+    },
+    {
+      "turn": 9,
+      "player_card": "travel:to_sulphur_store",
+      "scene": {
+        "LOCATION": "location:sulphur_store",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.082,
+        0.082,
+        0.082
+      ]
+    },
+    {
+      "turn": 10,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.086,
+        0.086,
+        0.086
+      ]
+    },
+    {
+      "turn": 11,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.09,
+        0.09,
+        0.09
+      ]
+    },
+    {
+      "turn": 12,
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.094,
+        0.094,
+        0.094
+      ]
+    },
+    {
+      "turn": 13,
+      "player_card": "travel:to_sulphur_store",
+      "scene": {
+        "LOCATION": "location:sulphur_store",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.098,
+        0.098,
+        0.098
+      ]
+    },
+    {
+      "turn": 14,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.102,
+        0.102,
+        0.102
+      ]
+    },
+    {
+      "turn": 15,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.106,
+        0.106,
+        0.106
+      ]
+    },
+    {
+      "turn": 16,
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.11,
+        0.11,
+        0.11
+      ]
+    },
+    {
+      "turn": 17,
+      "player_card": "travel:to_sulphur_store",
+      "scene": {
+        "LOCATION": "location:sulphur_store",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.114,
+        0.114,
+        0.114
+      ]
+    },
+    {
+      "turn": 18,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.118,
+        0.118,
+        0.118
+      ]
+    },
+    {
+      "turn": 19,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.122,
+        0.122,
+        0.122
+      ]
+    },
+    {
+      "turn": 20,
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.126,
+        0.126,
+        0.126
+      ]
+    },
+    {
+      "turn": 21,
+      "player_card": "travel:to_sulphur_store",
+      "scene": {
+        "LOCATION": "location:sulphur_store",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.13,
+        0.13,
+        0.13
+      ]
+    },
+    {
+      "turn": 22,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.134,
+        0.134,
+        0.134
+      ]
+    },
+    {
+      "turn": 23,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.138,
+        0.138,
+        0.138
+      ]
+    },
+    {
+      "turn": 24,
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.142,
+        0.142,
+        0.142
+      ]
+    },
+    {
+      "turn": 25,
+      "player_card": "travel:to_sulphur_store",
+      "scene": {
+        "LOCATION": "location:sulphur_store",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.146,
+        0.146,
+        0.146
+      ]
+    },
+    {
+      "turn": 26,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    {
+      "turn": 27,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.154,
+        0.154,
+        0.154
+      ]
+    },
+    {
+      "turn": 28,
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.158,
+        0.158,
+        0.158
+      ]
+    },
+    {
+      "turn": 29,
+      "player_card": "travel:to_sulphur_store",
+      "scene": {
+        "LOCATION": "location:sulphur_store",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.162,
+        0.162,
+        0.162
+      ]
+    },
+    {
+      "turn": 30,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.166,
+        0.166,
+        0.166
+      ]
+    },
+    {
+      "turn": 31,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.17,
+        0.17,
+        0.17
+      ]
+    },
+    {
+      "turn": 32,
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.174,
+        0.174,
+        0.174
+      ]
+    },
+    {
+      "turn": 33,
+      "player_card": "travel:to_sulphur_store",
+      "scene": {
+        "LOCATION": "location:sulphur_store",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.178,
+        0.178,
+        0.178
+      ]
+    },
+    {
+      "turn": 34,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.182,
+        0.182,
+        0.182
+      ]
+    },
+    {
+      "turn": 35,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.186,
+        0.186,
+        0.186
+      ]
+    },
+    {
+      "turn": 36,
+      "player_card": "travel:to_processing_line",
+      "scene": {
+        "LOCATION": "location:processing_line",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:valve_part",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.19,
+        0.19,
+        0.19
+      ]
+    },
+    {
+      "turn": 37,
+      "player_card": "travel:to_sulphur_store",
+      "scene": {
+        "LOCATION": "location:sulphur_store",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:sulphur_smell_drifts",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.194,
+        0.194,
+        0.194
+      ]
+    },
+    {
+      "turn": 38,
+      "player_card": "travel:to_works_yard",
+      "scene": {
+        "LOCATION": "location:works_yard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:chimney_smoke_settles",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.198,
+        0.198,
+        0.198
+      ]
+    },
+    {
+      "turn": 39,
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.202,
+        0.202,
+        0.202
+      ]
+    },
+    {
+      "turn": 40,
+      "player_card": "travel:to_works_gate",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:leaves",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.206,
+        0.206,
+        0.206
+      ]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "accused": "presence:none",
+    "final_convergence": [
+      0.206,
+      0.206,
+      0.206
+    ]
+  }
+}

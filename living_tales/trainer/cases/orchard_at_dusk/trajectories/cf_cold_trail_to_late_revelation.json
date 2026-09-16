@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_cold_trail_to_late_revelation",
+  "case_id": "orchard_at_dusk",
+  "description": "Counterfactual branch of cold_trail_circular. At turn 30 ATMOSPHERE diverges: dusk_light_through_branches sharpens to silence_breaks — the kitchen quiets when Crale's name is spoken. The break in the silence makes Crale's tell visible. The case turns over from dead to closing in eight turns. Outcome: late_revelation. 8-turn CF.",
+  "outcome": "late_revelation",
+  "branch_of": "cold_trail_circular",
+  "branch_turn": 30,
+  "divergence_token": "ATMOSPHERE=atmosphere:silence_breaks",
+  "starting_hypothesis": "circular_loop",
+  "tags": ["counterfactual_branch","atmosphere_divergence","late_revelation","silence_breaks_at_kitchen"],
+  "opening": {"tokens": ["location:crale_orchard","event:oates_found_at_dusk","time:dusk_hour"]},
+  "pre_branch_state": {"convergence_dims": [0.52, 0.5, 0.45]},
+  "turns": [
+    {"turn":30,"_note":"DIVERGENCE. The kitchen falls silent at Crale's name — a different quality, the silence of recognition.","player_card":"suspect:thomas_crale","scene":{"LOCATION":"location:crale_farmhouse_kitchen","TRANSITION":"transition:crossed_to","CAUSE":"cause:following_witness_lead","PRESENCE":"presence:with_thomas_crale","STANCE":"stance:defensive","ACTION":"action:questions","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:closed_posture","ATMOSPHERE":"atmosphere:silence_breaks","REVELATION":"revelation:partial_match","BEAT":"beat:investigation"},"convergence_after":[0.6,0.58,0.55]},
+    {"turn":31,"_note":"Cross to the cider press — Eliza will speak now that the silence has broken once.","player_card":"travel:to_cider_press","scene":{"LOCATION":"location:cider_press","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_eliza_crale","STANCE":"stance:defensive","ACTION":"action:arrives","OBJECT_FOCUS":"object_focus:none","TELL":"emotion:closed_posture","ATMOSPHERE":"atmosphere:cider_press_turns","REVELATION":"revelation:none","BEAT":"beat:investigation"},"convergence_after":[0.62,0.6,0.58]},
+    {"turn":32,"_note":"Find the 1884 receipt in the older quires.","player_card":"object:1884_receipt","scene":{"LOCATION":"location:cider_press","TRANSITION":"transition:stayed","CAUSE":"cause:examining_evidence","PRESENCE":"presence:with_eliza_crale","STANCE":"stance:defensive","ACTION":"action:examines","OBJECT_FOCUS":"object:1884_receipt","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:partial_match","BEAT":"beat:closing_in"},"convergence_after":[0.7,0.66,0.66]},
+    {"turn":33,"_note":"Eliza names what was paid in '84.","player_card":"motive:1884_transaction","scene":{"LOCATION":"location:cider_press","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_eliza_crale","STANCE":"stance:defensive","ACTION":"action:recalls","OBJECT_FOCUS":"object:1884_receipt","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:buried_motive_surfaces","BEAT":"beat:closing_in"},"convergence_after":[0.74,0.7,0.74]},
+    {"turn":34,"_note":"Pre-register money named.","player_card":"motive:pre_register_money","scene":{"LOCATION":"location:cider_press","TRANSITION":"transition:stayed","CAUSE":"cause:noticed_inconsistency","PRESENCE":"presence:with_eliza_crale","STANCE":"stance:defensive","ACTION":"action:recalls","OBJECT_FOCUS":"object:1884_receipt","TELL":"emotion:measured_breath","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:motive_emerges","BEAT":"beat:closing_in"},"convergence_after":[0.78,0.76,0.8]},
+    {"turn":35,"_note":"Cross to the field gate. Crale waits.","player_card":"travel:to_field_gate","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:crossed_to","CAUSE":"cause:pursued_suspicion","PRESENCE":"presence:with_thomas_crale","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:field_gate_hinge","TELL":"tell:silent","ATMOSPHERE":"atmosphere:dawn_approaches","REVELATION":"revelation:name_uncovered","BEAT":"beat:verdict_ready"},"convergence_after":[0.82,0.8,0.82]},
+    {"turn":36,"_note":"Lay the receipt — late, but in time.","player_card":"object:1884_receipt","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:stayed","CAUSE":"cause:examining_evidence","PRESENCE":"presence:with_thomas_crale","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:1884_receipt","TELL":"tell:silent","ATMOSPHERE":"atmosphere:silence_holds","REVELATION":"revelation:confirmation","BEAT":"beat:verdict_ready"},"convergence_after":[0.83,0.81,0.84]},
+    {"turn":37,"_note":"Accusation lands late but clean.","player_card":"ACCUSE:suspect:thomas_crale","scene":{"LOCATION":"location:field_gate","TRANSITION":"transition:stayed","CAUSE":"cause:none","PRESENCE":"presence:with_thomas_crale","STANCE":"stance:hostile","ACTION":"action:confronts","OBJECT_FOCUS":"object:field_gate_hinge","TELL":"tell:silent","ATMOSPHERE":"atmosphere:dawn_approaches","REVELATION":"revelation:confirmation","BEAT":"beat:verdict_ready"},"convergence_after":[0.85,0.83,0.85]}
+  ],
+  "ending": {
+    "type": "late_revelation",
+    "accused": "suspect:thomas_crale",
+    "final_convergence": [0.85, 0.83, 0.85],
+    "_note": "ATMOSPHERE pivot at the kitchen broke the loop. Case turned in eight turns. 8-turn CF."
+  }
+}

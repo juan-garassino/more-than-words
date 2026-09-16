@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "case_id": "orchard_at_dusk",
+
+  "_comment": "Multidimensional structured-scene schema for the rural-Edwardian case. Crale Farm, Thornfield-in-Somerset, September 1903 — harvest week, cider press running, the orchard boundary disputed since 1887. Each engine turn emits one token per dim. The schema sticks to the universal 11 dims (no case-specific extension); this is the easy-difficulty case and the orchard register does not warrant an additional gated head. Tokens with dim=null (anchor_tokens below) are graph/convergence anchors only — never emitted directly.",
+
+  "dimensions": [
+    {
+      "name": "LOCATION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "location:crale_orchard",
+        "location:cider_press",
+        "location:crale_farmhouse_kitchen",
+        "location:orchard_lane",
+        "location:field_gate",
+        "location:webb_farm",
+        "location:village_inn",
+        "location:parish_church",
+        "location:registry_office",
+        "location:none"
+      ]
+    },
+    {
+      "name": "TRANSITION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "transition:stayed",
+        "transition:crossed_to",
+        "transition:entered",
+        "transition:exited",
+        "transition:returned",
+        "transition:pursued_to",
+        "transition:called_away_to",
+        "transition:descended_to",
+        "transition:none"
+      ]
+    },
+    {
+      "name": "CAUSE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "cause:following_witness_lead",
+        "cause:examining_evidence",
+        "cause:recognized_object",
+        "cause:noticed_inconsistency",
+        "cause:pursued_suspicion",
+        "cause:revisiting_scene",
+        "cause:summoned",
+        "cause:chronological_drift",
+        "cause:reading_survey_record",
+        "cause:none"
+      ]
+    },
+    {
+      "name": "PRESENCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "presence:with_thomas_crale",
+        "presence:with_amos_webb",
+        "presence:with_eliza_crale",
+        "presence:with_hob_tilling",
+        "presence:with_reverend_caddick",
+        "presence:with_constable_briggs",
+        "presence:with_ned_sowerby",
+        "presence:with_martha_ainsworth",
+        "presence:alone"
+      ]
+    },
+    {
+      "name": "STANCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "stance:cooperative",
+        "stance:defensive",
+        "stance:evasive",
+        "stance:hostile",
+        "stance:unaware",
+        "stance:none"
+      ]
+    },
+    {
+      "name": "ACTION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "action:examines",
+        "action:questions",
+        "action:notices",
+        "action:discovers",
+        "action:confronts",
+        "action:follows",
+        "action:waits",
+        "action:leaves",
+        "action:arrives",
+        "action:recalls",
+        "action:none"
+      ]
+    },
+    {
+      "name": "OBJECT_FOCUS",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "object:field_gate_hinge",
+        "object:drainage_stone",
+        "object:survey_chain",
+        "object:oates_notebook",
+        "object:surveyors_fee",
+        "object:solicitor_letter",
+        "object:cider_press_ledger",
+        "object:1884_receipt",
+        "object:harvest_scythe",
+        "object:lamp_in_long_grass",
+        "object:parish_register",
+        "object:boundary_post",
+        "object:apple_in_grass",
+        "object_focus:none"
+      ]
+    },
+    {
+      "name": "TELL",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "emotion:steady_hands",
+        "emotion:measured_breath",
+        "emotion:paused_reply",
+        "emotion:closed_posture",
+        "emotion:avoided_contact",
+        "emotion:flat_denial",
+        "tell:paled",
+        "tell:tightened",
+        "tell:glanced_aside",
+        "tell:silent",
+        "tell:hesitated",
+        "tell:over_explained",
+        "tell:none"
+      ]
+    },
+    {
+      "name": "ATMOSPHERE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "atmosphere:dusk_light_through_branches",
+        "atmosphere:apples_fall_in_grass",
+        "atmosphere:cider_press_turns",
+        "atmosphere:rooks_in_the_orchard",
+        "atmosphere:wind_in_the_long_grass",
+        "atmosphere:silence_holds",
+        "atmosphere:silence_breaks",
+        "atmosphere:church_bell_tolls",
+        "atmosphere:lamp_lit_early",
+        "atmosphere:dawn_approaches",
+        "atmosphere:none"
+      ]
+    },
+    {
+      "name": "REVELATION",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "revelation:name_uncovered": 0.5,
+        "revelation:motive_emerges": 0.5,
+        "revelation:confirmation": 0.4,
+        "revelation:buried_motive_surfaces": 0.65
+      },
+      "vocab": [
+        "revelation:contradiction_surfaces",
+        "revelation:alibi_holds",
+        "revelation:name_uncovered",
+        "revelation:motive_emerges",
+        "revelation:dead_end",
+        "revelation:partial_match",
+        "revelation:confirmation",
+        "revelation:buried_motive_surfaces",
+        "revelation:none"
+      ]
+    },
+    {
+      "name": "BEAT",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "beat:closing_in": 0.5,
+        "beat:verdict_ready": 0.75
+      },
+      "vocab": [
+        "beat:orientation",
+        "beat:investigation",
+        "beat:closing_in",
+        "beat:verdict_ready"
+      ]
+    }
+  ],
+
+  "_anchors_only_comment": "Tokens that contribute to convergence + graph but are never directly emitted as scene-tuple slots. They remain as player cards (motives, modifiers, legacy events) or graph anchors driving logit_bias. The buried-motive tokens (1884_transaction / alderton_silence / pre_register_money) are LATE phase and oblique by design — they carry the recontextualisation of the surface motive (boundary_fraud) into the buried motive (nineteen years of silence).",
+  "anchor_tokens": {
+    "MOTIVE": [
+      "motive:boundary_fraud",
+      "motive:protect_the_orchard",
+      "motive:debt_to_oates",
+      "motive:1884_transaction",
+      "motive:alderton_silence",
+      "motive:pre_register_money"
+    ],
+    "MODIFIER": [
+      "modifier:gate_moved_friday_four_pm",
+      "modifier:drainage_completed_1899",
+      "modifier:long_grass_uncut",
+      "modifier:fee_paid_via_solicitor",
+      "modifier:report_filed_wednesday",
+      "modifier:confrontation_witnessed_thursday",
+      "modifier:supper_at_seven",
+      "modifier:farmhand_in_upper_field",
+      "modifier:alderton_died_1898",
+      "modifier:nineteen_years_silence"
+    ],
+    "EVENT": [
+      "event:oates_found_at_dusk",
+      "event:altered_path",
+      "event:webb_threatens_oates_at_inn",
+      "event:gate_moved_friday_afternoon",
+      "event:correction_promised_for_monday"
+    ],
+    "TIME_LEGACY": [
+      "time:dusk_hour",
+      "time:monday_arrival",
+      "time:wednesday_report_filed",
+      "time:thursday_confrontation",
+      "time:friday_afternoon_gap",
+      "time:friday_dusk",
+      "time:1884_transaction"
+    ],
+    "ACTION_LEGACY": [
+      "action:gate_moved",
+      "action:fee_paid",
+      "action:survey_falsified",
+      "action:correction_promised",
+      "action:long_grass_left_uncut",
+      "action:supper_taken_at_seven",
+      "action:farmhand_in_upper_field",
+      "action:1884_money_moved"
+    ]
+  },
+
+  "_player_cards_comment": "Tokens the player can play as cards. Includes inquiry cards (suspects/witnesses/objects/motives/legacy actions) and travel cards (one per location — let the player choose to move).",
+  "player_cards": {
+    "inquiry": "@all_PLAYER_or_SHARED_with_dim_in_[OBJECT_FOCUS,PRESENCE,ACTION_LEGACY,MOTIVE]",
+    "travel": [
+      "travel:to_crale_orchard",
+      "travel:to_cider_press",
+      "travel:to_crale_farmhouse_kitchen",
+      "travel:to_orchard_lane",
+      "travel:to_field_gate",
+      "travel:to_webb_farm",
+      "travel:to_village_inn",
+      "travel:to_parish_church",
+      "travel:to_registry_office"
+    ]
+  }
+}

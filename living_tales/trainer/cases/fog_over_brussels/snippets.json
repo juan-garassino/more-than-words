@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "case_id": "fog_over_brussels",
+  "_comment": "Reusable scene-tuple templates for trajectory authoring. Each snippet fixes 5-6 of the dim slots (the constants that define the scene type) and lists the slots the author must supply per use (the variables that distinguish one instance from another). Token IDs are drawn from cases/fog_over_brussels/dimensions.json. The case-specific DIPLOMATIC_TELL slot is required wherever PRESENCE is not alone — left unfixed in most snippets so the author can pitch the embassy tell scene by scene.",
+
+  "snippets": {
+
+    "cold_object_examination": {
+      "description": "Detective alone with a single object — a folded dispatch, a file, the post-mortem panel. Cold, methodical inspection. No NPC pressure, no tell, no stance, no diplomatic tell. Used for opening turns and quiet evidence beats between embassy interviews.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "TELL": "tell:none",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "first_witness_interview_cooperative": {
+      "description": "First contact with an embassy witness who has no reason to lie — the press attache, the chief of security on procedural questions, the kitchen porter. They give what they know plainly. Cover is intact because it has not yet been put under pressure. Use early in trajectory.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact",
+        "ATMOSPHERE": "atmosphere:reception_murmur"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "witness_reinterview_defensive": {
+      "description": "Returning to a witness already questioned, this time with new evidence in hand. Their stance shifts to defensive; the embassy tell sharpens into a protocol break or a rehearsed phrasing. Use mid-game, second or third pass on an NPC, after a contradiction has surfaced elsewhere.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "TELL": "emotion:closed_posture",
+        "DIPLOMATIC_TELL": "diplomatic_tell:rehearsed_phrasing",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "PRESENCE", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "tracing_the_tray_route": {
+      "description": "The detective walks the kitchen → corridor → reception room route, alone, retracing the path of the catering tray. Specific to this case. The forty-second interval becomes the question. Use mid-to-late, once the catering supervisor's testimony has been received.",
+      "template": {
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:follows",
+        "TELL": "tell:none",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none",
+        "OBJECT_FOCUS": "object:catering_tray"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "cross_referencing_documents": {
+      "description": "The detective lays two documents side by side — the dispatch and the secondary encoding, the seating plan and the guest list, the catering timing note and the radio log. Alone, methodical, a documentary act. Often surfaces a contradiction or a partial match.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:cross_references",
+        "TELL": "tell:none",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "transition_pursuing_lead": {
+      "description": "A movement turn — the detective is in motion between embassy rooms, having just been pointed somewhere by an interview or a document. Brief, kinetic. The action is the arrival itself; the scene proper begins next turn.",
+      "template": {
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "TELL": "tell:none",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none",
+        "REVELATION": "revelation:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "dead_end_witness": {
+      "description": "A witness has nothing useful. They are cooperative but uninformed — the kitchen porter on the corridor, the press attache on the cipher room, the embassy doctor on the panel limits. The lead closes here.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact",
+        "REVELATION": "revelation:dead_end",
+        "ATMOSPHERE": "atmosphere:silence_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "BEAT"]
+    },
+
+    "revelation_object_recognition": {
+      "description": "An object the detective has already seen suddenly resolves into meaning — the duplicate desk key, the secondary encoding, the signet ring in a photograph. Alone, looking at the same thing in a new light. Late investigation or closing-in beat.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "REVELATION", "BEAT"]
+    },
+
+    "confrontation_hostile": {
+      "description": "Direct accusation — the detective puts the forty seconds, the duplicate key, the dispatch to Brennan or the corridor to Helena. Hostile stance, sharp tell, an embassy slip. Use sparingly — once or twice per trajectory.",
+      "template": {
+        "CAUSE": "cause:pursued_suspicion",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "TELL": "tell:tightened",
+        "DIPLOMATIC_TELL": "diplomatic_tell:language_slipped",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "BEAT": "beat:closing_in"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "PRESENCE", "OBJECT_FOCUS", "REVELATION"]
+    },
+
+    "revisit_for_reframing": {
+      "description": "The detective returns to a location already visited, alone, to look at it again with the new context — the cipher room after the duplicate key has been found, the corridor after the supervisor's testimony. A quiet recasting of an earlier scene.",
+      "template": {
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "TELL": "tell:none",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none",
+        "BEAT": "beat:investigation"
+      },
+      "fill_in_per_turn": ["LOCATION", "OBJECT_FOCUS", "ATMOSPHERE", "REVELATION"]
+    },
+
+    "atmospheric_interlude": {
+      "description": "A low-activity beat — the fog at the window, the heating ticking in the east wing, the reception murmur dying down as the hour late. Minimal scene activity, no revelation, no NPC. Used to mark act breaks or hour changes. One or two per trajectory.",
+      "template": {
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:waits",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none",
+        "REVELATION": "revelation:none"
+      },
+      "fill_in_per_turn": ["LOCATION", "ATMOSPHERE", "BEAT"]
+    },
+
+    "discovery_moment": {
+      "description": "A find — a physical object surfaces from where it had been hidden or missed. The draft report still on the desk, the duplicate key in a drawer, the catering timing note in the supervisor's apron. Alone, the act of finding.",
+      "template": {
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "TELL": "tell:none",
+        "DIPLOMATIC_TELL": "diplomatic_tell:none",
+        "REVELATION": "revelation:partial_match"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "OBJECT_FOCUS", "ATMOSPHERE", "BEAT"]
+    },
+
+    "brennan_interview_charm": {
+      "description": "Specific to the cultural attache. Brennan in cooperative or evasive stance, the charm fully on, the signet ring untouched or barely turned. Early/mid game — Brennan presenting as peripheral and helpful. The diplomatic_tell is what registers, not the universal tell.",
+      "template": {
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_brennan",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "STANCE", "OBJECT_FOCUS", "DIPLOMATIC_TELL", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "helena_corridor_pressure": {
+      "description": "Specific to the ambassador's wife. Helena pressed on the geography of her forty-minute absence — not the timing, which she gives cleanly, but where in the corridor she had been. Her stance shifts from cooperative to defensive to evasive across re-interviews; the wedding band is turned more often. Mid-to-late game.",
+      "template": {
+        "PRESENCE": "presence:with_helena_voss",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:secondary_terminal_log"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "CAUSE", "STANCE", "TELL", "DIPLOMATIC_TELL", "ATMOSPHERE", "REVELATION", "BEAT"]
+    },
+
+    "catering_supervisor_timing": {
+      "description": "Specific to the catering supervisor. The exchange revolves around the timing book and the forty-second interval. He is cooperative throughout; his stance does not shift. What shifts is which entry is open in front of him. Mid game.",
+      "template": {
+        "CAUSE": "cause:tracing_tray_route",
+        "PRESENCE": "presence:with_catering_supervisor",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "TELL": "emotion:steady_hands",
+        "DIPLOMATIC_TELL": "diplomatic_tell:cover_intact",
+        "OBJECT_FOCUS": "object:catering_timing_note"
+      },
+      "fill_in_per_turn": ["LOCATION", "TRANSITION", "ATMOSPHERE", "REVELATION", "BEAT"]
+    }
+
+  }
+}

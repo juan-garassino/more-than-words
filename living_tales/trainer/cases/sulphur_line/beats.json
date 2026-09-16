@@ -1,0 +1,59 @@
+{
+  "_comment": "Convergence-threshold discovery beats for sulphur_line. Mirrors amber_cipher / hollow_season / third_signature schema. The case-specific shadow_of_gap beat fires once the motive dim crosses 0.7 and the player is past turn 20 — it represents the LATE-phase pivot that breaks the Whitlow false plateau: the killer-dim plateau between Oake and Whitlow snaps once the reference to a missing note in an earlier accident-log entry is read for what it is. The case is rated medium mechanically; verdict_ready waits to turn 26 because the bridge token (the shadow of the September 1886 gap) is structurally late, and because Whitlow's LATE-phase witness testimony, when it arrives, saturates motive_dim and completes the closure.",
+  "schema_version": 1,
+  "case_id": "sulphur_line",
+
+  "convergence_dim_names": ["suspect", "evidence", "motive"],
+
+  "beats": [
+    {
+      "id": "first_thread",
+      "trigger": { "any_dim_gte": 0.4 },
+      "min_turn": 6,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:contradiction_surfaces" }
+    },
+    {
+      "id": "false_plateau_whitlow",
+      "trigger": { "dim": "suspect", "gte": 0.55 },
+      "min_turn": 10,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:partial_match" }
+    },
+    {
+      "id": "name_surfaces",
+      "trigger": { "dim": "suspect", "gte": 0.6 },
+      "min_turn": 14,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:name_uncovered" }
+    },
+    {
+      "id": "motive_emerges",
+      "trigger": { "dim": "motive", "gte": 0.6 },
+      "min_turn": 16,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:motive_emerges" }
+    },
+    {
+      "id": "shadow_of_gap_lands",
+      "trigger": { "dim": "motive", "gte": 0.7 },
+      "min_turn": 20,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:shadow_of_gap_lands" }
+    },
+    {
+      "id": "closing_in",
+      "trigger": { "min_dim_gte": 0.65 },
+      "min_turn": 22,
+      "fire_once": true,
+      "inject": { "BEAT": "beat:closing_in" }
+    },
+    {
+      "id": "verdict_ready",
+      "trigger": { "min_dim_gte": 0.8 },
+      "min_turn": 26,
+      "fire_once": true,
+      "inject": { "BEAT": "beat:verdict_ready" }
+    }
+  ]
+}

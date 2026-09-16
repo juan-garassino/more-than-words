@@ -1,0 +1,775 @@
+{
+  "schema_version": 1,
+  "case_id": "fog_over_brussels",
+  "_comment": "Wave-1 + Wave-2 = 50 trajectories for the Belgian Embassy case + 10 counterfactual branches. Outcomes drawn from the v2 expanded set: correct_brennan, wrong_<suspect>, cold_trail, partial_correct, accomplice_found, framed_suspect, late_revelation, motive_only_confession, red_herring_trap, near_miss. CF entries carry branch_of / branch_turn / divergence_token + _status:counterfactual_branch.",
+  "trajectories": [
+    {
+      "id": "brennan_via_forty_second_interval",
+      "outcome": "correct_brennan",
+      "length": 43,
+      "starting_hypothesis": "tray_route_first",
+      "tags": [
+        "correct_brennan",
+        "bridge_token",
+        "tray_route",
+        "catering_supervisor_heavy"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "brennan_via_signet_ring_turned",
+      "outcome": "correct_brennan",
+      "length": 34,
+      "starting_hypothesis": "diplomatic_tell_first",
+      "tags": [
+        "correct_brennan",
+        "signet_ring_chain",
+        "diplomatic_tell",
+        "voice_arc_brennan"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "brennan_via_dispatch_signal",
+      "outcome": "correct_brennan",
+      "length": 48,
+      "starting_hypothesis": "dispatch_first",
+      "tags": [
+        "correct_brennan",
+        "dispatch_chain",
+        "cipher_room_heavy",
+        "cipher_supervisor"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "brennan_via_catering_tray_route",
+      "outcome": "correct_brennan",
+      "length": 42,
+      "starting_hypothesis": "tray_route_first",
+      "tags": [
+        "correct_brennan",
+        "tray_route",
+        "kitchen_heavy",
+        "catering_chain"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "brennan_via_french_too_correct",
+      "outcome": "correct_brennan",
+      "length": 42,
+      "starting_hypothesis": "linguistic_tell_first",
+      "tags": [
+        "correct_brennan",
+        "french_too_correct",
+        "diplomatic_tell",
+        "rehearsed_phrasing"
+      ]
+    },
+    {
+      "id": "brennan_via_double_agent_file",
+      "outcome": "correct_brennan",
+      "length": 44,
+      "starting_hypothesis": "file_first",
+      "tags": [
+        "correct_brennan",
+        "double_agent_file",
+        "cipher_clerks_file",
+        "personnel_chain"
+      ]
+    },
+    {
+      "id": "wrong_helena_voss",
+      "outcome": "wrong_helena_voss",
+      "length": 42,
+      "starting_hypothesis": "terminal_log_first",
+      "tags": [
+        "wrong_accusation",
+        "helena_voss",
+        "red_herring_path",
+        "terminal_log"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_ambassador_voss",
+      "outcome": "wrong_ambassador_voss",
+      "length": 41,
+      "starting_hypothesis": "ambassador_first",
+      "tags": [
+        "wrong_accusation",
+        "ambassador_voss",
+        "protocol_silence_misread"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_cipher_supervisor",
+      "outcome": "wrong_cipher_supervisor",
+      "length": 40,
+      "starting_hypothesis": "supervisor_first",
+      "tags": [
+        "wrong_accusation",
+        "cipher_supervisor",
+        "personnel_misread"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_embassy_doctor",
+      "outcome": "wrong_embassy_doctor",
+      "length": 41,
+      "starting_hypothesis": "panel_first",
+      "tags": [
+        "wrong_accusation",
+        "embassy_doctor",
+        "panel_misread"
+      ]
+    },
+    {
+      "id": "wrong_catering_runner",
+      "outcome": "wrong_catering_runner",
+      "length": 41,
+      "starting_hypothesis": "tray_first",
+      "tags": [
+        "wrong_accusation",
+        "catering_runner",
+        "tray_misread"
+      ]
+    },
+    {
+      "id": "wrong_chief_of_security",
+      "outcome": "wrong_chief_of_security",
+      "length": 42,
+      "starting_hypothesis": "logs_first",
+      "tags": [
+        "wrong_accusation",
+        "chief_of_security",
+        "access_misread"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "cold_trail_circular",
+      "outcome": "cold_trail",
+      "length": 50,
+      "starting_hypothesis": "circular_loop",
+      "tags": [
+        "cold_trail",
+        "circular_visits",
+        "no_progress"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "cold_trail_dispatch_loop",
+      "outcome": "cold_trail",
+      "length": 43,
+      "starting_hypothesis": "dispatch_loop",
+      "tags": [
+        "cold_trail",
+        "cipher_loop",
+        "dispatch_misread"
+      ]
+    },
+    {
+      "id": "cold_trail_catering_loop",
+      "outcome": "cold_trail",
+      "length": 42,
+      "starting_hypothesis": "catering_loop",
+      "tags": [
+        "cold_trail",
+        "tray_loop",
+        "ignored_bridge_token"
+      ]
+    },
+    {
+      "id": "partial_correct_misread_motive_a",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first_then_motive_misread",
+      "tags": [
+        "partial_correct",
+        "brennan_correct",
+        "motive_misread",
+        "leverage_in_1955"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "partial_correct_misread_motive_b",
+      "outcome": "partial_correct",
+      "length": 42,
+      "starting_hypothesis": "object_first_then_motive_misread",
+      "tags": [
+        "partial_correct",
+        "brennan_correct",
+        "motive_misread",
+        "source_protection"
+      ]
+    },
+    {
+      "id": "partial_brennan_wrong_mechanism",
+      "outcome": "partial_correct",
+      "length": 41,
+      "starting_hypothesis": "file_first_then_brennan",
+      "tags": [
+        "partial_correct",
+        "brennan_correct",
+        "mechanism_misread",
+        "no_bridge_token"
+      ]
+    },
+    {
+      "id": "accomplice_via_catering_supervisor",
+      "outcome": "accomplice_found",
+      "length": 43,
+      "starting_hypothesis": "tray_first_then_supervisor",
+      "tags": [
+        "accomplice_found",
+        "catering_supervisor",
+        "silent_witness"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "accomplice_via_press_attache",
+      "outcome": "accomplice_found",
+      "length": 42,
+      "starting_hypothesis": "seating_first_then_press",
+      "tags": [
+        "accomplice_found",
+        "press_attache",
+        "seating_chain"
+      ]
+    },
+    {
+      "id": "framed_helena_voss",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "brennan_steered",
+      "tags": [
+        "framed_suspect",
+        "helena_voss",
+        "brennan_walks",
+        "terminal_log"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "framed_ambassador_voss",
+      "outcome": "framed_suspect",
+      "length": 42,
+      "starting_hypothesis": "brennan_steered_office",
+      "tags": [
+        "framed_suspect",
+        "ambassador_voss",
+        "duplicate_key_steered"
+      ]
+    },
+    {
+      "id": "late_revelation_after_helena",
+      "outcome": "late_revelation",
+      "length": 41,
+      "starting_hypothesis": "tells_first_helena",
+      "tags": [
+        "late_revelation",
+        "wrong_then_right",
+        "helena_premature",
+        "brennan_recovery"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "motive_only_via_double_agent_exposure",
+      "outcome": "motive_only_confession",
+      "length": 40,
+      "starting_hypothesis": "dispatch_first_no_arrest",
+      "tags": [
+        "motive_only_confession",
+        "double_agent_exposure",
+        "no_accusation"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "red_herring_trap_helena_voss",
+      "outcome": "red_herring_trap",
+      "length": 42,
+      "starting_hypothesis": "terminal_log_first_inflated",
+      "tags": [
+        "red_herring_trap",
+        "helena_voss",
+        "terminal_log_inflated",
+        "designed_trap"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "brennan_via_chief_security_summons",
+      "outcome": "correct_brennan",
+      "length": 41,
+      "starting_hypothesis": "summons_first",
+      "tags": [
+        "correct_brennan",
+        "cause_summoned",
+        "chief_of_security_summons",
+        "ambassadors_office_route"
+      ]
+    },
+    {
+      "id": "brennan_via_cipher_descent",
+      "outcome": "correct_brennan",
+      "length": 40,
+      "starting_hypothesis": "descent_first",
+      "tags": [
+        "correct_brennan",
+        "descended_to",
+        "cipher_descent",
+        "transition_descended_to"
+      ]
+    },
+    {
+      "id": "brennan_via_ambassador_summons",
+      "outcome": "correct_brennan",
+      "length": 40,
+      "starting_hypothesis": "ambassador_summons_first",
+      "tags": [
+        "correct_brennan",
+        "called_away_to",
+        "ambassador_summons",
+        "transition_called_away_to"
+      ]
+    },
+    {
+      "id": "brennan_via_rue_de_la_loi",
+      "outcome": "correct_brennan",
+      "length": 40,
+      "starting_hypothesis": "rue_de_la_loi_first",
+      "tags": [
+        "correct_brennan",
+        "rue_de_la_loi",
+        "full_circuit",
+        "location_rue_coverage"
+      ]
+    },
+    {
+      "id": "wrong_helena_voss_b",
+      "outcome": "wrong_helena_voss",
+      "length": 40,
+      "starting_hypothesis": "terminal_log_via_supervisor",
+      "tags": [
+        "wrong_accusation",
+        "helena_voss",
+        "red_herring_path",
+        "supervisor_confirms_helena"
+      ]
+    },
+    {
+      "id": "wrong_cipher_supervisor_b",
+      "outcome": "wrong_cipher_supervisor",
+      "length": 40,
+      "starting_hypothesis": "supervisor_via_encoding_first",
+      "tags": [
+        "wrong_accusation",
+        "cipher_supervisor",
+        "personnel_misread"
+      ]
+    },
+    {
+      "id": "wrong_press_attache",
+      "outcome": "wrong_press_attache",
+      "length": 40,
+      "starting_hypothesis": "press_attache_first",
+      "tags": [
+        "wrong_accusation",
+        "press_attache",
+        "seating_misread"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "wrong_kitchen_porter",
+      "outcome": "wrong_kitchen_porter",
+      "length": 40,
+      "starting_hypothesis": "kitchen_porter_first",
+      "tags": [
+        "wrong_accusation",
+        "kitchen_porter",
+        "tray_misread"
+      ]
+    },
+    {
+      "id": "cold_trail_summoned_loop",
+      "outcome": "cold_trail",
+      "length": 44,
+      "starting_hypothesis": "summoned_loop",
+      "tags": [
+        "cold_trail",
+        "cause_summoned",
+        "summoned_loop",
+        "ignored_west_wing"
+      ]
+    },
+    {
+      "id": "cold_trail_west_wing_circular",
+      "outcome": "cold_trail",
+      "length": 44,
+      "starting_hypothesis": "west_wing_circular",
+      "tags": [
+        "cold_trail",
+        "west_wing",
+        "cold_corridor",
+        "circular_visits"
+      ]
+    },
+    {
+      "id": "partial_brennan_wrong_courier",
+      "outcome": "partial_correct",
+      "length": 41,
+      "starting_hypothesis": "brennan_correct_wrong_mechanism_courier",
+      "tags": [
+        "partial_correct",
+        "brennan_correct",
+        "mechanism_misread",
+        "courier_misread"
+      ]
+    },
+    {
+      "id": "partial_motive_dispatch_only",
+      "outcome": "partial_correct",
+      "length": 41,
+      "starting_hypothesis": "brennan_correct_terminal_misread",
+      "tags": [
+        "partial_correct",
+        "brennan_correct",
+        "motive_misread",
+        "terminal_misuse"
+      ]
+    },
+    {
+      "id": "partial_via_signet_misread",
+      "outcome": "partial_correct",
+      "length": 41,
+      "starting_hypothesis": "brennan_correct_signet_misread",
+      "tags": [
+        "partial_correct",
+        "brennan_correct",
+        "signet_ring_chain",
+        "motive_misread"
+      ]
+    },
+    {
+      "id": "accomplice_via_chief_security",
+      "outcome": "accomplice_found",
+      "length": 41,
+      "starting_hypothesis": "chief_security_silent",
+      "tags": [
+        "accomplice_found",
+        "chief_of_security",
+        "silent_witness",
+        "cause_summoned"
+      ]
+    },
+    {
+      "id": "accomplice_via_kitchen_porter",
+      "outcome": "accomplice_found",
+      "length": 41,
+      "starting_hypothesis": "kitchen_porter_silent",
+      "tags": [
+        "accomplice_found",
+        "kitchen_porter",
+        "silent_witness",
+        "tray_route"
+      ]
+    },
+    {
+      "id": "framed_cipher_supervisor",
+      "outcome": "framed_suspect",
+      "length": 41,
+      "starting_hypothesis": "brennan_steered_supervisor",
+      "tags": [
+        "framed_suspect",
+        "cipher_supervisor",
+        "brennan_walks",
+        "encoding_steer"
+      ]
+    },
+    {
+      "id": "framed_press_attache",
+      "outcome": "framed_suspect",
+      "length": 41,
+      "starting_hypothesis": "brennan_steered_press",
+      "tags": [
+        "framed_suspect",
+        "press_attache",
+        "brennan_walks",
+        "seating_steer"
+      ]
+    },
+    {
+      "id": "late_revelation_after_voss_brothers",
+      "outcome": "late_revelation",
+      "length": 41,
+      "starting_hypothesis": "ambassador_first_then_brennan",
+      "tags": [
+        "late_revelation",
+        "wrong_then_right",
+        "ambassador_voss",
+        "brennan_recovery"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "late_revelation_after_doctor",
+      "outcome": "late_revelation",
+      "length": 42,
+      "starting_hypothesis": "doctor_first_then_brennan",
+      "tags": [
+        "late_revelation",
+        "wrong_then_right",
+        "embassy_doctor",
+        "panel_misread"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "motive_only_via_dispatch_intercept",
+      "outcome": "motive_only_confession",
+      "length": 41,
+      "starting_hypothesis": "dispatch_intercept_no_arrest",
+      "tags": [
+        "motive_only_confession",
+        "double_agent_exposure",
+        "no_accusation",
+        "dispatch_chain"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "motive_only_via_brennan_handler_threat",
+      "outcome": "motive_only_confession",
+      "length": 42,
+      "starting_hypothesis": "handler_threat_no_arrest",
+      "tags": [
+        "motive_only_confession",
+        "leverage_in_1955",
+        "handler_threat",
+        "no_accusation"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "near_miss_recovers_from_helena",
+      "outcome": "near_miss",
+      "length": 33,
+      "starting_hypothesis": "helena_then_near_chief",
+      "tags": [
+        "near_miss",
+        "wrong_then_near",
+        "helena_recovery",
+        "chief_of_security_near"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "near_miss_recovers_from_cipher_supervisor",
+      "outcome": "near_miss",
+      "length": 32,
+      "starting_hypothesis": "cipher_supervisor_then_near_chief",
+      "tags": [
+        "near_miss",
+        "wrong_then_near",
+        "cipher_supervisor_recovery",
+        "chief_of_security_near"
+      ],
+      "_status": "hand_paced"
+    },
+    {
+      "id": "red_herring_trap_dispatch_decoy",
+      "outcome": "red_herring_trap",
+      "length": 42,
+      "starting_hypothesis": "dispatch_decoy_inflated",
+      "tags": [
+        "red_herring_trap",
+        "cipher_supervisor",
+        "terminal_log_decoy",
+        "designed_trap"
+      ]
+    },
+    {
+      "id": "red_herring_trap_signet_inversion",
+      "outcome": "red_herring_trap",
+      "length": 42,
+      "starting_hypothesis": "signet_inversion_inflated",
+      "tags": [
+        "red_herring_trap",
+        "helena_voss",
+        "signet_inversion",
+        "designed_trap"
+      ]
+    },
+    {
+      "id": "cf_brennan_forty_second_motive_only",
+      "outcome": "motive_only_confession",
+      "length": 5,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "motive_only_confession",
+        "revelation_divergence",
+        "forty_second_branch"
+      ],
+      "branch_of": "brennan_via_forty_second_interval",
+      "branch_turn": 33,
+      "divergence_token": "REVELATION=revelation:motive_emerges",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_brennan_signet_to_helena",
+      "outcome": "wrong_helena_voss",
+      "length": 6,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "wrong_helena_voss",
+        "object_focus_divergence",
+        "signet_branch"
+      ],
+      "branch_of": "brennan_via_signet_ring_turned",
+      "branch_turn": 17,
+      "divergence_token": "OBJECT_FOCUS=object:secondary_terminal_log",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_brennan_dispatch_accomplice",
+      "outcome": "accomplice_found",
+      "length": 5,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "accomplice_found",
+        "presence_divergence",
+        "dispatch_branch"
+      ],
+      "branch_of": "brennan_via_dispatch_signal",
+      "branch_turn": 20,
+      "divergence_token": "PRESENCE=presence:with_chief_of_security",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_helena_recovers_to_brennan",
+      "outcome": "correct_brennan",
+      "length": 7,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "correct_brennan",
+        "cause_divergence",
+        "helena_recovery"
+      ],
+      "branch_of": "wrong_helena_voss",
+      "branch_turn": 8,
+      "divergence_token": "CAUSE=cause:tracing_tray_route",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_accomplice_catering_cold",
+      "outcome": "cold_trail",
+      "length": 5,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "cold_trail",
+        "stance_divergence",
+        "supervisor_hostile"
+      ],
+      "branch_of": "accomplice_via_catering_supervisor",
+      "branch_turn": 24,
+      "divergence_token": "STANCE=stance:hostile",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_framed_helena_recovers",
+      "outcome": "correct_brennan",
+      "length": 5,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "correct_brennan",
+        "revelation_divergence",
+        "frame_broken"
+      ],
+      "branch_of": "framed_helena_voss",
+      "branch_turn": 25,
+      "divergence_token": "REVELATION=revelation:contradiction_surfaces",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_red_herring_helena_near",
+      "outcome": "near_miss",
+      "length": 4,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "near_miss",
+        "beat_divergence",
+        "red_herring_recovery"
+      ],
+      "branch_of": "red_herring_trap_helena_voss",
+      "branch_turn": 31,
+      "divergence_token": "BEAT=beat:verdict_ready",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_cold_trail_circular_late",
+      "outcome": "late_revelation",
+      "length": 6,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "late_revelation",
+        "atmosphere_divergence",
+        "fog_lifts_recovery",
+        "circular_recovery"
+      ],
+      "branch_of": "cold_trail_circular",
+      "branch_turn": 22,
+      "divergence_token": "ATMOSPHERE=atmosphere:fog_lifts",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_partial_a_to_correct",
+      "outcome": "correct_brennan",
+      "length": 4,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "correct_brennan",
+        "diplomatic_tell_divergence",
+        "partial_recovery"
+      ],
+      "branch_of": "partial_correct_misread_motive_a",
+      "branch_turn": 29,
+      "divergence_token": "DIPLOMATIC_TELL=diplomatic_tell:protocol_broken",
+      "_status": "counterfactual_branch"
+    },
+    {
+      "id": "cf_late_helena_near",
+      "outcome": "near_miss",
+      "length": 5,
+      "starting_hypothesis": "counterfactual_branch",
+      "tags": [
+        "counterfactual_branch",
+        "near_miss",
+        "transition_divergence",
+        "late_revelation_branch"
+      ],
+      "branch_of": "late_revelation_after_helena",
+      "branch_turn": 25,
+      "divergence_token": "TRANSITION=transition:pursued_to",
+      "_status": "counterfactual_branch"
+    }
+  ]
+}

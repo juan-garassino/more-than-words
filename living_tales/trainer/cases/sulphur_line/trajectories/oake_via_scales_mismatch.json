@@ -1,0 +1,1111 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "oake_via_scales_mismatch",
+  "case_id": "sulphur_line",
+  "description": "Dispatch-heavy chain. The detective starts at the dispatch office, traces sulphur-arrival mismatches between scales and ledger, ropes in Craggs and Oake via the log revision, and lands the case on Oake.",
+  "outcome": "correct_silas_oake",
+  "starting_hypothesis": "object_first",
+  "tags": [
+    "dispatch_ledger_chain",
+    "scales_mismatch",
+    "works_clerk_heavy"
+  ],
+  "opening": {
+    "tokens": [
+      "location:works_gate",
+      "event:gould_discovered_at_dawn",
+      "time:monday_inspection_begins"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open. Dispatch ledger.",
+      "player_card": "object:dispatch_ledger",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:safety_record_holds"
+      },
+      "convergence_after": [
+        0.05,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to works gate.",
+      "player_card": "travel:to_works_gate",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.08,
+        0.08,
+        0.1
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Watchman: Oake left at quarter past six.",
+      "player_card": "witness:night_watchman",
+      "scene": {
+        "LOCATION": "location:works_gate",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_watchman",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.1,
+        0.1,
+        0.12
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Return to dispatch office.",
+      "player_card": "travel:to_dispatch_office",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.12,
+        0.12,
+        0.14
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Question the works clerk.",
+      "player_card": "witness:works_clerk",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.14,
+        0.16,
+        0.18
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Sulphur scales bolted to the floor.",
+      "player_card": "object:sulphur_scales",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:sulphur_scales",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.16,
+        0.18,
+        0.2
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Half-hundredweight off.",
+      "player_card": "modifier:third_processing_line_borderline_in_1882",
+      "scene": {
+        "LOCATION": "location:dispatch_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_works_clerk",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:scales_mismatch_ledger"
+      },
+      "convergence_after": [
+        0.2,
+        0.22,
+        0.24
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Cross to workers' lockers.",
+      "player_card": "travel:to_workers_lockers",
+      "scene": {
+        "LOCATION": "location:workers_lockers",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_dispatch_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.22,
+        0.24,
+        0.26
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "No Friday load.",
+      "player_card": "witness:dispatch_porter",
+      "scene": {
+        "LOCATION": "location:workers_lockers",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_dispatch_porter",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.24,
+        0.26,
+        0.28
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Cross to foreman station.",
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:works_whistle",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.26,
+        0.28,
+        0.3
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Question Craggs on the log.",
+      "player_card": "suspect:foreman_craggs",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.28,
+        0.3,
+        0.32
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Ink does not match.",
+      "player_card": "modifier:ink_batch_later",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:tracing_log_revision",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:ink_does_not_match"
+      },
+      "convergence_after": [
+        0.32,
+        0.34,
+        0.36
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Open the revised entry.",
+      "player_card": "object:revised_entry",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_foreman_craggs",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:revised_entry",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:log_entry_revised"
+      },
+      "convergence_after": [
+        0.36,
+        0.38,
+        0.4
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Cross to Oake's office.",
+      "player_card": "travel:to_oake_office",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:gas_lamp_steady",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.38,
+        0.4,
+        0.42
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Question Oake on scales.",
+      "player_card": "suspect:silas_oake",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.42,
+        0.44
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Walk the canal path.",
+      "player_card": "travel:to_canal_path",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:canal_water_still",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.42,
+        0.44,
+        0.46
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Two pairs of prints at the bend.",
+      "player_card": "object:shoe_print_cast",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:shoe_print_cast",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:winter_dusk_falls",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:shoe_prints_paired"
+      },
+      "convergence_after": [
+        0.44,
+        0.46,
+        0.48
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Button in the gravel.",
+      "player_card": "object:canal_button",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:winter_dusk_falls",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:button_at_bend"
+      },
+      "convergence_after": [
+        0.46,
+        0.48,
+        0.5
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Bargee at the wharf.",
+      "player_card": "witness:bargee",
+      "scene": {
+        "LOCATION": "location:canal_path",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_bargee",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_hands",
+        "ATMOSPHERE": "atmosphere:canal_water_still",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.48,
+        0.5,
+        0.52
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Cross to Oake's office.",
+      "player_card": "travel:to_oake_office",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.5,
+        0.52,
+        0.54
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Sulphur on his coat.",
+      "player_card": "modifier:button_matches_oake_coat",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:sulphur_on_coat"
+      },
+      "convergence_after": [
+        0.52,
+        0.54,
+        0.56
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Cross to Oake's house.",
+      "player_card": "travel:to_oake_house",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.54,
+        0.56,
+        0.58
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Mrs Oake's account.",
+      "player_card": "suspect:mrs_oake",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_mrs_oake",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:practised_account",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.56,
+        0.58,
+        0.6
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Widow Birch in the front room.",
+      "player_card": "witness:widow_birch",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_widow_birch",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "emotion:bargained_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.58,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Silence payments book.",
+      "player_card": "object:silence_payments_book",
+      "scene": {
+        "LOCATION": "location:oake_house",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_widow_birch",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:silence_payments_book",
+        "TELL": "emotion:bargained_silence",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.6,
+        0.62,
+        0.62
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Back to foreman station.",
+      "player_card": "travel:to_foreman_station",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:accident_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.62,
+        0.62,
+        0.62
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Three-day gap.",
+      "player_card": "modifier:september_1886_gap",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:tracing_log_revision",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:accident_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:three_day_gap"
+      },
+      "convergence_after": [
+        0.63,
+        0.64,
+        0.64
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Hand mismatch confirmed.",
+      "player_card": "modifier:hand_slightly_different",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:tracing_log_revision",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:revised_entry",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:hand_does_not_match"
+      },
+      "convergence_after": [
+        0.64,
+        0.65,
+        0.65
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "The hand was Oake's.",
+      "player_card": "object:revised_entry",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:revised_entry",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:log_entry_revised"
+      },
+      "convergence_after": [
+        0.66,
+        0.67,
+        0.67
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Birch concealment. The why.",
+      "player_card": "motive:birch_concealment",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:accident_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.68,
+        0.69,
+        0.69
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Shadow of gap, named.",
+      "player_card": "modifier:earlier_entry_references_missing_note",
+      "scene": {
+        "LOCATION": "location:foreman_station",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:tracing_log_revision",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:accident_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:shadow_of_gap_lands",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:shadow_of_gap"
+      },
+      "convergence_after": [
+        0.7,
+        0.71,
+        0.71
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Return to Oake's office.",
+      "player_card": "travel:to_oake_office",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:measured_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.71,
+        0.72,
+        0.72
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Lay down the canal button.",
+      "player_card": "object:canal_button",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.73,
+        0.74,
+        0.74
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Lay down the scales.",
+      "player_card": "object:sulphur_scales",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:sulphur_scales",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:scales_mismatch_ledger"
+      },
+      "convergence_after": [
+        0.74,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Lay down the dispatch ledger.",
+      "player_card": "object:dispatch_ledger",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:dispatch_ledger",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "INDUSTRIAL_TELL": "industrial_tell:scales_mismatch_ledger"
+      },
+      "convergence_after": [
+        0.75,
+        0.76,
+        0.76
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Lay down the revised entry.",
+      "player_card": "object:revised_entry",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:revised_entry",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:log_entry_revised"
+      },
+      "convergence_after": [
+        0.77,
+        0.78,
+        0.78
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Lay down the accident log.",
+      "player_card": "object:accident_log",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:accident_log",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:three_day_gap"
+      },
+      "convergence_after": [
+        0.79,
+        0.79,
+        0.79
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Press on Thursday evening.",
+      "player_card": "suspect:silas_oake",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:canal_button",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Gould's notebook.",
+      "player_card": "object:gould_notebook",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:cross_references",
+        "OBJECT_FOCUS": "object:gould_notebook",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.81,
+        0.81,
+        0.81
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Birch concealment, named.",
+      "player_card": "motive:birch_concealment",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:widows_document",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.82,
+        0.82,
+        0.82
+      ]
+    },
+    {
+      "turn": 41,
+      "_note": "Shadow of gap, sealed.",
+      "player_card": "modifier:earlier_entry_references_missing_note",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:tracing_log_revision",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:accident_log",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:shadow_of_gap_lands",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:shadow_of_gap"
+      },
+      "convergence_after": [
+        0.83,
+        0.84,
+        0.84
+      ]
+    },
+    {
+      "turn": 42,
+      "_note": "Lay down the silence book.",
+      "player_card": "object:silence_payments_book",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:silence_payments_book",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.84,
+        0.84,
+        0.84
+      ]
+    },
+    {
+      "turn": 43,
+      "_note": "Cross-reference scales mismatch.",
+      "player_card": "object:sulphur_scales",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:sulphur_scales",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:scales_mismatch_ledger"
+      },
+      "convergence_after": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    {
+      "turn": 44,
+      "_note": "1882 warning ignored.",
+      "player_card": "modifier:third_processing_line_borderline_in_1882",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.86
+      ]
+    },
+    {
+      "turn": 45,
+      "_note": "Accuse Silas Oake.",
+      "player_card": "ACCUSE:suspect:silas_oake",
+      "scene": {
+        "LOCATION": "location:oake_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_silas_oake",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:revised_entry",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "INDUSTRIAL_TELL": "industrial_tell:none"
+      },
+      "convergence_after": [
+        0.87,
+        0.87,
+        0.87
+      ]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:silas_oake",
+    "final_convergence": [
+      0.87,
+      0.87,
+      0.87
+    ]
+  }
+}

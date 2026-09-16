@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_partial_correct_misread_motive_a_to_correct_b",
+  "case_id": "hollow_season",
+  "description": "Counterfactual (batch 2) from partial_correct_misread_motive_a at turn 30. The doorframe-touched-on-entry protocol_tell catches; emotional geography lands properly. Correct accusation with right motive at turn 35.",
+  "outcome": "correct_edmund_carrow",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "partial_correct_misread_motive_a",
+  "branch_turn": 30,
+  "divergence_token": "PROTOCOL_TELL=protocol_tell:door_left_unlatched",
+  "tags": [
+    "counterfactual",
+    "protocol_tell_divergence",
+    "correct_edmund_carrow",
+    "batch2_cf",
+    "hand_paced"
+  ],
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.68,
+      0.74,
+      0.55
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:library",
+      "event:sir_geoffrey_discovered",
+      "time:sunday_before_breakfast"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 30,
+      "_note": "Branch. The unlatched door \u2014 Edmund's habit broken \u2014 catches the cause:noting_protocol_breach.",
+      "player_card": "object:library_doorframe",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noting_protocol_breach",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:notices",
+        "OBJECT_FOCUS": "object:library_doorframe",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:door_left_unlatched"
+      },
+      "convergence_after": [
+        0.72,
+        0.76,
+        0.66
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Cross to drawing_room. Portrait. Eleven minutes named.",
+      "player_card": "object:mothers_portrait",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:emotional_geography_lands",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.78,
+        0.8,
+        0.78
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Name house_as_mother.",
+      "player_card": "motive:house_as_mother",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:mothers_portrait",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.82,
+        0.84,
+        0.86
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Return library. Will draft.",
+      "player_card": "object:new_will_draft",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:new_will_draft",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.86,
+        0.86,
+        0.88
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Lay receipt + will + portrait.",
+      "player_card": "object:chemists_receipt",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.88,
+        0.88,
+        0.9
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Accuse.",
+      "player_card": "ACCUSE:suspect:edmund_carrow",
+      "scene": {
+        "LOCATION": "location:library",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_edmund_carrow",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:chemists_receipt",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.9,
+        0.9,
+        0.92
+      ]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "accused": "suspect:edmund_carrow",
+    "final_convergence": [
+      0.9,
+      0.9,
+      0.92
+    ],
+    "_note": "CF \u2014 protocol_tell divergence at the doorframe caught the right motive."
+  }
+}

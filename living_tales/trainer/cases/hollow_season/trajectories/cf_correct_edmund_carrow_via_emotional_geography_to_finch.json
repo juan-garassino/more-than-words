@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_correct_edmund_carrow_via_emotional_geography_to_finch",
+  "case_id": "hollow_season",
+  "description": "Counterfactual from correct_edmund_carrow_via_emotional_geography at turn 28. At the moment the player would name the doorframe, they instead recall the audit letter and swing back to Finch. The emotional geography never lands; the Finch chain re-tightens. Wrong accusation of Finch at turn 33.",
+  "outcome": "wrong_hector_finch",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "correct_edmund_carrow_via_emotional_geography",
+  "branch_turn": 28,
+  "divergence_token": "OBJECT_FOCUS=object:audit_letter",
+  "tags": [
+    "counterfactual",
+    "object_focus_divergence",
+    "wrong_hector_finch",
+    "batch2_cf",
+    "hand_paced"
+  ],
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.7,
+      0.8,
+      0.62
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:library",
+      "event:sir_geoffrey_discovered",
+      "time:sunday_before_breakfast"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 28,
+      "_note": "Branch. At the drawing-room turn the detective recalls the audit letter; the eleven minutes are dropped.",
+      "player_card": "object:audit_letter",
+      "scene": {
+        "LOCATION": "location:drawing_room",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.72,
+        0.8,
+        0.58
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Cross to estate_office. Lay the audit letter beside the ledger.",
+      "player_card": "travel:to_estate_office",
+      "scene": {
+        "LOCATION": "location:estate_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:none"
+      },
+      "convergence_after": [
+        0.74,
+        0.82,
+        0.56
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Cross to gatehouse_lodge. Confront Finch with the audit letter.",
+      "player_card": "travel:to_gatehouse_lodge",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.78,
+        0.84,
+        0.55
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Press the timber ledger.",
+      "player_card": "object:timber_ledger",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:timber_ledger",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.8,
+        0.85,
+        0.55
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Press the audit motive.",
+      "player_card": "motive:audit_evasion",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.81,
+        0.85,
+        0.55
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Accusation. Wrong. Finch.",
+      "player_card": "ACCUSE:suspect:hector_finch",
+      "scene": {
+        "LOCATION": "location:gatehouse_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_hector_finch",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:audit_letter",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "PROTOCOL_TELL": "protocol_tell:proper_form_observed"
+      },
+      "convergence_after": [
+        0.82,
+        0.85,
+        0.55
+      ]
+    }
+  ],
+  "ending": {
+    "type": "wrong_accusation",
+    "accused": "suspect:hector_finch",
+    "final_convergence": [
+      0.82,
+      0.85,
+      0.55
+    ],
+    "_note": "CF \u2014 object_focus divergence at T28 swings the detective back to the Finch chain. Emotional geography never lands."
+  }
+}

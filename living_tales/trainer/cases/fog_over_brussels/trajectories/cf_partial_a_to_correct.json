@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_partial_a_to_correct",
+  "case_id": "fog_over_brussels",
+  "description": "Counterfactual branch of partial_correct_misread_motive_a. At turn 29 the diplomatic tell breaks protocol fully \u2014 the detective sees that leverage_in_1955 was the misread; double_agent_exposure is the truth. Motive corrected.",
+  "outcome": "correct_brennan",
+  "branch_of": "partial_correct_misread_motive_a",
+  "branch_turn": 29,
+  "divergence_token": "DIPLOMATIC_TELL=diplomatic_tell:protocol_broken",
+  "starting_hypothesis": "counterfactual_branch",
+  "tags": [
+    "counterfactual_branch",
+    "correct_brennan",
+    "diplomatic_tell_divergence",
+    "partial_recovery"
+  ],
+  "opening": {
+    "tokens": [
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:kitchen_corridor",
+      "location:west_wing_stairwell",
+      "location:cipher_room",
+      "location:document_room",
+      "location:reception_room",
+      "location:ambassadors_office",
+      "location:east_wing_landing",
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "location:embassy_entrance",
+      "location:reception_room",
+      "location:east_wing_landing",
+      "event:ilse_collapse_2247",
+      "time:intermission_hour"
+    ]
+  },
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.855,
+      0.855,
+      0.855
+    ]
+  },
+  "turns": [
+    {
+      "turn": 29,
+      "_note": "DIVERGENCE: protocol breaks; detective sees the misread motive.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:decoded_dispatch",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.88, 0.86, 0.87]
+    },
+    {
+      "turn": 30,
+      "_note": "Press correct motive: double_agent_exposure.",
+      "player_card": "motive:double_agent_exposure",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:decoded_dispatch",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.89, 0.87, 0.93]
+    },
+    {
+      "turn": 31,
+      "_note": "Confirmation.",
+      "player_card": "witness:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:signet_ring",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:signet_ring_turned"
+      },
+      "convergence_after": [0.92, 0.88, 0.94]
+    },
+    {
+      "turn": 32,
+      "_note": "Correct accusation: Brennan, right motive.",
+      "player_card": "ACCUSE:suspect:brennan",
+      "scene": {
+        "LOCATION": "location:reception_room",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_brennan",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:tightened",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "DIPLOMATIC_TELL": "diplomatic_tell:protocol_broken"
+      },
+      "convergence_after": [0.94, 0.89, 0.95]
+    }
+  ],
+  "ending": {
+    "type": "accusation",
+    "final_convergence": [0.94, 0.89, 0.95],
+    "accused": "suspect:brennan",
+    "_note": "Motive corrected to double_agent_exposure; Brennan named."
+  }
+}

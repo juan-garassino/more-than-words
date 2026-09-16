@@ -1,0 +1,60 @@
+{
+  "_comment": "Location → pixel-art backdrop mapping for the Belgian Embassy case. Art is commissioned per case at 320x320 and lives under art/<case>/direct_pixel_art_v1/pixel_320x320/. The art assets are not yet on disk for this case; the filenames below name what is to be commissioned and will resolve once the assets are dropped in. _briefing is the establishing shot used at session open; _ending is the verdict card.",
+  "_art_dir": "art/fog_over_brussels/direct_pixel_art_v1/pixel_320x320",
+  "_default": "fog_over_brussels_embassy_entrance_pixel_320x320_v01.png",
+  "_briefing": "fog_over_brussels_embassy_entrance_pixel_320x320_v01.png",
+  "_ending": "fog_over_brussels_kitchen_corridor_pixel_320x320_v01.png",
+
+  "location:reception_room":         "fog_over_brussels_reception_room_pixel_320x320_v01.png",
+  "location:kitchen_corridor":       "fog_over_brussels_kitchen_corridor_pixel_320x320_v01.png",
+  "location:embassy_kitchen":        "fog_over_brussels_embassy_kitchen_pixel_320x320_v01.png",
+  "location:cipher_room":            "fog_over_brussels_cipher_room_pixel_320x320_v01.png",
+  "location:document_room":          "fog_over_brussels_document_room_pixel_320x320_v01.png",
+  "location:ambassadors_office":     "fog_over_brussels_ambassadors_office_pixel_320x320_v01.png",
+  "location:east_wing_landing":      "fog_over_brussels_east_wing_landing_pixel_320x320_v01.png",
+  "location:west_wing_stairwell":    "fog_over_brussels_west_wing_stairwell_pixel_320x320_v01.png",
+  "location:embassy_entrance":       "fog_over_brussels_embassy_entrance_pixel_320x320_v01.png",
+  "location:rue_de_la_loi":          "fog_over_brussels_rue_de_la_loi_pixel_320x320_v01.png",
+
+  "_npcs": {
+    "presence:with_brennan":                "The cultural attache, 44, Irish-born. Charm worn as professional skill. Killer.",
+    "presence:with_helena_voss":            "The ambassador's wife, 52. Forty-minute absence from the reception; witness to the tray intercept. Red herring.",
+    "presence:with_catering_supervisor":    "The reception's catering supervisor. Noticed the forty-second interval and did not think it significant at the time.",
+    "presence:with_ambassador_voss":        "The Belgian ambassador, Helena's husband. Diplomatic protocol made flesh; protective of his wife.",
+    "presence:with_cipher_supervisor":      "Ilse's supervisor in the cipher room. Noted her pattern-recognition twice in her file and never acted on it.",
+    "presence:with_embassy_doctor":         "The attending physician. Recorded cardiac arrest at ten forty-seven pm.",
+    "presence:with_catering_runner":        "The catering staff member who carried the tray from the kitchen. Does not know what he carried.",
+    "presence:with_press_attache":          "An embassy press attache who circulated through the reception. Useful for guest-position memory; not implicated.",
+    "presence:with_chief_of_security":      "Embassy chief of security. Custodian of access logs and corridor footage; cooperative within his discretion.",
+    "presence:with_kitchen_porter":         "Kitchen porter on the reception detail. Saw the trays loaded; did not see the corridor."
+  },
+
+  "_objects": {
+    "object:champagne_flute":           "The flute Ilse accepted at eight-fifteen pm. Found at ten forty-seven beside her chair.",
+    "object:catering_tray":             "The catering tray that crossed the corridor in forty seconds and arrived in the reception room with one position spoken for.",
+    "object:draft_report":              "Ilse's draft report. Left in a folder on her desk rather than in the locked drawer where she kept sensitive documents.",
+    "object:decoded_dispatch":          "The routine diplomatic communication Ilse decoded on November 28th. Names nothing on its face.",
+    "object:secondary_encoding_sheet":  "The layered secondary encoding inside the dispatch. Names a source. Names a date of activation: 1957.",
+    "object:duplicate_desk_key":        "A copy of Ilse's desk key, cut eighteen months earlier as a standard precaution by Brennan.",
+    "object:guest_list":                "The reception guest list. Sixty-three names. Four languages.",
+    "object:seating_plan":              "The seating plan. The conversations the guest list suggests were accidental, the seating plan confirms were deliberate.",
+    "object:post_mortem_panel":         "The post-mortem panel. Cardiac arrest. Tasteless. No marks. The compound does not appear here in 1961.",
+    "object:secondary_terminal_log":    "The cipher room's secondary terminal log. Helena's private communications, off the official log.",
+    "object:catering_timing_note":      "The catering supervisor's small daily timing note. Forty seconds recorded next to the tray that should have taken twenty.",
+    "object:signet_ring":               "Brennan's signet ring. He turns it on the third finger when answering questions about the corridor.",
+    "object:cipher_clerks_file":        "Ilse's personnel file. Two supervisor notes praising her pattern recognition. Neither acted on."
+  },
+
+  "_locations_summary": {
+    "location:reception_room":      "Ground floor, east wing. Sixty-three guests, four languages, crystal under chandeliers. Where the flute was accepted.",
+    "location:kitchen_corridor":    "The forty-second corridor between the kitchen and the reception room. Brennan intercepted the tray here.",
+    "location:embassy_kitchen":     "The reception's working kitchen. Trays loaded. The runner does not know what he carried.",
+    "location:cipher_room":         "West wing, cold. Three years of Ilse's work. The dispatch was decoded here.",
+    "location:document_room":       "Adjacent to the cipher room. Where Ilse was found at ten forty-seven pm.",
+    "location:ambassadors_office":  "First floor, east wing. The ambassador's office. Helena's secondary terminal was here.",
+    "location:east_wing_landing":   "The heated landing. The murmur of the reception carries up the stair.",
+    "location:west_wing_stairwell": "The cold stairwell. The approach to the cipher and document rooms.",
+    "location:embassy_entrance":    "The Rue de la Loi entrance. Iron gate. Fog against the lamps.",
+    "location:rue_de_la_loi":       "Outside, on the avenue. December fog. The case opens here at the door."
+  }
+}

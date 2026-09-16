@@ -1,0 +1,924 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "marta_via_audio_recognition",
+  "case_id": "resonance_test",
+  "description": "Audio-first chain. The detective listens — to the rehearsal in the recital hall, to the 1955 tape reel pulled from the back of the archive shelf, to Marta humming a passage under her breath in the harmony classroom. The AUDIO_TELL slot carries the case forward: score_recognized at turn 16, tape_hiss at turn 22, voice_breaks_on_pitch at turn 31. The archive card and the original manuscript close the chain.",
+  "outcome": "correct_marta_solis",
+  "starting_hypothesis": "tell_first",
+  "tags": ["audio_tell_heavy", "score_recognized", "tape_reel_1955"],
+  "opening": {
+    "tokens": [
+      "location:practice_wing_basement",
+      "event:stairwell_fall",
+      "time:thursday_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open. The score on the music stand, Ashby's annotations.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_silent",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.04, 0.05, 0.05]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross to recital hall. Rehearsal underway.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.07, 0.08, 0.08]
+    },
+    {
+      "turn": 3,
+      "_note": "Question Pryce briefly. She remembers the slow movement.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.09, 0.1, 0.1]
+    },
+    {
+      "turn": 4,
+      "_note": "Listen to the rehearsal. The slow movement opens.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:hearing_passage_again",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:interval_held_too_long"
+      },
+      "convergence_after": [0.12, 0.14, 0.14]
+    },
+    {
+      "turn": 5,
+      "_note": "Listen for the modulation Pryce mentioned.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:hearing_passage_again",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:tuning_drifts"
+      },
+      "convergence_after": [0.14, 0.16, 0.16]
+    },
+    {
+      "turn": 6,
+      "_note": "Cross to faculty lounge. The chair of the panel.",
+      "player_card": "travel:to_faculty_lounge",
+      "scene": {
+        "LOCATION": "location:faculty_lounge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_eleanor_fairchild",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.16, 0.18, 0.18]
+    },
+    {
+      "turn": 7,
+      "_note": "Question Fairchild. Recursive answers, committee voice.",
+      "player_card": "witness:eleanor_fairchild",
+      "scene": {
+        "LOCATION": "location:faculty_lounge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_eleanor_fairchild",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "emotion:rehearsed_diction",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.18, 0.2, 0.2]
+    },
+    {
+      "turn": 8,
+      "_note": "Examine the panel's marksheet. Notes on the quartet's second movement.",
+      "player_card": "object:examiners_marksheet",
+      "scene": {
+        "LOCATION": "location:faculty_lounge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_eleanor_fairchild",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "emotion:rehearsed_diction",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.22, 0.24, 0.22]
+    },
+    {
+      "turn": 9,
+      "_note": "Cross to library periodicals. The Vienna recording catalogue.",
+      "player_card": "travel:to_library_periodicals",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.24, 0.26, 0.24]
+    },
+    {
+      "turn": 10,
+      "_note": "Examine the Austrian publisher catalogue. 1955, Ashby's name.",
+      "player_card": "object:austrian_publisher_catalogue",
+      "scene": {
+        "LOCATION": "location:library_periodicals",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:austrian_publisher_catalogue",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.27, 0.28, 0.27]
+    },
+    {
+      "turn": 11,
+      "_note": "Cross to the archive basement. Norwood's drawers.",
+      "player_card": "travel:to_archive_basement",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.28, 0.3, 0.28]
+    },
+    {
+      "turn": 12,
+      "_note": "Question Norwood. He mentions a tape reel labelled 1955.",
+      "player_card": "witness:archive_clerk_norwood",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.3, 0.32, 0.3]
+    },
+    {
+      "turn": 13,
+      "_note": "Examine the tape reel from 1955. Pulled from the back of the shelf.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.32, 0.34, 0.32]
+    },
+    {
+      "turn": 14,
+      "_note": "Listen to the tape reel. Half-speed playback.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:hearing_passage_again",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:tape_hiss_room",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:tape_hiss"
+      },
+      "convergence_after": [0.36, 0.38, 0.36]
+    },
+    {
+      "turn": 15,
+      "_note": "Same modulation as Pryce's rehearsal. Listen again.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:hearing_passage_again",
+        "PRESENCE": "presence:with_archive_clerk_norwood",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:tape_hiss_room",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:tape_hiss"
+      },
+      "convergence_after": [0.4, 0.42, 0.4]
+    },
+    {
+      "turn": 16,
+      "_note": "Score recognised — twenty years of it, his and not his.",
+      "player_card": "modifier:vienna_premiere",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:tape_hiss_room",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:score_recognized"
+      },
+      "convergence_after": [0.44, 0.46, 0.44]
+    },
+    {
+      "turn": 17,
+      "_note": "Examine the index card filed beside the reel.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.5, 0.52, 0.5]
+    },
+    {
+      "turn": 18,
+      "_note": "Read the card — Elena Varga. The hand small and clear.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_archive_card",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.52, 0.56, 0.52]
+    },
+    {
+      "turn": 19,
+      "_note": "Examine the manuscript filed with the card. Same hand, same year.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.6, 0.62, 0.6]
+    },
+    {
+      "turn": 20,
+      "_note": "Authorship inverts. Twenty years stand in the wrong name.",
+      "player_card": "modifier:initials_in_own_hand",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_archive_card",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:discovers",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:authorship_inverts",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.6, 0.62, 0.6]
+    },
+    {
+      "turn": 21,
+      "_note": "Cross to the harmony classroom. Marta at the piano, humming a passage.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.62, 0.64, 0.62]
+    },
+    {
+      "turn": 22,
+      "_note": "Listen to her humming. The passage from the tape.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:hearing_passage_again",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:unaware",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:interval_held_too_long"
+      },
+      "convergence_after": [0.64, 0.66, 0.64]
+    },
+    {
+      "turn": 23,
+      "_note": "Question Marta. She sets the pencil down before she answers.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.66, 0.68, 0.66]
+    },
+    {
+      "turn": 24,
+      "_note": "Ask about Thursday. Address and hour, neighbour bears her out.",
+      "player_card": "modifier:alone_after_nine",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rehearsed_diction",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.68, 0.7, 0.68]
+    },
+    {
+      "turn": 25,
+      "_note": "Show her the card. She does not soften it.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.7, 0.72, 0.7]
+    },
+    {
+      "turn": 26,
+      "_note": "Show the original manuscript. Twenty years answered in one degree of diction.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:reading_archive_card",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:authorship_inverts",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.72, 0.74, 0.72]
+    },
+    {
+      "turn": 27,
+      "_note": "Cross back to recital hall — listen to the rehearsal once more with the new context.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:silence_between_movements"
+      },
+      "convergence_after": [0.73, 0.74, 0.73]
+    },
+    {
+      "turn": 28,
+      "_note": "Pursue to porter's lodge. Haldane and the maintenance log.",
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:pursued_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.74, 0.75, 0.74]
+    },
+    {
+      "turn": 29,
+      "_note": "Examine the maintenance log. Three entries, no work order.",
+      "player_card": "object:maintenance_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:contradiction_surfaces",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.76, 0.76, 0.76]
+    },
+    {
+      "turn": 30,
+      "_note": "Return to harmony classroom. The voice break is what closes it.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.78, 0.78, 0.78]
+    },
+    {
+      "turn": 31,
+      "_note": "Sing the modulation from the tape. Voice breaks on the pitch.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:hearing_passage_again",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:paled",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:voice_breaks_on_pitch"
+      },
+      "convergence_after": [0.8, 0.8, 0.8]
+    },
+    {
+      "turn": 32,
+      "_note": "Confirm motive. Stolen composition, the year tracked.",
+      "player_card": "motive:stolen_composition",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.82, 0.82, 0.82]
+    },
+    {
+      "turn": 33,
+      "_note": "The deeper why — the archive existed all along.",
+      "player_card": "motive:already_exposed",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.83, 0.83, 0.83]
+    },
+    {
+      "turn": 34,
+      "_note": "Cross to practice wing basement. The mechanism.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:silence_between_movements"
+      },
+      "convergence_after": [0.84, 0.84, 0.84]
+    },
+    {
+      "turn": 35,
+      "_note": "Recall: she knew the building. Switched the panel at nine fifteen.",
+      "player_card": "modifier:lights_off_after_nine",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:stairwell_light_panel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.85, 0.85, 0.85]
+    },
+    {
+      "turn": 36,
+      "_note": "Recall the unsecured handrail.",
+      "player_card": "modifier:handrail_unsecured",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.86, 0.86, 0.86]
+    },
+    {
+      "turn": 37,
+      "_note": "Cross to porter's lodge. The night porter confirms the time.",
+      "player_card": "witness:night_porter_keaveney",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_night_porter_keaveney",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:stairwell_light_panel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.86, 0.86, 0.86]
+    },
+    {
+      "turn": 38,
+      "_note": "He saw the basement lights go out at nine fifteen.",
+      "player_card": "modifier:lights_off_after_nine",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_night_porter_keaveney",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:stairwell_light_panel",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.87, 0.87, 0.87]
+    },
+    {
+      "turn": 39,
+      "_note": "Return to harmony classroom. Mid-section: the tape, the card, the manuscript laid out.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "emotion:closed_posture",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.87, 0.87, 0.87]
+    },
+    {
+      "turn": 40,
+      "_note": "Confront with the index card.",
+      "player_card": "object:archive_index_card",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.88, 0.88, 0.88]
+    },
+    {
+      "turn": 41,
+      "_note": "Confront with the manuscript.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:name_uncovered",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.89, 0.89, 0.89]
+    },
+    {
+      "turn": 42,
+      "_note": "Confront with the tape reel. She closes entirely.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:hearing_passage_again",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:tape_hiss"
+      },
+      "convergence_after": [0.9, 0.9, 0.9]
+    },
+    {
+      "turn": 43,
+      "_note": "Final motive — the secret was always going to surface.",
+      "player_card": "motive:already_exposed",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:archive_index_card",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.91, 0.91, 0.91]
+    },
+    {
+      "turn": 44,
+      "_note": "Lay the layout: panel, rail, alibi, score.",
+      "player_card": "modifier:lights_off_after_nine",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:stairwell_light_panel",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.92, 0.92, 0.92]
+    },
+    {
+      "turn": 45,
+      "_note": "Accusation. She does not look up.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:hostile",
+        "ACTION": "action:confronts",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:silent",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:verdict_ready",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [0.92, 0.92, 0.92]
+    }
+  ],
+  "ending": {
+    "type": "all_strong",
+    "accused": "suspect:marta_solis",
+    "final_convergence": [0.92, 0.92, 0.92],
+    "_note": "Audio-first chain — score recognised in the tape, the index card holds, the voice breaks."
+  }
+}

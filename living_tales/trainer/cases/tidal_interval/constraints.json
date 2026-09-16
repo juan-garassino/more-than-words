@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "case_id": "tidal_interval",
+
+  "_comment": "Hard-mask rules for The Tidal Interval. Standard universal gates (transition/presence/stance/revelation/beat/action) plus case-specific tidal_tell gating. The tidal_tell tokens carry the case's structural clock — late-stage tells (tide_floods, path_unstable) are gated by convergence so they cannot surface before the player has earned the mechanism layer. The radio/cause coupling enforces that cause:radio_message_received is only valid when the radio is in scene or the player just played a radio-related card.",
+
+  "rules": [
+
+    {
+      "id": "transition_stayed_implies_same_location",
+      "if": {"TRANSITION": "transition:stayed"},
+      "then": {"LOCATION": "@equals_previous_scene_location"}
+    },
+    {
+      "id": "transition_crossed_implies_different_location",
+      "if": {"TRANSITION": "transition:crossed_to"},
+      "then": {"LOCATION": "@differs_from_previous_scene_location"}
+    },
+    {
+      "id": "transition_returned_implies_visited_location",
+      "if": {"TRANSITION": "transition:returned"},
+      "then": {"LOCATION": "@in_visited_locations"}
+    },
+    {
+      "id": "transition_none_only_first_scene",
+      "if": {"TRANSITION": "transition:none"},
+      "then": {"@scene_index_eq": 0}
+    },
+
+    {
+      "id": "presence_alone_no_stance",
+      "if": {"PRESENCE": "presence:alone"},
+      "then": {"STANCE": "stance:none", "TELL": "tell:none"}
+    },
+    {
+      "id": "presence_someone_requires_stance",
+      "if": {"PRESENCE": "@not_alone"},
+      "then": {"STANCE": "@not_in", "values": ["stance:none"]}
+    },
+
+    {
+      "id": "stance_hostile_requires_visible_tell",
+      "if": {"STANCE": "stance:hostile"},
+      "then": {"TELL": "@in", "values": [
+        "tell:paled", "tell:tightened", "tell:silent", "tell:glanced_aside",
+        "emotion:wind_bitten_calm"
+      ]}
+    },
+    {
+      "id": "stance_evasive_implies_softer_tells",
+      "if": {"STANCE": "stance:evasive"},
+      "then": {"TELL": "@in", "values": [
+        "tell:hesitated", "tell:glanced_aside", "tell:over_explained",
+        "tell:softened", "emotion:harbour_grief", "tell:none"
+      ]}
+    },
+
+    {
+      "id": "revelation_contradiction_requires_inconsistency_cause",
+      "if": {"REVELATION": "revelation:contradiction_surfaces"},
+      "then": {"CAUSE": "cause:noticed_inconsistency"}
+    },
+    {
+      "id": "revelation_name_uncovered_requires_evidence",
+      "if": {"REVELATION": "revelation:name_uncovered"},
+      "then": {"OBJECT_FOCUS": "@not_in", "values": ["object_focus:none"]}
+    },
+    {
+      "id": "revelation_name_gated_by_convergence",
+      "if": {"REVELATION": "revelation:name_uncovered"},
+      "then": {"@convergence_min_gte": 0.5}
+    },
+    {
+      "id": "revelation_motive_gated_by_convergence",
+      "if": {"REVELATION": "revelation:motive_emerges"},
+      "then": {"@convergence_min_gte": 0.5}
+    },
+    {
+      "id": "revelation_alibi_requires_witness",
+      "if": {"REVELATION": "revelation:alibi_holds"},
+      "then": {"PRESENCE": "@is_witness_or_suspect"}
+    },
+    {
+      "id": "revelation_tidal_window_requires_object",
+      "if": {"REVELATION": "revelation:tidal_window_identified"},
+      "then": {"OBJECT_FOCUS": "@in", "values": [
+        "object:tide_chart", "object:weather_log", "object:resupply_schedule",
+        "object:path_marker", "object:sea_chart_overlay"
+      ]}
+    },
+    {
+      "id": "revelation_tidal_window_gated_by_convergence",
+      "if": {"REVELATION": "revelation:tidal_window_identified"},
+      "then": {"@convergence_min_gte": 0.4}
+    },
+
+    {
+      "id": "beat_closing_in_gated",
+      "if": {"BEAT": "beat:closing_in"},
+      "then": {"@convergence_min_gte": 0.5}
+    },
+    {
+      "id": "beat_verdict_ready_gated",
+      "if": {"BEAT": "beat:verdict_ready"},
+      "then": {"@convergence_min_gte": 0.75}
+    },
+    {
+      "id": "beat_orientation_only_early",
+      "if": {"BEAT": "beat:orientation"},
+      "then": {"@convergence_min_lt": 0.25}
+    },
+
+    {
+      "id": "action_confronts_requires_present_npc",
+      "if": {"ACTION": "action:confronts"},
+      "then": {"PRESENCE": "@not_alone"}
+    },
+    {
+      "id": "action_questions_requires_present_npc",
+      "if": {"ACTION": "action:questions"},
+      "then": {"PRESENCE": "@not_alone"}
+    },
+    {
+      "id": "action_examines_requires_object",
+      "if": {"ACTION": "action:examines"},
+      "then": {"OBJECT_FOCUS": "@not_in", "values": ["object_focus:none"]}
+    },
+    {
+      "id": "action_arrives_requires_transition",
+      "if": {"ACTION": "action:arrives"},
+      "then": {"TRANSITION": "@in", "values": [
+        "transition:crossed_to", "transition:entered",
+        "transition:returned", "transition:pursued_to",
+        "transition:descended_to"
+      ]}
+    },
+    {
+      "id": "action_radios_requires_handset",
+      "if": {"ACTION": "action:radios"},
+      "then": {"OBJECT_FOCUS": "@in", "values": [
+        "object:radio_handset", "object:satellite_log"
+      ]}
+    },
+    {
+      "id": "action_traces_route_requires_path_object",
+      "if": {"ACTION": "action:traces_route"},
+      "then": {"OBJECT_FOCUS": "@in", "values": [
+        "object:path_marker", "object:sea_chart_overlay",
+        "object:tide_chart", "object:resupply_schedule"
+      ]}
+    },
+
+    {
+      "id": "atmosphere_dawn_only_late_game",
+      "if": {"ATMOSPHERE": "atmosphere:dawn_approaches"},
+      "then": {"@turn_gte": 40}
+    },
+
+    {
+      "id": "cause_summoned_requires_npc",
+      "if": {"CAUSE": "cause:summoned"},
+      "then": {"PRESENCE": "@not_alone"}
+    },
+    {
+      "id": "cause_following_lead_requires_recent_witness",
+      "if": {"CAUSE": "cause:following_witness_lead"},
+      "then": {"@last_player_token_class_in": ["WITNESS", "SUSPECT"]}
+    },
+    {
+      "id": "cause_recognized_object_requires_recent_object",
+      "if": {"CAUSE": "cause:recognized_object"},
+      "then": {"@last_player_token_class_in": ["OBJECT", "MODIFIER"]}
+    },
+    {
+      "id": "cause_radio_message_requires_radio_object",
+      "if": {"CAUSE": "cause:radio_message_received"},
+      "then": {"OBJECT_FOCUS": "@in", "values": [
+        "object:radio_handset", "object:satellite_log", "object:weather_log"
+      ]}
+    },
+    {
+      "id": "cause_reading_tide_chart_requires_chart_object",
+      "if": {"CAUSE": "cause:reading_tide_chart"},
+      "then": {"OBJECT_FOCUS": "@in", "values": [
+        "object:tide_chart", "object:weather_log",
+        "object:sea_chart_overlay", "object:resupply_schedule"
+      ]}
+    },
+
+    {
+      "id": "tidal_tell_tide_floods_gated_by_convergence",
+      "if": {"TIDAL_TELL": "tidal_tell:tide_floods"},
+      "then": {"@convergence_min_gte": 0.4}
+    },
+    {
+      "id": "tidal_tell_path_unstable_gated_by_convergence",
+      "if": {"TIDAL_TELL": "tidal_tell:path_unstable"},
+      "then": {"@convergence_min_gte": 0.5}
+    },
+    {
+      "id": "tidal_tell_path_unstable_requires_path_or_cave",
+      "if": {"TIDAL_TELL": "tidal_tell:path_unstable"},
+      "then": {"LOCATION": "@in", "values": [
+        "location:eastern_path", "location:sea_cave", "location:jetty"
+      ]}
+    },
+    {
+      "id": "tidal_tell_generator_falters_requires_indoor",
+      "if": {"TIDAL_TELL": "tidal_tell:generator_falters"},
+      "then": {"LOCATION": "@in", "values": [
+        "location:research_lab", "location:dorms", "location:weather_tower",
+        "location:generator_room", "location:common_room"
+      ]}
+    },
+    {
+      "id": "tidal_tell_none_when_no_storm_context",
+      "if": {"ATMOSPHERE": "atmosphere:none"},
+      "then": {"TIDAL_TELL": "@in", "values": [
+        "tidal_tell:none", "tidal_tell:wind_drops"
+      ]}
+    }
+
+  ],
+
+  "_predicates_comment": "Reference for the predicate runtime. The constraint compiler resolves each `@predicate` against the current GameState to produce a concrete boolean mask over the dim's vocabulary at sample time.",
+  "_predicates": {
+    "@equals_previous_scene_location": "LOCATION must equal the location of the most recent scene where LOCATION != none",
+    "@differs_from_previous_scene_location": "LOCATION must differ from the most recent scene's LOCATION (and not be `location:none`)",
+    "@in_visited_locations": "LOCATION must be one previously visited (in dialogue_history)",
+    "@scene_index_eq": "current scene index must equal value",
+    "@not_alone": "PRESENCE must not be `presence:alone`",
+    "@is_witness_or_suspect": "PRESENCE must be a `with_<witness|suspect>:*`",
+    "@convergence_min_gte": "min(convergence_dims) must be >= value",
+    "@convergence_min_lt": "min(convergence_dims) must be < value",
+    "@turn_gte": "current game_turn must be >= value",
+    "@last_player_token_class_in": "the player's most recent card belongs to one of these legacy classes",
+    "@in": "the dim's value must be in the supplied `values` list",
+    "@not_in": "the dim's value must NOT be in the supplied `values` list"
+  }
+}

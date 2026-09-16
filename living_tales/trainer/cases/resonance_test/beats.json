@@ -1,0 +1,52 @@
+{
+  "_comment": "Convergence-threshold discovery beats for resonance_test. Mirrors amber_cipher/attended_hour schema. The case-specific authorship_inversion beat fires once the motive dim crosses 0.7 and the player is past turn 18 — it represents the late-game pivot when the archive card recontextualises Marta's motive from 'protect the secret' to 'the secret was already going to surface'. The case is rated easy mechanically, so verdict_ready can fire as early as turn 22.",
+  "schema_version": 1,
+  "case_id": "resonance_test",
+
+  "convergence_dim_names": ["suspect", "evidence", "motive"],
+
+  "beats": [
+    {
+      "id": "first_thread",
+      "trigger": { "any_dim_gte": 0.4 },
+      "min_turn": 6,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:contradiction_surfaces" }
+    },
+    {
+      "id": "name_surfaces",
+      "trigger": { "dim": "suspect", "gte": 0.6 },
+      "min_turn": 10,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:name_uncovered" }
+    },
+    {
+      "id": "motive_emerges",
+      "trigger": { "dim": "motive", "gte": 0.6 },
+      "min_turn": 14,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:motive_emerges" }
+    },
+    {
+      "id": "authorship_inversion",
+      "trigger": { "dim": "motive", "gte": 0.7 },
+      "min_turn": 18,
+      "fire_once": true,
+      "inject": { "REVELATION": "revelation:authorship_inverts" }
+    },
+    {
+      "id": "closing_in",
+      "trigger": { "min_dim_gte": 0.65 },
+      "min_turn": 18,
+      "fire_once": true,
+      "inject": { "BEAT": "beat:closing_in" }
+    },
+    {
+      "id": "verdict_ready",
+      "trigger": { "min_dim_gte": 0.8 },
+      "min_turn": 22,
+      "fire_once": true,
+      "inject": { "BEAT": "beat:verdict_ready" }
+    }
+  ]
+}

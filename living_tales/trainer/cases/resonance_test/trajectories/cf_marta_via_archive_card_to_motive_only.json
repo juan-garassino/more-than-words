@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cf_marta_via_archive_card_to_motive_only",
+  "case_id": "resonance_test",
+  "description": "Counterfactual: at the archive turn 31, the detective listens to the tape again and her certainty buckles. She names the stolen-composition motive without filing the accusation. Marta walks free.",
+  "outcome": "motive_only_confession",
+  "starting_hypothesis": "counterfactual",
+  "branch_of": "marta_via_archive_card",
+  "branch_turn": 31,
+  "divergence_token": "AUDIO_TELL=audio_tell:score_recognized",
+  "tags": [
+    "counterfactual",
+    "audio_tell_divergence",
+    "motive_only_confession",
+    "wave2_cf"
+  ],
+  "_authoring_note": "CF \u2014 diverges from marta_via_archive_card at turn 31 on AUDIO_TELL=audio_tell:score_recognized.",
+  "pre_branch_state": {
+    "convergence_dims": [
+      0.66,
+      0.72,
+      0.66
+    ]
+  },
+  "opening": {
+    "tokens": [
+      "location:archive_basement"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 31,
+      "_note": "Diverge \u2014 listening to the tape on the way back, the player loses confidence.",
+      "player_card": "object:tape_reel_1955",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:hearing_passage_again",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:tape_reel_1955",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:tape_hiss_room",
+        "REVELATION": "revelation:authorship_inverts",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:score_recognized"
+      },
+      "convergence_after": [
+        0.7,
+        0.74,
+        0.7
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Examine manuscript.",
+      "player_card": "object:original_manuscript",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:confirmation",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.72,
+        0.76,
+        0.72
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Motive named \u2014 stolen composition.",
+      "player_card": "motive:stolen_composition",
+      "scene": {
+        "LOCATION": "location:archive_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.74,
+        0.78,
+        0.74
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Cross to harmony classroom \u2014 quietly.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.75,
+        0.79,
+        0.75
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Question Marta. She does not deny.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:defensive",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:original_manuscript",
+        "TELL": "emotion:paused_reply",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.79,
+        0.76
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Detective does not file. Walks out at dawn.",
+      "player_card": "travel:to_courtyard",
+      "scene": {
+        "LOCATION": "location:courtyard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:leaves",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:motive_emerges",
+        "BEAT": "beat:closing_in",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.76,
+        0.79,
+        0.76
+      ]
+    }
+  ],
+  "ending": {
+    "type": "motive_only_confession",
+    "accused": null,
+    "true_culprit": "suspect:marta_solis",
+    "asserted_motive": "motive:stolen_composition",
+    "final_convergence": [
+      0.76,
+      0.79,
+      0.76
+    ],
+    "_note": "Counterfactual branch \u2014 see branch_of=marta_via_archive_card"
+  }
+}

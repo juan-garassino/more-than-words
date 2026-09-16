@@ -1,0 +1,1327 @@
+{
+  "schema_version": 1,
+  "trajectory_id": "cold_trail_circular",
+  "case_id": "resonance_test",
+  "description": "The detective walks the same loop \u2014 practice wing, harmony, recital, ashby's office, porter's lodge \u2014 without holding any thread long enough to convert observation into a name. The chart is examined three times in three separate scenes; each time the eye refuses to settle. The archive is never visited. Convergence rises in shallow steps, plateaus at 0.40, then walks out under dawn.",
+  "outcome": "cold_trail",
+  "starting_hypothesis": "scene_revisit",
+  "tags": [
+    "circular_path",
+    "no_anchor",
+    "high_returned_count"
+  ],
+  "opening": {
+    "tokens": [
+      "location:practice_wing_basement",
+      "event:stairwell_fall",
+      "time:thursday_evening"
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "_note": "Cold open.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:none",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_silent",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.04,
+        0.05,
+        0.05
+      ]
+    },
+    {
+      "turn": 2,
+      "_note": "Cross.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.06,
+        0.07,
+        0.07
+      ]
+    },
+    {
+      "turn": 3,
+      "_note": "Question Marta cooperatively.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.08,
+        0.1,
+        0.08
+      ]
+    },
+    {
+      "turn": 4,
+      "_note": "Cross.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.1,
+        0.12,
+        0.1
+      ]
+    },
+    {
+      "turn": 5,
+      "_note": "Question.",
+      "player_card": "witness:ensemble_leader_pryce",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_ensemble_leader_pryce",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.12,
+        0.14,
+        0.12
+      ]
+    },
+    {
+      "turn": 6,
+      "_note": "Cross.",
+      "player_card": "travel:to_ashby_office",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_silent",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.14,
+        0.16,
+        0.14
+      ]
+    },
+    {
+      "turn": 7,
+      "_note": "Examine.",
+      "player_card": "object:examiners_marksheet",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.16,
+        0.18,
+        0.16
+      ]
+    },
+    {
+      "turn": 8,
+      "_note": "Examine score.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:orientation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.18,
+        0.2,
+        0.18
+      ]
+    },
+    {
+      "turn": 9,
+      "_note": "Return.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:distant_practice",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.2,
+        0.22,
+        0.2
+      ]
+    },
+    {
+      "turn": 10,
+      "_note": "Question again.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.22,
+        0.24,
+        0.22
+      ]
+    },
+    {
+      "turn": 11,
+      "_note": "Return.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.23,
+        0.25,
+        0.23
+      ]
+    },
+    {
+      "turn": 12,
+      "_note": "Examine.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.24,
+        0.25,
+        0.24
+      ]
+    },
+    {
+      "turn": 13,
+      "_note": "Return.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.25,
+        0.26,
+        0.25
+      ]
+    },
+    {
+      "turn": 14,
+      "_note": "Modifier.",
+      "player_card": "modifier:handrail_unsecured",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:recognized_object",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:recalls",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.26,
+        0.27,
+        0.26
+      ]
+    },
+    {
+      "turn": 15,
+      "_note": "Cross.",
+      "player_card": "travel:to_ashby_office",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.27,
+        0.28,
+        0.27
+      ]
+    },
+    {
+      "turn": 16,
+      "_note": "Cross.",
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:pursued_suspicion",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.28,
+        0.29,
+        0.28
+      ]
+    },
+    {
+      "turn": 17,
+      "_note": "Question.",
+      "player_card": "suspect:peter_haldane",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.29,
+        0.3,
+        0.29
+      ]
+    },
+    {
+      "turn": 18,
+      "_note": "Examine.",
+      "player_card": "object:maintenance_log",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.3,
+        0.31,
+        0.3
+      ]
+    },
+    {
+      "turn": 19,
+      "_note": "Return.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.31,
+        0.32,
+        0.31
+      ]
+    },
+    {
+      "turn": 20,
+      "_note": "Modifier \u2014 alibi holds.",
+      "player_card": "modifier:alone_after_nine",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:noticed_inconsistency",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:rehearsed_diction",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:alibi_holds",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.33,
+        0.32
+      ]
+    },
+    {
+      "turn": 21,
+      "_note": "Return.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.32,
+        0.33,
+        0.32
+      ]
+    },
+    {
+      "turn": 22,
+      "_note": "Return.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.33,
+        0.33,
+        0.33
+      ]
+    },
+    {
+      "turn": 23,
+      "_note": "Return.",
+      "player_card": "travel:to_ashby_office",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "turn": 24,
+      "_note": "Examine.",
+      "player_card": "object:examiners_marksheet",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.34,
+        0.35,
+        0.34
+      ]
+    },
+    {
+      "turn": 25,
+      "_note": "Return.",
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    },
+    {
+      "turn": 26,
+      "_note": "Question.",
+      "player_card": "witness:records_clerk_aldgate",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_records_clerk_aldgate",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object:maintenance_log",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.35,
+        0.36,
+        0.35
+      ]
+    },
+    {
+      "turn": 27,
+      "_note": "Return.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.36,
+        0.36,
+        0.36
+      ]
+    },
+    {
+      "turn": 28,
+      "_note": "Question \u2014 cooperative, brief.",
+      "player_card": "suspect:marta_solis",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:following_witness_lead",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:questions",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:partial_match",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.36,
+        0.37,
+        0.36
+      ]
+    },
+    {
+      "turn": 29,
+      "_note": "Return.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:listens",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_breaks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:silence_between_movements"
+      },
+      "convergence_after": [
+        0.37,
+        0.37,
+        0.37
+      ]
+    },
+    {
+      "turn": 30,
+      "_note": "Examine.",
+      "player_card": "object:printed_score",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:stayed",
+        "CAUSE": "cause:examining_evidence",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.37,
+        0.37,
+        0.37
+      ]
+    },
+    {
+      "turn": 31,
+      "_note": "Return.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.37,
+        0.38,
+        0.37
+      ]
+    },
+    {
+      "turn": 32,
+      "_note": "Return.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.38
+      ]
+    },
+    {
+      "turn": 33,
+      "_note": "Return.",
+      "player_card": "travel:to_ashby_office",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.39
+      ]
+    },
+    {
+      "turn": 34,
+      "_note": "Return.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 35,
+      "_note": "Return.",
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.41,
+        0.4
+      ]
+    },
+    {
+      "turn": 36,
+      "_note": "Return.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.37,
+        0.38,
+        0.37
+      ]
+    },
+    {
+      "turn": 37,
+      "_note": "Return.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.38
+      ]
+    },
+    {
+      "turn": 38,
+      "_note": "Return.",
+      "player_card": "travel:to_ashby_office",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.39
+      ]
+    },
+    {
+      "turn": 39,
+      "_note": "Return.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 40,
+      "_note": "Return.",
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.41,
+        0.4
+      ]
+    },
+    {
+      "turn": 41,
+      "_note": "Return.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.37,
+        0.38,
+        0.37
+      ]
+    },
+    {
+      "turn": 42,
+      "_note": "Return.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.38
+      ]
+    },
+    {
+      "turn": 43,
+      "_note": "Return.",
+      "player_card": "travel:to_ashby_office",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.39
+      ]
+    },
+    {
+      "turn": 44,
+      "_note": "Return.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 45,
+      "_note": "Return.",
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.41,
+        0.4
+      ]
+    },
+    {
+      "turn": 46,
+      "_note": "Return.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.37,
+        0.38,
+        0.37
+      ]
+    },
+    {
+      "turn": 47,
+      "_note": "Return.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.38
+      ]
+    },
+    {
+      "turn": 48,
+      "_note": "Return.",
+      "player_card": "travel:to_ashby_office",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.39
+      ]
+    },
+    {
+      "turn": 49,
+      "_note": "Return.",
+      "player_card": "travel:to_recital_hall",
+      "scene": {
+        "LOCATION": "location:recital_hall",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:printed_score",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "turn": 50,
+      "_note": "Return.",
+      "player_card": "travel:to_porters_lodge",
+      "scene": {
+        "LOCATION": "location:porters_lodge",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_peter_haldane",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.41,
+        0.4
+      ]
+    },
+    {
+      "turn": 51,
+      "_note": "Return.",
+      "player_card": "travel:to_practice_wing_basement",
+      "scene": {
+        "LOCATION": "location:practice_wing_basement",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:broken_handrail",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:lamp_flickers",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.37,
+        0.38,
+        0.37
+      ]
+    },
+    {
+      "turn": 52,
+      "_note": "Return.",
+      "player_card": "travel:to_harmony_classroom",
+      "scene": {
+        "LOCATION": "location:harmony_classroom",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:with_marta_solis",
+        "STANCE": "stance:cooperative",
+        "ACTION": "action:arrives",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "emotion:steady_breath",
+        "ATMOSPHERE": "atmosphere:radiator_ticks",
+        "REVELATION": "revelation:none",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.38,
+        0.38,
+        0.38
+      ]
+    },
+    {
+      "turn": 53,
+      "_note": "Return.",
+      "player_card": "travel:to_ashby_office",
+      "scene": {
+        "LOCATION": "location:ashby_office",
+        "TRANSITION": "transition:returned",
+        "CAUSE": "cause:revisiting_scene",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:examines",
+        "OBJECT_FOCUS": "object:examiners_marksheet",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:silence_holds",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.39,
+        0.39,
+        0.39
+      ]
+    },
+    {
+      "turn": 54,
+      "_note": "Cross to courtyard.",
+      "player_card": "travel:to_courtyard",
+      "scene": {
+        "LOCATION": "location:courtyard",
+        "TRANSITION": "transition:crossed_to",
+        "CAUSE": "cause:chronological_drift",
+        "PRESENCE": "presence:alone",
+        "STANCE": "stance:none",
+        "ACTION": "action:leaves",
+        "OBJECT_FOCUS": "object_focus:none",
+        "TELL": "tell:none",
+        "ATMOSPHERE": "atmosphere:dawn_approaches",
+        "REVELATION": "revelation:dead_end",
+        "BEAT": "beat:investigation",
+        "AUDIO_TELL": "audio_tell:none"
+      },
+      "convergence_after": [
+        0.4,
+        0.41,
+        0.4
+      ]
+    }
+  ],
+  "ending": {
+    "type": "cold_trail",
+    "final_convergence": [
+      0.4,
+      0.41,
+      0.4
+    ],
+    "_note": "Walks out at dawn without an accusation."
+  }
+}

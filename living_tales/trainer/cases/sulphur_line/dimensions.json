@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "case_id": "sulphur_line",
+
+  "_comment": "Multidimensional structured-scene schema for the Victorian chemical-works case. Hartwick Chemical Works, an unnamed northern industrial city, winter (February) 1889. A Board of Trade factory inspector (Henry Gould) is killed on the canal path beside the sulphur storage; the works manager Silas Oake used the unlit canal-bend rather than direct force. The red herring is James Whitlow, a compensated worker whose grievance is real and whose behaviour is suspicious but whose role is the opposite of suppression. Universal core dimensions shared with amber_cipher / hollow_season / third_signature; case-specific extension INDUSTRIAL_TELL covers the chemical / log-revision / sulphur-trace observables that are the precise physical evidence of the case (the maintenance log entries overwritten in slightly different ink and slightly different hand; the three-day gap; the shoe-print and button at the canal bend; the smell of sulphur on a coat that was meant to have stayed home). Tokens listed in anchor_tokens are graph/convergence anchors only — never emitted directly.",
+
+  "dimensions": [
+    {
+      "name": "LOCATION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "location:works_yard",
+        "location:processing_line",
+        "location:sulphur_store",
+        "location:dispatch_office",
+        "location:foreman_station",
+        "location:canal_path",
+        "location:works_gate",
+        "location:oake_office",
+        "location:oake_house",
+        "location:workers_lockers",
+        "location:none"
+      ]
+    },
+    {
+      "name": "TRANSITION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "transition:stayed",
+        "transition:crossed_to",
+        "transition:entered",
+        "transition:exited",
+        "transition:returned",
+        "transition:pursued_to",
+        "transition:called_away_to",
+        "transition:descended_to",
+        "transition:none"
+      ]
+    },
+    {
+      "name": "CAUSE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "cause:following_witness_lead",
+        "cause:examining_evidence",
+        "cause:recognized_object",
+        "cause:noticed_inconsistency",
+        "cause:pursued_suspicion",
+        "cause:revisiting_scene",
+        "cause:summoned",
+        "cause:chronological_drift",
+        "cause:reading_maintenance_log",
+        "cause:tracing_log_revision",
+        "cause:none"
+      ]
+    },
+    {
+      "name": "PRESENCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "presence:with_silas_oake",
+        "presence:with_james_whitlow",
+        "presence:with_mrs_oake",
+        "presence:with_foreman_craggs",
+        "presence:with_alderman_hicks",
+        "presence:with_dr_poole",
+        "presence:with_works_clerk",
+        "presence:with_night_watchman",
+        "presence:with_bargee",
+        "presence:with_widow_birch",
+        "presence:with_dispatch_porter",
+        "presence:alone"
+      ]
+    },
+    {
+      "name": "STANCE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "stance:cooperative",
+        "stance:defensive",
+        "stance:evasive",
+        "stance:hostile",
+        "stance:unaware",
+        "stance:none"
+      ]
+    },
+    {
+      "name": "ACTION",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "action:examines",
+        "action:questions",
+        "action:notices",
+        "action:discovers",
+        "action:confronts",
+        "action:follows",
+        "action:waits",
+        "action:leaves",
+        "action:arrives",
+        "action:recalls",
+        "action:cross_references",
+        "action:none"
+      ]
+    },
+    {
+      "name": "OBJECT_FOCUS",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "object:maintenance_log",
+        "object:accident_log",
+        "object:revised_entry",
+        "object:dispatch_ledger",
+        "object:sulphur_scales",
+        "object:sample_receipt",
+        "object:valve_part",
+        "object:canal_button",
+        "object:shoe_print_cast",
+        "object:silence_payments_book",
+        "object:inspector_satchel",
+        "object:widows_document",
+        "object:foremans_keys",
+        "object:gould_notebook",
+        "object_focus:none"
+      ]
+    },
+    {
+      "name": "TELL",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "emotion:steady_hands",
+        "emotion:measured_breath",
+        "emotion:paused_reply",
+        "emotion:closed_posture",
+        "emotion:practised_account",
+        "emotion:bargained_silence",
+        "tell:paled",
+        "tell:tightened",
+        "tell:glanced_aside",
+        "tell:silent",
+        "tell:hesitated",
+        "tell:over_explained",
+        "tell:softened",
+        "tell:none"
+      ]
+    },
+    {
+      "name": "ATMOSPHERE",
+      "universal": true,
+      "always_emit": true,
+      "vocab": [
+        "atmosphere:sulphur_smell_drifts",
+        "atmosphere:chimney_smoke_settles",
+        "atmosphere:canal_water_still",
+        "atmosphere:winter_dusk_falls",
+        "atmosphere:gas_lamp_flickers",
+        "atmosphere:gas_lamp_steady",
+        "atmosphere:silence_holds",
+        "atmosphere:silence_breaks",
+        "atmosphere:works_whistle",
+        "atmosphere:dawn_approaches",
+        "atmosphere:none"
+      ]
+    },
+    {
+      "name": "REVELATION",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "revelation:name_uncovered": 0.5,
+        "revelation:motive_emerges": 0.5,
+        "revelation:confirmation": 0.4,
+        "revelation:shadow_of_gap_lands": 0.6
+      },
+      "vocab": [
+        "revelation:contradiction_surfaces",
+        "revelation:alibi_holds",
+        "revelation:name_uncovered",
+        "revelation:motive_emerges",
+        "revelation:dead_end",
+        "revelation:partial_match",
+        "revelation:confirmation",
+        "revelation:shadow_of_gap_lands",
+        "revelation:none"
+      ]
+    },
+    {
+      "name": "BEAT",
+      "universal": true,
+      "always_emit": true,
+      "gated_by_convergence": {
+        "beat:closing_in": 0.5,
+        "beat:verdict_ready": 0.75
+      },
+      "vocab": [
+        "beat:orientation",
+        "beat:investigation",
+        "beat:closing_in",
+        "beat:verdict_ready"
+      ]
+    },
+    {
+      "name": "INDUSTRIAL_TELL",
+      "universal": false,
+      "always_emit": true,
+      "case_specific": true,
+      "_comment": "Chemical/industrial observables — the case's precise physical evidence. INDUSTRIAL_TELL fires when the detective is inspecting written or material traces left by the works: the maintenance-log entries overwritten in slightly different ink and slightly different handwriting (not a forgery — a revision); the three-day gap in the accident log from September 1886; the shadow-of-gap (a reference in an earlier entry to a note that should have followed it and did not); the canal-bank shoe-prints at the bend; the button found in the gravel; the smell of sulphur on a coat that was meant to have stayed home with the wife; the dispatch ledger arrivals that do not match what the scales say was weighed. log_entry_revised is the central one — Gould knew the difference between a correction made at the time and a correction made later. shadow_of_gap is the LATE-phase pivot that closes the case onto Oake.",
+      "gated_by_convergence": {
+        "industrial_tell:log_entry_revised": 0.4,
+        "industrial_tell:shadow_of_gap": 0.6,
+        "industrial_tell:button_at_bend": 0.5,
+        "industrial_tell:sulphur_on_coat": 0.5
+      },
+      "vocab": [
+        "industrial_tell:log_entry_revised",
+        "industrial_tell:ink_does_not_match",
+        "industrial_tell:hand_does_not_match",
+        "industrial_tell:three_day_gap",
+        "industrial_tell:shadow_of_gap",
+        "industrial_tell:button_at_bend",
+        "industrial_tell:shoe_prints_paired",
+        "industrial_tell:sulphur_on_coat",
+        "industrial_tell:scales_mismatch_ledger",
+        "industrial_tell:safety_record_holds",
+        "industrial_tell:none"
+      ]
+    }
+  ],
+
+  "_anchors_only_comment": "Tokens that contribute to convergence + graph but are never directly emitted as scene-tuple slots. Player cards (motives, modifiers, legacy actions, legacy time tokens, the three INVARIANT culprit/event/motive tokens) and graph anchors driving logit_bias. The emotion:* tokens listed in TELL above ARE emitted; the ACTION_LEGACY and TIME_LEGACY listed here are not.",
+  "anchor_tokens": {
+    "INVARIANT": [
+      "suspect:silas_oake",
+      "event:canal_path",
+      "motive:safety_falsification"
+    ],
+    "MOTIVE": [
+      "motive:safety_falsification",
+      "motive:birch_concealment",
+      "motive:license_survival",
+      "motive:compensation_avoidance",
+      "motive:whitlow_grievance",
+      "motive:works_continuance",
+      "motive:1882_warning_ignored"
+    ],
+    "MODIFIER": [
+      "modifier:ink_batch_later",
+      "modifier:hand_slightly_different",
+      "modifier:two_pairs_of_prints_at_bend",
+      "modifier:button_matches_oake_coat",
+      "modifier:september_1886_gap",
+      "modifier:earlier_entry_references_missing_note",
+      "modifier:third_processing_line_borderline_in_1882",
+      "modifier:widow_document_unread_by_signer",
+      "modifier:whitlow_seen_near_works_twice",
+      "modifier:whitlow_document_unsigned",
+      "modifier:foreman_kept_keys_on_belt",
+      "modifier:service_road_behind_storage"
+    ],
+    "EVENT": [
+      "event:canal_path",
+      "event:gould_discovered_at_dawn",
+      "event:september_1886_valve_failure",
+      "event:thursday_evening_walk",
+      "event:1882_prior_inspection"
+    ],
+    "TIME_LEGACY": [
+      "time:monday_inspection_begins",
+      "time:tuesday_logs_requested",
+      "time:thursday_evening_walk",
+      "time:nine_pm",
+      "time:friday_morning_found"
+    ],
+    "ACTION_LEGACY": [
+      "action:logs_requested",
+      "action:logs_revised_later",
+      "action:walked_with_gould",
+      "action:button_lost",
+      "action:widow_paid_silence",
+      "action:witnesses_paid_silence",
+      "action:service_road_taken",
+      "action:dispatch_weighed_short",
+      "action:valve_failure_recorded"
+    ]
+  },
+
+  "_player_cards_comment": "Tokens the player can play as cards. Inquiry cards (suspects/witnesses/objects/motives/legacy actions) + travel cards (one per location).",
+  "player_cards": {
+    "inquiry": "@all_PLAYER_or_SHARED_with_dim_in_[OBJECT_FOCUS,PRESENCE,ACTION_LEGACY,MOTIVE]",
+    "travel": [
+      "travel:to_works_yard",
+      "travel:to_processing_line",
+      "travel:to_sulphur_store",
+      "travel:to_dispatch_office",
+      "travel:to_foreman_station",
+      "travel:to_canal_path",
+      "travel:to_works_gate",
+      "travel:to_oake_office",
+      "travel:to_oake_house",
+      "travel:to_workers_lockers"
+    ]
+  }
+}
