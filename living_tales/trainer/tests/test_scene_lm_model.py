@@ -91,3 +91,26 @@ def test_save_load_round_trip(production_cases, tmp_path):
     ids = torch.randint(0, len(vocab), (1, 10))
     with torch.no_grad():
         assert torch.allclose(model.eval()(ids), m2.eval()(ids), atol=1e-6)
+
+
+class _Payload:
+    """Arbitrary class: a full-pickle load would instantiate it (RCE vector)."""
+
+    def __reduce__(self):
+        return (_Payload, ())
+
+
+def test_load_rejects_arbitrary_pickled_objects(production_cases, tmp_path):
+    """SceneLM.load must use weights_only=True: checkpoints are plain
+    dicts/tensors, so a tampered .pt carrying objects must be refused."""
+    import pickle
+
+    import pytest
+
+    model, vocab = _tiny(production_cases)
+    p = tmp_path / "evil.pt"
+    torch.save({"config": {}, "state_dict": model.state_dict(),
+                "vocab": vocab.to_dict(), "case_id": None,
+                "extra": {"x": _Payload()}}, p)
+    with pytest.raises(pickle.UnpicklingError):
+        SceneLM.load(p)

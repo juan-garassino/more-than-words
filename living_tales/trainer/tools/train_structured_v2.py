@@ -321,7 +321,8 @@ def stage_base(args):
 def stage_adapter(args):
     case = args.case
     print(f"[adapter] case: {case}")
-    base_ckpt = torch.load(args.base_checkpoint, map_location="cpu")
+    base_ckpt = torch.load(args.base_checkpoint, map_location="cpu",
+                           weights_only=True)
     dim_order = base_ckpt["dim_order"]
     base_dim_vocab = base_ckpt["dim_vocab"]
     base_full_vocab = base_ckpt["full_vocab"]

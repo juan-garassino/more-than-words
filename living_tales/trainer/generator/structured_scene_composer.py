@@ -85,7 +85,8 @@ class SceneComposer:
     def _hash_pick(seq: List[Any], salt: str) -> Any:
         if not seq:
             return None
-        h = int(hashlib.sha1(salt.encode("utf-8")).hexdigest(), 16)
+        h = int(hashlib.sha1(salt.encode("utf-8"),
+                             usedforsecurity=False).hexdigest(), 16)
         return seq[h % len(seq)]
 
     def _salted(self, salt: str) -> str:

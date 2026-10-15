@@ -67,7 +67,7 @@ def _run(model, ds, args, device, out_dir, artifact, vocab, case_id=None,
     state_path = out_dir / f"{artifact.removesuffix('.pt')}.train_state.pt"
     step = 0
     if args.resume and state_path.exists():
-        state = torch.load(state_path, map_location=device)
+        state = torch.load(state_path, map_location=device, weights_only=True)
         model.load_state_dict(state["model"])
         opt.load_state_dict(state["opt"])
         step = state["step"]
