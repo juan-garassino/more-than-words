@@ -174,7 +174,7 @@ class SceneLM(nn.Module):
     @classmethod
     def load(cls, path, map_location="cpu"):
         from trainer.scene_lm_vocab import SceneVocab
-        ckpt = torch.load(path, map_location=map_location, weights_only=False)
+        ckpt = torch.load(path, map_location=map_location, weights_only=True)
         model = cls(SceneLMConfig(**ckpt["config"]))
         model.load_state_dict(ckpt["state_dict"])
         return model, SceneVocab.from_dict(ckpt["vocab"]), ckpt
