@@ -1,202 +1,120 @@
 # Living Tales
 
-Living Tales is a shared on-device game engine for two tracks:
-- `mystery`: converging cases where the player guides the field toward hidden invariants
-- `creature`: oscillating care loops where state rises and falls through decay, action, combo, and recovery
+Living Tales is a symbolic mystery game. A small transformer, overfitted per case,
+co-narrates with the player: the player plays a card, the model emits a scene as
+a tuple of symbolic tokens, and a template composer turns the tokens into
+third-person past-tense prose. There is no LLM at runtime and the model never
+sees or emits natural language.
 
-Both tracks ship from token IDs, weighted state vectors, and graph structure. No server, no LLM, no text generation at runtime.
+## Status
 
----
+| Part | State |
+|---|---|
+| v3 engine (`SceneLM`, runtime, composer, eval gate) | code complete, covered by `pytest` |
+| First v3 training run (Colab) | **pending**; no trained v3 checkpoint exists in this repo and there are no v3 results to report |
+| Authored data | 3 production cases, 190 hand-authored trajectories (see below) |
+| v2 structured-scene engine | kept for A/B comparison, last trained runtime |
+| Hopfield / KD / REINFORCE pipeline | legacy, preserved on disk, not the runtime |
 
-## Tracks
+Source of truth for current status and invariants: [`CLAUDE.md`](CLAUDE.md).
 
-### Mystery
+## How it works (v3)
 
-The player places triads of tokens onto a casebook. Each placement updates a convergence state across attractor dimensions. When the field converges to the stored solution, the case is solved.
+- A play session is one flat token string:
+  `<bos> <card> {card} <scene> {dim tokens} ... <accuse> {accused} <scene> {...} <outcome:class> <eos>`.
+- `SceneLM` (`living_tales/trainer/trainer/scene_lm.py`) is a decoder-only transformer
+  with RoPE and LoRA on all linear layers. With the default config (5 layers, width 256,
+  8 heads) and the 436-token union vocabulary it has 4,336,384 parameters.
+- Within a scene, dims are generated one token at a time in a fixed grammar order
+  (TRANSITION, LOCATION, PRESENCE, STANCE, CAUSE, ACTION, OBJECT_FOCUS, TELL,
+  ATMOSPHERE, REVELATION, BEAT; case-specific dims are inserted after TELL).
+  The legal vocabulary per position is a logit mask, intersected with the case's
+  hard constraints (`constraints.json`, compiled in `generator/constraints_compiler.py`).
+- Convergence is measured, not scripted: `AttractorMeter` sums the authored attractor
+  weights (`tokens.json`) of the tokens played and emitted.
+- Accusations are in-stream turns. After the confrontation scene the model chooses
+  between continuing and an `<outcome:*>` token, so a wrong accusation can leave the
+  story running.
+- Training is two-stage (`tools/train_scene_lm.py`): `base` on the union corpus
+  (universal dims), then a per-case `adapter` (LoRA + token embedding trainable).
+- `tools/eval_scene_lm.py` is the pass/fail gate: six probes (binding >= 0.95,
+  coherence violations = 0, closing arc >= 2/3 runs, diversity max-share <= 0.40,
+  outcome accuracy >= 0.90, convergence Spearman >= 0.70).
+  `tools/error_analysis_scene_lm.py` reports where a failing checkpoint goes wrong.
 
-### Creature
+Design: [`docs/superpowers/specs/2026-06-12-scene-language-model-design.md`](docs/superpowers/specs/2026-06-12-scene-language-model-design.md),
+plan: [`docs/superpowers/plans/2026-06-12-scene-lm-v3.md`](docs/superpowers/plans/2026-06-12-scene-lm-v3.md).
 
-The creature track uses the same cartridge architecture in `oscillating` mode. Positive weights lift care dimensions, negative weights pull them down, and the loop is designed to cycle through need, mischief, repair, and recovery rather than end in a solved state.
+## Data
 
-`little_creature_M` is the current canonical creature proof-of-concept slice.
+Packed case data lives in `living_tales/trainer/cases/<case>/`
+(`dimensions.json`, `constraints.json`, `tokens.json`, `phrases.json`, `trajectories/`, ...).
 
----
-
-## What ships
-
-**The transformer ships. The Hopfield never does.**
-
-| Component | Role | Ships? |
+| Case | Trajectories | Case-specific dim |
 |---|---|---|
-| Hopfield network | Training scaffold and proof oracle | No |
-| `model.pt` | Trained Hopfield weights | No |
-| `policy.pt` | Transformer trained via KD + RL | **Yes — runs the iOS game** |
-| `.cartridge` | Packed case spec (vocabulary, graph, convergence rules) | **Yes** |
+| `amber_cipher` | 65 | none |
+| `attended_hour` | 64 | MEDICAL_TELL |
+| `venetian_mirror` | 61 | ART_TELL |
 
-Each cartridge is a DLC-sized unit of authored state and graph data. Mystery additionally ships a trained policy; creature is currently evaluated as a heuristic/system proof-of-concept.
-
----
-
-## The cases
-
-Twenty-four cases across mystery, naval, and adventure formats. See [`docs/cases/`](docs/cases/) for the full narrative specifications.
-
-### Mystery (01–20)
-
-| # | Title | Period | Setting | Difficulty |
-|---|---|---|---|---|
-| 01 | The Amber Cipher | 1887 | Railway junction, Essex | medium |
-| 02 | The Venetian Mirror | 1931 | Palazzo, Venice carnival | hard |
-| 03 | Fog Over Brussels | 1961 | Belgian embassy | hard |
-| 04 | The Hollow Season | 1907 | Edwardian country house | medium |
-| 05 | The Resonance Test | 1974 | Music conservatory, London | easy |
-| 06 | The Tidal Interval | Present | Island research station | medium |
-| 07 | The Third Signature | 1935 | London literary club | hard |
-| 08 | The Sulphur Line | 1889 | Victorian chemical works | medium |
-| 09 | The Orchard at Dusk | 1903 | Rural England, harvest | easy |
-| 10 | The Attended Hour | Present | Hospital cardiac ward | hard |
-| 11 | The Winter Station | 1912 | Antarctic research depot | medium |
-| 12 | The Monsoon Ledger | 1905 | Calcutta, Bengal Partition | medium |
-| 13 | The Observatory Clock | 1900 | Paris Observatory | medium |
-| 14 | The Endgame | 1972 | Reykjavik chess championship | hard |
-| 15 | The Amber Silence | 1943 | Occupied Normandy | hard |
-| 16 | The Signal Fire | 1943 | Pacific island, WWII | hard |
-| 17 | The Covenant Garden | 1349 | Yorkshire monastery | medium |
-| 18 | The Mountain Exchange | 1938 | Swiss Alps, pre-war | hard |
-| 19 | The Instrument Landing | 1954 | Post-war London | medium |
-| 20 | The Burning Glass | 1909 | Istanbul, Young Turk era | medium |
-
-### Naval (21)
-
-| # | Title | Period | Setting | Difficulty |
-|---|---|---|---|---|
-| 21 | The Dead Calm | 1698 | Pirate brigantine, Caribbean | hard |
-
-### Adventure (A01–A03)
-
-Adventure cases converge toward a **chosen state** rather than a fixed truth. The player's choices determine what becomes possible. The field records them.
-
-| # | Title | Period | Protagonist |
-|---|---|---|---|
-| A01 | The Thirteenth Tide | 1697 | Sera Vane, cartographer's daughter, Nassau |
-| A02 | The Glass Cartographer | 1627 | Lena Faber, glassmaker's daughter, Bohemia |
-| A03 | The Iron Cartridge | 1876 | Elias Drum, interpreter, Dakota Territory |
-
----
+Trajectory counts are the number of files in each `trajectories/` directory (excluding
+`manifest.json`). `cases/` at the repo root holds 19 source case specs and
+[`docs/cases/`](docs/cases/) holds narrative specs for 24 cases; only the three above
+have v3 trajectory data. Every trajectory in `amber_cipher` passes
+`validate_trajectories.py` (65 trajectories, 0 rule violations, 0 vocab violations).
 
 ## Quick start
 
-```bash
-# Full pipeline for amber_cipher (CPU, ~40 min)
-make ac-pipeline
-
-# Full pipeline on Colab GPU (~8 min)
-make ac-pipeline-gpu
-
-# Or run stages individually:
-make ac-s01-validate        # check cases/amber_cipher.json
-make ac-s02-pack            # pack → living_tales/trainer/cases/amber_cipher/
-make ac-s03-train-hopfield  # train Hopfield model → outputs/amber_cipher/model.pt
-make ac-s04-train-policy    # supervised + REINFORCE → outputs/amber_cipher/policy.pt
-make ac-s05-benchmark       # compare both, print XCODE RECOMMENDATION
-```
-
-At the end of `ac-s05-benchmark`:
-
-```
-
-For creature balancing:
+Requires Python 3.10+ and `numpy torch rich` (`pytest` for tests).
 
 ```bash
-python3 living_tales_case_validator.py cases/little_creature_M.json
-python3 -m evals.utils.baseline_runner little_creature_M --n-games 100
-python3 living_tales/trainer/tools/report_creature_case.py little_creature_M --runs 100
-```
-================================================================
-  XCODE MODEL RECOMMENDATION
-================================================================
-  DECISION  : SHIP TRANSFORMER
-  USE FILE  : outputs/amber_cipher/policy.pt
-================================================================
+pip install -r living_tales/trainer/requirements.txt pytest
+
+# Tests (CPU, includes short smoke tests of the training harness)
+cd living_tales/trainer && python3 -m pytest tests -q
+
+# Validate hand-authored trajectories against the hard-mask constraints
+python3 living_tales/trainer/tools/validate_trajectories.py amber_cipher --all
 ```
 
----
+Training is meant for a GPU runtime (Colab; see `notebooks/scene_lm_colab.ipynb`),
+with checkpoints written straight to `OUTPUT_DIR`:
 
-## Architecture
-
-The shared engine now supports two explicit modes:
-- `converging`: mystery-style upward-only state accumulation
-- `oscillating`: creature-style bounded rise/fall with midpoint starts
-
-```
-MysteryEnergyModel
-├── TokenEmbedding          token_id + class + phase + stream + agency → (B, 64)
-├── CasebookEncoder         attention over placed tokens → context (B, 128)
-├── HopfieldRetrievalHead   Q·K^T retrieval → invariant logits (B, n_dims, V)
-├── TriadEnergyHead         energy score for a candidate triad (B, 1)
-├── ConvergenceHead         predicted convergence delta per dim (B, n_dims)
-└── TokenResonanceHead      field resonance → next-token suggestions (B, V)
+```bash
+make train-scene-lm-all  OUTPUT_DIR=/content/drive/MyDrive/living_tales_outputs
+make eval-gate-scene-lm  OUTPUT_DIR=/content/drive/MyDrive/living_tales_outputs
+make error-analysis-scene-lm OUTPUT_DIR=/content/drive/MyDrive/living_tales_outputs
 ```
 
-The `HopfieldRetrievalHead` is the game policy. It implements transformer self-attention where Q = query vectors projected from context (one per attractor dimension) and K = V = token embedding matrix for the full vocabulary. This is the Modern Hopfield / transformer-attention equivalence: `scores = QK^T / sqrt(d)`.
-
-See [`docs/architecture.md`](docs/architecture.md) for the full model breakdown.
-See [`docs/creature.md`](docs/creature.md) for the creature-specific loop and balancing vocabulary.
-
----
+After a checkpoint exists, play it with
+`cd living_tales/trainer && python3 tools/pygame_play.py <case> --engine scene_lm --lang en`
+(needs `pygame`, which is not in `requirements.txt`; not verified in this sweep).
 
 ## Repository layout
 
 ```
-more_than_words/
-├── CLAUDE.md                     project instructions
-├── Makefile                      all pipeline commands
-├── living_tales_case_validator.py  validates case JSON before packing
-│
-├── cases/                        case definitions (JSON)
-│   ├── amber_cipher.json         trained, proof passed
-│   ├── amber_cipher_M.json       large variant (5-dim, 152 tokens)
-│   └── *.json                    draft cases
-│
-├── docs/
-│   ├── architecture.md           model components deep-dive
-│   ├── creature.md               creature track and oscillating mode
-│   ├── training.md               training philosophy + distillation
-│   └── cases/                    narrative specifications for all 24 cases
-│       ├── index.md
-│       ├── 01_amber_cipher.md … 21_dead_calm.md
-│       └── A01_thirteenth_tide.md … A03_iron_cartridge.md
-│
-├── notebooks/                    Colab and development notebooks
-│
-└── living_tales/trainer/
-    ├── core/                     shared engine, mode logic, token roles
-    ├── generator/                PathSampler
-    ├── trainer/                  MysteryEnergyModel, train_mystery.py, train_policy.py
-    ├── rl/                       CasebookEnv, rewards.py
-    ├── validator/                convergence_proof.py
-    ├── tools/                    pack_case.py, benchmark_models.py, report_creature_case.py
-    └── outputs/                  model.pt + policy.pt per case
+Makefile                      v3 targets plus legacy pipelines
+cases/                        source case specs (JSON)
+docs/                         architecture.md, training.md, creature.md (legacy Hopfield-era),
+                              cases/ (narrative specs), superpowers/ (v3 design + plan)
+evals/                        separate pytest harness (convergence, diversity, chronology, ...)
+notebooks/                    Colab notebooks
+living_tales/ios/             Swift app consuming packed cartridges
+living_tales/trainer/
+  trainer/                    models: scene_lm*.py (v3), structured_scene_model_v2.py, legacy
+  generator/                  scene_lm_runtime.py, constraints_compiler.py, composer, samplers
+  tools/                      train/eval/error-analysis CLIs, validators, play and simulate tools
+  cases/<case>/               packed data per case
+  tests/                      pytest suite
 ```
 
----
+`docs/architecture.md`, `docs/training.md` and `docs/creature.md` describe the earlier
+Hopfield/KD/REINFORCE design and the creature track; they predate v3.
 
-## Invariants (non-negotiable)
+## Invariants
 
-- The engine never reads surface expressions (token labels are UI-only).
-- In `converging` mode, score is `min(convergence_dimensions)` — the weakest attractor dimension gates the solution.
-- In `oscillating` mode, dimensions are bounded and start at a midpoint so they can rise and fall over time.
-- Cartridges cannot export without a passed proof gate.
-- `subgraph_energy` is the Lyapunov function. For non-negative weights it is guaranteed monotone decreasing as tokens are added.
-
----
-
-## Requirements
-
-```bash
-pip install -r living_tales/trainer/requirements.txt
-# or:
-make colab-install
-```
-
-Python 3.10+, PyTorch 2.x. No GPU required for `amber_cipher` (CPU ~40 min full pipeline).
+- Tokens are symbolic; the engine never reads surface text.
+- Trajectories are hand-authored or hand-reviewed, never generated from attractor walks.
+- Vocabulary and grammar are baked into each checkpoint; no cross-case bleed.
+- Grammar and constraint masks apply at inference.
+- Every `phrases.json` entry has English and Spanish.
+- Real training runs on Colab, not on a local machine.
