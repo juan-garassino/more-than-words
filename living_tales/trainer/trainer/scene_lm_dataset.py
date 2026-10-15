@@ -18,8 +18,14 @@ Conversion is fully mechanical from the trajectory files.
 from __future__ import annotations
 
 import json
+import math
+import random
+from collections import Counter
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, Iterable, List, Optional
+
+import torch
+from torch.utils.data import Dataset
 
 from trainer.scene_lm_vocab import GRAMMAR_ORDER, SceneVocab
 
@@ -28,7 +34,11 @@ CASES_DIR = TRAINER_ROOT / "cases"
 
 
 def turn_marker_and_token(player_card: str) -> List[str]:
-    """Map a trajectory player_card to its (marker, token) pair."""
+    """Map a trajectory ``player_card`` to its ``[marker, token]`` pair.
+
+    ``ACCUSE:<x>`` becomes ``["<accuse>", "<x>"]`` (``ACCUSE:none`` becomes
+    ``"accuse:none"``); any other card becomes ``["<card>", card]``.
+    """
     if player_card.startswith("ACCUSE:"):
         stripped = player_card.removeprefix("ACCUSE:")
         return ["<accuse>", "accuse:none" if stripped == "none" else stripped]
@@ -42,7 +52,12 @@ def trajectory_to_tokens(
     parent: Optional[Dict] = None,
     universal_only: bool = False,
 ) -> List[str]:
-    """Flatten one trajectory (optionally a cf-branch with its parent anchor)."""
+    """Flatten one trajectory into token strings (``<bos>`` ... ``<eos>``).
+
+    For a counterfactual branch pass its ``parent``: the parent's turns before
+    ``traj["branch_turn"]`` are emitted first as the anchor. With
+    ``universal_only`` the case-specific dims are dropped from each scene.
+    """
     slots = vocab.slot_dims(case_id)
     if universal_only:
         slots = [d for d in slots if d in GRAMMAR_ORDER]
@@ -73,7 +88,12 @@ def load_case_token_sequences(
     cases_dir: Path,
     vocab: SceneVocab,
     universal_only: bool = False,
-) -> List[List[str]]:  # noqa: D103 — see module docstring
+) -> List[List[str]]:
+    """Convert every trajectory of ``case_id`` into a token-string sequence.
+
+    Reads ``cases_dir/<case_id>/trajectories/*.json`` (sorted, skipping
+    ``manifest.json``) and resolves ``branch_of`` parents by trajectory id.
+    """
     tdir = cases_dir / case_id / "trajectories"
     by_id: Dict[str, Dict] = {}
     for f in sorted(tdir.glob("*.json")):
@@ -90,13 +110,6 @@ def load_case_token_sequences(
 
 
 # ── Dataset ──────────────────────────────────────────────────────────────────
-
-import math
-import random
-from collections import Counter
-
-import torch
-from torch.utils.data import Dataset
 
 # card-id prefix -> dims whose loss is doubled on the following scene
 BINDING_MAP = {
@@ -147,9 +160,31 @@ class SceneLMDataset(Dataset):
     boundaries is what lets an accusation end (or not end) the story at runtime.
     """
 
-    def __init__(self, case_ids, vocab, universal_only=False,
-                 augment_truncate=True, seed=0, cases_dir=None,
-                 split="all", holdout_frac=0.1):
+    def __init__(self, case_ids: Iterable[str], vocab: SceneVocab,
+                 universal_only: bool = False, augment_truncate: bool = True,
+                 seed: int = 0, cases_dir: Optional[Path] = None,
+                 split: str = "all", holdout_frac: float = 0.1) -> None:
+        """
+        Parameters
+        ----------
+        case_ids : iterable of str
+            Cases to load.
+        vocab : SceneVocab
+            Shared vocabulary / grammar.
+        universal_only : bool
+            Drop case-specific dims (base-model stage).
+        augment_truncate : bool
+            With probability 0.5, cut sequences of more than 4 turns at a
+            random turn boundary (``__getitem__`` is therefore stochastic).
+        seed : int
+            Seed for the augmentation RNG.
+        cases_dir : Path, optional
+            Defaults to ``trainer/cases``.
+        split : {"all", "train", "holdout"}
+            Stratified split by (case, outcome); see ``_stratified_split``.
+        holdout_frac : float
+            Fraction of each large-enough class held out.
+        """
         self.vocab = vocab
         self.universal_only = universal_only
         self.augment_truncate = augment_truncate
@@ -163,6 +198,7 @@ class SceneLMDataset(Dataset):
             self.examples = _stratified_split(self.examples, split, holdout_frac)
 
     def slot_index(self, case_id: str, dim: str) -> int:
+        """Position of ``dim`` within a scene's slots for ``case_id``."""
         return self._slots(case_id).index(dim)
 
     def _slots(self, case_id: str) -> List[str]:
@@ -174,10 +210,15 @@ class SceneLMDataset(Dataset):
     def _turn_len(self, case_id: str) -> int:
         return 3 + len(self._slots(case_id))   # marker + token + <scene> + dims
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.examples)
 
-    def __getitem__(self, i):
+    def __getitem__(self, i: int) -> Dict[str, torch.Tensor]:
+        """Return one example as a dict of 1-D tensors of length ``T``.
+
+        ``ids`` (int64) token ids; ``loss_mask`` (int64, 1 = supervised);
+        ``loss_weight`` (float32, 2.0 on card-bound dims, else 1.0).
+        """
         case_id, toks = self.examples[i]
         toks = list(toks)
         tl = self._turn_len(case_id)
@@ -207,7 +248,12 @@ class SceneLMDataset(Dataset):
         return {"ids": ids, "loss_mask": loss_mask, "loss_weight": loss_weight}
 
     def class_balance_weights(self) -> torch.Tensor:
-        """Inverse-sqrt frequency weights (capped) for collapsed-dim tokens."""
+        """Inverse-sqrt frequency weights (capped) for collapsed-dim tokens.
+
+        Returns a float32 tensor of shape ``(len(vocab),)``: 1.0 everywhere
+        except tokens of ``COLLAPSED_DIMS``, weighted ``sqrt(median/count)``
+        clipped to ``[1, CLASS_BALANCE_CAP]``.
+        """
         counts: Counter = Counter()
         collapsed_ids = set()
         for cid in {c for c, _ in self.examples}:
@@ -226,7 +272,11 @@ class SceneLMDataset(Dataset):
                 w[tid] = min(CLASS_BALANCE_CAP, max(1.0, math.sqrt(med / c)))
         return w
 
-    def collate(self, batch):
+    def collate(self, batch: List[Dict[str, torch.Tensor]]) -> Dict[str, torch.Tensor]:
+        """Right-pad a list of examples into ``(B, T_max)`` tensors.
+
+        Padding uses ``<pad>`` ids, ``loss_mask`` 0 and ``loss_weight`` 1.
+        """
         n = max(len(b["ids"]) for b in batch)
         pad = self.vocab.encode("<pad>")
         out = {
