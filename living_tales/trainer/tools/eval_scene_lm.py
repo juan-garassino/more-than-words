@@ -50,6 +50,11 @@ LATE_BEATS = {"beat:closing_in", "beat:verdict_ready"}
 
 
 def spearman(a, b):
+    """Spearman rank correlation of two equal-length numeric sequences.
+
+    Ties are ranked by position (not averaged), and sequences of length <= 2
+    return 1.0.
+    """
     def ranks(x):
         order = sorted(range(len(x)), key=lambda i: x[i])
         r = [0.0] * len(x)
@@ -66,6 +71,12 @@ def spearman(a, b):
 
 def probe_binding(make_engine, vocab, case_id, n_turns=25, n_seeds=3,
                   max_misses=10):
+    """Fraction of random card plays whose scene respects the card's binding.
+
+    Plays ``n_turns`` uniformly random cards in each of ``n_seeds`` fresh
+    sessions and applies ``BINDING_CHECK`` per card class. Returns
+    ``{"score", "n", "sample_misses"}`` (at most ``max_misses`` miss records).
+    """
     hits = total = 0
     misses = []
     for seed in range(n_seeds):
@@ -90,6 +101,7 @@ def probe_binding(make_engine, vocab, case_id, n_turns=25, n_seeds=3,
 
 
 def probe_coherence(make_engine, case_id, n_turns=25, n_seeds=3):
+    """List scenes pairing an intransitive ACTION with a non-empty OBJECT_FOCUS."""
     violations = []
     for seed in range(n_seeds):
         eng = make_engine(seed)
@@ -106,6 +118,7 @@ def probe_coherence(make_engine, case_id, n_turns=25, n_seeds=3):
 
 
 def probe_closing_arc(make_engine, case_id, n_turns=25, n_seeds=3):
+    """Count seeded runs whose BEAT reaches a ``LATE_BEATS`` value."""
     ok = 0
     per_run = []
     for seed in range(n_seeds):
@@ -121,6 +134,7 @@ def probe_closing_arc(make_engine, case_id, n_turns=25, n_seeds=3):
 
 
 def probe_diversity(make_engine, vocab, case_id, n_turns=25, n_seeds=3):
+    """Max single-token share (0-1, rounded) per REVELATION/TRANSITION/BEAT."""
     counts = {d: Counter() for d in ("REVELATION", "TRANSITION", "BEAT")}
     for seed in range(n_seeds):
         eng = make_engine(300 + seed)
@@ -213,7 +227,8 @@ def run_probes(ckpt_path, case_id, cases_dir=None, n_turns=25, n_seeds=3):
     return results
 
 
-def main():
+def main() -> None:
+    """CLI entry: run the gate, write the JSON report, exit 1 on failure."""
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("case_id")
     p.add_argument("--model-path", required=True)

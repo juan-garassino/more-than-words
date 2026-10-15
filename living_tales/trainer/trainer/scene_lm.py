@@ -27,6 +27,25 @@ from trainer.structured_scene_model_v2 import (
 
 @dataclass
 class SceneLMConfig:
+    """Hyper-parameters for :class:`SceneLM`.
+
+    Attributes
+    ----------
+    vocab_size : int
+        Size of the union token vocabulary (``len(SceneVocab)``).
+    n_layers, hidden_dim, n_heads : int
+        Transformer depth, model width and attention heads
+        (``hidden_dim`` must be divisible by ``n_heads``).
+    ffn_mult : int
+        Feed-forward width as a multiple of ``hidden_dim``.
+    dropout : float
+        Dropout on attention and residual branches.
+    max_seq_len : int
+        Length of the precomputed RoPE cache; longer inputs are not supported.
+    lora_rank : int
+        Rank of the LoRA branch on every linear layer.
+    """
+
     vocab_size: int
     n_layers: int = 5
     hidden_dim: int = 256
@@ -38,6 +57,8 @@ class SceneLMConfig:
 
 
 class _CausalBlock(nn.Module):
+    """Pre-LayerNorm decoder block: RoPE causal self-attention + GELU FFN."""
+
     def __init__(self, cfg: SceneLMConfig):
         super().__init__()
         d, h = cfg.hidden_dim, cfg.n_heads
@@ -50,6 +71,11 @@ class _CausalBlock(nn.Module):
         self.drop = nn.Dropout(cfg.dropout)
 
     def forward(self, x: torch.Tensor, cos: torch.Tensor, sin: torch.Tensor) -> torch.Tensor:
+        """Apply the block to ``x`` of shape ``(B, T, hidden_dim)`` (float).
+
+        ``cos``/``sin`` are RoPE caches of shape ``(>=T, head_dim)``. Returns a
+        tensor with the same shape as ``x``.
+        """
         B, T, D = x.shape
         q, k, v = self.qkv(self.ln1(x)).chunk(3, dim=-1)
         shp = (B, T, self.n_heads, self.head_dim)
@@ -64,6 +90,13 @@ class _CausalBlock(nn.Module):
 
 
 class SceneLM(nn.Module):
+    """Decoder-only transformer predicting the next symbolic token.
+
+    Token ids come from :class:`trainer.scene_lm_vocab.SceneVocab`. The model
+    itself is grammar-agnostic; the generation helpers below apply the
+    per-case grammar (and optional constraints) as a logit mask.
+    """
+
     def __init__(self, cfg: SceneLMConfig):
         super().__init__()
         self.cfg = cfg
@@ -77,6 +110,18 @@ class SceneLM(nn.Module):
         self.register_buffer("rope_sin", sin, persistent=False)
 
     def forward(self, ids: torch.Tensor) -> torch.Tensor:
+        """Return next-token logits.
+
+        Parameters
+        ----------
+        ids : torch.Tensor
+            ``(B, T)`` int64 token ids, ``T <= cfg.max_seq_len``.
+
+        Returns
+        -------
+        torch.Tensor
+            ``(B, T, vocab_size)`` float logits.
+        """
         x = self.embed(ids)
         cos = self.rope_cos.to(x.device)
         sin = self.rope_sin.to(x.device)
@@ -92,6 +137,7 @@ class SceneLM(nn.Module):
         temperature: float,
         generator: Optional[torch.Generator],
     ) -> int:
+        """Sample one token id from ``logits`` ``(vocab_size,)`` restricted to ``legal_ids``."""
         mask = torch.full_like(logits, float("-inf"))
         idx = torch.tensor(sorted(legal_ids), device=logits.device, dtype=torch.long)
         mask[idx] = 0.0
@@ -108,7 +154,14 @@ class SceneLM(nn.Module):
         constraint_fn: Optional[Callable[[str, Dict[str, str]], Optional[set]]] = None,
         generator: Optional[torch.Generator] = None,
     ) -> Dict[str, str]:
-        """Generate one full scene, slot by slot, grammar- and constraint-masked."""
+        """Generate one full scene, slot by slot, grammar- and constraint-masked.
+
+        ``ctx`` is a ``(1, T)`` int64 id tensor ending in ``<scene>``. For each
+        slot in ``vocab.slot_dims(case_id)`` the legal ids are the grammar set,
+        intersected with ``constraint_fn(dim, scene_so_far)`` when that returns
+        a non-empty set that overlaps the grammar set (otherwise the grammar
+        set alone is used). Returns ``{dim: token_string}``.
+        """
         scene: Dict[str, str] = {}
         ids = ctx
         for dim in vocab.slot_dims(case_id):
@@ -154,15 +207,18 @@ class SceneLM(nn.Module):
 
     # ── staging / persistence ────────────────────────────────────────────────
     def freeze_base_for_adapter_stage(self) -> None:
+        """Freeze everything except LoRA branches and the token embedding."""
         for n, p in self.named_parameters():
             p.requires_grad = ("lora" in n) or n.startswith("embed.")
 
     def num_parameters(self, trainable_only: bool = False) -> int:
+        """Count parameters, optionally only those with ``requires_grad``."""
         return sum(p.numel() for p in self.parameters()
                    if p.requires_grad or not trainable_only)
 
     def save(self, path, vocab, case_id: Optional[str] = None,
              extra: Optional[Dict] = None) -> None:
+        """Write config, weights and the baked-in vocab/grammar to ``path``."""
         torch.save({
             "config": asdict(self.cfg),
             "state_dict": self.state_dict(),
@@ -173,6 +229,12 @@ class SceneLM(nn.Module):
 
     @classmethod
     def load(cls, path, map_location="cpu"):
+        """Load a checkpoint written by :meth:`save`.
+
+        Returns ``(model, vocab, ckpt)`` where ``ckpt`` is the raw dict
+        (``case_id``, ``extra`` ...). Uses ``weights_only=False``, so only load
+        checkpoints you trust.
+        """
         from trainer.scene_lm_vocab import SceneVocab
         ckpt = torch.load(path, map_location=map_location, weights_only=False)
         model = cls(SceneLMConfig(**ckpt["config"]))

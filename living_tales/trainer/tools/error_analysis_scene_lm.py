@@ -153,6 +153,14 @@ def _free_run(ckpt_path, case_id, n_turns, n_seeds):
 
 def analyze(ckpt_path, case_id, cases_dir=None, holdout_frac=0.2,
             n_turns=25, n_seeds=3, max_sequences=None):
+    """Run the full diagnosis on one checkpoint and return the report dict.
+
+    Keys: ``teacher_forced`` (train/holdout accuracy tables), ``confusion``
+    (top pairs per dim), ``outcome`` (confusion matrix + per-class recall),
+    ``free_run`` (histograms, binding misses, coherence violations). Holdout
+    is every ``1/holdout_frac``-th sequence; ``max_sequences`` truncates the
+    corpus for smoke runs.
+    """
     cases_dir = Path(cases_dir) if cases_dir else _HERE.parent / "cases"
     model, vocab, _ = SceneLM.load(Path(ckpt_path))
     model.eval()
@@ -229,6 +237,7 @@ def _md(report):
 
 
 def write_reports(report, out_dir):
+    """Write ``error_analysis.json`` and ``error_analysis.md`` into ``out_dir``."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "error_analysis.json").write_text(
@@ -236,7 +245,8 @@ def write_reports(report, out_dir):
     (out_dir / "error_analysis.md").write_text(_md(report))
 
 
-def main():
+def main() -> None:
+    """CLI entry: analyze a checkpoint and write the reports."""
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("case_id")
     p.add_argument("--model-path", required=True)
