@@ -136,7 +136,7 @@ def judge_claude_subagent(rubric: str, transcript: str, packet_out: Path) -> str
         f"        description='Playtest judge: <case_id>',\n"
         f"        prompt='Read the file {packet_out} (rubric + transcripts). "
         f"Score per the rubric. Write your judgment to "
-        f"{packet_out.parent / \"playtest_judgment.md\"}.'\n"
+        f"{packet_out.parent / 'playtest_judgment.md'}.'\n"
         f"    )\n\n"
         f"The agent will read the packet, score per the rubric, and write the "
         f"judgment to disk."
@@ -178,7 +178,7 @@ def judge_gemini(rubric: str, transcript: str,
         raise RuntimeError("GEMINI_API_KEY not set in env.")
     url = (
         f"https://generativelanguage.googleapis.com/v1beta/models/"
-        f"{model}:generateContent?key={api_key}"
+        f"{model}:generateContent"
     )
     req = urllib.request.Request(
         url,
@@ -189,7 +189,8 @@ def judge_gemini(rubric: str, transcript: str,
             }],
             "generationConfig": {"temperature": 0.2},
         }).encode(),
-        headers={"Content-Type": "application/json"},
+        # Key in a header, not the URL query, so it never lands in logs/tracebacks.
+        headers={"Content-Type": "application/json", "x-goog-api-key": api_key},
     )
     with urllib.request.urlopen(req, timeout=120) as resp:
         body = json.loads(resp.read())

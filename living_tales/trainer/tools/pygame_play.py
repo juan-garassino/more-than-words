@@ -21,7 +21,7 @@ import json
 import os
 import sys
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 import pygame
