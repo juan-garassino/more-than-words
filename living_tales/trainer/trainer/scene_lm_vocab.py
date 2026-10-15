@@ -30,6 +30,22 @@ ALIASES: Dict[str, str] = {}
 
 
 class SceneVocab:
+    """Token <-> id mapping plus per-case grammar, cards and outcome classes.
+
+    Parameters
+    ----------
+    id_to_token : list of str
+        Token strings; the list index is the id.
+    case_dims : dict
+        ``case_id -> slot order`` (dim names in grammar order).
+    case_dim_vocab : dict
+        ``case_id -> {dim: [legal token strings]}``.
+    case_cards : dict
+        ``case_id -> sorted playable card tokens``.
+    case_outcomes : dict
+        ``case_id -> sorted outcome class names`` (without ``<outcome:>``).
+    """
+
     def __init__(
         self,
         id_to_token: List[str],
@@ -48,6 +64,12 @@ class SceneVocab:
     # -- construction ----------------------------------------------------
     @classmethod
     def build(cls, case_ids: List[str], cases_dir: Optional[Path] = None) -> "SceneVocab":
+        """Build the union vocab from packed case directories.
+
+        Reads ``dimensions.json``, ``tokens.json`` and ``trajectories/*.json``
+        under ``cases_dir/<case_id>`` (default: ``trainer/cases``). Cases are
+        processed in sorted order so ids are stable for a given case set.
+        """
         cases_dir = cases_dir or CASES_DIR
         tokens: List[str] = list(SPECIALS)
         seen = set(tokens)
@@ -105,30 +127,41 @@ class SceneVocab:
 
     # -- core API ----------------------------------------------------------
     def encode(self, token: str) -> int:
+        """Return the id of ``token`` (KeyError if unknown)."""
         return self.token_to_id[token]
 
     def decode(self, idx: int) -> str:
+        """Return the token string for id ``idx``."""
         return self.id_to_token[idx]
 
     def __len__(self) -> int:
         return len(self.id_to_token)
 
     def slot_dims(self, case_id: str) -> List[str]:
+        """Dim names of one scene, in emission order, for ``case_id``."""
         return self.case_dims[case_id]
 
     def legal_ids(self, case_id: str, dim: str) -> List[int]:
+        """Sorted ids of the tokens legal in slot ``dim`` of ``case_id``."""
         return sorted(self.encode(t) for t in self.case_dim_vocab[case_id][dim])
 
     def card_ids(self, case_id: str) -> set:
+        """Set of ids of the cards playable in ``case_id``."""
         return {self.encode(c) for c in self.case_cards[case_id]}
 
     def outcome_classes(self, case_id: str) -> List[str]:
+        """Outcome class names for ``case_id`` (no ``<outcome:>`` wrapper)."""
         return self.case_outcomes[case_id]
 
     def outcome_ids(self, case_id: str) -> List[int]:
+        """Ids of the ``<outcome:*>`` tokens for ``case_id``, in class order."""
         return [self.encode(f"<outcome:{o}>") for o in self.case_outcomes[case_id]]
 
     def normalize(self, dim: str, raw: str, case_id: str = "amber_cipher") -> str:
+        """Map ``raw`` through ``ALIASES`` and check it is legal for ``dim``.
+
+        Raises ValueError if the token is not in the case's vocab for ``dim``.
+        """
         token = ALIASES.get(raw, raw)
         if token not in self.case_dim_vocab[case_id][dim]:
             raise ValueError(f"{raw!r} not in {case_id}/{dim} vocab")
@@ -136,6 +169,7 @@ class SceneVocab:
 
     # -- checkpoint baking ---------------------------------------------------
     def to_dict(self) -> Dict:
+        """JSON/pickle-friendly dict used to bake the vocab into checkpoints."""
         return {
             "id_to_token": self.id_to_token,
             "case_dims": self.case_dims,
@@ -146,5 +180,6 @@ class SceneVocab:
 
     @classmethod
     def from_dict(cls, d: Dict) -> "SceneVocab":
+        """Inverse of :meth:`to_dict`."""
         return cls(d["id_to_token"], d["case_dims"], d["case_dim_vocab"],
                    d["case_cards"], d["case_outcomes"])

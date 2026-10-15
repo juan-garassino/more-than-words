@@ -135,6 +135,11 @@ class ConstraintMask:
         scene: Dict[str, str],
         game_state: Dict[str, Any],
     ) -> Tuple[bool, List[str]]:
+        """Check a complete scene against every rule.
+
+        Returns ``(ok, violated_rule_ids)``; unnamed rules are reported as
+        ``"<unnamed_rule>"``.
+        """
         violated: List[str] = []
         for rule in self.rules:
             cond = rule.get("if", {})

@@ -30,15 +30,26 @@ TEMPERATURE = 0.7
 
 
 class AttractorMeter:
-    """Measured convergence: cumulative authored attractor weight of tokens."""
+    """Measured convergence: cumulative authored attractor weight of tokens.
+
+    Keeps three running sums (one per attractor dimension) of the
+    ``attractor_weights`` in ``tokens.json``; :attr:`convergence` clamps each
+    to ``[0, 1]``.
+    """
 
     def __init__(self, case_id: str, case_dir: Path, scale: float = 1.0):
+        """``scale`` multiplies every observed weight (checkpoint ``conv_scale``)."""
         self.scale = scale
         cards = json.loads((case_dir / "tokens.json").read_text())
         self._w = {t["id"]: t["attractor_weights"] for t in cards}
         self._conv = [0.0, 0.0, 0.0]
 
     def weights_for(self, token: str) -> Optional[List[float]]:
+        """Length-3 attractor weights for ``token``, or None if it has none.
+
+        ``presence:with_<name>`` tokens borrow the weights of the matching
+        ``suspect:<name>`` / ``witness:<name>`` card.
+        """
         if token in self._w:
             return self._w[token]
         if token.startswith("presence:with_"):
@@ -49,6 +60,7 @@ class AttractorMeter:
         return None
 
     def observe(self, tokens: List[str]) -> List[float]:
+        """Accumulate weights of ``tokens`` and return the new convergence."""
         for t in tokens:
             w = self.weights_for(t)
             if w:
@@ -57,10 +69,18 @@ class AttractorMeter:
 
     @property
     def convergence(self) -> List[float]:
+        """Current per-dimension convergence, each clamped to ``[0, 1]``."""
         return [max(0.0, min(1.0, c)) for c in self._conv]
 
 
 class SceneLMEngine:
+    """One play session of one case driven by a trained :class:`SceneLM`.
+
+    The token context grows turn by turn in ``self.ids`` (``(1, T)`` int64).
+    Sampling is seeded by ``seed``; ``ledger.json`` under
+    ``outputs/<case_id>/`` counts the endings reached across sessions.
+    """
+
     def __init__(self, model, vocab, case_id: str, case_dir: Path,
                  seed: int = 0, conv_scale: float = 1.0):
         self.model, self.vocab, self.case_id = model.eval(), vocab, case_id
@@ -83,6 +103,7 @@ class SceneLMEngine:
 
     @classmethod
     def load(cls, ckpt_path, seed: int = 0) -> "SceneLMEngine":
+        """Build an engine from a per-case ``scene_lm_full.pt`` checkpoint."""
         from trainer.scene_lm import SceneLM
         model, vocab, ckpt = SceneLM.load(ckpt_path)
         case_id = ckpt["case_id"]
@@ -92,6 +113,7 @@ class SceneLMEngine:
 
     # ── state ────────────────────────────────────────────────────────────────
     def game_state(self) -> Dict:
+        """Snapshot passed to ``ConstraintMask`` (see its module docstring)."""
         return {
             "previous_locations": list(self.prev_locations),
             "visited_locations": set(self.visited),
@@ -123,6 +145,7 @@ class SceneLMEngine:
             generator=self.gen)
 
     def step(self, card: str) -> Tuple[Dict[str, str], List[float]]:
+        """Play ``card``; return ``({dim: token}, convergence)`` for the scene."""
         self.turn += 1
         self.last_card = card
         self._append(["<card>", card, "<scene>"])
@@ -133,7 +156,11 @@ class SceneLMEngine:
 
     def accuse(self, accused: str) -> Dict:
         """Accusation turn. The model narrates the confrontation, then decides
-        at the boundary whether the story ends (outcome token) or continues."""
+        at the boundary whether the story ends (outcome token) or continues.
+
+        Returns a dict with ``scene``, ``conv``, ``ended`` (bool), ``outcome``
+        and ``ending`` (the last two are None when the story continues).
+        """
         self.turn += 1
         self.last_card = accused
         self._append(["<accuse>", accused, "<scene>"])
@@ -152,7 +179,10 @@ class SceneLMEngine:
                 "outcome": None, "ending": None}
 
     def resolve(self) -> Tuple[str, Dict]:
-        """Force an outcome now (player quits or the turn budget runs out)."""
+        """Force an outcome now (player quits or the turn budget runs out).
+
+        Returns ``(outcome_class, ending_block)``.
+        """
         outcome = self.model.predict_outcome(self.ids, self.case_id, self.vocab)
         return outcome, self._finish(outcome)
 
@@ -187,6 +217,7 @@ class SceneLMEngine:
         self.ledger_path.write_text(json.dumps(data, indent=1))
 
     def ledger_progress(self) -> Tuple[int, int]:
+        """Return ``(outcome classes reached so far, total classes)``."""
         data = (json.loads(self.ledger_path.read_text())
                 if self.ledger_path.exists() else {})
         return len(data), len(self.vocab.outcome_classes(self.case_id))

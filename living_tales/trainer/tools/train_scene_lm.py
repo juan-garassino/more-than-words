@@ -132,6 +132,7 @@ def _splits(case_ids, vocab, universal_only, args):
 
 
 def cmd_base(args):
+    """Base stage: pretrain on the universal dims of all production cases."""
     vocab = SceneVocab.build(PRODUCTION_CASES)
     ds, val_ds = _splits(PRODUCTION_CASES, vocab, True, args)
     cfg = SceneLMConfig(vocab_size=len(vocab), n_layers=args.n_layers,
@@ -147,6 +148,7 @@ def cmd_base(args):
 
 
 def cmd_adapter(args):
+    """Adapter stage: LoRA + embedding fine-tune on one case's full dims."""
     base_path = Path(args.output_dir) / "_base" / "scene_lm_base.pt"
     model, vocab, _ = SceneLM.load(base_path)
     model.freeze_base_for_adapter_stage()
@@ -161,7 +163,8 @@ def cmd_adapter(args):
     print(f"saved -> {out / 'scene_lm_full.pt'}")
 
 
-def main():
+def main() -> None:
+    """CLI entry: ``base`` or ``adapter`` subcommand."""
     p = argparse.ArgumentParser(description=__doc__)
     sub = p.add_subparsers(dest="cmd", required=True)
     for name in ("base", "adapter"):
